@@ -27,24 +27,47 @@ title: Module signalr
 <li><a href="#ServiceState">interface ServiceState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts">signalr/service.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts">signalr/service.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L10">class <b>Service</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L33">class <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
+Manages an Azure SignalR service.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("example", {
+    location: "West US",
+    name: "my-signalr",
+});
+const exampleService = new azure.signalr.Service("example", {
+    location: exampleResourceGroup.location,
+    name: "tfex-signalr",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        capacity: 1,
+        name: "Free_F1",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/signalr_service.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L111"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -61,7 +84,7 @@ Create a Service resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -75,7 +98,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -85,7 +108,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L53">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -99,7 +122,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L40">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L63">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -110,7 +133,7 @@ The FQDN of the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -122,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L44">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L67">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -133,7 +156,7 @@ The publicly accessible IP of the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L48">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L71">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -144,7 +167,7 @@ Specifies the supported Azure location where the SignalR service exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L75">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -155,7 +178,7 @@ The name of the SignalR service. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L56">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L79">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -166,7 +189,7 @@ The primary access key for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L60">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L83">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -177,7 +200,7 @@ The primary connection string for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-publicPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L64">property <b>publicPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L87">property <b>publicPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -188,7 +211,7 @@ The publicly accessible port of the SignalR service which is designed for browse
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L91">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -199,7 +222,7 @@ The name of the resource group in which to create the SignalR service. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L72">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L95">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -210,7 +233,7 @@ The secondary access key for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L76">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L99">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -221,7 +244,7 @@ The secondary connection string for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-serverPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L80">property <b>serverPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L103">property <b>serverPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -232,7 +255,7 @@ The publicly accessible port of the SignalR service which is designed for custom
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L84">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L107">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -246,7 +269,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L111">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -257,7 +280,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -270,7 +293,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L202">interface <b>ServiceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L232">interface <b>ServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -279,7 +302,7 @@ The set of arguments for constructing a Service resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L206">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L236">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -290,7 +313,7 @@ Specifies the supported Azure location where the SignalR service exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L240">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -301,7 +324,7 @@ The name of the SignalR service. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L214">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L244">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -312,7 +335,7 @@ The name of the resource group in which to create the SignalR service. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L218">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L248">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -326,7 +349,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L222">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L252">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -338,7 +361,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L144">interface <b>ServiceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L174">interface <b>ServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -347,7 +370,7 @@ Input properties used for looking up and filtering Service resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L148">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L178">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -358,7 +381,7 @@ The FQDN of the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L152">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L182">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +392,7 @@ The publicly accessible IP of the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L156">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L186">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -380,7 +403,7 @@ Specifies the supported Azure location where the SignalR service exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L190">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -391,7 +414,7 @@ The name of the SignalR service. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L164">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L194">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -402,7 +425,7 @@ The primary access key for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L168">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L198">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -413,7 +436,7 @@ The primary connection string for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-publicPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L172">property <b>publicPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L202">property <b>publicPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -424,7 +447,7 @@ The publicly accessible port of the SignalR service which is designed for browse
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L176">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L206">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -435,7 +458,7 @@ The name of the resource group in which to create the SignalR service. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L180">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L210">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -446,7 +469,7 @@ The secondary access key for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L184">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L214">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -457,7 +480,7 @@ The secondary connection string for the SignalR service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-serverPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L188">property <b>serverPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L218">property <b>serverPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -468,7 +491,7 @@ The publicly accessible port of the SignalR service which is designed for custom
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L192">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L222">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -482,7 +505,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/signalr/service.ts#L196">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/signalr/service.ts#L226">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

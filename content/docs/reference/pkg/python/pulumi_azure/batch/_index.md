@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.batch"></span><dl class="class">
 <dt id="pulumi_azure.batch.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_allocation_mode=None</em>, <em>resource_group_name=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_allocation_mode=None</em>, <em>resource_group_name=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Batch account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -86,6 +86,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.batch.Account.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_allocation_mode=None</em>, <em>primary_access_key=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Account.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_endpoint: The account endpoint used to interact with the Batch service.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Batch account. Changing this forces a new resource to be created.
+:param pulumi.Input[str] pool_allocation_mode: Specifies the mode to use for pool allocation. Possible values are <code class="docutils literal notranslate"><span class="pre">BatchService</span></code> or <code class="docutils literal notranslate"><span class="pre">UserSubscription</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BatchService</span></code>.
+:param pulumi.Input[str] primary_access_key: The Batch account primary access key.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
+:param pulumi.Input[str] secondary_access_key: The Batch account secondary access key.
+:param pulumi.Input[str] storage_account_id: Specifies the storage account to use for the Batch account. If not specified, Azure Batch will manage the storage.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/batch_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/batch_account.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.batch.Account.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Account.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -127,8 +148,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.batch.AwaitableGetAccountResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em>account_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_allocation_mode=None</em>, <em>primary_access_key=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.batch.AwaitableGetCertificateResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em>account_name=None</em>, <em>format=None</em>, <em>name=None</em>, <em>public_data=None</em>, <em>resource_group_name=None</em>, <em>thumbprint=None</em>, <em>thumbprint_algorithm=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.batch.AwaitableGetPoolResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">AwaitableGetPoolResult</code><span class="sig-paren">(</span><em>account_name=None</em>, <em>auto_scales=None</em>, <em>certificates=None</em>, <em>container_configurations=None</em>, <em>display_name=None</em>, <em>fixed_scales=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>storage_image_references=None</em>, <em>vm_size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.AwaitableGetPoolResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.batch.Certificate">
-<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>certificate=None</em>, <em>format=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>thumbprint=None</em>, <em>thumbprint_algorithm=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Certificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>certificate=None</em>, <em>format=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>thumbprint=None</em>, <em>thumbprint_algorithm=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a certificate in an Azure Batch account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -196,6 +232,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.batch.Certificate.thumbprint">
 <code class="descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.Certificate.thumbprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The thumbprint of the certificate. At this time the only supported value is ‘SHA1’.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.batch.Certificate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>certificate=None</em>, <em>format=None</em>, <em>name=None</em>, <em>password=None</em>, <em>public_data=None</em>, <em>resource_group_name=None</em>, <em>thumbprint=None</em>, <em>thumbprint_algorithm=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Certificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_name: Specifies the name of the Batch account. Changing this forces a new resource to be created.
+:param pulumi.Input[str] certificate: The base64-encoded contents of the certificate.
+:param pulumi.Input[str] format: The format of the certificate. Possible values are <code class="docutils literal notranslate"><span class="pre">Cer</span></code> or <code class="docutils literal notranslate"><span class="pre">Pfx</span></code>.
+:param pulumi.Input[str] name: The generated name of the certificate.
+:param pulumi.Input[str] password: The password to access the certificate’s private key. This must and can only be specified when <code class="docutils literal notranslate"><span class="pre">format</span></code> is <code class="docutils literal notranslate"><span class="pre">Pfx</span></code>.
+:param pulumi.Input[str] public_data: The public key of the certificate.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
+:param pulumi.Input[str] thumbprint: The thumbprint of the certificate. At this time the only supported value is ‘SHA1’.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/batch_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/batch_certificate.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -414,7 +470,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.batch.Pool">
-<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Pool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>auto_scale=None</em>, <em>certificates=None</em>, <em>container_configuration=None</em>, <em>display_name=None</em>, <em>fixed_scale=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>stop_pending_resize_operation=None</em>, <em>storage_image_reference=None</em>, <em>vm_size=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Pool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Pool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>auto_scale=None</em>, <em>certificates=None</em>, <em>container_configuration=None</em>, <em>display_name=None</em>, <em>fixed_scale=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>stop_pending_resize_operation=None</em>, <em>storage_image_reference=None</em>, <em>vm_size=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Batch pool.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -519,6 +575,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.batch.Pool.vm_size">
 <code class="descname">vm_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.Pool.vm_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the size of the VM created in the Batch pool.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.batch.Pool.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>auto_scale=None</em>, <em>certificates=None</em>, <em>container_configuration=None</em>, <em>display_name=None</em>, <em>fixed_scale=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>stop_pending_resize_operation=None</em>, <em>storage_image_reference=None</em>, <em>vm_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Pool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Pool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_name: Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] auto_scale: A <code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> block that describes the scale settings when using auto scale.
+:param pulumi.Input[list] certificates: One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks that describe the certificates to be installed on each compute node in the pool.
+:param pulumi.Input[dict] container_configuration: The container configuration used in the pool’s VMs.
+:param pulumi.Input[str] display_name: Specifies the display name of the Batch pool.
+:param pulumi.Input[dict] fixed_scale: A <code class="docutils literal notranslate"><span class="pre">fixed_scale</span></code> block that describes the scale settings when using fixed scale.
+:param pulumi.Input[float] max_tasks_per_node: Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Batch pool. Changing this forces a new resource to be created.
+:param pulumi.Input[str] node_agent_sku_id: Specifies the Sku of the node agents that will be created in the Batch pool.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] start_task: A <code class="docutils literal notranslate"><span class="pre">start_task</span></code> block that describes the start task settings for the Batch pool.
+:param pulumi.Input[dict] storage_image_reference: A <code class="docutils literal notranslate"><span class="pre">storage_image_reference</span></code> for the virtual machines that will compose the Batch pool.
+:param pulumi.Input[str] vm_size: Specifies the size of the VM created in the Batch pool.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/batch_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/batch_pool.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

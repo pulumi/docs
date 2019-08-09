@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.apimanagement"></span><dl class="class">
 <dt id="pulumi_azure.apimanagement.Api">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Api</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>import_=None</em>, <em>name=None</em>, <em>path=None</em>, <em>protocols=None</em>, <em>resource_group_name=None</em>, <em>revision=None</em>, <em>service_url=None</em>, <em>soap_pass_through=None</em>, <em>subscription_key_parameter_names=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Api</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>import_=None</em>, <em>name=None</em>, <em>path=None</em>, <em>protocols=None</em>, <em>resource_group_name=None</em>, <em>revision=None</em>, <em>service_url=None</em>, <em>soap_pass_through=None</em>, <em>subscription_key_parameter_names=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API within an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -135,6 +135,34 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The ID of the Version Set which this API is associated with.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Api.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>import_=None</em>, <em>is_current=None</em>, <em>is_online=None</em>, <em>name=None</em>, <em>path=None</em>, <em>protocols=None</em>, <em>resource_group_name=None</em>, <em>revision=None</em>, <em>service_url=None</em>, <em>soap_pass_through=None</em>, <em>subscription_key_parameter_names=None</em>, <em>version=None</em>, <em>version_set_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Api resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] description: A description of the API Management API, which may include HTML formatting tags.
+:param pulumi.Input[str] display<em>name: The display name of the API.
+:param pulumi.Input[dict] import</em>: A <code class="docutils literal notranslate"><span class="pre">import</span></code> block as documented below.
+:param pulumi.Input[bool] is_current: Is this the current API Revision?
+:param pulumi.Input[bool] is_online: Is this API Revision online/accessible via the Gateway?
+:param pulumi.Input[str] name: The name of the API Management API. Changing this forces a new resource to be created.
+:param pulumi.Input[str] path: The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of it’s resource paths within the API Management Service.
+:param pulumi.Input[list] protocols: A list of protocols the operations in this API can be invoked. Possible values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">https</span></code>.
+:param pulumi.Input[str] resource_group_name: The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] revision: The Revision which used for this API.
+:param pulumi.Input[str] service_url: Absolute URL of the backend service implementing this API.
+:param pulumi.Input[bool] soap_pass_through: Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[dict] subscription_key_parameter_names: A <code class="docutils literal notranslate"><span class="pre">subscription_key_parameter_names</span></code> block as documented below.
+:param pulumi.Input[str] version: The Version number of this API, if this API is versioned.
+:param pulumi.Input[str] version_set_id: The ID of the Version Set which this API is associated with.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Api.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -177,7 +205,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ApiOperation">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiOperation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>method=None</em>, <em>operation_id=None</em>, <em>request=None</em>, <em>resource_group_name=None</em>, <em>responses=None</em>, <em>template_parameters=None</em>, <em>url_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiOperation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>method=None</em>, <em>operation_id=None</em>, <em>request=None</em>, <em>resource_group_name=None</em>, <em>responses=None</em>, <em>template_parameters=None</em>, <em>url_template=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Operation within an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -270,6 +298,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The relative URL Template identifying the target resource for this operation, which may include parameters.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ApiOperation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>method=None</em>, <em>operation_id=None</em>, <em>request=None</em>, <em>resource_group_name=None</em>, <em>responses=None</em>, <em>template_parameters=None</em>, <em>url_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiOperation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] api_name: The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] description: A description for this API Operation, which may include HTML formatting tags.
+:param pulumi.Input[str] display_name: The Display Name for this API Management Operation.
+:param pulumi.Input[str] method: The HTTP Method used for this API Management Operation, like <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> or <code class="docutils literal notranslate"><span class="pre">POST</span></code> - but not limited to these values.
+:param pulumi.Input[str] operation_id: A unique identifier for this API Operation. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] request: A <code class="docutils literal notranslate"><span class="pre">request</span></code> block as defined below.
+:param pulumi.Input[str] resource_group_name: The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[list] responses: One or more <code class="docutils literal notranslate"><span class="pre">response</span></code> blocks as defined below.
+:param pulumi.Input[list] template_parameters: One or more <code class="docutils literal notranslate"><span class="pre">template_parameter</span></code> blocks as defined below.
+:param pulumi.Input[str] url_template: The relative URL Template identifying the target resource for this operation, which may include parameters.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ApiOperation.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -312,7 +363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ApiOperationPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiOperationPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>operation_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiOperationPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>operation_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management API Operation Policy</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -363,6 +414,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A link to a Policy XML Document, which must be publicly available.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>operation_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiOperationPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] api_name: The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] xml_content: The XML Content for this Policy.
+:param pulumi.Input[str] xml_link: A link to a Policy XML Document, which must be publicly available.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation_policy.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ApiOperationPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -405,7 +473,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ApiPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management API Policy</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -456,6 +524,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A link to a Policy XML Document, which must be publicly available.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] api_name: The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] xml_content: The XML Content for this Policy.
+:param pulumi.Input[str] xml_link: A link to a Policy XML Document, which must be publicly available.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_policy.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ApiPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -498,7 +583,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ApiSchema">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiSchema</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>content_type=None</em>, <em>resource_group_name=None</em>, <em>schema_id=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiSchema</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>content_type=None</em>, <em>resource_group_name=None</em>, <em>schema_id=None</em>, <em>value=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Schema within an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -556,6 +641,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The JSON escaped string defining the document representing the Schema.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ApiSchema.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>content_type=None</em>, <em>resource_group_name=None</em>, <em>schema_id=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiSchema resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] api_name: The name of the API within the API Management Service where this API Schema should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] content_type: The content type of the API Schema.
+:param pulumi.Input[str] resource_group_name: The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] schema_id: A unique identifier for this API Schema. Changing this forces a new resource to be created.
+:param pulumi.Input[str] value: The JSON escaped string defining the document representing the Schema.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_schema.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ApiSchema.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -598,7 +701,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ApiVersionSet">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiVersionSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>version_header_name=None</em>, <em>version_query_name=None</em>, <em>versioning_scheme=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiVersionSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiVersionSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>version_header_name=None</em>, <em>version_query_name=None</em>, <em>versioning_scheme=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiVersionSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Version Set within a API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -670,6 +773,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies where in an Inbound HTTP Request that the API Version should be read from. Possible values are <code class="docutils literal notranslate"><span class="pre">Header</span></code>, <code class="docutils literal notranslate"><span class="pre">Query</span></code> and <code class="docutils literal notranslate"><span class="pre">Segment</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ApiVersionSet.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>version_header_name=None</em>, <em>version_query_name=None</em>, <em>versioning_scheme=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiVersionSet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiVersionSet resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service in which the API Version Set should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] description: The description of API Version Set.
+:param pulumi.Input[str] display_name: The display name of this API Version Set.
+:param pulumi.Input[str] name: The name of the API Version Set. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the parent API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] version_header_name: The name of the Header which should be read from Inbound Requests which defines the API Version.
+:param pulumi.Input[str] version_query_name: The name of the Query String which should be read from Inbound Requests which defines the API Version.
+:param pulumi.Input[str] versioning_scheme: Specifies where in an Inbound HTTP Request that the API Version should be read from. Possible values are <code class="docutils literal notranslate"><span class="pre">Header</span></code>, <code class="docutils literal notranslate"><span class="pre">Query</span></code> and <code class="docutils literal notranslate"><span class="pre">Segment</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_version_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_version_set.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ApiVersionSet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiVersionSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -712,7 +835,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.AuthorizationServer">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AuthorizationServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>authorization_endpoint=None</em>, <em>authorization_methods=None</em>, <em>bearer_token_sending_methods=None</em>, <em>client_authentication_methods=None</em>, <em>client_id=None</em>, <em>client_registration_endpoint=None</em>, <em>client_secret=None</em>, <em>default_scope=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>grant_types=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>resource_owner_password=None</em>, <em>resource_owner_username=None</em>, <em>support_state=None</em>, <em>token_body_parameters=None</em>, <em>token_endpoint=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AuthorizationServer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AuthorizationServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>authorization_endpoint=None</em>, <em>authorization_methods=None</em>, <em>bearer_token_sending_methods=None</em>, <em>client_authentication_methods=None</em>, <em>client_id=None</em>, <em>client_registration_endpoint=None</em>, <em>client_secret=None</em>, <em>default_scope=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>grant_types=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>resource_owner_password=None</em>, <em>resource_owner_username=None</em>, <em>support_state=None</em>, <em>token_body_parameters=None</em>, <em>token_endpoint=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AuthorizationServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Server within an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -854,6 +977,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The OAUTH Token Endpoint.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.AuthorizationServer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>authorization_endpoint=None</em>, <em>authorization_methods=None</em>, <em>bearer_token_sending_methods=None</em>, <em>client_authentication_methods=None</em>, <em>client_id=None</em>, <em>client_registration_endpoint=None</em>, <em>client_secret=None</em>, <em>default_scope=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>grant_types=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>resource_owner_password=None</em>, <em>resource_owner_username=None</em>, <em>support_state=None</em>, <em>token_body_parameters=None</em>, <em>token_endpoint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AuthorizationServer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AuthorizationServer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] authorization_endpoint: The OAUTH Authorization Endpoint.
+:param pulumi.Input[list] authorization_methods: The HTTP Verbs supported by the Authorization Endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> and <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>.
+:param pulumi.Input[list] bearer_token_sending_methods: The mechanism by which Access Tokens are passed to the API. Possible values are <code class="docutils literal notranslate"><span class="pre">authorizationHeader</span></code> and <code class="docutils literal notranslate"><span class="pre">query</span></code>.
+:param pulumi.Input[list] client_authentication_methods: The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Body</span></code>.
+:param pulumi.Input[str] client_id: The Client/App ID registered with this Authorization Server.
+:param pulumi.Input[str] client_registration_endpoint: The URI of page where Client/App Registration is performed for this Authorization Server.
+:param pulumi.Input[str] client_secret: The Client/App Secret registered with this Authorization Server.
+:param pulumi.Input[str] default_scope: The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
+:param pulumi.Input[str] description: A description of the Authorization Server, which may contain HTML formatting tags.
+:param pulumi.Input[str] display_name: The user-friendly name of this Authorization Server.
+:param pulumi.Input[list] grant_types: Form of Authorization Grants required when requesting an Access Token. Possible values are <code class="docutils literal notranslate"><span class="pre">authorizationCode</span></code>, <code class="docutils literal notranslate"><span class="pre">clientCredentials</span></code>, <code class="docutils literal notranslate"><span class="pre">implicit</span></code> and <code class="docutils literal notranslate"><span class="pre">resourceOwnerPassword</span></code>.
+:param pulumi.Input[str] name: The name of this Authorization Server. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_owner_password: The password associated with the Resource Owner.
+:param pulumi.Input[str] resource_owner_username: The username associated with the Resource Owner.
+:param pulumi.Input[bool] support_state: Does this Authorization Server support State? If this is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the client may use the state parameter to raise protocol security.
+:param pulumi.Input[str] token_endpoint: The OAUTH Token Endpoint.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_authorization_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_authorization_server.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.AuthorizationServer.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AuthorizationServer.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -895,8 +1048,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.apimanagement.AwaitableGetApiResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AwaitableGetApiResult</code><span class="sig-paren">(</span><em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>is_current=None</em>, <em>is_online=None</em>, <em>name=None</em>, <em>path=None</em>, <em>protocols=None</em>, <em>resource_group_name=None</em>, <em>revision=None</em>, <em>service_url=None</em>, <em>soap_pass_through=None</em>, <em>subscription_key_parameter_names=None</em>, <em>version=None</em>, <em>version_set_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetApiResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.AwaitableGetGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>external_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.AwaitableGetProductResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AwaitableGetProductResult</code><span class="sig-paren">(</span><em>api_management_name=None</em>, <em>approval_required=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>product_id=None</em>, <em>published=None</em>, <em>resource_group_name=None</em>, <em>subscription_required=None</em>, <em>subscriptions_limit=None</em>, <em>terms=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetProductResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.AwaitableGetServiceResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em>additional_locations=None</em>, <em>gateway_regional_url=None</em>, <em>gateway_url=None</em>, <em>hostname_configurations=None</em>, <em>location=None</em>, <em>management_api_url=None</em>, <em>name=None</em>, <em>notification_sender_email=None</em>, <em>portal_url=None</em>, <em>public_ip_addresses=None</em>, <em>publisher_email=None</em>, <em>publisher_name=None</em>, <em>resource_group_name=None</em>, <em>scm_url=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.AwaitableGetUserResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em>api_management_name=None</em>, <em>email=None</em>, <em>first_name=None</em>, <em>last_name=None</em>, <em>note=None</em>, <em>resource_group_name=None</em>, <em>state=None</em>, <em>user_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.apimanagement.Certificate">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>data=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Certificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>data=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Certificate within an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -963,6 +1141,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Certificate.thumbprint">
 <code class="descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Certificate.thumbprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Thumbprint of this Certificate.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Certificate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>data=None</em>, <em>expiration=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>subject=None</em>, <em>thumbprint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Certificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] data: The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
+:param pulumi.Input[str] expiration: The Expiration Date of this Certificate, formatted as an RFC3339 string.
+:param pulumi.Input[str] name: The name of the API Management Certificate. Changing this forces a new resource to be created.
+:param pulumi.Input[str] password: The password used for this certificate. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] subject: The Subject of this Certificate.
+:param pulumi.Input[str] thumbprint: The Thumbprint of this Certificate.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_certificate.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1319,7 +1517,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Group">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>external_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>external_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1384,6 +1582,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of this API Management Group. Possible values are <code class="docutils literal notranslate"><span class="pre">custom</span></code> and <code class="docutils literal notranslate"><span class="pre">external</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Group.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>external_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Group.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Group resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service in which the API Management Group should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] description: The description of this API Management Group.
+:param pulumi.Input[str] display_name: The display name of this API Management Group.
+:param pulumi.Input[str] external_id: The identifier of the external Group. For example, an Azure Active Directory group <code class="docutils literal notranslate"><span class="pre">aad://&lt;tenant&gt;.onmicrosoft.com/groups/&lt;group</span> <span class="pre">object</span> <span class="pre">id&gt;</span></code>.
+:param pulumi.Input[str] name: The name of the API Management Group. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Group should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] type: The type of this API Management Group. Possible values are <code class="docutils literal notranslate"><span class="pre">custom</span></code> and <code class="docutils literal notranslate"><span class="pre">external</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_group.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Group.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Group.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1426,7 +1643,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.GroupUser">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">GroupUser</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>group_name=None</em>, <em>resource_group_name=None</em>, <em>user_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.GroupUser" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">GroupUser</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>group_name=None</em>, <em>resource_group_name=None</em>, <em>user_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.GroupUser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management User Assignment to a Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1468,6 +1685,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.GroupUser.user_id">
 <code class="descname">user_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.GroupUser.user_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the API Management User which should be assigned to this API Management Group. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.GroupUser.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>group_name=None</em>, <em>resource_group_name=None</em>, <em>user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.GroupUser.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GroupUser resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] group_name: The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] user_id: The ID of the API Management User which should be assigned to this API Management Group. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_group_user.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_group_user.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1512,7 +1745,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Logger">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Logger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>application_insights=None</em>, <em>buffered=None</em>, <em>description=None</em>, <em>eventhub=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Logger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Logger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>application_insights=None</em>, <em>buffered=None</em>, <em>description=None</em>, <em>eventhub=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Logger within an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1577,6 +1810,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Logger.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>application_insights=None</em>, <em>buffered=None</em>, <em>description=None</em>, <em>eventhub=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Logger.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Logger resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] application_insights: An <code class="docutils literal notranslate"><span class="pre">application_insights</span></code> block as documented below.
+:param pulumi.Input[bool] buffered: Specifies whether records should be buffered in the Logger prior to publishing. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] description: A description of this Logger.
+:param pulumi.Input[dict] eventhub: An <code class="docutils literal notranslate"><span class="pre">eventhub</span></code> block as documented below.
+:param pulumi.Input[str] name: The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_logger.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_logger.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Logger.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Logger.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1619,7 +1871,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.OpenIdConnectProvider">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">OpenIdConnectProvider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>client_id=None</em>, <em>client_secret=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>metadata_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.OpenIdConnectProvider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">OpenIdConnectProvider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>client_id=None</em>, <em>client_secret=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>metadata_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.OpenIdConnectProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an OpenID Connect Provider within a API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1691,6 +1943,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.OpenIdConnectProvider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>client_id=None</em>, <em>client_secret=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>metadata_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.OpenIdConnectProvider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OpenIdConnectProvider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service in which this OpenID Connect Provider should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] client_id: The Client ID used for the Client Application.
+:param pulumi.Input[str] client_secret: The Client Secret used for the Client Application.
+:param pulumi.Input[str] description: A description of this OpenID Connect Provider.
+:param pulumi.Input[str] display_name: A user-friendly name for this OpenID Connect Provider.
+:param pulumi.Input[str] metadata_endpoint: The URI of the Metadata endpoint.
+:param pulumi.Input[str] name: the Name of the OpenID Connect Provider which should be created within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_openid_connect_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_openid_connect_provider.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.OpenIdConnectProvider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.OpenIdConnectProvider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1733,7 +2005,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Product">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Product</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>approval_required=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>product_id=None</em>, <em>published=None</em>, <em>resource_group_name=None</em>, <em>subscription_required=None</em>, <em>subscriptions_limit=None</em>, <em>terms=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Product" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Product</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>approval_required=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>product_id=None</em>, <em>published=None</em>, <em>resource_group_name=None</em>, <em>subscription_required=None</em>, <em>subscriptions_limit=None</em>, <em>terms=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Product.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1819,6 +2091,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Product.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>approval_required=None</em>, <em>description=None</em>, <em>display_name=None</em>, <em>product_id=None</em>, <em>published=None</em>, <em>resource_group_name=None</em>, <em>subscription_required=None</em>, <em>subscriptions_limit=None</em>, <em>terms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Product.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Product resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] approval_required: Do subscribers need to be approved prior to being able to use the Product?
+:param pulumi.Input[str] description: A description of this Product, which may include HTML formatting tags.
+:param pulumi.Input[str] display_name: The Display Name for this API Management Product.
+:param pulumi.Input[str] product_id: The Identifier for this Product, which must be unique within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] published: Is this Product Published?
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] subscription_required: Is a Subscription required to access API’s included in this Product?
+:param pulumi.Input[float] subscriptions_limit: The number of subscriptions a user can have to this Product at the same time.
+:param pulumi.Input[str] terms: The Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Product.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Product.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1861,7 +2155,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ProductApi">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductApi" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management API Assignment to a Product.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1903,6 +2197,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ProductApi.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductApi.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ProductApi.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProductApi resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] api_name: The Name of the API Management API within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] product_id: The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_api.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_api.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1947,7 +2257,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ProductGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>group_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>group_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Product Assignment to a Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1989,6 +2299,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ProductGroup.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductGroup.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ProductGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>group_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProductGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] group_name: The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] product_id: The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2033,7 +2359,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ProductPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Product Policy</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2084,6 +2410,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A link to a Policy XML Document, which must be publicly available.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProductPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] product_id: The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] xml_content: The XML Content for this Policy.
+:param pulumi.Input[str] xml_link: A link to a Policy XML Document, which must be publicly available.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_policy.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ProductPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2126,7 +2469,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Property">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Property</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>secret=None</em>, <em>tags=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Property" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Property</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>secret=None</em>, <em>tags=None</em>, <em>value=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Property.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2191,6 +2534,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The value of this API Management Property.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Property.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>secret=None</em>, <em>tags=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Property.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Property resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service in which the API Management Property should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] display_name: The display name of this API Management Property.
+:param pulumi.Input[str] name: The name of the API Management Property. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Property should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] secret: Specifies whether the API Management Property is secret. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[list] tags: A list of tags to be applied to the API Management Property.
+:param pulumi.Input[str] value: The value of this API Management Property.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_property.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_property.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Property.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Property.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2233,7 +2595,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Service">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_location=None</em>, <em>certificates=None</em>, <em>hostname_configuration=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification_sender_email=None</em>, <em>policy=None</em>, <em>publisher_email=None</em>, <em>publisher_name=None</em>, <em>resource_group_name=None</em>, <em>security=None</em>, <em>sign_in=None</em>, <em>sign_up=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_location=None</em>, <em>certificates=None</em>, <em>hostname_configuration=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification_sender_email=None</em>, <em>policy=None</em>, <em>publisher_email=None</em>, <em>publisher_name=None</em>, <em>resource_group_name=None</em>, <em>security=None</em>, <em>sign_in=None</em>, <em>sign_up=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2397,6 +2759,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Service.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>additional_location=None</em>, <em>certificates=None</em>, <em>gateway_regional_url=None</em>, <em>gateway_url=None</em>, <em>hostname_configuration=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>management_api_url=None</em>, <em>name=None</em>, <em>notification_sender_email=None</em>, <em>policy=None</em>, <em>portal_url=None</em>, <em>public_ip_addresses=None</em>, <em>publisher_email=None</em>, <em>publisher_name=None</em>, <em>resource_group_name=None</em>, <em>scm_url=None</em>, <em>security=None</em>, <em>sign_in=None</em>, <em>sign_up=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] additional_location: One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.
+:param pulumi.Input[list] certificates: One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.
+:param pulumi.Input[str] gateway_regional_url: The URL of the Regional Gateway for the API Management Service in the specified region.
+:param pulumi.Input[str] gateway_url: The URL of the Gateway for the API Management Service.
+:param pulumi.Input[dict] hostname_configuration: A <code class="docutils literal notranslate"><span class="pre">hostname_configuration</span></code> block as defined below.
+:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block is documented below.
+:param pulumi.Input[str] location: The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] management_api_url: The URL for the Management API associated with this API Management service.
+:param pulumi.Input[str] name: The name of the API Management Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] notification_sender_email: Email address from which the notification will be sent.
+:param pulumi.Input[dict] policy: A <code class="docutils literal notranslate"><span class="pre">policy</span></code> block as defined below.
+:param pulumi.Input[str] portal_url: The URL for the Publisher Portal associated with this API Management service.
+:param pulumi.Input[list] public_ip_addresses: Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+:param pulumi.Input[str] publisher_email: The email of publisher/company.
+:param pulumi.Input[str] publisher_name: The name of publisher/company.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] scm_url: The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
+:param pulumi.Input[dict] security: A <code class="docutils literal notranslate"><span class="pre">security</span></code> block as defined below.
+:param pulumi.Input[dict] sign_in: A <code class="docutils literal notranslate"><span class="pre">sign_in</span></code> block as defined below.
+:param pulumi.Input[dict] sign_up: A <code class="docutils literal notranslate"><span class="pre">sign_up</span></code> block as defined below.
+:param pulumi.Input[dict] sku: A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below.
+:param pulumi.Input[dict] tags: A mapping of tags assigned to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Service.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2439,7 +2835,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Subscription">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>display_name=None</em>, <em>primary_key=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>secondary_key=None</em>, <em>state=None</em>, <em>subscription_id=None</em>, <em>user_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Subscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>display_name=None</em>, <em>primary_key=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>secondary_key=None</em>, <em>state=None</em>, <em>subscription_id=None</em>, <em>user_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Subscription within a API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2504,6 +2900,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.Subscription.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>display_name=None</em>, <em>primary_key=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>secondary_key=None</em>, <em>state=None</em>, <em>subscription_id=None</em>, <em>user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Subscription.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Subscription resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service where this Subscription should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] display_name: The display name of this Subscription.
+:param pulumi.Input[str] product_id: The ID of the Product which should be assigned to this Subscription. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] state: The state of this Subscription. Possible values are <code class="docutils literal notranslate"><span class="pre">Active</span></code>, <code class="docutils literal notranslate"><span class="pre">Cancelled</span></code>, <code class="docutils literal notranslate"><span class="pre">Expired</span></code>, <code class="docutils literal notranslate"><span class="pre">Rejected</span></code>, <code class="docutils literal notranslate"><span class="pre">Submitted</span></code> and <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Submitted</span></code>.
+:param pulumi.Input[str] subscription_id: An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
+:param pulumi.Input[str] user_id: The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_subscription.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Subscription.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Subscription.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2546,7 +2961,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.User">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>confirmation=None</em>, <em>email=None</em>, <em>first_name=None</em>, <em>last_name=None</em>, <em>note=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>state=None</em>, <em>user_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>confirmation=None</em>, <em>email=None</em>, <em>first_name=None</em>, <em>last_name=None</em>, <em>note=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>state=None</em>, <em>user_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management User.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2630,6 +3045,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.User.user_id">
 <code class="descname">user_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.User.user_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Identifier for this User, which must be unique within the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.apimanagement.User.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>confirmation=None</em>, <em>email=None</em>, <em>first_name=None</em>, <em>last_name=None</em>, <em>note=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>state=None</em>, <em>user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.User.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing User resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_management_name: The name of the API Management Service in which the User should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] confirmation: The kind of confirmation email which will be sent to this user. Possible values are <code class="docutils literal notranslate"><span class="pre">invite</span></code> and <code class="docutils literal notranslate"><span class="pre">signup</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] email: The email address associated with this user.
+:param pulumi.Input[str] first_name: The first name for this user.
+:param pulumi.Input[str] last_name: The last name for this user.
+:param pulumi.Input[str] note: A note about this user.
+:param pulumi.Input[str] password: The password associated with this user.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] state: The state of this user. Possible values are <code class="docutils literal notranslate"><span class="pre">active</span></code>, <code class="docutils literal notranslate"><span class="pre">blocked</span></code> and <code class="docutils literal notranslate"><span class="pre">pending</span></code>.
+:param pulumi.Input[str] user_id: The Identifier for this User, which must be unique within the API Management Service. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_user.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_user.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

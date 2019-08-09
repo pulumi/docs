@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.notificationhub"></span><dl class="class">
 <dt id="pulumi_azure.notificationhub.AuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>notification_hub_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>notification_hub_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -87,6 +87,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Does this Authorization Rule have Send access to the Notification Hub? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.notificationhub.AuthorizationRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>notification_hub_name=None</em>, <em>primary_access_key=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>send=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AuthorizationRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] listen: Does this Authorization Rule have Listen access to the Notification Hub? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[bool] manage: Does this Authorization Rule have Manage access to the Notification Hub? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] name: The name to use for this Authorization Rule. Changing this forces a new resource to be created.
+:param pulumi.Input[str] namespace_name: The name of the Notification Hub Namespace in which the Notification Hub exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] notification_hub_name: The name of the Notification Hub for which the Authorization Rule should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] primary_access_key: The Primary Access Key associated with this Authorization Rule.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] secondary_access_key: The Secondary Access Key associated with this Authorization Rule.
+:param pulumi.Input[bool] send: Does this Authorization Rule have Send access to the Notification Hub? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/notification_hub_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/notification_hub_authorization_rule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.notificationhub.AuthorizationRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -126,6 +147,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 </dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.notificationhub.AwaitableGetHubResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AwaitableGetHubResult</code><span class="sig-paren">(</span><em>apns_credentials=None</em>, <em>gcm_credentials=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AwaitableGetHubResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.notificationhub.AwaitableGetNamespaceResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AwaitableGetNamespaceResult</code><span class="sig-paren">(</span><em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>servicebus_endpoint=None</em>, <em>sku=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AwaitableGetNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.GetHubResult">
@@ -201,7 +232,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.Hub">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Hub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apns_credential=None</em>, <em>gcm_credential=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Hub" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Hub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apns_credential=None</em>, <em>gcm_credential=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Hub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Notification Hub within a Notification Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -259,6 +290,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.notificationhub.Hub.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>apns_credential=None</em>, <em>gcm_credential=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Hub.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Hub resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] apns_credential: A <code class="docutils literal notranslate"><span class="pre">apns_credential</span></code> block as defined below.
+:param pulumi.Input[dict] gcm_credential: A <code class="docutils literal notranslate"><span class="pre">gcm_credential</span></code> block as defined below.
+:param pulumi.Input[str] location: The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name to use for this Notification Hub. Changing this forces a new resource to be created.
+:param pulumi.Input[str] namespace_name: The name of the Notification Hub Namespace in which to create this Notification Hub. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/notification_hub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/notification_hub.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.notificationhub.Hub.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Hub.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -301,7 +350,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.Namespace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Namespace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>sku_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Namespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Namespace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>sku_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Notification Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -370,6 +419,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.notificationhub.Namespace.sku_name">
 <code class="descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.notificationhub.Namespace.sku_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the SKU to use for this Notification Hub Namespace. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code> or <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.notificationhub.Namespace.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>servicebus_endpoint=None</em>, <em>sku=None</em>, <em>sku_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Namespace.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Namespace resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] enabled: Is this Notification Hub Namespace enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] location: The Azure Region in which this Notification Hub Namespace should be created.
+:param pulumi.Input[str] name: The name to use for this Notification Hub Namespace. Changing this forces a new resource to be created.
+:param pulumi.Input[str] namespace_type: The Type of Namespace - possible values are <code class="docutils literal notranslate"><span class="pre">Messaging</span></code> or <code class="docutils literal notranslate"><span class="pre">NotificationHub</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Notification Hub Namespace should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] servicebus_endpoint: The ServiceBus Endpoint for this Notification Hub Namespace.
+:param pulumi.Input[dict] sku: ) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.
+:param pulumi.Input[str] sku_name: The name of the SKU to use for this Notification Hub Namespace. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code> or <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/notification_hub_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/notification_hub_namespace.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.managementresource"></span><dl class="class">
 <dt id="pulumi_azure.managementresource.ManangementLock">
-<em class="property">class </em><code class="descclassname">pulumi_azure.managementresource.</code><code class="descname">ManangementLock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>lock_level=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>scope=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementresource.</code><code class="descname">ManangementLock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>lock_level=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>scope=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -52,6 +52,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.managementresource.ManangementLock.scope">
 <code class="descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock.scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.managementresource.ManangementLock.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>lock_level=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ManangementLock resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] lock_level: Specifies the Level to be used for this Lock. Possible values are <code class="docutils literal notranslate"><span class="pre">CanNotDelete</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Management Lock. Changing this forces a new resource to be created.
+:param pulumi.Input[str] notes: Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
+:param pulumi.Input[str] scope: Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_lock.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_lock.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

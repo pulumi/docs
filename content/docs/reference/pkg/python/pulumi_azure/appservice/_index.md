@@ -10,10 +10,10 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.appservice"></span><dl class="class">
 <dt id="pulumi_azure.appservice.ActiveSlot">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">ActiveSlot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_slot_name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">ActiveSlot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_slot_name=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Promotes an App Service Slot to Production within an App Service.</p>
 <blockquote>
-<div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service_active_slot</span></code> resource.</div></blockquote>
+<div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">appservice.AppService</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">appservice.ActiveSlot</span></code> resource.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -47,6 +47,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.appservice.ActiveSlot.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.appservice.ActiveSlot.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_slot_name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ActiveSlot resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_service_name: The name of the App Service within which the Slot exists.  Changing this forces a new resource to be created.
+:param pulumi.Input[str] app_service_slot_name: The name of the App Service Slot which should be promoted to the Production Slot within the App Service.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_active_slot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_active_slot.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -91,10 +106,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.AppService">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AppService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>auth_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>logs=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AppService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>auth_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>logs=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service (within an App Service Plan).</p>
 <blockquote>
-<div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service_active_slot</span></code> resource.</div></blockquote>
+<div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">appservice.AppService</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">appservice.ActiveSlot</span></code> resource.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -244,6 +259,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.appservice.AppService.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>auth_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>logs=None</em>, <em>name=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>site_credential=None</em>, <em>source_control=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AppService resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_service_plan_id: The ID of the App Service Plan within which to create this App Service.
+:param pulumi.Input[dict] app_settings: A key-value pair of App Settings.
+:param pulumi.Input[dict] auth_settings: A <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.
+:param pulumi.Input[bool] client_affinity_enabled: Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?
+:param pulumi.Input[bool] client_cert_enabled: Does the App Service require client certificates for incoming requests? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[list] connection_strings: One or more <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> blocks as defined below.
+:param pulumi.Input[str] default_site_hostname: The Default Hostname associated with the App Service - such as <code class="docutils literal notranslate"><span class="pre">mysite.azurewebsites.net</span></code>
+:param pulumi.Input[bool] enabled: Is the App Service Enabled?
+:param pulumi.Input[bool] https_only: Can the App Service only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[dict] identity: A Managed Service Identity block as defined below.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] logs: A <code class="docutils literal notranslate"><span class="pre">logs</span></code> block as defined below.
+:param pulumi.Input[str] name: Specifies the name of the App Service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] outbound_ip_addresses: A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12</span></code>
+:param pulumi.Input[str] possible_outbound_ip_addresses: A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12,52.143.43.17</span></code> - not all of which are necessarily in use. Superset of <code class="docutils literal notranslate"><span class="pre">outbound_ip_addresses</span></code>.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the App Service.
+:param pulumi.Input[dict] site_config: A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> block as defined below.
+:param pulumi.Input[dict] site_credential: A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.
+:param pulumi.Input[dict] source_control: A <code class="docutils literal notranslate"><span class="pre">source_control</span></code> block as defined below, which contains the Source Control information when <code class="docutils literal notranslate"><span class="pre">scm_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">LocalGit</span></code>.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.appservice.AppService.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -285,8 +332,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.appservice.AwaitableGetAppServicePlanResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AwaitableGetAppServicePlanResult</code><span class="sig-paren">(</span><em>is_xenon=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>maximum_elastic_worker_count=None</em>, <em>maximum_number_of_workers=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AwaitableGetAppServicePlanResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appservice.AwaitableGetAppServiceResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AwaitableGetAppServiceResult</code><span class="sig-paren">(</span><em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>location=None</em>, <em>name=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>resource_group_name=None</em>, <em>site_configs=None</em>, <em>site_credentials=None</em>, <em>source_controls=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AwaitableGetAppServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.appservice.CustomHostnameBinding">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">CustomHostnameBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>hostname=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">CustomHostnameBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>hostname=None</em>, <em>resource_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Hostname Binding within an App Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -321,6 +378,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.CustomHostnameBinding.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.appservice.CustomHostnameBinding.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>hostname=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CustomHostnameBinding resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_service_name: The name of the App Service in which to add the Custom Hostname Binding. Changing this forces a new resource to be created.
+:param pulumi.Input[str] hostname: Specifies the Custom Hostname to use for the App Service, example <code class="docutils literal notranslate"><span class="pre">www.example.com</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_custom_hostname_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_custom_hostname_binding.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -365,7 +437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.FunctionApp">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">FunctionApp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enable_builtin_logging=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>storage_connection_string=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">FunctionApp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enable_builtin_logging=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>storage_connection_string=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Function App.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -514,6 +586,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.FunctionApp.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.appservice.FunctionApp.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>default_hostname=None</em>, <em>enable_builtin_logging=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>site_credential=None</em>, <em>storage_connection_string=None</em>, <em>tags=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FunctionApp resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_service_plan_id: The ID of the App Service Plan within which to create this Function App. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] app_settings: A key-value pair of App Settings.
+:param pulumi.Input[bool] client_affinity_enabled: Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
+:param pulumi.Input[list] connection_strings: An <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.
+:param pulumi.Input[str] default_hostname: The default hostname associated with the Function App - such as <code class="docutils literal notranslate"><span class="pre">mysite.azurewebsites.net</span></code>
+:param pulumi.Input[bool] enable_builtin_logging: Should the built-in logging of this Function App be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[bool] enabled: Is the Function App enabled?
+:param pulumi.Input[bool] https_only: Can the Function App only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
+:param pulumi.Input[str] kind: The Function App kind - such as <code class="docutils literal notranslate"><span class="pre">functionapp,linux,container</span></code>
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the Connection String.
+:param pulumi.Input[str] outbound_ip_addresses: A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12</span></code>
+:param pulumi.Input[str] possible_outbound_ip_addresses: A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12,52.143.43.17</span></code> - not all of which are necessarily in use. Superset of <code class="docutils literal notranslate"><span class="pre">outbound_ip_addresses</span></code>.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Function App.
+:param pulumi.Input[dict] site_config: A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.
+:param pulumi.Input[dict] site_credential: A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.
+:param pulumi.Input[str] storage_connection_string: The connection string of the backend storage account which will be used by this Function App (such as the dashboard, logs).
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] version: The runtime version associated with the Function App. Defaults to <code class="docutils literal notranslate"><span class="pre">~1</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/function_app.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/function_app.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -708,7 +812,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.Plan">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Plan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_environment_id=None</em>, <em>is_xenon=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>maximum_elastic_worker_count=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Plan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_environment_id=None</em>, <em>is_xenon=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>maximum_elastic_worker_count=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an App Service Plan component.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -800,6 +904,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.appservice.Plan.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_service_environment_id=None</em>, <em>is_xenon=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>maximum_elastic_worker_count=None</em>, <em>maximum_number_of_workers=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Plan resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_service_environment_id: The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.
+:param pulumi.Input[str] kind: The kind of the App Service Plan to create. Possible values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code> (also available as <code class="docutils literal notranslate"><span class="pre">App</span></code>), <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">elastic</span></code> (for Premium Consumption) and <code class="docutils literal notranslate"><span class="pre">FunctionApp</span></code> (for a Consumption Plan). Defaults to <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[float] maximum_elastic_worker_count: The maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan.
+:param pulumi.Input[float] maximum_number_of_workers: The maximum number of workers supported with the App Service Plan’s sku.
+:param pulumi.Input[str] name: Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.
+:param pulumi.Input[bool] per_site_scaling: Can Apps assigned to this App Service Plan be scaled independently? If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> apps assigned to this plan will scale to all instances of the plan.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[bool] reserved: Is this App Service Plan <code class="docutils literal notranslate"><span class="pre">Reserved</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the App Service Plan component.
+:param pulumi.Input[dict] sku: A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_plan.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.appservice.Plan.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -842,10 +969,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.Slot">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Slot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Slot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Slot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Slot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Slot (within an App Service).</p>
 <blockquote>
-<div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service_active_slot</span></code> resource.</div></blockquote>
+<div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">appservice.AppService</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">appservice.ActiveSlot</span></code> resource.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -961,6 +1088,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.Slot.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Slot.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.appservice.Slot.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>site_credential=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Slot.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Slot resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_service_name: The name of the App Service within which to create the App Service Slot.  Changing this forces a new resource to be created.
+:param pulumi.Input[str] app_service_plan_id: The ID of the App Service Plan within which to create this App Service Slot. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] app_settings: A key-value pair of App Settings.
+:param pulumi.Input[bool] client_affinity_enabled: Should the App Service Slot send session affinity cookies, which route client requests in the same session to the same instance?
+:param pulumi.Input[list] connection_strings: An <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.
+:param pulumi.Input[str] default_site_hostname: The Default Hostname associated with the App Service Slot - such as <code class="docutils literal notranslate"><span class="pre">mysite.azurewebsites.net</span></code>
+:param pulumi.Input[bool] enabled: Is the App Service Slot Enabled?
+:param pulumi.Input[bool] https_only: Can the App Service Slot only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[dict] identity: A Managed Service Identity block as defined below.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the Connection String.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the App Service Slot component.
+:param pulumi.Input[dict] site_config: A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.
+:param pulumi.Input[dict] site_credential: A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_slot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_slot.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

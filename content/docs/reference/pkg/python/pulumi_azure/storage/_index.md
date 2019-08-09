@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.storage"></span><dl class="class">
 <dt id="pulumi_azure.storage.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -342,6 +342,86 @@ create the storage account. Changing this forces a new resource to be created.</
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.Account.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>primary_access_key=None</em>, <em>primary_blob_connection_string=None</em>, <em>primary_blob_endpoint=None</em>, <em>primary_blob_host=None</em>, <em>primary_connection_string=None</em>, <em>primary_dfs_endpoint=None</em>, <em>primary_dfs_host=None</em>, <em>primary_file_endpoint=None</em>, <em>primary_file_host=None</em>, <em>primary_location=None</em>, <em>primary_queue_endpoint=None</em>, <em>primary_queue_host=None</em>, <em>primary_table_endpoint=None</em>, <em>primary_table_host=None</em>, <em>primary_web_endpoint=None</em>, <em>primary_web_host=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>secondary_blob_connection_string=None</em>, <em>secondary_blob_endpoint=None</em>, <em>secondary_blob_host=None</em>, <em>secondary_connection_string=None</em>, <em>secondary_dfs_endpoint=None</em>, <em>secondary_dfs_host=None</em>, <em>secondary_file_endpoint=None</em>, <em>secondary_file_host=None</em>, <em>secondary_location=None</em>, <em>secondary_queue_endpoint=None</em>, <em>secondary_queue_host=None</em>, <em>secondary_table_endpoint=None</em>, <em>secondary_table_host=None</em>, <em>secondary_web_endpoint=None</em>, <em>secondary_web_host=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_tier: Defines the access tier for <code class="docutils literal notranslate"><span class="pre">BlobStorage</span></code> and <code class="docutils literal notranslate"><span class="pre">StorageV2</span></code> accounts. Valid options are <code class="docutils literal notranslate"><span class="pre">Hot</span></code> and <code class="docutils literal notranslate"><span class="pre">Cool</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Hot</span></code>.
+:param pulumi.Input[str] account_encryption_source: The Encryption Source for this Storage Account. Possible values are <code class="docutils literal notranslate"><span class="pre">Microsoft.Keyvault</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Storage</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Microsoft.Storage</span></code>.
+:param pulumi.Input[str] account_kind: Defines the Kind of account. Valid options are <code class="docutils literal notranslate"><span class="pre">Storage</span></code>,</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">StorageV2</span></code> and <code class="docutils literal notranslate"><span class="pre">BlobStorage</span></code>. Changing this forces a new resource to be created.
+Defaults to <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>account_replication_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the type of replication to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">GRS</span></code>, <code class="docutils literal notranslate"><span class="pre">RAGRS</span></code> and <code class="docutils literal notranslate"><span class="pre">ZRS</span></code>.</li>
+<li><strong>account_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the Tier to use for this storage account. Valid options are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created</li>
+<li><strong>custom_domain</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">custom_domain</span></code> block as documented below.</li>
+<li><strong>enable_blob_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean flag which controls if Encryption Services are enabled for Blob storage, see <a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/">here</a> for more information. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</li>
+<li><strong>enable_file_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean flag which controls if Encryption Services are enabled for File storage, see <a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/">here</a> for more information. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</li>
+<li><strong>enable_https_traffic_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean flag which forces HTTPS if enabled, see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/">here</a>
+for more information.</p>
+</li>
+<li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Managed Service Identity block as defined below.</li>
+<li><strong>is_hns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/">see here for more information</a>). Changing this forces a new resource to be created.</p>
+</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the
+resource exists. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</li>
+<li><strong>network_rules</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_rules</span></code> block as documented below.</li>
+<li><strong>primary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary access key for the storage account.</li>
+<li><strong>primary_blob_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection string associated with the primary blob location.</li>
+<li><strong>primary_blob_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for blob storage in the primary location.</li>
+<li><strong>primary_blob_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for blob storage in the primary location.</li>
+<li><strong>primary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection string associated with the primary location.</li>
+<li><strong>primary_dfs_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for DFS storage in the primary location.</li>
+<li><strong>primary_dfs_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for DFS storage in the primary location.</li>
+<li><strong>primary_file_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for file storage in the primary location.</li>
+<li><strong>primary_file_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for file storage in the primary location.</li>
+<li><strong>primary_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary location of the storage account.</li>
+<li><strong>primary_queue_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for queue storage in the primary location.</li>
+<li><strong>primary_queue_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for queue storage in the primary location.</li>
+<li><strong>primary_table_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for table storage in the primary location.</li>
+<li><strong>primary_table_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for table storage in the primary location.</li>
+<li><strong>primary_web_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for web storage in the primary location.</li>
+<li><strong>primary_web_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for web storage in the primary location.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
+create the storage account. Changing this forces a new resource to be created.</li>
+<li><strong>secondary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary access key for the storage account.</li>
+<li><strong>secondary_blob_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection string associated with the secondary blob location.</li>
+<li><strong>secondary_blob_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for blob storage in the secondary location.</li>
+<li><strong>secondary_blob_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for blob storage in the secondary location.</li>
+<li><strong>secondary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection string associated with the secondary location.</li>
+<li><strong>secondary_dfs_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for DFS storage in the secondary location.</li>
+<li><strong>secondary_dfs_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for DFS storage in the secondary location.</li>
+<li><strong>secondary_file_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for file storage in the secondary location.</li>
+<li><strong>secondary_file_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for file storage in the secondary location.</li>
+<li><strong>secondary_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary location of the storage account.</li>
+<li><strong>secondary_queue_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for queue storage in the secondary location.</li>
+<li><strong>secondary_queue_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for queue storage in the secondary location.</li>
+<li><strong>secondary_table_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for table storage in the secondary location.</li>
+<li><strong>secondary_table_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for table storage in the secondary location.</li>
+<li><strong>secondary_web_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint URL for web storage in the secondary location.</li>
+<li><strong>secondary_web_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname with port if applicable for web storage in the secondary location.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.storage.Account.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -383,8 +463,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.storage.AwaitableGetAccountResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>primary_access_key=None</em>, <em>primary_blob_connection_string=None</em>, <em>primary_blob_endpoint=None</em>, <em>primary_blob_host=None</em>, <em>primary_connection_string=None</em>, <em>primary_dfs_endpoint=None</em>, <em>primary_dfs_host=None</em>, <em>primary_file_endpoint=None</em>, <em>primary_file_host=None</em>, <em>primary_location=None</em>, <em>primary_queue_endpoint=None</em>, <em>primary_queue_host=None</em>, <em>primary_table_endpoint=None</em>, <em>primary_table_host=None</em>, <em>primary_web_endpoint=None</em>, <em>primary_web_host=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>secondary_blob_connection_string=None</em>, <em>secondary_blob_endpoint=None</em>, <em>secondary_blob_host=None</em>, <em>secondary_connection_string=None</em>, <em>secondary_dfs_endpoint=None</em>, <em>secondary_dfs_host=None</em>, <em>secondary_file_endpoint=None</em>, <em>secondary_file_host=None</em>, <em>secondary_location=None</em>, <em>secondary_queue_endpoint=None</em>, <em>secondary_queue_host=None</em>, <em>secondary_table_endpoint=None</em>, <em>secondary_table_host=None</em>, <em>secondary_web_endpoint=None</em>, <em>secondary_web_host=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.AwaitableGetAccountSASResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">AwaitableGetAccountSASResult</code><span class="sig-paren">(</span><em>connection_string=None</em>, <em>expiry=None</em>, <em>https_only=None</em>, <em>permissions=None</em>, <em>resource_types=None</em>, <em>sas=None</em>, <em>services=None</em>, <em>start=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetAccountSASResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.storage.Blob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Blob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Blob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Blob.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -498,6 +588,46 @@ this becomes required.</p>
 <dd><p>The URL of the blob</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.Blob.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Blob resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] attempts: The number of attempts to make per page or block when uploading. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.
+:param pulumi.Input[str] content_type: The content type of the storage blob. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined. Defaults to <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.
+:param pulumi.Input[dict] metadata: A map of custom blob metadata.
+:param pulumi.Input[str] name: The name of the storage blob. Must be unique within the storage container the blob is located.
+:param pulumi.Input[float] parallelism: The number of workers per CPU core to run for concurrent uploads. Defaults to <code class="docutils literal notranslate"><span class="pre">8</span></code>.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to</p>
+<blockquote>
+<div>create the storage container. Changing this forces a new resource to be created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used only for <code class="docutils literal notranslate"><span class="pre">page</span></code> blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.</li>
+<li><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An absolute path to a file on the local system. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined.</li>
+<li><strong>source_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of an existing blob, or a file in the Azure File service, to use as the source contents
+for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is defined.</li>
+<li><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage container.
+Changing this forces a new resource to be created.</li>
+<li><strong>storage_container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage container in which this blob should be created.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the storage blob to be created. One of either <code class="docutils literal notranslate"><span class="pre">block</span></code> or <code class="docutils literal notranslate"><span class="pre">page</span></code>. When not copying from an existing blob,
+this becomes required.</li>
+<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the blob</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_blob.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.storage.Blob.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -540,7 +670,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Container">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_access_type=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_access_type=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Container.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -592,6 +722,33 @@ create the storage container. Changing this forces a new resource to be created.
 <code class="descname">storage_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Container.storage_account_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the storage account in which to create the storage container.
 Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.Container.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>container_access_type=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] container_access_type: The ‘interface’ for access the container provides. Can be either <code class="docutils literal notranslate"><span class="pre">blob</span></code>, <code class="docutils literal notranslate"><span class="pre">container</span></code> or <code class="docutils literal notranslate"><span class="pre">private</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>.
+:param pulumi.Input[str] name: The name of the storage container. Must be unique within the storage service the container is located.
+:param pulumi.Input[dict] properties: Key-value definition of additional properties associated to the storage container
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to</p>
+<blockquote>
+<div>create the storage container. Changing this forces a new resource to be created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage container.
+Changing this forces a new resource to be created.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_container.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -939,7 +1096,7 @@ for more information.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Queue">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Queue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Queue.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -978,6 +1135,31 @@ create the storage queue. Changing this forces a new resource to be created.</p>
 <code class="descname">storage_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Queue.storage_account_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the storage account in which to create the storage queue.
 Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.Queue.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Queue.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Queue resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the storage queue. Must be unique within the storage account the queue is located.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to</p>
+<blockquote>
+<div>create the storage queue. Changing this forces a new resource to be created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage queue.
+Changing this forces a new resource to be created.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_queue.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1022,7 +1204,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Share">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Share</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Share</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage File Share.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1076,6 +1258,36 @@ Changing this forces a new resource to be created.</p>
 <dd><p>The URL of the share</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.Share.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Share resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the share. Must be unique within the storage account where the share is located.
+:param pulumi.Input[float] quota: The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to</p>
+<blockquote>
+<div>create the share. Changing this forces a new resource to be created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the share.
+Changing this forces a new resource to be created.</li>
+<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the share</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_share.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_share.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.storage.Share.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1118,7 +1330,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Table">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Table.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1157,6 +1369,31 @@ create the storage table. Changing this forces a new resource to be created.</p>
 <code class="descname">storage_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Table.storage_account_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.Table.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Table resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the storage table. Must be unique within the storage account the table is located.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to</p>
+<blockquote>
+<div>create the storage table. Changing this forces a new resource to be created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage table.
+Changing this forces a new resource to be created.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_table.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_table.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1201,7 +1438,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.ZipBlob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">ZipBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">ZipBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ZipBlob resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1215,6 +1452,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<dl class="staticmethod">
+<dt id="pulumi_azure.storage.ZipBlob.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ZipBlob resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.storage.ZipBlob.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob.translate_output_property" title="Permalink to this definition">¶</a></dt>

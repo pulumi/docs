@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.operationalinsights"></span><dl class="class">
 <dt id="pulumi_azure.operationalinsights.AnalyticsSolution">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsSolution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>plan=None</em>, <em>resource_group_name=None</em>, <em>solution_name=None</em>, <em>workspace_name=None</em>, <em>workspace_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsSolution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>plan=None</em>, <em>resource_group_name=None</em>, <em>solution_name=None</em>, <em>workspace_name=None</em>, <em>workspace_resource_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Solution.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -68,6 +68,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The full resource ID of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.operationalinsights.AnalyticsSolution.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>location=None</em>, <em>plan=None</em>, <em>resource_group_name=None</em>, <em>solution_name=None</em>, <em>workspace_name=None</em>, <em>workspace_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AnalyticsSolution resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] plan: A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as documented below.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Log Analytics solution is created. Changing this forces a new resource to be created. Note: The solution and it’s related workspace can only exist in the same resource group.
+:param pulumi.Input[str] solution_name: Specifies the name of the solution to be deployed. See <a class="reference external" href="https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-add-solutions">here for options</a>.Changing this forces a new resource to be created.
+:param pulumi.Input[str] workspace_name: The full name of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.
+:param pulumi.Input[str] workspace_resource_id: The full resource ID of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.operationalinsights.AnalyticsSolution.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -110,7 +128,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Workspace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -192,6 +210,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Workspace (or Customer) ID for the Log Analytics Workspace.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>portal_url=None</em>, <em>primary_shared_key=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>secondary_shared_key=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>workspace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AnalyticsWorkspace resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Log Analytics Workspace. Workspace name should include 4-63 letters, digits or ‘-‘. The ‘-‘ shouldn’t be the first or the last symbol. Changing this forces a new resource to be created.
+:param pulumi.Input[str] portal_url: The Portal URL for the Log Analytics Workspace.
+:param pulumi.Input[str] primary_shared_key: The Primary shared key for the Log Analytics Workspace.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Log Analytics workspace is created. Changing this forces a new resource to be created.
+:param pulumi.Input[float] retention_in_days: The workspace data retention in days. Possible values range between 30 and 730.
+:param pulumi.Input[str] secondary_shared_key: The Secondary shared key for the Log Analytics Workspace.
+:param pulumi.Input[str] sku: Specifies the Sku of the Log Analytics Workspace. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">PerNode</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Standalone</span></code>, <code class="docutils literal notranslate"><span class="pre">Unlimited</span></code>, and <code class="docutils literal notranslate"><span class="pre">PerGB2018</span></code> (new Sku as of <code class="docutils literal notranslate"><span class="pre">2018-04-03</span></code>).
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] workspace_id: The Workspace (or Customer) ID for the Log Analytics Workspace.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -234,10 +274,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspaceLinkedService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>linked_service_name=None</em>, <em>linked_service_properties=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>workspace_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspaceLinkedService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>linked_service_name=None</em>, <em>linked_service_properties=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>workspace_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.</p>
 <blockquote>
-<div><strong>NOTE:</strong> This resource has been deprecated in favour of the <code class="docutils literal notranslate"><span class="pre">azurerm_log_analytics_linked_service</span></code> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</div></blockquote>
+<div><strong>NOTE:</strong> This resource has been deprecated in favour of the <code class="docutils literal notranslate"><span class="pre">loganalytics.LinkedService</span></code> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -300,6 +340,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Name of the Log Analytics Workspace that will contain the linkedServices resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>linked_service_name=None</em>, <em>linked_service_properties=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>workspace_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AnalyticsWorkspaceLinkedService resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] linked_service_name: Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in <code class="docutils literal notranslate"><span class="pre">workspace_name</span></code>. Currently it defaults to and only supports <code class="docutils literal notranslate"><span class="pre">automation</span></code> as a value. Changing this forces a new resource to be created.
+:param pulumi.Input[list] linked_service_properties: A <code class="docutils literal notranslate"><span class="pre">linked_service_properties</span></code> block as defined below.
+:param pulumi.Input[str] name: The automatically generated name of the Linked Service. This cannot be specified. The format is always <code class="docutils literal notranslate"><span class="pre">&lt;workspace_name&gt;/&lt;linked_service_name&gt;</span></code> e.g. <code class="docutils literal notranslate"><span class="pre">workspace1/Automation</span></code>
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_id: The resource id of the resource that will be linked to the workspace. This field has been deprecated in favour of the top-level <code class="docutils literal notranslate"><span class="pre">resource_id</span></code> field and will be removed in v2.0 of the AzureRM Provider.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] workspace_name: Name of the Log Analytics Workspace that will contain the linkedServices resource. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace_linked_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace_linked_service.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -339,6 +398,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 </dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.operationalinsights.AwaitableGetAnalyticsWorkspaceResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AwaitableGetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>portal_url=None</em>, <em>primary_shared_key=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>secondary_shared_key=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>workspace_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AwaitableGetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult">

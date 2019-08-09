@@ -9,6 +9,16 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.recoveryservices"></span><dl class="class">
+<dt id="pulumi_azure.recoveryservices.AwaitableGetVMProtectionPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">AwaitableGetVMProtectionPolicyResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.AwaitableGetVMProtectionPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.recoveryservices.AwaitableGetVaultResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">AwaitableGetVaultResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.AwaitableGetVaultResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.recoveryservices.GetVMProtectionPolicyResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVMProtectionPolicyResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVMProtectionPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVMProtectionPolicy.</p>
@@ -58,7 +68,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.ProtectedVM">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectedVM</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup_policy_id=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>source_vm_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectedVM</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup_policy_id=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>source_vm_id=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Recovery Protected VM.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -109,6 +119,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.recoveryservices.ProtectedVM.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>backup_policy_id=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>source_vm_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProtectedVM resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backup_policy_id: Specifies the id of the backup policy to use. Changing this forces a new resource to be created.
+:param pulumi.Input[str] recovery_vault_name: Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+:param pulumi.Input[str] source_vm_id: Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protected_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protected_vm.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.recoveryservices.ProtectedVM.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -151,7 +178,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.ProtectionPolicyVM">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectionPolicyVM</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup=None</em>, <em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>retention_daily=None</em>, <em>retention_monthly=None</em>, <em>retention_weekly=None</em>, <em>retention_yearly=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectionPolicyVM</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup=None</em>, <em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>retention_daily=None</em>, <em>retention_monthly=None</em>, <em>retention_weekly=None</em>, <em>retention_yearly=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Recovery Services VM Protection Policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -237,6 +264,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the timezone. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code></p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.recoveryservices.ProtectionPolicyVM.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>backup=None</em>, <em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>retention_daily=None</em>, <em>retention_monthly=None</em>, <em>retention_weekly=None</em>, <em>retention_yearly=None</em>, <em>tags=None</em>, <em>timezone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProtectionPolicyVM resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] backup: Configures the Policy backup frequecent, times &amp; days as documented in the <code class="docutils literal notranslate"><span class="pre">backup</span></code> block below. 
+:param pulumi.Input[str] name: Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.
+:param pulumi.Input[str] recovery_vault_name: Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] retention_daily: Configures the policy daily retention as documented in the <code class="docutils literal notranslate"><span class="pre">retention_daily</span></code> block below. Required when backup frequency is <code class="docutils literal notranslate"><span class="pre">Daily</span></code>.
+:param pulumi.Input[dict] retention_monthly: Configures the policy monthly retention as documented in the <code class="docutils literal notranslate"><span class="pre">retention_monthly</span></code> block below.
+:param pulumi.Input[dict] retention_weekly: Configures the policy weekly retention as documented in the <code class="docutils literal notranslate"><span class="pre">retention_weekly</span></code> block below. Required when backup frequency is <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.
+:param pulumi.Input[dict] retention_yearly: Configures the policy yearly retention as documented in the <code class="docutils literal notranslate"><span class="pre">retention_yearly</span></code> block below.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] timezone: Specifies the timezone. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_policy_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_policy_vm.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.recoveryservices.ProtectionPolicyVM.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -279,7 +328,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.Vault">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">Vault</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">Vault</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Recovery Services Vault.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -328,6 +377,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.recoveryservices.Vault.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.recoveryservices.Vault.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Vault resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Recovery Services Vault. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
+:param pulumi.Input[str] sku: Sets the vault’s SKU. Possible values include: <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">RS0</span></code>.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

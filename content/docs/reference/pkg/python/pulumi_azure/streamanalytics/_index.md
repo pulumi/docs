@@ -9,8 +9,13 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.streamanalytics"></span><dl class="class">
+<dt id="pulumi_azure.streamanalytics.AwaitableGetJobResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">AwaitableGetJobResult</code><span class="sig-paren">(</span><em>compatibility_level=None</em>, <em>data_locale=None</em>, <em>events_late_arrival_max_delay_in_seconds=None</em>, <em>events_out_of_order_max_delay_in_seconds=None</em>, <em>events_out_of_order_policy=None</em>, <em>job_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>output_error_policy=None</em>, <em>resource_group_name=None</em>, <em>streaming_units=None</em>, <em>transformation_query=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.AwaitableGetJobResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.streamanalytics.FunctionJavaScriptUDF">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">FunctionJavaScriptUDF</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>output=None</em>, <em>resource_group_name=None</em>, <em>script=None</em>, <em>stream_analytics_job_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.FunctionJavaScriptUDF" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">FunctionJavaScriptUDF</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>output=None</em>, <em>resource_group_name=None</em>, <em>script=None</em>, <em>stream_analytics_job_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.FunctionJavaScriptUDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a JavaScript UDF Function within Stream Analytics Streaming Job.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -66,6 +71,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.streamanalytics.FunctionJavaScriptUDF.stream_analytics_job_name">
 <code class="descname">stream_analytics_job_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.FunctionJavaScriptUDF.stream_analytics_job_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Stream Analytics Job where this Function should be created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.FunctionJavaScriptUDF.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>output=None</em>, <em>resource_group_name=None</em>, <em>script=None</em>, <em>stream_analytics_job_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.FunctionJavaScriptUDF.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FunctionJavaScriptUDF resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] inputs: One or more <code class="docutils literal notranslate"><span class="pre">input</span></code> blocks as defined below.
+:param pulumi.Input[str] name: The name of the JavaScript UDF Function. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] output: An <code class="docutils literal notranslate"><span class="pre">output</span></code> blocks as defined below.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] script: The JavaScript of this UDF Function.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job where this Function should be created. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_function_javascript_udf.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_function_javascript_udf.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -182,7 +205,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.Job">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatibility_level=None</em>, <em>data_locale=None</em>, <em>events_late_arrival_max_delay_in_seconds=None</em>, <em>events_out_of_order_max_delay_in_seconds=None</em>, <em>events_out_of_order_policy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>output_error_policy=None</em>, <em>resource_group_name=None</em>, <em>streaming_units=None</em>, <em>tags=None</em>, <em>transformation_query=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatibility_level=None</em>, <em>data_locale=None</em>, <em>events_late_arrival_max_delay_in_seconds=None</em>, <em>events_out_of_order_max_delay_in_seconds=None</em>, <em>events_out_of_order_policy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>output_error_policy=None</em>, <em>resource_group_name=None</em>, <em>streaming_units=None</em>, <em>tags=None</em>, <em>transformation_query=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Job.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -289,6 +312,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the query that will be run in the streaming job, <a class="reference external" href="https://msdn.microsoft.com/library/azure/dn834998">written in Stream Analytics Query Language (SAQL)</a>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.Job.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>compatibility_level=None</em>, <em>data_locale=None</em>, <em>events_late_arrival_max_delay_in_seconds=None</em>, <em>events_out_of_order_max_delay_in_seconds=None</em>, <em>events_out_of_order_policy=None</em>, <em>job_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>output_error_policy=None</em>, <em>resource_group_name=None</em>, <em>streaming_units=None</em>, <em>tags=None</em>, <em>transformation_query=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] compatibility_level: Specifies the compatibility level for this job - which controls certain runtime behaviors of the streaming job. Possible values are <code class="docutils literal notranslate"><span class="pre">1.0</span></code> and 1.1<code class="docutils literal notranslate"><span class="pre">.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">data_locale:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">Data</span> <span class="pre">Locale</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Job,</span> <span class="pre">which</span> <span class="pre">[should</span> <span class="pre">be</span> <span class="pre">a</span> <span class="pre">supported</span> <span class="pre">.NET</span> <span class="pre">Culture](https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx).</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">events_late_arrival_max_delay_in_seconds:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">maximum</span> <span class="pre">tolerable</span> <span class="pre">delay</span> <span class="pre">in</span> <span class="pre">seconds</span> <span class="pre">where</span> <span class="pre">events</span> <span class="pre">arriving</span> <span class="pre">late</span> <span class="pre">could</span> <span class="pre">be</span> <span class="pre">included.</span> <span class="pre">Supported</span> <span class="pre">range</span> <span class="pre">is</span></code>-1<code class="docutils literal notranslate"><span class="pre">(indefinite)</span> <span class="pre">to</span></code>1814399<code class="docutils literal notranslate"><span class="pre">(20d</span> <span class="pre">23h</span> <span class="pre">59m</span> <span class="pre">59s).</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">events_out_of_order_max_delay_in_seconds:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">maximum</span> <span class="pre">tolerable</span> <span class="pre">delay</span> <span class="pre">in</span> <span class="pre">seconds</span> <span class="pre">where</span> <span class="pre">out-of-order</span> <span class="pre">events</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">adjusted</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">back</span> <span class="pre">in</span> <span class="pre">order.</span> <span class="pre">Supported</span> <span class="pre">range</span> <span class="pre">is</span></code>0<code class="docutils literal notranslate"><span class="pre">to</span></code>599<code class="docutils literal notranslate"><span class="pre">(9m</span> <span class="pre">59s).</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">events_out_of_order_policy:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">policy</span> <span class="pre">which</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">applied</span> <span class="pre">to</span> <span class="pre">events</span> <span class="pre">which</span> <span class="pre">arrive</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">order</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">input</span> <span class="pre">event</span> <span class="pre">stream.</span> <span class="pre">Possible</span> <span class="pre">values</span> <span class="pre">are</span></code>Adjust<code class="docutils literal notranslate"><span class="pre">and</span></code>Drop<code class="docutils literal notranslate"><span class="pre">.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">job_id:</span> <span class="pre">The</span> <span class="pre">Job</span> <span class="pre">ID</span> <span class="pre">assigned</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">Stream</span> <span class="pre">Analytics</span> <span class="pre">Job.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">location:</span> <span class="pre">The</span> <span class="pre">Azure</span> <span class="pre">Region</span> <span class="pre">in</span> <span class="pre">which</span> <span class="pre">the</span> <span class="pre">Resource</span> <span class="pre">Group</span> <span class="pre">exists.</span> <span class="pre">Changing</span> <span class="pre">this</span> <span class="pre">forces</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">resource</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">created.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">name:</span> <span class="pre">The</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Stream</span> <span class="pre">Analytics</span> <span class="pre">Job.</span> <span class="pre">Changing</span> <span class="pre">this</span> <span class="pre">forces</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">resource</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">created.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">output_error_policy:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">policy</span> <span class="pre">which</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">applied</span> <span class="pre">to</span> <span class="pre">events</span> <span class="pre">which</span> <span class="pre">arrive</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">and</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">written</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">external</span> <span class="pre">storage</span> <span class="pre">due</span> <span class="pre">to</span> <span class="pre">being</span> <span class="pre">malformed</span> <span class="pre">(such</span> <span class="pre">as</span> <span class="pre">missing</span> <span class="pre">column</span> <span class="pre">values,</span> <span class="pre">column</span> <span class="pre">values</span> <span class="pre">of</span> <span class="pre">wrong</span> <span class="pre">type</span> <span class="pre">or</span> <span class="pre">size).</span> <span class="pre">Possible</span> <span class="pre">values</span> <span class="pre">are</span></code>Drop<code class="docutils literal notranslate"><span class="pre">and</span></code>Stop<code class="docutils literal notranslate"><span class="pre">.</span> 
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">resource_group_name:</span> <span class="pre">The</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Resource</span> <span class="pre">Group</span> <span class="pre">where</span> <span class="pre">the</span> <span class="pre">Stream</span> <span class="pre">Analytics</span> <span class="pre">Job</span> <span class="pre">should</span> <span class="pre">exist.</span> <span class="pre">Changing</span> <span class="pre">this</span> <span class="pre">forces</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">resource</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">created.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">streaming_units:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">streaming</span> <span class="pre">units</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">streaming</span> <span class="pre">job</span> <span class="pre">uses.</span> <span class="pre">Supported</span> <span class="pre">values</span> <span class="pre">are</span></code>1<code class="docutils literal notranslate"><span class="pre">,</span></code>3<code class="docutils literal notranslate"><span class="pre">,</span></code>6<code class="docutils literal notranslate"><span class="pre">and</span> <span class="pre">multiples</span> <span class="pre">of</span></code>6<code class="docutils literal notranslate"><span class="pre">up</span> <span class="pre">to</span></code>120`.
+:param pulumi.Input[dict] tags: A mapping of tags assigned to the resource.
+:param pulumi.Input[str] transformation_query: Specifies the query that will be run in the streaming job, <a class="reference external" href="https://msdn.microsoft.com/library/azure/dn834998">written in Stream Analytics Query Language (SAQL)</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_job.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.Job.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -331,7 +379,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.OutputBlob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>date_format=None</em>, <em>name=None</em>, <em>path_pattern=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>storage_account_key=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>time_format=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputBlob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>date_format=None</em>, <em>name=None</em>, <em>path_pattern=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>storage_account_key=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>time_format=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to Blob Storage.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -417,6 +465,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The time format. Wherever <code class="docutils literal notranslate"><span class="pre">{time}</span></code> appears in <code class="docutils literal notranslate"><span class="pre">path_pattern</span></code>, the value of this property is used as the time format instead.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.OutputBlob.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>date_format=None</em>, <em>name=None</em>, <em>path_pattern=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>storage_account_key=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>time_format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputBlob.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OutputBlob resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] date_format: The date format. Wherever <code class="docutils literal notranslate"><span class="pre">{date}</span></code> appears in <code class="docutils literal notranslate"><span class="pre">path_pattern</span></code>, the value of this property is used as the date format instead.
+:param pulumi.Input[str] name: The name of the Stream Output. Changing this forces a new resource to be created.
+:param pulumi.Input[str] path_pattern: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] serialization: A <code class="docutils literal notranslate"><span class="pre">serialization</span></code> block as defined below.
+:param pulumi.Input[str] storage_account_key: The Access Key which should be used to connect to this Storage Account.
+:param pulumi.Input[str] storage_account_name: The name of the Storage Account.
+:param pulumi.Input[str] storage_container_name: The name of the Container within the Storage Account.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
+:param pulumi.Input[str] time_format: The time format. Wherever <code class="docutils literal notranslate"><span class="pre">{time}</span></code> appears in <code class="docutils literal notranslate"><span class="pre">path_pattern</span></code>, the value of this property is used as the time format instead.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_blob.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.OutputBlob.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputBlob.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -459,7 +529,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.OutputEventHub">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputEventHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputEventHub" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputEventHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputEventHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to an EventHub.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -531,6 +601,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.OutputEventHub.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>eventhub_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputEventHub.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OutputEventHub resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] eventhub_name: The name of the Event Hub.
+:param pulumi.Input[str] name: The name of the Stream Output. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] serialization: A <code class="docutils literal notranslate"><span class="pre">serialization</span></code> block as defined below.
+:param pulumi.Input[str] servicebus_namespace: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] shared_access_policy_key: The shared access policy key for the specified shared access policy.
+:param pulumi.Input[str] shared_access_policy_name: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_eventhub.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.OutputEventHub.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputEventHub.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -573,7 +663,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.OutputMssql">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputMssql</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>server=None</em>, <em>stream_analytics_job_name=None</em>, <em>table=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputMssql</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>server=None</em>, <em>stream_analytics_job_name=None</em>, <em>table=None</em>, <em>user=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to Microsoft SQL Server Database.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -638,6 +728,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>database=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>server=None</em>, <em>stream_analytics_job_name=None</em>, <em>table=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OutputMssql resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the Stream Output. Changing this forces a new resource to be created.
+:param pulumi.Input[str] password: Password used together with username, to login to the Microsoft SQL Server. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] server: The SQL server url. Changing this forces a new resource to be created.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
+:param pulumi.Input[str] table: Table in the database that the output points to. Changing this forces a new resource to be created.
+:param pulumi.Input[str] user: Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_mssql.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_mssql.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.OutputMssql.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -680,7 +789,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.OutputServiceBusQueue">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputServiceBusQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>queue_name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputServiceBusQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>queue_name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to a ServiceBus Queue.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -752,6 +861,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.OutputServiceBusQueue.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em>, <em>queue_name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OutputServiceBusQueue resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the Stream Output. Changing this forces a new resource to be created.
+:param pulumi.Input[str] queue_name: The name of the Service Bus Queue.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] serialization: A <code class="docutils literal notranslate"><span class="pre">serialization</span></code> block as defined below.
+:param pulumi.Input[str] servicebus_namespace: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] shared_access_policy_key: The shared access policy key for the specified shared access policy.
+:param pulumi.Input[str] shared_access_policy_name: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_queue.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.OutputServiceBusQueue.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -794,7 +923,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.StreamInputBlob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">StreamInputBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>date_format=None</em>, <em>name=None</em>, <em>path_pattern=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>storage_account_key=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>time_format=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputBlob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">StreamInputBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>date_format=None</em>, <em>name=None</em>, <em>path_pattern=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>storage_account_key=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>time_format=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Stream Input Blob.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -880,6 +1009,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The time format. Wherever <code class="docutils literal notranslate"><span class="pre">{time}</span></code> appears in <code class="docutils literal notranslate"><span class="pre">path_pattern</span></code>, the value of this property is used as the time format instead.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.StreamInputBlob.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>date_format=None</em>, <em>name=None</em>, <em>path_pattern=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>storage_account_key=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>time_format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputBlob.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StreamInputBlob resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] date_format: The date format. Wherever <code class="docutils literal notranslate"><span class="pre">{date}</span></code> appears in <code class="docutils literal notranslate"><span class="pre">path_pattern</span></code>, the value of this property is used as the date format instead.
+:param pulumi.Input[str] name: The name of the Stream Input Blob. Changing this forces a new resource to be created.
+:param pulumi.Input[str] path_pattern: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] serialization: A <code class="docutils literal notranslate"><span class="pre">serialization</span></code> block as defined below.
+:param pulumi.Input[str] storage_account_key: The Access Key which should be used to connect to this Storage Account.
+:param pulumi.Input[str] storage_account_name: The name of the Storage Account.
+:param pulumi.Input[str] storage_container_name: The name of the Container within the Storage Account.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
+:param pulumi.Input[str] time_format: The time format. Wherever <code class="docutils literal notranslate"><span class="pre">{time}</span></code> appears in <code class="docutils literal notranslate"><span class="pre">path_pattern</span></code>, the value of this property is used as the time format instead.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_blob.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.StreamInputBlob.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputBlob.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -922,7 +1073,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.StreamInputEventHub">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">StreamInputEventHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_consumer_group_name=None</em>, <em>eventhub_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputEventHub" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">StreamInputEventHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_consumer_group_name=None</em>, <em>eventhub_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputEventHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Stream Input EventHub.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1001,6 +1152,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.StreamInputEventHub.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>eventhub_consumer_group_name=None</em>, <em>eventhub_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputEventHub.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StreamInputEventHub resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] eventhub_consumer_group_name: The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
+:param pulumi.Input[str] eventhub_name: The name of the Event Hub.
+:param pulumi.Input[str] name: The name of the Stream Input EventHub. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] serialization: A <code class="docutils literal notranslate"><span class="pre">serialization</span></code> block as defined below.
+:param pulumi.Input[str] servicebus_namespace: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] shared_access_policy_key: The shared access policy key for the specified shared access policy.
+:param pulumi.Input[str] shared_access_policy_name: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_eventhub.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.streamanalytics.StreamInputEventHub.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputEventHub.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1043,7 +1215,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.StreamInputIotHub">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">StreamInputIotHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint=None</em>, <em>eventhub_consumer_group_name=None</em>, <em>iothub_namespace=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputIotHub" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">StreamInputIotHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint=None</em>, <em>eventhub_consumer_group_name=None</em>, <em>iothub_namespace=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputIotHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Stream Input IoTHub.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1120,6 +1292,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.StreamInputIotHub.stream_analytics_job_name">
 <code class="descname">stream_analytics_job_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputIotHub.stream_analytics_job_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.streamanalytics.StreamInputIotHub.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>endpoint=None</em>, <em>eventhub_consumer_group_name=None</em>, <em>iothub_namespace=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputIotHub.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StreamInputIotHub resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] endpoint: The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
+:param pulumi.Input[str] eventhub_consumer_group_name: The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub.
+:param pulumi.Input[str] iothub_namespace: The name or the URI of the IoT Hub.
+:param pulumi.Input[str] name: The name of the Stream Input IoTHub. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] serialization: A <code class="docutils literal notranslate"><span class="pre">serialization</span></code> block as defined below.
+:param pulumi.Input[str] shared_access_policy_key: The shared access policy key for the specified shared access policy.
+:param pulumi.Input[str] shared_access_policy_name: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
+:param pulumi.Input[str] stream_analytics_job_name: The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_iothub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_iothub.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

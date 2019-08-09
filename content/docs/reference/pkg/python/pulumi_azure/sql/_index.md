@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.sql"></span><dl class="class">
 <dt id="pulumi_azure.sql.ActiveDirectoryAdministrator">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ActiveDirectoryAdministrator</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>login=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ActiveDirectoryAdministrator</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>login=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a user or group as the AD administrator for an Azure SQL server</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -61,6 +61,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The Azure Tenant ID</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.sql.ActiveDirectoryAdministrator.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>login=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ActiveDirectoryAdministrator resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] login: The login name of the principal to set as the server administrator
+:param pulumi.Input[str] object_id: The ID of the principal to set as the server administrator
+:param pulumi.Input[str] resource_group_name: The name of the resource group for the SQL server. Changing this forces a new resource to be created.
+:param pulumi.Input[str] server_name: The name of the SQL Server on which to set the administrator. Changing this forces a new resource to be created.
+:param pulumi.Input[str] tenant_id: The Azure Tenant ID</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_active_directory_administrator.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.sql.ActiveDirectoryAdministrator.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -102,8 +119,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.sql.AwaitableGetServerResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em>administrator_login=None</em>, <em>fqdn=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.sql.Database">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>read_scale=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>read_scale=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Database</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -272,6 +294,51 @@ Please see <a class="reference external" href="https://azure.microsoft.com/en-gb
 <dd><p>Threat detection policy configuration. The <code class="docutils literal notranslate"><span class="pre">threat_detection_policy</span></code> block supports fields documented below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.sql.Database.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>creation_date=None</em>, <em>default_secondary_location=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>encryption=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>read_scale=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Database resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] collation: The name of the collation. Applies only if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Default</span></code>.  Azure default is <code class="docutils literal notranslate"><span class="pre">SQL_LATIN1_GENERAL_CP1_CI_AS</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] create_mode: Specifies how to create the database. Must be either <code class="docutils literal notranslate"><span class="pre">Default</span></code> to create a new database or <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code> to restore from a snapshot. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.
+:param pulumi.Input[str] creation_date: The creation date of the SQL Database.
+:param pulumi.Input[str] default_secondary_location: The default secondary location of the SQL Database.
+:param pulumi.Input[str] edition: The edition of the database to be created. Applies only if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Default</span></code>. Valid values are: <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">DataWarehouse</span></code>, <code class="docutils literal notranslate"><span class="pre">Business</span></code>, <code class="docutils literal notranslate"><span class="pre">BusinessCritical</span></code>, <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">GeneralPurpose</span></code>, <code class="docutils literal notranslate"><span class="pre">Hyperscale</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">PremiumRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Stretch</span></code>, <code class="docutils literal notranslate"><span class="pre">System</span></code>, <code class="docutils literal notranslate"><span class="pre">System2</span></code>, or <code class="docutils literal notranslate"><span class="pre">Web</span></code>. Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.
+:param pulumi.Input[str] elastic_pool<em>name: The name of the elastic database pool.
+:param pulumi.Input[dict] import</em>: A Database Import block as documented below. <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] max_size_bytes: The maximum size that the database can grow to. Applies only if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Default</span></code>.  Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.
+:param pulumi.Input[str] name: The name of the database.
+:param pulumi.Input[bool] read_scale: Read-only connections will be redirected to a high-available replica. Please see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out">Use read-only replicas to load-balance read-only query workloads</a>.
+:param pulumi.Input[str] requested_service_objective_id: Use <code class="docutils literal notranslate"><span class="pre">requested_service_objective_id</span></code> or <code class="docutils literal notranslate"><span class="pre">requested_service_objective_name</span></code> to set the performance level for the database.</p>
+<blockquote>
+<div>Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>requested_service_objective_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Use <code class="docutils literal notranslate"><span class="pre">requested_service_objective_name</span></code> or <code class="docutils literal notranslate"><span class="pre">requested_service_objective_id</span></code> to set the performance level for the database. Valid values are: <code class="docutils literal notranslate"><span class="pre">S0</span></code>, <code class="docutils literal notranslate"><span class="pre">S1</span></code>, <code class="docutils literal notranslate"><span class="pre">S2</span></code>, <code class="docutils literal notranslate"><span class="pre">S3</span></code>, <code class="docutils literal notranslate"><span class="pre">P1</span></code>, <code class="docutils literal notranslate"><span class="pre">P2</span></code>, <code class="docutils literal notranslate"><span class="pre">P4</span></code>, <code class="docutils literal notranslate"><span class="pre">P6</span></code>, <code class="docutils literal notranslate"><span class="pre">P11</span></code> and <code class="docutils literal notranslate"><span class="pre">ElasticPool</span></code>.  Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.</p>
+</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.</li>
+<li><strong>restore_point_in_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The point in time for the restore. Only applies if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code> e.g. 2013-11-08T22:00:40Z</li>
+<li><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL Server on which to create the database.</li>
+<li><strong>source_database_deletion_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deletion date time of the source database. Only applies to deleted databases where <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code>.</li>
+<li><strong>source_database_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the source database if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> value is not <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>threat_detection_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Threat detection policy configuration. The <code class="docutils literal notranslate"><span class="pre">threat_detection_policy</span></code> block supports fields documented below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.sql.Database.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -314,10 +381,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.ElasticPool">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ElasticPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_dtu_max=None</em>, <em>db_dtu_min=None</em>, <em>dtu=None</em>, <em>edition=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_size=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ElasticPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ElasticPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_dtu_max=None</em>, <em>db_dtu_min=None</em>, <em>dtu=None</em>, <em>edition=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_size=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ElasticPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Elastic Pool.</p>
 <blockquote>
-<div><strong>NOTE:</strong> -  This version of the <code class="docutils literal notranslate"><span class="pre">Elasticpool</span></code> resource is being <strong>deprecated</strong> and should no longer be used. Please use the azurerm_mssql_elasticpool version instead.</div></blockquote>
+<div><strong>NOTE:</strong> -  This version of the <code class="docutils literal notranslate"><span class="pre">Elasticpool</span></code> resource is being <strong>deprecated</strong> and should no longer be used. Please use the mssql.ElasticPool version instead.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -411,6 +478,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.sql.ElasticPool.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>creation_date=None</em>, <em>db_dtu_max=None</em>, <em>db_dtu_min=None</em>, <em>dtu=None</em>, <em>edition=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_size=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ElasticPool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ElasticPool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] creation_date: The creation date of the SQL Elastic Pool.
+:param pulumi.Input[float] db_dtu_max: The maximum DTU which will be guaranteed to all databases in the elastic pool to be created.
+:param pulumi.Input[float] db_dtu_min: The minimum DTU which will be guaranteed to all databases in the elastic pool to be created.
+:param pulumi.Input[float] dtu: The total shared DTU for the elastic pool. Valid values depend on the <code class="docutils literal notranslate"><span class="pre">edition</span></code> which has been defined. Refer to <a class="reference external" href="https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus">Azure SQL Database Service Tiers</a> for valid combinations.
+:param pulumi.Input[str] edition: The edition of the elastic pool to be created. Valid values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Refer to <a class="reference external" href="https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus">Azure SQL Database Service Tiers</a> for details. Changing this forces a new resource to be created.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
+:param pulumi.Input[float] pool_size: The maximum size in MB that all databases in the elastic pool can grow to. The maximum size must be consistent with combination of <code class="docutils literal notranslate"><span class="pre">edition</span></code> and <code class="docutils literal notranslate"><span class="pre">dtu</span></code> and the limits documented in <a class="reference external" href="https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus">Azure SQL Database Service Tiers</a>. If not defined when creating an elastic pool, the value is set to the size implied by <code class="docutils literal notranslate"><span class="pre">edition</span></code> and <code class="docutils literal notranslate"><span class="pre">dtu</span></code>.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
+:param pulumi.Input[str] server_name: The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_elasticpool.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.sql.ElasticPool.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ElasticPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -453,7 +543,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.FirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Firewall Rule</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -504,6 +594,35 @@ create the sql server.</p>
 <dt id="pulumi_azure.sql.FirewallRule.start_ip_address">
 <code class="descname">start_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.FirewallRule.start_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The starting IP address to allow through the firewall for this rule.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.sql.FirewallRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FirewallRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] end_ip_address: The ending IP address to allow through the firewall for this rule.
+:param pulumi.Input[str] name: The name of the firewall rule.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to</p>
+<blockquote>
+<div>create the sql server.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL Server on which to create the Firewall Rule.</li>
+<li><strong>start_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The starting IP address to allow through the firewall for this rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_firewall_rule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -590,7 +709,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.SqlServer">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">SqlServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">SqlServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SQL Azure Database Server.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
@@ -664,6 +783,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.sql.SqlServer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>fully_qualified_domain_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SqlServer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] administrator_login: The administrator login name for the new server. Changing this forces a new resource to be created.
+:param pulumi.Input[str] administrator_login_password: The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a>
+:param pulumi.Input[str] fully_qualified_domain_name: The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the SQL Server. This needs to be globally unique within Azure.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the SQL Server.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] version: The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_server.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.sql.SqlServer.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -706,7 +845,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.VirtualNetworkRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -755,6 +894,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.VirtualNetworkRule.subnet_id">
 <code class="descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule.subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the subnet that the SQL server will be connected to.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.sql.VirtualNetworkRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VirtualNetworkRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] ignore_missing_vnet_service_endpoint: Create the virtual network rule before the subnet has the virtual network service endpoint enabled. The default value is false.
+:param pulumi.Input[str] name: The name of the SQL virtual network rule. Changing this forces a new resource to be created. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen.
+:param pulumi.Input[str] resource_group_name: The name of the resource group where the SQL server resides. Changing this forces a new resource to be created.
+:param pulumi.Input[str] server_name: The name of the SQL Server to which this SQL virtual network rule will be applied to. Changing this forces a new resource to be created.
+:param pulumi.Input[str] subnet_id: The ID of the subnet that the SQL server will be connected to.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_virtual_network_rule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

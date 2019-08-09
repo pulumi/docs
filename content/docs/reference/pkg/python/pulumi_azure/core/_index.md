@@ -9,6 +9,31 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.core"></span><dl class="class">
+<dt id="pulumi_azure.core.AwaitableGetClientConfigResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em>client_id=None</em>, <em>service_principal_application_id=None</em>, <em>service_principal_object_id=None</em>, <em>subscription_id=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.core.AwaitableGetResourceGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">AwaitableGetResourceGroupResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetResourceGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.core.AwaitableGetSubscriptionResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">AwaitableGetSubscriptionResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>location_placement_id=None</em>, <em>quota_id=None</em>, <em>spending_limit=None</em>, <em>state=None</em>, <em>subscription_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetSubscriptionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.core.AwaitableGetSubscriptionsResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">AwaitableGetSubscriptionsResult</code><span class="sig-paren">(</span><em>display_name_contains=None</em>, <em>display_name_prefix=None</em>, <em>subscriptions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.core.AwaitableGetUserAssignedIdentityResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">AwaitableGetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em>client_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>principal_id=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.core.GetClientConfigResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">GetClientConfigResult</code><span class="sig-paren">(</span><em>client_id=None</em>, <em>service_principal_application_id=None</em>, <em>service_principal_object_id=None</em>, <em>subscription_id=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientConfig.</p>
@@ -148,7 +173,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.core.ResourceGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">ResourceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.ResourceGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">ResourceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.ResourceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a resource group on Azure.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -187,6 +212,34 @@ Azure subscription.</p>
 <dt id="pulumi_azure.core.ResourceGroup.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.ResourceGroup.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.core.ResourceGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.ResourceGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ResourceGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: The location where the resource group should be created.</p>
+<blockquote>
+<div>For a list of all Azure locations, please consult <a class="reference external" href="http://azure.microsoft.com/en-us/regions/">this link</a> or run <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">account</span> <span class="pre">list-locations</span> <span class="pre">--output</span> <span class="pre">table</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group. Must be unique on your
+Azure subscription.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/resource_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/resource_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -231,8 +284,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.core.TemplateDeployment">
-<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">TemplateDeployment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deployment_mode=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>parameters_body=None</em>, <em>resource_group_name=None</em>, <em>template_body=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TemplateDeployment resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">TemplateDeployment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deployment_mode=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>parameters_body=None</em>, <em>resource_group_name=None</em>, <em>template_body=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage a template deployment of resources</p>
+<blockquote>
+<div><strong>Note on ARM Template Deployments:</strong> Due to the way the underlying Azure API is designed, this provider can only manage the deployment of the ARM Template - and not any resources which are created by it.
+This means that when deleting the <code class="docutils literal notranslate"><span class="pre">core.TemplateDeployment</span></code> resource, this provider will only remove the reference to the deployment, whilst leaving any resources created by that ARM Template Deployment.
+One workaround for this is to use a unique Resource Group for each ARM Template Deployment, which means deleting the Resource Group would contain any resources created within it - however this isn’t ideal. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</div></blockquote>
+<p>This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -240,6 +298,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>deployment_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the mode that is used to deploy resources. This value could be either <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> or <code class="docutils literal notranslate"><span class="pre">Complete</span></code>.
+Note that you will almost <em>always</em> want this to be set to <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> otherwise the deployment will destroy all infrastructure not
+specified within the template, and this provider will not be aware of this.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the template deployment. Changing this forces a
 new resource to be created.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the name and value pairs that define the deployment parameters for the template.</li>
@@ -254,6 +315,14 @@ create the template deployment.</li>
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/template_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/template_deployment.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.core.TemplateDeployment.deployment_mode">
+<code class="descname">deployment_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment.deployment_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the mode that is used to deploy resources. This value could be either <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> or <code class="docutils literal notranslate"><span class="pre">Complete</span></code>.
+Note that you will almost <em>always</em> want this to be set to <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> otherwise the deployment will destroy all infrastructure not
+specified within the template, and this provider will not be aware of this.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.core.TemplateDeployment.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment.name" title="Permalink to this definition">¶</a></dt>
@@ -290,6 +359,40 @@ create the template deployment.</p>
 <dt id="pulumi_azure.core.TemplateDeployment.template_body">
 <code class="descname">template_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment.template_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the JSON definition for the template.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.core.TemplateDeployment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>deployment_mode=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>parameters=None</em>, <em>parameters_body=None</em>, <em>resource_group_name=None</em>, <em>template_body=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TemplateDeployment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] deployment_mode: Specifies the mode that is used to deploy resources. This value could be either <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> or <code class="docutils literal notranslate"><span class="pre">Complete</span></code>.</p>
+<blockquote>
+<div>Note that you will almost <em>always</em> want this to be set to <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> otherwise the deployment will destroy all infrastructure not
+specified within the template, and this provider will not be aware of this.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the template deployment. Changing this forces a
+new resource to be created.</li>
+<li><strong>outputs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using <code class="docutils literal notranslate"><span class="pre">.outputs[&quot;name&quot;]</span></code>.</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the name and value pairs that define the deployment parameters for the template.</li>
+<li><strong>parameters_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
+create the template deployment.</li>
+<li><strong>template_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the JSON definition for the template.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/template_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/template_deployment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

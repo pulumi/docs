@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.servicefabric"></span><dl class="class">
 <dt id="pulumi_azure.servicefabric.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.servicefabric.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version=None</em>, <em>diagnostics_config=None</em>, <em>fabric_settings=None</em>, <em>location=None</em>, <em>management_endpoint=None</em>, <em>name=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>resource_group_name=None</em>, <em>reverse_proxy_certificate=None</em>, <em>tags=None</em>, <em>upgrade_mode=None</em>, <em>vm_image=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.servicefabric.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version=None</em>, <em>diagnostics_config=None</em>, <em>fabric_settings=None</em>, <em>location=None</em>, <em>management_endpoint=None</em>, <em>name=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>resource_group_name=None</em>, <em>reverse_proxy_certificate=None</em>, <em>tags=None</em>, <em>upgrade_mode=None</em>, <em>vm_image=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Service Fabric Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -156,6 +156,37 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.servicefabric.Cluster.vm_image">
 <code class="descname">vm_image</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.vm_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Image expected for the Service Fabric Cluster, such as <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.servicefabric.Cluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version=None</em>, <em>cluster_endpoint=None</em>, <em>diagnostics_config=None</em>, <em>fabric_settings=None</em>, <em>location=None</em>, <em>management_endpoint=None</em>, <em>name=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>resource_group_name=None</em>, <em>reverse_proxy_certificate=None</em>, <em>tags=None</em>, <em>upgrade_mode=None</em>, <em>vm_image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] add_on_features: A List of one or more features which should be enabled, such as <code class="docutils literal notranslate"><span class="pre">DnsService</span></code>.
+:param pulumi.Input[dict] azure_active_directory: An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.
+:param pulumi.Input[dict] certificate: A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.
+:param pulumi.Input[dict] certificate_common_names: A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.
+:param pulumi.Input[list] client_certificate_thumbprints: One or two <code class="docutils literal notranslate"><span class="pre">client_certificate_thumbprint</span></code> blocks as defined below.
+:param pulumi.Input[str] cluster_code_version: Required if Upgrade Mode set to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, Specifies the Version of the Cluster Code of the cluster.
+:param pulumi.Input[str] cluster_endpoint: The Cluster Endpoint for this Service Fabric Cluster.
+:param pulumi.Input[dict] diagnostics_config: A <code class="docutils literal notranslate"><span class="pre">diagnostics_config</span></code> block as defined below. Changing this forces a new resource to be created.
+:param pulumi.Input[list] fabric_settings: One or more <code class="docutils literal notranslate"><span class="pre">fabric_settings</span></code> blocks as defined below.
+:param pulumi.Input[str] location: Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] management_endpoint: Specifies the Management Endpoint of the cluster such as <code class="docutils literal notranslate"><span class="pre">http://example.com</span></code>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[list] node_types: One or more <code class="docutils literal notranslate"><span class="pre">node_type</span></code> blocks as defined below.
+:param pulumi.Input[str] reliability_level: Specifies the Reliability Level of the Cluster. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>, <code class="docutils literal notranslate"><span class="pre">Silver</span></code>, <code class="docutils literal notranslate"><span class="pre">Gold</span></code> and <code class="docutils literal notranslate"><span class="pre">Platinum</span></code>.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] reverse_proxy_certificate: A <code class="docutils literal notranslate"><span class="pre">reverse_proxy_certificate</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] upgrade_mode: Specifies the Upgrade Mode of the cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.
+:param pulumi.Input[str] vm_image: Specifies the Image expected for the Service Fabric Cluster, such as <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

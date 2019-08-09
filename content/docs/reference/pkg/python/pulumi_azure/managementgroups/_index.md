@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.managementgroups"></span><dl class="class">
+<dt id="pulumi_azure.managementgroups.AwaitableGetManagementGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">AwaitableGetManagementGroupResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.AwaitableGetManagementGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.managementgroups.GetManagementGroupResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">GetManagementGroupResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagementGroup.</p>
@@ -40,7 +45,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.managementgroups.ManagementGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">ManagementGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">ManagementGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -82,6 +87,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.managementgroups.ManagementGroup.subscription_ids">
 <code class="descname">subscription_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.subscription_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Subscription GUIDs which should be assigned to the Management Group.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ManagementGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] display_name: A friendly name for this Management Group. If not specified, this’ll be the same as the <code class="docutils literal notranslate"><span class="pre">group_id</span></code>.
+:param pulumi.Input[str] group_id: The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+:param pulumi.Input[str] parent_management_group_id: The ID of the Parent Management Group. Changing this forces a new resource to be created.
+:param pulumi.Input[list] subscription_ids: A list of Subscription GUIDs which should be assigned to the Management Group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
