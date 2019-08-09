@@ -10,11 +10,11 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/issues">terraform-providers/terraform-provider-mysql repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_mysql"></span><dl class="class">
 <dt id="pulumi_mysql.Database">
-<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_character_set=None</em>, <em>default_collation=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Database" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">mysql_database</span></code> resource creates and manages a database on a MySQL
+<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_character_set=None</em>, <em>default_collation=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Database</span></code> resource creates and manages a database on a MySQL
 server.</p>
 <blockquote>
-<div><strong>Caution:</strong> The <code class="docutils literal notranslate"><span class="pre">mysql_database</span></code> resource can completely delete your
+<div><strong>Caution:</strong> The <code class="docutils literal notranslate"><span class="pre">.Database</span></code> resource can completely delete your
 database just as easily as it can create it. To avoid costly accidents,
 consider setting
 <cite>``prevent_destroy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy">https://www.terraform.io/docs/configuration/resources.html#prevent_destroy</a>&gt;`_
@@ -68,6 +68,39 @@ a given MySQL server and may or may not be case-sensitive depending on
 the operating system on which the MySQL server is running.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_mysql.Database.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>default_character_set=None</em>, <em>default_collation=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Database.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Database resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] default_character_set: The default character set to use when</p>
+<blockquote>
+<div>a table is created without specifying an explicit character set. Defaults
+to “utf8”.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>default_collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default collation to use when a table
+is created without specifying an explicit collation. Defaults to
+<code class="docutils literal notranslate"><span class="pre">utf8_general_ci</span></code>. Each character set has its own set of collations, so
+changing the character set requires also changing the collation.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database. This must be unique within
+a given MySQL server and may or may not be case-sensitive depending on
+the operating system on which the MySQL server is running.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_mysql.Database.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Database.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -110,8 +143,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_mysql.Grant">
-<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Grant</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>grant=None</em>, <em>host=None</em>, <em>privileges=None</em>, <em>role=None</em>, <em>roles=None</em>, <em>table=None</em>, <em>tls_option=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">mysql_grant</span></code> resource creates and manages privileges given to
+<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Grant</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>grant=None</em>, <em>host=None</em>, <em>privileges=None</em>, <em>role=None</em>, <em>roles=None</em>, <em>table=None</em>, <em>tls_option=None</em>, <em>user=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Grant</span></code> resource creates and manages privileges given to
 a user on a MySQL server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -190,6 +223,27 @@ a user on a MySQL server.</p>
 <dd><p>The name of the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_mysql.Grant.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>database=None</em>, <em>grant=None</em>, <em>host=None</em>, <em>privileges=None</em>, <em>role=None</em>, <em>roles=None</em>, <em>table=None</em>, <em>tls_option=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Grant resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] database: The database to grant privileges on.
+:param pulumi.Input[bool] grant: Whether to also give the user privileges to grant the same privileges to other users.
+:param pulumi.Input[str] host: The source host of the user. Defaults to “localhost”. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+:param pulumi.Input[list] privileges: A list of privileges to grant to the user. Refer to a list of privileges (such as <a class="reference external" href="https://dev.mysql.com/doc/refman/5.5/en/grant.html">here</a>) for applicable privileges. Conflicts with <code class="docutils literal notranslate"><span class="pre">roles</span></code>.
+:param pulumi.Input[str] role: The role to grant <code class="docutils literal notranslate"><span class="pre">privileges</span></code> to. Conflicts with <code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">host</span></code>.
+:param pulumi.Input[list] roles: A list of rols to grant to the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">privileges</span></code>.
+:param pulumi.Input[str] table: Which table to grant <code class="docutils literal notranslate"><span class="pre">privileges</span></code> on. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>, which is all tables.
+:param pulumi.Input[str] tls_option: An TLS-Option for the <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> statement. The value is suffixed to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>. A value of ‘SSL’ will generate a <code class="docutils literal notranslate"><span class="pre">GRANT</span> <span class="pre">...</span> <span class="pre">REQUIRE</span> <span class="pre">SSL</span></code> statement. See the <cite>MYSQL ``GRANT`</cite> documentation &lt;<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/grant.html">https://dev.mysql.com/doc/refman/5.7/en/grant.html</a>&gt;`_ for more. Ignored if MySQL version is under 5.7.0.
+:param pulumi.Input[str] user: The name of the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_mysql.Grant.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -232,11 +286,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_mysql.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint=None</em>, <em>password=None</em>, <em>tls=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint=None</em>, <em>password=None</em>, <em>tls=None</em>, <em>username=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the mysql package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -251,6 +305,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_mysql.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_mysql.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -293,8 +359,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_mysql.Role">
-<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Role" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">mysql_role</span></code> resource creates and manages a user on a MySQL
+<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource creates and manages a user on a MySQL
 server.</p>
 <blockquote>
 <div><strong>Note:</strong> MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.</div></blockquote>
@@ -317,6 +383,19 @@ server.</p>
 <dt id="pulumi_mysql.Role.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.Role.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the role.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_mysql.Role.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Role.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the role.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -361,8 +440,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_mysql.User">
-<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_plugin=None</em>, <em>host=None</em>, <em>password=None</em>, <em>plaintext_password=None</em>, <em>tls_option=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.User" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">mysql_user</span></code> resource creates and manages a user on a MySQL
+<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_plugin=None</em>, <em>host=None</em>, <em>password=None</em>, <em>plaintext_password=None</em>, <em>tls_option=None</em>, <em>user=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.User</span></code> resource creates and manages a user on a MySQL
 server.</p>
 <blockquote>
 <div><strong>Note:</strong> The password for the user is provided in plain text, and is
@@ -425,6 +504,24 @@ Care is required when using this resource, to avoid disclosing the password.</di
 <dd><p>The name of the user.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_mysql.User.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>auth_plugin=None</em>, <em>host=None</em>, <em>password=None</em>, <em>plaintext_password=None</em>, <em>tls_option=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.User.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing User resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] auth_plugin: Use an [authentication plugin][ref-auth-plugins] to authenticate the user instead of using password authentication.  Description of the fields allowed in the block below. Conflicts with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code>.<span class="raw-html-m2r"><br></span>
+:param pulumi.Input[str] host: The source host of the user. Defaults to “localhost”.
+:param pulumi.Input[str] password: Deprecated alias of <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code>, whose value is <em>stored as plaintext in state</em>. Prefer to use <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code> instead, which stores the password as an unsalted hash. Conflicts with <code class="docutils literal notranslate"><span class="pre">auth_plugin</span></code>.
+:param pulumi.Input[str] plaintext_password: The password for the user. This must be provided in plain text, so the data source for it must be secured. An <em>unsalted</em> hash of the provided password is stored in state. Conflicts with <code class="docutils literal notranslate"><span class="pre">auth_plugin</span></code>.
+:param pulumi.Input[str] tls_option: An TLS-Option for the <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span></code> or <code class="docutils literal notranslate"><span class="pre">ALTER</span> <span class="pre">USER</span></code> statement. The value is suffixed to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>. A value of ‘SSL’ will generate a <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span> <span class="pre">...</span> <span class="pre">REQUIRE</span> <span class="pre">SSL</span></code> statement. See the <cite>MYSQL ``CREATE USER`</cite> documentation &lt;<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/create-user.html">https://dev.mysql.com/doc/refman/5.7/en/create-user.html</a>&gt;`_ for more. Ignored if MySQL version is under 5.7.0.
+:param pulumi.Input[str] user: The name of the user.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_mysql.User.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.User.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -467,7 +564,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_mysql.UserPassword">
-<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">UserPassword</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host=None</em>, <em>pgp_key=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.UserPassword" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">UserPassword</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host=None</em>, <em>pgp_key=None</em>, <em>user=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.UserPassword" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a UserPassword resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -514,6 +611,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mysql.UserPassword.user">
 <code class="descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.UserPassword.user" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM user to associate with this access key.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_mysql.UserPassword.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>encrypted_password=None</em>, <em>host=None</em>, <em>key_fingerprint=None</em>, <em>pgp_key=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.UserPassword.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing UserPassword resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] encrypted_password: The encrypted password, base64 encoded.
+:param pulumi.Input[str] host: The source host of the user. Defaults to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.
+:param pulumi.Input[str] key_fingerprint: The fingerprint of the PGP key used to encrypt the password 
+:param pulumi.Input[str] pgp_key: Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.
+:param pulumi.Input[str] user: The IAM user to associate with this access key.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
