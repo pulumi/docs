@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/issues">terraform-providers/terraform-provider-newrelic repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_newrelic.synthetics"></span><dl class="class">
 <dt id="pulumi_newrelic.synthetics.AlertCondition">
-<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">AlertCondition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>monitor_id=None</em>, <em>name=None</em>, <em>policy_id=None</em>, <em>runbook_url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">AlertCondition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>monitor_id=None</em>, <em>name=None</em>, <em>policy_id=None</em>, <em>runbook_url=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a AlertCondition resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -61,6 +61,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Runbook URL to display in notifications.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_newrelic.synthetics.AlertCondition.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>monitor_id=None</em>, <em>name=None</em>, <em>policy_id=None</em>, <em>runbook_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AlertCondition resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] enabled: Set whether to enable the alert condition. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] monitor_id: The ID of the Synthetics monitor to be referenced in the alert condition. 
+:param pulumi.Input[str] name: The title of this condition.
+:param pulumi.Input[float] policy_id: The ID of the policy where this condition should be used.
+:param pulumi.Input[str] runbook_url: Runbook URL to display in notifications.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_newrelic.synthetics.AlertCondition.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -102,6 +119,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_newrelic.synthetics.AwaitableGetMonitorResult">
+<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">AwaitableGetMonitorResult</code><span class="sig-paren">(</span><em>monitor_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AwaitableGetMonitorResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_newrelic.synthetics.GetMonitorResult">
 <em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">GetMonitorResult</code><span class="sig-paren">(</span><em>monitor_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMonitor.</p>
@@ -115,7 +137,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.Monitor">
-<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">Monitor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bypass_head_request=None</em>, <em>frequency=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>sla_threshold=None</em>, <em>status=None</em>, <em>treat_redirect_as_failure=None</em>, <em>type=None</em>, <em>uri=None</em>, <em>validation_string=None</em>, <em>verify_ssl=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">Monitor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bypass_head_request=None</em>, <em>frequency=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>sla_threshold=None</em>, <em>status=None</em>, <em>treat_redirect_as_failure=None</em>, <em>type=None</em>, <em>uri=None</em>, <em>validation_string=None</em>, <em>verify_ssl=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create, update, and delete a synthetics monitor in New Relic.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -201,6 +223,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Verify SSL.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_newrelic.synthetics.Monitor.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>bypass_head_request=None</em>, <em>frequency=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>sla_threshold=None</em>, <em>status=None</em>, <em>treat_redirect_as_failure=None</em>, <em>type=None</em>, <em>uri=None</em>, <em>validation_string=None</em>, <em>verify_ssl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Monitor resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] bypass_head_request: Bypass HEAD request.
+:param pulumi.Input[float] frequency: The interval (in minutes) at which this monitor should run.
+:param pulumi.Input[list] locations: The locations in which this monitor should be run.
+:param pulumi.Input[str] name: The title of this monitor.
+:param pulumi.Input[float] sla_threshold: The base threshold for the SLA report.
+:param pulumi.Input[str] status: The monitor status (i.e. ENABLED, MUTED, DISABLED)
+:param pulumi.Input[str] type: The monitor type.
+:param pulumi.Input[str] uri: The URI for the monitor to hit.
+:param pulumi.Input[str] validation_string: The string to validate against in the response.
+:param pulumi.Input[bool] verify_ssl: Verify SSL.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_newrelic.synthetics.Monitor.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -243,7 +287,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.MonitorScript">
-<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">MonitorScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>monitor_id=None</em>, <em>text=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">MonitorScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>monitor_id=None</em>, <em>text=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to update a synthetics monitor script in New Relic.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -271,6 +315,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.MonitorScript.text">
 <code class="descname">text</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript.text" title="Permalink to this definition">¶</a></dt>
 <dd><p>plaintext of the monitor script.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_newrelic.synthetics.MonitorScript.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>monitor_id=None</em>, <em>text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MonitorScript resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] monitor_id: The ID of the monitor to attach the script to.
+:param pulumi.Input[str] text: plaintext of the monitor script.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
