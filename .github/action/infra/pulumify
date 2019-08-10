@@ -90,7 +90,7 @@ if [ "$PULUMI_UPDATE" = true ]; then
     # TODO(joe): recognize failures?
     PR_COMMENT_API_LINK=$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")
     curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
-        -d "{ \"body\": \"Updated site preview at: <$(pulumi stack output url)>\" }" \
+        -d "{ \"body\": \"Your [site preview]($(pulumi stack | grep -oE "https://.*")) for commit **${GITHUB_SHA:0:7}** is now available! :tropical_drink:\n\n<$(pulumi stack output url)>\n\n_Deploy previews powered by [Pulumi](https://pulumi.com)_\" }" \
         $PR_COMMENT_API_LINK
 else
     echo "# Destroying ..."
