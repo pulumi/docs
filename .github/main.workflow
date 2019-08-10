@@ -6,7 +6,8 @@ workflow "Pulimify" {
 action "Publish Live Preview" {
     uses = "./.github/action"
     env = {
-        "DOCS_ROOT" = "public"
+        "PULUMIFY_BUILD" = "make ensure && hugo --buildFuture -e $GITHUB_SHA",
+        "PULUMIFY_ROOT" = "public"
     }
     secrets = [
         "GITHUB_TOKEN",

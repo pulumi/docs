@@ -19,9 +19,6 @@ set -exuo pipefail
 #
 # This allows easy review of static website changes in line with GitHub pull request workflows.
 
-# This is a bit of a hack, but GitHub Actions hijacks the container working directory.
-cd /infra
-
 # Set up some variables so that the Pulumi CLI knows it's running in the context of GitHub.
 if [ ! -z "$GITHUB_WORKFLOW" ]; then
     export PULUMI_CI_SYSTEM="GitHub"
@@ -30,6 +27,33 @@ if [ ! -z "$GITHUB_WORKFLOW" ]; then
     export PULUMI_CI_BUILD_URL=
     export PULUMI_CI_PULL_REQUEST_SHA="$GITHUB_SHA"
 fi
+
+# Detect what PR action is being taken. If it's one of the edit actions, we will preview the changes;
+# if it's a "close", we will delete the stack; otherwise, we exit cleanly because there's nothing to do.
+PR_ACTION=$(cat "$GITHUB_EVENT_PATH" | jq -r ".action")
+PR_NUMBER=$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")
+echo "# PR $PR_NUMBER action '$PR_ACTION'"
+case "$PR_ACTION" in
+    "opened" | "reopened" | "edited" | "synchronize")
+        PULUMI_UPDATE=true
+        ;;
+    "closed")
+        PULUMI_UPDATE=false
+        ;;
+    *)
+        echo "# Nothing to do for '$PR_ACTION' action"
+        exit
+        ;;
+esac
+
+# If there is a build command, run it now to prepare the content.
+if [ "$PULUMI_UPDATE" = true ] && [ ! -z "$PULUMIFY_BUILD" ]; then
+    echo "# Rebuilding content ..."
+    eval $PULUMIFY_BUILD
+fi
+
+# This is a bit of a hack, but GitHub Actions hijacks the container working directory.
+cd /infra
 
 # Extract the branch name and clean it to produce a stack name.
 if [ -z "$GITHUB_REF" ]; then
@@ -48,44 +72,35 @@ if [ $PULUMI_STACK_EXISTS -eq 0 ]; then
     pulumi config refresh -f
 fi
 
-# Detect what PR action is being taken. If it's one of the edit actions, we will preview the changes;
-# if it's a "close", we will delete the stack; otherwise, we exit cleanly because there's nothing to do.
-PR_ACTION=$(cat "$GITHUB_EVENT_PATH" | jq -r ".action")
-PR_NUMBER=$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")
-echo "# PR $PR_NUMBER action '$PR_ACTION'"
-case "$PR_ACTION" in
-    "opened" | "reopened" | "edited" | "synchronize")
-        echo "# Updating ..."
+# Now actuallly perform the desired action (either update or removal).
+if [ "$PULUMI_UPDATE" = true ]; then
+    echo "# Updating ..."
 
-        if [ $PULUMI_STACK_EXISTS -ne 0 ]; then
-            pulumi stack init $PULUMI_STACK_NAME
-            pulumi config set root $GITHUB_WORKSPACE/${PULUMIFY_ROOT:-public}
-            pulumi config set aws:region ${AWS_REGION:-us-east-1}
-        fi
+    # If the stack doesn't exist yet, create it.
+    if [ $PULUMI_STACK_EXISTS -ne 0 ]; then
+        pulumi stack init $PULUMI_STACK_NAME
+        pulumi config set root $GITHUB_WORKSPACE/${PULUMIFY_ROOT:-public}
+        pulumi config set aws:region ${AWS_REGION:-us-east-1}
+    fi
 
-        # Now simply run an update to provision and/or update the static website.
-        pulumi up --skip-preview
+    # Now simply run an update to provision and/or update the static website.
+    pulumi up --skip-preview
 
-        # Next, post a comment to the PR that directs the user to the resulting bucket URL.
-        # TODO(joe): recognize failures?
-        PR_COMMENT_API_LINK=$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")
-        curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
-            -d "{ \"body\": \"Updated site preview at: <$(pulumi stack output url)>\" }" \
-            $PR_COMMENT_API_LINK
-        ;;
-    "closed")
-        echo "# Destroying ..."
+    # Next, post a comment to the PR that directs the user to the resulting bucket URL.
+    # TODO(joe): recognize failures?
+    PR_COMMENT_API_LINK=$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")
+    curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+        -d "{ \"body\": \"Updated site preview at: <$(pulumi stack output url)>\" }" \
+        $PR_COMMENT_API_LINK
+else
+    echo "# Destroying ..."
 
-        # If the stack doesn't even exist, there's nothing to do. Otherwise, we must destroy and then
-        # remove the resulting stack altogether.
-        if [ $PULUMI_STACK_EXISTS -eq 0 ]; then
-            pulumi destroy --skip-preview
-            pulumi stack rm --yes
-        else
-            echo "# Already destroyed -- nothing more to do"
-        fi
-        ;;
-    *)
-        echo "# Nothing to do for '$PR_ACTION' action"
-        ;;
-esac
+    # If the stack doesn't even exist, there's nothing to do. Otherwise, we must destroy and then
+    # remove the resulting stack altogether.
+    if [ $PULUMI_STACK_EXISTS -eq 0 ]; then
+        pulumi destroy --skip-preview
+        pulumi stack rm --yes
+    else
+        echo "# Already destroyed -- nothing more to do"
+    fi
+fi

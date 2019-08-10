@@ -11,7 +11,14 @@ LABEL "maintainer"="Joe Duffy <joe@pulumi.com>"
 
 # Install some tools we'll need.
 RUN apt-get update -y
-RUN apt-get install -y jq
+RUN apt-get install -y jq wget make
+
+# Install content generation tools.
+# TODO(joe): this should eventually get factored out to be pluggable, so that the
+# "pulumify" image is agnostic to the specific content management system being used.
+RUN wget https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_extended_0.55.4_Linux-64bit.deb && \
+    dpkg -i hugo_extended_0.55.4_Linux-64bit.deb && \
+    rm hugo_extended_0.55.4_Linux-64bit.deb
 
 # Copy the Pulumi infrastructure definition to a well-known location. Because the image
 # will immediately begin running Pulumi commands, also switch the working directory.
