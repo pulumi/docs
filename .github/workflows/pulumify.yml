@@ -1,4 +1,4 @@
-pname: Pulumify
+name: Pulumify
 on: pull_request
 jobs:
   updateLivePreview:
