@@ -1,9 +1,8 @@
-name: Pulumify
+pname: Pulumify
 on: pull_request
 jobs:
   updateLivePreview:
     name: Update Live Preview
-    if: "contains(['opened', 'reopened', 'synchronized', 'closed'], github.event.action)"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
