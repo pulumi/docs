@@ -3,10 +3,12 @@ on: pull_request
 jobs:
   updateLivePreview:
     name: Update Live Preview
+    if: "contains(['opened', 'reopened', 'synchronized', 'closed'], github.event.action)"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
       with:
+        ref: ${{ github.event.pull_request.head.ref }}
         fetch-depth: 1
     - uses: docker://joeduffy/pulumify
       env:
