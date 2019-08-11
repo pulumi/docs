@@ -1,12 +1,12 @@
+name: Pulumify
 on: pull_request
 jobs:
-  publishLivePreview:
-    name: Publish Live Preview
+  updateLivePreview:
+    name: Update Live Preview
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Publish Live Preview
-      uses: ./actions/pulumify
+    - uses: joeduffy/pulumify@latest
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
