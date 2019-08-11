@@ -6,10 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      if: github.event.action != 'closed'
       with:
         ref: ${{ github.event.pull_request.head.ref }}
         fetch-depth: 1
-    - uses: docker://joeduffy/pulumify
+    - uses: pulumi/actions-pulumify@master
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
