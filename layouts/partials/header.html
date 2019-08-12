@@ -42,10 +42,18 @@
                 {{ end }}
 
                 <li class="md:ml-auto md:mr-2 lg:mr-4">
-                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent"
+                        href="https://app.pulumi.com/"
+                        title="Sign into the Pulumi Cloud Console">
+                        Sign In
+                    </a>
                 </li>
                 <li>
-                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn"
+                        href="{{ relref . "/docs/quickstart" }}"
+                        title="Get started with Pulumi by creating your first project">
+                        Get Started
+                    </a>
                 </li>
             </ul>
         </header>
