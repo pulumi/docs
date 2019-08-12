@@ -3,7 +3,7 @@ title: "Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS"
 authors: ["joe-duffy"]
 tags: ["AWS","Containers","Kubernetes","EKS"]
 date: "2019-06-20"
-
+meta_desc: "Use Pulumi's infrastucture-as-code approach to simplify working with ECS Fargate, ECS with EC2 instances, and EKS. In this post, we show you how to spin up two load-balanced instances of an NGINX web server using ECS Fargate."
 meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
