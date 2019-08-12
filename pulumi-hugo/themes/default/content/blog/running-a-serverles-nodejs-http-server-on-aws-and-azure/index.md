@@ -3,6 +3,8 @@ title: "Running a Serverless Node.js HTTP Server on AWS and Azure"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless"]
 date: "2018-10-02"
+meta_desc: "Pulumi introduces the cloud.HttpServer API which makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform. The API is designed to work well with the existing large middleware
+ecosystem and critically, the same HttpServer API can be implemented consistently on AWS, Azure and GCP - so you can write once and deploy to any cloud."
 
 ---
 
@@ -80,9 +82,9 @@ amount of popularity in this space.
 
 Interestingly enough though, the Cloud space has gone a slightly
 different route here (pun intended). While cloud providers like AWS and
-Azure provide ways to both create Http servers and to use Node.js, they
-offer a very different shape altogether for processing http messages.
-For example, in AWS, one needs to first setup an [API
+Azure provide ways to both create HTTP servers and to use Node.js, they
+offer a very different shape altogether for processing HTTP messages.
+For example, in AWS, one needs to first set up an [API
 gateway](https://aws.amazon.com/api-gateway/). That gateway will then
 have 'methods' defined on it which point at 'Lambda Proxies' to finally
 process the request. The connected [AWS
@@ -114,10 +116,10 @@ exports.handler = function(event, context, callback) {
 ```
 
 Azure follows its own [distinct style](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
-as well for processing http messages. These approaches end up working,
-but often feel decidedly un-Node.js-like. They're full of cloud-provider
-specific values and behaviors, and they end up making it more difficult
-to work with the existing ecosystem of middleware components out there. 
+as well for processing HTTP messages. These approaches end up working,
+but often feel decidedly un-Node.js-like. They're full of cloud-provider-specific values and behaviors, 
+and they end up making it more difficult
+to work with the existing ecosystem of middleware components out there.
 (Note that Google Cloud [HTTP Functions](https://cloud.google.com/functions/docs/writing/http)
 actually do natively support the Node.js request/response pattern!).
 
