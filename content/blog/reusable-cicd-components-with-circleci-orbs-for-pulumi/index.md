@@ -3,7 +3,7 @@ title: "Reusable CI/CD components with CircleCI Orbs for Pulumi"
 authors: ["chris-smith"]
 tags: ["CI/CD"]
 date: "2018-11-07"
-
+meta_desc: "Pulumi is proud to be a CircleCI technology partner and we are continuing to make Pulumi the best tool for the continuous deployment part of CI/CD workflows. This blog post showcases Pulumi orbs in a CircleCI configuration using a simple job to build and update a JavaScript-based stack."
 meta_image: "circleci-ui.png"
 ---
 

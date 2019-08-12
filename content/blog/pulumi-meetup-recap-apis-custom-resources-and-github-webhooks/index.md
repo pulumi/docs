@@ -3,7 +3,7 @@ title: "Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks"
 authors: ["aydrian-howard"]
 tags: ["events"]
 date: "2019-07-16"
-
+meta_desc: "Pulumi HQ's July meetup featured talks from our two engineers: Paul who went over how programming languages help in building the best infrastructure code by writing a simple Pulumi program to create an RDS instance, and Matt who demoed a small bot that enforced pull request policies using GitHub Webhooks and Pulumi."
 meta_image: "meta.jpg"
 ---
 
