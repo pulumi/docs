@@ -1,4 +1,5 @@
 ---
+title: Module identity
 ---
 
 <div class="section" id="identity">

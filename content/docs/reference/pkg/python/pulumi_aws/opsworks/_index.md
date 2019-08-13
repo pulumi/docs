@@ -1,4 +1,5 @@
 ---
+title: Module opsworks
 ---
 
 <div class="section" id="opsworks">

@@ -1,4 +1,5 @@
 ---
+title: Module cfg
 ---
 
 <div class="section" id="cfg">

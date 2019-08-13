@@ -1,4 +1,5 @@
 ---
+title: Module mediapackage
 ---
 
 <div class="section" id="mediapackage">

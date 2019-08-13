@@ -1,4 +1,5 @@
 ---
+title: Module composer
 ---
 
 <div class="section" id="composer">

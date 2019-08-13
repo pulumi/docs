@@ -1,4 +1,5 @@
 ---
+title: Module blockstorage
 ---
 
 <div class="section" id="blockstorage">

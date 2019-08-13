@@ -1,4 +1,5 @@
 ---
+title: Module lightsail
 ---
 
 <div class="section" id="lightsail">

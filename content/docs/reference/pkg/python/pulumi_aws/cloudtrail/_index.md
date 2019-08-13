@@ -1,4 +1,5 @@
 ---
+title: Module cloudtrail
 ---
 
 <div class="section" id="cloudtrail">

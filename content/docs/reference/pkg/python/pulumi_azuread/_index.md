@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_azuread
 ---
 
 <div class="section" id="pulumi-azure-active-directory">

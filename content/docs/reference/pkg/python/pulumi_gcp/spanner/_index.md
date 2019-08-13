@@ -1,4 +1,5 @@
 ---
+title: Module spanner
 ---
 
 <div class="section" id="spanner">

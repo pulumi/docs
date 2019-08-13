@@ -1,4 +1,5 @@
 ---
+title: Module kinesis
 ---
 
 <div class="section" id="kinesis">

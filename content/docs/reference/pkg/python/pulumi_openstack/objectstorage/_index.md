@@ -1,4 +1,5 @@
 ---
+title: Module objectstorage
 ---
 
 <div class="section" id="objectstorage">

@@ -1,4 +1,5 @@
 ---
+title: Module cognitive
 ---
 
 <div class="section" id="cognitive">

@@ -1,4 +1,5 @@
 ---
+title: Module ddosprotection
 ---
 
 <div class="section" id="ddosprotection">

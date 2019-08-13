@@ -1,4 +1,5 @@
 ---
+title: Module v1alpha1
 ---
 
 <div class="section" id="module-pulumi_kubernetes.settings.v1alpha1">

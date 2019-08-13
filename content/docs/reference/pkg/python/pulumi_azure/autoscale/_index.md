@@ -1,4 +1,5 @@
 ---
+title: Module autoscale
 ---
 
 <div class="section" id="autoscale">

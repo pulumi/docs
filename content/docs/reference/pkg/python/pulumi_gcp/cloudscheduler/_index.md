@@ -1,4 +1,5 @@
 ---
+title: Module cloudscheduler
 ---
 
 <div class="section" id="cloudscheduler">

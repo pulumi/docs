@@ -1,4 +1,5 @@
 ---
+title: Module apiextensions
 ---
 
 <div class="section" id="apiextensions">

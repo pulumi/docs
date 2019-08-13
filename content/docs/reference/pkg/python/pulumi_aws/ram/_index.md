@@ -1,4 +1,5 @@
 ---
+title: Module ram
 ---
 
 <div class="section" id="ram">

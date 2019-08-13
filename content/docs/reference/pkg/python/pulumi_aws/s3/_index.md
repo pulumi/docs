@@ -1,4 +1,5 @@
 ---
+title: Module s3
 ---
 
 <div class="section" id="s3">

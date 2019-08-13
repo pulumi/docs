@@ -1,4 +1,5 @@
 ---
+title: Module compute
 ---
 
 <div class="section" id="compute">

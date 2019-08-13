@@ -1,4 +1,5 @@
 ---
+title: Module role
 ---
 
 <div class="section" id="role">

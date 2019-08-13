@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_postgresql
 ---
 
 <div class="section" id="pulumi-postgresql">

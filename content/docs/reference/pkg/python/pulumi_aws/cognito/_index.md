@@ -1,4 +1,5 @@
 ---
+title: Module cognito
 ---
 
 <div class="section" id="cognito">

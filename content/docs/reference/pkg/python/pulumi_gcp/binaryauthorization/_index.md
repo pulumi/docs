@@ -1,4 +1,5 @@
 ---
+title: Module binaryauthorization
 ---
 
 <div class="section" id="binaryauthorization">

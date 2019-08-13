@@ -1,4 +1,5 @@
 ---
+title: Module auditregistration
 ---
 
 <div class="section" id="auditregistration">

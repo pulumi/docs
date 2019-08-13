@@ -1,4 +1,5 @@
 ---
+title: Module loadbalancer
 ---
 
 <div class="section" id="loadbalancer">

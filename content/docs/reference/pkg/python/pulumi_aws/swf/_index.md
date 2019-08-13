@@ -1,4 +1,5 @@
 ---
+title: Module swf
 ---
 
 <div class="section" id="swf">

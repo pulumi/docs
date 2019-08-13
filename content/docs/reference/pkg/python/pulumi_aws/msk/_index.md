@@ -1,4 +1,5 @@
 ---
+title: Module msk
 ---
 
 <div class="section" id="msk">

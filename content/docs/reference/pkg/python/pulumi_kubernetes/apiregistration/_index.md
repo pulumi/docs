@@ -1,4 +1,5 @@
 ---
+title: Module apiregistration
 ---
 
 <div class="section" id="apiregistration">

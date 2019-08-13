@@ -1,4 +1,5 @@
 ---
+title: Module datafactory
 ---
 
 <div class="section" id="datafactory">

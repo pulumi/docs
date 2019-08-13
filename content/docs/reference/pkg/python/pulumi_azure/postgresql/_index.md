@@ -1,4 +1,5 @@
 ---
+title: Module postgresql
 ---
 
 <div class="section" id="postgresql">

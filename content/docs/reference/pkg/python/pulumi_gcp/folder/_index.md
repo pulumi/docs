@@ -1,4 +1,5 @@
 ---
+title: Module folder
 ---
 
 <div class="section" id="folder">

@@ -1,4 +1,5 @@
 ---
+title: Module projects
 ---
 
 <div class="section" id="projects">

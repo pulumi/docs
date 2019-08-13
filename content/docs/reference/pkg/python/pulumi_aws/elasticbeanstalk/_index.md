@@ -1,4 +1,5 @@
 ---
+title: Module elasticbeanstalk
 ---
 
 <div class="section" id="elasticbeanstalk">

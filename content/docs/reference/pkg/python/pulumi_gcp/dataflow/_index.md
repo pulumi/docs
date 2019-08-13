@@ -1,4 +1,5 @@
 ---
+title: Module dataflow
 ---
 
 <div class="section" id="dataflow">

@@ -1,4 +1,5 @@
 ---
+title: Module apimanagement
 ---
 
 <div class="section" id="apimanagement">

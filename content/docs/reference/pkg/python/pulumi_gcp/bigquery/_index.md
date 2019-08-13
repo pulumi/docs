@@ -1,4 +1,5 @@
 ---
+title: Module bigquery
 ---
 
 <div class="section" id="bigquery">

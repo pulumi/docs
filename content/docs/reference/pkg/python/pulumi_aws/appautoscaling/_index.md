@@ -1,4 +1,5 @@
 ---
+title: Module appautoscaling
 ---
 
 <div class="section" id="appautoscaling">

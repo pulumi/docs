@@ -1,4 +1,5 @@
 ---
+title: Module ec2
 ---
 
 <div class="section" id="ec2">

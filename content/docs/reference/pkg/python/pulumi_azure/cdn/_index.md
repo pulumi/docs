@@ -1,4 +1,5 @@
 ---
+title: Module cdn
 ---
 
 <div class="section" id="cdn">

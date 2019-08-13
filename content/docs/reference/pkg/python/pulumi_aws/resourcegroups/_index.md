@@ -1,4 +1,5 @@
 ---
+title: Module resourcegroups
 ---
 
 <div class="section" id="resourcegroups">

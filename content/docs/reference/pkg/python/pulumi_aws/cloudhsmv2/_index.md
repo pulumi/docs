@@ -1,4 +1,5 @@
 ---
+title: Module cloudhsmv2
 ---
 
 <div class="section" id="cloudhsmv2">

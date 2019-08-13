@@ -1,4 +1,5 @@
 ---
+title: Module organizations
 ---
 
 <div class="section" id="organizations">

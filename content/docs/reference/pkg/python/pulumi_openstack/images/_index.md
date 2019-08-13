@@ -1,4 +1,5 @@
 ---
+title: Module images
 ---
 
 <div class="section" id="images">

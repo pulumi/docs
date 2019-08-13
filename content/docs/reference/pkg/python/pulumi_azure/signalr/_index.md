@@ -1,4 +1,5 @@
 ---
+title: Module signalr
 ---
 
 <div class="section" id="signalr">

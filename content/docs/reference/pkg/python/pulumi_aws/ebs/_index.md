@@ -1,4 +1,5 @@
 ---
+title: Module ebs
 ---
 
 <div class="section" id="ebs">

@@ -1,4 +1,5 @@
 ---
+title: Module ses
 ---
 
 <div class="section" id="ses">

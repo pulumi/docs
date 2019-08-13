@@ -1,4 +1,5 @@
 ---
+title: Module rbac
 ---
 
 <div class="section" id="rbac">

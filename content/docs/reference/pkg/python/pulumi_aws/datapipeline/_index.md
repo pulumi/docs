@@ -1,4 +1,5 @@
 ---
+title: Module datapipeline
 ---
 
 <div class="section" id="datapipeline">

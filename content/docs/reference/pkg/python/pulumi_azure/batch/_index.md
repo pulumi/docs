@@ -1,4 +1,5 @@
 ---
+title: Module batch
 ---
 
 <div class="section" id="batch">

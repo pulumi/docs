@@ -1,4 +1,5 @@
 ---
+title: Module ec2transitgateway
 ---
 
 <div class="section" id="ec2transitgateway">

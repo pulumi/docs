@@ -1,4 +1,5 @@
 ---
+title: Module billing
 ---
 
 <div class="section" id="billing">

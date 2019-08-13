@@ -1,4 +1,5 @@
 ---
+title: Module runtimeconfig
 ---
 
 <div class="section" id="runtimeconfig">

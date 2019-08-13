@@ -1,4 +1,5 @@
 ---
+title: Module budgets
 ---
 
 <div class="section" id="budgets">

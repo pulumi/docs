@@ -1,4 +1,5 @@
 ---
+title: Module automation
 ---
 
 <div class="section" id="automation">

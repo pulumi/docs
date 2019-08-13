@@ -1,4 +1,5 @@
 ---
+title: Module scheduling
 ---
 
 <div class="section" id="scheduling">

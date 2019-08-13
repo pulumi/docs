@@ -1,4 +1,5 @@
 ---
+title: Module operationalinsights
 ---
 
 <div class="section" id="operationalinsights">

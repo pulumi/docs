@@ -1,4 +1,5 @@
 ---
+title: Module directconnect
 ---
 
 <div class="section" id="directconnect">

@@ -1,4 +1,5 @@
 ---
+title: Module sourcerepo
 ---
 
 <div class="section" id="sourcerepo">

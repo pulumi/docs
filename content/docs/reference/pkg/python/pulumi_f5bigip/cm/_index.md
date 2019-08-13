@@ -1,4 +1,5 @@
 ---
+title: Module cm
 ---
 
 <div class="section" id="cm">

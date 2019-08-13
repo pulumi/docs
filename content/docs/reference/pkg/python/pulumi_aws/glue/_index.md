@@ -1,4 +1,5 @@
 ---
+title: Module glue
 ---
 
 <div class="section" id="glue">

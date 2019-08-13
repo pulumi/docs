@@ -1,4 +1,5 @@
 ---
+title: Module dynamodb
 ---
 
 <div class="section" id="dynamodb">

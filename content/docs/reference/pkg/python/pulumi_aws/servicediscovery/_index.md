@@ -1,4 +1,5 @@
 ---
+title: Module servicediscovery
 ---
 
 <div class="section" id="servicediscovery">

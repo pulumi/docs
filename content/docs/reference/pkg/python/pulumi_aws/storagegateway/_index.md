@@ -1,4 +1,5 @@
 ---
+title: Module storagegateway
 ---
 
 <div class="section" id="storagegateway">

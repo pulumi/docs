@@ -1,4 +1,5 @@
 ---
+title: Module xray
 ---
 
 <div class="section" id="xray">

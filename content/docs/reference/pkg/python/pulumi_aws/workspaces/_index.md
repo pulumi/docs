@@ -1,4 +1,5 @@
 ---
+title: Module workspaces
 ---
 
 <div class="section" id="workspaces">

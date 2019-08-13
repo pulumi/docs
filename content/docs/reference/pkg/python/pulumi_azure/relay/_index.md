@@ -1,4 +1,5 @@
 ---
+title: Module relay
 ---
 
 <div class="section" id="relay">
