@@ -22,6 +22,28 @@
                 {{ if and (ne .Title "") (not .Params.notitle) }}
                     <h1>{{ .Title }}</h1>
                 {{ end }}
+                
+                <!-- Render Glossary Page. -->
+                {{ $isGlossary := hasPrefix .Path "docs/reference/glossary" }}
+                {{ if $isGlossary }}
+                    <div>
+                        <ul>
+                            {{ range sort $.Site.Data.glossary.entries "term" }}
+                                <li><a href="#{{ lower .term }}" class="">{{ .term }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <div class="flex-1 mt-8">
+                        {{ range sort $.Site.Data.glossary.entries "term" }}
+                            <h2 class="mt-2 mb-0">{{ .term }} </h2>
+                            <p>{{ .description }}</p>
+                            <ul class="mb-4">
+                                <li>Read More: <a href="{{ .link }}" class="">{{ .term }}</a></li>
+                            </ul>
+                        {{ end }}
+                    </div>
+                {{ end }}
 
                 {{ .Content }}
             </div>

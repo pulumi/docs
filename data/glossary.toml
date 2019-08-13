@@ -1,0 +1,24 @@
+[[entries]]
+term = "Component"
+description = "A Pulumi component is a logical group of resources that contains other components and physical cloud resources."
+link = "/docs/intro/concepts/programming-model#components"
+
+[[entries]]
+term = "Stack"
+description = "A stack is an isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev)."
+link = "/docs/intro/concepts/stack"
+
+[[entries]]
+term = "Program"
+description = "Pulumi programs are authored in general-purpose programming languages such as JavaScript or Python. You can use any packages supported by the language’s package manager, as well as Pulumi packages."
+link = "/docs/intro/concepts/programming-model#programs"
+
+[[entries]]
+term = "Deployment Engine"
+description = "The deployment engine is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program."
+link = "/docs/intro/concepts/how-pulumi-works"
+
+[[entries]]
+term = "Self-hosted"
+description = "Self-hosted in Pulumi applies to on-premise \"behind a firewall\" scenarios, and environments hosted within your own AWS, Azure, or GCP account."
+link = "/docs/intro/concepts/state#self-managed-backend"
