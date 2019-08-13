@@ -50,14 +50,14 @@ title: Module core/v1
 <li><a href="#ServiceList">class ServiceList</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts">core/v1/Binding.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts">core/v1/ComponentStatus.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts">core/v1/ComponentStatusList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts">core/v1/ConfigMap.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts">core/v1/ConfigMapList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts">core/v1/Endpoints.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts">core/v1/EndpointsList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts">core/v1/Event.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts">core/v1/EventList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts">core/v1/LimitRange.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts">core/v1/LimitRangeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts">core/v1/Namespace.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts">core/v1/NamespaceList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts">core/v1/Node.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts">core/v1/NodeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts">core/v1/PersistentVolume.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts">core/v1/PersistentVolumeClaim.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts">core/v1/PersistentVolumeClaimList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts">core/v1/PersistentVolumeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts">core/v1/Pod.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts">core/v1/PodList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts">core/v1/PodTemplate.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts">core/v1/PodTemplateList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts">core/v1/ReplicationController.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts">core/v1/ReplicationControllerList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts">core/v1/ResourceQuota.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts">core/v1/ResourceQuotaList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts">core/v1/Secret.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts">core/v1/SecretList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts">core/v1/Service.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts">core/v1/ServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts">core/v1/ServiceAccountList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts">core/v1/ServiceList.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts">core/v1/Binding.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts">core/v1/ComponentStatus.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts">core/v1/ComponentStatusList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts">core/v1/ConfigMap.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts">core/v1/ConfigMapList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts">core/v1/Endpoints.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts">core/v1/EndpointsList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts">core/v1/Event.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts">core/v1/EventList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts">core/v1/LimitRange.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts">core/v1/LimitRangeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts">core/v1/Namespace.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts">core/v1/NamespaceList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts">core/v1/Node.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts">core/v1/NodeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts">core/v1/PersistentVolume.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts">core/v1/PersistentVolumeClaim.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts">core/v1/PersistentVolumeClaimList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts">core/v1/PersistentVolumeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts">core/v1/Pod.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts">core/v1/PodList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts">core/v1/PodTemplate.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts">core/v1/PodTemplateList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts">core/v1/ReplicationController.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts">core/v1/ReplicationControllerList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts">core/v1/ResourceQuota.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts">core/v1/ResourceQuotaList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts">core/v1/Secret.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts">core/v1/SecretList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts">core/v1/Service.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts">core/v1/ServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts">core/v1/ServiceAccountList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts">core/v1/ServiceList.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Binding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L13">class <b>Binding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L13">class <b>Binding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -68,7 +68,7 @@ Deprecated in 1.7, please use the bindings subresource of pods instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Binding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -79,13 +79,13 @@ Deprecated in 1.7, please use the bindings subresource of pods instead.
 Create a core.v1.Binding resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,15 +94,15 @@ Create a core.v1.Binding resource with the given unique name, arguments, and opt
 
 
 Get the state of an existing `Binding` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -112,7 +112,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -126,7 +126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L20">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -140,7 +140,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -152,7 +152,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L28">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Binding"</span>&gt;;</pre>
@@ -166,19 +166,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Binding.ts#L39">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Binding.ts#L39">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
@@ -189,7 +189,7 @@ The target object that you want to bind to the standard object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -202,7 +202,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L12">class <b>ComponentStatus</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L12">class <b>ComponentStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -212,7 +212,7 @@ ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentStatus-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -223,13 +223,13 @@ ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 Create a core.v1.ComponentStatus resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -238,15 +238,15 @@ Create a core.v1.ComponentStatus resource with the given unique name, arguments,
 
 
 Get the state of an existing `ComponentStatus` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -256,7 +256,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -270,7 +270,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -284,7 +284,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L24">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L24">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ComponentCondition[]&gt;;</pre>
@@ -295,7 +295,7 @@ List of component conditions observed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -307,7 +307,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ComponentStatus"</span>&gt;;</pre>
@@ -321,19 +321,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatus.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatus.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -346,7 +346,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentStatusList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L12">class <b>ComponentStatusList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L12">class <b>ComponentStatusList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -356,7 +356,7 @@ Status of all the conditions for the component as a list of ComponentStatus obje
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentStatusList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -367,13 +367,13 @@ Status of all the conditions for the component as a list of ComponentStatus obje
 Create a core.v1.ComponentStatusList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -382,15 +382,15 @@ Create a core.v1.ComponentStatusList resource with the given unique name, argume
 
 
 Get the state of an existing `ComponentStatusList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -400,7 +400,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -414,7 +414,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -428,7 +428,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -440,7 +440,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ComponentStatus[]&gt;;</pre>
@@ -451,7 +451,7 @@ List of ComponentStatus objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ComponentStatusList"</span>&gt;;</pre>
@@ -465,7 +465,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ComponentStatusList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ComponentStatusList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -477,7 +477,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -490,7 +490,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L12">class <b>ConfigMap</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L12">class <b>ConfigMap</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -500,7 +500,7 @@ ConfigMap holds configuration data for pods to consume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMap-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L80"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -511,13 +511,13 @@ ConfigMap holds configuration data for pods to consume.
 Create a core.v1.ConfigMap resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L63">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -526,15 +526,15 @@ Create a core.v1.ConfigMap resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `ConfigMap` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -544,7 +544,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L74">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -558,7 +558,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -572,35 +572,35 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-binaryData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L27">property <b>binaryData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L27">property <b>binaryData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>binaryData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>&gt;;</pre>
 {{% md %}}
 
-BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-',
-'_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys
+BinaryData contains the binary data. Each key must consist of alphanumeric characters, &#39;-&#39;,
+&#39;_&#39; or &#39;.&#39;. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys
 stored in BinaryData must not overlap with the ones in the Data field, this is enforced
 during validation process. Using this field will require 1.10+ apiserver and kubelet.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L35">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L35">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
 {{% md %}}
 
 Data contains the configuration data. Each key must consist of alphanumeric characters,
-'-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The
+&#39;-&#39;, &#39;_&#39; or &#39;.&#39;. Values with non-UTF-8 byte sequences must use the BinaryData field. The
 keys stored in Data must not overlap with the keys in the BinaryData field, this is
 enforced during validation process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -612,7 +612,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L43">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L43">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ConfigMap"</span>&gt;;</pre>
@@ -626,19 +626,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMap.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMap.ts#L49">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -651,7 +651,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L12">class <b>ConfigMapList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L12">class <b>ConfigMapList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -661,7 +661,7 @@ ConfigMapList is a resource containing a list of ConfigMap objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L68"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -672,13 +672,13 @@ ConfigMapList is a resource containing a list of ConfigMap objects.
 Create a core.v1.ConfigMapList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -687,15 +687,15 @@ Create a core.v1.ConfigMapList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `ConfigMapList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -705,7 +705,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L62">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -719,7 +719,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -733,7 +733,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -745,7 +745,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ConfigMap[]&gt;;</pre>
@@ -756,7 +756,7 @@ Items is the list of ConfigMaps.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ConfigMapList"</span>&gt;;</pre>
@@ -770,7 +770,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ConfigMapList.ts#L37">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ConfigMapList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -781,7 +781,7 @@ More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -794,28 +794,28 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L23">class <b>Endpoints</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L23">class <b>Endpoints</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 Endpoints is a collection of endpoints that implement the actual service. Example:
-  Name: "mysvc",
+  Name: &#34;mysvc&#34;,
   Subsets: [
     {
-      Addresses: [{"ip": "10.10.1.1"}, {"ip": "10.10.2.2"}],
-      Ports: [{"name": "a", "port": 8675}, {"name": "b", "port": 309}]
+      Addresses: [{&#34;ip&#34;: &#34;10.10.1.1&#34;}, {&#34;ip&#34;: &#34;10.10.2.2&#34;}],
+      Ports: [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 8675}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 309}]
     },
     {
-      Addresses: [{"ip": "10.10.3.3"}],
-      Ports: [{"name": "a", "port": 93}, {"name": "b", "port": 76}]
+      Addresses: [{&#34;ip&#34;: &#34;10.10.3.3&#34;}],
+      Ports: [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 93}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 76}]
     },
  ]
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoints-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L85"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -826,13 +826,13 @@ Endpoints is a collection of endpoints that implement the actual service. Exampl
 Create a core.v1.Endpoints resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L68">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -841,15 +841,15 @@ Create a core.v1.Endpoints resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `Endpoints` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -859,7 +859,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L79">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -873,7 +873,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L30">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L30">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -887,7 +887,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -899,7 +899,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L38">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L38">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Endpoints"</span>&gt;;</pre>
@@ -913,19 +913,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L44">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L44">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-subsets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Endpoints.ts#L54">property <b>subsets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Endpoints.ts#L54">property <b>subsets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subsets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EndpointSubset[]&gt;;</pre>
@@ -941,7 +941,7 @@ and ports that comprise a service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -954,7 +954,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointsList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L12">class <b>EndpointsList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L12">class <b>EndpointsList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -964,7 +964,7 @@ EndpointsList is a list of endpoints.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointsList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -975,13 +975,13 @@ EndpointsList is a list of endpoints.
 Create a core.v1.EndpointsList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -990,15 +990,15 @@ Create a core.v1.EndpointsList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `EndpointsList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1008,7 +1008,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1022,7 +1022,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -1036,7 +1036,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1048,7 +1048,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Endpoints[]&gt;;</pre>
@@ -1059,7 +1059,7 @@ List of endpoints.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EndpointsList"</span>&gt;;</pre>
@@ -1073,7 +1073,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EndpointsList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EndpointsList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -1085,7 +1085,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1098,7 +1098,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Event">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L12">class <b>Event</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L12">class <b>Event</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1108,7 +1108,7 @@ Event is a report of an event somewhere in the cluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Event-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L135"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L135"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1119,13 +1119,13 @@ Event is a report of an event somewhere in the cluster.
 Create a core.v1.Event resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L118">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L118">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1134,15 +1134,15 @@ Create a core.v1.Event resource with the given unique name, arguments, and optio
 
 
 Get the state of an existing `Event` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1152,7 +1152,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L129">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L129">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1166,7 +1166,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L16">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L16">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1177,7 +1177,7 @@ What action was taken/failed regarding to the Regarding object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L24">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L24">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -1191,7 +1191,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L29">property <b>count</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L29">property <b>count</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1202,7 +1202,7 @@ The number of times this event has occurred.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-eventTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L34">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L34">property <b>eventTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1213,7 +1213,7 @@ Time when this Event was first observed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-firstTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L39">property <b>firstTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L39">property <b>firstTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>firstTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1224,7 +1224,7 @@ The time at which the event was first recorded. (Time of server receipt is in Ty
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1236,7 +1236,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-involvedObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L44">property <b>involvedObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L44">property <b>involvedObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>involvedObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
@@ -1247,7 +1247,7 @@ The object that this event is about.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L52">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L52">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Event"</span>&gt;;</pre>
@@ -1261,7 +1261,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-lastTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L57">property <b>lastTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L57">property <b>lastTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1272,7 +1272,7 @@ The time at which the most recent occurrence of this event was recorded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L62">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L62">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1283,31 +1283,31 @@ A human-readable description of the status of this operation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L68">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L68">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L74">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L74">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 This should be a short, machine understandable string that gives the reason for the
-transition into the object's current status.
+transition into the object&#39;s current status.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-related">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L79">property <b>related</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L79">property <b>related</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>related: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
@@ -1318,7 +1318,7 @@ Optional secondary object for more complex actions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingComponent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L84">property <b>reportingComponent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L84">property <b>reportingComponent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reportingComponent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1329,7 +1329,7 @@ Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L89">property <b>reportingInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L89">property <b>reportingInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reportingInstance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1340,18 +1340,18 @@ ID of the controller instance, e.g. `kubelet-xyzf`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-series">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L94">property <b>series</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L94">property <b>series</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>series: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EventSeries&gt;;</pre>
 {{% md %}}
 
-Data about the Event series this event represents or nil if it's a singleton Event.
+Data about the Event series this event represents or nil if it&#39;s a singleton Event.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L99">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L99">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EventSource&gt;;</pre>
@@ -1362,7 +1362,7 @@ The component reporting this event. Should be a short machine understandable str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Event.ts#L104">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Event.ts#L104">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1373,7 +1373,7 @@ Type of this event (Normal, Warning), new types could be added in the future
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1386,7 +1386,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L12">class <b>EventList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L12">class <b>EventList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1396,7 +1396,7 @@ EventList is a list of events.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1407,13 +1407,13 @@ EventList is a list of events.
 Create a core.v1.EventList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1422,15 +1422,15 @@ Create a core.v1.EventList resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `EventList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1440,7 +1440,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1454,7 +1454,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -1468,7 +1468,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1480,7 +1480,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Event[]&gt;;</pre>
@@ -1491,7 +1491,7 @@ List of events
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EventList"</span>&gt;;</pre>
@@ -1505,7 +1505,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/EventList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/EventList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -1517,7 +1517,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1530,7 +1530,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L12">class <b>LimitRange</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L12">class <b>LimitRange</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1540,7 +1540,7 @@ LimitRange sets resource usage limits for each kind of resource in a Namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRange-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1551,13 +1551,13 @@ LimitRange sets resource usage limits for each kind of resource in a Namespace.
 Create a core.v1.LimitRange resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1566,15 +1566,15 @@ Create a core.v1.LimitRange resource with the given unique name, arguments, and 
 
 
 Get the state of an existing `LimitRange` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1584,7 +1584,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1598,7 +1598,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -1612,7 +1612,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1624,7 +1624,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"LimitRange"</span>&gt;;</pre>
@@ -1638,19 +1638,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRange.ts#L39">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRange.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.LimitRangeSpec&gt;;</pre>
@@ -1662,7 +1662,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1675,7 +1675,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRangeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L12">class <b>LimitRangeList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L12">class <b>LimitRangeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1685,7 +1685,7 @@ LimitRangeList is a list of LimitRange items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRangeList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1696,13 +1696,13 @@ LimitRangeList is a list of LimitRange items.
 Create a core.v1.LimitRangeList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1711,15 +1711,15 @@ Create a core.v1.LimitRangeList resource with the given unique name, arguments, 
 
 
 Get the state of an existing `LimitRangeList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1729,7 +1729,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1743,7 +1743,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -1757,7 +1757,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1769,7 +1769,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.LimitRange[]&gt;;</pre>
@@ -1781,7 +1781,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"LimitRangeList"</span>&gt;;</pre>
@@ -1795,7 +1795,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/LimitRangeList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/LimitRangeList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -1807,7 +1807,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1820,7 +1820,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Namespace">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L12">class <b>Namespace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L12">class <b>Namespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1830,7 +1830,7 @@ Namespace provides a scope for Names. Use of multiple namespaces is optional.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L76"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1841,13 +1841,13 @@ Namespace provides a scope for Names. Use of multiple namespaces is optional.
 Create a core.v1.Namespace resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L59">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1856,15 +1856,15 @@ Create a core.v1.Namespace resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `Namespace` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1874,7 +1874,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L70">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1888,7 +1888,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -1902,7 +1902,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1914,7 +1914,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Namespace"</span>&gt;;</pre>
@@ -1928,19 +1928,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L39">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NamespaceSpec&gt;;</pre>
@@ -1952,7 +1952,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Namespace.ts#L45">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Namespace.ts#L45">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NamespaceStatus&gt;;</pre>
@@ -1964,7 +1964,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1977,7 +1977,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L12">class <b>NamespaceList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L12">class <b>NamespaceList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1987,7 +1987,7 @@ NamespaceList is a list of Namespaces.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1998,13 +1998,13 @@ NamespaceList is a list of Namespaces.
 Create a core.v1.NamespaceList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2013,15 +2013,15 @@ Create a core.v1.NamespaceList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `NamespaceList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2031,7 +2031,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2045,7 +2045,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2059,7 +2059,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2071,7 +2071,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Namespace[]&gt;;</pre>
@@ -2083,7 +2083,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NamespaceList"</span>&gt;;</pre>
@@ -2097,7 +2097,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NamespaceList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NamespaceList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -2109,7 +2109,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2122,7 +2122,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Node">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L13">class <b>Node</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L13">class <b>Node</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2133,7 +2133,7 @@ Node is a worker node in Kubernetes. Each node will have a unique identifier in 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Node-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2144,13 +2144,13 @@ Node is a worker node in Kubernetes. Each node will have a unique identifier in 
 Create a core.v1.Node resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L60">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2159,15 +2159,15 @@ Create a core.v1.Node resource with the given unique name, arguments, and option
 
 
 Get the state of an existing `Node` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2177,7 +2177,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L71">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2191,7 +2191,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L20">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2205,7 +2205,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2217,7 +2217,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L28">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Node"</span>&gt;;</pre>
@@ -2231,19 +2231,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L40">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L40">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NodeSpec&gt;;</pre>
@@ -2255,7 +2255,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Node.ts#L46">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Node.ts#L46">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NodeStatus&gt;;</pre>
@@ -2267,7 +2267,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2280,7 +2280,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L12">class <b>NodeList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L12">class <b>NodeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2290,7 +2290,7 @@ NodeList is the whole list of all Nodes which have been registered with master.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2301,13 +2301,13 @@ NodeList is the whole list of all Nodes which have been registered with master.
 Create a core.v1.NodeList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2316,15 +2316,15 @@ Create a core.v1.NodeList resource with the given unique name, arguments, and op
 
 
 Get the state of an existing `NodeList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2334,7 +2334,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2348,7 +2348,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2362,7 +2362,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2374,7 +2374,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Node[]&gt;;</pre>
@@ -2385,7 +2385,7 @@ List of nodes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NodeList"</span>&gt;;</pre>
@@ -2399,7 +2399,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/NodeList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/NodeList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -2411,7 +2411,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2424,7 +2424,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L13">class <b>PersistentVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L13">class <b>PersistentVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2435,7 +2435,7 @@ to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-vol
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L79"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2446,13 +2446,13 @@ to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-vol
 Create a core.v1.PersistentVolume resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L62">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2461,15 +2461,15 @@ Create a core.v1.PersistentVolume resource with the given unique name, arguments
 
 
 Get the state of an existing `PersistentVolume` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2479,7 +2479,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L73">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2493,7 +2493,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L20">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2507,7 +2507,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2519,7 +2519,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L28">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolume"</span>&gt;;</pre>
@@ -2533,19 +2533,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L41">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L41">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeSpec&gt;;</pre>
@@ -2558,7 +2558,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolume.ts#L48">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolume.ts#L48">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeStatus&gt;;</pre>
@@ -2571,7 +2571,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2584,17 +2584,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaim">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L12">class <b>PersistentVolumeClaim</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L12">class <b>PersistentVolumeClaim</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
-PersistentVolumeClaim is a user's request for and claim to a persistent volume
+PersistentVolumeClaim is a user&#39;s request for and claim to a persistent volume
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2605,13 +2605,13 @@ PersistentVolumeClaim is a user's request for and claim to a persistent volume
 Create a core.v1.PersistentVolumeClaim resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L60">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2620,15 +2620,15 @@ Create a core.v1.PersistentVolumeClaim resource with the given unique name, argu
 
 
 Get the state of an existing `PersistentVolumeClaim` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2638,7 +2638,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L71">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2652,7 +2652,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2666,7 +2666,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2678,7 +2678,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeClaim"</span>&gt;;</pre>
@@ -2692,19 +2692,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L39">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeClaimSpec&gt;;</pre>
@@ -2716,7 +2716,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L46">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L46">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeClaimStatus&gt;;</pre>
@@ -2729,7 +2729,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2742,7 +2742,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L12">class <b>PersistentVolumeClaimList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L12">class <b>PersistentVolumeClaimList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2752,7 +2752,7 @@ PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2763,13 +2763,13 @@ PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 Create a core.v1.PersistentVolumeClaimList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2778,15 +2778,15 @@ Create a core.v1.PersistentVolumeClaimList resource with the given unique name, 
 
 
 Get the state of an existing `PersistentVolumeClaimList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2796,7 +2796,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2810,7 +2810,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2824,7 +2824,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2836,7 +2836,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeClaim[]&gt;;</pre>
@@ -2848,7 +2848,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeClaimList"</span>&gt;;</pre>
@@ -2862,7 +2862,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -2874,7 +2874,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2887,7 +2887,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L12">class <b>PersistentVolumeList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L12">class <b>PersistentVolumeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2897,7 +2897,7 @@ PersistentVolumeList is a list of PersistentVolume items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2908,13 +2908,13 @@ PersistentVolumeList is a list of PersistentVolume items.
 Create a core.v1.PersistentVolumeList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2923,15 +2923,15 @@ Create a core.v1.PersistentVolumeList resource with the given unique name, argum
 
 
 Get the state of an existing `PersistentVolumeList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2941,7 +2941,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2955,7 +2955,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -2969,7 +2969,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2981,7 +2981,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolume[]&gt;;</pre>
@@ -2993,7 +2993,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeList"</span>&gt;;</pre>
@@ -3007,7 +3007,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PersistentVolumeList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PersistentVolumeList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -3019,7 +3019,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3032,7 +3032,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Pod">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L13">class <b>Pod</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L13">class <b>Pod</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3043,7 +3043,7 @@ and scheduled onto hosts.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Pod-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3054,13 +3054,13 @@ and scheduled onto hosts.
 Create a core.v1.Pod resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L61">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3069,15 +3069,15 @@ Create a core.v1.Pod resource with the given unique name, arguments, and options
 
 
 Get the state of an existing `Pod` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3087,7 +3087,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L72">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3101,7 +3101,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L20">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -3115,7 +3115,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3127,7 +3127,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L28">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Pod"</span>&gt;;</pre>
@@ -3141,19 +3141,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L40">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L40">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodSpec&gt;;</pre>
@@ -3165,7 +3165,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Pod.ts#L47">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Pod.ts#L47">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodStatus&gt;;</pre>
@@ -3178,7 +3178,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3191,7 +3191,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L12">class <b>PodList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L12">class <b>PodList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3201,7 +3201,7 @@ PodList is a list of Pods.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3212,13 +3212,13 @@ PodList is a list of Pods.
 Create a core.v1.PodList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3227,15 +3227,15 @@ Create a core.v1.PodList resource with the given unique name, arguments, and opt
 
 
 Get the state of an existing `PodList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3245,7 +3245,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3259,7 +3259,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -3273,7 +3273,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3285,7 +3285,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Pod[]&gt;;</pre>
@@ -3296,7 +3296,7 @@ List of pods. More info: https://git.k8s.io/community/contributors/devel/api-con
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodList"</span>&gt;;</pre>
@@ -3310,7 +3310,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -3322,7 +3322,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3335,7 +3335,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L12">class <b>PodTemplate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L12">class <b>PodTemplate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3345,7 +3345,7 @@ PodTemplate describes a template for creating copies of a predefined pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3356,13 +3356,13 @@ PodTemplate describes a template for creating copies of a predefined pod.
 Create a core.v1.PodTemplate resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3371,15 +3371,15 @@ Create a core.v1.PodTemplate resource with the given unique name, arguments, and
 
 
 Get the state of an existing `PodTemplate` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3389,7 +3389,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3403,7 +3403,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -3417,7 +3417,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3429,7 +3429,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodTemplate"</span>&gt;;</pre>
@@ -3443,19 +3443,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplate.ts#L39">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplate.ts#L39">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodTemplateSpec&gt;;</pre>
@@ -3467,7 +3467,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3480,7 +3480,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplateList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L12">class <b>PodTemplateList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L12">class <b>PodTemplateList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3490,7 +3490,7 @@ PodTemplateList is a list of PodTemplates.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplateList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3501,13 +3501,13 @@ PodTemplateList is a list of PodTemplates.
 Create a core.v1.PodTemplateList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3516,15 +3516,15 @@ Create a core.v1.PodTemplateList resource with the given unique name, arguments,
 
 
 Get the state of an existing `PodTemplateList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3534,7 +3534,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3548,7 +3548,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -3562,7 +3562,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3574,7 +3574,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodTemplate[]&gt;;</pre>
@@ -3585,7 +3585,7 @@ List of pod templates
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodTemplateList"</span>&gt;;</pre>
@@ -3599,7 +3599,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/PodTemplateList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/PodTemplateList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -3611,7 +3611,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3624,7 +3624,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationController">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L12">class <b>ReplicationController</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L12">class <b>ReplicationController</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3634,7 +3634,7 @@ ReplicationController represents the configuration of a replication controller.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationController-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3645,13 +3645,13 @@ ReplicationController represents the configuration of a replication controller.
 Create a core.v1.ReplicationController resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L61">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3660,15 +3660,15 @@ Create a core.v1.ReplicationController resource with the given unique name, argu
 
 
 Get the state of an existing `ReplicationController` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3678,7 +3678,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L72">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3692,7 +3692,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -3706,7 +3706,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3718,7 +3718,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ReplicationController"</span>&gt;;</pre>
@@ -3732,20 +3732,20 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 If the Labels of a ReplicationController are empty, they are defaulted to be the same as
-the Pod(s) that the replication controller manages. Standard object's metadata. More info:
+the Pod(s) that the replication controller manages. Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L40">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L40">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ReplicationControllerSpec&gt;;</pre>
@@ -3757,7 +3757,7 @@ info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationController.ts#L47">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationController.ts#L47">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ReplicationControllerStatus&gt;;</pre>
@@ -3770,7 +3770,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3783,7 +3783,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationControllerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L12">class <b>ReplicationControllerList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L12">class <b>ReplicationControllerList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3793,7 +3793,7 @@ ReplicationControllerList is a collection of replication controllers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationControllerList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3804,13 +3804,13 @@ ReplicationControllerList is a collection of replication controllers.
 Create a core.v1.ReplicationControllerList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3819,15 +3819,15 @@ Create a core.v1.ReplicationControllerList resource with the given unique name, 
 
 
 Get the state of an existing `ReplicationControllerList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3837,7 +3837,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3851,7 +3851,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -3865,7 +3865,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3877,7 +3877,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ReplicationController[]&gt;;</pre>
@@ -3889,7 +3889,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ReplicationControllerList"</span>&gt;;</pre>
@@ -3903,7 +3903,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ReplicationControllerList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ReplicationControllerList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -3915,7 +3915,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3928,7 +3928,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuota">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L12">class <b>ResourceQuota</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L12">class <b>ResourceQuota</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3938,7 +3938,7 @@ ResourceQuota sets aggregate quota restrictions enforced per namespace
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuota-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L76"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3949,13 +3949,13 @@ ResourceQuota sets aggregate quota restrictions enforced per namespace
 Create a core.v1.ResourceQuota resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L59">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3964,15 +3964,15 @@ Create a core.v1.ResourceQuota resource with the given unique name, arguments, a
 
 
 Get the state of an existing `ResourceQuota` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3982,7 +3982,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L70">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3996,7 +3996,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4010,7 +4010,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4022,7 +4022,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ResourceQuota"</span>&gt;;</pre>
@@ -4036,19 +4036,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L39">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ResourceQuotaSpec&gt;;</pre>
@@ -4060,7 +4060,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuota.ts#L45">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuota.ts#L45">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ResourceQuotaStatus&gt;;</pre>
@@ -4072,7 +4072,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4085,7 +4085,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuotaList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L12">class <b>ResourceQuotaList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L12">class <b>ResourceQuotaList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4095,7 +4095,7 @@ ResourceQuotaList is a list of ResourceQuota items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuotaList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4106,13 +4106,13 @@ ResourceQuotaList is a list of ResourceQuota items.
 Create a core.v1.ResourceQuotaList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4121,15 +4121,15 @@ Create a core.v1.ResourceQuotaList resource with the given unique name, argument
 
 
 Get the state of an existing `ResourceQuotaList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4139,7 +4139,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4153,7 +4153,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4167,7 +4167,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4179,7 +4179,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ResourceQuota[]&gt;;</pre>
@@ -4191,7 +4191,7 @@ https://kubernetes.io/docs/concepts/policy/resource-quotas/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ResourceQuotaList"</span>&gt;;</pre>
@@ -4205,7 +4205,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ResourceQuotaList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ResourceQuotaList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -4217,7 +4217,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4230,7 +4230,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Secret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L13">class <b>Secret</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L13">class <b>Secret</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4241,7 +4241,7 @@ must be less than MaxSecretSize bytes.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Secret-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L85"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4252,13 +4252,13 @@ must be less than MaxSecretSize bytes.
 Create a core.v1.Secret resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L68">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4267,15 +4267,15 @@ Create a core.v1.Secret resource with the given unique name, arguments, and opti
 
 
 Get the state of an existing `Secret` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4285,7 +4285,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L79">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4299,7 +4299,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L20">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4313,21 +4313,21 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L28">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L28">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>&gt;;</pre>
 {{% md %}}
 
-Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_'
-or '.'. The serialized form of the secret data is a base64 encoded string, representing the
+Data contains the secret data. Each key must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39;
+or &#39;.&#39;. The serialized form of the secret data is a base64 encoded string, representing the
 arbitrary (possibly non-string) data value here. Described in
 https://tools.ietf.org/html/rfc4648#section-4
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4339,7 +4339,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L36">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L36">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Secret"</span>&gt;;</pre>
@@ -4353,19 +4353,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L42">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L42">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-stringData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L49">property <b>stringData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L49">property <b>stringData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>stringData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -4378,7 +4378,7 @@ overwriting any existing values. It is never output when reading from the API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Secret.ts#L54">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Secret.ts#L54">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4389,7 +4389,7 @@ Used to facilitate programmatic handling of secret data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4402,7 +4402,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L12">class <b>SecretList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L12">class <b>SecretList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4412,7 +4412,7 @@ SecretList is a list of Secret.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4423,13 +4423,13 @@ SecretList is a list of Secret.
 Create a core.v1.SecretList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4438,15 +4438,15 @@ Create a core.v1.SecretList resource with the given unique name, arguments, and 
 
 
 Get the state of an existing `SecretList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4456,7 +4456,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4470,7 +4470,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4484,7 +4484,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4496,7 +4496,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Secret[]&gt;;</pre>
@@ -4508,7 +4508,7 @@ https://kubernetes.io/docs/concepts/configuration/secret
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"SecretList"</span>&gt;;</pre>
@@ -4522,7 +4522,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/SecretList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/SecretList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -4534,7 +4534,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4547,7 +4547,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L14">class <b>Service</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L14">class <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4559,7 +4559,7 @@ pods will answer requests sent through the proxy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4570,13 +4570,13 @@ pods will answer requests sent through the proxy.
 Create a core.v1.Service resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L61">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4585,15 +4585,15 @@ Create a core.v1.Service resource with the given unique name, arguments, and opt
 
 
 Get the state of an existing `Service` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4603,7 +4603,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L72">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4617,7 +4617,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L21">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L21">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4631,7 +4631,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4643,7 +4643,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L29">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L29">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Service"</span>&gt;;</pre>
@@ -4657,19 +4657,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L35">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L35">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L41">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L41">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ServiceSpec&gt;;</pre>
@@ -4681,7 +4681,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/Service.ts#L47">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/Service.ts#L47">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ServiceStatus&gt;;</pre>
@@ -4693,7 +4693,7 @@ info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4706,7 +4706,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L14">class <b>ServiceAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L14">class <b>ServiceAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4718,7 +4718,7 @@ secrets
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4729,13 +4729,13 @@ secrets
 Create a core.v1.ServiceAccount resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L70">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4744,15 +4744,15 @@ Create a core.v1.ServiceAccount resource with the given unique name, arguments, 
 
 
 Get the state of an existing `ServiceAccount` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4762,7 +4762,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L81">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4776,7 +4776,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L21">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L21">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4790,7 +4790,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-automountServiceAccountToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L27">property <b>automountServiceAccountToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L27">property <b>automountServiceAccountToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>automountServiceAccountToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4802,7 +4802,7 @@ have an API token automatically mounted. Can be overridden at the pod level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4814,7 +4814,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-imagePullSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L36">property <b>imagePullSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L36">property <b>imagePullSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>imagePullSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.LocalObjectReference[]&gt;;</pre>
@@ -4829,7 +4829,7 @@ https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L44">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L44">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ServiceAccount"</span>&gt;;</pre>
@@ -4843,19 +4843,19 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L50">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L50">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
-Standard object's metadata. More info:
+Standard object&#39;s metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccount.ts#L56">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccount.ts#L56">property <b>secrets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference[]&gt;;</pre>
@@ -4867,7 +4867,7 @@ ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/sec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4880,7 +4880,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccountList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L12">class <b>ServiceAccountList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L12">class <b>ServiceAccountList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4890,7 +4890,7 @@ ServiceAccountList is a list of ServiceAccount objects
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccountList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4901,13 +4901,13 @@ ServiceAccountList is a list of ServiceAccount objects
 Create a core.v1.ServiceAccountList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4916,15 +4916,15 @@ Create a core.v1.ServiceAccountList resource with the given unique name, argumen
 
 
 Get the state of an existing `ServiceAccountList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4934,7 +4934,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4948,7 +4948,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -4962,7 +4962,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4974,7 +4974,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ServiceAccount[]&gt;;</pre>
@@ -4986,7 +4986,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-accou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ServiceAccountList"</span>&gt;;</pre>
@@ -5000,7 +5000,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceAccountList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceAccountList.ts#L39">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -5012,7 +5012,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5025,7 +5025,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L12">class <b>ServiceList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L12">class <b>ServiceList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -5035,7 +5035,7 @@ ServiceList holds a list of services.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5046,13 +5046,13 @@ ServiceList holds a list of services.
 Create a core.v1.ServiceList resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
+* `args` The arguments to use to populate this resource&amp;#39;s properties.
+* `opts` A bag of options that control this resource&amp;#39;s behavior.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5061,15 +5061,15 @@ Create a core.v1.ServiceList resource with the given unique name, arguments, and
 
 
 Get the state of an existing `ServiceList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5079,7 +5079,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5093,7 +5093,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -5107,7 +5107,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5119,7 +5119,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L24">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L24">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Service[]&gt;;</pre>
@@ -5130,7 +5130,7 @@ List of services
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L32">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ServiceList"</span>&gt;;</pre>
@@ -5144,7 +5144,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/core/v1/ServiceList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/core/v1/ServiceList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -5156,7 +5156,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/29c5de9ab670fbde537d30d1d4f50dcdcebc101f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fc7bf17d2690690238cffe205e84f482c6f3c867/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
