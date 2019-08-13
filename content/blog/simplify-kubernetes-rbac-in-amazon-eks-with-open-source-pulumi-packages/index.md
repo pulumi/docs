@@ -3,6 +3,7 @@ title: "Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages"
 authors: ["nishi-davidson"]
 tags: ["AWS","Kubernetes","TypeScript","EKS"]
 date: "2019-04-24"
+meta_desc: "Setting up Kubernetes RBAC with Pulumi is simple, comprehensive, non-sequential and part of your everyday programming experience. This post contrasts the traditional approach with Pulumi's approach to simplifying Kubernetes RBAC in Amazon EKS."
 
 ---
 

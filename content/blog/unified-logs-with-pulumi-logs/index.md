@@ -3,7 +3,7 @@ title: "Unified Logs with pulumi logs"
 authors: ["luke-hoban"]
 tags: ["AWS","Features","Logging"]
 date: "2019-04-02"
-
+meta_desc: "The Pulumi CLI provides a seamless way to do logging for your serverless and container-based applications without requiring the additional setup of cloud and third party logging solutions. Use pulumi logs to get the application-centric view that you need to understand the overall behavior of your application architecture."
 meta_image: "terminal-logs.png"
 ---
 
@@ -22,8 +22,8 @@ The Pulumi CLI provides another way to do logging, without requiring the
 additional setup of these existing solutions and seamlessly integrated
 into your Pulumi development workflow. The `pulumi logs` command
 provides a great first place to start for understanding your Pulumi
-application's behaviour. Especially during development, this command
-provides direct insight into the behaviour of your application, bringing
+application's behavior. Especially during development, this command
+provides direct insight into the behavior of your application, bringing
 together logs across all of the different forms of compute you are using
 - from code running in serverless functions to containers to VMs.
 
@@ -32,7 +32,7 @@ used as part of the inner loop of your Pulumi development.
 <!--more-->
 
 > *Note: Currently `pulumi logs` supports only logs for applications
-> running in AWS. In the near future it will be expanded to Kuberentes,
+> running in AWS. In the near future it will be expanded to Kubernetes,
 > Azure, GCP and additional cloud platforms.*
 
 ## Logging for Inner-Loop Development
@@ -113,7 +113,7 @@ application!
 Underneath the hood, these logs live in different and uncorrelated
 CloudWatch LogGroups, spread across an AWS account. But with
 `pulumi logs` we can get the application-centric view we need to
-understand the overall behaviour of our application architecture.
+understand the overall behavior of our application architecture.
 
 ## Controlling Log Rendering
 
@@ -167,7 +167,7 @@ the near future - with easy support for plugging in other cloud
 providers and cloud resources as sources for log data.
 
 Even better, because Pulumi allows you to work with multiple cloud
-providers at once - like AWS and Kuberentes, or GCP and Azure, or even
+providers at once - like AWS and Kubernetes, or GCP and Azure, or even
 two different AWS regions - `pulumi logs` will be able to aggregate logs
 across multiple cloud providers and offer a seamless application-centric
 view of your logs.
