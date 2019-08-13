@@ -1,4 +1,5 @@
 ---
+title: Module v2
 ---
 
 <div class="section" id="module-pulumi_kubernetes.helm.v2">
@@ -259,31 +260,47 @@ Example: A resource created with resource_prefix=”foo” would produce a resou
 
 </dd></dl>
 
-<dl class="function">
-<dt id="pulumi_kubernetes.helm.v2.NamedTemporaryFile">
-<code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">NamedTemporaryFile</code><span class="sig-paren">(</span><em>mode='w+b'</em>, <em>buffering=-1</em>, <em>encoding=None</em>, <em>newline=None</em>, <em>suffix=None</em>, <em>prefix=None</em>, <em>dir=None</em>, <em>delete=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.NamedTemporaryFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create and return a temporary file.
-Arguments:
-‘prefix’, ‘suffix’, ‘dir’ – as for mkstemp.
-‘mode’ – the mode argument to io.open (default “w+b”).
-‘buffering’ – the buffer size argument to io.open (default -1).
-‘encoding’ – the encoding argument to io.open (default None)
-‘newline’ – the newline argument to io.open (default None)
-‘delete’ – whether the file is deleted on close (default True).
-The file is created as mkstemp() would do it.</p>
-<p>Returns an object with a file-like interface; the name of the file
-is accessible as its ‘name’ attribute.  The file will be automatically
-deleted when it is closed unless the ‘delete’ argument is set to False.</p>
+<dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.TextIO">
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">TextIO</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.TextIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Typed version of the return of open() in text mode.</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="pulumi_kubernetes.helm.v2.TemporaryDirectory">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">TemporaryDirectory</code><span class="sig-paren">(</span><em>suffix=None</em>, <em>prefix=None</em>, <em>dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.TemporaryDirectory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create and return a temporary directory.  This has the same
-behavior as mkdtemp but can be used as a context manager.  For
-example:</p>
-<p>Upon exiting the context, the directory and everything contained
-in it are removed.</p>
+<dl class="function">
+<dt id="pulumi_kubernetes.helm.v2.mkdtemp">
+<code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">mkdtemp</code><span class="sig-paren">(</span><em>suffix=None</em>, <em>prefix=None</em>, <em>dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.mkdtemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-callable function to create and return a unique temporary
+directory.  The return value is the pathname of the directory.</p>
+<p>Arguments are as for mkstemp, except that the ‘text’ argument is
+not accepted.</p>
+<p>The directory is readable, writable, and searchable only by the
+creating user.</p>
+<p>Caller is responsible for deleting the directory when done with it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_kubernetes.helm.v2.mkstemp">
+<code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">mkstemp</code><span class="sig-paren">(</span><em>suffix=None</em>, <em>prefix=None</em>, <em>dir=None</em>, <em>text=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.mkstemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-callable function to create and return a unique temporary
+file.  The return value is a pair (fd, name) where fd is the
+file descriptor returned by os.open, and name is the filename.</p>
+<p>If ‘suffix’ is not None, the file name will end with that suffix,
+otherwise there will be no suffix.</p>
+<p>If ‘prefix’ is not None, the file name will begin with that prefix,
+otherwise a default prefix is used.</p>
+<p>If ‘dir’ is not None, the file will be created in that directory,
+otherwise a default directory is used.</p>
+<p>If ‘text’ is specified and true, the file is opened in text
+mode.  Else (the default) the file is opened in binary mode.  On
+some operating systems, this makes no difference.</p>
+<p>If any of ‘suffix’, ‘prefix’ and ‘dir’ are not None, they must be the
+same type.  If they are bytes, the returned name will be bytes; str
+otherwise.</p>
+<p>The file is readable and writable only by the creating user ID.
+If the operating system uses permission bits to indicate whether a
+file is executable, the file is executable by no one. The file
+descriptor is not inherited by children of this process.</p>
+<p>Caller is responsible for deleting the file when done with it.</p>
 </dd></dl>
 
 </div>

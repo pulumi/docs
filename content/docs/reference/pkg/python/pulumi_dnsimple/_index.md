@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_dnsimple
 ---
 
 <div class="section" id="pulumi-dnsimple">

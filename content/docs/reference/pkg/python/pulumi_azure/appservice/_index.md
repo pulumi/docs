@@ -1,4 +1,5 @@
 ---
+title: Module appservice
 ---
 
 <div class="section" id="appservice">

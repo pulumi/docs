@@ -1,4 +1,5 @@
 ---
+title: Module pagerduty
 ---
 
 <div class="section" id="pagerduty">

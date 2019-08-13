@@ -1,4 +1,5 @@
 ---
+title: Module firewall
 ---
 
 <div class="section" id="firewall">

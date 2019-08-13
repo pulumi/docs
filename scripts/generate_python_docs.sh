@@ -32,7 +32,7 @@ run_pydocgen() {
   pipenv --python 3
   pipenv install
   for pkg in "${PACKAGES[@]}"; do
-    pipenv run pip install --pre "${pkg}"
+    pipenv run pip install "${pkg}"
   done
   pipenv run python -m pydocgen "../../content/docs/reference/pkg"
   popd

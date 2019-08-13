@@ -1,4 +1,5 @@
 ---
+title: Module elasticsearch
 ---
 
 <div class="section" id="elasticsearch">

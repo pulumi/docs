@@ -1,4 +1,5 @@
 ---
+title: Module endpoints
 ---
 
 <div class="section" id="endpoints">

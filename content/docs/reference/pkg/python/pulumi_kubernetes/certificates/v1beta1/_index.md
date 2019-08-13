@@ -1,4 +1,5 @@
 ---
+title: Module v1beta1
 ---
 
 <div class="section" id="module-pulumi_kubernetes.certificates.v1beta1">

@@ -1,4 +1,5 @@
 ---
+title: Module streamanalytics
 ---
 
 <div class="section" id="streamanalytics">

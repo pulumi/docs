@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_datadog
 ---
 
 <div class="section" id="pulumi-datadog">

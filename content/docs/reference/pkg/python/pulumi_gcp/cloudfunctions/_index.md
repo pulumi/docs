@@ -1,4 +1,5 @@
 ---
+title: Module cloudfunctions
 ---
 
 <div class="section" id="cloudfunctions">

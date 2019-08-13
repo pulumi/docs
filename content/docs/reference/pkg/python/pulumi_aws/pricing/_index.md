@@ -1,4 +1,5 @@
 ---
+title: Module pricing
 ---
 
 <div class="section" id="pricing">

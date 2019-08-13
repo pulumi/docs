@@ -1,4 +1,5 @@
 ---
+title: Module redis
 ---
 
 <div class="section" id="redis">

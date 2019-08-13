@@ -1,4 +1,5 @@
 ---
+title: Module globalaccelerator
 ---
 
 <div class="section" id="globalaccelerator">

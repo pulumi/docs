@@ -1,4 +1,5 @@
 ---
+title: Module node
 ---
 
 <div class="section" id="node">

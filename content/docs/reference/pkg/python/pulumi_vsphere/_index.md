@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_vsphere
 ---
 
 <div class="section" id="pulumi-vsphere">

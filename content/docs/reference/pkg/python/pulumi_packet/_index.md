@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_packet
 ---
 
 <div class="section" id="pulumi-packet">

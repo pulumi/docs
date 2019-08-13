@@ -1,4 +1,5 @@
 ---
+title: Module monitoring
 ---
 
 <div class="section" id="monitoring">

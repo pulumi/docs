@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_mysql
 ---
 
 <div class="section" id="pulumi-mysql">

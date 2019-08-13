@@ -1,4 +1,5 @@
 ---
+title: Module policy
 ---
 
 <div class="section" id="policy">

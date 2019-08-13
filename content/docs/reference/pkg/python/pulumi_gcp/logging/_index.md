@@ -1,4 +1,5 @@
 ---
+title: Module logging
 ---
 
 <div class="section" id="logging">

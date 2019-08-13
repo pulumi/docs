@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_openstack
 ---
 
 <div class="section" id="pulumi-openstack">

@@ -1,4 +1,5 @@
 ---
+title: Module cloudwatch
 ---
 
 <div class="section" id="cloudwatch">

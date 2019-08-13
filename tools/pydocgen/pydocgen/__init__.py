@@ -31,6 +31,7 @@ import tempfile
 from typing import NamedTuple, List, Optional
 from jinja2 import Environment, PackageLoader, select_autoescape
 
+
 class Project(NamedTuple):
     """
     A Project is a collection of metadata about the current project that we'll feed to Sphinx.
@@ -52,6 +53,7 @@ class Provider(NamedTuple):
     pulumi_provider_name: str
     terraform_provider_name: Optional[str]
 
+
 class Input(NamedTuple):
     """
     Input is the schema of the JSON document loaded as an input to the documentation generator. It contains metadata
@@ -59,6 +61,7 @@ class Input(NamedTuple):
     """
     project: Project
     providers: List[Provider]
+
 
 class Context(NamedTuple):
     """
@@ -69,6 +72,23 @@ class Context(NamedTuple):
     outdir: str
     mdoutdir: str
     input: Input
+
+
+class CreateMarkdownInput(NamedTuple):
+    """
+    The CreateMarkdownInput is the input to create_markdown_file.
+    """
+    title: str
+    """
+    Sphinx output file, to be used as the source of data to derive a Markdown file. It is technically
+           JSON but in reality it's a JSON object with a "body" property that's filled with HTML.
+    """
+    file: str
+    """
+    The output file to write the Markdown to.
+    """
+    out_file: str
+
 
 def read_input(input_file: str) -> Input:
     """
@@ -85,6 +105,7 @@ def read_input(input_file: str) -> Input:
             providers.append(Provider(**provider))
         return Input(project=project, providers=providers)
 
+
 def render_template_to(ctx: Context, dest: str, template_name: str, **kwargs):
     """
     Helper function for rendering templates to the context's temporary directory.
@@ -99,6 +120,7 @@ def render_template_to(ctx: Context, dest: str, template_name: str, **kwargs):
     with open(out_path, "w") as f:
         rendered = template_instance.render(**kwargs)
         f.write(rendered)
+
 
 def generate_sphinx_files(ctx: Context):
     """
@@ -117,7 +139,7 @@ def generate_sphinx_files(ctx: Context):
     # document so that Sphinx knows to recurse into them.
     render_template_to(ctx, "index.rst", "index.rst", input=ctx.input)
     create_dir(ctx.tempdir, "providers")
-    create_dir(ctx.tempdir, "_static") # Sphinx complains if this isn't there.
+    create_dir(ctx.tempdir, "_static")  # Sphinx complains if this isn't there.
 
     # Render pulumi.rst - it's special since it's not really a provider.
     pulumi_doc_path = path.join("providers", "pulumi.rst")
@@ -125,7 +147,9 @@ def generate_sphinx_files(ctx: Context):
 
     # Render all providers that we've been asked to render.
     for provider in ctx.input.providers:
-        generate_module(ctx, provider, "", "providers", use_provider_metadata=True)
+        generate_module(ctx, provider, "", "providers",
+                        use_provider_metadata=True)
+
 
 def generate_module(ctx, provider, import_path, output_path, use_provider_metadata=False):
     """
@@ -142,15 +166,18 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
            raw name of the module. Useful for presenting human-readable titles for top-level packages.
     """
     # Some templates we're going to be using.
-    without_module_template = path.join("providers", "provider_without_module.rst")
+    without_module_template = path.join(
+        "providers", "provider_without_module.rst")
     with_module_template = path.join("providers", "provider_with_module.rst")
 
     # Try to import the module. It might fail; this is always a bug in tfgen. Since there are a few outstanding bugs
     # in tfgen, ignore the failed imports for now and emit a warning.
     try:
-        module = importlib.import_module(import_path or ".", package=provider.package_name)
+        module = importlib.import_module(
+            import_path or ".", package=provider.package_name)
     except ModuleNotFoundError:
-        print(f"warning: skipping {provider.package_name}{import_path}, failed to import")
+        print(
+            f"warning: skipping {provider.package_name}{import_path}, failed to import")
         return
 
     # Construct the "metadata" for this module. This metadata bag is passed verbatim to the template engine.
@@ -159,7 +186,7 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
         meta = {
             "name": provider.name, "package_name": provider.package_name, "directory_name": provider.package_name,
             "pulumi_provider_name": provider.pulumi_provider_name, "terraform_provider_name": provider.terraform_provider_name,
-         }
+        }
     else:
         meta = {
             "name": module_name, "package_name": module.__name__, "directory_name": module_name,
@@ -169,8 +196,10 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
     # If this module doesn't have any submodules, we're going to generate all of the type documentation in a single file
     # and not proceed any further.
     if not should_generate_multimodule(module):
-        render_template_to(ctx, path.join(output_path, f"{module_name}.rst"), without_module_template, provider=meta)
-        print(f"{provider.package_name + import_path: <50} -> {output_path}/{module_name}.rst")
+        render_template_to(ctx, path.join(
+            output_path, f"{module_name}.rst"), without_module_template, provider=meta)
+        print(
+            f"{provider.package_name + import_path: <50} -> {output_path}/{module_name}.rst")
         return
 
     # If there are submodules, run through each one and render module templates for each one.
@@ -178,7 +207,8 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
     # Skip the "config" submodule - it can't be imported.
     all_modules = list(filter(lambda mod: mod != "config", all_modules))
     print(f"{provider.package_name + import_path: <50} -> {output_path}/{module_name}.rst")
-    render_template_to(ctx, path.join(output_path, f"{module_name}.rst"), with_module_template, provider=meta, submodules=all_modules)
+    render_template_to(ctx, path.join(
+        output_path, f"{module_name}.rst"), with_module_template, provider=meta, submodules=all_modules)
     for mod in all_modules:
         # If a module is a keyword, we won't be able to import it. Append a _ at the end of it. This is again almost
         # always a bug in tfgen if a package contains a module that can't be legally imported without hacks.
@@ -187,7 +217,8 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
 
         # Recursively render all submodules of this module.
         create_dir(ctx.tempdir, output_path, module_name)
-        generate_module(ctx, provider, import_path + "." + mod, path.join(output_path, module_name))
+        generate_module(ctx, provider, import_path + "." + mod,
+                        path.join(output_path, module_name))
 
 
 def should_generate_multimodule(module):
@@ -207,13 +238,16 @@ def should_generate_multimodule(module):
     all_modules = getattr(module, "__all__")
     return all_modules != ["config"]
 
+
 def build_sphinx(ctx: Context):
     """
     build_sphinx invokes Sphinx on the inputs that we generated in `generate_sphinx_files`.
 
     :param Context ctx: The current context.
     """
-    check_call(["sphinx-build", "-j", "auto", "-b", "json", ctx.tempdir, ctx.outdir])
+    check_call(["sphinx-build", "-j", "auto", "-b",
+                "json", ctx.tempdir, ctx.outdir])
+
 
 def transform_sphinx_output_to_markdown(ctx: Context):
     """
@@ -223,15 +257,19 @@ def transform_sphinx_output_to_markdown(ctx: Context):
 
     :param Context ctx: The current context.
     """
-    out_base  = create_dir(ctx.mdoutdir, "python")
+    out_base = create_dir(ctx.mdoutdir, "python")
     base_json = path.join(ctx.outdir, "providers")
-    pulumi_pkg = Provider(name="Pulumi SDK", package_name="pulumi", pulumi_provider_name="pulumi", terraform_provider_name="")
+    pulumi_pkg = Provider(name="Pulumi SDK", package_name="pulumi",
+                          pulumi_provider_name="pulumi", terraform_provider_name="")
     for provider in ctx.input.providers + [pulumi_pkg]:
         provider_path = create_dir(out_base, provider.package_name)
         provider_sphinx_output = path.join(base_json, provider.package_name)
         # If this thing has submodules, provider_sphinx_output is a directory and it exists.
         if path.exists(provider_sphinx_output):
-            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "_index.md"))
+            create_markdown_input = CreateMarkdownInput(title=f"Package {provider.package_name}",
+                                                        file=f"{provider_sphinx_output}.fjson",
+                                                        out_file=path.join(provider_path, "_index.md"))
+            create_markdown_file(create_markdown_input)
             # Recurse through all submodules (all fjson files in this directory) and produce folders with an _index.md
             # in them.
             for file in glob.iglob(path.join(provider_sphinx_output, "**/*.fjson"), recursive=True):
@@ -241,15 +279,23 @@ def transform_sphinx_output_to_markdown(ctx: Context):
                 # If this globbed file is in a subdirectory of provider_sphinx_output, be sure to preserve the directory
                 # in the output directory as well.
                 if directory:
-                    module_path = create_dir(provider_path, directory, module_name)
+                    module_path = create_dir(
+                        provider_path, directory, module_name)
                 else:
                     module_path = create_dir(provider_path, module_name)
-                create_markdown_file(file, path.join(module_path, "_index.md"))
-        else:
-            # Otherwise, just drop an _index.md in the provider directory.
-            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "_index.md"))
 
-        
+                create_markdown_input = CreateMarkdownInput(title=f"Module {module_name}",
+                                                            file=file,
+                                                            out_file=path.join(module_path, "_index.md"))
+                create_markdown_file(create_markdown_input)
+        else:
+            create_markdown_input = CreateMarkdownInput(title=f"Package {provider.package_name}",
+                                                        file=f"{provider_sphinx_output}.fjson",
+                                                        out_file=path.join(provider_path, "_index.md"))
+            # Otherwise, just drop an _index.md in the provider directory.
+            create_markdown_file(create_markdown_input)
+
+
 def create_dir(*args):
     full_path = path.join(*args)
     if not path.exists(full_path):
@@ -257,23 +303,25 @@ def create_dir(*args):
 
     return full_path
 
-def create_markdown_file(file: str, out_file: str):
+
+def create_markdown_file(input: CreateMarkdownInput):
     """
     Derives a Markdown file from the Sphinx output file `file` and saves the result to `out_file`.
 
-    :param str file: Sphinx output file, to be used as the source of data to derive a Markdown file. It is technically
-           JSON but in reality it's a JSON object with a "body" property that's filled with HTML.
-    :param str out_file: The name of the Markdown file to output.
+    :param CreateMarkdownInput input: The input containing the source file and the output file names.
     """
-    with open(file) as f:
+    with open(input.file) as f:
         contents = json.load(f)
 
-    with open(out_file, "w") as f:
+    with open(input.out_file, "w") as f:
         # First, write some empty front-matter at the beginning of the file.
-        f.write("---\n---\n\n")
+        f.write("---\n")
+        f.write(f"title: {input.title}\n")
+        f.write("---\n\n")
         # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
         # going to slam it verbatim into a file and call it Markdown, because we're professionals.
         f.write(contents["body"])
+
 
 def main():
     if len(sys.argv) != 2:
@@ -289,7 +337,8 @@ def main():
     tempdir = tempfile.mkdtemp()
     outdir = tempfile.mkdtemp()
     mdoutdir = output_directory
-    ctx = Context(template_env=env,  input=input, tempdir=tempdir, outdir=outdir, mdoutdir=mdoutdir)
+    ctx = Context(template_env=env,  input=input,
+                  tempdir=tempdir, outdir=outdir, mdoutdir=mdoutdir)
 
     try:
         print("Generating Sphinx input...")
@@ -304,4 +353,3 @@ def main():
             shutil.rmtree(tempdir)
         if path.exists(outdir):
             shutil.rmtree(outdir)
-

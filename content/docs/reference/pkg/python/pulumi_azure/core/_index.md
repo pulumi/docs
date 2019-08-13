@@ -1,4 +1,5 @@
 ---
+title: Module core
 ---
 
 <div class="section" id="core">

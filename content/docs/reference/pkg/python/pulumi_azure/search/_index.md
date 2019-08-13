@@ -1,4 +1,5 @@
 ---
+title: Module search
 ---
 
 <div class="section" id="search">

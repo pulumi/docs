@@ -1,4 +1,5 @@
 ---
+title: Module codepipeline
 ---
 
 <div class="section" id="codepipeline">

@@ -1,4 +1,5 @@
 ---
+title: Module coordination
 ---
 
 <div class="section" id="coordination">

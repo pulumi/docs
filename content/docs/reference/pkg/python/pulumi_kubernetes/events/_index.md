@@ -1,4 +1,5 @@
 ---
+title: Module events
 ---
 
 <div class="section" id="events">

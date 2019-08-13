@@ -1,4 +1,5 @@
 ---
+title: Module hdinsight
 ---
 
 <div class="section" id="hdinsight">

@@ -1,4 +1,5 @@
 ---
+title: Module synthetics
 ---
 
 <div class="section" id="synthetics">

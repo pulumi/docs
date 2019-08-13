@@ -1,4 +1,5 @@
 ---
+title: Module dax
 ---
 
 <div class="section" id="dax">

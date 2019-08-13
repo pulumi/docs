@@ -1,4 +1,5 @@
 ---
+title: Module meta
 ---
 
 <div class="section" id="meta">

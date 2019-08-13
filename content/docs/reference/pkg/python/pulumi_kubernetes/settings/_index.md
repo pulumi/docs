@@ -1,4 +1,5 @@
 ---
+title: Module settings
 ---
 
 <div class="section" id="settings">

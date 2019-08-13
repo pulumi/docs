@@ -1,4 +1,5 @@
 ---
+title: Module bigtable
 ---
 
 <div class="section" id="bigtable">

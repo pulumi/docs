@@ -1,4 +1,5 @@
 ---
+title: Module servicefabric
 ---
 
 <div class="section" id="servicefabric">

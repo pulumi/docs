@@ -1,4 +1,5 @@
 ---
+title: Module appinsights
 ---
 
 <div class="section" id="appinsights">

@@ -1,4 +1,5 @@
 ---
+title: Module kms
 ---
 
 <div class="section" id="kms">

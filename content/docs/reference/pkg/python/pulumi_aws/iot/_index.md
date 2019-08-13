@@ -1,4 +1,5 @@
 ---
+title: Module iot
 ---
 
 <div class="section" id="iot">

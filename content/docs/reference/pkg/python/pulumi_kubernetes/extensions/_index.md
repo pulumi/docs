@@ -1,4 +1,5 @@
 ---
+title: Module extensions
 ---
 
 <div class="section" id="extensions">

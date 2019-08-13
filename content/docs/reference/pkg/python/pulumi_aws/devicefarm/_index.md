@@ -1,4 +1,5 @@
 ---
+title: Module devicefarm
 ---
 
 <div class="section" id="devicefarm">

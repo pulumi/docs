@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_random
 ---
 
 <div class="section" id="pulumi-random">

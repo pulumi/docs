@@ -1,4 +1,5 @@
 ---
+title: Module mysql
 ---
 
 <div class="section" id="mysql">

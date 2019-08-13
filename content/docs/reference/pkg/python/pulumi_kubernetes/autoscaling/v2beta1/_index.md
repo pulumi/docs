@@ -1,4 +1,5 @@
 ---
+title: Module v2beta1
 ---
 
 <div class="section" id="module-pulumi_kubernetes.autoscaling.v2beta1">

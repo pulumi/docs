@@ -1,4 +1,5 @@
 ---
+title: Module healthcare
 ---
 
 <div class="section" id="healthcare">

@@ -1,4 +1,5 @@
 ---
+title: Package pulumi_newrelic
 ---
 
 <div class="section" id="pulumi-newrelic">

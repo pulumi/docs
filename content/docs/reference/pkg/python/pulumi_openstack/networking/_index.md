@@ -1,4 +1,5 @@
 ---
+title: Module networking
 ---
 
 <div class="section" id="networking">

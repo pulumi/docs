@@ -1,4 +1,5 @@
 ---
+title: Module net
 ---
 
 <div class="section" id="net">

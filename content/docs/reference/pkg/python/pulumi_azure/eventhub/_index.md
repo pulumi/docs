@@ -1,4 +1,5 @@
 ---
+title: Module eventhub
 ---
 
 <div class="section" id="eventhub">

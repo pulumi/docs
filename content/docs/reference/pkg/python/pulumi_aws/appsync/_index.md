@@ -1,4 +1,5 @@
 ---
+title: Module appsync
 ---
 
 <div class="section" id="appsync">

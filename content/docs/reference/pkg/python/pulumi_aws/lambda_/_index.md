@@ -1,4 +1,5 @@
 ---
+title: Module lambda_
 ---
 
 <div class="section" id="lambda">

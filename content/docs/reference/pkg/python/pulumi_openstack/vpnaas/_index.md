@@ -1,4 +1,5 @@
 ---
+title: Module vpnaas
 ---
 
 <div class="section" id="vpnaas">

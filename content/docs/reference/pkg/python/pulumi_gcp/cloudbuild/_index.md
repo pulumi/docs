@@ -1,4 +1,5 @@
 ---
+title: Module cloudbuild
 ---
 
 <div class="section" id="cloudbuild">

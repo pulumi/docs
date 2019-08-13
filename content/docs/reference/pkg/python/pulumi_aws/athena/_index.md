@@ -1,4 +1,5 @@
 ---
+title: Module athena
 ---
 
 <div class="section" id="athena">

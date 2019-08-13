@@ -1,4 +1,5 @@
 ---
+title: Module mq
 ---
 
 <div class="section" id="mq">

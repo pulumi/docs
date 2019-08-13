@@ -1,4 +1,5 @@
 ---
+title: Module redshift
 ---
 
 <div class="section" id="redshift">

@@ -1,4 +1,5 @@
 ---
+title: Module wafregional
 ---
 
 <div class="section" id="wafregional">

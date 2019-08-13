@@ -1,4 +1,5 @@
 ---
+title: Module msi
 ---
 
 <div class="section" id="msi">

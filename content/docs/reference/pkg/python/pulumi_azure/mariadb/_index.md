@@ -1,4 +1,5 @@
 ---
+title: Module mariadb
 ---
 
 <div class="section" id="mariadb">

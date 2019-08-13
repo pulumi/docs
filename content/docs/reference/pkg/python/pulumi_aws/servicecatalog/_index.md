@@ -1,4 +1,5 @@
 ---
+title: Module servicecatalog
 ---
 
 <div class="section" id="servicecatalog">

@@ -1,4 +1,5 @@
 ---
+title: Module admissionregistration
 ---
 
 <div class="section" id="admissionregistration">

@@ -1,4 +1,5 @@
 ---
+title: Module database
 ---
 
 <div class="section" id="database">

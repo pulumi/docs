@@ -1,4 +1,5 @@
 ---
+title: Module cloudfront
 ---
 
 <div class="section" id="cloudfront">

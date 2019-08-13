@@ -1,4 +1,5 @@
 ---
+title: Module container
 ---
 
 <div class="section" id="container">

@@ -1,4 +1,5 @@
 ---
+title: Module devtest
 ---
 
 <div class="section" id="devtest">

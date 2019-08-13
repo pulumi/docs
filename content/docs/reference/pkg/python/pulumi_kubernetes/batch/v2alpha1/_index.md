@@ -1,4 +1,5 @@
 ---
+title: Module v2alpha1
 ---
 
 <div class="section" id="module-pulumi_kubernetes.batch.v2alpha1">

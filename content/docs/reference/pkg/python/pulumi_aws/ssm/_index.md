@@ -1,4 +1,5 @@
 ---
+title: Module ssm
 ---
 
 <div class="section" id="ssm">

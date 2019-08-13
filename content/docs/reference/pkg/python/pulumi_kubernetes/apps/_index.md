@@ -1,4 +1,5 @@
 ---
+title: Module apps
 ---
 
 <div class="section" id="apps">

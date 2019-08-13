@@ -1,4 +1,5 @@
 ---
+title: Module logicapps
 ---
 
 <div class="section" id="logicapps">

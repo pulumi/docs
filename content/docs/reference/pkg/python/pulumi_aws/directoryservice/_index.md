@@ -1,4 +1,5 @@
 ---
+title: Module directoryservice
 ---
 
 <div class="section" id="directoryservice">

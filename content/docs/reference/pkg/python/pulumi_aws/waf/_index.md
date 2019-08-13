@@ -1,4 +1,5 @@
 ---
+title: Module waf
 ---
 
 <div class="section" id="waf">

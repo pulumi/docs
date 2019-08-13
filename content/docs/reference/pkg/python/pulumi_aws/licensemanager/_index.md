@@ -1,4 +1,5 @@
 ---
+title: Module licensemanager
 ---
 
 <div class="section" id="licensemanager">

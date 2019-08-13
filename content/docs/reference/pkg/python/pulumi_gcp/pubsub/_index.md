@@ -1,4 +1,5 @@
 ---
+title: Module pubsub
 ---
 
 <div class="section" id="pubsub">

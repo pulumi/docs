@@ -1,4 +1,5 @@
 ---
+title: Module inspector
 ---
 
 <div class="section" id="inspector">

@@ -1,4 +1,5 @@
 ---
+title: Module dns
 ---
 
 <div class="section" id="dns">

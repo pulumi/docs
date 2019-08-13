@@ -1,4 +1,5 @@
 ---
+title: Module cur
 ---
 
 <div class="section" id="cur">
