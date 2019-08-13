@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.hdinsight"></span><dl class="class">
+<dt id="pulumi_azure.hdinsight.AwaitableGetClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em>cluster_version=None</em>, <em>component_versions=None</em>, <em>edge_ssh_endpoint=None</em>, <em>gateways=None</em>, <em>https_endpoint=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>ssh_endpoint=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.hdinsight.GetClusterResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>cluster_version=None</em>, <em>component_versions=None</em>, <em>edge_ssh_endpoint=None</em>, <em>gateways=None</em>, <em>https_endpoint=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>ssh_endpoint=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
@@ -82,7 +87,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.HBaseCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">HBaseCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HBaseCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">HBaseCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HBaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight HBase Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -180,6 +185,30 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Specifies the Tier which should be used for this HDInsight HBase Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.HBaseCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HBaseCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HBaseCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] component_version: A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight HBase Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight HBase Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight HBase Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight HBase Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight HBase Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight HBase Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight HBase Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hbase_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hbase_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.HBaseCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HBaseCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -222,7 +251,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.HadoopCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">HadoopCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">HadoopCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Hadoop Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -320,6 +349,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the Tier which should be used for this HDInsight Hadoop Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.HadoopCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HadoopCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] component_version: A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight Hadoop Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight Hadoop Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight Hadoop Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight Hadoop Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hadoop_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hadoop_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.HadoopCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -362,7 +415,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.InteractiveQueryCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">InteractiveQueryCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.InteractiveQueryCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">InteractiveQueryCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.InteractiveQueryCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Interactive Query Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -460,6 +513,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the Tier which should be used for this HDInsight Interactive Query Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.InteractiveQueryCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.InteractiveQueryCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing InteractiveQueryCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] component_version: A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight Interactive Query Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight Interactive Query Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight Interactive Query Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight Interactive Query Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight Interactive Query Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight Interactive Query Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight Interactive Query Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_interactive_query_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_interactive_query_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.InteractiveQueryCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.InteractiveQueryCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -502,7 +579,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.KafkaCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">KafkaCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.KafkaCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">KafkaCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.KafkaCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Kafka Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -600,6 +677,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.KafkaCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.KafkaCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KafkaCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] component_version: A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight Kafka Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_kafka_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_kafka_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.KafkaCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.KafkaCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -642,7 +743,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.MLServicesCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">MLServicesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>rstudio=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.MLServicesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">MLServicesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>rstudio=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.MLServicesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight ML Services Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -746,6 +847,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the Tier which should be used for this HDInsight ML Services Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.MLServicesCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>edge_ssh_endpoint=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>rstudio=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.MLServicesCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MLServicesCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] edge_ssh_endpoint: The SSH Connectivity Endpoint for the Edge Node of the HDInsight ML Cluster.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight ML Services Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight ML Services Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight ML Services Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight ML Services Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[bool] rstudio: Should R Studio community edition for ML Services be installed? Changing this forces a new resource to be created.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight ML Services Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight ML Services Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight ML Services Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_ml_services_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_ml_services_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.MLServicesCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.MLServicesCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -788,7 +914,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.RServerCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">RServerCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>rstudio=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.RServerCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">RServerCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>rstudio=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.RServerCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight RServer Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -892,6 +1018,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the Tier which should be used for this HDInsight RServer Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.RServerCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>edge_ssh_endpoint=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>rstudio=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.RServerCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RServerCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] edge_ssh_endpoint: The SSH Connectivity Endpoint for the Edge Node of the HDInsight RServer Cluster.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight RServer Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight RServer Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight RServer Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight RServer Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[bool] rstudio: Should R Studio community edition for RServer be installed? Changing this forces a new resource to be created.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight RServer Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight RServer Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight RServer Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_rserver_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_rserver_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.RServerCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.RServerCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -934,7 +1085,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.SparkCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">SparkCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.SparkCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">SparkCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.SparkCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Spark Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1032,6 +1183,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the Tier which should be used for this HDInsight Spark Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.SparkCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.SparkCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SparkCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] component_version: A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight Spark Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight Spark Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight Spark Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight Spark Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight Spark Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight Spark Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight Spark Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_spark_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_spark_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.hdinsight.SparkCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.SparkCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1074,7 +1249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.hdinsight.StormCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">StormCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.StormCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">StormCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.StormCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Storm Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1170,6 +1345,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.StormCluster.tier">
 <code class="descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hdinsight.StormCluster.tier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Tier which should be used for this HDInsight Storm Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.hdinsight.StormCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_version=None</em>, <em>component_version=None</em>, <em>gateway=None</em>, <em>https_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>roles=None</em>, <em>ssh_endpoint=None</em>, <em>storage_accounts=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.StormCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StormCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_version: Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] component_version: A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.
+:param pulumi.Input[dict] gateway: A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.
+:param pulumi.Input[str] https_endpoint: The HTTPS Connectivity Endpoint for this HDInsight Storm Cluster.
+:param pulumi.Input[str] location: Specifies the Azure Region which this HDInsight Storm Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name for this HDInsight Storm Cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group in which this HDInsight Storm Cluster should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] roles: A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.
+:param pulumi.Input[str] ssh_endpoint: The SSH Connectivity Endpoint for this HDInsight Storm Cluster.
+:param pulumi.Input[list] storage_accounts: One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> block as defined below.
+:param pulumi.Input[dict] tags: A map of Tags which should be assigned to this HDInsight Storm Cluster.
+:param pulumi.Input[str] tier: Specifies the Tier which should be used for this HDInsight Storm Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_storm_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_storm_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

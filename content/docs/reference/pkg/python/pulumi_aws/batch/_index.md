@@ -9,14 +9,24 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.batch"></span><dl class="class">
+<dt id="pulumi_aws.batch.AwaitableGetComputeEnvironmentResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">AwaitableGetComputeEnvironmentResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>compute_environment_name=None</em>, <em>ecs_cluster_arn=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.AwaitableGetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.batch.AwaitableGetJobQueueResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">AwaitableGetJobQueueResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>compute_environment_orders=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.AwaitableGetJobQueueResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.batch.ComputeEnvironment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">ComputeEnvironment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_environment_name=None</em>, <em>compute_resources=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">ComputeEnvironment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_environment_name=None</em>, <em>compute_resources=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a AWS Batch compute environment. Compute environments contain the Amazon ECS container instances that are used to run containerized batch jobs.</p>
 <p>For information about AWS Batch, see [What is AWS Batch?][1] .
 For information about compute environment, see [Compute Environments][2] .</p>
 <blockquote>
 <div><dl class="docutils">
-<dt><strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to the related <code class="docutils literal notranslate"><span class="pre">aws_iam_role_policy_attachment</span></code>;</dt>
+<dt><strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to the related <code class="docutils literal notranslate"><span class="pre">iam.RolePolicyAttachment</span></code>;</dt>
 <dd>otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> state, see [Troubleshooting AWS Batch][3] .</dd>
 </dl>
 </div></blockquote>
@@ -91,6 +101,27 @@ For information about compute environment, see [Compute Environments][2] .</p>
 <dt id="pulumi_aws.batch.ComputeEnvironment.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of compute environment. Valid items are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.batch.ComputeEnvironment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>compute_environment_name=None</em>, <em>compute_resources=None</em>, <em>ecs_cluster_arn=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ComputeEnvironment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) of the compute environment.
+:param pulumi.Input[str] compute_environment_name: The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed.
+:param pulumi.Input[dict] compute_resources: Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
+:param pulumi.Input[str] ecs_cluster_arn: The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
+:param pulumi.Input[str] service_role: The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+:param pulumi.Input[str] state: The state of the compute environment. If the state is <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.
+:param pulumi.Input[str] status: The current status of the compute environment (for example, CREATING or VALID).
+:param pulumi.Input[str] status_reason: A short, human-readable string to provide additional details about the current status of the compute environment.
+:param pulumi.Input[str] type: The type of compute environment. Valid items are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -244,7 +275,7 @@ of the job queue.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.batch.JobDefinition">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_properties=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>retry_strategy=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_properties=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>retry_strategy=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Definition resource.</p>
 <p><code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> supports the following:</p>
 <ul class="simple">
@@ -326,6 +357,39 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 <dd><p>The type of job definition.  Must be <code class="docutils literal notranslate"><span class="pre">container</span></code></p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.batch.JobDefinition.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>container_properties=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>retry_strategy=None</em>, <em>revision=None</em>, <em>timeout=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing JobDefinition resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name of the job definition.
+:param pulumi.Input[str] container_properties: A valid <a class="reference external" href="http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html">container properties</a></p>
+<blockquote>
+<div>provided as a single valid JSON document. This parameter is required if the <code class="docutils literal notranslate"><span class="pre">type</span></code> parameter is <code class="docutils literal notranslate"><span class="pre">container</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the job definition.</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the parameter substitution placeholders to set in the job definition.</li>
+<li><strong>retry_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+Maximum number of <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code>.  Defined below.</li>
+<li><strong>revision</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The revision of the job definition.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Defined below.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of job definition.  Must be <code class="docutils literal notranslate"><span class="pre">container</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.batch.JobDefinition.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -368,7 +432,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.batch.JobQueue">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_environments=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_environments=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Queue resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -424,6 +488,38 @@ are evaluated first when associated with the same compute environment.</p>
 <dt id="pulumi_aws.batch.JobQueue.state">
 <code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.JobQueue.state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The state of the job queue. Must be one of: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.batch.JobQueue.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>compute_environments=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing JobQueue resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name of the job queue.
+:param pulumi.Input[list] compute_environments: Specifies the set of compute environments</p>
+<blockquote>
+<div>mapped to a job queue and their order.  The position of the compute environments
+in the list will dictate the order. You can associate up to 3 compute environments
+with a job queue.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the job queue.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the job queue. Job queues with a higher priority
+are evaluated first when associated with the same compute environment.</li>
+<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the job queue. Must be one of: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

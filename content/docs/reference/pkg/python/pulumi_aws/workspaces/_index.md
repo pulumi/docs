@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.workspaces"></span><dl class="class">
+<dt id="pulumi_aws.workspaces.AwaitableGetBundleResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.workspaces.</code><code class="descname">AwaitableGetBundleResult</code><span class="sig-paren">(</span><em>bundle_id=None</em>, <em>compute_types=None</em>, <em>description=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>root_storages=None</em>, <em>user_storages=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.AwaitableGetBundleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.workspaces.GetBundleResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.workspaces.</code><code class="descname">GetBundleResult</code><span class="sig-paren">(</span><em>bundle_id=None</em>, <em>compute_types=None</em>, <em>description=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>root_storages=None</em>, <em>user_storages=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.GetBundleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBundle.</p>

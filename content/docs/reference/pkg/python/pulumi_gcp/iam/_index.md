@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.iam"></span><dl class="class">
+<dt id="pulumi_gcp.iam.AwaitableGetRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.iam.</code><code class="descname">AwaitableGetRuleResult</code><span class="sig-paren">(</span><em>included_permissions=None</em>, <em>name=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.AwaitableGetRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.iam.GetRuleResult">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.iam.</code><code class="descname">GetRuleResult</code><span class="sig-paren">(</span><em>included_permissions=None</em>, <em>name=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRule.</p>

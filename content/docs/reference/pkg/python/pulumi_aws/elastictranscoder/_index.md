@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.elastictranscoder"></span><dl class="class">
 <dt id="pulumi_aws.elastictranscoder.Pipeline">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_kms_key_arn=None</em>, <em>content_config=None</em>, <em>content_config_permissions=None</em>, <em>input_bucket=None</em>, <em>name=None</em>, <em>notifications=None</em>, <em>output_bucket=None</em>, <em>role=None</em>, <em>thumbnail_config=None</em>, <em>thumbnail_config_permissions=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_kms_key_arn=None</em>, <em>content_config=None</em>, <em>content_config_permissions=None</em>, <em>input_bucket=None</em>, <em>name=None</em>, <em>notifications=None</em>, <em>output_bucket=None</em>, <em>role=None</em>, <em>thumbnail_config=None</em>, <em>thumbnail_config_permissions=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder pipeline resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -96,6 +96,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The permissions for the <code class="docutils literal notranslate"><span class="pre">thumbnail_config</span></code> object. (documented below)</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.elastictranscoder.Pipeline.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>aws_kms_key_arn=None</em>, <em>content_config=None</em>, <em>content_config_permissions=None</em>, <em>input_bucket=None</em>, <em>name=None</em>, <em>notifications=None</em>, <em>output_bucket=None</em>, <em>role=None</em>, <em>thumbnail_config=None</em>, <em>thumbnail_config_permissions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Pipeline resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] aws_kms_key_arn: The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
+:param pulumi.Input[dict] content_config: The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
+:param pulumi.Input[list] content_config_permissions: The permissions for the <code class="docutils literal notranslate"><span class="pre">content_config</span></code> object. (documented below)
+:param pulumi.Input[str] input_bucket: The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
+:param pulumi.Input[str] name: The name of the pipeline. Maximum 40 characters
+:param pulumi.Input[dict] notifications: The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
+:param pulumi.Input[str] output_bucket: The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
+:param pulumi.Input[str] role: The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
+:param pulumi.Input[dict] thumbnail_config: The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
+:param pulumi.Input[list] thumbnail_config_permissions: The permissions for the <code class="docutils literal notranslate"><span class="pre">thumbnail_config</span></code> object. (documented below)</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_pipeline.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -138,7 +160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elastictranscoder.Preset">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Preset</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audio=None</em>, <em>audio_codec_options=None</em>, <em>container=None</em>, <em>description=None</em>, <em>name=None</em>, <em>thumbnails=None</em>, <em>type=None</em>, <em>video=None</em>, <em>video_codec_options=None</em>, <em>video_watermarks=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Preset</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audio=None</em>, <em>audio_codec_options=None</em>, <em>container=None</em>, <em>description=None</em>, <em>name=None</em>, <em>thumbnails=None</em>, <em>type=None</em>, <em>video=None</em>, <em>video_codec_options=None</em>, <em>video_watermarks=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder preset resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -211,6 +233,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">video_codec_options</span></code> (Optional, Forces new resource) Codec options for the video parameters</li>
 </ul>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.elastictranscoder.Preset.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>audio=None</em>, <em>audio_codec_options=None</em>, <em>container=None</em>, <em>description=None</em>, <em>name=None</em>, <em>thumbnails=None</em>, <em>type=None</em>, <em>video=None</em>, <em>video_codec_options=None</em>, <em>video_watermarks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Preset resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] audio: Audio parameters object (documented below).
+:param pulumi.Input[dict] audio_codec_options: Codec options for the audio parameters (documented below)
+:param pulumi.Input[str] container: The container type for the output file. Valid values are <code class="docutils literal notranslate"><span class="pre">flac</span></code>, <code class="docutils literal notranslate"><span class="pre">flv</span></code>, <code class="docutils literal notranslate"><span class="pre">fmp4</span></code>, <code class="docutils literal notranslate"><span class="pre">gif</span></code>, <code class="docutils literal notranslate"><span class="pre">mp3</span></code>, <code class="docutils literal notranslate"><span class="pre">mp4</span></code>, <code class="docutils literal notranslate"><span class="pre">mpg</span></code>, <code class="docutils literal notranslate"><span class="pre">mxf</span></code>, <code class="docutils literal notranslate"><span class="pre">oga</span></code>, <code class="docutils literal notranslate"><span class="pre">ogg</span></code>, <code class="docutils literal notranslate"><span class="pre">ts</span></code>, and <code class="docutils literal notranslate"><span class="pre">webm</span></code>.
+:param pulumi.Input[str] description: A description of the preset (maximum 255 characters)
+:param pulumi.Input[str] name: The name of the preset. (maximum 40 characters)
+:param pulumi.Input[dict] thumbnails: Thumbnail parameters object (documented below)
+:param pulumi.Input[dict] video: Video parameters object (documented below)
+:param pulumi.Input[list] video_watermarks: Watermark parameters for the video parameters (documented below)</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastictranscoder_preset.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

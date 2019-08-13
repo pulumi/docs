@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.securitycenter"></span><dl class="class">
 <dt id="pulumi_azure.securitycenter.Contact">
-<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Contact</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alert_notifications=None</em>, <em>alerts_to_admins=None</em>, <em>email=None</em>, <em>phone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Contact" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Contact</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alert_notifications=None</em>, <em>alerts_to_admins=None</em>, <em>email=None</em>, <em>phone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Contact" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the subscription’s Security Center Contact.</p>
 <blockquote>
 <div><strong>NOTE:</strong> Owner access permission is required.</div></blockquote>
@@ -56,6 +56,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The phone number of the Security Center Contact.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.securitycenter.Contact.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>alert_notifications=None</em>, <em>alerts_to_admins=None</em>, <em>email=None</em>, <em>phone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Contact.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Contact resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] alert_notifications: Whether to send security alerts notifications to the security contact.
+:param pulumi.Input[bool] alerts_to_admins: Whether to send security alerts notifications to subscription admins.
+:param pulumi.Input[str] email: The email of the Security Center Contact.
+:param pulumi.Input[str] phone: The phone number of the Security Center Contact.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_contact.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_contact.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.securitycenter.Contact.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Contact.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -98,7 +114,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.securitycenter.SubscriptionPricing">
-<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">SubscriptionPricing</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">SubscriptionPricing</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the Pricing Tier for Azure Security Center in the current subscription.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires the <code class="docutils literal notranslate"><span class="pre">Owner</span></code> permission on the Subscription.</p>
@@ -123,6 +139,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.securitycenter.SubscriptionPricing.tier">
 <code class="descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing.tier" title="Permalink to this definition">¶</a></dt>
 <dd><p>The pricing tier to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.securitycenter.SubscriptionPricing.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SubscriptionPricing resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] tier: The pricing tier to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_subscription_pricing.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_subscription_pricing.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -167,7 +196,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.securitycenter.Workspace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Workspace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>scope=None</em>, <em>workspace_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Workspace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Workspace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>scope=None</em>, <em>workspace_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Workspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the subscription’s Security Center Workspace.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Owner access permission is required.</p>
@@ -199,6 +228,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.securitycenter.Workspace.workspace_id">
 <code class="descname">workspace_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.securitycenter.Workspace.workspace_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Log Analytics Workspace to save the data in.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.securitycenter.Workspace.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>scope=None</em>, <em>workspace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Workspace.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Workspace resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] scope: The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
+:param pulumi.Input[str] workspace_id: The ID of the Log Analytics Workspace to save the data in.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_workspace.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

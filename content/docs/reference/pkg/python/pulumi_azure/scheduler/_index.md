@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.scheduler"></span><dl class="class">
+<dt id="pulumi_azure.scheduler.AwaitableGetJobCollectionResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">AwaitableGetJobCollectionResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>quotas=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.AwaitableGetJobCollectionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.scheduler.GetJobCollectionResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">GetJobCollectionResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>quotas=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.GetJobCollectionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getJobCollection.</p>
@@ -52,7 +57,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.scheduler.Job">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Scheduler Job.</p>
 <blockquote>
 <div><strong>NOTE:</strong> Support for Scheduler Job has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</div></blockquote>
@@ -147,6 +152,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The sets or gets the current state of the job. Can be set to either <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Completed</span></code></p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.scheduler.Job.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] action_storage_queue: A <code class="docutils literal notranslate"><span class="pre">action_storage_queue</span></code> block defining a storage queue job action as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">error_action_storage_queue</span></code> block.
+:param pulumi.Input[dict] action_web: A <code class="docutils literal notranslate"><span class="pre">action_web</span></code> block defining the job action as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">error_action_web</span></code> block.
+:param pulumi.Input[dict] error_action_storage_queue: A <code class="docutils literal notranslate"><span class="pre">error_action_storage_queue</span></code> block defining the a web action to take on an error as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">action_storage_queue</span></code> block.
+:param pulumi.Input[dict] error_action_web: A <code class="docutils literal notranslate"><span class="pre">error_action_web</span></code> block defining the action to take on an error as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">action_web</span></code> block.
+:param pulumi.Input[str] job_collection_name: Specifies the name of the Scheduler Job Collection in which the Job should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the Scheduler Job. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] recurrence: A <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block defining a job occurrence schedule.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Scheduler Job. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] retry: A <code class="docutils literal notranslate"><span class="pre">retry</span></code> block defining how to retry as described below.
+:param pulumi.Input[str] start_time: The time the first instance of the job is to start running at.
+:param pulumi.Input[str] state: The sets or gets the current state of the job. Can be set to either <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Completed</span></code></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.scheduler.Job.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -189,7 +217,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.scheduler.JobCollection">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">JobCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">JobCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Scheduler Job Collection.</p>
 <blockquote>
 <div><strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</div></blockquote>
@@ -254,6 +282,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.scheduler.JobCollection.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.scheduler.JobCollection.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing JobCollection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Scheduler Job Collection. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] quota: Configures the Job collection quotas as documented in the <code class="docutils literal notranslate"><span class="pre">quota</span></code> block below. 
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Scheduler Job Collection. Changing this forces a new resource to be created.
+:param pulumi.Input[str] sku: Sets the Job Collection’s pricing level’s SKU. Possible values include: <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">P10Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">P20Premium</span></code>.
+:param pulumi.Input[str] state: Sets Job Collection’s state. Possible values include: <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job_collection.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

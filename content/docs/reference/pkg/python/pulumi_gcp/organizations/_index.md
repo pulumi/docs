@@ -9,9 +9,63 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.organizations"></span><dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetActiveFolderResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetActiveFolderResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetBillingAccountResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetBillingAccountResult</code><span class="sig-paren">(</span><em>billing_account=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>open=None</em>, <em>project_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetClientConfigResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em>access_token=None</em>, <em>project=None</em>, <em>region=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetClientOpenIdUserInfoResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetClientOpenIdUserInfoResult</code><span class="sig-paren">(</span><em>email=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientOpenIdUserInfoResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetFolderResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em>create_time=None</em>, <em>display_name=None</em>, <em>folder=None</em>, <em>lifecycle_state=None</em>, <em>lookup_organization=None</em>, <em>name=None</em>, <em>organization=None</em>, <em>parent=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetIAMPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetIAMPolicyResult</code><span class="sig-paren">(</span><em>audit_configs=None</em>, <em>bindings=None</em>, <em>policy_data=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetOrganizationResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em>create_time=None</em>, <em>directory_customer_id=None</em>, <em>domain=None</em>, <em>lifecycle_state=None</em>, <em>name=None</em>, <em>organization=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetProjectResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em>app_engines=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>number=None</em>, <em>org_id=None</em>, <em>policy_data=None</em>, <em>policy_etag=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.organizations.AwaitableGetProjectServicesResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">AwaitableGetProjectServicesResult</code><span class="sig-paren">(</span><em>disable_on_destroy=None</em>, <em>project=None</em>, <em>services=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectServicesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.organizations.Folder">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Folder</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>parent=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Folder resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Folder</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>parent=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows management of a Google Cloud Platform folder. For more information see 
+<a class="reference external" href="https://cloud.google.com/resource-manager/docs/creating-managing-folders">the official documentation</a>
+and 
+<a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v2/folders">API</a>.</p>
+<p>A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.</p>
+<p>Folders created live inside an Organization. See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
+<p>The service account used to run this provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Folder</span></code>
+resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.folderCreator</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
+doc for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -61,6 +115,37 @@ A folder’s display name must be unique amongst its siblings, e.g. no two folde
 <code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the parent Folder or Organization.
 Must be of the form <code class="docutils literal notranslate"><span class="pre">folders/{folder_id}</span></code> or <code class="docutils literal notranslate"><span class="pre">organizations/{org_id}</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.Folder.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>create_time=None</em>, <em>display_name=None</em>, <em>lifecycle_state=None</em>, <em>name=None</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Folder resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] create_time: Timestamp when the Folder was created. Assigned by the server.</p>
+<blockquote>
+<div>A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder’s display name.
+A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.</li>
+<li><strong>lifecycle_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lifecycle state of the folder such as <code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code> or <code class="docutils literal notranslate"><span class="pre">DELETE_REQUESTED</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the Folder. Its format is folders/{folder_id}.</li>
+<li><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the parent Folder or Organization.
+Must be of the form <code class="docutils literal notranslate"><span class="pre">folders/{folder_id}</span></code> or <code class="docutils literal notranslate"><span class="pre">organizations/{org_id}</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -328,8 +413,19 @@ referencing from a resource that supports IAM.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IAMBinding">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>org_id=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IAMBinding resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>org_id=None</em>, <em>role=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows creation and management of a single binding within IAM policy for
+an existing Google Cloud Platform Organization.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">organizations.IAMMember</span></code> for the <strong>same role</strong> or they will fight over
+what your policy should be.</dd>
+<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt>
+<dd>Use <code class="docutils literal notranslate"><span class="pre">import</span></code> and inspect the preview output to ensure
+your existing members are preserved.</dd>
+</dl>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -340,7 +436,7 @@ referencing from a resource that supports IAM.</p>
 <li><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of users that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></li>
 <li><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization in which you want to create a custom role.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
-<code class="docutils literal notranslate"><span class="pre">google_organization_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
@@ -371,8 +467,27 @@ referencing from a resource that supports IAM.</p>
 <dt id="pulumi_gcp.organizations.IAMBinding.role">
 <code class="descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The role that should be applied. Only one
-<code class="docutils literal notranslate"><span class="pre">google_organization_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.IAMBinding.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>etag=None</em>, <em>members=None</em>, <em>org_id=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IAMBinding resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] etag: (Computed) The etag of the organization’s IAM policy.
+:param pulumi.Input[list] members: A list of users that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
+:param pulumi.Input[str] org_id: The numeric ID of the organization in which you want to create a custom role.
+:param pulumi.Input[str] role: The role that should be applied. Only one</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -417,8 +532,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IAMCustomRole">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>org_id=None</em>, <em>permissions=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IAMCustomRole resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>org_id=None</em>, <em>permissions=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows management of a customized Cloud IAM organization role. For more information see
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-custom-roles">the official documentation</a>
+and
+<a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/organizations.roles">API</a>.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>Warning:</strong> Note that custom roles in GCP have the concept of a soft-delete. There are two issues that may arise</dt>
+<dd>from this and how roles are propagated. 1) creating a role may involve undeleting and then updating a role with the
+same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
+after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
+made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
+by this provider, and new roles cannot share that name.</dd>
+</dl>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -485,6 +613,35 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 <dd><p>A human-readable title for the role.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.IAMCustomRole.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>deleted=None</em>, <em>description=None</em>, <em>org_id=None</em>, <em>permissions=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IAMCustomRole resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] deleted: (Optional) The current deleted state of the role.
+:param pulumi.Input[str] description: A human-readable description for the role.
+:param pulumi.Input[str] org_id: The numeric ID of the organization in which you want to create a custom role.
+:param pulumi.Input[list] permissions: The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+:param pulumi.Input[str] role_id: The role id to use for this role.
+:param pulumi.Input[str] stage: The current launch stage of the role.</p>
+<blockquote>
+<div>Defaults to <code class="docutils literal notranslate"><span class="pre">GA</span></code>.
+List of possible stages is <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage">here</a>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable title for the role.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -527,13 +684,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IAMMember">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>org_id=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>org_id=None</em>, <em>role=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a single member for a single binding within
 the IAM policy for an existing Google Cloud Platform Organization.</p>
 <blockquote>
 <div><dl class="docutils">
 <dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">google_organization_iam_binding</span></code> for the <strong>same role</strong> or they will fight over
+<dd><code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</dd>
 </dl>
 </div></blockquote>
@@ -580,6 +737,24 @@ what your policy should be.</dd>
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.IAMMember.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>etag=None</em>, <em>member=None</em>, <em>org_id=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IAMMember resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] etag: (Computed) The etag of the organization’s IAM policy.
+:param pulumi.Input[str] member: The user that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
+:param pulumi.Input[str] org_id: The numeric ID of the organization in which you want to create a custom role.
+:param pulumi.Input[str] role: The role that should be applied. Note that custom roles must be of the format</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.organizations.IAMMember.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -622,20 +797,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IAMPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>org_id=None</em>, <em>policy_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>org_id=None</em>, <em>policy_data=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of the entire IAM policy for an existing Google Cloud Platform Organization.</p>
 <blockquote>
 <div><dl class="docutils">
 <dt><strong>Warning:</strong> New organizations have several default policies which will,</dt>
 <dd>without extreme caution, be <strong>overwritten</strong> by use of this resource.
-The safest alternative is to use multiple <code class="docutils literal notranslate"><span class="pre">google_organization_iam_binding</span></code>
+The safest alternative is to use multiple <code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code>
 resources.  It is easy to use this resource to remove your own access to
 an organization, which will require a call to Google Support to have
 fixed, and can take multiple days to resolve.  If you do use this resource,
 the best way to be sure that you are not making dangerous changes is to start
 by importing your existing policy, and examining the diff very closely.</dd>
 <dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">google_organization_iam_member</span></code> or <code class="docutils literal notranslate"><span class="pre">google_organization_iam_binding</span></code>
+<dd><code class="docutils literal notranslate"><span class="pre">organizations.IAMMember</span></code> or <code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code>
 or they will fight over what your policy should be.</dd>
 </dl>
 </div></blockquote>
@@ -647,7 +822,7 @@ or they will fight over what your policy should be.</dd>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization in which you want to create a custom role.</li>
-<li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source that represents
+<li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
 policy applied to the organization.</li>
 </ul>
@@ -666,9 +841,26 @@ policy applied to the organization.</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMPolicy.policy_data">
 <code class="descname">policy_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.policy_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source that represents
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
 policy applied to the organization.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.IAMPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>etag=None</em>, <em>org_id=None</em>, <em>policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IAMPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] org_id: The numeric ID of the organization in which you want to create a custom role.
+:param pulumi.Input[str] policy_data: The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents</p>
+<blockquote>
+<div>the IAM policy that will be applied to the organization. This policy overrides any existing
+policy applied to the organization.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -713,7 +905,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>boolean_policy=None</em>, <em>constraint=None</em>, <em>list_policy=None</em>, <em>org_id=None</em>, <em>restore_policy=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>boolean_policy=None</em>, <em>constraint=None</em>, <em>list_policy=None</em>, <em>org_id=None</em>, <em>restore_policy=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of Organization policies for a Google Organization. For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
@@ -786,6 +978,26 @@ documentation</a> and
 <dd><p>Version of the Policy. Default version is 0.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.Policy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>boolean_policy=None</em>, <em>constraint=None</em>, <em>etag=None</em>, <em>list_policy=None</em>, <em>org_id=None</em>, <em>restore_policy=None</em>, <em>update_time=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] boolean_policy: A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+:param pulumi.Input[str] constraint: The name of the Constraint the Policy is configuring, for example, <code class="docutils literal notranslate"><span class="pre">serviceuser.services</span></code>. Check out the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">complete list of available constraints</a>.
+:param pulumi.Input[str] etag: (Computed) The etag of the organization policy. <code class="docutils literal notranslate"><span class="pre">etag</span></code> is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
+:param pulumi.Input[dict] list_policy: A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+:param pulumi.Input[str] org_id: The numeric ID of the organization to set the policy for.
+:param pulumi.Input[dict] restore_policy: A restore policy is a constraint to restore the default policy. Structure is documented below.
+:param pulumi.Input[str] update_time: (Computed) The timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds, representing when the variable was last updated. Example: “2016-10-09T12:33:37.578138407Z”.
+:param pulumi.Input[float] version: Version of the Policy. Default version is 0.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.organizations.Policy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -828,8 +1040,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.Project">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>org_id=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>org_id=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows creation and management of a Google Cloud Platform project.</p>
+<p>Projects created with this resource must be associated with an Organization.
+See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
+<p>The service account used to run this provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code>
+resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
+doc for more information.</p>
+<p>Note that prior to 0.8.5, <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> functioned like a data source,
+meaning any project referenced by it had to be created and managed outside
+this provider. As of 0.8.5, <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> functions like any other
+resource, with this provider creating and managing the project. To replicate the old
+behavior, either:</p>
+<ul class="simple">
+<li>Use the project ID directly in whatever is referencing the project, using the
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/google_project_iam.html">projects.IAMPolicy</a>
+to replace the old <code class="docutils literal notranslate"><span class="pre">policy_data</span></code> property.</li>
+<li>Use the <a class="reference external" href="https://www.terraform.io/docs/import/usage.html">import</a> functionality
+to import your pre-existing project into this provider, where it can be referenced and
+used just like always, keeping in mind that this provider will attempt to undo any changes
+made outside this provider.</li>
+</ul>
+<blockquote>
+<div>It’s important to note that any project resources that were added to your config
+prior to 0.8.5 will continue to function as they always have, and will not be managed by
+this provider. Only newly added projects are affected.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -841,6 +1077,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project succesfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</li>
+<li><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alphanumeric ID of the billing account this project
+belongs to. The user or service account performing this operation with this provider
+must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
+the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
+for more details.</li>
 <li><strong>folder_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the folder this project should be
 created under. Only one of <code class="docutils literal notranslate"><span class="pre">org_id</span></code> or <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> may be
 specified. If the <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> is specified, then the project is
@@ -855,6 +1096,8 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. Changing this forces a new project to be created.</li>
+<li><strong>skip_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the resource can be deleted
+without deleting the Project via the Google API.</li>
 </ul>
 </td>
 </tr>
@@ -869,6 +1112,16 @@ organization.</li>
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project succesfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.Project.billing_account">
+<code class="descname">billing_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.billing_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>The alphanumeric ID of the billing account this project
+belongs to. The user or service account performing this operation with this provider
+must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
+the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
+for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -914,6 +1167,63 @@ organization.</p>
 <dt id="pulumi_gcp.organizations.Project.project_id">
 <code class="descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project ID. Changing this forces a new project to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.Project.skip_delete">
+<code class="descname">skip_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.skip_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the resource can be deleted
+without deleting the Project via the Google API.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.organizations.Project.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>number=None</em>, <em>org_id=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] auto_create_network: Create the ‘default’ network automatically.  Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<blockquote>
+<div>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
+will still need to have 1 network slot available to create the project succesfully, even if
+you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The alphanumeric ID of the billing account this project
+belongs to. The user or service account performing this operation with this provider
+must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
+the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
+for more details.</p>
+</li>
+<li><strong>folder_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the folder this project should be
+created under. Only one of <code class="docutils literal notranslate"><span class="pre">org_id</span></code> or <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> may be
+specified. If the <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> is specified, then the project is
+created under the specified folder. Changing this forces the
+project to be migrated to the newly specified folder.</li>
+<li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to the project.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the project.</li>
+<li><strong>number</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric identifier of the project.</li>
+<li><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization this project belongs to.
+Changing this forces a new project to be created.  Only one of
+<code class="docutils literal notranslate"><span class="pre">org_id</span></code> or <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> may be specified. If the <code class="docutils literal notranslate"><span class="pre">org_id</span></code> is
+specified then the project is created at the top level. Changing
+this forces the project to be migrated to the newly specified
+organization.</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. Changing this forces a new project to be created.</li>
+<li><strong>skip_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the resource can be deleted
+without deleting the Project via the Google API.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1010,7 +1320,7 @@ receive an error otherwise.</p>
 <dt id="pulumi_gcp.organizations.get_iam_policy">
 <code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">get_iam_policy</code><span class="sig-paren">(</span><em>audit_configs=None</em>, <em>bindings=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_iam_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates an IAM policy document that may be referenced by and applied to
-other Google Cloud Platform resources, such as the <code class="docutils literal notranslate"><span class="pre">google_project</span></code> resource.</p>
+other Google Cloud Platform resources, such as the <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> resource.</p>
 <p>This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy
 from another resource is the only way to apply an IAM policy to a resource.</p>

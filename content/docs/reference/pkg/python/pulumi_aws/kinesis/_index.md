@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.kinesis"></span><dl class="class">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AnalyticsApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AnalyticsApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
 <p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
@@ -118,6 +118,44 @@ See Reference Data Sources below for more details.</p>
 <dd><p>The Version of the application.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.kinesis.AnalyticsApplication.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>create_timestamp=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>last_update_timestamp=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AnalyticsApplication resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the Kinesis Analytics Appliation.
+:param pulumi.Input[dict] cloudwatch_logging_options: The CloudWatch log stream options to monitor application errors.</p>
+<blockquote>
+<div>See CloudWatch Logging Options below for more details.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SQL Code to transform input data, and generate output.</li>
+<li><strong>create_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Timestamp when the application version was created.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the application.</li>
+<li><strong>inputs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Input configuration of the application. See Inputs below for more details.</li>
+<li><strong>last_update_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Timestamp when the application was last updated.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Kinesis Analytics Application.</li>
+<li><strong>outputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Output destination configuration of the application. See Outputs below for more details.</li>
+<li><strong>reference_data_sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An S3 Reference Data Source for the application.
+See Reference Data Sources below for more details.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Status of the application.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Kinesis Analytics Application.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Version of the application.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_analytics_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_analytics_application.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -159,8 +197,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.kinesis.AwaitableGetStreamResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AwaitableGetStreamResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>closed_shards=None</em>, <em>creation_timestamp=None</em>, <em>name=None</em>, <em>open_shards=None</em>, <em>retention_period=None</em>, <em>shard_level_metrics=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AwaitableGetStreamResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>destination=None</em>, <em>destination_id=None</em>, <em>elasticsearch_configuration=None</em>, <em>extended_s3_configuration=None</em>, <em>kinesis_source_configuration=None</em>, <em>name=None</em>, <em>redshift_configuration=None</em>, <em>s3_configuration=None</em>, <em>splunk_configuration=None</em>, <em>tags=None</em>, <em>version_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>destination=None</em>, <em>destination_id=None</em>, <em>elasticsearch_configuration=None</em>, <em>extended_s3_configuration=None</em>, <em>kinesis_source_configuration=None</em>, <em>name=None</em>, <em>redshift_configuration=None</em>, <em>s3_configuration=None</em>, <em>splunk_configuration=None</em>, <em>tags=None</em>, <em>version_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
 <p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -246,6 +289,42 @@ is redshift). More details are given below.</p>
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.version_id">
 <code class="descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.version_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>destination=None</em>, <em>destination_id=None</em>, <em>elasticsearch_configuration=None</em>, <em>extended_s3_configuration=None</em>, <em>kinesis_source_configuration=None</em>, <em>name=None</em>, <em>redshift_configuration=None</em>, <em>s3_configuration=None</em>, <em>splunk_configuration=None</em>, <em>tags=None</em>, <em>version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FirehoseDeliveryStream resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the Stream
+:param pulumi.Input[str] destination: This is the destination to where the data is delivered. The only options are <code class="docutils literal notranslate"><span class="pre">s3</span></code> (Deprecated, use <code class="docutils literal notranslate"><span class="pre">extended_s3</span></code> instead), <code class="docutils literal notranslate"><span class="pre">extended_s3</span></code>, <code class="docutils literal notranslate"><span class="pre">redshift</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>, and <code class="docutils literal notranslate"><span class="pre">splunk</span></code>.
+:param pulumi.Input[dict] extended_s3_configuration: Enhanced configuration options for the s3 destination. More details are given below.
+:param pulumi.Input[dict] kinesis_source_configuration: Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
+:param pulumi.Input[str] name: A name to identify the stream. This is unique to the</p>
+<blockquote>
+<div>AWS account and region the Stream is created in.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>redshift_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration options if redshift is the destination.
+Using <code class="docutils literal notranslate"><span class="pre">redshift_configuration</span></code> requires the user to also specify a
+<code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> block. More details are given below.</li>
+<li><strong>s3_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Required for non-S3 destinations. For S3 destination, use <code class="docutils literal notranslate"><span class="pre">extended_s3_configuration</span></code> instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
+is redshift). More details are given below.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_firehose_delivery_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_firehose_delivery_stream.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -356,7 +435,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kinesis.Stream">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>enforce_consumer_deletion=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>enforce_consumer_deletion=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
 <p>For more details, see the [Amazon Kinesis Documentation][1].</p>
@@ -437,6 +516,39 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 <dt id="pulumi_aws.kinesis.Stream.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.kinesis.Stream.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>enforce_consumer_deletion=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Stream resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)
+:param pulumi.Input[str] encryption_type: The encryption type to use. The only acceptable values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> or <code class="docutils literal notranslate"><span class="pre">KMS</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+:param pulumi.Input[bool] enforce_consumer_deletion: A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] kms_key_id: The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.
+:param pulumi.Input[str] name: A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
+:param pulumi.Input[float] retention_period: Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.
+:param pulumi.Input[float] shard_count: The number of shards that the stream will use.</p>
+<blockquote>
+<div>Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_stream.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

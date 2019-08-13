@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.directoryservice"></span><dl class="class">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">ConditionalForwader</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">ConditionalForwader</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -45,6 +45,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.directoryservice.ConditionalForwader.remote_domain_name">
 <code class="descname">remote_domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader.remote_domain_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fully qualified domain name of the remote domain for which forwarders will be used.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directoryservice.ConditionalForwader.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ConditionalForwader resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] directory_id: The id of directory.
+:param pulumi.Input[list] dns_ips: A list of forwarder IP addresses.
+:param pulumi.Input[str] remote_domain_name: The fully qualified domain name of the remote domain for which forwarders will be used.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -89,7 +104,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.Directory">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">Directory</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">Directory</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Simple or Managed Microsoft directory in AWS Directory Service.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
@@ -210,6 +225,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>VPC related information about the directory. Fields documented below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directoryservice.Directory.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>access_url=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>dns_ip_addresses=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>security_group_id=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Directory resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_url: The access URL for the directory, such as <code class="docutils literal notranslate"><span class="pre">http://alias.awsapps.com</span></code>.
+:param pulumi.Input[str] alias: The alias for the directory (must be unique amongst all aliases in AWS). Required for <code class="docutils literal notranslate"><span class="pre">enable_sso</span></code>.
+:param pulumi.Input[dict] connect_settings: Connector related information about the directory. Fields documented below.
+:param pulumi.Input[str] description: A textual description for the directory.
+:param pulumi.Input[list] dns_ip_addresses: A list of IP addresses of the DNS servers for the directory or connector.
+:param pulumi.Input[str] edition: The MicrosoftAD edition (<code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>). Defaults to <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code> (applies to MicrosoftAD type only).
+:param pulumi.Input[bool] enable_sso: Whether to enable single-sign on for the directory. Requires <code class="docutils literal notranslate"><span class="pre">alias</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] name: The fully qualified name for the directory, such as <code class="docutils literal notranslate"><span class="pre">corp.example.com</span></code>
+:param pulumi.Input[str] password: The password for the directory administrator or connector user.
+:param pulumi.Input[str] security_group_id: The ID of the security group created by the directory.
+:param pulumi.Input[str] short_name: The short name of the directory, such as <code class="docutils literal notranslate"><span class="pre">CORP</span></code>.
+:param pulumi.Input[str] size: The size of the directory (<code class="docutils literal notranslate"><span class="pre">Small</span></code> or <code class="docutils literal notranslate"><span class="pre">Large</span></code> are accepted values).
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] type: The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> are accepted values). Defaults to <code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>.
+:param pulumi.Input[dict] vpc_settings: VPC related information about the directory. Fields documented below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directoryservice.Directory.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -252,7 +294,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.LogService">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">LogService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>log_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">LogService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>log_group_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -280,6 +322,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.LogService.log_group_name">
 <code class="descname">log_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.LogService.log_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directoryservice.LogService.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>log_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LogService resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] directory_id: The id of directory.
+:param pulumi.Input[str] log_group_name: Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

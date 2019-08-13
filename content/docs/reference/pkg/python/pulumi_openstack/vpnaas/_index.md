@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.vpnaas"></span><dl class="class">
 <dt id="pulumi_openstack.vpnaas.EndpointGroup">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>endpoints=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>endpoints=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron Endpoint Group resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -91,6 +91,44 @@ Changing this creates a new group.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.vpnaas.EndpointGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>endpoints=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EndpointGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: The human-readable description for the group.</p>
+<blockquote>
+<div>Changing this updates the description of the existing group.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of endpoints of the same type, for the endpoint group. The values will depend on the type.
+Changing this creates a new group.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the group. Changing this updates the name of
+the existing group.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an endpoint group. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+group.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the group. Required if admin wants to
+create an endpoint group for another project. Changing this creates a new group.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
+Changing this creates a new group.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_endpoint_group_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_endpoint_group_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.vpnaas.EndpointGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -133,7 +171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.IkePolicy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IkePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encryption_algorithm=None</em>, <em>ike_version=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>phase1_negotiation_mode=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IkePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encryption_algorithm=None</em>, <em>ike_version=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>phase1_negotiation_mode=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron IKE policy resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -264,6 +302,61 @@ create a service for another policy. Changing this creates a new policy.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.vpnaas.IkePolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encryption_algorithm=None</em>, <em>ike_version=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>phase1_negotiation_mode=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IkePolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] auth_algorithm: The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.</p>
+<blockquote>
+<div>Default is sha1. Changing this updates the algorithm of the existing policy.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the policy.
+Changing this updates the description of the existing policy.</li>
+<li><strong>encryption_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
+The default value is aes-128. Changing this updates the existing policy.</li>
+<li><strong>ike_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IKE mode. A valid value is v1 or v2. Default is v1.
+Changing this updates the existing policy.</li>
+<li><strong>lifetimes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The lifetime of the security association. Consists of Unit and Value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. Changing this updates the name of
+the existing policy.</li>
+<li><strong>pfs</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
+Changing this updates the existing policy.</li>
+<li><strong>phase1_negotiation_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IKE mode. A valid value is main, which is the default.
+Changing this updates the existing policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a VPN service. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+service.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the policy. Required if admin wants to
+create a service for another policy. Changing this creates a new policy.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ike_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ike_policy_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.vpnaas.IkePolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -306,7 +399,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.IpSecPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IpSecPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encapsulation_mode=None</em>, <em>encryption_algorithm=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>transform_protocol=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IpSecPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encapsulation_mode=None</em>, <em>encryption_algorithm=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>transform_protocol=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron IPSec policy resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -437,6 +530,61 @@ Changing this updates the existing policy. Default is ESP.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.vpnaas.IpSecPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encapsulation_mode=None</em>, <em>encryption_algorithm=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>transform_protocol=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IpSecPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] auth_algorithm: The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.</p>
+<blockquote>
+<div>Default is sha1. Changing this updates the algorithm of the existing policy.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the policy.
+Changing this updates the description of the existing policy.</li>
+<li><strong>encapsulation_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
+Changing this updates the existing policy.</li>
+<li><strong>encryption_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
+The default value is aes-128. Changing this updates the existing policy.</li>
+<li><strong>lifetimes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The lifetime of the security association. Consists of Unit and Value.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. Changing this updates the name of
+the existing policy.</li>
+<li><strong>pfs</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
+Changing this updates the existing policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an IPSec policy. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+policy.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the policy. Required if admin wants to
+create a policy for another project. Changing this creates a new policy.</li>
+<li><strong>transform_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transform protocol. Valid values are ESP, AH and AH-ESP.
+Changing this updates the existing policy. Default is ESP.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.vpnaas.IpSecPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -479,7 +627,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.Service">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron VPN service resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -583,6 +731,47 @@ create a service for another project. Changing this creates a new service.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.vpnaas.Service.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>external_v4_ip=None</em>, <em>external_v6_ip=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>status=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.Service.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the resource. Can either be up(true) or down(false).</p>
+<blockquote>
+<div>Changing this updates the administrative state of the existing service.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the service.
+Changing this updates the description of the existing service.</li>
+<li><strong>external_v4_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The read-only external (public) IPv4 address that is used for the VPN service.</li>
+<li><strong>external_v6_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The read-only external (public) IPv6 address that is used for the VPN service.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service. Changing this updates the name of
+the existing service.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a VPN service. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+service.</li>
+<li><strong>router_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the router. Changing this creates a new service.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SubnetID is the ID of the subnet. Default is null.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the service. Required if admin wants to
+create a service for another project. Changing this creates a new service.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_service_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_service_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.vpnaas.Service.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.Service.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -625,7 +814,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.SiteConnection">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">SiteConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>dpds=None</em>, <em>ikepolicy_id=None</em>, <em>initiator=None</em>, <em>ipsecpolicy_id=None</em>, <em>local_ep_group_id=None</em>, <em>local_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>peer_address=None</em>, <em>peer_cidrs=None</em>, <em>peer_ep_group_id=None</em>, <em>peer_id=None</em>, <em>psk=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vpnservice_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">SiteConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>dpds=None</em>, <em>ikepolicy_id=None</em>, <em>initiator=None</em>, <em>ipsecpolicy_id=None</em>, <em>local_ep_group_id=None</em>, <em>local_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>peer_address=None</em>, <em>peer_cidrs=None</em>, <em>peer_ep_group_id=None</em>, <em>peer_id=None</em>, <em>psk=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vpnservice_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron IPSec site connection resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -821,6 +1010,75 @@ create a connection for another project. Changing this creates a new connection.
 <dt id="pulumi_openstack.vpnaas.SiteConnection.vpnservice_id">
 <code class="descname">vpnservice_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection.vpnservice_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the VPN service. Changing this creates a new connection.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.vpnaas.SiteConnection.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>dpds=None</em>, <em>ikepolicy_id=None</em>, <em>initiator=None</em>, <em>ipsecpolicy_id=None</em>, <em>local_ep_group_id=None</em>, <em>local_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>peer_address=None</em>, <em>peer_cidrs=None</em>, <em>peer_ep_group_id=None</em>, <em>peer_id=None</em>, <em>psk=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vpnservice_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SiteConnection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the resource. Can either be up(true) or down(false).</p>
+<blockquote>
+<div>Changing this updates the administrative state of the existing connection.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the connection.
+Changing this updates the description of the existing connection.</li>
+<li><strong>dpds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A dictionary with dead peer detection (DPD) protocol controls.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ikepolicy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the IKE policy. Changing this creates a new connection.</li>
+<li><strong>initiator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid value is response-only or bi-directional. Default is bi-directional.</li>
+<li><strong>ipsecpolicy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the IPsec policy. Changing this creates a new connection.</li>
+<li><strong>local_ep_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the endpoint group that contains private subnets for the local side of the connection.
+You must specify this parameter with the peer_ep_group_id parameter unless
+in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
+Changing this updates the existing connection.</li>
+<li><strong>local_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
+Most often, local ID would be domain name, email address, etc.
+If this is not configured then the external IP address will be used as the ID.</li>
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) value to address fragmentation.
+Minimum value is 68 for IPv4, and 1280 for IPv6.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection. Changing this updates the name of
+the existing connection.</li>
+<li><strong>peer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The peer gateway public IPv4 or IPv6 address or FQDN.</li>
+<li><strong>peer_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Unique list of valid peer private CIDRs in the form &lt; net_address &gt; / &lt; prefix &gt; .</li>
+<li><strong>peer_ep_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the endpoint group that contains private CIDRs in the form &lt; net_address &gt; / &lt; prefix &gt; for the peer side of the connection.
+You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
+where peer_cidrs is provided with a subnet_id for the VPN service.</li>
+<li><strong>peer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
+Typically, this value matches the peer_address value.
+Changing this updates the existing policy.</li>
+<li><strong>psk</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pre-shared key. A valid value is any string.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an IPSec site connection. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+site connection.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the connection. Required if admin wants to
+create a connection for another project. Changing this creates a new connection.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+<li><strong>vpnservice_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPN service. Changing this creates a new connection.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

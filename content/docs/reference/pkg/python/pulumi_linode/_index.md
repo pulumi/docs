@@ -9,8 +9,53 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-linode/issues">pulumi/pulumi-linode repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/issues">terraform-providers/terraform-provider-linode repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_linode"></span><dl class="class">
+<dt id="pulumi_linode.AwaitableGetAccountResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em>address1=None</em>, <em>address2=None</em>, <em>balance=None</em>, <em>city=None</em>, <em>company=None</em>, <em>country=None</em>, <em>email=None</em>, <em>first_name=None</em>, <em>last_name=None</em>, <em>phone=None</em>, <em>state=None</em>, <em>zip=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetDomainResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em>axfr_ips=None</em>, <em>description=None</em>, <em>domain=None</em>, <em>expire_sec=None</em>, <em>group=None</em>, <em>id=None</em>, <em>master_ips=None</em>, <em>refresh_sec=None</em>, <em>retry_sec=None</em>, <em>soa_email=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>ttl_sec=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetImageResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em>created=None</em>, <em>created_by=None</em>, <em>deprecated=None</em>, <em>description=None</em>, <em>expiry=None</em>, <em>id=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>size=None</em>, <em>type=None</em>, <em>vendor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetInstanceTypeResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetInstanceTypeResult</code><span class="sig-paren">(</span><em>addons=None</em>, <em>class_=None</em>, <em>disk=None</em>, <em>id=None</em>, <em>label=None</em>, <em>memory=None</em>, <em>network_out=None</em>, <em>price=None</em>, <em>transfer=None</em>, <em>vcpus=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetInstanceTypeResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetNetworkingIpResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetNetworkingIpResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>gateway=None</em>, <em>linode_id=None</em>, <em>prefix=None</em>, <em>public=None</em>, <em>rdns=None</em>, <em>region=None</em>, <em>subnet_mask=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetNetworkingIpResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetProfileResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetProfileResult</code><span class="sig-paren">(</span><em>authorized_keys=None</em>, <em>email=None</em>, <em>email_notifications=None</em>, <em>ip_whitelist_enabled=None</em>, <em>lish_auth_method=None</em>, <em>referrals=None</em>, <em>restricted=None</em>, <em>timezone=None</em>, <em>two_factor_auth=None</em>, <em>username=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetProfileResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetRegionResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetRegionResult</code><span class="sig-paren">(</span><em>country=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetRegionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetSshKeyResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetSshKeyResult</code><span class="sig-paren">(</span><em>created=None</em>, <em>label=None</em>, <em>ssh_key=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetSshKeyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.AwaitableGetUserResult">
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em>email=None</em>, <em>restricted=None</em>, <em>ssh_keys=None</em>, <em>username=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.Domain">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>axfr_ips=None</em>, <em>description=None</em>, <em>domain=None</em>, <em>expire_sec=None</em>, <em>group=None</em>, <em>master_ips=None</em>, <em>refresh_sec=None</em>, <em>retry_sec=None</em>, <em>soa_email=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>ttl_sec=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>axfr_ips=None</em>, <em>description=None</em>, <em>domain=None</em>, <em>expire_sec=None</em>, <em>group=None</em>, <em>master_ips=None</em>, <em>refresh_sec=None</em>, <em>retry_sec=None</em>, <em>soa_email=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>ttl_sec=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Domain resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -117,6 +162,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_linode.Domain.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>axfr_ips=None</em>, <em>description=None</em>, <em>domain=None</em>, <em>expire_sec=None</em>, <em>group=None</em>, <em>master_ips=None</em>, <em>refresh_sec=None</em>, <em>retry_sec=None</em>, <em>soa_email=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>ttl_sec=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Domain.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Domain resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] axfr_ips: The list of IPs that may perform a zone transfer for this Domain. This is potentially dangerous, and should be set to an empty list unless you intend to use it.
+:param pulumi.Input[str] description: A description for this Domain. This is for display purposes only.
+:param pulumi.Input[str] domain: The domain this Domain represents. These must be unique in our system; you cannot have two Domains representing the same domain.
+:param pulumi.Input[float] expire_sec: The amount of time in seconds that may pass before this Domain is no longer authoritative. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
+:param pulumi.Input[str] group: The group this Domain belongs to. This is for display purposes only.
+:param pulumi.Input[list] master_ips: The IP addresses representing the master DNS for this Domain.
+:param pulumi.Input[float] refresh_sec: The amount of time in seconds before this Domain should be refreshed. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
+:param pulumi.Input[float] retry_sec: The interval, in seconds, at which a failed refresh should be retried. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
+:param pulumi.Input[str] soa_email: Start of Authority email address. This is required for master Domains.
+:param pulumi.Input[str] status: Used to control whether this Domain is currently being rendered (defaults to “active”).
+:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.
+:param pulumi.Input[float] ttl_sec: ‘Time to Live’ - the amount of time in seconds that this Domain’s records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
+:param pulumi.Input[str] type: If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.Domain.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Domain.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -159,7 +229,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.DomainRecord">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">DomainRecord</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_id=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>protocol=None</em>, <em>record_type=None</em>, <em>service=None</em>, <em>tag=None</em>, <em>target=None</em>, <em>ttl_sec=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.DomainRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">DomainRecord</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_id=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>protocol=None</em>, <em>record_type=None</em>, <em>service=None</em>, <em>tag=None</em>, <em>target=None</em>, <em>ttl_sec=None</em>, <em>weight=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.DomainRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records.
 For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createDomainRecord">Linode APIv4 docs</a>.</p>
 <p>This resource exports no additional attributes.</p>
@@ -262,6 +332,39 @@ For more information, see <a class="reference external" href="https://www.linode
 <dt id="pulumi_linode.DomainRecord.weight">
 <code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.DomainRecord.weight" title="Permalink to this definition">¶</a></dt>
 <dd><p>The relative weight of this Record. Higher values are preferred.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_linode.DomainRecord.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>domain_id=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>protocol=None</em>, <em>record_type=None</em>, <em>service=None</em>, <em>tag=None</em>, <em>target=None</em>, <em>ttl_sec=None</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.DomainRecord.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DomainRecord resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] domain_id: The ID of the Domain to access.  <em>Changing ``domain_id`` forces the creation of a new Linode Domain Record.</em>.
+:param pulumi.Input[str] name: The name of this Record. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.
+:param pulumi.Input[float] port: The port this Record points to.
+:param pulumi.Input[float] priority: The priority of the target host. Lower values are preferred.
+:param pulumi.Input[str] protocol: The protocol this Record’s service communicates with. Only valid for SRV records.
+:param pulumi.Input[str] record_type: The type of Record this is in the DNS system. For example, A records associate a domain name with an IPv4 address, and AAAA records associate a domain name with an IPv6 address. <em>Changing ``record_type`` forces the creation of a new Linode Domain Record.</em>.
+:param pulumi.Input[str] service: The service this Record identified. Only valid for SRV records.
+:param pulumi.Input[str] tag: The tag portion of a CAA record. It is invalid to set this on other record types.
+:param pulumi.Input[str] target: The target for this Record. This field’s actual usage depends on the type of record this represents. For A and AAAA records, this is the address the named Domain should resolve to.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ttl_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ‘Time to Live’ - the amount of time in seconds that this Domain’s records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.</li>
+<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The relative weight of this Record. Higher values are preferred.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -390,7 +493,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.Image">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_id=None</em>, <em>label=None</em>, <em>linode_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_id=None</em>, <em>label=None</em>, <em>linode_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.</p>
 <p>For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/disk-images/linode-images/">Linode’s documentation on Images</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createImage">Linode APIv4 docs</a>.</p>
 <p>This resource exports the following attributes:</p>
@@ -447,6 +550,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the Linode that this Image will be created from.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_linode.Image.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>created_by=None</em>, <em>deprecated=None</em>, <em>description=None</em>, <em>disk_id=None</em>, <em>expiry=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>linode_id=None</em>, <em>size=None</em>, <em>type=None</em>, <em>vendor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Image.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Image resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A detailed description of this Image.
+:param pulumi.Input[float] disk_id: The ID of the Linode Disk that this Image will be created from.
+:param pulumi.Input[str] label: A short description of the Image. Labels cannot contain special characters.
+:param pulumi.Input[float] linode_id: The ID of the Linode that this Image will be created from.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.Image.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Image.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -489,7 +608,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alerts=None</em>, <em>authorized_keys=None</em>, <em>authorized_users=None</em>, <em>backup_id=None</em>, <em>backups_enabled=None</em>, <em>boot_config_label=None</em>, <em>configs=None</em>, <em>disks=None</em>, <em>group=None</em>, <em>image=None</em>, <em>label=None</em>, <em>private_ip=None</em>, <em>region=None</em>, <em>root_pass=None</em>, <em>stackscript_data=None</em>, <em>stackscript_id=None</em>, <em>swap_size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>watchdog_enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alerts=None</em>, <em>authorized_keys=None</em>, <em>authorized_users=None</em>, <em>backup_id=None</em>, <em>backups_enabled=None</em>, <em>boot_config_label=None</em>, <em>configs=None</em>, <em>disks=None</em>, <em>group=None</em>, <em>image=None</em>, <em>label=None</em>, <em>private_ip=None</em>, <em>region=None</em>, <em>root_pass=None</em>, <em>stackscript_data=None</em>, <em>stackscript_id=None</em>, <em>swap_size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>watchdog_enabled=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Instance resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -617,6 +736,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_linode.Instance.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>alerts=None</em>, <em>authorized_keys=None</em>, <em>authorized_users=None</em>, <em>backup_id=None</em>, <em>backups=None</em>, <em>backups_enabled=None</em>, <em>boot_config_label=None</em>, <em>configs=None</em>, <em>disks=None</em>, <em>group=None</em>, <em>image=None</em>, <em>ip_address=None</em>, <em>ipv4s=None</em>, <em>ipv6=None</em>, <em>label=None</em>, <em>private_ip=None</em>, <em>private_ip_address=None</em>, <em>region=None</em>, <em>root_pass=None</em>, <em>specs=None</em>, <em>stackscript_data=None</em>, <em>stackscript_id=None</em>, <em>status=None</em>, <em>swap_size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>watchdog_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Instance.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] authorized_keys: A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if <code class="docutils literal notranslate"><span class="pre">image</span></code> is provided. <em>This value can not be imported.</em> <em>Changing ``authorized_keys`` forces the creation of a new Linode Instance.</em>
+:param pulumi.Input[list] authorized_users: A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the <code class="docutils literal notranslate"><span class="pre">root</span></code> user’s <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file automatically. <em>This value can not be imported.</em> <em>Changing ``authorized_users`` forces the creation of a new Linode Instance.</em>
+:param pulumi.Input[float] backup_id: A Backup ID from another Linode’s available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode’s available backups. This field and the image field are mutually exclusive. <em>This value can not be imported.</em> <em>Changing ``backup_id`` forces the creation of a new Linode Instance.</em>
+:param pulumi.Input[bool] backups_enabled: If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
+:param pulumi.Input[str] boot_config_label: The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one <code class="docutils literal notranslate"><span class="pre">config</span></code>, the <code class="docutils literal notranslate"><span class="pre">label</span></code> of that <code class="docutils literal notranslate"><span class="pre">config</span></code> will be used as the <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>. <em>This value can not be imported.</em>
+:param pulumi.Input[str] group: The display group of the Linode instance.
+:param pulumi.Input[str] image: An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are <code class="docutils literal notranslate"><span class="pre">linode/debian9</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/fedora28</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/ubuntu16.04lts</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/arch</span></code>, and <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>. <em>Changing ``image`` forces the creation of a new Linode Instance.</em>
+:param pulumi.Input[str] label: The Config’s label for display purposes.  Also used by <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>.
+:param pulumi.Input[bool] private_ip: If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode’s region. It can be enabled on an existing Linode but it can’t be disabled.
+:param pulumi.Input[str] region: This is the location where the Linode is deployed. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode Instance.</em>.
+:param pulumi.Input[dict] stackscript_data: An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em>
+:param pulumi.Input[float] stackscript_id: The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em>
+:param pulumi.Input[float] swap_size: When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
+:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.
+:param pulumi.Input[str] type: The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;g6-nanode-1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-standard-2&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-highmem-16&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-dedicated-16&quot;</span></code>, etc.
+:param pulumi.Input[bool] watchdog_enabled: The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.Instance.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -659,7 +806,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.NodeBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>client_conn_throttle=None</em>, <em>label=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>client_conn_throttle=None</em>, <em>label=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a NodeBalancer resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -701,6 +848,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.NodeBalancer.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.NodeBalancer.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tags applied to this object. Tags are for organizational purposes only.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_linode.NodeBalancer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>client_conn_throttle=None</em>, <em>created=None</em>, <em>hostname=None</em>, <em>ipv4=None</em>, <em>ipv6=None</em>, <em>label=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>transfer=None</em>, <em>updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NodeBalancer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] client_conn_throttle: Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
+:param pulumi.Input[str] label: The label of the Linode NodeBalancer
+:param pulumi.Input[str] region: The region where this NodeBalancer will be deployed.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode NodeBalancer.</em>.
+:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -745,7 +908,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.NodeBalancerConfig">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancerConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>check=None</em>, <em>check_attempts=None</em>, <em>check_body=None</em>, <em>check_interval=None</em>, <em>check_passive=None</em>, <em>check_path=None</em>, <em>check_timeout=None</em>, <em>cipher_suite=None</em>, <em>nodebalancer_id=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_cert=None</em>, <em>ssl_key=None</em>, <em>stickiness=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancerConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>check=None</em>, <em>check_attempts=None</em>, <em>check_body=None</em>, <em>check_interval=None</em>, <em>check_passive=None</em>, <em>check_path=None</em>, <em>check_timeout=None</em>, <em>cipher_suite=None</em>, <em>nodebalancer_id=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_cert=None</em>, <em>ssl_key=None</em>, <em>stickiness=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a NodeBalancerConfig resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -859,6 +1022,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Controls how session stickiness is handled on this port: ‘none’, ‘table’, ‘http_cookie’</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_linode.NodeBalancerConfig.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>check=None</em>, <em>check_attempts=None</em>, <em>check_body=None</em>, <em>check_interval=None</em>, <em>check_passive=None</em>, <em>check_path=None</em>, <em>check_timeout=None</em>, <em>cipher_suite=None</em>, <em>node_status=None</em>, <em>nodebalancer_id=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_cert=None</em>, <em>ssl_commonname=None</em>, <em>ssl_fingerprint=None</em>, <em>ssl_key=None</em>, <em>stickiness=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NodeBalancerConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] algorithm: What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
+:param pulumi.Input[str] check: The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
+:param pulumi.Input[float] check_attempts: How many times to attempt a check before considering a backend to be down. (1-30)
+:param pulumi.Input[float] check_interval: How often, in seconds, to check that backends are up and serving requests.
+:param pulumi.Input[bool] check_passive: If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
+:param pulumi.Input[str] check_path: The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
+:param pulumi.Input[float] check_timeout: How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
+:param pulumi.Input[str] cipher_suite: What ciphers to use for SSL connections served by this NodeBalancer. <code class="docutils literal notranslate"><span class="pre">legacy</span></code> is considered insecure and should only be used if necessary.
+:param pulumi.Input[float] nodebalancer_id: The ID of the NodeBalancer to access.
+:param pulumi.Input[float] port: The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can’t have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
+:param pulumi.Input[str] protocol: The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to “http”)
+:param pulumi.Input[str] ssl_cert: The certificate this port is serving. This is not returned. If set, this field will come back as <code class="docutils literal notranslate"><span class="pre">&lt;REDACTED&gt;</span></code>. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
+:param pulumi.Input[str] ssl_key: The private key corresponding to this port’s certificate. This is not returned. If set, this field will come back as <code class="docutils literal notranslate"><span class="pre">&lt;REDACTED&gt;</span></code>. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
+:param pulumi.Input[str] stickiness: Controls how session stickiness is handled on this port: ‘none’, ‘table’, ‘http_cookie’</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_config.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_config.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.NodeBalancerConfig.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -901,7 +1090,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.NodeBalancerNode">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancerNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>config_id=None</em>, <em>label=None</em>, <em>mode=None</em>, <em>nodebalancer_id=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerNode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancerNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>config_id=None</em>, <em>label=None</em>, <em>mode=None</em>, <em>nodebalancer_id=None</em>, <em>weight=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a NodeBalancerNode resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -959,6 +1148,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_linode.NodeBalancerNode.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>config_id=None</em>, <em>label=None</em>, <em>mode=None</em>, <em>nodebalancer_id=None</em>, <em>status=None</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerNode.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NodeBalancerNode resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The private IP Address where this backend can be reached. This must be a private IP address.
+:param pulumi.Input[float] config_id: The ID of the NodeBalancerConfig to access.
+:param pulumi.Input[str] label: The label of the Linode NodeBalancer Node. This is for display purposes only.
+:param pulumi.Input[str] mode: The mode this NodeBalancer should use when sending traffic to this backend. If set to <code class="docutils literal notranslate"><span class="pre">accept</span></code> this backend is accepting traffic. If set to <code class="docutils literal notranslate"><span class="pre">reject</span></code> this backend will not receive traffic. If set to <code class="docutils literal notranslate"><span class="pre">drain</span></code> this backend will not receive new traffic, but connections already pinned to it will continue to be routed to it
+:param pulumi.Input[float] nodebalancer_id: The ID of the NodeBalancer to access.
+:param pulumi.Input[float] weight: Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_node.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_node.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.NodeBalancerNode.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerNode.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1001,11 +1208,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>token=None</em>, <em>ua_prefix=None</em>, <em>url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>token=None</em>, <em>ua_prefix=None</em>, <em>url=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the linode package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1020,6 +1227,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_linode.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1062,7 +1281,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.Rdns">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Rdns</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>rdns=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Rdns" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Rdns</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>rdns=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Rdns" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode RDNS resource.  This can be used to create and modify RDNS records.</p>
 <p>Linode RDNS names must have a matching address value in an A or AAAA record.  This A or AAAA name must be resolvable at the time the RDNS resource is being associated.</p>
 <p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/docs/v4#operation/updateIP">Linode APIv4 docs</a> and the <a class="reference external" href="https://www.linode.com/docs/networking/dns/configure-your-linode-for-reverse-dns-classic-manager/">Configure your Linode for Reverse DNS</a> guide.</p>
@@ -1092,6 +1311,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.Rdns.rdns">
 <code class="descname">rdns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Rdns.rdns" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the RDNS address.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_linode.Rdns.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>rdns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Rdns.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Rdns resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The Public IPv4 or IPv6 address that will receive the <code class="docutils literal notranslate"><span class="pre">PTR</span></code> record.  A matching <code class="docutils literal notranslate"><span class="pre">A</span></code> or <code class="docutils literal notranslate"><span class="pre">AAAA</span></code> record must exist.
+:param pulumi.Input[str] rdns: The name of the RDNS address.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1136,7 +1369,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.SshKey">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>label=None</em>, <em>ssh_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.SshKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>label=None</em>, <em>ssh_key=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode SSH Key resource.  This can be used to create, modify, and delete Linodes SSH Keys.  Managed SSH Keys allow instances to be created with a list of Linode usernames, whose SSH keys will be automatically applied to the root account’s <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file.
 For more information, see the <a class="reference external" href="https://developers.linode.com/api/v4#operation/getSSHKeys">Linode APIv4 docs</a>.</p>
 <p>This resource exports the following attributes:</p>
@@ -1169,6 +1402,20 @@ For more information, see the <a class="reference external" href="https://develo
 <dt id="pulumi_linode.SshKey.ssh_key">
 <code class="descname">ssh_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.SshKey.ssh_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The public SSH Key, which is used to authenticate to the root user of the Linodes you deploy.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_linode.SshKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>label=None</em>, <em>ssh_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.SshKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] label: A label for the SSH Key.
+:param pulumi.Input[str] ssh_key: The public SSH Key, which is used to authenticate to the root user of the Linodes you deploy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1213,7 +1460,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.StackScript">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">StackScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>images=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>rev_note=None</em>, <em>script=None</em>, <em>user_defined_fields=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">StackScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>images=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>rev_note=None</em>, <em>script=None</em>, <em>user_defined_fields=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a StackScript resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1271,6 +1518,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The script to execute when provisioning a new Linode with this StackScript.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_linode.StackScript.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>deployments_active=None</em>, <em>deployments_total=None</em>, <em>description=None</em>, <em>images=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>rev_note=None</em>, <em>script=None</em>, <em>updated=None</em>, <em>user_defined_fields=None</em>, <em>user_gravatar_id=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StackScript resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description for the StackScript.
+:param pulumi.Input[list] images: An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
+:param pulumi.Input[bool] is_public: This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. <em>Changing ``is_public`` forces the creation of a new StackScript</em>
+:param pulumi.Input[str] label: The StackScript’s label is for display purposes only.
+:param pulumi.Input[str] rev_note: This field allows you to add notes for the set of revisions made to this StackScript.
+:param pulumi.Input[str] script: The script to execute when provisioning a new Linode with this StackScript.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_linode.StackScript.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1313,7 +1578,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.Token">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Token</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>expiry=None</em>, <em>label=None</em>, <em>scopes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Token" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Token</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>expiry=None</em>, <em>label=None</em>, <em>scopes=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Token resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1348,6 +1613,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.Token.scopes">
 <code class="descname">scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Token.scopes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id6"><span class="problematic" id="id7">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_linode.Token.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>expiry=None</em>, <em>label=None</em>, <em>scopes=None</em>, <em>token=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Token.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Token resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] expiry: When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.
+:param pulumi.Input[str] label: A label for the Token.
+:param pulumi.Input[str] scopes: The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id8"><span class="problematic" id="id9">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/token.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/token.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1392,7 +1672,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.Volume">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>label=None</em>, <em>linode_id=None</em>, <em>region=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>label=None</em>, <em>linode_id=None</em>, <em>region=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region.</p>
 <p>For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/block-storage/how-to-use-block-storage-with-your-linode/">How to Use Block Storage with Your Linode</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createVolume">Linode APIv4 docs</a>.</p>
 <p>This resource exports the following attributes:</p>
@@ -1447,6 +1727,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.Volume.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Volume.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tags applied to this object. Tags are for organizational purposes only.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_linode.Volume.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>filesystem_path=None</em>, <em>label=None</em>, <em>linode_id=None</em>, <em>region=None</em>, <em>size=None</em>, <em>status=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Volume.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] label: The label of the Linode Volume
+:param pulumi.Input[float] linode_id: The ID of a Linode Instance where the the Volume should be attached.
+:param pulumi.Input[str] region: The region where this volume will be deployed.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode Volume.</em>.
+:param pulumi.Input[float] size: Size of the Volume in GB.
+:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1628,7 +1925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_linode.get_region">
 <code class="descclassname">pulumi_linode.</code><code class="descname">get_region</code><span class="sig-paren">(</span><em>country=None</em>, <em>id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_region" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">linode_region</span></code> provides details about a specific Linode region.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">.getRegion</span></code> provides details about a specific Linode region.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.markdown</a>.</div></blockquote>
 </dd></dl>
@@ -1636,7 +1933,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_linode.get_ssh_key">
 <code class="descclassname">pulumi_linode.</code><code class="descname">get_ssh_key</code><span class="sig-paren">(</span><em>label=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_ssh_key" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">linode_sshkey</span></code> provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">.SshKey</span></code> provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.markdown</a>.</div></blockquote>
 </dd></dl>

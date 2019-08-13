@@ -27,26 +27,26 @@ title: Module config
 <li><a href="#appKey">let appKey</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-datadog/blob/06e9c1e1db4afd10e4d73427db032955e67392c7/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="apiKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/06e9c1e1db4afd10e4d73427db032955e67392c7/sdk/nodejs/config/vars.ts#L9">let <b>apiKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/config/vars.ts#L9">let <b>apiKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;) || utilities.getEnv(&#34;DATADOG_API_KEY&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="apiUrl">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/06e9c1e1db4afd10e4d73427db032955e67392c7/sdk/nodejs/config/vars.ts#L10">let <b>apiUrl</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/config/vars.ts#L10">let <b>apiUrl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || utilities.getEnv(&#34;DATADOG_HOST&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="appKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/06e9c1e1db4afd10e4d73427db032955e67392c7/sdk/nodejs/config/vars.ts#L11">let <b>appKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/config/vars.ts#L11">let <b>appKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> appKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;appKey&#34;) || utilities.getEnv(&#34;DATADOG_APP_KEY&#34;)</span>;</pre>

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.devspace"></span><dl class="class">
 <dt id="pulumi_azure.devspace.Controller">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devspace.</code><code class="descname">Controller</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host_suffix=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>target_container_host_credentials_base64=None</em>, <em>target_container_host_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devspace.</code><code class="descname">Controller</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host_suffix=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>target_container_host_credentials_base64=None</em>, <em>target_container_host_resource_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DevSpace Controller.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -86,6 +86,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.devspace.Controller.target_container_host_resource_id">
 <code class="descname">target_container_host_resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devspace.Controller.target_container_host_resource_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource id of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.devspace.Controller.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>data_plane_fqdn=None</em>, <em>host_suffix=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>target_container_host_credentials_base64=None</em>, <em>target_container_host_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Controller resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] data_plane_fqdn: DNS name for accessing DataPlane services.
+:param pulumi.Input[str] host_suffix: The host suffix for the DevSpace Controller. Changing this forces a new resource to be created.
+:param pulumi.Input[str] location: Specifies the supported location where the DevSpace Controller should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the DevSpace Controller. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group under which the DevSpace Controller resource has to be created. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] sku: A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] target_container_host_credentials_base64: Base64 encoding of <code class="docutils literal notranslate"><span class="pre">kube_config_raw</span></code> of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.
+:param pulumi.Input[str] target_container_host_resource_id: The resource id of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/devspace_controller.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/devspace_controller.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

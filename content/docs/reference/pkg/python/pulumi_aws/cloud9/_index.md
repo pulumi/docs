@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.cloud9"></span><dl class="class">
 <dt id="pulumi_aws.cloud9.EnvironmentEC2">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloud9.</code><code class="descname">EnvironmentEC2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automatic_stop_time_minutes=None</em>, <em>description=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>owner_arn=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloud9.</code><code class="descname">EnvironmentEC2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automatic_stop_time_minutes=None</em>, <em>description=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>owner_arn=None</em>, <em>subnet_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloud9 EC2 Development Environment.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -78,6 +78,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloud9.EnvironmentEC2.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the environment (e.g. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2</span></code>)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.cloud9.EnvironmentEC2.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>automatic_stop_time_minutes=None</em>, <em>description=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>owner_arn=None</em>, <em>subnet_id=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EnvironmentEC2 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the environment.
+:param pulumi.Input[float] automatic_stop_time_minutes: The number of minutes until the running instance is shut down after the environment has last been used.
+:param pulumi.Input[str] description: The description of the environment.
+:param pulumi.Input[str] instance_type: The type of instance to connect to the environment, e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code>.
+:param pulumi.Input[str] name: The name of the environment.
+:param pulumi.Input[str] owner_arn: The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment’s creator.
+:param pulumi.Input[str] subnet_id: The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
+:param pulumi.Input[str] type: The type of the environment (e.g. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2</span></code>)</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloud9_environment_ec2.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloud9_environment_ec2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

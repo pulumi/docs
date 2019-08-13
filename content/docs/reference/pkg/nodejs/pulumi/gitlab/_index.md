@@ -103,7 +103,7 @@ import * as gitlab from "@pulumi/gitlab";
 <li><a href="#UserState">interface UserState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts">branchProtection.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts">deployKey.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts">getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts">getProject.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts">getUser.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts">getUsers.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts">group.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts">groupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts">groupVariable.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts">label.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts">pipelineSchedule.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts">pipelineTrigger.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts">project.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts">projectCluster.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts">projectHook.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts">projectMembership.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts">projectVariable.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts">serviceJira.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts">serviceSlack.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts">tagProtection.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts">user.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts">branchProtection.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts">deployKey.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts">getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts">getProject.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts">getUser.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts">getUsers.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts">group.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts">groupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts">groupVariable.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts">label.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts">pipelineSchedule.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts">pipelineTrigger.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts">project.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts">projectCluster.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts">projectHook.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts">projectMembership.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts">projectVariable.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts">serviceJira.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts">serviceSlack.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts">tagProtection.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts">user.ts</a> <a href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/utilities.ts">utilities.ts</a> 
 </div>
 </div>
 </div>
@@ -123,7 +123,7 @@ import * as gitlab from "@pulumi/gitlab";
 </div>
 
 <h2 class="pdoc-module-header" id="BranchProtection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L26">class <b>BranchProtection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L26">class <b>BranchProtection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -149,7 +149,7 @@ const branchProtect = new gitlab.BranchProtection("BranchProtect", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BranchProtection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L68"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -166,7 +166,7 @@ Create a BranchProtection resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -180,7 +180,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -190,7 +190,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L46">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -204,7 +204,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-branch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L56">property <b>branch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L56">property <b>branch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>branch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -215,7 +215,7 @@ Name of the branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -227,7 +227,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-mergeAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L60">property <b>mergeAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L60">property <b>mergeAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mergeAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -238,7 +238,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L64">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L64">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -249,7 +249,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-pushAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L68">property <b>pushAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L68">property <b>pushAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pushAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -260,7 +260,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -273,7 +273,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeployKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L26">class <b>DeployKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L26">class <b>DeployKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -298,7 +298,7 @@ const example = new gitlab.DeployKey("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeployKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L68"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -315,7 +315,7 @@ Create a DeployKey resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -329,7 +329,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -339,7 +339,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L46">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -353,7 +353,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-canPush">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L56">property <b>canPush</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L56">property <b>canPush</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>canPush: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -364,7 +364,7 @@ Allow this deploy key to be used to push changes to the project.  Defaults to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -376,7 +376,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L60">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L60">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -387,7 +387,7 @@ The public ssh key body.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L64">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L64">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -398,7 +398,7 @@ The name or id of the project to add the deploy key to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L68">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L68">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -409,7 +409,7 @@ A title to describe the deploy key with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -422,12 +422,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L7">class <b>Group</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L10">class <b>Group</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L80"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -444,7 +449,7 @@ Create a Group resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -458,7 +463,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -468,7 +473,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -482,7 +487,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L37">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L40">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -493,7 +498,7 @@ The description of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-fullName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L41">property <b>fullName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L44">property <b>fullName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fullName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -504,7 +509,7 @@ The full name of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L45">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L48">property <b>fullPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fullPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -515,7 +520,7 @@ The full path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -527,7 +532,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-lfsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L50">property <b>lfsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L53">property <b>lfsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lfsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -539,7 +544,7 @@ support for projects in this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -550,7 +555,7 @@ The name of this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L58">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L61">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -561,7 +566,7 @@ Integer, id of the parent group (creates a nested group).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L62">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L65">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -572,7 +577,7 @@ The path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-requestAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L67">property <b>requestAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L70">property <b>requestAccessEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requestAccessEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -584,7 +589,7 @@ enable users to request access to the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -596,7 +601,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L73">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L76">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>visibilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -609,7 +614,7 @@ Groups are created as private by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L77">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L80">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>webUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -621,7 +626,7 @@ Web URL of the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMembership">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L26">class <b>GroupMembership</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L26">class <b>GroupMembership</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -647,7 +652,7 @@ const test = new gitlab.GroupMembership("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L68"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -664,7 +669,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -678,7 +683,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -688,7 +693,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L46">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -702,7 +707,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L56">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L56">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -713,7 +718,7 @@ Acceptable values are: guest, reporter, developer, master.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L60">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L60">property <b>expiresAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expiresAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -724,7 +729,7 @@ Expiration date for the group membership. Format: `YYYY-MM-DD`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L64">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L64">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -735,7 +740,7 @@ The id of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -747,7 +752,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -759,7 +764,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L68">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L68">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -771,7 +776,7 @@ The id of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupVariable">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L29">class <b>GroupVariable</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L29">class <b>GroupVariable</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -789,9 +794,9 @@ import * as gitlab from "@pulumi/gitlab";
 
 const example = new gitlab.GroupVariable("example", {
     group: "12345",
-    key: "group_variable_key",
+    key: "groupVariableKey",
     protected: false,
-    value: "group_variable_value",
+    value: "groupVariableValue",
 });
 ```
 
@@ -799,7 +804,7 @@ const example = new gitlab.GroupVariable("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L71"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -816,7 +821,7 @@ Create a GroupVariable resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -830,7 +835,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -840,7 +845,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L49">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -854,7 +859,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L59">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L59">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -865,7 +870,7 @@ The name or id of the group to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -877,7 +882,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L63">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L63">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -888,7 +893,7 @@ The name of the variable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L67">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L67">property <b>protected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protected: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -899,7 +904,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -911,7 +916,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L71">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L71">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -923,7 +928,7 @@ The value of the variable.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Label">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L28">class <b>Label</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L28">class <b>Label</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -950,7 +955,7 @@ const fixme = new gitlab.Label("fixme", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Label-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -967,7 +972,7 @@ Create a Label resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L37">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -981,7 +986,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -991,7 +996,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L48">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1005,7 +1010,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L58">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L58">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1016,7 +1021,7 @@ The color of the label given in 6-digit hex notation with leading '#' sign (e.g.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L62">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1027,7 +1032,7 @@ The description of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1039,7 +1044,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1050,7 +1055,7 @@ The name of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L70">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L70">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1061,7 +1066,7 @@ The name or id of the project to add the label to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1074,7 +1079,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineSchedule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L28">class <b>PipelineSchedule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L28">class <b>PipelineSchedule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1102,7 +1107,7 @@ const example = new gitlab.PipelineSchedule("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineSchedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1119,7 +1124,7 @@ Create a PipelineSchedule resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L37">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1133,7 +1138,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1143,7 +1148,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L48">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1157,7 +1162,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L58">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L58">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1168,7 +1173,7 @@ The activation of pipeline schedule. If false is set, the pipeline schedule will
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-cron">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L62">property <b>cron</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L62">property <b>cron</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cron: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1179,7 +1184,7 @@ The cron (e.g. `0 1 * * *`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-cronTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L66">property <b>cronTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L66">property <b>cronTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cronTimezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1190,7 +1195,7 @@ The timezone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L70">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1201,7 +1206,7 @@ The description of the pipeline schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1213,7 +1218,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L74">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L74">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1224,7 +1229,7 @@ The name or id of the project to add the schedule to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-ref">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L78">property <b>ref</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L78">property <b>ref</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ref: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1235,7 +1240,7 @@ The branch/tag name to be triggered.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1248,7 +1253,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineTrigger">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L24">class <b>PipelineTrigger</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L24">class <b>PipelineTrigger</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1272,7 +1277,7 @@ const example = new gitlab.PipelineTrigger("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineTrigger-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1289,7 +1294,7 @@ Create a PipelineTrigger resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1303,7 +1308,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1313,7 +1318,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L44">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1327,7 +1332,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L54">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1338,7 +1343,7 @@ The description of the pipeline trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1350,7 +1355,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L58">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L58">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1361,7 +1366,7 @@ The name or id of the project to add the trigger to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L59">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L59">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1369,7 +1374,7 @@ The name or id of the project to add the trigger to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1382,12 +1387,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Project">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L7">class <b>Project</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L10">class <b>Project</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L135"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1404,7 +1414,7 @@ Create a Project resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1418,7 +1428,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1428,7 +1438,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1442,7 +1452,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-approvalsBeforeMerge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L37">property <b>approvalsBeforeMerge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L40">property <b>approvalsBeforeMerge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>approvalsBeforeMerge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1453,7 +1463,7 @@ Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-archived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L41">property <b>archived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L44">property <b>archived</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>archived: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1464,7 +1474,7 @@ Whether the project is in read-only mode (archived). Repositories can be archive
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-containerRegistryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L45">property <b>containerRegistryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L48">property <b>containerRegistryEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>containerRegistryEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1475,7 +1485,7 @@ Enable container registry for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L49">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L52">property <b>defaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultBranch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1486,7 +1496,7 @@ The default branch for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L53">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L56">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1497,7 +1507,7 @@ A description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-httpUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L58">property <b>httpUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L61">property <b>httpUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpUrlToRepo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1519,7 @@ repository via HTTP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1521,7 +1531,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-issuesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L62">property <b>issuesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L65">property <b>issuesEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>issuesEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1532,20 +1542,20 @@ Enable issue tracking for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-mergeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L68">property <b>mergeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L71">property <b>mergeMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mergeMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
+Valid values are `merge`, `rebaseMerge`, `ff`
 Repositories are created with `merge` by default
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-mergeRequestsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L72">property <b>mergeRequestsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L75">property <b>mergeRequestsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mergeRequestsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1556,7 +1566,7 @@ Enable merge requests for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L79">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1567,19 +1577,19 @@ The name of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L81">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L84">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The namespace (group or user) of the project. Defaults to your user.
-See `gitlab_group` for an example.
+See `gitlab..Group` for an example.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-onlyAllowMergeIfAllDiscussionsAreResolved">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L85">property <b>onlyAllowMergeIfAllDiscussionsAreResolved</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L88">property <b>onlyAllowMergeIfAllDiscussionsAreResolved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>onlyAllowMergeIfAllDiscussionsAreResolved: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1590,7 +1600,7 @@ Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-onlyAllowMergeIfPipelineSucceeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L89">property <b>onlyAllowMergeIfPipelineSucceeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L92">property <b>onlyAllowMergeIfPipelineSucceeds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>onlyAllowMergeIfPipelineSucceeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1601,7 +1611,7 @@ Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L93">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L96">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1612,7 +1622,7 @@ The path of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-runnersToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L97">property <b>runnersToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L100">property <b>runnersToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>runnersToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1623,7 +1633,7 @@ Registration token to use during runner setup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-sharedRunnersEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L101">property <b>sharedRunnersEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L104">property <b>sharedRunnersEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sharedRunnersEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1634,7 +1644,7 @@ Enable shared runners for this project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-sharedWithGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L105">property <b>sharedWithGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L108">property <b>sharedWithGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sharedWithGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1649,7 +1659,7 @@ Enable sharing the project with a list of groups (maps).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-snippetsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L109">property <b>snippetsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L112">property <b>snippetsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>snippetsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1660,7 +1670,7 @@ Enable snippets for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-sshUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L114">property <b>sshUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L117">property <b>sshUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sshUrlToRepo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1672,7 +1682,7 @@ repository via SSH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L121">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1683,7 +1693,7 @@ Tags (topics) of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1695,7 +1705,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L124">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L127">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>visibilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1708,7 +1718,7 @@ Repositories are created as private by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L128">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L131">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>webUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1719,7 +1729,7 @@ URL that can be used to find the project in a browser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-wikiEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L132">property <b>wikiEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L135">property <b>wikiEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>wikiEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1731,7 +1741,7 @@ Enable wiki for the project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectCluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L35">class <b>ProjectCluster</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L35">class <b>ProjectCluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1765,7 +1775,7 @@ const bar = new gitlab.ProjectCluster("bar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L109"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1782,7 +1792,7 @@ Create a ProjectCluster resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1796,7 +1806,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1806,7 +1816,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L55">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1820,7 +1830,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L62">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L62">property <b>clusterType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1828,7 +1838,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L63">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L63">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1836,7 +1846,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L67">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L67">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1847,7 +1857,7 @@ The base domain of the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L71">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L71">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1858,7 +1868,7 @@ Determines if cluster is active or not. Defaults to `true`. This attribute canno
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-environmentScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L75">property <b>environmentScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L75">property <b>environmentScope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>environmentScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1869,7 +1879,7 @@ The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1881,7 +1891,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-kubernetesApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L79">property <b>kubernetesApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L79">property <b>kubernetesApiUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kubernetesApiUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1892,18 +1902,18 @@ The URL to access the Kubernetes API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-kubernetesAuthorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L83">property <b>kubernetesAuthorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L83">property <b>kubernetesAuthorizationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kubernetesAuthorizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
-The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
+The cluster authorization type. Valid values are `rbac`, `abac`, `unknownAuthorization`. Defaults to `rbac`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-kubernetesCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L87">property <b>kubernetesCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L87">property <b>kubernetesCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kubernetesCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1914,7 +1924,7 @@ TLS certificate (needed if API is using a self-signed TLS certificate).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-kubernetesNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L91">property <b>kubernetesNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L91">property <b>kubernetesNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kubernetesNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1925,7 +1935,7 @@ The unique namespace related to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-kubernetesToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L95">property <b>kubernetesToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L95">property <b>kubernetesToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kubernetesToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1936,7 +1946,7 @@ The token to authenticate against Kubernetes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L99">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L99">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>managed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1947,7 +1957,7 @@ Determines if cluster is managed by gitlab or not. Defaults to `true`. This attr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L103">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1958,7 +1968,7 @@ The name of cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-platformType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L104">property <b>platformType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L104">property <b>platformType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>platformType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1966,7 +1976,7 @@ The name of cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L108">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L108">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1977,7 +1987,7 @@ The id of the project to add the cluster to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-providerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L109">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L109">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>providerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1985,7 +1995,7 @@ The id of the project to add the cluster to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1998,7 +2008,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectHook">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L28">class <b>ProjectHook</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L28">class <b>ProjectHook</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2025,7 +2035,7 @@ const example = new gitlab.ProjectHook("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectHook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L103"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2042,7 +2052,7 @@ Create a ProjectHook resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L37">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2056,7 +2066,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2066,7 +2076,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L48">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2080,7 +2090,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-enableSslVerification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L59">property <b>enableSslVerification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L59">property <b>enableSslVerification</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableSslVerification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2092,7 +2102,7 @@ the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2104,7 +2114,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-issuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L63">property <b>issuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L63">property <b>issuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>issuesEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2115,7 +2125,7 @@ Invoke the hook for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-jobEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L67">property <b>jobEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L67">property <b>jobEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>jobEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2126,7 +2136,7 @@ Invoke the hook for job events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-mergeRequestsEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L71">property <b>mergeRequestsEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L71">property <b>mergeRequestsEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mergeRequestsEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2137,7 +2147,7 @@ Invoke the hook for merge requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-noteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L75">property <b>noteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L75">property <b>noteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>noteEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2148,7 +2158,7 @@ Invoke the hook for notes events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-pipelineEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L79">property <b>pipelineEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L79">property <b>pipelineEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pipelineEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2159,7 +2169,7 @@ Invoke the hook for pipeline events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L83">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L83">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2170,7 +2180,7 @@ The name or id of the project to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-pushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L87">property <b>pushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L87">property <b>pushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pushEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2181,7 +2191,7 @@ Invoke the hook for push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-tagPushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L91">property <b>tagPushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L91">property <b>tagPushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tagPushEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2192,7 +2202,7 @@ Invoke the hook for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L95">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L95">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2203,7 +2213,7 @@ A token to present when invoking the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L99">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L99">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2214,7 +2224,7 @@ The url of the hook to invoke.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2226,7 +2236,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-wikiPageEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L103">property <b>wikiPageEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L103">property <b>wikiPageEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>wikiPageEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2238,7 +2248,7 @@ Invoke the hook for wiki page events.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectMembership">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L25">class <b>ProjectMembership</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L25">class <b>ProjectMembership</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2263,7 +2273,7 @@ const test = new gitlab.ProjectMembership("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2280,7 +2290,7 @@ Create a ProjectMembership resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2294,7 +2304,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2304,7 +2314,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L45">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2318,7 +2328,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L55">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L55">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2329,7 +2339,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2341,7 +2351,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L59">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L59">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2352,7 +2362,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2364,7 +2374,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L63">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L63">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2376,7 +2386,7 @@ The id of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectVariable">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L29">class <b>ProjectVariable</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L29">class <b>ProjectVariable</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2393,10 +2403,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
 const example = new gitlab.ProjectVariable("example", {
-    key: "project_variable_key",
+    key: "projectVariableKey",
     project: "12345",
     protected: false,
-    value: "project_variable_value",
+    value: "projectVariableValue",
 });
 ```
 
@@ -2404,7 +2414,7 @@ const example = new gitlab.ProjectVariable("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L71"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2421,7 +2431,7 @@ Create a ProjectVariable resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2435,7 +2445,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2445,7 +2455,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L49">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2459,7 +2469,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2471,7 +2481,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L59">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L59">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2482,7 +2492,7 @@ The name of the variable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L63">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2493,7 +2503,7 @@ The name or id of the project to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L67">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L67">property <b>protected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protected: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2504,7 +2514,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2516,7 +2526,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L71">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L71">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2528,7 +2538,7 @@ The value of the variable.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L15">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L15">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -2537,13 +2547,13 @@ The value of the variable.
 The provider type for the gitlab package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/index.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2560,7 +2570,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2570,7 +2580,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2584,7 +2594,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2596,7 +2606,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2609,7 +2619,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceJira">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L30">class <b>ServiceJira</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L30">class <b>ServiceJira</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2623,7 +2633,7 @@ This resource allows you to manage Jira integration.
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const awesomeProject = new gitlab.Project("awesome_project", {
+const awesomeProject = new gitlab.Project("awesomeProject", {
     description: "My awesome project.",
     visibilityLevel: "public",
 });
@@ -2639,7 +2649,7 @@ const jira = new gitlab.ServiceJira("jira", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceJira-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L84"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2656,7 +2666,7 @@ Create a ServiceJira resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2670,7 +2680,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2680,7 +2690,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2694,7 +2704,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L57">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L57">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2702,7 +2712,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L58">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L58">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2710,7 +2720,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2722,7 +2732,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-jiraIssueTransitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L62">property <b>jiraIssueTransitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L62">property <b>jiraIssueTransitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>jiraIssueTransitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2733,7 +2743,7 @@ The ID of a transition that moves issues to a closed state. You can find this nu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L66">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L66">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2744,7 +2754,7 @@ The password of the user created to be used with GitLab/JIRA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L70">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L70">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2755,7 +2765,7 @@ ID of the project you want to activate integration on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-projectKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L74">property <b>projectKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L74">property <b>projectKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>projectKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2766,7 +2776,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L75">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L75">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2774,7 +2784,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L76">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L76">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2782,7 +2792,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L80">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L80">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2793,7 +2803,7 @@ The URL to the JIRA project which is being linked to this GitLab project. For ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2805,7 +2815,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L84">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L84">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2817,7 +2827,7 @@ The username of the user created to be used with GitLab/JIRA.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceSlack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L31">class <b>ServiceSlack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L31">class <b>ServiceSlack</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2831,13 +2841,13 @@ This resource allows you to manage Slack notifications integration.
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const awesomeProject = new gitlab.Project("awesome_project", {
+const awesomeProject = new gitlab.Project("awesomeProject", {
     description: "My awesome project.",
     visibilityLevel: "public",
 });
 const slack = new gitlab.ServiceSlack("slack", {
     project: awesomeProject.id,
-    pushChannel: "push_chan",
+    pushChannel: "pushChan",
     pushEvents: true,
     username: "myuser",
     webhook: "https://webhook.com",
@@ -2848,7 +2858,7 @@ const slack = new gitlab.ServiceSlack("slack", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceSlack-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L146"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L146"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2865,7 +2875,7 @@ Create a ServiceSlack resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2879,7 +2889,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2889,7 +2899,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2903,7 +2913,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-confidentialIssueChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L61">property <b>confidentialIssueChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L61">property <b>confidentialIssueChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>confidentialIssueChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2914,7 +2924,7 @@ The name of the channel to receive confidential issue events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-confidentialIssuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L65">property <b>confidentialIssuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L65">property <b>confidentialIssuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>confidentialIssuesEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2925,7 +2935,7 @@ Enable notifications for confidential issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-confidentialNoteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L69">property <b>confidentialNoteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L69">property <b>confidentialNoteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>confidentialNoteEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2936,7 +2946,7 @@ Enable notifications for confidential note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2948,7 +2958,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-issueChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L73">property <b>issueChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L73">property <b>issueChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>issueChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2959,7 +2969,7 @@ The name of the channel to receive issue events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-issuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L77">property <b>issuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L77">property <b>issuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>issuesEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2970,7 +2980,7 @@ Enable notifications for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-jobEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L78">property <b>jobEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L78">property <b>jobEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>jobEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2978,7 +2988,7 @@ Enable notifications for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-mergeRequestChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L82">property <b>mergeRequestChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L82">property <b>mergeRequestChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mergeRequestChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2989,7 +2999,7 @@ The name of the channel to receive merge request events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-mergeRequestsEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L86">property <b>mergeRequestsEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L86">property <b>mergeRequestsEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mergeRequestsEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3000,7 +3010,7 @@ Enable notifications for merge requests events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-noteChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L90">property <b>noteChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L90">property <b>noteChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>noteChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3011,7 +3021,7 @@ The name of the channel to receive note events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-noteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L94">property <b>noteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L94">property <b>noteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>noteEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3022,7 +3032,7 @@ Enable notifications for note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-notifyOnlyBrokenPipelines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L98">property <b>notifyOnlyBrokenPipelines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L98">property <b>notifyOnlyBrokenPipelines</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notifyOnlyBrokenPipelines: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3033,7 +3043,7 @@ Send notifications for broken pipelines.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-notifyOnlyDefaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L102">property <b>notifyOnlyDefaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L102">property <b>notifyOnlyDefaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notifyOnlyDefaultBranch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3044,7 +3054,7 @@ Send notifications only for the default branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-pipelineChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L106">property <b>pipelineChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L106">property <b>pipelineChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pipelineChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3055,7 +3065,7 @@ The name of the channel to receive pipeline events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-pipelineEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L110">property <b>pipelineEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L110">property <b>pipelineEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pipelineEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3066,7 +3076,7 @@ Enable notifications for pipeline events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L114">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L114">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3077,7 +3087,7 @@ ID of the project you want to activate integration on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-pushChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L118">property <b>pushChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L118">property <b>pushChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pushChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3088,7 +3098,7 @@ The name of the channel to receive push events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-pushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L122">property <b>pushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L122">property <b>pushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pushEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3099,7 +3109,7 @@ Enable notifications for push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-tagPushChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L126">property <b>tagPushChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L126">property <b>tagPushChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tagPushChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3110,7 +3120,7 @@ The name of the channel to receive tag push events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-tagPushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L130">property <b>tagPushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L130">property <b>tagPushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tagPushEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3121,7 +3131,7 @@ Enable notifications for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3133,7 +3143,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L134">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L134">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3144,7 +3154,7 @@ Username to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-webhook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L138">property <b>webhook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L138">property <b>webhook</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>webhook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3155,7 +3165,7 @@ Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-wikiPageChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L142">property <b>wikiPageChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L142">property <b>wikiPageChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>wikiPageChannel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3166,7 +3176,7 @@ The name of the channel to receive wiki page events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-wikiPageEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L146">property <b>wikiPageEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L146">property <b>wikiPageEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>wikiPageEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3178,7 +3188,7 @@ Enable notifications for wiki page events.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagProtection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L25">class <b>TagProtection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L25">class <b>TagProtection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3203,7 +3213,7 @@ const tagProtect = new gitlab.TagProtection("TagProtect", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TagProtection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3220,7 +3230,7 @@ Create a TagProtection resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3234,7 +3244,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3244,7 +3254,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L45">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3258,7 +3268,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-createAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L55">property <b>createAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L55">property <b>createAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3269,7 +3279,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3281,7 +3291,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L59">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L59">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3292,7 +3302,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L63">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L63">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3303,7 +3313,7 @@ Name of the tag or wildcard.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3316,12 +3326,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L7">class <b>User</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L10">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/user.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L73"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3338,7 +3353,7 @@ Create a User resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3352,7 +3367,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3362,7 +3377,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3376,7 +3391,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-canCreateGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L37">property <b>canCreateGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L40">property <b>canCreateGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>canCreateGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3387,7 +3402,7 @@ Boolean, defaults to false. Whether to allow the user to create groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L41">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L44">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3398,7 +3413,7 @@ The e-mail address of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3410,7 +3425,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L46">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L49">property <b>isAdmin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isAdmin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3422,7 +3437,7 @@ for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isExternal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L50">property <b>isExternal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L53">property <b>isExternal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isExternal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3433,7 +3448,7 @@ Boolean, defaults to false. Whether a user has access only to some internal or p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3444,7 +3459,7 @@ The name of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L58">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L61">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3455,7 +3470,7 @@ The password of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-projectsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L62">property <b>projectsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L65">property <b>projectsLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>projectsLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3466,7 +3481,7 @@ Integer, defaults to 0.  Number of projects user can create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-skipConfirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L66">property <b>skipConfirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L69">property <b>skipConfirmation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>skipConfirmation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3477,7 +3492,7 @@ Boolean, defaults to true. Whether to skip confirmation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3489,7 +3504,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L70">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L73">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3501,7 +3516,7 @@ The username of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3511,7 +3526,7 @@ The username of the user.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3521,7 +3536,7 @@ The username of the user.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3531,12 +3546,12 @@ The username of the user.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L36">function <b>getGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L36">function <b>getGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getGroup(args?: <a href='#GetGroupArgs'>GetGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetGroupResult'>GetGroupResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getGroup(args?: <a href='#GetGroupArgs'>GetGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetGroupResult'>GetGroupResult</a>&gt; &amp; <a href='#GetGroupResult'>GetGroupResult</a></pre>
 
 
 Provides details about a specific group in the gitlab provider.
@@ -3570,12 +3585,12 @@ const foo = pulumi.output(gitlab.getGroup({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getProject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L23">function <b>getProject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L23">function <b>getProject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getProject(args: <a href='#GetProjectArgs'>GetProjectArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetProjectResult'>GetProjectResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getProject(args: <a href='#GetProjectArgs'>GetProjectArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetProjectResult'>GetProjectResult</a>&gt; &amp; <a href='#GetProjectResult'>GetProjectResult</a></pre>
 
 
 Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.
@@ -3596,12 +3611,12 @@ const example = pulumi.output(gitlab.getProject({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUser">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L23">function <b>getUser</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L23">function <b>getUser</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getUser(args?: <a href='#GetUserArgs'>GetUserArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetUserResult'>GetUserResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getUser(args?: <a href='#GetUserArgs'>GetUserArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetUserResult'>GetUserResult</a>&gt; &amp; <a href='#GetUserResult'>GetUserResult</a></pre>
 
 
 Provides details about a specific user in the gitlab provider. Especially the ability to lookup the id for linking to other resources.
@@ -3622,17 +3637,17 @@ const example = pulumi.output(gitlab.getUser({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUsers">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L27">function <b>getUsers</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L27">function <b>getUsers</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getUsers(args?: <a href='#GetUsersArgs'>GetUsersArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetUsersResult'>GetUsersResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getUsers(args?: <a href='#GetUsersArgs'>GetUsersArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetUsersResult'>GetUsersResult</a>&gt; &amp; <a href='#GetUsersResult'>GetUsersResult</a></pre>
 
 
 Provides details about a list of users in the gitlab provider. The results include id, username, email, name and more about the requested users. Users can also be sorted and filtered using several options.
 
-**NOTE**: Some of the available options require administrator privileges. Please visit [Gitlab API documentation][users_for_admins] for more information.
+**NOTE**: Some of the available options require administrator privileges. Please visit [Gitlab API documentation][usersForAdmins] for more information.
 
 ## Example Usage
 
@@ -3652,7 +3667,7 @@ const example = pulumi.output(gitlab.getUsers({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3662,7 +3677,7 @@ const example = pulumi.output(gitlab.getUsers({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="BranchProtectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L134">interface <b>BranchProtectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L141">interface <b>BranchProtectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3671,7 +3686,7 @@ The set of arguments for constructing a BranchProtection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BranchProtectionArgs-branch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L138">property <b>branch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L145">property <b>branch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>branch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3682,7 +3697,7 @@ Name of the branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtectionArgs-mergeAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L142">property <b>mergeAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L149">property <b>mergeAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3693,7 +3708,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtectionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L146">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L153">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3704,7 +3719,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtectionArgs-pushAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L150">property <b>pushAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L157">property <b>pushAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3716,7 +3731,7 @@ One of five levels of access to the project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BranchProtectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L112">interface <b>BranchProtectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L119">interface <b>BranchProtectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3725,7 +3740,7 @@ Input properties used for looking up and filtering BranchProtection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BranchProtectionState-branch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L116">property <b>branch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L123">property <b>branch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>branch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3736,7 +3751,7 @@ Name of the branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtectionState-mergeAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L120">property <b>mergeAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L127">property <b>mergeAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeAccessLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3747,7 +3762,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtectionState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L124">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L131">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3758,7 +3773,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtectionState-pushAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/branchProtection.ts#L128">property <b>pushAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/branchProtection.ts#L135">property <b>pushAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushAccessLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3770,7 +3785,7 @@ One of five levels of access to the project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeployKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L131">interface <b>DeployKeyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L138">interface <b>DeployKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3779,7 +3794,7 @@ The set of arguments for constructing a DeployKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeployKeyArgs-canPush">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L135">property <b>canPush</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L142">property <b>canPush</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>canPush?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3790,7 +3805,7 @@ Allow this deploy key to be used to push changes to the project.  Defaults to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKeyArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L139">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L146">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3801,7 +3816,7 @@ The public ssh key body.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKeyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L143">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L150">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3812,7 +3827,7 @@ The name or id of the project to add the deploy key to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKeyArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L147">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L154">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3824,7 +3839,7 @@ A title to describe the deploy key with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeployKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L109">interface <b>DeployKeyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L116">interface <b>DeployKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3833,7 +3848,7 @@ Input properties used for looking up and filtering DeployKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeployKeyState-canPush">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L113">property <b>canPush</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L120">property <b>canPush</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>canPush?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3844,7 +3859,7 @@ Allow this deploy key to be used to push changes to the project.  Defaults to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKeyState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L117">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L124">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3855,7 +3870,7 @@ The public ssh key body.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKeyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L121">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L128">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3866,7 +3881,7 @@ The name or id of the project to add the deploy key to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKeyState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/deployKey.ts#L125">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/deployKey.ts#L132">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3878,7 +3893,7 @@ A title to describe the deploy key with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L47">interface <b>GetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L56">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3887,7 +3902,7 @@ A collection of arguments for invoking getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L51">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L60">property <b>fullPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3898,7 +3913,7 @@ The full path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L55">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L64">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -3910,7 +3925,7 @@ The ID of the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L61">interface <b>GetGroupResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L70">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3919,7 +3934,7 @@ A collection of values returned by getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L74">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3930,7 +3945,7 @@ The description of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-fullName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L69">property <b>fullName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L78">property <b>fullName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3941,7 +3956,7 @@ The full name of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L73">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L82">property <b>fullPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3952,7 +3967,7 @@ The full path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L74">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L83">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -3960,7 +3975,7 @@ The full path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L106">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L115">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3971,7 +3986,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-lfsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L78">property <b>lfsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L87">property <b>lfsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lfsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3982,7 +3997,7 @@ Boolean, is LFS enabled for projects in this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L91">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3993,7 +4008,7 @@ The name of this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L86">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L95">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4004,7 +4019,7 @@ Integer, ID of the parent group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L90">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L99">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4015,7 +4030,7 @@ The path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-requestAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L94">property <b>requestAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L103">property <b>requestAccessEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestAccessEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4026,7 +4041,7 @@ Boolean, is request for access enabled to the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L98">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L107">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4037,7 +4052,7 @@ Visibility level of the group. Possible values are `private`, `internal`, `publi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getGroup.ts#L102">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getGroup.ts#L111">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4049,7 +4064,7 @@ Web URL of the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetProjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L47">interface <b>GetProjectArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L56">interface <b>GetProjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4058,7 +4073,7 @@ A collection of arguments for invoking getProject.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetProjectArgs-archived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L48">property <b>archived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L57">property <b>archived</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>archived?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4066,7 +4081,7 @@ A collection of arguments for invoking getProject.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L49">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L58">property <b>defaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultBranch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4074,7 +4089,7 @@ A collection of arguments for invoking getProject.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L50">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L59">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4082,7 +4097,7 @@ A collection of arguments for invoking getProject.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-httpUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L51">property <b>httpUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L60">property <b>httpUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpUrlToRepo?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4090,7 +4105,7 @@ A collection of arguments for invoking getProject.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L64">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4101,7 +4116,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-issuesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L56">property <b>issuesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L65">property <b>issuesEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4109,7 +4124,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-mergeRequestsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L57">property <b>mergeRequestsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L66">property <b>mergeRequestsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4117,7 +4132,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L67">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4125,7 +4140,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L59">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L68">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4133,7 +4148,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L60">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L69">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4141,7 +4156,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-runnersToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L61">property <b>runnersToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L70">property <b>runnersToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runnersToken?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4149,7 +4164,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-snippetsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L62">property <b>snippetsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L71">property <b>snippetsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snippetsEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4157,7 +4172,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-sshUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L63">property <b>sshUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L72">property <b>sshUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sshUrlToRepo?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4165,7 +4180,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L64">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L73">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4173,7 +4188,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L65">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L74">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4181,7 +4196,7 @@ The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectArgs-wikiEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L66">property <b>wikiEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L75">property <b>wikiEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4190,7 +4205,7 @@ The integer that uniquely identifies the project within the gitlab install.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetProjectResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L72">interface <b>GetProjectResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L81">interface <b>GetProjectResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4199,7 +4214,7 @@ A collection of values returned by getProject.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetProjectResult-archived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L76">property <b>archived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L85">property <b>archived</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>archived: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4210,7 +4225,7 @@ Whether the project is in read-only mode (archived).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L80">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L89">property <b>defaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultBranch: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4221,7 +4236,7 @@ The default branch for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L84">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L93">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4232,7 +4247,7 @@ A description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-httpUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L89">property <b>httpUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L98">property <b>httpUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpUrlToRepo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4244,7 +4259,7 @@ repository via HTTP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L93">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4255,7 +4270,7 @@ Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-issuesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L97">property <b>issuesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L106">property <b>issuesEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4266,7 +4281,7 @@ Enable issue tracking for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-mergeRequestsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L101">property <b>mergeRequestsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L110">property <b>mergeRequestsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4277,7 +4292,7 @@ Enable merge requests for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L111">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4285,19 +4300,19 @@ Enable merge requests for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L107">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L116">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 {{% md %}}
 
 The namespace (group or user) of the project. Defaults to your user.
-See `gitlab_group` for an example.
+See `gitlab..Group` for an example.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L111">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L120">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4308,7 +4323,7 @@ The path of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-runnersToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L115">property <b>runnersToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L124">property <b>runnersToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runnersToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4319,7 +4334,7 @@ Registration token to use during runner setup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-snippetsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L119">property <b>snippetsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L128">property <b>snippetsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snippetsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4330,7 +4345,7 @@ Enable snippets for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-sshUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L124">property <b>sshUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L133">property <b>sshUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sshUrlToRepo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4342,7 +4357,7 @@ repository via SSH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L128">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L137">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4353,7 +4368,7 @@ Repositories are created as private by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L132">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L141">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4364,7 +4379,7 @@ URL that can be used to find the project in a browser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProjectResult-wikiEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getProject.ts#L136">property <b>wikiEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getProject.ts#L145">property <b>wikiEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4376,7 +4391,7 @@ Enable wiki for the project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L35">interface <b>GetUserArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L44">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4385,7 +4400,7 @@ A collection of arguments for invoking getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L39">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L48">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4396,7 +4411,7 @@ The e-mail address of the user. (Requires administrator privileges)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L43">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L52">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4407,7 +4422,7 @@ The ID of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L47">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L56">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4419,7 +4434,7 @@ The username of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L53">interface <b>GetUserResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L62">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4428,7 +4443,7 @@ A collection of values returned by getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-avatarUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L57">property <b>avatarUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L66">property <b>avatarUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>avatarUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4439,7 +4454,7 @@ The avatar URL of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-bio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L61">property <b>bio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L70">property <b>bio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bio: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4450,7 +4465,7 @@ The bio of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-canCreateGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L65">property <b>canCreateGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L74">property <b>canCreateGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>canCreateGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4461,7 +4476,7 @@ Whether the user can create groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-canCreateProject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L69">property <b>canCreateProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L78">property <b>canCreateProject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>canCreateProject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4472,7 +4487,7 @@ Whether the user can create projects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-colorSchemeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L73">property <b>colorSchemeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L82">property <b>colorSchemeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>colorSchemeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4483,7 +4498,7 @@ User's color scheme ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L77">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L86">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4494,7 +4509,7 @@ Date the user was created at.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-currentSignInAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L81">property <b>currentSignInAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L90">property <b>currentSignInAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>currentSignInAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4505,7 +4520,7 @@ Current user's sign-in date.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L85">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L94">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4516,7 +4531,7 @@ The e-mail address of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-externUid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L89">property <b>externUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L98">property <b>externUid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externUid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4527,7 +4542,7 @@ The external UID of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L93">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L102">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>external: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4538,7 +4553,7 @@ Whether the user is external.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L158">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L167">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4549,7 +4564,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L97">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L106">property <b>isAdmin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isAdmin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4560,7 +4575,7 @@ Whether the user is an admin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-lastSignInAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L101">property <b>lastSignInAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L110">property <b>lastSignInAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastSignInAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4571,7 +4586,7 @@ Last user's sign-in date.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-linkedin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L105">property <b>linkedin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L114">property <b>linkedin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4582,7 +4597,7 @@ Linkedin profile of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L109">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L118">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4593,7 +4608,7 @@ The location of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L122">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4604,7 +4619,7 @@ The name of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L117">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L126">property <b>organization</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>organization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4615,7 +4630,7 @@ The organization of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-projectsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L121">property <b>projectsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L130">property <b>projectsLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectsLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4626,7 +4641,7 @@ Number of projects the user can create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-skype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L125">property <b>skype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L134">property <b>skype</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skype: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4637,7 +4652,7 @@ Skype username of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L129">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L138">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4648,7 +4663,7 @@ Whether the user is active or blocked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-themeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L133">property <b>themeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L142">property <b>themeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>themeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4659,7 +4674,7 @@ User's theme ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-twitter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L137">property <b>twitter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L146">property <b>twitter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>twitter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4670,7 +4685,7 @@ Twitter username of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-twoFactorEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L141">property <b>twoFactorEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L150">property <b>twoFactorEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>twoFactorEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4681,7 +4696,7 @@ Whether user's two factor auth is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L142">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L151">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4689,7 +4704,7 @@ Whether user's two factor auth is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L146">property <b>userProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L155">property <b>userProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4700,7 +4715,7 @@ The UID provider of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L150">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L159">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4711,7 +4726,7 @@ The username of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-websiteUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUser.ts#L154">property <b>websiteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUser.ts#L163">property <b>websiteUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>websiteUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4723,7 +4738,7 @@ User's website URL.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUsersArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L45">interface <b>GetUsersArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L54">interface <b>GetUsersArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4732,7 +4747,7 @@ A collection of arguments for invoking getUsers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUsersArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L49">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L58">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4743,7 +4758,7 @@ Filter users that are active.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-blocked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L53">property <b>blocked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L62">property <b>blocked</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>blocked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4754,7 +4769,7 @@ Filter users that are blocked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-createdAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L57">property <b>createdAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L66">property <b>createdAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4765,7 +4780,7 @@ Search for users created after a specific date. (Requires administrator privileg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-createdBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L61">property <b>createdBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L70">property <b>createdBefore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdBefore?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4776,7 +4791,7 @@ Search for users created before a specific date. (Requires administrator privile
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-externProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L65">property <b>externProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L74">property <b>externProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externProvider?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4787,7 +4802,7 @@ Lookup users by external provider. (Requires administrator privileges)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-externUid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L69">property <b>externUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L78">property <b>externUid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externUid?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4798,18 +4813,18 @@ Lookup users by external UID. (Requires administrator privileges)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-orderBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L73">property <b>orderBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L82">property <b>orderBy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>orderBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 {{% md %}}
 
-Order the users' list by `id`, `name`, `username`, `created_at` or `updated_at`. (Requires administrator privileges)
+Order the users' list by `id`, `name`, `username`, `createdAt` or `updatedAt`. (Requires administrator privileges)
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-search">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L77">property <b>search</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L86">property <b>search</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>search?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4820,7 +4835,7 @@ Search users by username, name or email.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-sort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L81">property <b>sort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L90">property <b>sort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4832,7 +4847,7 @@ Sort users' list in asc or desc order. (Requires administrator privileges)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUsersResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L87">interface <b>GetUsersResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L96">interface <b>GetUsersResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4841,7 +4856,7 @@ A collection of values returned by getUsers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUsersResult-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L88">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L97">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4849,7 +4864,7 @@ A collection of values returned by getUsers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-blocked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L89">property <b>blocked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L98">property <b>blocked</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>blocked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4857,7 +4872,7 @@ A collection of values returned by getUsers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-createdAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L90">property <b>createdAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L99">property <b>createdAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4865,7 +4880,7 @@ A collection of values returned by getUsers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-createdBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L91">property <b>createdBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L100">property <b>createdBefore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdBefore?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4873,7 +4888,7 @@ A collection of values returned by getUsers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-externProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L92">property <b>externProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L101">property <b>externProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externProvider?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4881,7 +4896,7 @@ A collection of values returned by getUsers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-externUid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L96">property <b>externUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L105">property <b>externUid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externUid?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4892,7 +4907,7 @@ The external UID of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L116">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4903,7 +4918,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-orderBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L97">property <b>orderBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L106">property <b>orderBy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>orderBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4911,7 +4926,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-search">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L98">property <b>search</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L107">property <b>search</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>search?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4919,7 +4934,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-sort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L99">property <b>sort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L108">property <b>sort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4927,7 +4942,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/getUsers.ts#L103">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/getUsers.ts#L112">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users: {
@@ -4966,7 +4981,7 @@ The list of users.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L174">interface <b>GroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L184">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4975,7 +4990,7 @@ The set of arguments for constructing a Group resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L178">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L188">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4986,7 +5001,7 @@ The description of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-lfsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L183">property <b>lfsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L193">property <b>lfsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lfsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4998,7 +5013,7 @@ support for projects in this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L197">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5009,7 +5024,7 @@ The name of this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L191">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L201">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5020,7 +5035,7 @@ Integer, id of the parent group (creates a nested group).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L195">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L205">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5031,7 +5046,7 @@ The path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-requestAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L200">property <b>requestAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L210">property <b>requestAccessEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5043,7 +5058,7 @@ enable users to request access to the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L206">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L216">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5057,7 +5072,7 @@ Groups are created as private by default.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMembershipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L131">interface <b>GroupMembershipArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L138">interface <b>GroupMembershipArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5066,7 +5081,7 @@ The set of arguments for constructing a GroupMembership resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L135">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L142">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5077,7 +5092,7 @@ Acceptable values are: guest, reporter, developer, master.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L139">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L146">property <b>expiresAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expiresAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5088,7 +5103,7 @@ Expiration date for the group membership. Format: `YYYY-MM-DD`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L143">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L150">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5099,7 +5114,7 @@ The id of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L147">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L154">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5111,7 +5126,7 @@ The id of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMembershipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L109">interface <b>GroupMembershipState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L116">interface <b>GroupMembershipState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5120,7 +5135,7 @@ Input properties used for looking up and filtering GroupMembership resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMembershipState-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L113">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L120">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5131,7 +5146,7 @@ Acceptable values are: guest, reporter, developer, master.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipState-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L117">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L124">property <b>expiresAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expiresAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5142,7 +5157,7 @@ Expiration date for the group membership. Format: `YYYY-MM-DD`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L121">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L128">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5153,7 +5168,7 @@ The id of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupMembership.ts#L125">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupMembership.ts#L132">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5165,7 +5180,7 @@ The id of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L124">interface <b>GroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L134">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5174,7 +5189,7 @@ Input properties used for looking up and filtering Group resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L128">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L138">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5185,7 +5200,7 @@ The description of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-fullName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L132">property <b>fullName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L142">property <b>fullName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5196,7 +5211,7 @@ The full name of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L136">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L146">property <b>fullPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5207,7 +5222,7 @@ The full path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-lfsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L141">property <b>lfsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L151">property <b>lfsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lfsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5219,7 +5234,7 @@ support for projects in this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L155">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5230,7 +5245,7 @@ The name of this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L149">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L159">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5241,7 +5256,7 @@ Integer, id of the parent group (creates a nested group).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L153">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L163">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5252,7 +5267,7 @@ The path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-requestAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L158">property <b>requestAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L168">property <b>requestAccessEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5264,7 +5279,7 @@ enable users to request access to the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L164">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L174">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5277,7 +5292,7 @@ Groups are created as private by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/group.ts#L168">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/group.ts#L178">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5289,7 +5304,7 @@ Web URL of the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupVariableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L134">interface <b>GroupVariableArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L141">interface <b>GroupVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5298,7 +5313,7 @@ The set of arguments for constructing a GroupVariable resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupVariableArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L138">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L145">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5309,7 +5324,7 @@ The name or id of the group to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariableArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L142">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L149">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5320,7 +5335,7 @@ The name of the variable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariableArgs-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L146">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L153">property <b>protected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5331,7 +5346,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L150">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L157">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5343,7 +5358,7 @@ The value of the variable.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupVariableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L112">interface <b>GroupVariableState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L119">interface <b>GroupVariableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5352,7 +5367,7 @@ Input properties used for looking up and filtering GroupVariable resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupVariableState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L116">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L123">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5363,7 +5378,7 @@ The name or id of the group to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariableState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L120">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L127">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5374,7 +5389,7 @@ The name of the variable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariableState-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L124">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L131">property <b>protected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5385,7 +5400,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/groupVariable.ts#L128">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/groupVariable.ts#L135">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5397,7 +5412,7 @@ The value of the variable.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LabelArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L130">interface <b>LabelArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L137">interface <b>LabelArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5406,7 +5421,7 @@ The set of arguments for constructing a Label resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LabelArgs-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L134">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L141">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5417,7 +5432,7 @@ The color of the label given in 6-digit hex notation with leading '#' sign (e.g.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L145">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5428,7 +5443,7 @@ The description of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L149">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5439,7 +5454,7 @@ The name of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L146">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L153">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5451,7 +5466,7 @@ The name or id of the project to add the label to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LabelState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L108">interface <b>LabelState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L115">interface <b>LabelState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5460,7 +5475,7 @@ Input properties used for looking up and filtering Label resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LabelState-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L112">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L119">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5471,7 +5486,7 @@ The color of the label given in 6-digit hex notation with leading '#' sign (e.g.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L116">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L123">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5482,7 +5497,7 @@ The description of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L127">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5493,7 +5508,7 @@ The name of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/label.ts#L124">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/label.ts#L131">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5505,7 +5520,7 @@ The name or id of the project to add the label to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineScheduleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L156">interface <b>PipelineScheduleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L163">interface <b>PipelineScheduleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5514,7 +5529,7 @@ The set of arguments for constructing a PipelineSchedule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineScheduleArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L160">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L167">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5525,7 +5540,7 @@ The activation of pipeline schedule. If false is set, the pipeline schedule will
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleArgs-cron">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L164">property <b>cron</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L171">property <b>cron</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cron: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5536,7 +5551,7 @@ The cron (e.g. `0 1 * * *`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleArgs-cronTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L168">property <b>cronTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L175">property <b>cronTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cronTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5547,7 +5562,7 @@ The timezone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L179">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5558,7 +5573,7 @@ The description of the pipeline schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L176">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L183">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5569,7 +5584,7 @@ The name or id of the project to add the schedule to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleArgs-ref">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L180">property <b>ref</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L187">property <b>ref</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ref: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5581,7 +5596,7 @@ The branch/tag name to be triggered.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineScheduleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L126">interface <b>PipelineScheduleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L133">interface <b>PipelineScheduleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5590,7 +5605,7 @@ Input properties used for looking up and filtering PipelineSchedule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineScheduleState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L130">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L137">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5601,7 +5616,7 @@ The activation of pipeline schedule. If false is set, the pipeline schedule will
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleState-cron">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L134">property <b>cron</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L141">property <b>cron</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cron?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5612,7 +5627,7 @@ The cron (e.g. `0 1 * * *`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleState-cronTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L138">property <b>cronTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L145">property <b>cronTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cronTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5623,7 +5638,7 @@ The timezone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L149">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5634,7 +5649,7 @@ The description of the pipeline schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L146">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L153">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5645,7 +5660,7 @@ The name or id of the project to add the schedule to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineScheduleState-ref">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineSchedule.ts#L150">property <b>ref</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineSchedule.ts#L157">property <b>ref</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ref?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5657,7 +5672,7 @@ The branch/tag name to be triggered.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineTriggerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L110">interface <b>PipelineTriggerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L117">interface <b>PipelineTriggerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5666,7 +5681,7 @@ The set of arguments for constructing a PipelineTrigger resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineTriggerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L114">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L121">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5677,7 +5692,7 @@ The description of the pipeline trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTriggerArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L118">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L125">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5689,7 +5704,7 @@ The name or id of the project to add the trigger to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineTriggerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L95">interface <b>PipelineTriggerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L102">interface <b>PipelineTriggerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5698,7 +5713,7 @@ Input properties used for looking up and filtering PipelineTrigger resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineTriggerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L99">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L106">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5709,7 +5724,7 @@ The description of the pipeline trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTriggerState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L103">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L110">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5720,7 +5735,7 @@ The name or id of the project to add the trigger to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTriggerState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/pipelineTrigger.ts#L104">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/pipelineTrigger.ts#L111">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5729,7 +5744,7 @@ The name or id of the project to add the trigger to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L307">interface <b>ProjectArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L317">interface <b>ProjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5738,7 +5753,7 @@ The set of arguments for constructing a Project resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectArgs-approvalsBeforeMerge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L311">property <b>approvalsBeforeMerge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L321">property <b>approvalsBeforeMerge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>approvalsBeforeMerge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5749,7 +5764,7 @@ Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-archived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L315">property <b>archived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L325">property <b>archived</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>archived?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5760,7 +5775,7 @@ Whether the project is in read-only mode (archived). Repositories can be archive
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-containerRegistryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L319">property <b>containerRegistryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L329">property <b>containerRegistryEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerRegistryEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5771,7 +5786,7 @@ Enable container registry for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L323">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L333">property <b>defaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5782,7 +5797,7 @@ The default branch for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L327">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L337">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5793,7 +5808,7 @@ A description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-issuesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L331">property <b>issuesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L341">property <b>issuesEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5804,20 +5819,20 @@ Enable issue tracking for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-mergeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L337">property <b>mergeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L347">property <b>mergeMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
+Valid values are `merge`, `rebaseMerge`, `ff`
 Repositories are created with `merge` by default
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-mergeRequestsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L341">property <b>mergeRequestsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L351">property <b>mergeRequestsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5828,7 +5843,7 @@ Enable merge requests for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L345">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L355">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5839,19 +5854,19 @@ The name of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L350">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L360">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The namespace (group or user) of the project. Defaults to your user.
-See `gitlab_group` for an example.
+See `gitlab..Group` for an example.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-onlyAllowMergeIfAllDiscussionsAreResolved">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L354">property <b>onlyAllowMergeIfAllDiscussionsAreResolved</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L364">property <b>onlyAllowMergeIfAllDiscussionsAreResolved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyAllowMergeIfAllDiscussionsAreResolved?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5862,7 +5877,7 @@ Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-onlyAllowMergeIfPipelineSucceeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L358">property <b>onlyAllowMergeIfPipelineSucceeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L368">property <b>onlyAllowMergeIfPipelineSucceeds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyAllowMergeIfPipelineSucceeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5873,7 +5888,7 @@ Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L362">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L372">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5884,7 +5899,7 @@ The path of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-sharedRunnersEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L366">property <b>sharedRunnersEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L376">property <b>sharedRunnersEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sharedRunnersEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5895,7 +5910,7 @@ Enable shared runners for this project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-sharedWithGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L370">property <b>sharedWithGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L380">property <b>sharedWithGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sharedWithGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5910,7 +5925,7 @@ Enable sharing the project with a list of groups (maps).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-snippetsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L374">property <b>snippetsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L384">property <b>snippetsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snippetsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5921,7 +5936,7 @@ Enable snippets for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L378">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L388">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5932,7 +5947,7 @@ Tags (topics) of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L384">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L394">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5945,7 +5960,7 @@ Repositories are created as private by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-wikiEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L388">property <b>wikiEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L398">property <b>wikiEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5957,7 +5972,7 @@ Enable wiki for the project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L226">interface <b>ProjectClusterArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L233">interface <b>ProjectClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5966,7 +5981,7 @@ The set of arguments for constructing a ProjectCluster resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L230">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L237">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5977,7 +5992,7 @@ The base domain of the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L234">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L241">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5988,7 +6003,7 @@ Determines if cluster is active or not. Defaults to `true`. This attribute canno
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-environmentScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L238">property <b>environmentScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L245">property <b>environmentScope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environmentScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5999,7 +6014,7 @@ The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-kubernetesApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L242">property <b>kubernetesApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L249">property <b>kubernetesApiUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesApiUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6010,18 +6025,18 @@ The URL to access the Kubernetes API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-kubernetesAuthorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L246">property <b>kubernetesAuthorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L253">property <b>kubernetesAuthorizationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesAuthorizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
+The cluster authorization type. Valid values are `rbac`, `abac`, `unknownAuthorization`. Defaults to `rbac`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-kubernetesCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L250">property <b>kubernetesCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L257">property <b>kubernetesCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6032,7 +6047,7 @@ TLS certificate (needed if API is using a self-signed TLS certificate).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-kubernetesNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L254">property <b>kubernetesNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L261">property <b>kubernetesNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6043,7 +6058,7 @@ The unique namespace related to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-kubernetesToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L258">property <b>kubernetesToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L265">property <b>kubernetesToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6054,7 +6069,7 @@ The token to authenticate against Kubernetes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L262">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L269">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6065,7 +6080,7 @@ Determines if cluster is managed by gitlab or not. Defaults to `true`. This attr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L266">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L273">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6076,7 +6091,7 @@ The name of cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L270">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L277">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6088,7 +6103,7 @@ The id of the project to add the cluster to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L172">interface <b>ProjectClusterState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L179">interface <b>ProjectClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6097,7 +6112,7 @@ Input properties used for looking up and filtering ProjectCluster resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectClusterState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L173">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L180">property <b>clusterType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6105,7 +6120,7 @@ Input properties used for looking up and filtering ProjectCluster resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L174">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L181">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6113,7 +6128,7 @@ Input properties used for looking up and filtering ProjectCluster resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L178">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L185">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6124,7 +6139,7 @@ The base domain of the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L182">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L189">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6135,7 +6150,7 @@ Determines if cluster is active or not. Defaults to `true`. This attribute canno
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-environmentScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L186">property <b>environmentScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L193">property <b>environmentScope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environmentScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6146,7 +6161,7 @@ The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-kubernetesApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L190">property <b>kubernetesApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L197">property <b>kubernetesApiUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesApiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6157,18 +6172,18 @@ The URL to access the Kubernetes API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-kubernetesAuthorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L194">property <b>kubernetesAuthorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L201">property <b>kubernetesAuthorizationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesAuthorizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
+The cluster authorization type. Valid values are `rbac`, `abac`, `unknownAuthorization`. Defaults to `rbac`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-kubernetesCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L198">property <b>kubernetesCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L205">property <b>kubernetesCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6179,7 +6194,7 @@ TLS certificate (needed if API is using a self-signed TLS certificate).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-kubernetesNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L202">property <b>kubernetesNamespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L209">property <b>kubernetesNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6190,7 +6205,7 @@ The unique namespace related to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-kubernetesToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L206">property <b>kubernetesToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L213">property <b>kubernetesToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubernetesToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6201,7 +6216,7 @@ The token to authenticate against Kubernetes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L210">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L217">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>managed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6212,7 +6227,7 @@ Determines if cluster is managed by gitlab or not. Defaults to `true`. This attr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L221">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6223,7 +6238,7 @@ The name of cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-platformType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L215">property <b>platformType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L222">property <b>platformType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>platformType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6231,7 +6246,7 @@ The name of cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L219">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L226">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6242,7 +6257,7 @@ The id of the project to add the cluster to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectClusterState-providerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectCluster.ts#L220">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectCluster.ts#L227">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6251,7 +6266,7 @@ The id of the project to add the cluster to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectHookArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L212">interface <b>ProjectHookArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L219">interface <b>ProjectHookArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6260,7 +6275,7 @@ The set of arguments for constructing a ProjectHook resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectHookArgs-enableSslVerification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L217">property <b>enableSslVerification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L224">property <b>enableSslVerification</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableSslVerification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6272,7 +6287,7 @@ the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-issuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L221">property <b>issuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L228">property <b>issuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6283,7 +6298,7 @@ Invoke the hook for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-jobEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L225">property <b>jobEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L232">property <b>jobEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jobEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6294,7 +6309,7 @@ Invoke the hook for job events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-mergeRequestsEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L229">property <b>mergeRequestsEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L236">property <b>mergeRequestsEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6305,7 +6320,7 @@ Invoke the hook for merge requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-noteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L233">property <b>noteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L240">property <b>noteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noteEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6316,7 +6331,7 @@ Invoke the hook for notes events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-pipelineEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L237">property <b>pipelineEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L244">property <b>pipelineEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pipelineEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6327,7 +6342,7 @@ Invoke the hook for pipeline events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L241">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L248">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6338,7 +6353,7 @@ The name or id of the project to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-pushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L245">property <b>pushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L252">property <b>pushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6349,7 +6364,7 @@ Invoke the hook for push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-tagPushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L249">property <b>tagPushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L256">property <b>tagPushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tagPushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6360,7 +6375,7 @@ Invoke the hook for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L253">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L260">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6371,7 +6386,7 @@ A token to present when invoking the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L257">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L264">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6382,7 +6397,7 @@ The url of the hook to invoke.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookArgs-wikiPageEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L261">property <b>wikiPageEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L268">property <b>wikiPageEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiPageEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6394,7 +6409,7 @@ Invoke the hook for wiki page events.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectHookState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L157">interface <b>ProjectHookState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L164">interface <b>ProjectHookState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6403,7 +6418,7 @@ Input properties used for looking up and filtering ProjectHook resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectHookState-enableSslVerification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L162">property <b>enableSslVerification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L169">property <b>enableSslVerification</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableSslVerification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6415,7 +6430,7 @@ the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-issuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L166">property <b>issuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L173">property <b>issuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6426,7 +6441,7 @@ Invoke the hook for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-jobEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L170">property <b>jobEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L177">property <b>jobEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jobEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6437,7 +6452,7 @@ Invoke the hook for job events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-mergeRequestsEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L174">property <b>mergeRequestsEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L181">property <b>mergeRequestsEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6448,7 +6463,7 @@ Invoke the hook for merge requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-noteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L178">property <b>noteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L185">property <b>noteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noteEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6459,7 +6474,7 @@ Invoke the hook for notes events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-pipelineEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L182">property <b>pipelineEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L189">property <b>pipelineEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pipelineEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6470,7 +6485,7 @@ Invoke the hook for pipeline events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L186">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L193">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6481,7 +6496,7 @@ The name or id of the project to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-pushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L190">property <b>pushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L197">property <b>pushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6492,7 +6507,7 @@ Invoke the hook for push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-tagPushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L194">property <b>tagPushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L201">property <b>tagPushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tagPushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6503,7 +6518,7 @@ Invoke the hook for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L198">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L205">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6514,7 +6529,7 @@ A token to present when invoking the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L202">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L209">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6525,7 +6540,7 @@ The url of the hook to invoke.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHookState-wikiPageEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectHook.ts#L206">property <b>wikiPageEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectHook.ts#L213">property <b>wikiPageEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiPageEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6537,7 +6552,7 @@ Invoke the hook for wiki page events.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectMembershipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L120">interface <b>ProjectMembershipArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L127">interface <b>ProjectMembershipArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6546,7 +6561,7 @@ The set of arguments for constructing a ProjectMembership resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectMembershipArgs-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L124">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L131">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6557,7 +6572,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembershipArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L128">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L135">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6568,7 +6583,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembershipArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L132">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L139">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6580,7 +6595,7 @@ The id of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectMembershipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L102">interface <b>ProjectMembershipState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L109">interface <b>ProjectMembershipState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6589,7 +6604,7 @@ Input properties used for looking up and filtering ProjectMembership resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectMembershipState-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L106">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L113">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6600,7 +6615,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembershipState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L110">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L117">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6611,7 +6626,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembershipState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectMembership.ts#L114">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectMembership.ts#L121">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6623,7 +6638,7 @@ The id of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L202">interface <b>ProjectState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L212">interface <b>ProjectState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6632,7 +6647,7 @@ Input properties used for looking up and filtering Project resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectState-approvalsBeforeMerge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L206">property <b>approvalsBeforeMerge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L216">property <b>approvalsBeforeMerge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>approvalsBeforeMerge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6643,7 +6658,7 @@ Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-archived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L210">property <b>archived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L220">property <b>archived</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>archived?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6654,7 +6669,7 @@ Whether the project is in read-only mode (archived). Repositories can be archive
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-containerRegistryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L214">property <b>containerRegistryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L224">property <b>containerRegistryEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerRegistryEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6665,7 +6680,7 @@ Enable container registry for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L218">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L228">property <b>defaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6676,7 +6691,7 @@ The default branch for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L222">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L232">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6687,7 +6702,7 @@ A description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-httpUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L227">property <b>httpUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L237">property <b>httpUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpUrlToRepo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6699,7 +6714,7 @@ repository via HTTP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-issuesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L231">property <b>issuesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L241">property <b>issuesEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6710,20 +6725,20 @@ Enable issue tracking for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-mergeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L237">property <b>mergeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L247">property <b>mergeMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
+Valid values are `merge`, `rebaseMerge`, `ff`
 Repositories are created with `merge` by default
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-mergeRequestsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L241">property <b>mergeRequestsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L251">property <b>mergeRequestsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6734,7 +6749,7 @@ Enable merge requests for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L255">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6745,19 +6760,19 @@ The name of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L250">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L260">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The namespace (group or user) of the project. Defaults to your user.
-See `gitlab_group` for an example.
+See `gitlab..Group` for an example.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-onlyAllowMergeIfAllDiscussionsAreResolved">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L254">property <b>onlyAllowMergeIfAllDiscussionsAreResolved</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L264">property <b>onlyAllowMergeIfAllDiscussionsAreResolved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyAllowMergeIfAllDiscussionsAreResolved?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6768,7 +6783,7 @@ Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-onlyAllowMergeIfPipelineSucceeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L258">property <b>onlyAllowMergeIfPipelineSucceeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L268">property <b>onlyAllowMergeIfPipelineSucceeds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyAllowMergeIfPipelineSucceeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6779,7 +6794,7 @@ Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L262">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L272">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6790,7 +6805,7 @@ The path of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-runnersToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L266">property <b>runnersToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L276">property <b>runnersToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runnersToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6801,7 +6816,7 @@ Registration token to use during runner setup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-sharedRunnersEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L270">property <b>sharedRunnersEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L280">property <b>sharedRunnersEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sharedRunnersEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6812,7 +6827,7 @@ Enable shared runners for this project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-sharedWithGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L274">property <b>sharedWithGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L284">property <b>sharedWithGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sharedWithGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6827,7 +6842,7 @@ Enable sharing the project with a list of groups (maps).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-snippetsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L278">property <b>snippetsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L288">property <b>snippetsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snippetsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6838,7 +6853,7 @@ Enable snippets for the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-sshUrlToRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L283">property <b>sshUrlToRepo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L293">property <b>sshUrlToRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sshUrlToRepo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6850,7 +6865,7 @@ repository via SSH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L287">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L297">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6861,7 +6876,7 @@ Tags (topics) of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-visibilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L293">property <b>visibilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L303">property <b>visibilityLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6874,7 +6889,7 @@ Repositories are created as private by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L297">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L307">property <b>webUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6885,7 +6900,7 @@ URL that can be used to find the project in a browser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-wikiEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/project.ts#L301">property <b>wikiEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/project.ts#L311">property <b>wikiEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6897,7 +6912,7 @@ Enable wiki for the project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectVariableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L134">interface <b>ProjectVariableArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L141">interface <b>ProjectVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6906,7 +6921,7 @@ The set of arguments for constructing a ProjectVariable resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectVariableArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L138">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L145">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6917,7 +6932,7 @@ The name of the variable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariableArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L142">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L149">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6928,7 +6943,7 @@ The name or id of the project to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariableArgs-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L146">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L153">property <b>protected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6939,7 +6954,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L150">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L157">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6951,7 +6966,7 @@ The value of the variable.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectVariableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L112">interface <b>ProjectVariableState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L119">interface <b>ProjectVariableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6960,7 +6975,7 @@ Input properties used for looking up and filtering ProjectVariable resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectVariableState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L116">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L123">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6971,7 +6986,7 @@ The name of the variable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariableState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L120">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L127">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6982,7 +6997,7 @@ The name or id of the project to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariableState-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L124">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L131">property <b>protected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6993,7 +7008,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/projectVariable.ts#L128">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/projectVariable.ts#L135">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7005,7 +7020,7 @@ The value of the variable.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L53">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L60">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7014,7 +7029,7 @@ The set of arguments for constructing a Provider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L57">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L64">property <b>baseUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7025,7 +7040,7 @@ The GitLab Base API URL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-cacertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L61">property <b>cacertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L68">property <b>cacertFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cacertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7036,7 +7051,7 @@ A file containing the ca certificate to use in case ssl certificate is not from 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-insecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L65">property <b>insecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L72">property <b>insecure</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>insecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7047,7 +7062,7 @@ Disable SSL verification of API calls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/provider.ts#L69">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/provider.ts#L76">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7059,7 +7074,7 @@ The OAuth token used to connect to GitLab.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceJiraArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L174">interface <b>ServiceJiraArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L181">interface <b>ServiceJiraArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7068,7 +7083,7 @@ The set of arguments for constructing a ServiceJira resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceJiraArgs-jiraIssueTransitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L178">property <b>jiraIssueTransitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L185">property <b>jiraIssueTransitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jiraIssueTransitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7079,7 +7094,7 @@ The ID of a transition that moves issues to a closed state. You can find this nu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L182">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L189">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7090,7 +7105,7 @@ The password of the user created to be used with GitLab/JIRA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L186">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L193">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7101,7 +7116,7 @@ ID of the project you want to activate integration on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraArgs-projectKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L190">property <b>projectKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L197">property <b>projectKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7112,7 +7127,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L194">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L201">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7123,7 +7138,7 @@ The URL to the JIRA project which is being linked to this GitLab project. For ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L198">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L205">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7135,7 +7150,7 @@ The username of the user created to be used with GitLab/JIRA.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceJiraState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L140">interface <b>ServiceJiraState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L147">interface <b>ServiceJiraState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7144,7 +7159,7 @@ Input properties used for looking up and filtering ServiceJira resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceJiraState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L141">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L148">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7152,7 +7167,7 @@ Input properties used for looking up and filtering ServiceJira resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L142">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L149">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7160,7 +7175,7 @@ Input properties used for looking up and filtering ServiceJira resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-jiraIssueTransitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L146">property <b>jiraIssueTransitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L153">property <b>jiraIssueTransitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jiraIssueTransitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7171,7 +7186,7 @@ The ID of a transition that moves issues to a closed state. You can find this nu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L150">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L157">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7182,7 +7197,7 @@ The password of the user created to be used with GitLab/JIRA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L154">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L161">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7193,7 +7208,7 @@ ID of the project you want to activate integration on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-projectKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L158">property <b>projectKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L165">property <b>projectKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7204,7 +7219,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L159">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L166">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7212,7 +7227,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L160">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L167">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7220,7 +7235,7 @@ The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L164">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L171">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7231,7 +7246,7 @@ The URL to the JIRA project which is being linked to this GitLab project. For ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJiraState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceJira.ts#L168">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceJira.ts#L175">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7243,7 +7258,7 @@ The username of the user created to be used with GitLab/JIRA.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceSlackArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L317">interface <b>ServiceSlackArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L324">interface <b>ServiceSlackArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7252,7 +7267,7 @@ The set of arguments for constructing a ServiceSlack resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-confidentialIssueChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L321">property <b>confidentialIssueChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L328">property <b>confidentialIssueChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>confidentialIssueChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7263,7 +7278,7 @@ The name of the channel to receive confidential issue events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-confidentialIssuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L325">property <b>confidentialIssuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L332">property <b>confidentialIssuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>confidentialIssuesEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7274,7 +7289,7 @@ Enable notifications for confidential issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-confidentialNoteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L329">property <b>confidentialNoteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L336">property <b>confidentialNoteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>confidentialNoteEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7285,7 +7300,7 @@ Enable notifications for confidential note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-issueChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L333">property <b>issueChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L340">property <b>issueChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issueChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7296,7 +7311,7 @@ The name of the channel to receive issue events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-issuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L337">property <b>issuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L344">property <b>issuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7307,7 +7322,7 @@ Enable notifications for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-mergeRequestChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L341">property <b>mergeRequestChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L348">property <b>mergeRequestChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7318,7 +7333,7 @@ The name of the channel to receive merge request events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-mergeRequestsEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L345">property <b>mergeRequestsEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L352">property <b>mergeRequestsEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7329,7 +7344,7 @@ Enable notifications for merge requests events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-noteChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L349">property <b>noteChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L356">property <b>noteChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noteChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7340,7 +7355,7 @@ The name of the channel to receive note events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-noteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L353">property <b>noteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L360">property <b>noteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noteEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7351,7 +7366,7 @@ Enable notifications for note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-notifyOnlyBrokenPipelines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L357">property <b>notifyOnlyBrokenPipelines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L364">property <b>notifyOnlyBrokenPipelines</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notifyOnlyBrokenPipelines?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7362,7 +7377,7 @@ Send notifications for broken pipelines.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-notifyOnlyDefaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L361">property <b>notifyOnlyDefaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L368">property <b>notifyOnlyDefaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notifyOnlyDefaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7373,7 +7388,7 @@ Send notifications only for the default branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-pipelineChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L365">property <b>pipelineChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L372">property <b>pipelineChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pipelineChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7384,7 +7399,7 @@ The name of the channel to receive pipeline events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-pipelineEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L369">property <b>pipelineEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L376">property <b>pipelineEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pipelineEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7395,7 +7410,7 @@ Enable notifications for pipeline events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L373">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L380">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7406,7 +7421,7 @@ ID of the project you want to activate integration on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-pushChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L377">property <b>pushChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L384">property <b>pushChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7417,7 +7432,7 @@ The name of the channel to receive push events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-pushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L381">property <b>pushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L388">property <b>pushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7428,7 +7443,7 @@ Enable notifications for push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-tagPushChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L385">property <b>tagPushChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L392">property <b>tagPushChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tagPushChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7439,7 +7454,7 @@ The name of the channel to receive tag push events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-tagPushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L389">property <b>tagPushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L396">property <b>tagPushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tagPushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7450,7 +7465,7 @@ Enable notifications for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L393">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L400">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7461,7 +7476,7 @@ Username to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-webhook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L397">property <b>webhook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L404">property <b>webhook</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webhook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7472,7 +7487,7 @@ Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-wikiPageChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L401">property <b>wikiPageChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L408">property <b>wikiPageChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiPageChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7483,7 +7498,7 @@ The name of the channel to receive wiki page events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackArgs-wikiPageEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L405">property <b>wikiPageEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L412">property <b>wikiPageEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiPageEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7495,7 +7510,7 @@ Enable notifications for wiki page events.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceSlackState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L222">interface <b>ServiceSlackState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L229">interface <b>ServiceSlackState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7504,7 +7519,7 @@ Input properties used for looking up and filtering ServiceSlack resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceSlackState-confidentialIssueChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L226">property <b>confidentialIssueChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L233">property <b>confidentialIssueChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>confidentialIssueChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7515,7 +7530,7 @@ The name of the channel to receive confidential issue events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-confidentialIssuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L230">property <b>confidentialIssuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L237">property <b>confidentialIssuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>confidentialIssuesEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7526,7 +7541,7 @@ Enable notifications for confidential issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-confidentialNoteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L234">property <b>confidentialNoteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L241">property <b>confidentialNoteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>confidentialNoteEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7537,7 +7552,7 @@ Enable notifications for confidential note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-issueChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L238">property <b>issueChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L245">property <b>issueChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issueChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7548,7 +7563,7 @@ The name of the channel to receive issue events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-issuesEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L242">property <b>issuesEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L249">property <b>issuesEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>issuesEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7559,7 +7574,7 @@ Enable notifications for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-jobEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L243">property <b>jobEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L250">property <b>jobEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jobEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7567,7 +7582,7 @@ Enable notifications for issues events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-mergeRequestChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L247">property <b>mergeRequestChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L254">property <b>mergeRequestChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7578,7 +7593,7 @@ The name of the channel to receive merge request events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-mergeRequestsEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L251">property <b>mergeRequestsEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L258">property <b>mergeRequestsEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mergeRequestsEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7589,7 +7604,7 @@ Enable notifications for merge requests events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-noteChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L255">property <b>noteChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L262">property <b>noteChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noteChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7600,7 +7615,7 @@ The name of the channel to receive note events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-noteEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L259">property <b>noteEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L266">property <b>noteEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noteEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7611,7 +7626,7 @@ Enable notifications for note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-notifyOnlyBrokenPipelines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L263">property <b>notifyOnlyBrokenPipelines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L270">property <b>notifyOnlyBrokenPipelines</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notifyOnlyBrokenPipelines?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7622,7 +7637,7 @@ Send notifications for broken pipelines.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-notifyOnlyDefaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L267">property <b>notifyOnlyDefaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L274">property <b>notifyOnlyDefaultBranch</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notifyOnlyDefaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7633,7 +7648,7 @@ Send notifications only for the default branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-pipelineChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L271">property <b>pipelineChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L278">property <b>pipelineChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pipelineChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7644,7 +7659,7 @@ The name of the channel to receive pipeline events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-pipelineEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L275">property <b>pipelineEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L282">property <b>pipelineEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pipelineEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7655,7 +7670,7 @@ Enable notifications for pipeline events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L279">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L286">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7666,7 +7681,7 @@ ID of the project you want to activate integration on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-pushChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L283">property <b>pushChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L290">property <b>pushChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7677,7 +7692,7 @@ The name of the channel to receive push events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-pushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L287">property <b>pushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L294">property <b>pushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7688,7 +7703,7 @@ Enable notifications for push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-tagPushChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L291">property <b>tagPushChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L298">property <b>tagPushChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tagPushChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7699,7 +7714,7 @@ The name of the channel to receive tag push events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-tagPushEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L295">property <b>tagPushEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L302">property <b>tagPushEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tagPushEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7710,7 +7725,7 @@ Enable notifications for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L299">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L306">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7721,7 +7736,7 @@ Username to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-webhook">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L303">property <b>webhook</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L310">property <b>webhook</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>webhook?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7732,7 +7747,7 @@ Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-wikiPageChannel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L307">property <b>wikiPageChannel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L314">property <b>wikiPageChannel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiPageChannel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7743,7 +7758,7 @@ The name of the channel to receive wiki page events notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlackState-wikiPageEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/serviceSlack.ts#L311">property <b>wikiPageEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/serviceSlack.ts#L318">property <b>wikiPageEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wikiPageEvents?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7755,7 +7770,7 @@ Enable notifications for wiki page events.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagProtectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L120">interface <b>TagProtectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L127">interface <b>TagProtectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7764,7 +7779,7 @@ The set of arguments for constructing a TagProtection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TagProtectionArgs-createAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L124">property <b>createAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L131">property <b>createAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7775,7 +7790,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtectionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L128">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L135">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7786,7 +7801,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtectionArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L132">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L139">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7798,7 +7813,7 @@ Name of the tag or wildcard.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagProtectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L102">interface <b>TagProtectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L109">interface <b>TagProtectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7807,7 +7822,7 @@ Input properties used for looking up and filtering TagProtection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TagProtectionState-createAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L106">property <b>createAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L113">property <b>createAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createAccessLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7818,7 +7833,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtectionState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L110">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L117">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7829,7 +7844,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtectionState-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/tagProtection.ts#L114">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/tagProtection.ts#L121">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7841,7 +7856,7 @@ Name of the tag or wildcard.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L164">interface <b>UserArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L174">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7850,7 +7865,7 @@ The set of arguments for constructing a User resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-canCreateGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L168">property <b>canCreateGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L178">property <b>canCreateGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>canCreateGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7861,7 +7876,7 @@ Boolean, defaults to false. Whether to allow the user to create groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L172">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L182">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7872,7 +7887,7 @@ The e-mail address of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L177">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L187">property <b>isAdmin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isAdmin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7884,7 +7899,7 @@ for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-isExternal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L181">property <b>isExternal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L191">property <b>isExternal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isExternal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7895,7 +7910,7 @@ Boolean, defaults to false. Whether a user has access only to some internal or p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L195">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7906,7 +7921,7 @@ The name of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L189">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L199">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7917,7 +7932,7 @@ The password of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-projectsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L193">property <b>projectsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L203">property <b>projectsLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectsLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7928,7 +7943,7 @@ Integer, defaults to 0.  Number of projects user can create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-skipConfirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L197">property <b>skipConfirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L207">property <b>skipConfirmation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skipConfirmation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7939,7 +7954,7 @@ Boolean, defaults to true. Whether to skip confirmation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L201">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L211">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7951,7 +7966,7 @@ The username of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L121">interface <b>UserState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L131">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7960,7 +7975,7 @@ Input properties used for looking up and filtering User resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-canCreateGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L125">property <b>canCreateGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L135">property <b>canCreateGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>canCreateGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7971,7 +7986,7 @@ Boolean, defaults to false. Whether to allow the user to create groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L129">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L139">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7982,7 +7997,7 @@ The e-mail address of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-isAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L134">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L144">property <b>isAdmin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isAdmin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7994,7 +8009,7 @@ for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-isExternal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L138">property <b>isExternal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L148">property <b>isExternal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isExternal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8005,7 +8020,7 @@ Boolean, defaults to false. Whether a user has access only to some internal or p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L152">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8016,7 +8031,7 @@ The name of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L146">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L156">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8027,7 +8042,7 @@ The password of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-projectsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L150">property <b>projectsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L160">property <b>projectsLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectsLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8038,7 +8053,7 @@ Integer, defaults to 0.  Number of projects user can create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-skipConfirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L154">property <b>skipConfirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L164">property <b>skipConfirmation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skipConfirmation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8049,7 +8064,7 @@ Boolean, defaults to true. Whether to skip confirmation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/406eb0a6614e1152d7f9757ffc11d40d9e49d4e9/sdk/nodejs/user.ts#L158">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/9557a766cfcc264c3060681e3516c505d8b125a7/sdk/nodejs/user.ts#L168">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

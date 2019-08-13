@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.globalaccelerator"></span><dl class="class">
 <dt id="pulumi_aws.globalaccelerator.Accelerator">
-<em class="property">class </em><code class="descclassname">pulumi_aws.globalaccelerator.</code><code class="descname">Accelerator</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>enabled=None</em>, <em>ip_address_type=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.globalaccelerator.</code><code class="descname">Accelerator</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>enabled=None</em>, <em>ip_address_type=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator accelerator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -60,6 +60,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The name of the accelerator.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.globalaccelerator.Accelerator.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>enabled=None</em>, <em>ip_address_type=None</em>, <em>ip_sets=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Accelerator resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] attributes: The attributes of the accelerator. Fields documented below.
+:param pulumi.Input[bool] enabled: Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+:param pulumi.Input[str] ip_address_type: The value for the address type must be <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.
+:param pulumi.Input[list] ip_sets: IP address set associated with the accelerator.
+:param pulumi.Input[str] name: The name of the accelerator.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_accelerator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_accelerator.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -102,7 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.globalaccelerator.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint_configurations=None</em>, <em>endpoint_group_region=None</em>, <em>health_check_interval_seconds=None</em>, <em>health_check_path=None</em>, <em>health_check_port=None</em>, <em>health_check_protocol=None</em>, <em>listener_arn=None</em>, <em>threshold_count=None</em>, <em>traffic_dial_percentage=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.globalaccelerator.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint_configurations=None</em>, <em>endpoint_group_region=None</em>, <em>health_check_interval_seconds=None</em>, <em>health_check_path=None</em>, <em>health_check_port=None</em>, <em>health_check_protocol=None</em>, <em>listener_arn=None</em>, <em>threshold_count=None</em>, <em>traffic_dial_percentage=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator endpoint group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -174,6 +191,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.globalaccelerator.EndpointGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>endpoint_configurations=None</em>, <em>endpoint_group_region=None</em>, <em>health_check_interval_seconds=None</em>, <em>health_check_path=None</em>, <em>health_check_port=None</em>, <em>health_check_protocol=None</em>, <em>listener_arn=None</em>, <em>threshold_count=None</em>, <em>traffic_dial_percentage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EndpointGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] endpoint_configurations: The list of endpoint objects. Fields documented below.
+:param pulumi.Input[float] health_check_interval_seconds: The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
+:param pulumi.Input[str] health_check_path: If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
+:param pulumi.Input[float] health_check_port: The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
+:param pulumi.Input[str] health_check_protocol: The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
+:param pulumi.Input[str] listener_arn: The Amazon Resource Name (ARN) of the listener.
+:param pulumi.Input[float] threshold_count: The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
+:param pulumi.Input[float] traffic_dial_percentage: The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_endpoint_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_endpoint_group.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -216,7 +253,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.globalaccelerator.Listener">
-<em class="property">class </em><code class="descclassname">pulumi_aws.globalaccelerator.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accelerator_arn=None</em>, <em>client_affinity=None</em>, <em>port_ranges=None</em>, <em>protocol=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.globalaccelerator.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accelerator_arn=None</em>, <em>client_affinity=None</em>, <em>port_ranges=None</em>, <em>protocol=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator listener.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -258,6 +295,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.globalaccelerator.Listener.protocol">
 <code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The protocol for the connections from clients to the accelerator. Valid values are <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.globalaccelerator.Listener.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>accelerator_arn=None</em>, <em>client_affinity=None</em>, <em>port_ranges=None</em>, <em>protocol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Listener resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] accelerator_arn: The Amazon Resource Name (ARN) of your accelerator.
+:param pulumi.Input[str] client_affinity: Direct all requests from a user to the same endpoint. Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">SOURCE_IP</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. If <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, Global Accelerator uses the “five-tuple” properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If <code class="docutils literal notranslate"><span class="pre">SOURCE_IP</span></code>, Global Accelerator uses the “two-tuple” properties of source (client) IP address and destination IP address to select the hash value.
+:param pulumi.Input[list] port_ranges: The list of port ranges for the connections from clients to the accelerator. Fields documented below.
+:param pulumi.Input[str] protocol: The protocol for the connections from clients to the accelerator. Valid values are <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_listener.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/issues">terraform-providers/terraform-provider-cloudflare repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_cloudflare"></span><dl class="class">
 <dt id="pulumi_cloudflare.AccessApplication">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccessApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>session_duration=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccessApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>session_duration=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.</p>
@@ -60,6 +60,35 @@ re-authorise. Must be one of <code class="docutils literal notranslate"><span cl
 <dd><p>The DNS zone to which the access rule should be added.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.AccessApplication.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>aud=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>session_duration=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessApplication.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccessApplication resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] domain: The complete URL of the asset you wish to put</p>
+<blockquote>
+<div>Cloudflare Access in front of. Can include subdomains or paths. Or both.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</li>
+<li><strong>session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How often a user will be forced to
+re-authorise. Must be one of <code class="docutils literal notranslate"><span class="pre">30m</span></code>, <code class="docutils literal notranslate"><span class="pre">6h</span></code>, <code class="docutils literal notranslate"><span class="pre">12h</span></code>, <code class="docutils literal notranslate"><span class="pre">24h</span></code>, <code class="docutils literal notranslate"><span class="pre">168h</span></code>, <code class="docutils literal notranslate"><span class="pre">730h</span></code>.</li>
+<li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be added.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.AccessApplication.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessApplication.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -102,7 +131,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AccessPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccessPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>decision=None</em>, <em>excludes=None</em>, <em>includes=None</em>, <em>name=None</em>, <em>precedence=None</em>, <em>requires=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccessPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>decision=None</em>, <em>excludes=None</em>, <em>includes=None</em>, <em>name=None</em>, <em>precedence=None</em>, <em>requires=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
 particular resource.</p>
@@ -200,6 +229,43 @@ full list.</p>
 added.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.AccessPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>decision=None</em>, <em>excludes=None</em>, <em>includes=None</em>, <em>name=None</em>, <em>precedence=None</em>, <em>requires=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccessPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] application_id: The ID of the application the policy is</p>
+<blockquote>
+<div>associated with.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action Access will take if the policy matches the user.
+Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></li>
+<li><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
+full list.</li>
+<li><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
+full list.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</li>
+<li><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</li>
+<li><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
+full list.</li>
+<li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be
+added.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.AccessPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -242,7 +308,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AccessRule">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccessRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configuration=None</em>, <em>mode=None</em>, <em>notes=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccessRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configuration=None</em>, <em>mode=None</em>, <em>notes=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -293,6 +359,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The DNS zone to which the access rule should be added.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.AccessRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>configuration=None</em>, <em>mode=None</em>, <em>notes=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccessRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] configuration: Rule configuration to apply to a matched request. It’s a complex value. See description below.
+:param pulumi.Input[str] mode: The action to apply to a matched request. Allowed values: “block”, “challenge”, “whitelist”, “js_challenge”
+:param pulumi.Input[str] notes: A personal note about the rule. Typically used as a reminder or explanation for the rule.
+:param pulumi.Input[str] zone: The DNS zone to which the access rule should be added. Will be resolved to <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> upon creation.
+:param pulumi.Input[str] zone_id: The DNS zone to which the access rule should be added.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.AccessRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -335,7 +418,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AccountMember">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccountMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email_address=None</em>, <em>role_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccountMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AccountMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email_address=None</em>, <em>role_ids=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccountMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare account members.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -363,6 +446,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.AccountMember.role_ids">
 <code class="descname">role_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccountMember.role_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of account role IDs that you want to assign to a member.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.AccountMember.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>email_address=None</em>, <em>role_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccountMember.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccountMember resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] email_address: The email address of the user who you wish to manage. Note: Following creation, this field becomes read only via the API and cannot be updated.
+:param pulumi.Input[list] role_ids: Array of account role IDs that you want to assign to a member.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -407,7 +504,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.Argo">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Argo</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>smart_routing=None</em>, <em>tiered_caching=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Argo</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>smart_routing=None</em>, <em>tiered_caching=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -442,6 +539,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Argo.zone_id">
 <code class="descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS zone ID that you wish to manage Argo on.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.Argo.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>smart_routing=None</em>, <em>tiered_caching=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Argo resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] smart_routing: Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.
+:param pulumi.Input[str] tiered_caching: Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.
+:param pulumi.Input[str] zone_id: The DNS zone ID that you wish to manage Argo on.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -485,8 +597,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudflare.AwaitableGetIpRangesResult">
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em>cidr_blocks=None</em>, <em>ipv4_cidr_blocks=None</em>, <em>ipv6_cidr_blocks=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.AwaitableGetZonesResult">
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em>filter=None</em>, <em>zones=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudflare.CustomPages">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">CustomPages</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>state=None</em>, <em>type=None</em>, <em>url=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">CustomPages</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>state=None</em>, <em>type=None</em>, <em>url=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare custom error pages.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -542,6 +664,39 @@ be one of <code class="docutils literal notranslate"><span class="pre">basic_cha
 updated. Either <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> must be provided.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.CustomPages.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>state=None</em>, <em>type=None</em>, <em>url=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CustomPages resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_id: The account ID where the custom pages should be</p>
+<blockquote>
+<div>updated. Either <code class="docutils literal notranslate"><span class="pre">account_id</span></code> or <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> must be provided. If
+<code class="docutils literal notranslate"><span class="pre">account_id</span></code> is present, it will override the zone setting.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of custom page you wish to update. Must
+be one of <code class="docutils literal notranslate"><span class="pre">basic_challenge</span></code>, <code class="docutils literal notranslate"><span class="pre">waf_challenge</span></code>, <code class="docutils literal notranslate"><span class="pre">waf_block</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ratelimit_block</span></code>, <code class="docutils literal notranslate"><span class="pre">country_challenge</span></code>, <code class="docutils literal notranslate"><span class="pre">ip_block</span></code>, <code class="docutils literal notranslate"><span class="pre">under_attack</span></code>,
+<code class="docutils literal notranslate"><span class="pre">500_errors</span></code>, <code class="docutils literal notranslate"><span class="pre">1000_errors</span></code>, <code class="docutils literal notranslate"><span class="pre">always_online</span></code>.</li>
+<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of where the custom page source is located.</li>
+<li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID where the custom pages should be
+updated. Either <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> must be provided.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.CustomPages.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -584,7 +739,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.Filter">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Filter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>expression=None</em>, <em>paused=None</em>, <em>ref=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Filter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>expression=None</em>, <em>paused=None</em>, <em>ref=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to <a class="reference external" href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark Display Filter</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -642,6 +797,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The DNS zone to which the Filter should be added.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.Filter.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>expression=None</em>, <em>paused=None</em>, <em>ref=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Filter resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A note that you can use to describe the purpose of the filter.
+:param pulumi.Input[str] expression: The filter expression to be used.
+:param pulumi.Input[bool] paused: Whether this filter is currently paused. Boolean value.
+:param pulumi.Input[str] ref: Short reference tag to quickly select related rules.
+:param pulumi.Input[str] zone: The DNS zone to which the Filter should be added. Will be resolved to <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> upon creation.
+:param pulumi.Input[str] zone_id: The DNS zone to which the Filter should be added.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.Filter.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -684,7 +857,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.FirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>filter_id=None</em>, <em>paused=None</em>, <em>priority=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>filter_id=None</em>, <em>paused=None</em>, <em>priority=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
 A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.</p>
 <p>Filter expressions needs to be created first before using Firewall Rule. See Filter.</p>
@@ -742,6 +915,24 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 <dt id="pulumi_cloudflare.FirewallRule.zone_id">
 <code class="descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.FirewallRule.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS zone to which the Filter should be added.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.FirewallRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>filter_id=None</em>, <em>paused=None</em>, <em>priority=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.FirewallRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FirewallRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] action: The action to apply to a matched request. Allowed values: “block”, “challenge”, “allow”, “js_challenge”. Enterprise plan also allows “log”.
+:param pulumi.Input[str] description: A description of the rule to help identify it.
+:param pulumi.Input[bool] paused: Whether this filter based firewall rule is currently paused. Boolean value.
+:param pulumi.Input[float] priority: The priority of the rule to allow control of processing order. A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.
+:param pulumi.Input[str] zone: The DNS zone to which the Firewall Rule should be added. Will be resolved to <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> upon creation.
+:param pulumi.Input[str] zone_id: The DNS zone to which the Filter should be added.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -810,7 +1001,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.LoadBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_pool_ids=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>fallback_pool_id=None</em>, <em>name=None</em>, <em>pop_pools=None</em>, <em>proxied=None</em>, <em>region_pools=None</em>, <em>session_affinity=None</em>, <em>steering_policy=None</em>, <em>ttl=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_pool_ids=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>fallback_pool_id=None</em>, <em>name=None</em>, <em>pop_pools=None</em>, <em>proxied=None</em>, <em>region_pools=None</em>, <em>session_affinity=None</em>, <em>steering_policy=None</em>, <em>ttl=None</em>, <em>zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -928,6 +1119,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>ID associated with the specified <code class="docutils literal notranslate"><span class="pre">zone</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.LoadBalancer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created_on=None</em>, <em>default_pool_ids=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>fallback_pool_id=None</em>, <em>modified_on=None</em>, <em>name=None</em>, <em>pop_pools=None</em>, <em>proxied=None</em>, <em>region_pools=None</em>, <em>session_affinity=None</em>, <em>steering_policy=None</em>, <em>ttl=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_on: The RFC3339 timestamp of when the load balancer was created.
+:param pulumi.Input[list] default_pool_ids: A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
+:param pulumi.Input[str] description: Free text description.
+:param pulumi.Input[bool] enabled: Enable or disable the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> (enabled).
+:param pulumi.Input[str] fallback_pool_id: The pool ID to use when all other pools are detected as unhealthy.
+:param pulumi.Input[str] modified_on: The RFC3339 timestamp of when the load balancer was last modified.
+:param pulumi.Input[str] name: The DNS name (FQDN, including the zone) to associate with the load balancer.
+:param pulumi.Input[list] pop_pools: A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
+:param pulumi.Input[bool] proxied: Whether the hostname gets Cloudflare’s origin protection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[list] region_pools: A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
+:param pulumi.Input[str] session_affinity: Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.
+:param pulumi.Input[str] steering_policy: Determine which method the load balancer uses to determine the fastest route to your origin. Valid values  are: <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;geo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dynamic_latency&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;random&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.
+:param pulumi.Input[float] ttl: Time to live (TTL) of this load balancer’s DNS <code class="docutils literal notranslate"><span class="pre">name</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">proxied</span></code> - this cannot be set for proxied load balancers. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.
+:param pulumi.Input[str] zone: The zone to add the load balancer to.
+:param pulumi.Input[str] zone_id: ID associated with the specified <code class="docutils literal notranslate"><span class="pre">zone</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.LoadBalancer.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -970,7 +1188,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.LoadBalancerMonitor">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancerMonitor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_insecure=None</em>, <em>description=None</em>, <em>expected_body=None</em>, <em>expected_codes=None</em>, <em>follow_redirects=None</em>, <em>headers=None</em>, <em>interval=None</em>, <em>method=None</em>, <em>path=None</em>, <em>port=None</em>, <em>retries=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancerMonitor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_insecure=None</em>, <em>description=None</em>, <em>expected_body=None</em>, <em>expected_codes=None</em>, <em>follow_redirects=None</em>, <em>headers=None</em>, <em>interval=None</em>, <em>method=None</em>, <em>path=None</em>, <em>port=None</em>, <em>retries=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you’re using Cloudflare’s Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1082,6 +1300,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The protocol to use for the healthcheck. Currently supported protocols are ‘HTTP’ and ‘HTTPS’. Default: “http”.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.LoadBalancerMonitor.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>allow_insecure=None</em>, <em>created_on=None</em>, <em>description=None</em>, <em>expected_body=None</em>, <em>expected_codes=None</em>, <em>follow_redirects=None</em>, <em>headers=None</em>, <em>interval=None</em>, <em>method=None</em>, <em>modified_on=None</em>, <em>path=None</em>, <em>port=None</em>, <em>retries=None</em>, <em>timeout=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LoadBalancerMonitor resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] allow_insecure: Do not validate the certificate when monitor use HTTPS.
+:param pulumi.Input[str] created_on: The RFC3339 timestamp of when the load balancer monitor was created.
+:param pulumi.Input[str] description: Free text description.
+:param pulumi.Input[str] expected_body: A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.
+:param pulumi.Input[str] expected_codes: The expected HTTP response code or code range of the health check. Eg <code class="docutils literal notranslate"><span class="pre">2xx</span></code>
+:param pulumi.Input[bool] follow_redirects: Follow redirects if returned by the origin.
+:param pulumi.Input[list] headers: The header name.
+:param pulumi.Input[float] interval: The interval between each health check. Shorter intervals may improve failover time, but will increase load on the origins as we check from multiple locations. Default: 60.
+:param pulumi.Input[str] method: The HTTP method to use for the health check. Default: “GET”.
+:param pulumi.Input[str] modified_on: The RFC3339 timestamp of when the load balancer monitor was last modified.
+:param pulumi.Input[str] path: The endpoint path to health check against. Default: “/”.
+:param pulumi.Input[float] retries: The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. Default: 2.
+:param pulumi.Input[float] timeout: The timeout (in seconds) before marking the health check as failed. Default: 5.
+:param pulumi.Input[str] type: The protocol to use for the healthcheck. Currently supported protocols are ‘HTTP’ and ‘HTTPS’. Default: “http”.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.LoadBalancerMonitor.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1124,7 +1368,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.LoadBalancerPool">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancerPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>check_regions=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>minimum_origins=None</em>, <em>monitor=None</em>, <em>name=None</em>, <em>notification_email=None</em>, <em>origins=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancerPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>check_regions=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>minimum_origins=None</em>, <em>monitor=None</em>, <em>name=None</em>, <em>notification_email=None</em>, <em>origins=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1208,6 +1452,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The list of origins within this pool. Traffic directed at this pool is balanced across all currently healthy origins, provided the pool itself is healthy. It’s a complex value. See description below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.LoadBalancerPool.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>check_regions=None</em>, <em>created_on=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>minimum_origins=None</em>, <em>modified_on=None</em>, <em>monitor=None</em>, <em>name=None</em>, <em>notification_email=None</em>, <em>origins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LoadBalancerPool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] check_regions: A list of regions (specified by region code) from which to run health checks. Empty means every Cloudflare data center (the default), but requires an Enterprise plan. Region codes can be found <a class="reference external" href="https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions">here</a>.
+:param pulumi.Input[str] created_on: The RFC3339 timestamp of when the load balancer was created.
+:param pulumi.Input[str] description: Free text description.
+:param pulumi.Input[bool] enabled: Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
+:param pulumi.Input[float] minimum_origins: The minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool will be marked unhealthy and we will failover to the next available pool. Default: 1.
+:param pulumi.Input[str] modified_on: The RFC3339 timestamp of when the load balancer was last modified.
+:param pulumi.Input[str] monitor: The ID of the Monitor to use for health checking origins within this pool.
+:param pulumi.Input[str] name: A human-identifiable name for the origin.
+:param pulumi.Input[str] notification_email: The email address to send health status notifications to. This can be an individual mailbox or a mailing list.
+:param pulumi.Input[list] origins: The list of origins within this pool. Traffic directed at this pool is balanced across all currently healthy origins, provided the pool itself is healthy. It’s a complex value. See description below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.LoadBalancerPool.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1250,7 +1516,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.LogpushJob">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LogpushJob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_conf=None</em>, <em>enabled=None</em>, <em>logpull_options=None</em>, <em>name=None</em>, <em>ownership_challenge=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LogpushJob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_conf=None</em>, <em>enabled=None</em>, <em>logpull_options=None</em>, <em>name=None</em>, <em>ownership_challenge=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare logpush jobs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1271,6 +1537,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LogpushJob.ownership_challenge">
 <code class="descname">ownership_challenge</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.ownership_challenge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ownership challenge token to prove destination ownership. See <a class="reference external" href="https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/">https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/</a></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.LogpushJob.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>destination_conf=None</em>, <em>enabled=None</em>, <em>logpull_options=None</em>, <em>name=None</em>, <em>ownership_challenge=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LogpushJob resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] ownership_challenge: Ownership challenge token to prove destination ownership. See <a class="reference external" href="https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/">https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1315,7 +1594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.PageRule">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">PageRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>priority=None</em>, <em>status=None</em>, <em>target=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">PageRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>priority=None</em>, <em>status=None</em>, <em>target=None</em>, <em>zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare page rule resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1372,6 +1651,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the zone in which the page rule will be applied.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.PageRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>actions=None</em>, <em>priority=None</em>, <em>status=None</em>, <em>target=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PageRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] actions: The actions taken by the page rule, options given below.
+:param pulumi.Input[float] priority: The priority of the page rule among others for this target, the higher the number the higher the priority as per <a class="reference external" href="https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule">API documentation</a>.
+:param pulumi.Input[str] status: Whether the page rule is active or disabled.
+:param pulumi.Input[str] target: The URL pattern to target with the page rule.
+:param pulumi.Input[str] zone: The DNS zone to which the page rule should be added.
+:param pulumi.Input[str] zone_id: The ID of the zone in which the page rule will be applied.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.PageRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1414,11 +1711,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_client_logging=None</em>, <em>email=None</em>, <em>max_backoff=None</em>, <em>min_backoff=None</em>, <em>org_id=None</em>, <em>retries=None</em>, <em>rps=None</em>, <em>token=None</em>, <em>use_org_from_zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_client_logging=None</em>, <em>email=None</em>, <em>max_backoff=None</em>, <em>min_backoff=None</em>, <em>org_id=None</em>, <em>retries=None</em>, <em>rps=None</em>, <em>token=None</em>, <em>use_org_from_zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the cloudflare package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1433,6 +1730,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1475,7 +1784,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.RateLimit">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">RateLimit</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>bypass_url_patterns=None</em>, <em>correlate=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>match=None</em>, <em>period=None</em>, <em>threshold=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.RateLimit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">RateLimit</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>bypass_url_patterns=None</em>, <em>correlate=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>match=None</em>, <em>period=None</em>, <em>threshold=None</em>, <em>zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.RateLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1560,6 +1869,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The DNS zone ID.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.RateLimit.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>action=None</em>, <em>bypass_url_patterns=None</em>, <em>correlate=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>match=None</em>, <em>period=None</em>, <em>threshold=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.RateLimit.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RateLimit resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] action: The action to be performed when the threshold of matched traffic within the period defined is exceeded.
+:param pulumi.Input[list] bypass_url_patterns: URLs matching the patterns specified here will be excluded from rate limiting.
+:param pulumi.Input[dict] correlate: Determines how rate limiting is applied. By default if not specified, rate limiting applies to the clients IP address.
+:param pulumi.Input[str] description: A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
+:param pulumi.Input[bool] disabled: Whether this ratelimit is currently disabled. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[dict] match: Determines which traffic the rate limit counts towards the threshold. By default matches all traffic in the zone. See definition below.
+:param pulumi.Input[float] period: The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
+:param pulumi.Input[float] threshold: The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
+:param pulumi.Input[str] zone: The DNS zone to apply rate limiting to.
+:param pulumi.Input[str] zone_id: The DNS zone ID.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.RateLimit.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.RateLimit.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1602,7 +1933,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.Record">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>proxied=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Record" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>proxied=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare record resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1710,6 +2041,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The zone id of the record</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.Record.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created_on=None</em>, <em>data=None</em>, <em>domain=None</em>, <em>hostname=None</em>, <em>metadata=None</em>, <em>modified_on=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>proxiable=None</em>, <em>proxied=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Record.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Record resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_on: The RFC3339 timestamp of when the record was created
+:param pulumi.Input[dict] data: Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or <code class="docutils literal notranslate"><span class="pre">value</span></code> must be specified
+:param pulumi.Input[str] domain: The DNS zone to add the record to
+:param pulumi.Input[str] hostname: The FQDN of the record
+:param pulumi.Input[dict] metadata: A key-value map of string metadata cloudflare associates with the record
+:param pulumi.Input[str] modified_on: The RFC3339 timestamp of when the record was last modified
+:param pulumi.Input[str] name: The name of the record
+:param pulumi.Input[float] priority: The priority of the record
+:param pulumi.Input[bool] proxiable: Shows whether this record can be proxied, must be true if setting <code class="docutils literal notranslate"><span class="pre">proxied=true</span></code>
+:param pulumi.Input[bool] proxied: Whether the record gets Cloudflare’s origin protection; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[float] ttl: The TTL of the record (<a class="reference external" href="https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record">automatic: ‘1’</a>)
+:param pulumi.Input[str] type: The type of the record
+:param pulumi.Input[str] value: The (string) value of the record. Either this or <code class="docutils literal notranslate"><span class="pre">data</span></code> must be specified
+:param pulumi.Input[str] zone_id: The zone id of the record</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.Record.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Record.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1752,7 +2109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.SpectrumApplication">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">SpectrumApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns=None</em>, <em>ip_firewall=None</em>, <em>origin_directs=None</em>, <em>origin_dns=None</em>, <em>origin_port=None</em>, <em>protocol=None</em>, <em>proxy_protocol=None</em>, <em>tls=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">SpectrumApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns=None</em>, <em>ip_firewall=None</em>, <em>origin_directs=None</em>, <em>origin_dns=None</em>, <em>origin_port=None</em>, <em>protocol=None</em>, <em>proxy_protocol=None</em>, <em>tls=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare’s DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1824,6 +2181,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.SpectrumApplication.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>dns=None</em>, <em>ip_firewall=None</em>, <em>origin_directs=None</em>, <em>origin_dns=None</em>, <em>origin_port=None</em>, <em>protocol=None</em>, <em>proxy_protocol=None</em>, <em>tls=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SpectrumApplication resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] dns: The name and type of DNS record for the Spectrum application. Fields documented below.
+:param pulumi.Input[bool] ip_firewall: Enables the IP Firewall for this application. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[list] origin_directs: A list of destination addresses to the origin. e.g. <code class="docutils literal notranslate"><span class="pre">tcp://192.0.2.1:22</span></code>.
+:param pulumi.Input[dict] origin_dns: A destination DNS addresses to the origin. Fields documented below.
+:param pulumi.Input[float] origin_port: If using <code class="docutils literal notranslate"><span class="pre">origin_dns</span></code> this is a required attribute. Origin port to proxy traffice to e.g. <code class="docutils literal notranslate"><span class="pre">22</span></code>.
+:param pulumi.Input[str] protocol: The port configuration at Cloudflare’s edge. e.g. <code class="docutils literal notranslate"><span class="pre">tcp/22</span></code>.
+:param pulumi.Input[bool] proxy_protocol: Enables Proxy Protocol v1 to the origin. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] tls: TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.SpectrumApplication.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1866,7 +2243,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.WafRule">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">WafRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mode=None</em>, <em>rule_id=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">WafRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mode=None</em>, <em>rule_id=None</em>, <em>zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1915,6 +2292,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The DNS zone ID.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.WafRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>mode=None</em>, <em>package_id=None</em>, <em>rule_id=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WafRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] mode: The mode of the rule, can be one of [“block”, “challenge”, “default”, “disable”, “simulate”].
+:param pulumi.Input[str] package_id: The ID of the WAF Rule Package that contains the rule.
+:param pulumi.Input[str] rule_id: The WAF Rule ID.
+:param pulumi.Input[str] zone: The DNS zone to apply to.
+:param pulumi.Input[str] zone_id: The DNS zone ID.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.WafRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1957,8 +2351,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.WorkerRoute">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">WorkerRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>pattern=None</em>, <em>script_name=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare worker route resource. A route will also require a <code class="docutils literal notranslate"><span class="pre">cloudflare_worker_script</span></code>.</p>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">WorkerRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>pattern=None</em>, <em>script_name=None</em>, <em>zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare worker route resource. A route will also require a <code class="docutils literal notranslate"><span class="pre">.WorkerScript</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2004,6 +2398,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The zone id of the route</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.WorkerRoute.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>multi_script=None</em>, <em>pattern=None</em>, <em>script_name=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WorkerRoute resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] pattern: The <a class="reference external" href="https://developers.cloudflare.com/workers/api/route-matching/">route pattern</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone to add the route to.</li>
+<li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone id of the route</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.WorkerRoute.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2046,8 +2465,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.WorkerScript">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">WorkerScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>content=None</em>, <em>name=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">cloudflare_worker_route</span></code>.</p>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">WorkerScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>content=None</em>, <em>name=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">.WorkerRoute</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2088,6 +2507,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkerScript.zone_id">
 <code class="descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The zone id of the script (only for non-multi-script resources)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.WorkerScript.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>content=None</em>, <em>name=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WorkerScript resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] content: The script content.
+:param pulumi.Input[str] name: The name for the script. 
+:param pulumi.Input[str] zone: The zone for the script.
+:param pulumi.Input[str] zone_id: The zone id of the script (only for non-multi-script resources)</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2132,7 +2567,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.Zone">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>jump_start=None</em>, <em>paused=None</em>, <em>plan=None</em>, <em>type=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>jump_start=None</em>, <em>paused=None</em>, <em>plan=None</em>, <em>type=None</em>, <em>zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2205,6 +2640,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The DNS zone name which will be added.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.Zone.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>jump_start=None</em>, <em>meta=None</em>, <em>name_servers=None</em>, <em>paused=None</em>, <em>plan=None</em>, <em>status=None</em>, <em>type=None</em>, <em>vanity_name_servers=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] jump_start: Boolean of whether to scan for DNS records on creation. Ignored after zone is created. Default: false.
+:param pulumi.Input[list] name_servers: Cloudflare-assigned name servers. This is only populated for zones that use Cloudflare DNS.
+:param pulumi.Input[bool] paused: Boolean of whether this zone is paused (traffic bypasses Cloudflare). Default: false.
+:param pulumi.Input[str] plan: The name of the commercial plan to apply to the zone, can be updated once the one is created; one of <code class="docutils literal notranslate"><span class="pre">free</span></code>, <code class="docutils literal notranslate"><span class="pre">pro</span></code>, <code class="docutils literal notranslate"><span class="pre">business</span></code>, <code class="docutils literal notranslate"><span class="pre">enterprise</span></code>.
+:param pulumi.Input[str] status: Status of the zone. Valid values: <code class="docutils literal notranslate"><span class="pre">active</span></code>, <code class="docutils literal notranslate"><span class="pre">pending</span></code>, <code class="docutils literal notranslate"><span class="pre">initializing</span></code>, <code class="docutils literal notranslate"><span class="pre">moved</span></code>, <code class="docutils literal notranslate"><span class="pre">deleted</span></code>, <code class="docutils literal notranslate"><span class="pre">deactivated</span></code>.
+:param pulumi.Input[str] type: A full zone implies that DNS is hosted with Cloudflare. A partial zone is typically a partner-hosted zone or a CNAME setup. Valid values: <code class="docutils literal notranslate"><span class="pre">full</span></code>, <code class="docutils literal notranslate"><span class="pre">partial</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">full</span></code>.
+:param pulumi.Input[list] vanity_name_servers: List of Vanity Nameservers (if set).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone name which will be added.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.Zone.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2247,7 +2709,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.ZoneLockdown">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">ZoneLockdown</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configurations=None</em>, <em>description=None</em>, <em>paused=None</em>, <em>urls=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">ZoneLockdown</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configurations=None</em>, <em>description=None</em>, <em>paused=None</em>, <em>urls=None</em>, <em>zone=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2305,6 +2767,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The DNS zone to which the access rule should be added.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.ZoneLockdown.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>configurations=None</em>, <em>description=None</em>, <em>paused=None</em>, <em>urls=None</em>, <em>zone=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ZoneLockdown resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] configurations: A list of IP addresses or IP ranges to match the request against specified in target, value pairs.  It’s a complex value. See description below.   The order of the configuration entries is unimportant.
+:param pulumi.Input[str] description: A description about the lockdown entry. Typically used as a reminder or explanation for the lockdown.
+:param pulumi.Input[bool] paused: Boolean of whether this zone lockdown is currently paused. Default: false.
+:param pulumi.Input[list] urls: A list of simple wildcard patterns to match requests against. The order of the urls is unimportant.
+:param pulumi.Input[str] zone: The DNS zone to which the lockdown will be added. Will be resolved to <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> upon creation.
+:param pulumi.Input[str] zone_id: The DNS zone to which the access rule should be added.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.ZoneLockdown.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2347,7 +2827,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.ZoneSettingsOverride">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">ZoneSettingsOverride</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">ZoneSettingsOverride</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2391,6 +2871,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.ZoneSettingsOverride.settings">
 <code class="descname">settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride.settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_cloudflare.ZoneSettingsOverride.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>initial_settings=None</em>, <em>initial_settings_read_at=None</em>, <em>name=None</em>, <em>readonly_settings=None</em>, <em>settings=None</em>, <em>zone_status=None</em>, <em>zone_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ZoneSettingsOverride resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] initial_settings: Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the <code class="docutils literal notranslate"><span class="pre">settings</span></code> attribute (Above).
+:param pulumi.Input[str] name: The DNS zone to which apply settings.
+:param pulumi.Input[list] readonly_settings: Which of the current <code class="docutils literal notranslate"><span class="pre">settings</span></code> are not able to be set by the user. Which settings these are is determined by plan level and user permissions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

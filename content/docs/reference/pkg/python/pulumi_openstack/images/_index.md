@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.images"></span><dl class="class">
+<dt id="pulumi_openstack.images.AwaitableGetImageResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>member_status=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>visibility=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.images.GetImageResult">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>member_status=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>visibility=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
@@ -102,7 +107,7 @@ the image or image</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.images.Image">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_format=None</em>, <em>disk_format=None</em>, <em>image_cache_path=None</em>, <em>image_source_url=None</em>, <em>local_file_path=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>verify_checksum=None</em>, <em>visibility=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_format=None</em>, <em>disk_format=None</em>, <em>image_cache_path=None</em>, <em>image_source_url=None</em>, <em>local_file_path=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>verify_checksum=None</em>, <em>visibility=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Image resource within OpenStack Glance.</p>
 <p>This resource supports the ability to add properties to a resource during
 creation as well as add, update, and delete properties during an update of this
@@ -320,6 +325,77 @@ once the image is finished uploading. Defaults to true.</p>
 <dd><p>The visibility of the image. Must be one of
 “public”, “private”, “community”, or “shared”. The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.images.Image.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>image_cache_path=None</em>, <em>image_source_url=None</em>, <em>local_file_path=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>update_at=None</em>, <em>updated_at=None</em>, <em>verify_checksum=None</em>, <em>visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Image resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] checksum: The checksum of the data associated with the image.
+:param pulumi.Input[str] container_format: The container format. Must be one of</p>
+<blockquote>
+<div>“ami”, “ari”, “aki”, “bare”, “ovf”.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image was created.</li>
+<li><strong>disk_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The disk format. Must be one of
+“ami”, “ari”, “aki”, “vhd”, “vmdk”, “raw”, “qcow2”, “vdi”, “iso”.</li>
+<li><strong>file</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the trailing path after the glance
+endpoint that represent the location of the image
+or the path to retrieve it.</li>
+<li><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image that will
+be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
+Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
+does not yet provide a way to do so.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</li>
+<li><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the filepath of the raw image file
+that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</li>
+<li><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metadata associated with the image.
+Image metadata allow for meaningfully define the image properties
+and tags. See <a class="reference external" href="https://docs.openstack.org/glance/latest/user/metadefs-concepts.html">https://docs.openstack.org/glance/latest/user/metadefs-concepts.html</a>.</li>
+<li><strong>min_disk_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of disk space (in GB) required to boot image.
+Defaults to 0.</li>
+<li><strong>min_ram_mb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of ram (in MB) required to boot image.
+Defauts to 0.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the image.</li>
+<li><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the openstack user who owns the image.</li>
+<li><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key/value pairs to set freeform
+information about an image. See the “Notes” section for further
+information about properties.</li>
+<li><strong>protected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, image will not be deletable.
+Defaults to false.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Glance client.
+A Glance client is needed to create an Image that can be used with
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
+is used. Changing this creates a new Image.</li>
+<li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the JSON-schema that represent
+the image or image</li>
+<li><strong>size_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in bytes of the data associated with the image.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the image. It can be “queued”, “active”
+or “saving”.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags of the image. It must be a list of strings.
+At this time, it is not possible to delete all tags of an image.</li>
+<li><strong>update_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">updated_at</span></code> instead)</li>
+<li><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image was last updated.</li>
+<li><strong>verify_checksum</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, the checksum will not be verified
+once the image is finished uploading. Defaults to true.</li>
+<li><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The visibility of the image. Must be one of
+“public”, “private”, “community”, or “shared”. The ability to set the
+visibility depends upon the configuration of the OpenStack cloud.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

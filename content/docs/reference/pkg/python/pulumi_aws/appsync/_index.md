@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.appsync"></span><dl class="class">
 <dt id="pulumi_aws.appsync.ApiKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">ApiKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>description=None</em>, <em>expires=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">ApiKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>description=None</em>, <em>expires=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync API Key.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -20,6 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated AppSync API</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API key description. Defaults to “Managed by Pulumi”.</li>
 <li><strong>expires</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.</li>
 </ul>
 </td>
@@ -35,6 +36,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.appsync.ApiKey.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.ApiKey.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API key description. Defaults to “Managed by Pulumi”.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.appsync.ApiKey.expires">
 <code class="descname">expires</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.ApiKey.expires" title="Permalink to this definition">¶</a></dt>
 <dd><p>RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.</p>
@@ -44,6 +51,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appsync.ApiKey.key">
 <code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.ApiKey.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The API key</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.appsync.ApiKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>description=None</em>, <em>expires=None</em>, <em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApiKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_id: The ID of the associated AppSync API
+:param pulumi.Input[str] description: The API key description. Defaults to “Managed by Pulumi”.
+:param pulumi.Input[str] expires: RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
+:param pulumi.Input[str] key: The API key</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -88,7 +111,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.DataSource">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">DataSource</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>description=None</em>, <em>dynamodb_config=None</em>, <em>elasticsearch_config=None</em>, <em>http_config=None</em>, <em>lambda_config=None</em>, <em>name=None</em>, <em>service_role_arn=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">DataSource</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>description=None</em>, <em>dynamodb_config=None</em>, <em>elasticsearch_config=None</em>, <em>http_config=None</em>, <em>lambda_config=None</em>, <em>name=None</em>, <em>service_role_arn=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync DataSource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -173,6 +196,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The type of the DataSource. Valid values: <code class="docutils literal notranslate"><span class="pre">AWS_LAMBDA</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_DYNAMODB</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_ELASTICSEARCH</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.appsync.DataSource.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>dynamodb_config=None</em>, <em>elasticsearch_config=None</em>, <em>http_config=None</em>, <em>lambda_config=None</em>, <em>name=None</em>, <em>service_role_arn=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DataSource resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_id: The API ID for the GraphQL API for the DataSource.
+:param pulumi.Input[str] arn: The ARN
+:param pulumi.Input[str] description: A description of the DataSource.
+:param pulumi.Input[dict] dynamodb_config: DynamoDB settings. See below
+:param pulumi.Input[dict] elasticsearch_config: Amazon Elasticsearch settings. See below
+:param pulumi.Input[dict] http_config: HTTP settings. See below
+:param pulumi.Input[dict] lambda_config: AWS Lambda settings. See below
+:param pulumi.Input[str] name: A user-supplied name for the DataSource.
+:param pulumi.Input[str] service_role_arn: The IAM service role ARN for the data source.
+:param pulumi.Input[str] type: The type of the DataSource. Valid values: <code class="docutils literal notranslate"><span class="pre">AWS_LAMBDA</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_DYNAMODB</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_ELASTICSEARCH</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.appsync.DataSource.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -215,7 +260,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.Function">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>data_source=None</em>, <em>description=None</em>, <em>function_version=None</em>, <em>name=None</em>, <em>request_mapping_template=None</em>, <em>response_mapping_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>data_source=None</em>, <em>description=None</em>, <em>function_version=None</em>, <em>name=None</em>, <em>request_mapping_template=None</em>, <em>response_mapping_template=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Function.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -292,6 +337,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Function response mapping template.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.appsync.Function.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>arn=None</em>, <em>data_source=None</em>, <em>description=None</em>, <em>function_id=None</em>, <em>function_version=None</em>, <em>name=None</em>, <em>request_mapping_template=None</em>, <em>response_mapping_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Function resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_id: The ID of the associated AppSync API.
+:param pulumi.Input[str] arn: The ARN of the Function object.
+:param pulumi.Input[str] data_source: The Function DataSource name.
+:param pulumi.Input[str] description: The Function description.
+:param pulumi.Input[str] function_id: A unique ID representing the Function object.
+:param pulumi.Input[str] function_version: The version of the request mapping template. Currently the supported value is <code class="docutils literal notranslate"><span class="pre">2018-05-29</span></code>.
+:param pulumi.Input[str] name: The Function name. The function name does not have to be unique.
+:param pulumi.Input[str] request_mapping_template: The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
+:param pulumi.Input[str] response_mapping_template: The Function response mapping template.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.appsync.Function.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -334,7 +400,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.GraphQLApi">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">GraphQLApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>schema=None</em>, <em>tags=None</em>, <em>user_pool_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">GraphQLApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>schema=None</em>, <em>tags=None</em>, <em>user_pool_config=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync GraphQL API.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -347,6 +413,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing logging configuration. Defined below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-supplied name for the GraphqlApi.</li>
 <li><strong>openid_connect_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing OpenID Connect configuration. Defined below.</li>
+<li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>user_pool_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Cognito User Pool configuration. Defined below.</li>
 </ul>
@@ -387,6 +454,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.appsync.GraphQLApi.schema">
+<code class="descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.appsync.GraphQLApi.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
@@ -402,6 +475,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi.user_pool_config">
 <code class="descname">user_pool_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.user_pool_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Cognito User Pool configuration. Defined below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.appsync.GraphQLApi.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>schema=None</em>, <em>tags=None</em>, <em>uris=None</em>, <em>user_pool_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GraphQLApi resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN
+:param pulumi.Input[str] authentication_type: The authentication type. Valid values: <code class="docutils literal notranslate"><span class="pre">API_KEY</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_COGNITO_USER_POOLS</span></code>, <code class="docutils literal notranslate"><span class="pre">OPENID_CONNECT</span></code>
+:param pulumi.Input[dict] log_config: Nested argument containing logging configuration. Defined below.
+:param pulumi.Input[str] name: A user-supplied name for the GraphqlApi.
+:param pulumi.Input[dict] openid_connect_config: Nested argument containing OpenID Connect configuration. Defined below.
+:param pulumi.Input[str] schema: The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[dict] uris: Map of URIs associated with the API. e.g. <code class="docutils literal notranslate"><span class="pre">uris[&quot;GRAPHQL&quot;]</span> <span class="pre">=</span> <span class="pre">https://ID.appsync-api.REGION.amazonaws.com/graphql</span></code>
+:param pulumi.Input[dict] user_pool_config: The Amazon Cognito User Pool configuration. Defined below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -446,7 +540,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.Resolver">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">Resolver</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>data_source=None</em>, <em>field=None</em>, <em>kind=None</em>, <em>pipeline_config=None</em>, <em>request_template=None</em>, <em>response_template=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">Resolver</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>data_source=None</em>, <em>field=None</em>, <em>kind=None</em>, <em>pipeline_config=None</em>, <em>request_template=None</em>, <em>response_template=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Resolver.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -522,6 +616,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type name from the schema defined in the GraphQL API.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.appsync.Resolver.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>arn=None</em>, <em>data_source=None</em>, <em>field=None</em>, <em>kind=None</em>, <em>pipeline_config=None</em>, <em>request_template=None</em>, <em>response_template=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Resolver resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] api_id: The API ID for the GraphQL API.
+:param pulumi.Input[str] arn: The ARN
+:param pulumi.Input[str] data_source: The DataSource name.
+:param pulumi.Input[str] field: The field name from the schema defined in the GraphQL API.
+:param pulumi.Input[str] kind: The resolver type. Valid values are <code class="docutils literal notranslate"><span class="pre">UNIT</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPELINE</span></code>.
+:param pulumi.Input[dict] pipeline_config: The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.
+:param pulumi.Input[str] request_template: The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.
+:param pulumi.Input[str] response_template: The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.
+:param pulumi.Input[str] type: The type name from the schema defined in the GraphQL API.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.networking"></span><dl class="class">
 <dt id="pulumi_openstack.networking.AddressScope">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AddressScope</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AddressScope" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AddressScope</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AddressScope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron addressscope resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -79,6 +79,43 @@ all projects. Changing this updates the shared status of the existing
 address-scope.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.AddressScope.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AddressScope.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AddressScope resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] ip_version: IP version, either 4 (default) or 6. Changing this</p>
+<blockquote>
+<div>creates a new address-scope.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the address-scope. Changing this updates the
+name of the existing address-scope.</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the address-scope. Required if admin
+wants to create a address-scope for another project. Changing this creates a
+new address-scope.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron address-scope. If omitted,
+the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+address-scope.</li>
+<li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this address-scope is shared across
+all projects. Changing this updates the shared status of the existing
+address-scope.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.AddressScope.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AddressScope.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -120,8 +157,78 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetAddressScopeResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetAddressScopeResult</code><span class="sig-paren">(</span><em>ip_version=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetAddressScopeResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetFloatingIpResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetFloatingIpResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>all_tags=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetNetworkResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>all_tags=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>external=None</em>, <em>matching_subnet_cidr=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetPortIdsResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetPortIdsResult</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>ids=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetPortIdsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetPortResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetPortResult</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>all_fixed_ips=None</em>, <em>all_security_group_ids=None</em>, <em>all_tags=None</em>, <em>allowed_address_pairs=None</em>, <em>bindings=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_assignments=None</em>, <em>dns_name=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetPortResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetQosBandwidthLimitRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetQosBandwidthLimitRuleResult</code><span class="sig-paren">(</span><em>direction=None</em>, <em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosBandwidthLimitRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetQosDscpMarkingRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetQosDscpMarkingRuleResult</code><span class="sig-paren">(</span><em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosDscpMarkingRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetQosMinimumBandwidthRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetQosMinimumBandwidthRuleResult</code><span class="sig-paren">(</span><em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosMinimumBandwidthRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetQosPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetQosPolicyResult</code><span class="sig-paren">(</span><em>all_tags=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>revision_number=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetRouterResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetRouterResult</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>all_tags=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>external_fixed_ips=None</em>, <em>external_network_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetRouterResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetSecGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetSecGroupResult</code><span class="sig-paren">(</span><em>all_tags=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>secgroup_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSecGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetSubnetPoolResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetSubnetPoolResult</code><span class="sig-paren">(</span><em>address_scope_id=None</em>, <em>all_tags=None</em>, <em>created_at=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>prefixes=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>revision_number=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSubnetPoolResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetSubnetResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em>all_tags=None</em>, <em>allocation_pools=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dhcp_disabled=None</em>, <em>dhcp_enabled=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.AwaitableGetTrunkResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">AwaitableGetTrunkResult</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>all_tags=None</em>, <em>description=None</em>, <em>name=None</em>, <em>port_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>sub_ports=None</em>, <em>tags=None</em>, <em>trunk_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetTrunkResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.networking.FloatingIp">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">FloatingIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">FloatingIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 floating IP resource within OpenStack Neutron (networking)
 that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
@@ -271,6 +378,63 @@ may or may not have a different address)</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.FloatingIp.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>all_tags=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIp.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FloatingIp resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The actual/specific floating IP to obtain. By default,</p>
+<blockquote>
+<div>non-admin users are not able to specify a floating IP, so you must either be
+an admin user or have had a custom policy or role applied to your OpenStack
+user or project.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the floating IP, which have
+been explicitly and implicitly added.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the floating IP.</li>
+<li><strong>dns_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The floating IP DNS domain. Available, when Neutron
+DNS extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.</li>
+<li><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The floating IP DNS name. Available, when Neutron DNS
+extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.</li>
+<li><strong>fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fixed IP of the port to associate with this floating IP. Required if
+the port has multiple fixed IPs.</li>
+<li><strong>pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pool from which to obtain the floating
+IP. Changing this creates a new floating IP.</li>
+<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an existing port with at least one IP address to
+associate with this floating IP.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a floating IP that can be used with
+another networking resource, such as a load balancer. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+floating IP (which may or may not have a different address).</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID of the floating IP pool. Specify this if
+the floating IP network has multiple subnets.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the floating IP.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target tenant ID in which to allocate the floating
+IP, if you specify this together with a port_id, make sure the target port
+belongs to the same tenant. Changing this creates a new floating IP (which
+may or may not have a different address)</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.FloatingIp.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIp.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -313,10 +477,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.FloatingIpAssociate">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
-<code class="docutils literal notranslate"><span class="pre">openstack_networking_floatingip_v2</span></code> resource to create a floating IP.</p>
+<code class="docutils literal notranslate"><span class="pre">networking.FloatingIp</span></code> resource to create a floating IP.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -360,6 +524,34 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.FloatingIpAssociate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>port_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIpAssociate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FloatingIpAssociate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] floating_ip: IP Address of an existing floating IP.
+:param pulumi.Input[str] port_id: ID of an existing port with at least one IP address to</p>
+<blockquote>
+<div>associate with this floating IP.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a floating IP that can be used with
+another networking resource, such as a load balancer. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+floating IP (which may or may not have a different address).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1121,7 +1313,7 @@ described below.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Network">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>external=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>segments=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>external=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>segments=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron network resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1310,6 +1502,74 @@ network.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.Network.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>all_tags=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>external=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>segments=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Network resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the network.</p>
+<blockquote>
+<div>Acceptable values are “true” and “false”. Changing this value updates the
+state of the existing network.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the network, which have been
+explicitly and implicitly added.</li>
+<li><strong>availability_zone_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An availability zone is used to make
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new network.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the network. Changing this
+updates the name of the existing network.</li>
+<li><strong>dns_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network DNS domain. Available, when Neutron DNS
+extension is enabled. The <code class="docutils literal notranslate"><span class="pre">dns_domain</span></code> of a network in conjunction with the
+<code class="docutils literal notranslate"><span class="pre">dns_name</span></code> attribute of its ports will be published in an external DNS
+service when Neutron is configured to integrate with such a service.</li>
+<li><strong>external</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the network resource has the
+external routing facility. Valid values are true and false. Defaults to
+false. Changing this updates the external attribute of the existing network.</li>
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The network MTU. Available for read-only, when Neutron
+<code class="docutils literal notranslate"><span class="pre">net-mtu</span></code> extension is enabled. Available for the modification, when
+Neutron <code class="docutils literal notranslate"><span class="pre">net-mtu-writable</span></code> extension is enabled.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the network. Changing this updates the name of
+the existing network.</li>
+<li><strong>port_security_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to explicitly enable or disable
+port security on the network. Port Security is usually enabled by default, so
+omitting this argument will usually result in a value of “true”. Setting this
+explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Reference to the associated QoS policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron network. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+network.</li>
+<li><strong>segments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more provider segment objects.</li>
+<li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the network resource can be accessed
+by any tenant or not. Changing this updates the sharing capabilities of the
+existing network.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the network.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the network. Required if admin wants to
+create a network for another tenant. Changing this creates a new network.</li>
+<li><strong>transparent_vlan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the network resource has the
+VLAN transparent attribute set. Valid values are true and false. Defaults to
+false. Changing this updates the <code class="docutils literal notranslate"><span class="pre">transparent_vlan</span></code> attribute of the existing
+network.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.Network.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1352,10 +1612,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Port">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Port</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>allowed_address_pairs=None</em>, <em>binding=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ips=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_fixed_ip=None</em>, <em>no_security_groups=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Port</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>allowed_address_pairs=None</em>, <em>binding=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ips=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_fixed_ip=None</em>, <em>no_security_groups=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 port resource within OpenStack.</p>
 <p>There are some notes to consider when connecting Instances to networks using
-Ports. Please see the <code class="docutils literal notranslate"><span class="pre">openstack_compute_instance_v2</span></code> documentation for further
+Ports. Please see the <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code> documentation for further
 documentation.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1611,6 +1871,90 @@ to create a port for another tenant. Changing this creates a new port.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.Port.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>all_fixed_ips=None</em>, <em>all_security_group_ids=None</em>, <em>all_tags=None</em>, <em>allowed_address_pairs=None</em>, <em>binding=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_assignments=None</em>, <em>dns_name=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ips=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_fixed_ip=None</em>, <em>no_security_groups=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Port resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the port</p>
+<blockquote>
+<div>(must be “true” or “false” if provided). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing port.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>all_fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of Fixed IP addresses on the port in the
+order returned by the Network v2 API.</li>
+<li><strong>all_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of Security Group IDs on the port
+which have been explicitly and implicitly added.</li>
+<li><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the port, which have been
+explicitly and implicitly added.</li>
+<li><strong>allowed_address_pairs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An IP/MAC Address pair of additional IP
+addresses that can be active on this port. The structure is described
+below.</li>
+<li><strong>binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The port binding allows to specify binding information
+for the port. The structure is described below.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the floating IP. Changing
+this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing port.</li>
+<li><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the device attached to the port. Changing this
+creates a new port.</li>
+<li><strong>device_owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device owner of the Port. Changing this creates
+a new port.</li>
+<li><strong>dns_assignments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of maps representing port DNS assignments.</li>
+<li><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port DNS name. Available, when Neutron DNS extension
+is enabled.</li>
+<li><strong>extra_dhcp_options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An extra DHCP option that needs to be configured
+on the port. The structure is described below. Can be specified multiple
+times.</li>
+<li><strong>fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of desired IPs for
+this port. The structure is described below.</li>
+<li><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify a specific MAC address for the port. Changing
+this creates a new port.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the port. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</li>
+<li><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network to attach the port to. Changing
+this creates a new port.</li>
+<li><strong>no_fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create a port with no fixed
+IP address. This will also remove any fixed IPs previously set on a port. <code class="docutils literal notranslate"><span class="pre">true</span></code>
+is the only valid value for this argument.</li>
+<li><strong>no_security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code>, then no security groups are applied to the port. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> and
+no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the Port will yield to the default
+behavior of the Networking service, which is to usually apply the “default”
+security group.</li>
+<li><strong>port_security_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to explicitly enable or disable
+port security on the port. Port Security is usually enabled by default, so
+omitting argument will usually result in a value of “true”. Setting this
+explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. In order to disable port
+security, the port must not have any security groups. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code>
+and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Reference to the associated QoS policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to create a port. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+port.</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list
+of security group IDs to apply to the port. The security groups must be
+specified by ID and not name (as opposed to how they are configured with
+the Compute Instance).</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the port.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the Port. Required if admin wants
+to create a port for another tenant. Changing this creates a new port.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.Port.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1653,7 +1997,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">PortSecGroupAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enforce=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">PortSecGroupAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enforce=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a PortSecGroupAssociate resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1716,6 +2060,41 @@ the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.PortSecGroupAssociate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>all_security_group_ids=None</em>, <em>enforce=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PortSecGroupAssociate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] all_security_group_ids: The collection of Security Group IDs on the port</p>
+<blockquote>
+<div>which have been explicitly and implicitly added.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>enforce</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to replace or append the list of security
+groups, specified in the <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An UUID of the port to apply security groups to.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to manage a port. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+resource.</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to apply to
+the port. The security groups must be specified by ID and not name (as
+opposed to how they are configured with the Compute Instance).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1758,7 +2137,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.QosBandwidthLimitRule">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosBandwidthLimitRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>direction=None</em>, <em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosBandwidthLimitRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>direction=None</em>, <em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1819,6 +2198,39 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS bandwidth limit rule.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>direction=None</em>, <em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QosBandwidthLimitRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] direction: The direction of traffic. Defaults to “egress”. Changing this updates the direction of the</p>
+<blockquote>
+<div>existing QoS bandwidth limit rule.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_burst_kbps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size in kilobits of a QoS bandwidth limit rule. Changing this updates the
+maximum burst size in kilobits of the existing QoS bandwidth limit rule.</li>
+<li><strong>max_kbps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum kilobits per second of a QoS bandwidth limit rule. Changing this updates the
+maximum kilobits per second of the existing QoS bandwidth limit rule.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS bandwidth limit rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.QosBandwidthLimitRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1861,7 +2273,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.QosDscpMarkingRule">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosDscpMarkingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosDscpMarkingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1902,6 +2314,35 @@ QoS DSCP marking rule.</p>
 <dd><p>The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS DSCP marking rule.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QosDscpMarkingRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] dscp_mark: The value of DSCP mark. Changing this updates the DSCP mark value existing</p>
+<blockquote>
+<div>QoS DSCP marking rule.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The QoS policy reference. Changing this creates a new QoS DSCP marking rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS DSCP marking rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1946,7 +2387,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.QosMinimumBandwidthRule">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosMinimumBandwidthRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosMinimumBandwidthRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1998,6 +2439,37 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QosMinimumBandwidthRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] direction: The direction of traffic. Defaults to “egress”. Changing this updates the direction of the</p>
+<blockquote>
+<div>existing QoS minimum bandwidth rule.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>min_kbps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum kilobits per second. Changing this updates the min kbps value of the existing
+QoS minimum bandwidth rule.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2040,7 +2512,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.QosPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS policy resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2157,6 +2629,52 @@ QoS policy.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.QosPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>all_tags=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>revision_number=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QosPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] all_tags: The collection of tags assigned on the QoS policy, which have been</p>
+<blockquote>
+<div>explicitly and implicitly added.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which QoS policy was created.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the QoS policy.
+Changing this updates the description of the existing QoS policy.</li>
+<li><strong>is_default</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the QoS policy is default
+QoS policy or not. Changing this updates the default status of the existing
+QoS policy.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the QoS policy. Changing this updates the name of
+the existing QoS policy.</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the QoS policy. Required if admin wants to
+create a QoS policy for another project. Changing this creates a new QoS policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron Qos policy. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+QoS policy.</li>
+<li><strong>revision_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The revision number of the QoS policy.</li>
+<li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this QoS policy is shared across
+all projects. Changing this updates the shared status of the existing
+QoS policy.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the QoS policy.</li>
+<li><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which QoS policy was created.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.QosPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2199,7 +2717,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Router">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Router</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>external_fixed_ips=None</em>, <em>external_gateway=None</em>, <em>external_network_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vendor_options=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Router" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Router</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>external_fixed_ips=None</em>, <em>external_gateway=None</em>, <em>external_network_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vendor_options=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 router resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2368,6 +2886,69 @@ to create a router for another tenant. Changing this creates a new router.</p>
 Supported options are described below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.Router.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>all_tags=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>external_fixed_ips=None</em>, <em>external_gateway=None</em>, <em>external_network_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vendor_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Router.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Router resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the router</p>
+<blockquote>
+<div>(must be “true” or “false” if provided). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing router.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the router, which have been
+explicitly and implicitly added.</li>
+<li><strong>availability_zone_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An availability zone is used to make 
+network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
+this creates a new router.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the router.</li>
+<li><strong>distributed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not to create a
+distributed router. The default policy setting in Neutron restricts
+usage of this property to administrative users only.</li>
+<li><strong>enable_snat</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Source NAT for the router. Valid values are
+“true” or “false”. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code> has to be set in order to
+set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.</li>
+<li><strong>external_fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An external fixed IP for the router. This
+can be repeated. The structure is described below. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code>
+has to be set in order to set this property. Changing this updates the
+external fixed IPs of the router.</li>
+<li><strong>external_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The
+network UUID of an external gateway for the router. A router with an
+external gateway is required if any compute instances or load balancers
+will be using floating IPs. Changing this updates the external gateway
+of an existing router.</li>
+<li><strong>external_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network UUID of an external gateway
+for the router. A router with an external gateway is required if any
+compute instances or load balancers will be using floating IPs. Changing
+this updates the external gateway of the router.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the router. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing router.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to create a router. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+router.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the router.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the floating IP. Required if admin wants
+to create a router for another tenant. Changing this creates a new router.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional driver-specific options.</li>
+<li><strong>vendor_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional vendor-specific options.
+Supported options are described below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.Router.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Router.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2410,7 +2991,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.RouterInterface">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">RouterInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">RouterInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 router interface resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2466,6 +3047,39 @@ this creates a new router interface.</p>
 this creates a new router interface.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.RouterInterface.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RouterInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] port_id: ID of the port this interface connects to. Changing</p>
+<blockquote>
+<div>this creates a new router interface.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to create a router. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+router interface.</li>
+<li><strong>router_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the router this interface belongs to. Changing
+this creates a new router interface.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the subnet this interface connects to. Changing
+this creates a new router interface.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.RouterInterface.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2508,10 +3122,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.RouterRoute">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">RouterRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">RouterRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing entry on a OpenStack V2 router.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">next_hop</span></code> IP address must be directly reachable from the router at the <code class="docutils literal notranslate"><span class="pre">openstack_networking_router_route_v2</span></code>
-resource creation time.  You can ensure that by explicitly specifying a dependency on the <code class="docutils literal notranslate"><span class="pre">openstack_networking_router_interface_v2</span></code>
+<p>The <code class="docutils literal notranslate"><span class="pre">next_hop</span></code> IP address must be directly reachable from the router at the <code class="docutils literal notranslate"><span class="pre">networking.RouterRoute</span></code>
+resource creation time.  You can ensure that by explicitly specifying a dependency on the <code class="docutils literal notranslate"><span class="pre">networking.RouterInterface</span></code>
 resource that connects the next hop to the router, as in the example above.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2567,6 +3181,39 @@ routing entry.</p>
 this creates a new routing entry.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.RouterRoute.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>router_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RouterRoute resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] destination_cidr: CIDR block to match on the packet’s destination IP. Changing</p>
+<blockquote>
+<div>this creates a new routing entry.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>next_hop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of the next hop gateway.  Changing
+this creates a new routing entry.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to configure a routing entry on a router. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+routing entry.</li>
+<li><strong>router_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the router this routing entry belongs to. Changing
+this creates a new routing entry.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.RouterRoute.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2609,7 +3256,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.SecGroup">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SecGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>delete_default_rules=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SecGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>delete_default_rules=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 neutron security group resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
@@ -2690,6 +3337,44 @@ wants to create a port for another tenant. Changing this creates a new
 security group.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.SecGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>all_tags=None</em>, <em>delete_default_rules=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SecGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] all_tags: The collection of tags assigned on the security group, which have</p>
+<blockquote>
+<div>been explicitly and implicitly added.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>delete_default_rules</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to delete the default
+egress security rules. This is <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. See the below note
+for more information.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the security group.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the security group.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to create a port. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+security group.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the security group.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the security group. Required if admin
+wants to create a port for another tenant. Changing this creates a new
+security group.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.SecGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2732,7 +3417,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.SecGroupRule">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SecGroupRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>direction=None</em>, <em>ethertype=None</em>, <em>port_range_max=None</em>, <em>port_range_min=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>remote_group_id=None</em>, <em>remote_ip_prefix=None</em>, <em>security_group_id=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SecGroupRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>direction=None</em>, <em>ethertype=None</em>, <em>port_range_max=None</em>, <em>port_range_min=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>remote_group_id=None</em>, <em>remote_ip_prefix=None</em>, <em>security_group_id=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
@@ -2892,6 +3577,66 @@ wants to create a port for another tenant. Changing this creates a new
 security group rule.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.SecGroupRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>direction=None</em>, <em>ethertype=None</em>, <em>port_range_max=None</em>, <em>port_range_min=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>remote_group_id=None</em>, <em>remote_ip_prefix=None</em>, <em>security_group_id=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SecGroupRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description of the rule. Changing this creates a new security group rule.
+:param pulumi.Input[str] direction: The direction of the rule, valid values are <strong>ingress</strong></p>
+<blockquote>
+<div>or <strong>egress</strong>. Changing this creates a new security group rule.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ethertype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The layer 3 protocol type, valid values are <strong>IPv4</strong>
+or <strong>IPv6</strong>. Changing this creates a new security group rule.</li>
+<li><strong>port_range_max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The higher part of the allowed port range, valid
+integer value needs to be between 1 and 65535. Changing this creates a new
+security group rule.</li>
+<li><strong>port_range_min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The lower part of the allowed port range, valid
+integer value needs to be between 1 and 65535. Changing this creates a new
+security group rule.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to create a port. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+security group rule.</li>
+<li><strong>remote_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The remote group id, the value needs to be an
+Openstack ID of a security group in the same tenant. Changing this creates
+a new security group rule.</li>
+<li><strong>remote_ip_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The remote CIDR, the value needs to be a valid
+CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.</li>
+<li><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group id the rule should belong
+to, the value needs to be an Openstack ID of a security group in the same
+tenant. Changing this creates a new security group rule.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the security group. Required if admin
+wants to create a port for another tenant. Changing this creates a new
+security group rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.SecGroupRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2934,7 +3679,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Subnet">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_pools=None</em>, <em>allocation_pools_collection=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_gateway=None</em>, <em>prefix_length=None</em>, <em>region=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_pools=None</em>, <em>allocation_pools_collection=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_gateway=None</em>, <em>prefix_length=None</em>, <em>region=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnet resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2967,7 +3712,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.</li>
 Leaving this blank and not setting <code class="docutils literal notranslate"><span class="pre">no_gateway</span></code> will cause a default
 gateway of <code class="docutils literal notranslate"><span class="pre">.1</span></code> to be used. Changing this updates the gateway IP of the
 existing subnet.</li>
-<li><strong>host_routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">openstack_networking_subnet_route_v2</span></code>
+<li><strong>host_routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">networking.SubnetRoute</span></code>
 instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
@@ -3073,7 +3818,7 @@ existing subnet.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.host_routes">
 <code class="descname">host_routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.host_routes" title="Permalink to this definition">¶</a></dt>
-<dd><p>(<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">openstack_networking_subnet_route_v2</span></code>
+<dd><p>(<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">networking.SubnetRoute</span></code>
 instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
@@ -3165,6 +3910,85 @@ create a subnet for another tenant. Changing this creates a new subnet.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.Subnet.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>all_tags=None</em>, <em>allocation_pools=None</em>, <em>allocation_pools_collection=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_gateway=None</em>, <em>prefix_length=None</em>, <em>region=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Subnet resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] all_tags: The collection of ags assigned on the subnet, which have been</p>
+<blockquote>
+<div>explicitly and implicitly added.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>allocation_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block declaring the start and end range of
+the IP addresses available for use with DHCP in this subnet. Multiple
+<code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> blocks can be declared, providing the subnet with more
+than one range of IP addresses to use with DHCP. However, each IP range
+must be from the same CIDR that the subnet is part of.
+The <code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> block is documented below.</li>
+<li><strong>allocation_pools_collection</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block declaring the start and end range of the IP addresses available for
+use with DHCP in this subnet.
+The <code class="docutils literal notranslate"><span class="pre">allocation_pools</span></code> block is documented below.</li>
+<li><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR representing IP range for this subnet, based on IP
+version. You can omit this option if you are creating a subnet from a
+subnet pool.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the subnet. Changing this
+updates the name of the existing subnet.</li>
+<li><strong>dns_nameservers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of DNS name server names used by hosts
+in this subnet. Changing this updates the DNS name servers for the existing
+subnet.</li>
+<li><strong>enable_dhcp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the network.
+Acceptable values are “true” and “false”. Changing this value enables or
+disables the DHCP capabilities of the existing subnet. Defaults to true.</li>
+<li><strong>gateway_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default gateway used by devices in this subnet.
+Leaving this blank and not setting <code class="docutils literal notranslate"><span class="pre">no_gateway</span></code> will cause a default
+gateway of <code class="docutils literal notranslate"><span class="pre">.1</span></code> to be used. Changing this updates the gateway IP of the
+existing subnet.</li>
+<li><strong>host_routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">networking.SubnetRoute</span></code>
+instead) An array of routes that should be used by devices
+with IPs from this subnet (not including local subnet route). The host_route
+object structure is documented below. Changing this updates the host routes
+for the existing subnet.</li>
+<li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – IP version, either 4 (default) or 6. Changing this creates a
+new subnet.</li>
+<li><strong>ipv6_address_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 address mode. Valid values are
+<code class="docutils literal notranslate"><span class="pre">dhcpv6-stateful</span></code>, <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateless</span></code>, or <code class="docutils literal notranslate"><span class="pre">slaac</span></code>.</li>
+<li><strong>ipv6_ra_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 Router Advertisement mode. Valid values
+are <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateful</span></code>, <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateless</span></code>, or <code class="docutils literal notranslate"><span class="pre">slaac</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnet. Changing this updates the name of
+the existing subnet.</li>
+<li><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of the parent network. Changing this
+creates a new subnet.</li>
+<li><strong>no_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not set a gateway IP on this subnet. Changing
+this removes or adds a default gateway IP of the existing subnet.</li>
+<li><strong>prefix_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The prefix length to use when creating a subnet
+from a subnet pool. The default subnet pool prefix length that was defined
+when creating the subnet pool will be used if not provided. Changing this
+creates a new subnet.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron subnet. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+subnet.</li>
+<li><strong>subnetpool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnetpool associated with the subnet.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the subnet.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the subnet. Required if admin wants to
+create a subnet for another tenant. Changing this creates a new subnet.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.Subnet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -3207,7 +4031,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.SubnetPool">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SubnetPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_scope_id=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>prefixes=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SubnetPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_scope_id=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>prefixes=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnetpool resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3405,6 +4229,75 @@ subnetpool.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.SubnetPool.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_scope_id=None</em>, <em>all_tags=None</em>, <em>created_at=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>prefixes=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>revision_number=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SubnetPool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_scope_id: The Neutron address scope to assign to the</p>
+<blockquote>
+<div>subnetpool. Changing this updates the address scope id of the existing
+subnetpool.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the subnetpool, which have been
+explicitly and implicitly added.</li>
+<li><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which subnetpool was created.</li>
+<li><strong>default_prefixlen</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the prefix to allocate when the cidr
+or prefixlen attributes are omitted when you create the subnet. Defaults to the
+MinPrefixLen. Changing this updates the default prefixlen of the existing
+subnetpool.</li>
+<li><strong>default_quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The per-project quota on the prefix space that can be
+allocated from the subnetpool for project subnets. Changing this updates the
+default quota of the existing subnetpool.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the subnetpool.
+Changing this updates the description of the existing subnetpool.</li>
+<li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The IP protocol version.</li>
+<li><strong>is_default</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the subnetpool is default
+subnetpool or not. Changing this updates the default status of the existing
+subnetpool.</li>
+<li><strong>max_prefixlen</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum prefix size that can be allocated from
+the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
+default is 128. Changing this updates the max prefixlen of the existing
+subnetpool.</li>
+<li><strong>min_prefixlen</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The smallest prefix that can be allocated from a
+subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
+is 64. Changing this updates the min prefixlen of the existing subnetpool.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetpool. Changing this updates the name of
+the existing subnetpool.</li>
+<li><strong>prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet prefixes to assign to the subnetpool.
+Neutron API merges adjacent prefixes and treats them as a single prefix. Each
+subnet prefix must be unique among all subnet prefixes in all subnetpools that
+are associated with the address scope. Changing this updates the prefixes list
+of the existing subnetpool.</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the subnetpool. Required if admin wants to
+create a subnetpool for another project. Changing this creates a new subnetpool.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron subnetpool. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+subnetpool.</li>
+<li><strong>revision_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The revision number of the subnetpool.</li>
+<li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this subnetpool is shared across
+all projects. Changing this updates the shared status of the existing
+subnetpool.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the subnetpool.</li>
+<li><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time at which subnetpool was created.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.SubnetPool.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -3447,7 +4340,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.SubnetRoute">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SubnetRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SubnetRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing entry on a OpenStack V2 subnet.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3503,6 +4396,39 @@ routing entry.</p>
 this creates a new routing entry.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.SubnetRoute.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SubnetRoute resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] destination_cidr: CIDR block to match on the packet’s destination IP. Changing</p>
+<blockquote>
+<div>this creates a new routing entry.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>next_hop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of the next hop gateway.  Changing
+this creates a new routing entry.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to configure a routing entry on a subnet. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+routing entry.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the subnet this routing entry belongs to. Changing
+this creates a new routing entry.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.networking.SubnetRoute.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -3545,7 +4471,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Trunk">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Trunk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>sub_ports=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Trunk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Trunk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>sub_ports=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Trunk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a networking V2 trunk resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3644,6 +4570,50 @@ The structure of each subport is described below.</p>
 <code class="descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.tenant_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.networking.Trunk.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>all_tags=None</em>, <em>description=None</em>, <em>name=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>sub_ports=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Trunk.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Trunk resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the trunk</p>
+<blockquote>
+<div>(must be “true” or “false” if provided). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing trunk.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the trunk, which have been
+explicitly and implicitly added.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the trunk. Changing this
+updates the name of the existing trunk.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the trunk. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing trunk.</li>
+<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the port to be used as the parent port of the
+trunk. This is the port that should be used as the compute instance network
+port. Changing this creates a new trunk.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
+A networking client is needed to create a trunk. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+trunk.</li>
+<li><strong>sub_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of ports that will be made subports of the trunk.
+The structure of each subport is described below.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the port.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the Trunk. Required if admin wants
+to create a trunk on behalf of another tenant. Changing this creates a new trunk.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

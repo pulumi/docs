@@ -9,8 +9,13 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.directconnect"></span><dl class="class">
+<dt id="pulumi_aws.directconnect.AwaitableGetGatewayResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">AwaitableGetGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.AwaitableGetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.directconnect.BgpPeer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">BgpPeer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>customer_address=None</em>, <em>virtual_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">BgpPeer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>customer_address=None</em>, <em>virtual_interface_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect BGP peer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -90,6 +95,40 @@ Required for IPv4 BGP peers on public virtual interfaces.</p>
 <dd><p>The ID of the Direct Connect virtual interface on which to create the BGP peer.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.BgpPeer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>aws_device=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>bgp_peer_id=None</em>, <em>bgp_status=None</em>, <em>customer_address=None</em>, <em>virtual_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BgpPeer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.
+:param pulumi.Input[str] amazon_address: The IPv4 CIDR address to use to send traffic to Amazon.</p>
+<blockquote>
+<div>Required for IPv4 BGP peers on public virtual interfaces.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>aws_device</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Direct Connect endpoint on which the BGP peer terminates.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
+<li><strong>bgp_peer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the BGP peer.</li>
+<li><strong>bgp_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Up/Down state of the BGP peer.</li>
+<li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic.
+Required for IPv4 BGP peers on public virtual interfaces.</li>
+<li><strong>virtual_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect virtual interface on which to create the BGP peer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_bgp_peer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_bgp_peer.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.BgpPeer.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -132,7 +171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.Connection">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bandwidth=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Connection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bandwidth=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Connection of Direct Connect.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -200,6 +239,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.Connection.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>aws_device=None</em>, <em>bandwidth=None</em>, <em>has_logical_redundancy=None</em>, <em>jumbo_frame_capable=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Connection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the connection.
+:param pulumi.Input[str] aws_device: The Direct Connect endpoint on which the physical connection terminates.
+:param pulumi.Input[str] bandwidth: The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
+:param pulumi.Input[str] has_logical_redundancy: Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
+:param pulumi.Input[bool] jumbo_frame_capable: Boolean value representing if jumbo frames have been enabled for this connection.
+:param pulumi.Input[str] location: The AWS Direct Connect location where the connection is located. See <a class="reference external" href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html">DescribeLocations</a> for the list of AWS Direct Connect locations. Use <code class="docutils literal notranslate"><span class="pre">locationCode</span></code>.
+:param pulumi.Input[str] name: The name of the connection.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.Connection.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Connection.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -242,7 +301,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.ConnectionAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">ConnectionAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connection_id=None</em>, <em>lag_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.ConnectionAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">ConnectionAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connection_id=None</em>, <em>lag_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.ConnectionAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a Direct Connect Connection with a LAG.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -270,6 +329,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.ConnectionAssociation.lag_id">
 <code class="descname">lag_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.ConnectionAssociation.lag_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the LAG with which to associate the connection.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.ConnectionAssociation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>connection_id=None</em>, <em>lag_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.ConnectionAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ConnectionAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] connection_id: The ID of the connection.
+:param pulumi.Input[str] lag_id: The ID of the LAG with which to associate the connection.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection_association.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -314,7 +387,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.Gateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">Gateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Gateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">Gateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -348,6 +421,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.Gateway.owner_account_id">
 <code class="descname">owner_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.Gateway.owner_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>AWS Account ID of the gateway.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.Gateway.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>name=None</em>, <em>owner_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.Gateway.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Gateway resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] amazon_side_asn: The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
+:param pulumi.Input[str] name: The name of the connection.
+:param pulumi.Input[str] owner_account_id: AWS Account ID of the gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -392,11 +480,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.GatewayAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>associated_gateway_owner_account_id=None</em>, <em>dx_gateway_id=None</em>, <em>proposal_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>associated_gateway_owner_account_id=None</em>, <em>dx_gateway_id=None</em>, <em>proposal_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a Direct Connect Gateway with a VGW or transit gateway.</p>
-<p>To create a cross-account association, create an <cite>``aws_dx_gateway_association_proposal`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html</a>&gt;`_
+<p>To create a cross-account association, create an <cite>``directconnect.GatewayAssociationProposal`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html</a>&gt;`_
 in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
-by creating an <code class="docutils literal notranslate"><span class="pre">aws_dx_gateway_association</span></code> resource with the <code class="docutils literal notranslate"><span class="pre">proposal_id</span></code> and <code class="docutils literal notranslate"><span class="pre">associated_gateway_owner_account_id</span></code> attributes set.</p>
+by creating an <code class="docutils literal notranslate"><span class="pre">directconnect.GatewayAssociation</span></code> resource with the <code class="docutils literal notranslate"><span class="pre">proposal_id</span></code> and <code class="docutils literal notranslate"><span class="pre">associated_gateway_owner_account_id</span></code> attributes set.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -479,6 +567,42 @@ Used for cross-account Direct Connect gateway associations.</p>
 Used for single account Direct Connect gateway associations.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.GatewayAssociation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>associated_gateway_owner_account_id=None</em>, <em>associated_gateway_type=None</em>, <em>dx_gateway_association_id=None</em>, <em>dx_gateway_id=None</em>, <em>dx_gateway_owner_account_id=None</em>, <em>proposal_id=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GatewayAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] allowed_prefixes: VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+:param pulumi.Input[str] associated_gateway_id: The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.</p>
+<blockquote>
+<div>Used for single account Direct Connect gateway associations.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>associated_gateway_owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+Used for cross-account Direct Connect gateway associations.</li>
+<li><strong>associated_gateway_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the associated gateway, <code class="docutils literal notranslate"><span class="pre">transitGateway</span></code> or <code class="docutils literal notranslate"><span class="pre">virtualPrivateGateway</span></code>.</li>
+<li><strong>dx_gateway_association_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway association.</li>
+<li><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway.</li>
+<li><strong>dx_gateway_owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the Direct Connect gateway.</li>
+<li><strong>proposal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway association proposal.
+Used for cross-account Direct Connect gateway associations.</li>
+<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. The ID of the VGW with which to associate the gateway.
+Used for single account Direct Connect gateway associations.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.GatewayAssociation.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -521,8 +645,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociationProposal</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>dx_gateway_id=None</em>, <em>dx_gateway_owner_account_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the <cite>``aws_dx_gateway_association`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html</a>&gt;`_.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociationProposal</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>dx_gateway_id=None</em>, <em>dx_gateway_owner_account_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the <cite>``directconnect.GatewayAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html</a>&gt;`_.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -582,6 +706,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal.vpn_gateway_id">
 <code class="descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.GatewayAssociationProposal.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>associated_gateway_owner_account_id=None</em>, <em>associated_gateway_type=None</em>, <em>dx_gateway_id=None</em>, <em>dx_gateway_owner_account_id=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GatewayAssociationProposal resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] allowed_prefixes: VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+:param pulumi.Input[str] associated_gateway_id: The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+:param pulumi.Input[str] associated_gateway_owner_account_id: The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+:param pulumi.Input[str] associated_gateway_type: The type of the associated gateway, <code class="docutils literal notranslate"><span class="pre">transitGateway</span></code> or <code class="docutils literal notranslate"><span class="pre">virtualPrivateGateway</span></code>.
+:param pulumi.Input[str] dx_gateway_id: Direct Connect Gateway identifier.
+:param pulumi.Input[str] dx_gateway_owner_account_id: AWS Account identifier of the Direct Connect Gateway’s owner.
+:param pulumi.Input[str] vpn_gateway_id: <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association_proposal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association_proposal.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -650,7 +793,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterface">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPrivateVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>vlan=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPrivateVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>vlan=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator’s side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -755,6 +898,31 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 <dd><p>The VLAN ID.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterface.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>arn=None</em>, <em>aws_device=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>jumbo_frame_capable=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HostedPrivateVirtualInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.
+:param pulumi.Input[str] amazon_address: The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[str] aws_device: The Direct Connect endpoint on which the virtual interface terminates.
+:param pulumi.Input[float] bgp_asn: The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+:param pulumi.Input[str] bgp_auth_key: The authentication key for BGP configuration.
+:param pulumi.Input[str] connection_id: The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+:param pulumi.Input[str] customer_address: The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+:param pulumi.Input[bool] jumbo_frame_capable: Indicates whether jumbo frames (9001 MTU) are supported.
+:param pulumi.Input[float] mtu: The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">9001</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.
+:param pulumi.Input[str] name: The name for the virtual interface.
+:param pulumi.Input[str] owner_account_id: The AWS account that will own the new virtual interface.
+:param pulumi.Input[float] vlan: The VLAN ID.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterface.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -797,7 +965,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPrivateVirtualInterfaceAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>virtual_interface_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPrivateVirtualInterfaceAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>virtual_interface_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the accepter’s side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -848,6 +1016,23 @@ This resource accepts ownership of a private virtual interface created by anothe
 <dd><p>The ID of the virtual private gateway to which to connect the virtual interface.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>virtual_interface_id=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HostedPrivateVirtualInterfaceAccepter resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[str] dx_gateway_id: The ID of the Direct Connect gateway to which to connect the virtual interface.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] virtual_interface_id: The ID of the Direct Connect virtual interface to accept.
+:param pulumi.Input[str] vpn_gateway_id: The ID of the virtual private gateway to which to connect the virtual interface.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -890,7 +1075,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterface">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPublicVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>route_filter_prefixes=None</em>, <em>vlan=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPublicVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>route_filter_prefixes=None</em>, <em>vlan=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect hosted public virtual interface resource. This resource represents the allocator’s side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -989,6 +1174,30 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 <dd><p>The VLAN ID.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.HostedPublicVirtualInterface.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>arn=None</em>, <em>aws_device=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>name=None</em>, <em>owner_account_id=None</em>, <em>route_filter_prefixes=None</em>, <em>vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HostedPublicVirtualInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.
+:param pulumi.Input[str] amazon_address: The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[str] aws_device: The Direct Connect endpoint on which the virtual interface terminates.
+:param pulumi.Input[float] bgp_asn: The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+:param pulumi.Input[str] bgp_auth_key: The authentication key for BGP configuration.
+:param pulumi.Input[str] connection_id: The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+:param pulumi.Input[str] customer_address: The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+:param pulumi.Input[str] name: The name for the virtual interface.
+:param pulumi.Input[str] owner_account_id: The AWS account that will own the new virtual interface.
+:param pulumi.Input[list] route_filter_prefixes: A list of routes to be advertised to the AWS network in this region.
+:param pulumi.Input[float] vlan: The VLAN ID.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterface.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1031,7 +1240,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPublicVirtualInterfaceAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>virtual_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">HostedPublicVirtualInterfaceAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>virtual_interface_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the accepter’s side of a Direct Connect hosted public virtual interface.
 This resource accepts ownership of a public virtual interface created by another AWS account.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1066,6 +1275,21 @@ This resource accepts ownership of a public virtual interface created by another
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter.virtual_interface_id">
 <code class="descname">virtual_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter.virtual_interface_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Direct Connect virtual interface to accept.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>tags=None</em>, <em>virtual_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HostedPublicVirtualInterfaceAccepter resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] virtual_interface_id: The ID of the Direct Connect virtual interface to accept.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface_accepter.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1110,8 +1334,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">LinkAggregationGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connections_bandwidth=None</em>, <em>force_destroy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LinkAggregationGroup resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">LinkAggregationGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connections_bandwidth=None</em>, <em>force_destroy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Direct Connect LAG. Connections can be added to the LAG via the <cite>``directconnect.Connection`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection.html">https://www.terraform.io/docs/providers/aws/r/dx_connection.html</a>&gt;`_ and <cite>``directconnect.ConnectionAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html">https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html</a>&gt;`_ resources.</p>
+<blockquote>
+<div><em>NOTE:</em> When creating a LAG, Direct Connect requires creating a Connection. This provider will remove this unmanaged connection during resource creation.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1177,6 +1403,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.LinkAggregationGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>connections_bandwidth=None</em>, <em>force_destroy=None</em>, <em>has_logical_redundancy=None</em>, <em>jumbo_frame_capable=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LinkAggregationGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the LAG.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>connections_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.</li>
+<li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are <em>not</em> recoverable.</li>
+<li><strong>has_logical_redundancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The AWS Direct Connect location in which the LAG should be allocated. See <a class="reference external" href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html">DescribeLocations</a> for the list of AWS Direct Connect locations. Use <code class="docutils literal notranslate"><span class="pre">locationCode</span></code>.</p>
+</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the LAG.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_lag.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_lag.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1219,7 +1475,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.PrivateVirtualInterface">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">PrivateVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>dx_gateway_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vlan=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">PrivateVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>dx_gateway_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vlan=None</em>, <em>vpn_gateway_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect private virtual interface resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1339,6 +1595,45 @@ The MTU of a virtual private interface can be either <code class="docutils liter
 <dd><p>The ID of the virtual private gateway to which to connect the virtual interface.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.PrivateVirtualInterface.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>arn=None</em>, <em>aws_device=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>dx_gateway_id=None</em>, <em>jumbo_frame_capable=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vlan=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PrivateVirtualInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.
+:param pulumi.Input[str] amazon_address: The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[str] aws_device: The Direct Connect endpoint on which the virtual interface terminates.
+:param pulumi.Input[float] bgp_asn: The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+:param pulumi.Input[str] bgp_auth_key: The authentication key for BGP configuration.
+:param pulumi.Input[str] connection_id: The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+:param pulumi.Input[str] customer_address: The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+:param pulumi.Input[str] dx_gateway_id: The ID of the Direct Connect gateway to which to connect the virtual interface.
+:param pulumi.Input[bool] jumbo_frame_capable: Indicates whether jumbo frames (9001 MTU) are supported.
+:param pulumi.Input[float] mtu: The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.</p>
+<blockquote>
+<div>The MTU of a virtual private interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">9001</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
+<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the virtual private gateway to which to connect the virtual interface.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.PrivateVirtualInterface.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1381,7 +1676,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.PublicVirtualInterface">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">PublicVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>name=None</em>, <em>route_filter_prefixes=None</em>, <em>tags=None</em>, <em>vlan=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">PublicVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>name=None</em>, <em>route_filter_prefixes=None</em>, <em>tags=None</em>, <em>vlan=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect public virtual interface resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1479,6 +1774,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The VLAN ID.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.PublicVirtualInterface.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>arn=None</em>, <em>aws_device=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>name=None</em>, <em>route_filter_prefixes=None</em>, <em>tags=None</em>, <em>vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PublicVirtualInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.
+:param pulumi.Input[str] amazon_address: The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[str] aws_device: The Direct Connect endpoint on which the virtual interface terminates.
+:param pulumi.Input[float] bgp_asn: The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+:param pulumi.Input[str] bgp_auth_key: The authentication key for BGP configuration.
+:param pulumi.Input[str] connection_id: The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+:param pulumi.Input[str] customer_address: The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+:param pulumi.Input[str] name: The name for the virtual interface.
+:param pulumi.Input[list] route_filter_prefixes: A list of routes to be advertised to the AWS network in this region.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[float] vlan: The VLAN ID.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.directconnect.PublicVirtualInterface.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1501,6 +1820,200 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.directconnect.PublicVirtualInterface.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface">
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">TransitVirtualInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>dx_gateway_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vlan=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Direct Connect transit virtual interface resource.
+A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</li>
+<li><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
+<li><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</li>
+<li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</li>
+<li><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway to which to connect the virtual interface.</li>
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+The MTU of a virtual transit interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">8500</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.address_family">
+<code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.address_family" title="Permalink to this definition">¶</a></dt>
+<dd><p>The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.amazon_address">
+<code class="descname">amazon_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.amazon_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the virtual interface terminates.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.bgp_asn">
+<code class="descname">bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.bgp_asn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.bgp_auth_key">
+<code class="descname">bgp_auth_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.bgp_auth_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The authentication key for BGP configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.connection_id">
+<code class="descname">connection_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.connection_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.customer_address">
+<code class="descname">customer_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.customer_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.dx_gateway_id">
+<code class="descname">dx_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.dx_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Direct Connect gateway to which to connect the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.jumbo_frame_capable">
+<code class="descname">jumbo_frame_capable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.jumbo_frame_capable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether jumbo frames (8500 MTU) are supported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.mtu">
+<code class="descname">mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.mtu" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+The MTU of a virtual transit interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">8500</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.vlan">
+<code class="descname">vlan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.vlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VLAN ID.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>amazon_address=None</em>, <em>arn=None</em>, <em>aws_device=None</em>, <em>bgp_asn=None</em>, <em>bgp_auth_key=None</em>, <em>connection_id=None</em>, <em>customer_address=None</em>, <em>dx_gateway_id=None</em>, <em>jumbo_frame_capable=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TransitVirtualInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.
+:param pulumi.Input[str] amazon_address: The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+:param pulumi.Input[str] arn: The ARN of the virtual interface.
+:param pulumi.Input[str] aws_device: The Direct Connect endpoint on which the virtual interface terminates.
+:param pulumi.Input[float] bgp_asn: The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+:param pulumi.Input[str] bgp_auth_key: The authentication key for BGP configuration.
+:param pulumi.Input[str] connection_id: The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+:param pulumi.Input[str] customer_address: The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+:param pulumi.Input[str] dx_gateway_id: The ID of the Direct Connect gateway to which to connect the virtual interface.
+:param pulumi.Input[bool] jumbo_frame_capable: Indicates whether jumbo frames (8500 MTU) are supported.
+:param pulumi.Input[float] mtu: The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.</p>
+<blockquote>
+<div>The MTU of a virtual transit interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">8500</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.TransitVirtualInterface.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.TransitVirtualInterface.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.signalr"></span><dl class="class">
 <dt id="pulumi_azure.signalr.Service">
-<em class="property">class </em><code class="descclassname">pulumi_azure.signalr.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.signalr.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure SignalR service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -107,6 +107,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.signalr.Service.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.Service.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.signalr.Service.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>hostname=None</em>, <em>ip_address=None</em>, <em>location=None</em>, <em>name=None</em>, <em>primary_access_key=None</em>, <em>primary_connection_string=None</em>, <em>public_port=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>secondary_connection_string=None</em>, <em>server_port=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.signalr.Service.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] hostname: The FQDN of the SignalR service.
+:param pulumi.Input[str] ip_address: The publicly accessible IP of the SignalR service.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the SignalR service exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the SignalR service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] primary_access_key: The primary access key for the SignalR service.
+:param pulumi.Input[str] primary_connection_string: The primary connection string for the SignalR service.
+:param pulumi.Input[float] public_port: The publicly accessible port of the SignalR service which is designed for browser/client use.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the SignalR service. Changing this forces a new resource to be created.
+:param pulumi.Input[str] secondary_access_key: The secondary access key for the SignalR service.
+:param pulumi.Input[str] secondary_connection_string: The secondary connection string for the SignalR service.
+:param pulumi.Input[float] server_port: The publicly accessible port of the SignalR service which is designed for customer server side use.
+:param pulumi.Input[dict] sku: A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/signalr_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/signalr_service.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

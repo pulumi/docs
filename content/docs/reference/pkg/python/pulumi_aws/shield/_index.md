@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.shield"></span><dl class="class">
 <dt id="pulumi_aws.shield.Protection">
-<em class="property">class </em><code class="descclassname">pulumi_aws.shield.</code><code class="descname">Protection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.shield.Protection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.shield.</code><code class="descname">Protection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.shield.Protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables AWS Shield Advanced for a specific AWS resource.
 The resource can be an Amazon CloudFront distribution, Elastic Load Balancing load balancer, AWS Global Accelerator accelerator, Elastic IP Address, or an Amazon Route 53 hosted zone.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -39,6 +39,20 @@ The resource can be an Amazon CloudFront distribution, Elastic Load Balancing lo
 <dt id="pulumi_aws.shield.Protection.resource_arn">
 <code class="descname">resource_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.shield.Protection.resource_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN (Amazon Resource Name) of the resource to be protected.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.shield.Protection.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.shield.Protection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Protection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: A friendly name for the Protection you are creating.
+:param pulumi.Input[str] resource_arn: The ARN (Amazon Resource Name) of the resource to be protected.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

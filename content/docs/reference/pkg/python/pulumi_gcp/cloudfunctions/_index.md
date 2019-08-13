@@ -9,8 +9,13 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.cloudfunctions"></span><dl class="class">
+<dt id="pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">AwaitableGetFunctionResult</code><span class="sig-paren">(</span><em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_triggers=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>max_instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repositories=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.Function">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>max_instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repository=None</em>, <em>timeout=None</em>, <em>trigger_http=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>max_instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repository=None</em>, <em>timeout=None</em>, <em>trigger_http=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Cloud Function. For more information see
 <a class="reference external" href="https://cloud.google.com/functions/docs/">the official documentation</a>
 and
@@ -161,6 +166,51 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_gcp.cloudfunctions.Function.trigger_http">
 <code class="descname">trigger_http</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.trigger_http" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as <code class="docutils literal notranslate"><span class="pre">https_trigger_url</span></code>. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.cloudfunctions.Function.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>max_instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repository=None</em>, <em>timeout=None</em>, <em>trigger_http=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Function resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] available_memory_mb: Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
+:param pulumi.Input[str] description: Description of the function.
+:param pulumi.Input[str] entry_point: Name of the function that will be executed when the Google Cloud Function is triggered.
+:param pulumi.Input[dict] environment_variables: A set of key/value environment variable pairs to assign to the function.
+:param pulumi.Input[dict] event_trigger: A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.
+:param pulumi.Input[str] https_trigger_url: URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.
+:param pulumi.Input[dict] labels: A set of key/value label pairs to assign to the function.
+:param pulumi.Input[float] max_instances: The limit on the maximum number of function instances that may coexist at a given time.
+:param pulumi.Input[str] name: A user-defined name of the function. Function names must be unique globally.
+:param pulumi.Input[str] project: Project of the function. If it is not provided, the provider project is used.
+:param pulumi.Input[str] region: Region of function. Currently can be only “us-central1”. If it is not provided, the provider region is used.
+:param pulumi.Input[str] runtime: The runtime in which the function is going to run. One</p>
+<blockquote>
+<div>of <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs8&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs10&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;python37&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;go111&quot;</span></code>. If empty,
+defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>. It’s recommended that you override the default, as
+<code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code> is deprecated.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If provided, the self-provided service account to run the function with.</li>
+<li><strong>source_archive_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS bucket containing the zip archive which contains the function.</li>
+<li><strong>source_archive_object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source archive object (file) in archive bucket.</li>
+<li><strong>source_repository</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Represents parameters related to source repository where a function is hosted.
+Cannot be set alongside <code class="docutils literal notranslate"><span class="pre">source_archive_bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">source_archive_object</span></code>. Structure is documented below.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.</li>
+<li><strong>trigger_http</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as <code class="docutils literal notranslate"><span class="pre">https_trigger_url</span></code>. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

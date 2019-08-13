@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.cloudfront"></span><dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>origin_groups=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>wait_for_deployment=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>origin_groups=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>wait_for_deployment=None</em>, <em>web_acl_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For specific information about creating
@@ -57,6 +57,9 @@ distribution (multiples allowed).</li>
 <code class="docutils literal notranslate"><span class="pre">PriceClass_All</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_200</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_100</span></code></li>
 <li><strong>restrictions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The restriction
 configuration for this distribution (maximum one).</li>
+<li><strong>retain_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disables the distribution instead of
+deleting it when destroying the resource. If this is set,
+the distribution needs to be deleted manually afterwards. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>viewer_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SSL
 configuration for this distribution (maximum
@@ -232,6 +235,14 @@ configuration for this distribution (maximum one).</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cloudfront.Distribution.retain_on_delete">
+<code class="descname">retain_on_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.retain_on_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables the distribution instead of
+deleting it when destroying the resource. If this is set,
+the distribution needs to be deleted manually afterwards. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.status">
 <code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current status of the distribution. <code class="docutils literal notranslate"><span class="pre">Deployed</span></code> if the
@@ -269,6 +280,92 @@ requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
 <code class="docutils literal notranslate"><span class="pre">waf:GetWebACL</span></code> permissions assigned.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.cloudfront.Distribution.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>active_trusted_signers=None</em>, <em>aliases=None</em>, <em>arn=None</em>, <em>caller_reference=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>domain_name=None</em>, <em>enabled=None</em>, <em>etag=None</em>, <em>hosted_zone_id=None</em>, <em>http_version=None</em>, <em>in_progress_validation_batches=None</em>, <em>is_ipv6_enabled=None</em>, <em>last_modified_time=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>origin_groups=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>wait_for_deployment=None</em>, <em>web_acl_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Distribution resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] active_trusted_signers: The key pair IDs that CloudFront is aware of for</p>
+<blockquote>
+<div>each trusted signer, if the distribution is set up to serve private content
+with signed URLs.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Extra CNAMEs (alternate domain names), if any, for
+this distribution.</li>
+<li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</li>
+<li><strong>caller_reference</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internal value used by CloudFront to allow future
+updates to the distribution configuration.</li>
+<li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Any comments you want to include about the
+distribution.</li>
+<li><strong>custom_error_responses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more custom error response elements (multiples allowed).</li>
+<li><strong>default_cache_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default cache behavior for this distribution (maximum
+one).</li>
+<li><strong>default_root_object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object that you want CloudFront to
+return (for example, index.html) when an end user requests the root URL.</li>
+<li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS domain name of either the S3 bucket, or
+web site of your custom origin.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the distribution is enabled to accept end
+user requests for content.</li>
+<li><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the distribution’s information. For example:
+<code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.</li>
+<li><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CloudFront Route 53 zone ID that can be used to
+route an [Alias Resource Record Set][7] to. This attribute is simply an
+alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2FDTNDATAQYW2</span></code>.</li>
+<li><strong>http_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum HTTP version to support on the
+distribution. Allowed values are <code class="docutils literal notranslate"><span class="pre">http1.1</span></code> and <code class="docutils literal notranslate"><span class="pre">http2</span></code>. The default is
+<code class="docutils literal notranslate"><span class="pre">http2</span></code>.</li>
+<li><strong>in_progress_validation_batches</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of invalidation batches
+currently in progress.</li>
+<li><strong>is_ipv6_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the IPv6 is enabled for the distribution.</li>
+<li><strong>last_modified_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time the distribution was last modified.</li>
+<li><strong>logging_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The logging
+configuration that controls how logs are written
+to your distribution (maximum one).</li>
+<li><strong>ordered_cache_behaviors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of cache behaviors
+resource for this distribution. List from top to bottom
+in order of precedence. The topmost cache behavior will have precedence 0.</li>
+<li><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
+distribution (multiples allowed).</li>
+<li><strong>origin_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origin_group for this
+distribution (multiples allowed).</li>
+<li><strong>price_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The price class for this distribution. One of
+<code class="docutils literal notranslate"><span class="pre">PriceClass_All</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_200</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_100</span></code></li>
+<li><strong>restrictions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The restriction
+configuration for this distribution (maximum one).</li>
+<li><strong>retain_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disables the distribution instead of
+deleting it when destroying the resource. If this is set,
+the distribution needs to be deleted manually afterwards. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current status of the distribution. <code class="docutils literal notranslate"><span class="pre">Deployed</span></code> if the
+distribution’s information is fully propagated throughout the Amazon
+CloudFront system.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>viewer_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SSL
+configuration for this distribution (maximum
+one).</li>
+<li><strong>wait_for_deployment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the resource will wait for
+the distribution status to change from <code class="docutils literal notranslate"><span class="pre">InProgress</span></code> to <code class="docutils literal notranslate"><span class="pre">Deployed</span></code>. Setting
+this to<code class="docutils literal notranslate"><span class="pre">false</span></code> will skip the process. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>web_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If you’re using AWS WAF to filter CloudFront
+requests, the Id of the AWS WAF web ACL that is associated with the
+distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
+region and the credentials configuring this argument must have
+<code class="docutils literal notranslate"><span class="pre">waf:GetWebACL</span></code> permissions assigned.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -313,7 +410,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.OriginAccessIdentity">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">OriginAccessIdentity</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">OriginAccessIdentity</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront origin access identity.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For more information on generating
@@ -377,6 +474,42 @@ access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.cloudfront.OriginAccessIdentity.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>caller_reference=None</em>, <em>cloudfront_access_identity_path=None</em>, <em>comment=None</em>, <em>etag=None</em>, <em>iam_arn=None</em>, <em>s3_canonical_user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OriginAccessIdentity resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] caller_reference: Internal value used by CloudFront to allow future</p>
+<blockquote>
+<div>updates to the origin access identity.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cloudfront_access_identity_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A shortcut to the full path for the
+origin access identity to use in CloudFront, see below.</li>
+<li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment for the origin access identity.</li>
+<li><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the origin access identity’s information.
+For example: <code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.</li>
+<li><strong>iam_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A pre-generated ARN for use in S3 bucket policies (see below).
+Example: <code class="docutils literal notranslate"><span class="pre">arn:aws:iam::cloudfront:user/CloudFront</span> <span class="pre">Origin</span> <span class="pre">Access</span> <span class="pre">Identity</span>
+<span class="pre">E2QWRUHAPOMQZL</span></code>.</li>
+<li><strong>s3_canonical_user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon S3 canonical user ID for the origin
+access identity, which you use when giving the origin access identity read
+permission to an object in Amazon S3.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.cloudfront.OriginAccessIdentity.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -419,7 +552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.PublicKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">PublicKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>encoded_key=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">PublicKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>encoded_key=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a PublicKey resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -430,6 +563,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the public key.</li>
 <li><strong>encoded_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encoded public key that you want to add to CloudFront to use with features like field-level encryption.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. By default generated by this provider.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 </ul>
 </td>
@@ -463,9 +597,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cloudfront.PublicKey.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the public key. By default generated by this provider.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cloudfront.PublicKey.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.cloudfront.PublicKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>caller_reference=None</em>, <em>comment=None</em>, <em>encoded_key=None</em>, <em>etag=None</em>, <em>name=None</em>, <em>name_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PublicKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] caller_reference: Internal value used by CloudFront to allow future updates to the public key configuration.
+:param pulumi.Input[str] comment: An optional comment about the public key.
+:param pulumi.Input[str] encoded_key: The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
+:param pulumi.Input[str] etag: The current version of the public key. For example: <code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.
+:param pulumi.Input[str] name: The name for the public key. By default generated by this provider.
+:param pulumi.Input[str] name_prefix: The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

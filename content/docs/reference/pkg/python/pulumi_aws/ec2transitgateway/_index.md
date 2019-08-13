@@ -9,6 +9,31 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.ec2transitgateway"></span><dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.AwaitableGetDirectConnectGatewayAttachmentResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">AwaitableGetDirectConnectGatewayAttachmentResult</code><span class="sig-paren">(</span><em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetDirectConnectGatewayAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.AwaitableGetRouteTableResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em>default_association_route_table=None</em>, <em>default_propagation_route_table=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.AwaitableGetTransitGatewayResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">AwaitableGetTransitGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>arn=None</em>, <em>association_default_route_table_id=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>propagation_default_route_table_id=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetTransitGatewayResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.AwaitableGetVpcAttachmentResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">AwaitableGetVpcAttachmentResult</code><span class="sig-paren">(</span><em>dns_support=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>vpc_owner_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetVpcAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.AwaitableGetVpnAttachmentResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">AwaitableGetVpnAttachmentResult</code><span class="sig-paren">(</span><em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>vpn_connection_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetVpnAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetDirectConnectGatewayAttachmentResult</code><span class="sig-paren">(</span><em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDirectConnectGatewayAttachment.</p>
@@ -220,7 +245,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.Route">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>blackhole=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>blackhole=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -262,6 +287,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ec2transitgateway.Route.transit_gateway_route_table_id">
 <code class="descname">transit_gateway_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route.transit_gateway_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of EC2 Transit Gateway Route Table.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.Route.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>blackhole=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Route resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] blackhole: Indicates whether to drop traffic that matches this route (default to <code class="docutils literal notranslate"><span class="pre">false</span></code>).
+:param pulumi.Input[str] destination_cidr_block: IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
+:param pulumi.Input[str] transit_gateway_attachment_id: Identifier of EC2 Transit Gateway Attachment (required if <code class="docutils literal notranslate"><span class="pre">blackhole</span></code> is set to false).
+:param pulumi.Input[str] transit_gateway_route_table_id: Identifier of EC2 Transit Gateway Route Table.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -306,7 +347,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.RouteTable">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -346,6 +387,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.RouteTable.transit_gateway_id">
 <code class="descname">transit_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable.transit_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of EC2 Transit Gateway.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.RouteTable.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>default_association_route_table=None</em>, <em>default_propagation_route_table=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RouteTable resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] default_association_route_table: Boolean whether this is the default association route table for the EC2 Transit Gateway.
+:param pulumi.Input[bool] default_propagation_route_table: Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
+:param pulumi.Input[dict] tags: Key-value tags for the EC2 Transit Gateway Route Table.
+:param pulumi.Input[str] transit_gateway_id: Identifier of EC2 Transit Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route_table.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -390,7 +447,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.RouteTableAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table association.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -430,6 +487,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.RouteTableAssociation.transit_gateway_route_table_id">
 <code class="descname">transit_gateway_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation.transit_gateway_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of EC2 Transit Gateway Route Table.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.RouteTableAssociation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>resource_id=None</em>, <em>resource_type=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RouteTableAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] resource_id: Identifier of the resource
+:param pulumi.Input[str] resource_type: Type of the resource
+:param pulumi.Input[str] transit_gateway_attachment_id: Identifier of EC2 Transit Gateway Attachment.
+:param pulumi.Input[str] transit_gateway_route_table_id: Identifier of EC2 Transit Gateway Route Table.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route_table_association.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -474,7 +547,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.RouteTablePropagation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTablePropagation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTablePropagation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table propagation.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -514,6 +587,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.RouteTablePropagation.transit_gateway_route_table_id">
 <code class="descname">transit_gateway_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation.transit_gateway_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of EC2 Transit Gateway Route Table.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.RouteTablePropagation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>resource_id=None</em>, <em>resource_type=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RouteTablePropagation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] resource_id: Identifier of the resource
+:param pulumi.Input[str] resource_type: Type of the resource
+:param pulumi.Input[str] transit_gateway_attachment_id: Identifier of EC2 Transit Gateway Attachment.
+:param pulumi.Input[str] transit_gateway_route_table_id: Identifier of EC2 Transit Gateway Route Table.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route_table_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_route_table_propagation.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -558,7 +647,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">TransitGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">TransitGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -654,6 +743,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.TransitGateway.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>arn=None</em>, <em>association_default_route_table_id=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>owner_id=None</em>, <em>propagation_default_route_table_id=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TransitGateway resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] amazon_side_asn: Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is <code class="docutils literal notranslate"><span class="pre">64512</span></code> to <code class="docutils literal notranslate"><span class="pre">65534</span></code> for 16-bit ASNs and <code class="docutils literal notranslate"><span class="pre">4200000000</span></code> to <code class="docutils literal notranslate"><span class="pre">4294967294</span></code> for 32-bit ASNs. Default value: <code class="docutils literal notranslate"><span class="pre">64512</span></code>.
+:param pulumi.Input[str] arn: EC2 Transit Gateway Amazon Resource Name (ARN)
+:param pulumi.Input[str] association_default_route_table_id: Identifier of the default association route table
+:param pulumi.Input[str] auto_accept_shared_attachments: Whether resource attachment requests are automatically accepted. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">disable</span></code>.
+:param pulumi.Input[str] default_route_table_association: Whether resource attachments are automatically associated with the default association route table. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.
+:param pulumi.Input[str] default_route_table_propagation: Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.
+:param pulumi.Input[str] description: Description of the EC2 Transit Gateway.
+:param pulumi.Input[str] dns_support: Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.
+:param pulumi.Input[str] owner_id: Identifier of the AWS account that owns the EC2 Transit Gateway
+:param pulumi.Input[str] propagation_default_route_table_id: Identifier of the default propagation route table
+:param pulumi.Input[dict] tags: Key-value tags for the EC2 Transit Gateway.
+:param pulumi.Input[str] vpn_ecmp_support: Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -696,7 +809,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -774,6 +887,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Identifier of the AWS account that owns the EC2 VPC.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>vpc_owner_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VpcAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dns_support: Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.
+:param pulumi.Input[str] ipv6_support: Whether IPv6 support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">disable</span></code>.
+:param pulumi.Input[list] subnet_ids: Identifiers of EC2 Subnets.
+:param pulumi.Input[dict] tags: Key-value tags for the EC2 Transit Gateway VPC Attachment.
+:param pulumi.Input[bool] transit_gateway_default_route_table_association: Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[bool] transit_gateway_default_route_table_propagation: Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] transit_gateway_id: Identifier of EC2 Transit Gateway.
+:param pulumi.Input[str] vpc_id: Identifier of EC2 VPC.
+:param pulumi.Input[str] vpc_owner_id: Identifier of the AWS account that owns the EC2 VPC.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_vpc_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_vpc_attachment.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -816,12 +950,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachmentAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachmentAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the accepter’s side of an EC2 Transit Gateway VPC Attachment.</p>
 <p>When a cross-account (requester’s AWS account differs from the accepter’s AWS account) EC2 Transit Gateway VPC Attachment
 is created, an EC2 Transit Gateway VPC Attachment resource is automatically created in the accepter’s account.
-The requester can use the <code class="docutils literal notranslate"><span class="pre">aws_ec2_transit_gateway_vpc_attachment</span></code> resource to manage its side of the connection
-and the accepter can use the <code class="docutils literal notranslate"><span class="pre">aws_ec2_transit_gateway_vpc_attachment_accepter</span></code> resource to “adopt” its side of the
+The requester can use the <code class="docutils literal notranslate"><span class="pre">ec2transitgateway.VpcAttachment</span></code> resource to manage its side of the connection
+and the accepter can use the <code class="docutils literal notranslate"><span class="pre">ec2transitgateway.VpcAttachmentAccepter</span></code> resource to “adopt” its side of the
 connection into management.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -899,6 +1033,28 @@ connection into management.</p>
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.vpc_owner_id">
 <code class="descname">vpc_owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.vpc_owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of the AWS account that owns the EC2 VPC.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>vpc_owner_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VpcAttachmentAccepter resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dns_support: Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>.
+:param pulumi.Input[str] ipv6_support: Whether IPv6 support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>.
+:param pulumi.Input[list] subnet_ids: Identifiers of EC2 Subnets.
+:param pulumi.Input[dict] tags: Key-value tags for the EC2 Transit Gateway VPC Attachment.
+:param pulumi.Input[str] transit_gateway_attachment_id: The ID of the EC2 Transit Gateway Attachment to manage.
+:param pulumi.Input[bool] transit_gateway_default_route_table_association: Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[bool] transit_gateway_default_route_table_propagation: Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] transit_gateway_id: Identifier of EC2 Transit Gateway.
+:param pulumi.Input[str] vpc_id: Identifier of EC2 VPC.
+:param pulumi.Input[str] vpc_owner_id: Identifier of the AWS account that owns the EC2 VPC.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_vpc_attachment_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_transit_gateway_vpc_attachment_accepter.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

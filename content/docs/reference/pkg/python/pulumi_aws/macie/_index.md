@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.macie"></span><dl class="class">
 <dt id="pulumi_aws.macie.MemberAccountAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.macie.</code><code class="descname">MemberAccountAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member_account_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.macie.</code><code class="descname">MemberAccountAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member_account_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an AWS account with Amazon Macie as a member account.</p>
 <blockquote>
 <div><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</div></blockquote>
@@ -33,6 +33,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.macie.MemberAccountAssociation.member_account_id">
 <code class="descname">member_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.member_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that you want to associate with Amazon Macie as a member account.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.macie.MemberAccountAssociation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>member_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MemberAccountAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] member_account_id: The ID of the AWS account that you want to associate with Amazon Macie as a member account.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -77,7 +90,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.macie.S3BucketAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.macie.</code><code class="descname">S3BucketAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>classification_type=None</em>, <em>member_account_id=None</em>, <em>prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.macie.</code><code class="descname">S3BucketAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>classification_type=None</em>, <em>member_account_id=None</em>, <em>prefix=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
 <blockquote>
 <div><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</div></blockquote>
@@ -121,6 +134,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.macie.S3BucketAssociation.prefix">
 <code class="descname">prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Object key prefix identifying one or more S3 objects to which the association applies.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.macie.S3BucketAssociation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>classification_type=None</em>, <em>member_account_id=None</em>, <em>prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing S3BucketAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket_name: The name of the S3 bucket that you want to associate with Amazon Macie.
+:param pulumi.Input[dict] classification_type: The configuration of how Amazon Macie classifies the S3 objects.
+:param pulumi.Input[str] member_account_id: The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If <code class="docutils literal notranslate"><span class="pre">member_account_id</span></code> isn’t specified, the action associates specified S3 resources with Macie for the current master account.
+:param pulumi.Input[str] prefix: Object key prefix identifying one or more S3 objects to which the association applies.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

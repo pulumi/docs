@@ -9,8 +9,23 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.compute"></span><dl class="class">
+<dt id="pulumi_openstack.compute.AwaitableGetAvailabilityZonesResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">AwaitableGetAvailabilityZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>state=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.AwaitableGetAvailabilityZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.compute.AwaitableGetFlavorResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">AwaitableGetFlavorResult</code><span class="sig-paren">(</span><em>disk=None</em>, <em>extra_specs=None</em>, <em>flavor_id=None</em>, <em>is_public=None</em>, <em>min_disk=None</em>, <em>min_ram=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.AwaitableGetFlavorResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.compute.AwaitableGetKeypairResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">AwaitableGetKeypairResult</code><span class="sig-paren">(</span><em>fingerprint=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.AwaitableGetKeypairResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.compute.Flavor">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Flavor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk=None</em>, <em>ephemeral=None</em>, <em>extra_specs=None</em>, <em>is_public=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Flavor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk=None</em>, <em>ephemeral=None</em>, <em>extra_specs=None</em>, <em>is_public=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 flavor resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -109,6 +124,48 @@ unspecified, the default is 0. Changing this creates a new flavor.</p>
 a new flavor.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.Flavor.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>disk=None</em>, <em>ephemeral=None</em>, <em>extra_specs=None</em>, <em>is_public=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Flavor resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] disk: The amount of disk space in gigabytes to use for the root</p>
+<blockquote>
+<div>(/) partition. Changing this creates a new flavor.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>extra_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/Value pairs of metadata for the flavor.</li>
+<li><strong>is_public</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the flavor is public. Changing this creates
+a new flavor.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the flavor. Changing this creates a new
+flavor.</li>
+<li><strong>ram</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of RAM to use, in megabytes. Changing this
+creates a new flavor.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+Flavors are associated with accounts, but a Compute client is needed to
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new flavor.</li>
+<li><strong>rx_tx_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – RX/TX bandwith factor. The default is 1. Changing
+this creates a new flavor.</li>
+<li><strong>swap</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of disk space in megabytes to use. If
+unspecified, the default is 0. Changing this creates a new flavor.</li>
+<li><strong>vcpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of virtual CPUs to use. Changing this creates
+a new flavor.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.Flavor.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -151,7 +208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.FlavorAccess">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FlavorAccess</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>flavor_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FlavorAccess</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>flavor_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a project access for flavor V2 resource within OpenStack.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
@@ -196,6 +253,32 @@ Changing this creates a new flavor access.</p>
 Changing this creates a new flavor access.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.FlavorAccess.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>flavor_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FlavorAccess resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] flavor_id: The UUID of flavor to use. Changing this creates a new flavor access.
+:param pulumi.Input[str] region: The region in which to obtain the V2 Compute client.</p>
+<blockquote>
+<div>If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new flavor access.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of tenant which is allowed to use the flavor.
+Changing this creates a new flavor access.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.FlavorAccess.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -238,12 +321,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.FloatingIp">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FloatingIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>pool=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FloatingIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>pool=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 floating IP resource within OpenStack Nova (compute)
 that can be used for compute instances.</p>
 <p>Please note that managing floating IPs through the OpenStack Compute API has
 been deprecated. Unless you are using an older OpenStack environment, it is
-recommended to use the <code class="docutils literal notranslate"><span class="pre">openstack_networking_floatingip_v2</span></code>
+recommended to use the <code class="docutils literal notranslate"><span class="pre">networking.FloatingIp</span></code>
 resource instead, which uses the OpenStack Networking API.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -301,6 +384,36 @@ is used. Changing this creates a new floating IP (which may or may not
 have a different address).</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.FloatingIp.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>fixed_ip=None</em>, <em>instance_id=None</em>, <em>pool=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIp.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FloatingIp resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The actual floating IP address itself.
+:param pulumi.Input[str] fixed_ip: The fixed IP address corresponding to the floating IP.
+:param pulumi.Input[str] instance_id: UUID of the compute instance associated with the floating IP.
+:param pulumi.Input[str] pool: The name of the pool from which to obtain the floating</p>
+<blockquote>
+<div>IP. Changing this creates a new floating IP.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+A Compute client is needed to create a floating IP that can be used with
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
+is used. Changing this creates a new floating IP (which may or may not
+have a different address).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.FloatingIp.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIp.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -343,9 +456,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.FloatingIpAssociate">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>instance_id=None</em>, <em>region=None</em>, <em>wait_until_associated=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>instance_id=None</em>, <em>region=None</em>, <em>wait_until_associated=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associate a floating IP to an instance. This can be used instead of the
-<code class="docutils literal notranslate"><span class="pre">floating_ip</span></code> options in <code class="docutils literal notranslate"><span class="pre">openstack_compute_instance_v2</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">floating_ip</span></code> options in <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -392,6 +505,26 @@ Changing this creates a new floatingip_associate.</li>
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new floatingip_associate.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.FloatingIpAssociate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>instance_id=None</em>, <em>region=None</em>, <em>wait_until_associated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FloatingIpAssociate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fixed_ip: The specific IP address to direct traffic to.
+:param pulumi.Input[str] floating_ip: The floating IP to associate.
+:param pulumi.Input[str] instance_id: The instance to associte the floating IP with.
+:param pulumi.Input[str] region: The region in which to obtain the V2 Compute client.</p>
+<blockquote>
+<div>Keypairs are associated with accounts, but a Compute client is needed to
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new floatingip_associate.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -514,8 +647,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_ip_v4=None</em>, <em>access_ip_v6=None</em>, <em>admin_pass=None</em>, <em>availability_zone=None</em>, <em>block_devices=None</em>, <em>config_drive=None</em>, <em>flavor_id=None</em>, <em>flavor_name=None</em>, <em>force_delete=None</em>, <em>image_id=None</em>, <em>image_name=None</em>, <em>key_pair=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>personalities=None</em>, <em>power_state=None</em>, <em>region=None</em>, <em>scheduler_hints=None</em>, <em>security_groups=None</em>, <em>stop_before_destroy=None</em>, <em>user_data=None</em>, <em>vendor_options=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_ip_v4=None</em>, <em>access_ip_v6=None</em>, <em>admin_pass=None</em>, <em>availability_zone=None</em>, <em>block_devices=None</em>, <em>config_drive=None</em>, <em>flavor_id=None</em>, <em>flavor_name=None</em>, <em>force_delete=None</em>, <em>image_id=None</em>, <em>image_name=None</em>, <em>key_pair=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>personalities=None</em>, <em>power_state=None</em>, <em>region=None</em>, <em>scheduler_hints=None</em>, <em>security_groups=None</em>, <em>stop_before_destroy=None</em>, <em>user_data=None</em>, <em>vendor_options=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 VM instance resource within OpenStack.</p>
+<p>Importing instances can be tricky, since the nova api does not offer all
+information provided at creation time for later retrieval.
+Network interface attachment order, and number and sizes of ephemeral
+disks are examples of this.</p>
+<p>The importer cannot read the emphemeral disk configuration
+of an instance, so just specify image_id as in the configuration 
+of the basic instance example.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -572,7 +712,7 @@ creates a new server.</li>
 <li><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more security group names
-to associate with the server. Changing this results in adding/removing
+or ids to associate with the server. Changing this results in adding/removing
 security groups from the existing server. <em>Note</em>: When attaching the
 instance to networks using Ports, place the security groups on the Port
 and not the instance.</li>
@@ -737,7 +877,7 @@ the instance should be launched. The available hints are described below.</p>
 <dt id="pulumi_openstack.compute.Instance.security_groups">
 <code class="descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of one or more security group names
-to associate with the server. Changing this results in adding/removing
+or ids to associate with the server. Changing this results in adding/removing
 security groups from the existing server. <em>Note</em>: When attaching the
 instance to networks using Ports, place the security groups on the Port
 and not the instance.</p>
@@ -763,6 +903,90 @@ Changing this creates a new server.</p>
 <code class="descname">vendor_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.vendor_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of additional vendor-specific options.
 Supported options are described below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.Instance.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>access_ip_v4=None</em>, <em>access_ip_v6=None</em>, <em>admin_pass=None</em>, <em>all_metadata=None</em>, <em>availability_zone=None</em>, <em>block_devices=None</em>, <em>config_drive=None</em>, <em>flavor_id=None</em>, <em>flavor_name=None</em>, <em>force_delete=None</em>, <em>image_id=None</em>, <em>image_name=None</em>, <em>key_pair=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>personalities=None</em>, <em>power_state=None</em>, <em>region=None</em>, <em>scheduler_hints=None</em>, <em>security_groups=None</em>, <em>stop_before_destroy=None</em>, <em>user_data=None</em>, <em>vendor_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_ip_v4: The first detected Fixed IPv4 address.
+:param pulumi.Input[str] access_ip_v6: The first detected Fixed IPv6 address.
+:param pulumi.Input[str] admin_pass: The administrative password to assign to the server.</p>
+<blockquote>
+<div>Changing this changes the root password on the existing server.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone in which to create
+the server. Changing this creates a new server.</li>
+<li><strong>block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Configuration of block devices. The block_device
+structure is documented below. Changing this creates a new server.
+You can specify multiple block devices which will create an instance with
+multiple disks. This configuration is very flexible, so please see the
+following <a class="reference external" href="https://docs.openstack.org/nova/latest/user/block-device-mapping.html">reference</a>
+for more information.</p>
+</li>
+<li><strong>config_drive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use the config_drive feature to
+configure the instance. Changing this creates a new server.</li>
+<li><strong>flavor_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The flavor ID of
+the desired flavor for the server. Changing this resizes the existing server.</li>
+<li><strong>flavor_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the
+desired flavor for the server. Changing this resizes the existing server.</li>
+<li><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to force the OpenStack instance to be
+forcefully deleted. This is useful for environments that have reclaim / soft
+deletion enabled.</li>
+<li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Required if <code class="docutils literal notranslate"><span class="pre">image_name</span></code> is empty and not booting
+from a volume. Do not specify if booting from a volume.) The image ID of
+the desired image for the server. Changing this creates a new server.</li>
+<li><strong>image_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Required if <code class="docutils literal notranslate"><span class="pre">image_id</span></code> is empty and not booting
+from a volume. Do not specify if booting from a volume.) The name of the
+desired image for the server. Changing this creates a new server.</li>
+<li><strong>key_pair</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a key pair to put on the server. The key
+pair must already be created and associated with the tenant’s account.
+Changing this creates a new server.</li>
+<li><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata key/value pairs to make available from
+within the instance. Changing this updates the existing server metadata.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource.</li>
+<li><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more networks to attach to the
+instance. The network object structure is documented below. Changing this
+creates a new server.</li>
+<li><strong>personalities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize the personality of an instance by
+defining one or more files and their contents. The personality structure
+is described below.</li>
+<li><strong>power_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provide the VM state. Only ‘active’ and ‘shutoff’
+are supported values. <em>Note</em>: If the initial power_state is the shutoff
+the VM will be stopped immediately after build and the provisioners like
+remote-exec or files are not supported.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the server instance. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new server.</li>
+<li><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Nova scheduler with hints on how
+the instance should be launched. The available hints are described below.</li>
+<li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more security group names
+or ids to associate with the server. Changing this results in adding/removing
+security groups from the existing server. <em>Note</em>: When attaching the
+instance to networks using Ports, place the security groups on the Port
+and not the instance.</li>
+<li><strong>stop_before_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to try stop instance gracefully
+before destroying it, thus giving chance for guest OS daemons to stop correctly.
+If instance doesn’t stop within timeout, it will be destroyed anyway.</li>
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance.
+Changing this creates a new server.</li>
+<li><strong>vendor_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional vendor-specific options.
+Supported options are described below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -807,7 +1031,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.InterfaceAttach">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">InterfaceAttach</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>instance_id=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">InterfaceAttach</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>instance_id=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -869,6 +1093,39 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 creates a new attachment.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.InterfaceAttach.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>fixed_ip=None</em>, <em>instance_id=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing InterfaceAttach resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fixed_ip: An IP address to assosciate with the port.</p>
+<blockquote>
+<div><em>NOTE</em>: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Instance to attach the Port or Network to.</li>
+<li><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network to attach to an Instance. A port will be created automatically.
+<em>NOTE</em>: This option and <code class="docutils literal notranslate"><span class="pre">port_id</span></code> are mutually exclusive.</li>
+<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Port to attach to an Instance.
+<em>NOTE</em>: This option and <code class="docutils literal notranslate"><span class="pre">network_id</span></code> are mutually exclusive.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the interface attachment.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new attachment.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.InterfaceAttach.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -911,7 +1168,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.Keypair">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Keypair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Keypair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Keypair resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -983,6 +1240,43 @@ Changing this creates a new keypair.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.Keypair.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>fingerprint=None</em>, <em>name=None</em>, <em>private_key=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Keypair resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fingerprint: The fingerprint of the public key.
+:param pulumi.Input[str] name: A unique name for the keypair. Changing this creates a new</p>
+<blockquote>
+<div>keypair.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated private key when no public key is specified.</li>
+<li><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A pregenerated OpenSSH-formatted public key.
+Changing this creates a new keypair. If a public key is not specified, then
+a public/private key pair will be automatically generated. If a pair is
+created, then destroying this resource means you will lose access to that
+keypair forever.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+Keypairs are associated with accounts, but a Compute client is needed to
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new keypair.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_keypair_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_keypair_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.Keypair.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1025,12 +1319,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.SecGroup">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">SecGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.SecGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">SecGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.SecGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 security group resource within OpenStack.</p>
 <p>Please note that managing security groups through the OpenStack Compute API
 has been deprecated. Unless you are using an older OpenStack environment, it is
-recommended to use the <code class="docutils literal notranslate"><span class="pre">openstack_networking_secgroup_v2</span></code>
-and <code class="docutils literal notranslate"><span class="pre">openstack_networking_secgroup_rule_v2</span></code>
+recommended to use the <code class="docutils literal notranslate"><span class="pre">networking.SecGroup</span></code>
+and <code class="docutils literal notranslate"><span class="pre">networking.SecGroupRule</span></code>
 resources instead, which uses the OpenStack Networking API.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1090,6 +1384,41 @@ security group rules. As shown in the example above, multiple rule blocks
 may be used.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.SecGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.SecGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SecGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description for the security group. Changing this</p>
+<blockquote>
+<div>updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing security group.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the security group. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing security group.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+A Compute client is needed to create a security group. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+security group.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule describing how the security group operates. The
+rule object structure is documented below. Changing this updates the
+security group rules. As shown in the example above, multiple rule blocks
+may be used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.SecGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.SecGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1132,7 +1461,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.ServerGroup">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">ServerGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>policies=None</em>, <em>region=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">ServerGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>policies=None</em>, <em>region=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Server Group resource within OpenStack.</p>
 <ul class="simple">
 <li><dl class="first docutils">
@@ -1218,6 +1547,39 @@ this creates a new server group.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.ServerGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>members=None</em>, <em>name=None</em>, <em>policies=None</em>, <em>region=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ServerGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] members: The instances that are part of this server group.
+:param pulumi.Input[str] name: A unique name for the server group. Changing this creates</p>
+<blockquote>
+<div>a new server group.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of policies for the server group. All policies
+are mutually exclusive. See the Policies section for more information.
+Changing this creates a new server group.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing
+this creates a new server group.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.compute.ServerGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1260,7 +1622,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.VolumeAttach">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">VolumeAttach</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device=None</em>, <em>instance_id=None</em>, <em>multiattach=None</em>, <em>region=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">VolumeAttach</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device=None</em>, <em>instance_id=None</em>, <em>multiattach=None</em>, <em>region=None</em>, <em>volume_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1309,6 +1671,33 @@ new volume attachment.</p>
 <dt id="pulumi_openstack.compute.VolumeAttach.volume_id">
 <code class="descname">volume_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.volume_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Volume to attach to an Instance.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.compute.VolumeAttach.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>device=None</em>, <em>instance_id=None</em>, <em>multiattach=None</em>, <em>region=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VolumeAttach resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] instance_id: The ID of the Instance to attach the Volume to.
+:param pulumi.Input[bool] multiattach: Enable attachment of multiattach-capable volumes.
+:param pulumi.Input[str] region: The region in which to obtain the V2 Compute client.</p>
+<blockquote>
+<div>A Compute client is needed to create a volume attachment. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a
+new volume attachment.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>volume_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Volume to attach to an Instance.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

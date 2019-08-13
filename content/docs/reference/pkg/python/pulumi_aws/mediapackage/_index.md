@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.mediapackage"></span><dl class="class">
 <dt id="pulumi_aws.mediapackage.Channel">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mediapackage.</code><code class="descname">Channel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>channel_id=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediapackage.Channel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mediapackage.</code><code class="descname">Channel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>channel_id=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediapackage.Channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Elemental MediaPackage Channel.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -57,6 +57,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.mediapackage.Channel.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediapackage.Channel.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.mediapackage.Channel.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>channel_id=None</em>, <em>description=None</em>, <em>hls_ingests=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediapackage.Channel.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Channel resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the channel
+:param pulumi.Input[str] channel_id: A unique identifier describing the channel
+:param pulumi.Input[str] description: A description of the channel
+:param pulumi.Input[list] hls_ingests: A single item list of HLS ingest information
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_package_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_package_channel.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

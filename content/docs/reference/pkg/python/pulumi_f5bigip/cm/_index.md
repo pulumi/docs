@@ -10,8 +10,8 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-f5bigip/issues">terraform-providers/terraform-provider-f5bigip repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_f5bigip.cm"></span><dl class="class">
 <dt id="pulumi_f5bigip.cm.Device">
-<em class="property">class </em><code class="descclassname">pulumi_f5bigip.cm.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configsync_ip=None</em>, <em>mirror_ip=None</em>, <em>mirror_secondary_ip=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_cm_device</span></code> provides details about a specific bigip</p>
+<em class="property">class </em><code class="descclassname">pulumi_f5bigip.cm.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configsync_ip=None</em>, <em>mirror_ip=None</em>, <em>mirror_secondary_ip=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">cm.Device</span></code> provides details about a specific bigip</p>
 <p>This resource is helpful when configuring the BIG-IP device in cluster or in HA mode.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -27,6 +27,18 @@ anything, please consult the source <a class="reference external" href="https://
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_device.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_device.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_f5bigip.cm.Device.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>configsync_ip=None</em>, <em>mirror_ip=None</em>, <em>mirror_secondary_ip=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Device resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_device.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_device.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_f5bigip.cm.Device.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -69,8 +81,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_f5bigip.cm.DeviceGroup">
-<em class="property">class </em><code class="descclassname">pulumi_f5bigip.cm.</code><code class="descname">DeviceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_sync=None</em>, <em>description=None</em>, <em>devices=None</em>, <em>full_load_on_sync=None</em>, <em>incremental_config=None</em>, <em>name=None</em>, <em>network_failover=None</em>, <em>partition=None</em>, <em>save_on_auto_sync=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.DeviceGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_cm_devicegroup</span></code> A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.</p>
+<em class="property">class </em><code class="descclassname">pulumi_f5bigip.cm.</code><code class="descname">DeviceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_sync=None</em>, <em>description=None</em>, <em>devices=None</em>, <em>full_load_on_sync=None</em>, <em>incremental_config=None</em>, <em>name=None</em>, <em>network_failover=None</em>, <em>partition=None</em>, <em>save_on_auto_sync=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.DeviceGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">cm.DeviceGroup</span></code> A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -111,6 +123,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.cm.DeviceGroup.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.cm.DeviceGroup.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies if the device-group will be used for failover or resource syncing</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_f5bigip.cm.DeviceGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>auto_sync=None</em>, <em>description=None</em>, <em>devices=None</em>, <em>full_load_on_sync=None</em>, <em>incremental_config=None</em>, <em>name=None</em>, <em>network_failover=None</em>, <em>partition=None</em>, <em>save_on_auto_sync=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.DeviceGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DeviceGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] auto_sync: Specifies if the device-group will automatically sync configuration data to its members
+:param pulumi.Input[list] devices: Name of the device to be included in device group, this need to be configured before using devicegroup resource
+:param pulumi.Input[str] name: Is the name of the device Group
+:param pulumi.Input[str] type: Specifies if the device-group will be used for failover or resource syncing</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_devicegroup.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_devicegroup.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.inspector"></span><dl class="class">
 <dt id="pulumi_aws.inspector.AssessmentTarget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">AssessmentTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">AssessmentTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector assessment target</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -44,6 +44,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.inspector.AssessmentTarget.resource_group_arn">
 <code class="descname">resource_group_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTarget.resource_group_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.inspector.AssessmentTarget.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>name=None</em>, <em>resource_group_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTarget.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AssessmentTarget resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The target assessment ARN.
+:param pulumi.Input[str] name: The name of the assessment target.
+:param pulumi.Input[str] resource_group_arn: Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_target.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -88,7 +103,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.inspector.AssessmentTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">AssessmentTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>duration=None</em>, <em>name=None</em>, <em>rules_package_arns=None</em>, <em>target_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">AssessmentTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>duration=None</em>, <em>name=None</em>, <em>rules_package_arns=None</em>, <em>target_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector assessment template</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -138,6 +153,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The assessment target ARN to attach the template to.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.inspector.AssessmentTemplate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>duration=None</em>, <em>name=None</em>, <em>rules_package_arns=None</em>, <em>target_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AssessmentTemplate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The template assessment ARN.
+:param pulumi.Input[float] duration: The duration of the inspector run.
+:param pulumi.Input[str] name: The name of the assessment template.
+:param pulumi.Input[list] rules_package_arns: The rules to be used during the run.
+:param pulumi.Input[str] target_arn: The assessment target ARN to attach the template to.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_template.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.inspector.AssessmentTemplate.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -179,6 +211,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.inspector.AwaitableGetRulesPackagesResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">AwaitableGetRulesPackagesResult</code><span class="sig-paren">(</span><em>arns=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AwaitableGetRulesPackagesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.inspector.GetRulesPackagesResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">GetRulesPackagesResult</code><span class="sig-paren">(</span><em>arns=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.GetRulesPackagesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRulesPackages.</p>
@@ -198,7 +235,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.inspector.ResourceGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">ResourceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.inspector.</code><code class="descname">ResourceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector resource group</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -225,6 +262,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.inspector.ResourceGroup.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tags on your EC2 Instance.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.inspector.ResourceGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ResourceGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The resource group ARN.
+:param pulumi.Input[dict] tags: The tags on your EC2 Instance.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_resource_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_resource_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

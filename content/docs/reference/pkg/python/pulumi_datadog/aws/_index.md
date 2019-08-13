@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/issues">terraform-providers/terraform-provider-datadog repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_datadog.aws"></span><dl class="class">
 <dt id="pulumi_datadog.aws.Integration">
-<em class="property">class </em><code class="descclassname">pulumi_datadog.aws.</code><code class="descname">Integration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>account_specific_namespace_rules=None</em>, <em>filter_tags=None</em>, <em>host_tags=None</em>, <em>role_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_datadog.aws.</code><code class="descname">Integration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>account_specific_namespace_rules=None</em>, <em>filter_tags=None</em>, <em>host_tags=None</em>, <em>role_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog - Amazon Web Services integration resource. This can be used to create and manage Datadog - Amazon Web Services integration.</p>
 <p>Update operations are currently not supported with datadog API so any change forces a new resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -66,6 +66,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_datadog.aws.Integration.role_name">
 <code class="descname">role_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.role_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Your Datadog role delegation name.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_datadog.aws.Integration.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>account_specific_namespace_rules=None</em>, <em>external_id=None</em>, <em>filter_tags=None</em>, <em>host_tags=None</em>, <em>role_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_id: Your AWS Account ID without dashes.
+:param pulumi.Input[dict] account_specific_namespace_rules: Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the <a class="reference external" href="https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules">available namespace rules API endpoint</a>.
+:param pulumi.Input[str] external_id: AWS External ID
+:param pulumi.Input[list] filter_tags: Array of EC2 tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code>) defines a filter that Datadog use when collecting metrics from EC2. Wildcards, such as <code class="docutils literal notranslate"><span class="pre">?</span></code> (for single characters) and <code class="docutils literal notranslate"><span class="pre">*</span></code> (for multiple characters) can also be used.
+:param pulumi.Input[list] host_tags: Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
+:param pulumi.Input[str] role_name: Your Datadog role delegation name.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.athena"></span><dl class="class">
 <dt id="pulumi_aws.athena.Database">
-<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>encryption_configuration=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>encryption_configuration=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena database.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -52,6 +52,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.athena.Database.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.Database.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the database to create.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.athena.Database.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>encryption_configuration=None</em>, <em>force_destroy=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Database.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Database resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] bucket: Name of s3 bucket to save the results of the query execution.
+:param pulumi.Input[dict] encryption_configuration: The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An <code class="docutils literal notranslate"><span class="pre">encryption_configuration</span></code> block is documented below.
+:param pulumi.Input[bool] force_destroy: A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are <em>not</em> recoverable.
+:param pulumi.Input[str] name: Name of the database to create.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_database.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -96,7 +112,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.athena.NamedQuery">
-<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">NamedQuery</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>description=None</em>, <em>name=None</em>, <em>query=None</em>, <em>workgroup=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">NamedQuery</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>description=None</em>, <em>name=None</em>, <em>query=None</em>, <em>workgroup=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Named Query resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -147,6 +163,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The workgroup to which the query belongs. Defaults to <code class="docutils literal notranslate"><span class="pre">primary</span></code></p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.athena.NamedQuery.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>database=None</em>, <em>description=None</em>, <em>name=None</em>, <em>query=None</em>, <em>workgroup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NamedQuery resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] database: The database to which the query belongs.
+:param pulumi.Input[str] description: A brief explanation of the query. Maximum length of 1024.
+:param pulumi.Input[str] name: The plain language name for the query. Maximum length of 128.
+:param pulumi.Input[str] query: The text of the query itself. In other words, all query statements. Maximum length of 262144.
+:param pulumi.Input[str] workgroup: The workgroup to which the query belongs. Defaults to <code class="docutils literal notranslate"><span class="pre">primary</span></code></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_named_query.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_named_query.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.athena.NamedQuery.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -189,7 +222,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.athena.Workgroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">Workgroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configuration=None</em>, <em>description=None</em>, <em>name=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">Workgroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configuration=None</em>, <em>description=None</em>, <em>name=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Workgroup.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -244,6 +277,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.athena.Workgroup.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.Workgroup.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value mapping of resource tags for the workgroup.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.athena.Workgroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>configuration=None</em>, <em>description=None</em>, <em>name=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Workgroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the workgroup
+:param pulumi.Input[dict] configuration: Configuration block with various settings for the workgroup. Documented below.
+:param pulumi.Input[str] description: Description of the workgroup.
+:param pulumi.Input[str] name: Name of the workgroup.
+:param pulumi.Input[str] state: State of the workgroup. Valid values are <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.
+:param pulumi.Input[dict] tags: Key-value mapping of resource tags for the workgroup.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_workgroup.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_workgroup.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

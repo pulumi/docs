@@ -55,19 +55,24 @@ import * as tls from "@pulumi/tls";
 <li><a href="#SelfSignedCertState">interface SelfSignedCertState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts">certRequest.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts">getPublicKey.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts">locallySignedCert.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts">privateKey.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts">selfSignedCert.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts">certRequest.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts">getPublicKey.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts">locallySignedCert.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts">privateKey.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts">selfSignedCert.ts</a> <a href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/utilities.ts">utilities.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="CertRequest">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L7">class <b>CertRequest</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L10">class <b>CertRequest</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/cert_request.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertRequest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L62"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -84,7 +89,7 @@ Create a CertRequest resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -98,7 +103,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +113,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -122,7 +127,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-certRequestPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L37">property <b>certRequestPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L40">property <b>certRequestPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certRequestPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -133,7 +138,7 @@ The certificate request data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-dnsNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L41">property <b>dnsNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L44">property <b>dnsNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dnsNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -144,7 +149,7 @@ List of DNS names for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -156,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L45">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L48">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -167,19 +172,19 @@ List of IP addresses for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L50">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L53">property <b>keyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `private_key_pem`.
+in `privateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L54">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L57">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -190,7 +195,7 @@ PEM-encoded private key that the certificate will belong to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L59">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L62">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -212,7 +217,7 @@ a nested configuration block whose structure is described below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -225,12 +230,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocallySignedCert">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L7">class <b>LocallySignedCert</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L10">class <b>LocallySignedCert</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/locally_signed_cert.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LocallySignedCert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -247,7 +257,7 @@ Create a LocallySignedCert resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -261,7 +271,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -271,7 +281,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -285,7 +295,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-allowedUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L38">property <b>allowedUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L41">property <b>allowedUses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowedUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -297,7 +307,7 @@ for the issued certificate. The valid keywords are listed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-caCertPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L42">property <b>caCertPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L45">property <b>caCertPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>caCertPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -308,19 +318,19 @@ PEM-encoded certificate data for the CA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-caKeyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L47">property <b>caKeyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L50">property <b>caKeyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>caKeyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `ca_private_key_pem`.
+in `caPrivateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-caPrivateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L53">property <b>caPrivateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L56">property <b>caPrivateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>caPrivateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -333,7 +343,7 @@ function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-certPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L57">property <b>certPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L60">property <b>certPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -344,7 +354,7 @@ The certificate data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-certRequestPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L61">property <b>certRequestPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L64">property <b>certRequestPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certRequestPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -355,7 +365,7 @@ PEM-encoded request certificate data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-earlyRenewalHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L65">property <b>earlyRenewalHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L68">property <b>earlyRenewalHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>earlyRenewalHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -366,7 +376,7 @@ Number of hours before the certificates expiry when a new certificate will be ge
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -378,7 +388,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-isCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L71">property <b>isCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L74">property <b>isCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isCaCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -391,7 +401,7 @@ a certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -403,7 +413,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-validityEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L76">property <b>validityEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L79">property <b>validityEndTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validityEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -415,7 +425,7 @@ The time until which the certificate is invalid, as an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-validityPeriodHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L81">property <b>validityPeriodHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L84">property <b>validityPeriodHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validityPeriodHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -427,7 +437,7 @@ certificate will become invalid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCert-validityStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L86">property <b>validityStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L89">property <b>validityStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validityStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -440,12 +450,17 @@ The time after which the certificate is valid, as an
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PrivateKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L7">class <b>PrivateKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L10">class <b>PrivateKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/private_key.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PrivateKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L75"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -462,7 +477,7 @@ Create a PrivateKey resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -476,7 +491,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -486,7 +501,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -500,7 +515,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L38">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L41">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -512,7 +527,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-ecdsaCurve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L44">property <b>ecdsaCurve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L47">property <b>ecdsaCurve</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ecdsaCurve: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -525,7 +540,7 @@ default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -537,7 +552,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L48">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L51">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -548,7 +563,7 @@ The private key data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-publicKeyFingerprintMd5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L55">property <b>publicKeyFingerprintMd5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L58">property <b>publicKeyFingerprintMd5</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicKeyFingerprintMd5: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -557,18 +572,18 @@ The private key data in PEM format.
 The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
-`public_key_openssh`.
+`publicKeyOpenssh`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-publicKeyOpenssh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L63">property <b>publicKeyOpenssh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L66">property <b>publicKeyOpenssh</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicKeyOpenssh: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The public key data in OpenSSH `authorized_keys`
+The public key data in OpenSSH `authorizedKeys`
 format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
@@ -577,7 +592,7 @@ is selected.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-publicKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L67">property <b>publicKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L70">property <b>publicKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -588,7 +603,7 @@ The public key data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-rsaBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L72">property <b>rsaBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L75">property <b>rsaBits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>rsaBits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -600,7 +615,7 @@ RSA key in bits. Defaults to 2048.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -613,7 +628,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/provider.ts#L15">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/provider.ts#L15">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -622,13 +637,13 @@ deployments.
 The provider type for the tls package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -645,7 +660,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -655,7 +670,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -669,7 +684,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -681,7 +696,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -694,12 +709,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSignedCert">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L7">class <b>SelfSignedCert</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L10">class <b>SelfSignedCert</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/self_signed_cert.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSignedCert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -716,7 +736,7 @@ Create a SelfSignedCert resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -730,7 +750,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -740,7 +760,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -754,7 +774,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-allowedUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L38">property <b>allowedUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L41">property <b>allowedUses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowedUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -766,7 +786,7 @@ for the issued certificate. The valid keywords are listed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-certPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L42">property <b>certPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L45">property <b>certPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -777,7 +797,7 @@ The certificate data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-dnsNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L46">property <b>dnsNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L49">property <b>dnsNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dnsNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -788,7 +808,7 @@ List of DNS names for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-earlyRenewalHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L50">property <b>earlyRenewalHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L53">property <b>earlyRenewalHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>earlyRenewalHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -799,7 +819,7 @@ Number of hours before the certificates expiry when a new certificate will be ge
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -811,7 +831,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L54">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L57">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -822,7 +842,7 @@ List of IP addresses for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-isCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L60">property <b>isCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L63">property <b>isCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isCaCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -835,19 +855,19 @@ a certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L65">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L68">property <b>keyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `private_key_pem`.
+in `privateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L69">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L72">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -858,7 +878,7 @@ PEM-encoded private key that the certificate will belong to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L75">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L78">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -876,12 +896,12 @@ PEM-encoded private key that the certificate will belong to
 
 The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls_cert_request`.
+corresponding block for `tls..CertRequest`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -893,7 +913,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-validityEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L80">property <b>validityEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L83">property <b>validityEndTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validityEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -905,7 +925,7 @@ The time until which the certificate is invalid, as an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-validityPeriodHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L85">property <b>validityPeriodHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L88">property <b>validityPeriodHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validityPeriodHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -917,7 +937,7 @@ certificate will become invalid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCert-validityStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L90">property <b>validityStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L93">property <b>validityStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validityStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -930,7 +950,7 @@ The time after which the certificate is valid, as an
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -940,7 +960,7 @@ The time after which the certificate is valid, as an
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -950,7 +970,7 @@ The time after which the certificate is valid, as an
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -960,12 +980,12 @@ The time after which the certificate is valid, as an
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getPublicKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L25">function <b>getPublicKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L25">function <b>getPublicKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getPublicKey(args: <a href='#GetPublicKeyArgs'>GetPublicKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPublicKeyResult'>GetPublicKeyResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getPublicKey(args: <a href='#GetPublicKeyArgs'>GetPublicKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPublicKeyResult'>GetPublicKeyResult</a>&gt; &amp; <a href='#GetPublicKeyResult'>GetPublicKeyResult</a></pre>
 
 
 Use this data source to get the public key from a PEM-encoded private key for use in other
@@ -988,7 +1008,7 @@ const example = pulumi.output(tls.getPublicKey({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -998,7 +1018,7 @@ const example = pulumi.output(tls.getPublicKey({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CertRequestArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L136">interface <b>CertRequestArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L146">interface <b>CertRequestArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1007,7 +1027,7 @@ The set of arguments for constructing a CertRequest resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertRequestArgs-dnsNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L140">property <b>dnsNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L150">property <b>dnsNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1018,7 +1038,7 @@ List of DNS names for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestArgs-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L144">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L154">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1029,19 +1049,19 @@ List of IP addresses for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestArgs-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L149">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L159">property <b>keyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `private_key_pem`.
+in `privateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestArgs-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L153">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L163">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1052,7 +1072,7 @@ PEM-encoded private key that the certificate will belong to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestArgs-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L158">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L168">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1075,7 +1095,7 @@ a nested configuration block whose structure is described below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertRequestState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L104">interface <b>CertRequestState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L114">interface <b>CertRequestState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1084,7 +1104,7 @@ Input properties used for looking up and filtering CertRequest resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertRequestState-certRequestPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L108">property <b>certRequestPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L118">property <b>certRequestPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certRequestPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1095,7 +1115,7 @@ The certificate request data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestState-dnsNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L112">property <b>dnsNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L122">property <b>dnsNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1106,7 +1126,7 @@ List of DNS names for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestState-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L116">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L126">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1117,19 +1137,19 @@ List of IP addresses for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestState-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L121">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L131">property <b>keyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `private_key_pem`.
+in `privateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestState-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L125">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L135">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1140,7 +1160,7 @@ PEM-encoded private key that the certificate will belong to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestState-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/certRequest.ts#L130">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/certRequest.ts#L140">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1163,7 +1183,7 @@ a nested configuration block whose structure is described below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPublicKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L34">interface <b>GetPublicKeyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L43">interface <b>GetPublicKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1172,7 +1192,7 @@ A collection of arguments for invoking getPublicKey.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPublicKeyArgs-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L38">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L47">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1184,7 +1204,7 @@ The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPublicKeyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L44">interface <b>GetPublicKeyResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L53">interface <b>GetPublicKeyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1193,7 +1213,7 @@ A collection of values returned by getPublicKey.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPublicKeyResult-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L45">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L54">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1201,7 +1221,7 @@ A collection of values returned by getPublicKey.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPublicKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L81">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1212,7 +1232,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPublicKeyResult-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L49">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L58">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1223,7 +1243,7 @@ The private key data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPublicKeyResult-publicKeyFingerprintMd5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L56">property <b>publicKeyFingerprintMd5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L65">property <b>publicKeyFingerprintMd5</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKeyFingerprintMd5: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1232,18 +1252,18 @@ The private key data in PEM format.
 The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
-`public_key_openssh`.
+`publicKeyOpenssh`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPublicKeyResult-publicKeyOpenssh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L64">property <b>publicKeyOpenssh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L73">property <b>publicKeyOpenssh</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKeyOpenssh: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 {{% md %}}
 
-The public key data in OpenSSH `authorized_keys`
+The public key data in OpenSSH `authorizedKeys`
 format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
@@ -1252,7 +1272,7 @@ is selected.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPublicKeyResult-publicKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/getPublicKey.ts#L68">property <b>publicKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/getPublicKey.ts#L77">property <b>publicKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKeyPem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1264,7 +1284,7 @@ The public key data in PEM format.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocallySignedCertArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L209">interface <b>LocallySignedCertArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L219">interface <b>LocallySignedCertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1273,7 +1293,7 @@ The set of arguments for constructing a LocallySignedCert resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-allowedUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L214">property <b>allowedUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L224">property <b>allowedUses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1285,7 +1305,7 @@ for the issued certificate. The valid keywords are listed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-caCertPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L218">property <b>caCertPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L228">property <b>caCertPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>caCertPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1296,19 +1316,19 @@ PEM-encoded certificate data for the CA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-caKeyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L223">property <b>caKeyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L233">property <b>caKeyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>caKeyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `ca_private_key_pem`.
+in `caPrivateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-caPrivateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L229">property <b>caPrivateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L239">property <b>caPrivateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>caPrivateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1321,7 +1341,7 @@ function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-certRequestPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L233">property <b>certRequestPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L243">property <b>certRequestPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certRequestPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1332,7 +1352,7 @@ PEM-encoded request certificate data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-earlyRenewalHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L237">property <b>earlyRenewalHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L247">property <b>earlyRenewalHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>earlyRenewalHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1343,7 +1363,7 @@ Number of hours before the certificates expiry when a new certificate will be ge
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-isCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L243">property <b>isCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L253">property <b>isCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1356,7 +1376,7 @@ a certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertArgs-validityPeriodHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L248">property <b>validityPeriodHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L258">property <b>validityPeriodHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityPeriodHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1369,7 +1389,7 @@ certificate will become invalid.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocallySignedCertState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L150">interface <b>LocallySignedCertState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L160">interface <b>LocallySignedCertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1378,7 +1398,7 @@ Input properties used for looking up and filtering LocallySignedCert resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LocallySignedCertState-allowedUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L155">property <b>allowedUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L165">property <b>allowedUses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1390,7 +1410,7 @@ for the issued certificate. The valid keywords are listed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-caCertPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L159">property <b>caCertPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L169">property <b>caCertPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>caCertPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1401,19 +1421,19 @@ PEM-encoded certificate data for the CA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-caKeyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L164">property <b>caKeyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L174">property <b>caKeyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>caKeyAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `ca_private_key_pem`.
+in `caPrivateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-caPrivateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L170">property <b>caPrivateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L180">property <b>caPrivateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>caPrivateKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1426,7 +1446,7 @@ function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-certPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L174">property <b>certPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L184">property <b>certPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1437,7 +1457,7 @@ The certificate data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-certRequestPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L178">property <b>certRequestPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L188">property <b>certRequestPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certRequestPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1448,7 +1468,7 @@ PEM-encoded request certificate data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-earlyRenewalHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L182">property <b>earlyRenewalHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L192">property <b>earlyRenewalHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>earlyRenewalHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1459,7 +1479,7 @@ Number of hours before the certificates expiry when a new certificate will be ge
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-isCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L188">property <b>isCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L198">property <b>isCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1472,7 +1492,7 @@ a certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-validityEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L193">property <b>validityEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L203">property <b>validityEndTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1484,7 +1504,7 @@ The time until which the certificate is invalid, as an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-validityPeriodHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L198">property <b>validityPeriodHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L208">property <b>validityPeriodHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityPeriodHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1496,7 +1516,7 @@ certificate will become invalid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocallySignedCertState-validityStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/locallySignedCert.ts#L203">property <b>validityStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/locallySignedCert.ts#L213">property <b>validityStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1529,7 @@ The time after which the certificate is valid, as an
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PrivateKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L158">interface <b>PrivateKeyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L168">interface <b>PrivateKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1518,7 +1538,7 @@ The set of arguments for constructing a PrivateKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PrivateKeyArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L163">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L173">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1530,7 +1550,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyArgs-ecdsaCurve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L169">property <b>ecdsaCurve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L179">property <b>ecdsaCurve</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecdsaCurve?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1543,7 +1563,7 @@ default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyArgs-rsaBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L174">property <b>rsaBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L184">property <b>rsaBits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rsaBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1556,7 +1576,7 @@ RSA key in bits. Defaults to 2048.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PrivateKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L113">interface <b>PrivateKeyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L123">interface <b>PrivateKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1565,7 +1585,7 @@ Input properties used for looking up and filtering PrivateKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PrivateKeyState-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L118">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L128">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1577,7 +1597,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyState-ecdsaCurve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L124">property <b>ecdsaCurve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L134">property <b>ecdsaCurve</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecdsaCurve?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1590,7 +1610,7 @@ default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyState-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L128">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L138">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1601,7 +1621,7 @@ The private key data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyState-publicKeyFingerprintMd5">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L135">property <b>publicKeyFingerprintMd5</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L145">property <b>publicKeyFingerprintMd5</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKeyFingerprintMd5?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1610,18 +1630,18 @@ The private key data in PEM format.
 The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
-`public_key_openssh`.
+`publicKeyOpenssh`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyState-publicKeyOpenssh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L143">property <b>publicKeyOpenssh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L153">property <b>publicKeyOpenssh</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKeyOpenssh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The public key data in OpenSSH `authorized_keys`
+The public key data in OpenSSH `authorizedKeys`
 format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
@@ -1630,7 +1650,7 @@ is selected.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyState-publicKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L147">property <b>publicKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L157">property <b>publicKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1641,7 +1661,7 @@ The public key data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateKeyState-rsaBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/privateKey.ts#L152">property <b>rsaBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/privateKey.ts#L162">property <b>rsaBits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rsaBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1654,7 +1674,7 @@ RSA key in bits. Defaults to 2048.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/provider.ts#L49">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/provider.ts#L56">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1664,7 +1684,7 @@ The set of arguments for constructing a Provider resource.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="SelfSignedCertArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L216">interface <b>SelfSignedCertArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L226">interface <b>SelfSignedCertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1673,7 +1693,7 @@ The set of arguments for constructing a SelfSignedCert resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-allowedUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L221">property <b>allowedUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L231">property <b>allowedUses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1685,7 +1705,7 @@ for the issued certificate. The valid keywords are listed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-dnsNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L225">property <b>dnsNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L235">property <b>dnsNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1696,7 +1716,7 @@ List of DNS names for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-earlyRenewalHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L229">property <b>earlyRenewalHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L239">property <b>earlyRenewalHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>earlyRenewalHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1707,7 +1727,7 @@ Number of hours before the certificates expiry when a new certificate will be ge
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L233">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L243">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1718,7 +1738,7 @@ List of IP addresses for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-isCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L239">property <b>isCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L249">property <b>isCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1731,19 +1751,19 @@ a certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L244">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L254">property <b>keyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `private_key_pem`.
+in `privateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L248">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L258">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1754,7 +1774,7 @@ PEM-encoded private key that the certificate will belong to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L254">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L264">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1772,12 +1792,12 @@ PEM-encoded private key that the certificate will belong to
 
 The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls_cert_request`.
+corresponding block for `tls..CertRequest`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertArgs-validityPeriodHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L259">property <b>validityPeriodHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L269">property <b>validityPeriodHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityPeriodHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1790,7 +1810,7 @@ certificate will become invalid.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSignedCertState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L153">interface <b>SelfSignedCertState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L163">interface <b>SelfSignedCertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1799,7 +1819,7 @@ Input properties used for looking up and filtering SelfSignedCert resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSignedCertState-allowedUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L158">property <b>allowedUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L168">property <b>allowedUses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1811,7 +1831,7 @@ for the issued certificate. The valid keywords are listed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-certPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L162">property <b>certPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L172">property <b>certPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1822,7 +1842,7 @@ The certificate data in PEM format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-dnsNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L166">property <b>dnsNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L176">property <b>dnsNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1833,7 +1853,7 @@ List of DNS names for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-earlyRenewalHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L170">property <b>earlyRenewalHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L180">property <b>earlyRenewalHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>earlyRenewalHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1844,7 +1864,7 @@ Number of hours before the certificates expiry when a new certificate will be ge
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L174">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L184">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1855,7 +1875,7 @@ List of IP addresses for which a certificate is being requested.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-isCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L180">property <b>isCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L190">property <b>isCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1868,19 +1888,19 @@ a certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L185">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L195">property <b>keyAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The name of the algorithm for the key provided
-in `private_key_pem`.
+in `privateKeyPem`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-privateKeyPem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L189">property <b>privateKeyPem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L199">property <b>privateKeyPem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKeyPem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1891,7 +1911,7 @@ PEM-encoded private key that the certificate will belong to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L195">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L205">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1909,12 +1929,12 @@ PEM-encoded private key that the certificate will belong to
 
 The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for `tls_cert_request`.
+corresponding block for `tls..CertRequest`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-validityEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L200">property <b>validityEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L210">property <b>validityEndTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1926,7 +1946,7 @@ The time until which the certificate is invalid, as an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-validityPeriodHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L205">property <b>validityPeriodHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L215">property <b>validityPeriodHours</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityPeriodHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1938,7 +1958,7 @@ certificate will become invalid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertState-validityStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/ccc2c64d25cf4bd46044605ac8f70b6d8406f134/sdk/nodejs/selfSignedCert.ts#L210">property <b>validityStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/e1733be101599270678c0e087c2b45121e4f02bd/sdk/nodejs/selfSignedCert.ts#L220">property <b>validityStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validityStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

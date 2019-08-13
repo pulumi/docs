@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.firestore"></span><dl class="class">
 <dt id="pulumi_gcp.firestore.Index">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.firestore.</code><code class="descname">Index</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collection=None</em>, <em>database=None</em>, <em>fields=None</em>, <em>project=None</em>, <em>query_scope=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.firestore.</code><code class="descname">Index</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collection=None</em>, <em>database=None</em>, <em>fields=None</em>, <em>project=None</em>, <em>query_scope=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>Cloud Firestore indexes enable simple and complex queries against documents in a database.</dt>
 <dd>This resource manages composite indexes and not single</dd>
@@ -38,6 +38,18 @@ anything, please consult the source <a class="reference external" href="https://
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_gcp.firestore.Index.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>collection=None</em>, <em>database=None</em>, <em>fields=None</em>, <em>name=None</em>, <em>project=None</em>, <em>query_scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Index resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.firestore.Index.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index.translate_output_property" title="Permalink to this definition">¶</a></dt>

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.monitoring"></span><dl class="class">
 <dt id="pulumi_azure.monitoring.ActionGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">ActionGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email_receivers=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>tags=None</em>, <em>webhook_receivers=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">ActionGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email_receivers=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>tags=None</em>, <em>webhook_receivers=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Action Group within Azure Monitor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -82,6 +82,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">webhook_receiver</span></code> blocks as defined below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.ActionGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>email_receivers=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>tags=None</em>, <em>webhook_receivers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ActionGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] email_receivers: One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.
+:param pulumi.Input[bool] enabled: Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] name: The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Action Group instance.
+:param pulumi.Input[str] short_name: The short name of the action group. This will be used in SMS messages.
+:param pulumi.Input[list] sms_receivers: One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[list] webhook_receivers: One or more <code class="docutils literal notranslate"><span class="pre">webhook_receiver</span></code> blocks as defined below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.monitoring.ActionGroup.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -124,7 +144,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.ActivityLogAlert">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">ActivityLogAlert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>criteria=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>scopes=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">ActivityLogAlert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>criteria=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>scopes=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Activity Log Alert within Azure Monitor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -196,6 +216,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.ActivityLogAlert.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>actions=None</em>, <em>criteria=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>scopes=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ActivityLogAlert resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] actions: One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.
+:param pulumi.Input[dict] criteria: A <code class="docutils literal notranslate"><span class="pre">criteria</span></code> block as defined below.
+:param pulumi.Input[str] description: The description of this activity log alert.
+:param pulumi.Input[bool] enabled: Should this Activity Log Alert be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] name: The name of the activity log alert. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the activity log alert instance.
+:param pulumi.Input[list] scopes: The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_activity_log_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_activity_log_alert.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.monitoring.ActivityLogAlert.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -238,10 +278,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.AlertRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AlertRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aggregation=None</em>, <em>description=None</em>, <em>email_action=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>operator=None</em>, <em>period=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>webhook_action=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AlertRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aggregation=None</em>, <em>description=None</em>, <em>email_action=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>operator=None</em>, <em>period=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>webhook_action=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal">metric-based alert rule</a> in Azure Monitor.</p>
 <blockquote>
-<div><strong>NOTE:</strong> This resource has been deprecated in favour of the <code class="docutils literal notranslate"><span class="pre">azurerm_monitor_metric_alertrule</span></code> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</div></blockquote>
+<div><strong>NOTE:</strong> This resource has been deprecated in favour of the <code class="docutils literal notranslate"><span class="pre">monitoring.MetricAlertRule</span></code> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -354,6 +394,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.AlertRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>aggregation=None</em>, <em>description=None</em>, <em>email_action=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>operator=None</em>, <em>period=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>webhook_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AlertRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] aggregation: Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.
+:param pulumi.Input[str] description: A verbose description of the alert rule that will be included in the alert email.
+:param pulumi.Input[dict] email_action: A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.
+:param pulumi.Input[bool] enabled: If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] metric_name: The metric that defines what the rule monitors.
+:param pulumi.Input[str] name: Specifies the name of the alert rule. Changing this forces a new resource to be created.
+:param pulumi.Input[str] operator: The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.
+:param pulumi.Input[str] period: The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_id: The ID of the resource monitored by the alert rule.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+:param pulumi.Input[float] threshold: The threshold value that activates the alert.
+:param pulumi.Input[dict] webhook_action: A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/metric_alertrule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/metric_alertrule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.monitoring.AlertRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AlertRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -396,7 +462,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.AutoscaleSetting">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AutoscaleSetting</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification=None</em>, <em>profiles=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AutoscaleSetting</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification=None</em>, <em>profiles=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_resource_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -468,6 +534,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the resource ID of the resource that the autoscale setting should be added to.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.AutoscaleSetting.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification=None</em>, <em>profiles=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AutoscaleSetting resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] enabled: Specifies whether automatic scaling is enabled for the target resource. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the AutoScale Setting. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] notification: Specifies a <code class="docutils literal notranslate"><span class="pre">notification</span></code> block as defined below.
+:param pulumi.Input[list] profiles: Specifies one or more (up to 20) <code class="docutils literal notranslate"><span class="pre">profile</span></code> blocks as defined below.
+:param pulumi.Input[str] resource_group_name: The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] target_resource_id: Specifies the resource ID of the resource that the autoscale setting should be added to.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_autoscale_setting.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_autoscale_setting.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.monitoring.AutoscaleSetting.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -509,8 +595,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetActionGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AwaitableGetActionGroupResult</code><span class="sig-paren">(</span><em>email_receivers=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>webhook_receivers=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetActionGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetDiagnosticCategoriesResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AwaitableGetDiagnosticCategoriesResult</code><span class="sig-paren">(</span><em>logs=None</em>, <em>metrics=None</em>, <em>resource_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetDiagnosticCategoriesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetLogProfileResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">AwaitableGetLogProfileResult</code><span class="sig-paren">(</span><em>categories=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>retention_policy=None</em>, <em>servicebus_rule_id=None</em>, <em>storage_account_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetLogProfileResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.monitoring.DiagnosticSetting">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">DiagnosticSetting</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_authorization_rule_id=None</em>, <em>eventhub_name=None</em>, <em>logs=None</em>, <em>log_analytics_workspace_id=None</em>, <em>metrics=None</em>, <em>name=None</em>, <em>storage_account_id=None</em>, <em>target_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">DiagnosticSetting</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_authorization_rule_id=None</em>, <em>eventhub_name=None</em>, <em>logs=None</em>, <em>log_analytics_workspace_id=None</em>, <em>metrics=None</em>, <em>name=None</em>, <em>storage_account_id=None</em>, <em>target_resource_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Diagnostic Setting for an existing Resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -580,6 +681,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.DiagnosticSetting.target_resource_id">
 <code class="descname">target_resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting.target_resource_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.DiagnosticSetting.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>eventhub_authorization_rule_id=None</em>, <em>eventhub_name=None</em>, <em>logs=None</em>, <em>log_analytics_workspace_id=None</em>, <em>metrics=None</em>, <em>name=None</em>, <em>storage_account_id=None</em>, <em>target_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DiagnosticSetting resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] eventhub_authorization_rule_id: Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
+:param pulumi.Input[str] eventhub_name: Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
+:param pulumi.Input[list] logs: One or more <code class="docutils literal notranslate"><span class="pre">log</span></code> blocks as defined below.
+:param pulumi.Input[str] log_analytics_workspace_id: Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
+:param pulumi.Input[list] metrics: One or more <code class="docutils literal notranslate"><span class="pre">metric</span></code> blocks as defined below.
+:param pulumi.Input[str] name: Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
+:param pulumi.Input[str] storage_account_id: With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
+:param pulumi.Input[str] target_resource_id: The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_diagnostic_setting.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_diagnostic_setting.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -732,7 +853,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.LogProfile">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">LogProfile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>categories=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>retention_policy=None</em>, <em>servicebus_rule_id=None</em>, <em>storage_account_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.LogProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">LogProfile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>categories=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>retention_policy=None</em>, <em>servicebus_rule_id=None</em>, <em>storage_account_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.LogProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile">Log Profile</a>. A Log Profile configures how Activity Logs are exported.</p>
 <blockquote>
 <div><strong>NOTE:</strong> It’s only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with <code class="docutils literal notranslate"><span class="pre">StatusCode=409</span></code> will occur.</div></blockquote>
@@ -794,6 +915,36 @@ new resource to be created.</p>
 <dd><p>The resource ID of the storage account in which the Activity Log is stored. At least one of <code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> or <code class="docutils literal notranslate"><span class="pre">servicebus_rule_id</span></code> must be set.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.LogProfile.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>categories=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>retention_policy=None</em>, <em>servicebus_rule_id=None</em>, <em>storage_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.LogProfile.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LogProfile resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] categories: List of categories of the logs.
+:param pulumi.Input[list] locations: List of regions for which Activity Log events are stored or streamed.
+:param pulumi.Input[str] name: The name of the Log Profile. Changing this forces a</p>
+<blockquote>
+<div>new resource to be created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as documented below. A retention policy for how long Activity Logs are retained in the storage account.</li>
+<li><strong>servicebus_rule_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of <code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> or <code class="docutils literal notranslate"><span class="pre">servicebus_rule_id</span></code> must be set.</li>
+<li><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID of the storage account in which the Activity Log is stored. At least one of <code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> or <code class="docutils literal notranslate"><span class="pre">servicebus_rule_id</span></code> must be set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_log_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_log_profile.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.monitoring.LogProfile.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.LogProfile.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -836,7 +987,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.MetricAlert">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">MetricAlert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>auto_mitigate=None</em>, <em>criterias=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>frequency=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>scopes=None</em>, <em>severity=None</em>, <em>tags=None</em>, <em>window_size=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">MetricAlert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>auto_mitigate=None</em>, <em>criterias=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>frequency=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>scopes=None</em>, <em>severity=None</em>, <em>tags=None</em>, <em>window_size=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Metric Alert within Azure Monitor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -936,6 +1087,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than <code class="docutils literal notranslate"><span class="pre">frequency</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">PT1M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT15M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT30M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT1H</span></code>, <code class="docutils literal notranslate"><span class="pre">PT6H</span></code>, <code class="docutils literal notranslate"><span class="pre">PT12H</span></code> and <code class="docutils literal notranslate"><span class="pre">P1D</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.MetricAlert.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>actions=None</em>, <em>auto_mitigate=None</em>, <em>criterias=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>frequency=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>scopes=None</em>, <em>severity=None</em>, <em>tags=None</em>, <em>window_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MetricAlert resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] actions: One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.
+:param pulumi.Input[bool] auto_mitigate: Should the alerts in this Metric Alert be auto resolved? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[list] criterias: One or more <code class="docutils literal notranslate"><span class="pre">criteria</span></code> blocks as defined below.
+:param pulumi.Input[str] description: The description of this Metric Alert.
+:param pulumi.Input[bool] enabled: Should this Metric Alert be enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] frequency: The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are <code class="docutils literal notranslate"><span class="pre">PT1M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT15M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT30M</span></code> and <code class="docutils literal notranslate"><span class="pre">PT1H</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PT1M</span></code>.
+:param pulumi.Input[str] name: The name of the Metric Alert. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Metric Alert instance.
+:param pulumi.Input[str] scopes: The resource ID at which the metric criteria should be applied.
+:param pulumi.Input[float] severity: The severity of this Metric Alert. Possible values are <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">4</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">3</span></code>.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] window_size: The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than <code class="docutils literal notranslate"><span class="pre">frequency</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">PT1M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT15M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT30M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT1H</span></code>, <code class="docutils literal notranslate"><span class="pre">PT6H</span></code>, <code class="docutils literal notranslate"><span class="pre">PT12H</span></code> and <code class="docutils literal notranslate"><span class="pre">P1D</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alert.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.monitoring.MetricAlert.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -978,7 +1153,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.MetricAlertRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">MetricAlertRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aggregation=None</em>, <em>description=None</em>, <em>email_action=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>operator=None</em>, <em>period=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>webhook_action=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">MetricAlertRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aggregation=None</em>, <em>description=None</em>, <em>email_action=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>operator=None</em>, <em>period=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>webhook_action=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal">metric-based alert rule</a> in Azure Monitor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1091,6 +1266,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.MetricAlertRule.webhook_action">
 <code class="descname">webhook_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.webhook_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.monitoring.MetricAlertRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>aggregation=None</em>, <em>description=None</em>, <em>email_action=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>operator=None</em>, <em>period=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>webhook_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlertRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MetricAlertRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] aggregation: Defines how the metric data is combined over time. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Total</span></code>, and <code class="docutils literal notranslate"><span class="pre">Last</span></code>.
+:param pulumi.Input[str] description: A verbose description of the alert rule that will be included in the alert email.
+:param pulumi.Input[dict] email_action: A <code class="docutils literal notranslate"><span class="pre">email_action</span></code> block as defined below.
+:param pulumi.Input[bool] enabled: If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the alert rule is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] metric_name: The metric that defines what the rule monitors.
+:param pulumi.Input[str] name: Specifies the name of the alert rule. Changing this forces a new resource to be created.
+:param pulumi.Input[str] operator: The operator used to compare the metric data and the threshold. Possible values are <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.
+:param pulumi.Input[str] period: The period of time formatted in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration format</a> that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
+:param pulumi.Input[str] resource_id: The ID of the resource monitored by the alert rule.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+:param pulumi.Input[float] threshold: The threshold value that activates the alert.
+:param pulumi.Input[dict] webhook_action: A <code class="docutils literal notranslate"><span class="pre">webhook_action</span></code> block as defined below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alertrule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alertrule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

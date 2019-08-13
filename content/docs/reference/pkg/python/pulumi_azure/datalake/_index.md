@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_azure.datalake"></span><dl class="class">
 <dt id="pulumi_azure.datalake.AnalyticsAccount">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsAccount</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsAccount</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Data Lake Analytics Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -68,6 +68,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The monthly commitment tier for Data Lake Analytics Account. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_50000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_5000AUHours</span></code>, or <code class="docutils literal notranslate"><span class="pre">Commitment_500AUHours</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.datalake.AnalyticsAccount.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AnalyticsAccount resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] default_store_account_name: Specifies the data lake store to use by default. Changing this forces a new resource to be created.
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Data Lake Analytics Account. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Data Lake Analytics Account.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] tier: The monthly commitment tier for Data Lake Analytics Account. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_50000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_5000AUHours</span></code>, or <code class="docutils literal notranslate"><span class="pre">Commitment_500AUHours</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_account.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.datalake.AnalyticsAccount.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -110,7 +128,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.AnalyticsFirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Analytics Firewall Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -161,6 +179,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Start IP address for the firewall rule.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.datalake.AnalyticsFirewallRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AnalyticsFirewallRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_name: Specifies the name of the Data Lake Analytics for which the Firewall Rule should take effect.
+:param pulumi.Input[str] end_ip_address: The End IP Address for the firewall rule.
+:param pulumi.Input[str] name: Specifies the name of the Data Lake Analytics. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Data Lake Analytics.
+:param pulumi.Input[str] start_ip_address: The Start IP address for the firewall rule.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_firewall_rule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.datalake.AnalyticsFirewallRule.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -200,6 +235,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 </dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.datalake.AwaitableGetStoreResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AwaitableGetStoreResult</code><span class="sig-paren">(</span><em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AwaitableGetStoreResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.GetStoreResult">
@@ -251,7 +291,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.Store">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">Store</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">Store</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Data Lake Store.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -336,6 +376,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The monthly commitment tier for Data Lake Store. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1PB</span></code> or <code class="docutils literal notranslate"><span class="pre">Commitment_5PB</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_azure.datalake.Store.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>endpoint=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Store resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] encryption_state: Is Encryption enabled on this Data Lake Store Account? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.
+:param pulumi.Input[str] encryption_type: The Encryption Type used for this Data Lake Store Account. Currently can be set to <code class="docutils literal notranslate"><span class="pre">ServiceManaged</span></code> when <code class="docutils literal notranslate"><span class="pre">encryption_state</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> - and must be a blank string when it’s Disabled.
+:param pulumi.Input[str] endpoint: The Endpoint for the Data Lake Store.
+:param pulumi.Input[str] firewall_allow_azure_ips: are Azure Service IP’s allowed through the firewall? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled.</span></code>
+:param pulumi.Input[str] firewall_state: the state of the Firewall. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled.</span></code>
+:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Data Lake Store.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] tier: The monthly commitment tier for Data Lake Store. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1PB</span></code> or <code class="docutils literal notranslate"><span class="pre">Commitment_5PB</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.datalake.Store.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -378,11 +440,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.StoreFile">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Store File.</p>
 <blockquote>
 <div><strong>Note:</strong> If you want to change the data in the remote file without changing the <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>, then 
-taint the resource so the <code class="docutils literal notranslate"><span class="pre">azurerm_data_lake_store_file</span></code> gets recreated with the new data.</div></blockquote>
+taint the resource so the <code class="docutils literal notranslate"><span class="pre">datalake.StoreFile</span></code> gets recreated with the new data.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -416,6 +478,21 @@ taint the resource so the <code class="docutils literal notranslate"><span class
 <dt id="pulumi_azure.datalake.StoreFile.remote_file_path">
 <code class="descname">remote_file_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.StoreFile.remote_file_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path created for the file on the Data Lake Store.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.datalake.StoreFile.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StoreFile resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_name: Specifies the name of the Data Lake Store for which the File should created.
+:param pulumi.Input[str] local_file_path: The path to the local file to be added to the Data Lake Store.
+:param pulumi.Input[str] remote_file_path: The path created for the file on the Data Lake Store.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_file.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_file.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -460,7 +537,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.StoreFirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Store Firewall Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -509,6 +586,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.datalake.StoreFirewallRule.start_ip_address">
 <code class="descname">start_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule.start_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Start IP address for the firewall rule.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_azure.datalake.StoreFirewallRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StoreFirewallRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_name: Specifies the name of the Data Lake Store for which the Firewall Rule should take effect.
+:param pulumi.Input[str] end_ip_address: The End IP Address for the firewall rule.
+:param pulumi.Input[str] name: Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Data Lake Store.
+:param pulumi.Input[str] start_ip_address: The Start IP address for the firewall rule.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_firewall_rule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

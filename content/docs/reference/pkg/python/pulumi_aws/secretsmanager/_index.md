@@ -9,6 +9,16 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.secretsmanager"></span><dl class="class">
+<dt id="pulumi_aws.secretsmanager.AwaitableGetSecretResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>policy=None</em>, <em>rotation_enabled=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.secretsmanager.AwaitableGetSecretVersionResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">AwaitableGetSecretVersionResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_id=None</em>, <em>version_stage=None</em>, <em>version_stages=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.AwaitableGetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">GetSecretResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>policy=None</em>, <em>rotation_enabled=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
@@ -106,8 +116,8 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.secretsmanager.Secret">
-<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">Secret</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>recovery_window_in_days=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the <cite>``aws_secretsmanager_secret_version`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html</a>&gt;`_.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">Secret</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>recovery_window_in_days=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the <cite>``secretsmanager.SecretVersion`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html</a>&gt;`_.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -120,6 +130,7 @@ anything, please consult the source <a class="reference external" href="https://
 </li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: <cite>/*+=.&#64;-``Conflicts with`</cite>name_prefix<a href="#id3"><span class="problematic" id="id4">``</span></a>.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with``name<a href="#id5"><span class="problematic" id="id6">``</span></a>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document representing a [resource policy](<a class="reference external" href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html</a>).</li>
 <li><strong>recovery_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be``0<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">force</span> <span class="pre">deletion</span> <span class="pre">without</span> <span class="pre">recovery</span> <span class="pre">or</span> <span class="pre">range</span> <span class="pre">from</span></code>7<code class="docutils literal notranslate"><span class="pre">to</span></code>30<code class="docutils literal notranslate"><span class="pre">days.</span> <span class="pre">The</span> <span class="pre">default</span> <span class="pre">value</span> <span class="pre">is</span></code>30`.</li>
 <li><strong>rotation_lambda_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ARN of the Lambda function that can rotate the secret.</li>
 <li><strong>rotation_rules</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure that defines the rotation configuration for this secret. Defined below.</li>
@@ -162,6 +173,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.secretsmanager.Secret.policy">
+<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A valid JSON document representing a <a class="reference external" href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">resource policy</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.recovery_window_in_days">
 <code class="descname">recovery_window_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.recovery_window_in_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be <code class="docutils literal notranslate"><span class="pre">0</span></code> to force deletion without recovery or range from <code class="docutils literal notranslate"><span class="pre">7</span></code> to <code class="docutils literal notranslate"><span class="pre">30</span></code> days. The default value is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
@@ -189,6 +206,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.secretsmanager.Secret.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a key-value map of user-defined tags that are attached to the secret.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.secretsmanager.Secret.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>recovery_window_in_days=None</em>, <em>rotation_enabled=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Secret resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the secret.
+:param pulumi.Input[str] description: A description of the secret.
+:param pulumi.Input[str] kms_key<em>id: Specifies the ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don’t specify this value, then Secrets Manager defaults to using the AWS account’s default CMK (the one named ``aws/secretsmanager``). If the default KMS CMK with that name doesn’t yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+:param pulumi.Input[str] name: Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/</em>+=.&#64;-<code class="docutils literal notranslate"><span class="pre">Conflicts</span> <span class="pre">with</span></code>name_prefix<code class="docutils literal notranslate"><span class="pre">.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">name_prefix:</span> <span class="pre">Creates</span> <span class="pre">a</span> <span class="pre">unique</span> <span class="pre">name</span> <span class="pre">beginning</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">prefix.</span> <span class="pre">Conflicts</span> <span class="pre">with</span></code>name<code class="docutils literal notranslate"><span class="pre">.</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">policy:</span> <span class="pre">A</span> <span class="pre">valid</span> <span class="pre">JSON</span> <span class="pre">document</span> <span class="pre">representing</span> <span class="pre">a</span> <span class="pre">[resource</span> <span class="pre">policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).</span>
+<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">recovery_window_in_days:</span> <span class="pre">Specifies</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">days</span> <span class="pre">that</span> <span class="pre">AWS</span> <span class="pre">Secrets</span> <span class="pre">Manager</span> <span class="pre">waits</span> <span class="pre">before</span> <span class="pre">it</span> <span class="pre">can</span> <span class="pre">delete</span> <span class="pre">the</span> <span class="pre">secret.</span> <span class="pre">This</span> <span class="pre">value</span> <span class="pre">can</span> <span class="pre">be</span></code>0<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">force</span> <span class="pre">deletion</span> <span class="pre">without</span> <span class="pre">recovery</span> <span class="pre">or</span> <span class="pre">range</span> <span class="pre">from</span></code>7<code class="docutils literal notranslate"><span class="pre">to</span></code>30<code class="docutils literal notranslate"><span class="pre">days.</span> <span class="pre">The</span> <span class="pre">default</span> <span class="pre">value</span> <span class="pre">is</span></code>30`.
+:param pulumi.Input[bool] rotation_enabled: Specifies whether automatic rotation is enabled for this secret.
+:param pulumi.Input[str] rotation_lambda_arn: Specifies the ARN of the Lambda function that can rotate the secret.
+:param pulumi.Input[dict] rotation_rules: A structure that defines the rotation configuration for this secret. Defined below.
+:param pulumi.Input[dict] tags: Specifies a key-value map of user-defined tags that are attached to the secret.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/secretsmanager_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/secretsmanager_secret.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -233,8 +273,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.secretsmanager.SecretVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">SecretVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_stages=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretVersion resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">SecretVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_stages=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to manage AWS Secrets Manager secret version including its secret value. To manage secret metadata, see the <cite>``secretsmanager.Secret`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html</a>&gt;`_.</p>
+<blockquote>
+<div><strong>NOTE:</strong> If the <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> staging label is present on this version during resource deletion, that label cannot be removed and will be skipped to prevent errors when fully deleting the secret. That label will leave this secret version active even after the resource is deleted from this provider unless the secret itself is deleted. Move the <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> staging label before or after deleting this resource from this provider to fully trigger version deprecation if necessary.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -289,6 +331,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that’s already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> to this new version on creation.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.secretsmanager.SecretVersion.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_id=None</em>, <em>version_stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SecretVersion resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the secret.
+:param pulumi.Input[str] secret_binary: Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.
+:param pulumi.Input[str] secret_id: Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
+:param pulumi.Input[str] secret_string: Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.
+:param pulumi.Input[str] version_id: The unique identifier of the version of the secret.
+:param pulumi.Input[list] version_stages: Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that’s already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> to this new version on creation.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/secretsmanager_secret_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/secretsmanager_secret_version.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -332,7 +392,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_aws.secretsmanager.get_secret">
 <code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the <cite>``aws_secretsmanager_secret_version`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html</a>&gt;`_.</p>
+<dd><p>Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the <cite>``secretsmanager.SecretVersion`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html</a>&gt;`_.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/secretsmanager_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/secretsmanager_secret.html.markdown</a>.</div></blockquote>
 </dd></dl>
@@ -340,7 +400,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_aws.secretsmanager.get_secret_version">
 <code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">get_secret_version</code><span class="sig-paren">(</span><em>secret_id=None</em>, <em>version_id=None</em>, <em>version_stage=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the <cite>``aws_secretsmanager_secret`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html</a>&gt;`_.</p>
+<dd><p>Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the <cite>``secretsmanager.Secret`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html</a>&gt;`_.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/secretsmanager_secret_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/secretsmanager_secret_version.html.markdown</a>.</div></blockquote>
 </dd></dl>
