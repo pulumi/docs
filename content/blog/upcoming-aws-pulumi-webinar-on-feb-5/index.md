@@ -4,7 +4,6 @@ authors: ["erin-xue"]
 tags: ["AWS","CI/CD","Cloud-Native"]
 date: "2019-01-09"
 meta_desc: "In February, Pulumi hosted a webinar with AWS Fargate which covered how to implement cloud native infrastructure across your organization using AWS and Pulumi. We were joined by a customer, Learning Machine. Adopting Pulumi helped Learning Machine reduce 25,000 lines of ad-hoc DevOps scripts to 500 lines of JavaScript code, improve time to ship code, provision, and onboard new customers, and unify their Development and DevOps teams and techniques."
-"
 meta_image: code-comparison.png
 ---
 
