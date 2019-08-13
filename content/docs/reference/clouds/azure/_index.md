@@ -58,6 +58,7 @@ The Azure provider is open source and available in the [pulumi/pulumi-azure](htt
 The Azure provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure:<option>`, or passed to the constructor of `new azure.Provider` to construct a specific instance of the Azure provider.
 
 * `environment`: (Required) The cloud environment to use. It can also be sourced from the ARM_ENVIRONMENT environment variable. Supported values are: `public` (default), `usgovernment`, `german`, `china`.
+* `location`: (Optional) The location to use. ResourceGroups will consult this property for a default location, if one was not supplied explicitly.
 * `clientId`: (Optional) The client ID to use. It can also be sourced from the `ARM_CLIENT_ID` environment variable.
 * `clientSecret`: (Optional) The client secret to use. It can also be sourced from the `ARM_CLIENT_SECRET` environment variable.
 * `msiEndpoint`: (Optional) The REST endpoint to retrieve an MSI token from. Pulumi will attempt to discover this automatically but it can be specified manually here. It can also be sourced from the `ARM_MSI_ENDPOINT` environment variable.
