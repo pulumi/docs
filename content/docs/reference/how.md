@@ -24,7 +24,7 @@ Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "la
 
 Next, we run `pulumi up`. When the program runs to completion, it runs the two `new aws.s3.Bucket()` statements. So, the language host registers two resources with the engine.
 
-The engine consults the last deployed state on pulumi.com, and determines that these resources do not already exist. So, the engine calls the AWS resource provider, requesting that it create a security group. Once the operation succeeds, this state is written to the last-deployed checkpoint. So, the resource list will be similar to the following:
+The engine consults the last deployed state on pulumi.com, and determines that these resources do not already exist. So, the engine calls the AWS resource provider, requesting that it creates the two AWS S3 buckets. Once the operations succeed, this state is written to the last-deployed checkpoint. So, the resource list will be similar to the following:
 
 ```
 stack mystack
