@@ -8,7 +8,7 @@ menu:
 ---
 
 Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. Unlike
-Terraform, however, you will use familiar general purpose languages and tools to do. Like Terraform, Pulumi is
+Terraform, however, you will use familiar general purpose languages and tools to do so. Like Terraform, Pulumi is
 [open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use]({{< relref "/docs/quickstart" >}}).
 
 ## Summary
