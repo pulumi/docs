@@ -153,17 +153,17 @@ Or it can be aliased to a relative change to the resource's name, parent, and/or
 {{< langchoose >}}
 
 ```javascript
-// Wait up to 30m for the database to be created
+// Provide an alias to ensure migration of the existing resource.
 let db = new Database("new-name-for-db", {}, { aliases: [{name: "old-name-for-db"}] });
 ```
 
 ```typescript
-// Wait up to 30m for the database to be created
+// Provide an alias to ensure migration of the existing resource.
 let db = new Database("new-name-for-db", {}, { aliases: [{name: "old-name-for-db"}] });
 ```
 
 ```python
-# Wait up to 30m for the database to be created
+# Provide an alias to ensure migration of the existing resource.
 db = Database("db", opts=ResourceOptions(aliases=[Alias(name="old-name-for-db")]))
 ```
 
