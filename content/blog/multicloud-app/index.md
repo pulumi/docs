@@ -10,12 +10,12 @@ meta_image: "multicloud.png"
 
 Kubernetes clusters from the managed offerings of AWS EKS,
 Azure AKS, and GCP GKE all vary in configuration, management, and resource
-properties. This variance creates complexity in cluster provisioning and app
+properties. This variance creates unnecessary complexity in cluster provisioning and app
 deployments, as well as for CI/CD and testing. 
 
 Additionally, if you wanted to deploy the *same* app across multiple clusters 
 for specific use cases or test scenarios across providers, subtleties
-such as LoadBalancer outputs, and cluster connection settings can be a nuisance
+such as LoadBalancer outputs and cluster connection settings can be a nuisance
 to manage.
 
 In this post, we'll see how to use Pulumi to deploy the `kuard` app across EKS,
@@ -45,18 +45,18 @@ Check out the [`pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) SDK to get
 started.
 
 For local clusters such as those that are self-managed, or provisioned by a
-tool like up by Docker Desktop, Pulumi can still deploy workloads to these these
+tool like Docker Desktop, Pulumi can still deploy workloads to these these
 systems given that the [`pulumi/kubernetes`][pulumi-kubernetes] workload SDK only requires a valid `kubeconfig`
 file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page]({{< relref "/docs/reference/clouds/kubernetes" >}}).
 
 We will use the cloud SDKs to provision the managed Kubernetes clusters. Given
 that we're working with real code, we are afforded developer benefits such as: 
-code linting, type checking, IDE hints and completion, and object oriented
-constructs such as abstractions and inheritance.
+code linting, type checking, IDE hints and completion,
+abstractions and inheritance.
 
 Leveraging these development features creates the opportunity to encapsulate
 the finer-grained details and settings, and expose the capability to create
-clusters as simple as the following:
+clusters as simple as the following code:
 
 ![](clusters.png)
 
@@ -82,7 +82,7 @@ The various SDKS allow you to leverage industry standard best-practices and
 defaults, in addition to allowing you to further configure and customize how your clusters
 and apps are managed.
 
-Testing apps across various providers in this form allows you to obfuscate away
+Testing apps across various providers in this form allows you to abstract away
 the details of provider specific implementations, and focus on how your app
 operates in the various contexts.
 
@@ -109,7 +109,7 @@ migrating your existing configuration code to Pulumi, please don't hesitate to [
 We also encourage you to watch Pulumi team member [Levi Blackstone][levi-blackstone]
 demo this post in an episode of the [Kubernetes Community Meeting](https://kubernetes.io/community).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EyW2m5Xa_BQ?start=67" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube "EyW2m5Xa_BQ?rel=0&start=67" >}}
 
 [multicloud-example]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud
 [levi-blackstone]: {{< relref "/authors/levi-blackstone" >}}
