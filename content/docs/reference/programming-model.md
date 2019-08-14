@@ -163,7 +163,7 @@ let db = new Database("new-name-for-db", {}, { aliases: [{name: "old-name-for-db
 ```
 
 ```python
-// Provide an alias to ensure migration of the existing resource.
+# Provide an alias to ensure migration of the existing resource.
 db = Database("db", opts=ResourceOptions(aliases=[Alias(name="old-name-for-db")]))
 ```
 
