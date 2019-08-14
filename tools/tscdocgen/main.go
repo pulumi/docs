@@ -270,14 +270,11 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	// ShortText can contain an example snippet that contain placeholders that look like
 	// HTML tags, but aren't. For example, <namespace>/name where <namespace> is the placeholder
 	// for an actual namespace value.
-	if node.Comment.ShortText != "" &&
-		strings.Contains(node.Comment.ShortText, "<") &&
-		strings.Contains(node.Comment.ShortText, ">") {
-		// To avoid double-encoding strings that are already encoded, we make a targeted replacement
-		// of the < and > characters alone.
-		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, "<", "&lt;")
-		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, ">", "&gt;")
-	}
+	//
+	// To avoid double-encoding strings that are already encoded, we make a targeted replacement
+	// of the < and > characters alone.
+	node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, "<", "&lt;")
+	node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, ">", "&gt;")
 
 	// If this extends or implements other types, render them.
 	if len(node.ExtendedTypes) > 0 {
