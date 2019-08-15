@@ -57,7 +57,7 @@ Resources:
 
 Because the `import` is provided in code, it can be configured in several different ways.  You can look up import ids from Pulumi config instead of hard-coding them into programs, construct ids from predictable names based on program parameters, or even conditionally add the `import: <id>` property depending on whether one wants to deploy a stack in "adoption" or "creation" mode.
 
-This allows `import` to be used for a wide variety of adoption scenarios - from importing a single resource, to migrating a whole stack from an existing tool like Terraform to Pulumi, and even to automating the migration process across dozens of instances of an infrastructure deployment.
+Import can be used for a wide variety of adoption scenarios, from importing a single resource to migrating an entire stack from an existing tool like Terraform.  You can even automate an entire migration process across dozens of instances of infrastructure deployment.
 
 ### Walkthrough of Adopting Existing Infrastructure to Pulumi
 
@@ -228,7 +228,7 @@ Since the resources are now being managed by Pulumi, we can use the Pulumi Conso
 
 ![The Pulumi Console stack resources page](./console.png)
 
-And from there, navigate directly to the Virtual Machine in the Azure Portal, including the newly added `managedBy: Pulumi` tag.
+And then navigate to the Virtual Machine in the Azure Portal and see the newly added `managedBy: Pulumi` tag.
 
 
 ![The Azure Portal virtual machine page](./portal.png)
