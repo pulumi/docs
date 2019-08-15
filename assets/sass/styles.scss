@@ -130,3 +130,48 @@ main {
 }
 
 @tailwind utilities;
+
+// Widget showing a nicely formatted logo grid of our supported
+// CI/CD platforms.
+.supported-cicd-platforms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+    // For each CI system we are aproxmiating something like the following. Though
+    // by setting flex-basis each is given the same width.
+    // btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center
+    > a:hover {
+        background-color: #edf2f7;
+    }
+
+    > a {
+        border-width: 1px;
+        border-color: #e2e8f0;
+        border-radius: 0.25rem;
+
+        margin-bottom: 16px;
+
+        flex-basis: 150px;
+        padding: 16px 8px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        text-align: center;
+
+        img {
+            max-height: 120px;
+            max-width: 120px;
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+}
