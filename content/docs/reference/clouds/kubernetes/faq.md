@@ -33,7 +33,7 @@ Notably, Pulumi also supports alpha and beta APIs.
 **Yes!** Pulumi uses the official Kubernetes [client-go] library to interact
 with the Kubernetes cluster. It will work pretty much anywhere `kubectl` works.
 
-## How does Pulumi compare to `kubectl`?
+## How does Pulumi compare to kubectl?
 
 Pulumi is intended to be a drop-in replacement for `kubectl`. Though `kubectl` and
 Pulumi differ, functionally speaking, Pulumi works with
@@ -70,7 +70,7 @@ The differences between the two are:
 
  *  Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/reference/programming-model.md#autonaming" >}}).
 
-## How does Pulumi compare to `Helm`?
+## How does Pulumi compare to Helm?
 
 Helm v2 allows users to easily install pre-packaged application *charts* into a Kubernetes
 cluster. Charts are parameterized by some number of values, which users can fill in to customize
