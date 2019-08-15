@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting & Support
 menu:
-  reference:
-    weight: 15
+  troubleshooting:
+    weight: 1
 ---
 
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.

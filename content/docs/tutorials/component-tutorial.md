@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Pulumi Components"
+title: "Pulumi Components"
 ---
 
 It's easy to turn the [S3 website example] into a reusable [Component] that you share with your team or the community. A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI and pulumi.com Console. To create a component in JavaScript, simply subclass [pulumi.ComponentResource].

@@ -1,8 +1,8 @@
 ---
 title: "FAQ"
 menu:
-  reference:
-    weight: 11
+  troubleshooting:
+    weight: 2
 ---
 
 ## Why do resource names have random hex character suffixes?

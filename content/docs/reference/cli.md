@@ -1,9 +1,11 @@
 ---
-title: "Command Line"
+title: "Pulumi Commands (CLI)"
 menu:
   reference:
     identifier: cli
-    weight: 3
+    weight: 2
+
+aliases: [/docs/reference/commands]
 ---
 
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service
