@@ -14,8 +14,9 @@ Whether you are adopting resources that were deployed manually using your cloud 
 <!--more-->
 
 When working with existing resources, there are typically two scenarios:
-1. You need to reference existing resources to use as inputs to new resources in Pulumi
-1. You need to adopt existing resources under management so they can be updated/managed in Pulumi
+
+* You need to reference existing resources to use as inputs to new resources in Pulumi
+* You need to adopt existing resources under management so they can be updated/managed in Pulumi
 
 We'll review referencing existing resources, and then dive deeper into how you can adopt existing resources with Pulumi.
 
@@ -188,6 +189,9 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("main", {
     name: `${prefix}-vm`,
     networkInterfaceIds: [mainNetworkInterface.id],
     osProfile: {
+        // Note: This comes directly from the original Terraform example, but
+        // you would typically replace this with secret config in Pulumi, which 
+        // you can do after importing these resources into Pulumi.
         adminPassword: "Password1234!",
         adminUsername: "testadmin",
         computerName: "hostname",
