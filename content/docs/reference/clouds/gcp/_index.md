@@ -55,7 +55,7 @@ bucket = s3.Bucket('my-bucket')
 ```go
 import "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
 
-bucket, _ := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{})
+bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
 ```
 
 You can find additional examples of using Google Cloud in
