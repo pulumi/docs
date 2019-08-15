@@ -7,7 +7,7 @@ authors: ["luke-hoban"]
 tags: ["Infrastructure"]
 ---
 
-Most cloud infrastrucutre projects involve working with existing cloud resources - either building on top of existing resources or adopting existing resources under management of a new and more robust infrastructure provisioning solution.
+Most cloud infrastrucutre projects involve working with existing cloud resources - either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
 Whether you are adopting resources that were deployed manually using your cloud provider's console or CLI - or migrating existing infrastructure from tools like Terraform or CloudFormation - Pulumi makes it easy to adopt and manage your existing resources.
 
