@@ -870,7 +870,7 @@ other_output = other.get_output("x")
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-Each output of the stack can then be accessed using `getOutput` or, if the name of the stack is statically known, `getOutputSync`. Note that the latter can only be used with outputs that are not secrets. The outputs of the referenced stack will be fetched anew each time the referent stack is updated.
+Each output of the stack can then be accessed via `getOutput` or `getOutputSync` if the name of the stack is statically known.
 
 ## Config {#config}
 
