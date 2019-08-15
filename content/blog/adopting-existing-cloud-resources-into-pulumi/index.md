@@ -30,7 +30,7 @@ Together, these make it easy to reference existing infrastructure regardless of 
 
 ## Adopting Existing Resources
 
-For adopting resources, Pulumi offers the [`import`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with it's focus on infrastructure as *code*, Pulumi lets you specify this `import` behaviour inside the Pulumi code for you infrastructure deployment, instead of outside it in some manual workflow.  In it's simplest form looks like this:
+For adopting existing resources, Pulumi offers the [`import`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with it's focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for you infrastructure deployment, instead of outside it in some manual workflow.  In it's simplest form looks like this:
 
 ```ts
 const myVpc = new aws.ec2.Vpc("my-vpc", {
