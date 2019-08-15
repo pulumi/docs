@@ -67,7 +67,7 @@ To see one of these scenarios in action end-to-end, let's walk through the proce
 
 We'll use Terraform to provision our "existing" infrastructure.  These resources could have been provisioned manually in the console, or using platform-native infrastructure-as-code solutions like CloudFormation, ARM or Kubernetes YAML.
 
-We'll also use TypeScript, though the process would work mostly the same in Python as well.
+We'll also use TypeScript, though of course, the process is similar regardless of the language you choose.
 
 #### 1. Deploy "existing" infrastructure
 
