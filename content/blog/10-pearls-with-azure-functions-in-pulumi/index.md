@@ -14,6 +14,7 @@ In this post, we'll take a look at 10 "pearls"&mdash;bite-sized code snippets&md
 - **HTTP Functions as Callbacks**: Mix TypeScript or JavaScript functions right into the infrastructure definition to produce concise, strongly-typed, self-contained, serverless HTTP endpoints.
 - **Cloud Event Handling**: Leverage the whole variety of event sources available to Azure Functions with lightweight and intuitive event handlers.
 - **Data Flows with Function Bindings**: Pull extra data into the functions and push results out with function bindings&mdash;declarative connectors to Azure services.
+<!--more-->
 
 Here is a complete index of the pearls including associated steps, in case you want to jump to a specific one:
 
@@ -24,9 +25,9 @@ Here is a complete index of the pearls including associated steps, in case you w
 
 [**HTTP Functions as Callbacks**](#http-functions-as-callbacks)
 
-- [Define Node.js Functions as inline callbacks](#3-define-nodejs-functions-as-inline-callbacks)
+- [Define Node.js Functions as inline callbacks](#3-define-node-js-functions-as-inline-callbacks)
 - [Implement REST APIs as multiple Functions](#4-rest-apis-as-multiple-functions)
-- ["Warm" the Functions to avoid Cold Starts](#5-function-"warming"-with-a-timer-function)
+- ["Warm" the Functions to avoid Cold Starts](#5-function-warming-with-a-timer-function)
 
 [**Cloud Event Handling**](#cloud-event-handling)
 
@@ -35,6 +36,7 @@ Here is a complete index of the pearls including associated steps, in case you w
 - [Run a Function every time an Azure resource is modified](#8-respond-to-resource-level-events)
 
 [**Data Flows with Function Bindings**](#data-flows-with-function-bindings)
+
 - [Push a message to a Storage Queue with an output binding](#9-output-bindings)
 - [Pull a Storage Table row with an input binding](#10-input-bindings)
 
@@ -72,7 +74,6 @@ Pulumi takes care of the rest for you.It handles the following tasks:
 - Configuring the required application settings, including a reference to the zip archive with the SAS token
 
 ![Serverless Application deployed by Pulumi](console.png)
-
 
 While a few values are required, you are not restricted to the default behavior and can change any setting.
 
@@ -134,7 +135,7 @@ While mixing infrastructure and application code in the same file may seem count
 - Eliminate the need for boilerplate configuration like `host.json` and `function.json` files
 - Robust typing out-of-the-box: For instance, you can flawlessly "dot into" the `content` and `req` object above.
 
-You can read more about the motivation in [Serverless as Simple Callbacks with Pulumi and Azure Functions]({{< relref "/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/" >}}).
+You can read more about the motivation in [Serverless as Simple Callbacks with Pulumi and Azure Functions]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}).
 
 The previous example deployed a Function App with a single Function. However, Azure supports applications with multiple Functions bundled together.
 
@@ -206,7 +207,7 @@ It's easy to imagine a custom component `WarmedFunctionApp` which appends a stan
 
 ## Cloud Event Handling
 
-While HTTP is a widespread use case, Azure Functions support many other trigger types too. [The previous post]({{< relref "/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/" >}}) featured Storage Queues and ServiceBus Topics. Now, Pulumi supports Timers, Events Hubs, Event Grid, Storage Blobs, Service Bus Queues, and Cosmos DB Change Feed events, too! Let's see how that looks using Azure Event Hubs.
+While HTTP is a widespread use case, Azure Functions support many other trigger types too. [The previous post]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}) featured Storage Queues and ServiceBus Topics. Now, Pulumi supports Timers, Events Hubs, Event Grid, Storage Blobs, Service Bus Queues, and Cosmos DB Change Feed events, too! Let's see how that looks using Azure Event Hubs.
 
 ### 6. Process Events from Azure Event Hubs
 
