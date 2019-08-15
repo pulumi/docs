@@ -764,9 +764,9 @@ Secrets behave just like normal Outputs in Pulumi, with `Output` as their type. 
 
 While Pulumi ensures that any outputs of a resource which have coresponding secret inputs are marked as secrets, there may be additional outputs that you wish to mark as secrets. In this case, you can pass the `additionalSecretOutputs` option for JavaScript or `additional_secret_outputs` for Python when creating a resource to ensure these extra output values are encrypted before being stored in the _state file_.
 
-## Stack output {#stack-outputs}
+## Stack outputs {#stack-outputs}
 
-A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
+A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
 {{< langchoose >}}
 
@@ -838,6 +838,39 @@ $ pulumi stack output --json
 If a stack contains any output values which are marked as secrets, their values will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI.
 
 You may pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
+
+## Stack References {#stack-references}
+
+Stack references provide a way to access the [outputs](#stack-outputs) of one stack from another stack. To reference values from another stack, create an instance of the `StackReference` type using the name of the referenced stack as an input:
+
+{{< langchoose >}}
+
+```javascript
+const pulumi = require("@pulumi/pulumi");
+const other = new pulumi.StackReference("acmecorp/infra/other");
+const otherOutput = other.getOutput("x")
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+const other = new pulumi.StackReference("acmecorp/infra/other");
+const otherOutput = other.getOutput("x")
+```
+
+```python
+from pulumi import StackReference
+
+other = StackReference(f"acmecorp/infra/other")
+other_output = other.get_output("x")
+```
+
+```go
+// StackReference is not supported in Go currently.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+Each output of the stack can then be accessed using `getOutput` or, if the name of the stack is statically known, `getOutputSync`. Note that the latter can only be used with outputs that are not secrets. The outputs of the referenced stack will be fetched anew each time the referent stack is updated.
 
 ## Config {#config}
 
