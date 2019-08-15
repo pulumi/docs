@@ -5,20 +5,37 @@
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
     {{ else if hasPrefix .RelPermalink "/docs/" }}
+        
+        <!-- Get Started guides and installation -->
+        <h4 class="on-this-page">Getting Started</h4>
         <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/get-started" }}">Get Started</a>
+            <a href="{{ relref . "/docs/get-started" }}">Get Started Overview</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.getstarted) }}
-
         <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/reference" }}">Reference</a>
+            <a href="{{ relref . "/docs/install" }}">Download and Install</a>
+        </h4>
+        
+        <!-- Core concepts, supported clouds, comparison -->
+        <h4 class="on-this-page">Intro</h4>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.intro) }}
+        
+        <!-- Guides and Tutorials -->
+        <h4 class="on-this-page">Guides and Tutorials</h4>
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/tutorials" }}">Tutorials</a>
+        </h4>
+        
+        <!-- API, CLI, and glossary -->
+        <h4 class="on-this-page">Reference</h4>
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/reference" }}">Reference Overview</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
-
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/console" }}">Pulumi Cloud Console</a>
-        </h4>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.console) }}
+        
+        <!-- Troubleshooting and FAQ -->
+        <h4 class="on-this-page">Help</h4>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.help) }}
     {{ end }}
 </aside>
 

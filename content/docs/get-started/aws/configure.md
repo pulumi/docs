@@ -1,6 +1,6 @@
 ---
 title: Configure AWS
-weight: 2
+weight: 4
 menu:
   getstarted:
     parent: aws
