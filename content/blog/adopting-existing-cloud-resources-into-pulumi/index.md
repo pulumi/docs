@@ -7,7 +7,7 @@ authors: ["luke-hoban"]
 tags: ["Infrastructure"]
 ---
 
-Most cloud infrastrucutre projects involve working with existing cloud resources - either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
+Most cloud infrastructure projects involve working with existing cloud resources - either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
 Whether you are adopting resources that were deployed manually using your cloud provider's console or CLI - or migrating existing infrastructure from tools like Terraform or CloudFormation - Pulumi makes it easy to adopt and manage your existing resources.
 
@@ -21,7 +21,7 @@ When working with existing resources, there are typically two scenarios:
 We'll review referencing existing resources, and then dive deeper into how you can adopt existing resources with Pulumi.
 
 ## Referencing Existing Resources
-For referencing existing resoruces, Pulumi offers several tools.  
+For referencing existing resources, Pulumi offers several tools.  
 
 * The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on it's `id`.
 * The `StackReference` resource lets you reference outputs of another stack for use as inputs to another stack, which is very useful for [organizing projects and stack](https://www.pulumi.com/docs/reference/organizing-stacks-projects/). 
@@ -190,7 +190,7 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("main", {
     networkInterfaceIds: [mainNetworkInterface.id],
     osProfile: {
         // Note: This comes directly from the original Terraform example, but
-        // you would typically replace this with secret config in Pulumi, which 
+        // you would typically replace this with secret config in Pulumi, which
         // you can do after importing these resources into Pulumi.
         adminPassword: "Password1234!",
         adminUsername: "testadmin",
@@ -241,6 +241,6 @@ The result is that we have migrated our existing infrastructure into Pulumi and 
 
 ## Conclusion
 
-With Pulumi, you can easily work with existing cloud infrastructe, either referencing the existing infrastructure as inputs to new cloud infrastructure defined in Pulumi, or adopting existing infrastructure under management of a Pulumi infrastrcture-as-code.
+With Pulumi, you can easily work with existing cloud infrastructure, either referencing the existing infrastructure as inputs to new cloud infrastructure defined in Pulumi, or adopting existing infrastructure under management with Pulumi.
 
 [Get started](https://www.pulumi.com/docs/quickstart/) with Pulumi today!
