@@ -1,7 +1,7 @@
 ---
 title: Pulumi vs. Cloud Templates (AWS CloudFormation, etc.)
 menu:
-  reference:
+  intro:
     parent: vs
     name: Cloud Templates
     weight: 2

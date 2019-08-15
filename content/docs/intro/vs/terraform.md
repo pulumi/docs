@@ -1,7 +1,7 @@
 ---
 title: Pulumi vs. Terraform
 menu:
-  reference:
+  intro:
     parent: vs
     name: Terraform
     weight: 1

@@ -1,10 +1,10 @@
 ---
 title: Pulumi vs. Other Solutions
 menu:
-  reference:
+  intro:
     identifier: vs
-    name: Compared to Others
-    weight: 9
+    name: Pulumi vs. Other
+    weight: 3
 ---
 
 Pulumi is a cloud native infrastructure as code project. It lets you provision and manage resources, across many clouds
