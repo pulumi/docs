@@ -55,7 +55,7 @@ Resources:
     1 unchanged
 ```
 
-Because the `import` is provided in code, it can be configured in many different ways.  We've seen users look up import ids from Pulumi config instead of hardcoding into their programs, construct them from predicatable names based on existing program parameters, or even conditionally add the `import: <id>` property depending on whether they want to deploy a stack in "adopt" mode or in "create" mode.
+Because the `import` is provided in code, it can be configured in several different ways.  You can look up import ids from Pulumi config instead of hard-coding them into programs, construct ids from predictable names based on program parameters, or even conditionally add the `import: <id>` property depending on whether one wants to deploy a stack in "adoption" or "creation" mode.
 
 This allows `import` to be used for a wide variety of adoption scenarios - from importing a single resource, to migrating a whole stack from an existing tool like Terraform to Pulumi, and even to automating the migration process across dozens of instances of an infrastructure deployment.
 
