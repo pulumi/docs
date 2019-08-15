@@ -224,7 +224,7 @@ Deploying this, Pulumi shows we will update the existing resource to add the new
         }
 ```
 
-Since the resources are now under management of Pulumi, we can navigate over to the Pulumi Console to see our resources:
+Since the resources are now being managed by Pulumi, we can use the Pulumi Console to see our resources:
 
 ![The Pulumi Console stack resources page](./console.png)
 
