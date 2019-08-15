@@ -222,7 +222,7 @@ Since the resources are now under management of Pulumi, we can navigate over to 
 
 ![The Pulumi Console stack resources page](./console.png)
 
-And from there, navigate directly to the Virtual Machine in the Azure Portal, including the newly added `managedBy: Pulumi` tag/
+And from there, navigate directly to the Virtual Machine in the Azure Portal, including the newly added `managedBy: Pulumi` tag.
 
 
 ![The Azure Portal virtual machine page](./portal.png)
@@ -231,6 +231,6 @@ The result is that we have migrated our existing infrastructure into Pulumi and 
 
 ## Conclusion
 
-With Pulumi, you can easily work with existing cloud infrastructe, either referencing the existing infrastructure as inputs to new cloud infrastructure defined in Pulumi, or adopting existing infrastructure under management of a Pulumi infrastrcture-as-code.  User
+With Pulumi, you can easily work with existing cloud infrastructe, either referencing the existing infrastructure as inputs to new cloud infrastructure defined in Pulumi, or adopting existing infrastructure under management of a Pulumi infrastrcture-as-code.
 
-
+[Get started](https://www.pulumi.com/docs/quickstart/) with Pulumi today!
