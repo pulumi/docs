@@ -1,5 +1,5 @@
 ---
-title: "10 Pearls With Azure Functions in Pulumi"
+title: "Ten Pearls With Azure Functions in Pulumi"
 date: 2019-08-15
 draft: true
 meta_image: meta.png
@@ -10,13 +10,13 @@ meta_desc: "In this post, we'll take a look at 10 pearls&mdash;bite-sized code s
 
 In this post, we'll take a look at 10 "pearls"&mdash;bite-sized code snippets&mdash;that demonstrate using Pulumi to build serverless applications with Azure Functions and infrastructure as code. These pearls are organized into four categories, each demonstrating a unique scenario:
 
-- **Function App Deployment**: Take an existing Azure Functions application in your language of choice and deploy it with infrastructure as code.
-- **HTTP Functions as Callbacks**: Mix TypeScript or JavaScript functions right into the infrastructure definition to produce concise, strongly-typed, self-contained, serverless HTTP endpoints.
-- **Cloud Event Handling**: Leverage the whole variety of event sources available to Azure Functions with lightweight and intuitive event handlers.
-- **Data Flows with Function Bindings**: Pull extra data into the functions and push results out with function bindings&mdash;declarative connectors to Azure services.
+- **Function App Deployment**: Deploy an existing Azure Functions application using infrastructure as code.
+- **HTTP Functions as Callbacks**: Mix JavaScript or TypeScript functions with your infrastructure definition to produce strongly-typed, self-contained, serverless HTTP endpoints.
+- **Cloud Event Handling**: Leverage a variety of event sources available to Azure Functions with lightweight event handlers.
+- **Data Flows with Function Bindings**: Take advantage of function bindings&mdash;declarative connectors to Azure services.
 <!--more-->
 
-Here is a complete index of the pearls including associated steps, in case you want to jump to a specific one:
+Our Azure Functions pearls are:
 
 [**Function App Deployment**](#function-app-deployment)
 
@@ -42,13 +42,13 @@ Here is a complete index of the pearls including associated steps, in case you w
 
 ## Function App Deployment
 
-Azure Functions support many languages, and Pulumi doesn't limit your choice. You are free to take any existing serverless application and deploy it in an infrastructure-as-code manner.
+Azure Functions can be written in many languages, and Pulumi supports whatever choice you make. You can take any existing serverless application and deploy it using infrastructure-as-code.
 
 ### 1. Deploy a .NET Function App
 
 [ [Runnable Example](https://github.com/pulumi/examples/tree/master/azure-ts-functions-raw) ]
 
-Many Function Apps are .NET applications created with native tooling like Visual Studio or the Functions CLI. With no required changes to the code, Pulumi can deploy such an application in several lines of JavaScript:
+Many Function Apps are .NET applications created with native tooling like Visual Studio or the Functions CLI. Pulumi can simply deploy such an application in only a few lines of JavaScript:
 
 ``` ts
 const dotnetApp = new azure.appservice.ArchiveFunctionApp("http-dotnet", {
@@ -63,14 +63,14 @@ There are only four things required:
 - the Function App name ("http-dotnet")
 - the resource group it belongs to
 - the path to the compiled .NET assemblies, and
-- the desired runtime. 
+- the desired runtime
 
-Pulumi takes care of the rest for you.It handles the following tasks:
+Pulumi takes care of the rest for you. It handles the following tasks:
 
 - Creating a Storage Account and a Blob Container
 - Zipping up the binaries and uploading them to the blob container
 - Calculating a SAS token
-- Preparing a Consumption Plan and a Function App on said Consumption Plan
+- Preparing a Consumption Plan and a Function App using this Consumption Plan
 - Configuring the required application settings, including a reference to the zip archive with the SAS token
 
 ![Serverless Application deployed by Pulumi](console.png)
@@ -79,7 +79,7 @@ While a few values are required, you are not restricted to the default behavior 
 
 ### 2. Run Functions using an Elastic Premium Plan
 
-While the Consumption Plan is the ultimate serverless option, there are other ways to host Azure Functions. A while ago, Microsoft introduced the Premium Plan: a combination of the power and guarantees of a fixed App Service Plan with the elasticity of Consumption.
+While the Consumption Plan is the ultimate serverless option, there are other ways to host Azure Functions. Azure also offers the Premium Plan: a combination of the power and guarantees of a fixed App Service Plan with the elasticity of Consumption.
 
 If you want to take advantage of a Premium Plan, go ahead and define it as a Pulumi resource, then link to it in the Function App definition:
 
@@ -127,7 +127,7 @@ const greeting = new azure.appservice.HttpEventSubscription('greeting', {
 export const url = greeting.url;
 ```
 
-You are free to use any NPM module inside the callback. The dependencies are automatically packaged into the deployment artifact. Likewise, you can extract the callback function out into a separate file or package and import it from the infrastructure code.
+You are free to use any NPM module inside the callback, and the dependencies will be automatically packaged into the deployment artifact. Alternatively, you can extract the callback function into a separate file or package and import it from your infrastructure code.
 
 While mixing infrastructure and application code in the same file may seem counterintuitive, it provides many benefits:
 
@@ -178,9 +178,9 @@ You can combine as many Functions as you want, including functions of different 
 
 Scheduled jobs are another frequent use case for serverless functions. It's possible to define a [*cron expression*](https://docs.microsoft.com/azure/azure-functions/functions-bindings-timer#cron-expressions) and get the code executed at designated intervals.
 
-The Consumption Plan disposes a worker if no Function runs in about 20 minutes. The next execution causes a [*cold start*](https://mikhail.io/serverless/coldstarts/define/), and the response latency to be high.
+The Consumption Plan disposes a worker if no Function runs in about 20 minutes. After disposal, the next execution will cause a [*cold start*](https://mikhail.io/serverless/coldstarts/define/), and the response latency, will increase.
 
-The following example might seem unexpected, but it's a well-known pattern in the world of Azure Functions. We combine a target HTTP Function with a Timer Function executed once in several minutes. The body of the Timer Function is empty. Its sole purpose is to trigger the Function App at a regular cadence to keep the worker "warm":
+In order to avoid this disposal, we can combine a target HTTP Function with a Timer Function. The body of the Timer Function is empty, since its sole purpose is to trigger the Function App and keep the worker "warm":
 
 ``` ts
 const warmer = new azure.appservice.TimerFunction("warmer", {
@@ -207,7 +207,7 @@ It's easy to imagine a custom component `WarmedFunctionApp` which appends a stan
 
 ## Cloud Event Handling
 
-While HTTP is a widespread use case, Azure Functions support many other trigger types too. [The previous post]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}) featured Storage Queues and ServiceBus Topics. Now, Pulumi supports Timers, Events Hubs, Event Grid, Storage Blobs, Service Bus Queues, and Cosmos DB Change Feed events, too! Let's see how that looks using Azure Event Hubs.
+While HTTP is a widespread use case, Azure Functions support many other trigger types too. [The previous post]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}) featured Storage Queues and ServiceBus Topics. Pulumi supports Timers, Events Hubs, Event Grid, Storage Blobs, Service Bus Queues, and Cosmos DB Change Feed events, too! Let's see how that looks using Azure Event Hubs.
 
 ### 6. Process Events from Azure Event Hubs
 
@@ -315,16 +315,16 @@ incoming.onEvent("NewMessage",  {
 
 Two elements play together here:
 
-- The `outputs` property defines an output binding with the name `queueOut` and the destination to `outgoing`.
-- The `queueOut` property of the resulting object contains the output message.
+- The `outputs` property defines an output binding with the name `queueOut` and the destination to `outgoing`
+- The `queueOut` property of the resulting object contains the output message
 
-Note that the binding name has to match the output property.
+Note that the binding name must match the output property.
 
 ### 10. Input Bindings
 
 [ [Runnable Example](https://github.com/pulumi/pulumi-azure/tree/master/examples/table) ]
 
-Input bindings pull extra bits of information and pass them over as input parameters to the callback. The exact usage depends on the trigger and binding types and might be tricky to get right with JSON configuration files. Here is one example of wiring done in a Pulumi program:
+Input bindings pull extra bits of information and pass them as input parameters to the callback. The exact usage depends on the trigger and binding types and might be tricky to get right with JSON configuration files. Here is one example of wiring done in a Pulumi program:
 
 ``` ts
 const values = new azure.storage.Table("values", {
