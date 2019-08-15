@@ -5,22 +5,54 @@ menu:
     parent: tutorials-aws
 ---
 
-In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub.
+In this tutorial, we'll use JavaScript or Python to deploy a simple webserver EC2 instance in AWS. The [JavaScript](https://github.com/pulumi/examples/tree/master/aws-js-webserver) and [Python](https://github.com/pulumi/examples/tree/master/aws-py-webserver) code for this tutorial are available on GitHub.
 
 {{< aws-js-prereqs >}}
+
+### To complete the tutorial using TypeScript
+
+{{< install-node >}}
+
+### To complete the tutorial using Python
+
+{{< install-python >}}
 
 ## Create an EC2 instance with SSH access {#webserver}
 
 1.  In a new folder `webserver`, create an empty project with `pulumi new`. Be sure to use `us-east-1` as the region:
 
-    ```bash
-    $ mkdir webserver && cd webserver
-    $ pulumi new aws-javascript
-    ...
-    aws:region: (us-east-1)
-    ```
+{{< langchoose nogo >}}
 
-1.  Open `index.js` and replace the contents with the following:
+<div class="language-prologue-javascript"></div>
+
+```bash
+$ mkdir webserver && cd webserver
+$ pulumi new aws-javascript
+...
+aws:region: (us-east-1)
+```
+
+<div class="language-prologue-typescript"></div>
+
+```bash
+$ mkdir webserver && cd webserver
+$ pulumi new aws-typescript
+...
+aws:region: (us-east-1)
+```
+
+<div class="language-prologue-python"></div>
+
+```bash
+$ mkdir webserver && cd webserver
+$ pulumi new aws-python
+...
+aws:region: (us-east-1)
+```
+
+1.  Open {{< langfile >}} and replace the contents with the following:
+
+    {{< langchoose nogo >}}
 
     ```javascript
     const aws = require("@pulumi/aws");
@@ -44,10 +76,58 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     exports.publicHostName = server.publicDns;
     ```
 
-    This example uses the [@pulumi/aws] package to create and manage two AWS resources: an
-    [aws.ec2.SecurityGroup][Security Group], which allows access for incoming SSH access, and an
-    [aws.ec2.Instance][EC2 Instance], which is created in that security group using the appropriate Amazon
-    Machine Image (AMI) for the region where you deploy the program.
+    ```typescript
+    const aws = require("@pulumi/aws");
+
+    const size = "t2.micro";     // t2.micro is available in the AWS free tier
+    const ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virginia)
+
+    const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
+        ingress: [
+            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        ],
+    });
+
+    const server = new aws.ec2.Instance("webserver-www", {
+        instanceType: size,
+        securityGroups: [ group.name ], // reference the security group resource above
+        ami: ami,
+    });
+
+    exports.publicIp = server.publicIp;
+    exports.publicHostName = server.publicDns;
+    ```
+
+    ```python
+    import pulumi
+    from pulumi_aws import ec2
+    from ami import get_linux_ami
+
+    size = 't2.micro'
+
+    group = ec2.SecurityGroup('webserver-secgrp',
+        description='Enable HTTP access',
+        ingress=[
+            { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] }
+        ])
+
+    server = ec2.Instance('webserver-www',
+        instance_type=size,
+        security_groups=[group.name], # reference security group from above
+        ami=get_linux_ami(size))
+
+    pulumi.export('publicIp', server.public_ip)
+    pulumi.export('publicHostName', server.public_dns)
+    ```
+
+    This example uses the [@pulumi/aws] package in JavaScript and TypeScript code and the [pulumi_aws](/docs/reference/pkg/python/pulumi_aws) package in Python code to create two resources:
+
+    * **Security Group**, which allows access for incoming SSH access
+        * JavaScript and TypeScript: [aws.ec2.SecurityGroup][Security Group]
+        * Python: [ec2.SecurityGroup](/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.SecurityGroup)
+    * **EC2 Instance**, which is created in that security group using the appropriate Amazon Machine Image (AMI) for the region where you deploy the program
+        * JavaScript and TypeScript: [aws.ec2.Instance][EC2 Instance]
+        * Python: [ec2.Instance](/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Instance)
 
 1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
@@ -113,6 +193,8 @@ Pulumi program to define the new state we want our infrastructure to be in, then
 1.  Replace the creation of the two resources with the following. This exposes an additional port and adds a startup
     script to run a simple HTTP server at startup.
 
+    {{< langchoose nogo >}}
+
     ```javascript
     ...
 
@@ -139,7 +221,60 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     ...
     ```
 
-    Note that we defined the `userData` script inline in a string.  Because we are using JavaScript, we could also read
+    ```typescript
+    ...
+
+    const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
+        ingress: [
+            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+            // ^-- ADD THIS LINE
+        ],
+    });
+
+    const userData = // <-- ADD THIS DEFINITION
+    `#!/bin/bash
+    echo "Hello, World!" > index.html
+    nohup python -m SimpleHTTPServer 80 &`;
+
+    const server = new aws.ec2.Instance("webserver-www", {
+        instanceType: size,
+        securityGroups: [ group.name ], // reference the security group resource above
+        ami: ami,
+        userData: userData,             // <-- ADD THIS LINE
+    });
+
+    ...
+    ```
+
+    ```python
+    ...
+
+    group = ec2.SecurityGroup('webserver-secgrp',
+        description='Enable HTTP access',
+        ingress=[
+            { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] },
+            { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
+            # ^-- ADD THIS LINE
+        ])
+
+    user_data = """
+    #!/bin/bash
+    echo "Hello, World!" > index.html
+    nohup python -m SimpleHTTPServer 80 &
+    """
+    # ^-- ADD THIS DEFINITION
+
+    server = ec2.Instance('webserver-www',
+        instance_type=size,
+        security_groups=[group.name], # reference security group from above
+        user_data=user_data, # <-- ADD THIS LINE
+        ami=get_linux_ami(size))
+
+    ...
+    ```
+
+    Note that we defined the `userData` script inline in a string.  Because we are using a programming language, we could also read
     this from a file, construct this string programmatically, or even build up a string that depends on other resources
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
@@ -190,9 +325,9 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using our programming language of choice and its corresponding dependency manager. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
-For a similar example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
+For a similar example in other languages and clouds, see the [Pulumi examples collection](https://github.com/pulumi/examples).
 
 <!-- Common links -->
 [EC2 Instance]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
