@@ -1,10 +1,10 @@
 ---
 title: "Adopting Existing Cloud Resources into Pulumi"
+date: "2019-08-15"
+meta_desc: "Adopt existing cloud infrastructure from Terraform, CloudFormation, ARM or YAML into Pulumi using `import`."
+meta_image: "feature.jpg"
 authors: ["luke-hoban"]
 tags: ["Infrastructure"]
-date: "2019-08-02"
-
-meta_image: "feature.jpg"
 ---
 
 Most cloud infrastrucutre projects involve working with existing cloud resources - either building on top of existing resources or adopting existing resources under management of a new and more robust infrastructure provisioning solution.
