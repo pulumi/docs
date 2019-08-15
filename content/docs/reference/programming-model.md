@@ -204,22 +204,22 @@ Set this option to `true` to specify that replacements of the resource will dele
 {{< langchoose >}}
 
 ```javascript
-// The resource will be deleted before it's replacement is creater
+// The resource will be deleted before it's replacement is created
 let db = new Database("db", {}, { deleteBeforeReplace: true});
 ```
 
 ```typescript
-// The resource will be deleted before it's replacement is creater
+// The resource will be deleted before it's replacement is created
 let db = new Database("db", {}, { deleteBeforeReplace: true});
 ```
 
 ```python
-# The resource will be deleted before it's replacement is creater
+# The resource will be deleted before it's replacement is created
 db = Database("db", opts=ResourceOptions(delete_before_replace=True))
 ```
 
 ```go
-// The resource will be deleted before it's replacement is creater
+// The resource will be deleted before it's replacement is created
 db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{DeleteBeforeReplace: true});
 ```
 
