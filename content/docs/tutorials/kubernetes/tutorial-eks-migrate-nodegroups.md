@@ -1,8 +1,5 @@
 ---
 title: "#7: EKS - Migrating Node Groups with Zero Downtime"
-menu:
-  reference:
-    parent: tutorials-kubernetes
 ---
 
 In this tutorial we'll launch a new, managed Kubernetes cluster in Elastic

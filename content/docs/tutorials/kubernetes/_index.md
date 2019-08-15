@@ -1,9 +1,8 @@
 ---
 title: "Kubernetes"
 menu:
-  reference:
-    parent: tutorials
-    identifier: tutorials-kubernetes
+  tutorials:
+    weight: 4
 ---
 
 {{< get-started-note >}}

@@ -1,9 +1,8 @@
 ---
 title: "AWS"
 menu:
-  reference:
-    parent: tutorials
-    identifier: tutorials-aws
+  tutorials:
+    weight: 1
 ---
 
 {{< get-started-note >}}

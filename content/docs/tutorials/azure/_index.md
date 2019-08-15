@@ -1,9 +1,8 @@
 ---
 title: "Azure"
 menu:
-  reference:
-    parent: tutorials
-    identifier: tutorials-azure
+  tutorials:
+    weight: 2
 ---
 
 {{< get-started-note >}}

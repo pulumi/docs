@@ -1,8 +1,5 @@
 ---
 title: "#2: Deploying the WordPress Helm Chart"
-menu:
-  reference:
-    parent: tutorials-kubernetes
 ---
 
 In this tutorial, we'll use the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress

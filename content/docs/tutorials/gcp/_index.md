@@ -1,9 +1,8 @@
 ---
 title: "Google Cloud"
 menu:
-  reference:
-    parent: tutorials
-    identifier: tutorials-gcp
+  tutorials:
+    weight: 3
 ---
 
 {{< get-started-note >}}

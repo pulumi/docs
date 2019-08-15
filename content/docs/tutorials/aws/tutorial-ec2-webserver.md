@@ -1,8 +1,5 @@
 ---
 title: "EC2 Linux WebServer Instance"
-menu:
-  reference:
-    parent: tutorials-aws
 ---
 
 In this tutorial, we'll use JavaScript or Python to deploy a simple webserver EC2 instance in AWS. The [JavaScript](https://github.com/pulumi/examples/tree/master/aws-js-webserver) and [Python](https://github.com/pulumi/examples/tree/master/aws-py-webserver) code for this tutorial are available on GitHub.

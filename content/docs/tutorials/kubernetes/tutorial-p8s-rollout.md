@@ -1,8 +1,5 @@
 ---
 title: "#5: Gating rollout on Prometheus checks"
-menu:
-  reference:
-    parent: tutorials-kubernetes
 ---
 
 In this tutorial, we see how to create a staged rollout (from 3-replica canary -> 10-replica

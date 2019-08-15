@@ -1,8 +1,5 @@
 ---
 title: "#3: Guestbook App with Redis and Nginx"
-menu:
-  reference:
-    parent: tutorials-kubernetes
 ---
 
 In this tutorial, we'll build and deploy

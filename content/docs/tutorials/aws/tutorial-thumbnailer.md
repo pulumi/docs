@@ -1,8 +1,5 @@
 ---
 title: "Video Thumbnailer"
-menu:
-  reference:
-    parent: tutorials-aws
 ---
 
 In this tutorial, we'll use combine serverless, containers and cloud infrastructure together into a fully functioning

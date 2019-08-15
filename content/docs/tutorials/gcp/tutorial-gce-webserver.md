@@ -1,8 +1,5 @@
 ---
 title: "Web Server Virtual Machine Instance"
-menu:
-  reference:
-    parent: tutorials-gcp
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub. 
