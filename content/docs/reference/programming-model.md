@@ -865,7 +865,7 @@ other_output = other.get_output("x")
 ```
 
 ```go
-// StackReference is not supported in Go currently.
+// StackReference is not currently supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
