@@ -2,9 +2,9 @@
 title: "How Pulumi Works"
 expanded_url: /docs/reference/concepts/
 menu:
-  reference:
+  intro:
     parent: concepts
-    weight: 6
+    weight: 1
 ---
 
 Pulumi uses a desired state model for managing infrastructure. A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS]({{< relref "/docs/quickstart/aws" >}}), [Azure]({{< relref "/docs/quickstart/azure" >}}), [Kubernetes]({{< relref "/docs/quickstart/kubernetes" >}}), and so on.) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
