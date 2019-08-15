@@ -20,7 +20,13 @@ When working with existing resources, there are typically two scenarios:
 We'll review referencing existing resources, and then dive deeper into how you can adopt existing resources with Pulumi.
 
 ## Referencing Existing Resources
-For referencing existing resoruces, Pulumi offers several tools.  The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on it's `id`.  The `StackReference` resource lets you reference outputs of another stack for use as inputs to another stack, which is very useful for [organizing projects and stack](https://www.pulumi.com/docs/reference/organizing-stacks-projects/).  And [`terraform.state.RemoteStateReference()`](https://www.pulumi.com/blog/using-terraform-remote-state-with-pulumi/), [`aws.cloudformation.getStack()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack) and [`azure.core.TemplateDeployment.get()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively. Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.
+For referencing existing resoruces, Pulumi offers several tools.  
+
+* The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on it's `id`.
+* The `StackReference` resource lets you reference outputs of another stack for use as inputs to another stack, which is very useful for [organizing projects and stack](https://www.pulumi.com/docs/reference/organizing-stacks-projects/). 
+* The [`terraform.state.RemoteStateReference()`](https://www.pulumi.com/blog/using-terraform-remote-state-with-pulumi/), [`aws.cloudformation.getStack()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack) and [`azure.core.TemplateDeployment.get()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
+
+Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.
 
 ## Adopting Existing Resources
 
