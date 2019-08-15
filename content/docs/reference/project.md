@@ -45,13 +45,31 @@ When using JavaScript, the working directory for the project should contain a `p
 
 ### Paths
 
-When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. For example, the following code references a subfolder `app` of the working directory, that contains a `Dockerfile`:
+When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. The following example code references a subfolder `app` of the working directory, which would contain a `Dockerfile` and application code:
+
+{{< langchoose nogo >}}
 
 ```javascript
 const myTask = new cloud.Task("myTask", {
     build: "./app", // subfolder of working directory
     ...
 });
+```
+
+```typescript
+const myTask = new cloud.Task("myTask", {
+    build: "./app", // subfolder of working directory
+    ...
+});
+```
+
+```python
+myTask = Task('myTask',
+    spec={
+        'build': './app' # subfolder of working directory
+        ...
+    }
+)
 ```
 
 ## Stack settings files {#stack-settings-file}
