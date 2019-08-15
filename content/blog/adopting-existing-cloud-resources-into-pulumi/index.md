@@ -2,7 +2,7 @@
 title: "Adopting Existing Cloud Resources into Pulumi"
 date: "2019-08-15"
 meta_desc: "Adopt existing cloud infrastructure from Terraform, CloudFormation, ARM or YAML into Pulumi using `import`."
-meta_image: "feature.jpg"
+meta_image: "console.png"
 authors: ["luke-hoban"]
 tags: ["Infrastructure"]
 ---
