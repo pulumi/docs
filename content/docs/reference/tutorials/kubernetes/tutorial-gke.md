@@ -83,7 +83,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     const name = "helloworld";
 
     // Create a GKE cluster
-    const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
+    const engineVersion = gcp.container.getEngineVersions().latestMasterVersion;
     const cluster = new gcp.container.Cluster(name, {
         initialNodeCount: 2,
         minMasterVersion: engineVersion,
