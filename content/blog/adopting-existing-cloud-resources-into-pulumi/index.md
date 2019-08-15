@@ -233,7 +233,7 @@ And from there, navigate directly to the Virtual Machine in the Azure Portal, in
 
 ![The Azure Portal virtual machine page](./portal.png)
 
-The result is that we have migrated our existing infrastructure into Pulumi and can now use all the rich features of Pulumi infrastructure-as-code to manage it going forward!
+The result is that we have migrated our existing infrastructure into Pulumi and can now use all the rich features of Pulumi to manage it going forward!
 
 ## Conclusion
 
