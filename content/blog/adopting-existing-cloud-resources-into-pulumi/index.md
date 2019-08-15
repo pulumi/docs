@@ -180,7 +180,7 @@ Duration: 8s
 
 #### 5. Managing the resources with Pulumi
 
-Once all the resources are adopted into Pulumi, we can now manage them by making incremental changes in Pulumi, and can discontinue using the existing `.tf` files to manage this set of infrastructure.  For example, if we want to add a new tag to our Virtual Machine, we can add it as below.  We can also now remove the `import` property if we want, or else leave it intact so long as the `id` of the resource remains the same (if in the future we need to make a change that replaces one of these imported resources, Pulumi will require that the `id` proeprty is removed, as it will no longer be correct). 
+Once all of the resources are adopted into Pulumi, we can manage them by making incremental changes in Pulumi, and can discontinue using the existing `.tf` files to manage this set of infrastructure.  For example, if we want to add a new tag to our Virtual Machine, we can use the code below.  We can also now remove the `import` property if we want, or else leave it intact so long as the `id` of the resource remains the same (if in the future we need to make a change that replaces one of these imported resources, Pulumi will require that the `id` property is removed, as it will no longer be correct.) 
 
 ```diff
 const mainVirtualMachine = new azure.compute.VirtualMachine("main", {
