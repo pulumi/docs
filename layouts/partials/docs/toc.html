@@ -7,34 +7,32 @@
     {{ else if hasPrefix .RelPermalink "/docs/" }}
         
         <!-- Get Started guides and installation -->
-        <h4 class="on-this-page">Getting Started</h4>
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/get-started" }}">Get Started Overview</a>
+        <h5>Getting Started</h5>
+        <h4 class="no-anchor -mt-1">
+            <a href="{{ relref . "/docs/get-started" }}">Overview</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.getstarted) }}
-        <h4 class="no-anchor">
+        <h4 class="no-anchor -mt-1">
             <a href="{{ relref . "/docs/install" }}">Download and Install</a>
         </h4>
         
         <!-- Core concepts, supported clouds, comparison -->
-        <h4 class="on-this-page">Intro</h4>
+        <h5>Intro</h5>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.intro) }}
         
         <!-- Guides and Tutorials -->
-        <h4 class="on-this-page">Guides and Tutorials</h4>
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/tutorials" }}">Tutorials</a>
-        </h4>
+        <h5>Guides and Tutorials</h5>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.userguides) }}
         
         <!-- API, CLI, and glossary -->
-        <h4 class="on-this-page">Reference</h4>
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/reference" }}">Reference Overview</a>
+        <h5>Reference</h5>
+        <h4 class="no-anchor -mt-1">
+            <a href="{{ relref . "/docs/reference" }}">Overview</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
         
         <!-- Troubleshooting and FAQ -->
-        <h4 class="on-this-page">Help</h4>
+        <h5>Support</h5>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.troubleshooting) }}
     {{ end }}
 </aside>

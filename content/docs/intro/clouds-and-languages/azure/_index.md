@@ -4,6 +4,7 @@ menu:
   intro:
     parent: clouds-and-languages
     identifier: clouds-azure
+    weight: 2
 ---
 
 <img src="/logos/tech/azure.svg" align="right" class="h-16 px-8 pb-4">

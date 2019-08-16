@@ -1,7 +1,8 @@
 ---
 title: "AWS"
 menu:
-  tutorials:
+  userguides:
+    parent: tutorials
     weight: 1
 ---
 

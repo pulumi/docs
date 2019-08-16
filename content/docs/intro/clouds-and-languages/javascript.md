@@ -5,7 +5,7 @@ expanded_url: /docs/intro/clouds-and-languages/
 menu:
   intro:
     parent: clouds-and-languages
-    weight: 1
+    weight: 6
 ---
 
 Pulumi supports JavaScript programs running on Node.js version 8 and later.

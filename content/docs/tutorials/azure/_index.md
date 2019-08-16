@@ -1,7 +1,8 @@
 ---
 title: "Azure"
 menu:
-  tutorials:
+  userguides:
+    parent: tutorials
     weight: 2
 ---
 

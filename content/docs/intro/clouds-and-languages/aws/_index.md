@@ -4,6 +4,7 @@ menu:
   intro:
     parent: clouds-and-languages
     identifier: clouds-aws
+    weight: 1
 ---
 
 <img src="/logos/tech/aws.svg" align="right" class="h-16 px-8 pb-4">

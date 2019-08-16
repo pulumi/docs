@@ -4,6 +4,7 @@ menu:
   intro:
     parent: clouds-and-languages
     identifier: clouds-openstack
+    weight: 5
 ---
 
 <img src="/logos/tech/openstack.svg" align="right" class="h-16 px-8 pb-4">

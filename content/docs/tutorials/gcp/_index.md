@@ -1,7 +1,8 @@
 ---
 title: "Google Cloud"
 menu:
-  tutorials:
+  userguides:
+    parent: tutorials
     weight: 3
 ---
 

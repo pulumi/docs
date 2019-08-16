@@ -4,7 +4,7 @@ expanded_url: /docs/intro/clouds-and-languages/
 menu:
   intro:
     parent: clouds-and-languages
-    weight: 2
+    weight: 7
 ---
 
 Pulumi supports programs written in Python 3.

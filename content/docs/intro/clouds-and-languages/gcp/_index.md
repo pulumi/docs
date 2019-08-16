@@ -4,6 +4,7 @@ menu:
   intro:
     parent: clouds-and-languages
     identifier: clouds-gcp
+    weight: 3
 ---
 
 <img src="/logos/tech/gcp.svg" align="right" class="h-16 px-8 pb-4">

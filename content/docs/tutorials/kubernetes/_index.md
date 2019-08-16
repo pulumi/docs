@@ -1,7 +1,8 @@
 ---
 title: "Kubernetes"
 menu:
-  tutorials:
+  userguides:
+    parent: tutorials
     weight: 4
 ---
 

@@ -10,14 +10,22 @@
     .active {
         @apply text-blue-700;
     }
+
+    h4 {
+        @apply text-base;
+    }
+
+    h5 {
+        @apply text-gray-500 uppercase tracking-wide font-bold text-sm;
+    }
 }
 
 .sidenav-topic {
-    @apply mb-4;
+    @apply mb-2;
 }
 
 .sidenav-subsection {
-    @apply mb-4 ml-4;
+    @apply mb-2 ml-2;
 }
 
 .sidenav-parent {

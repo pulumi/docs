@@ -1,11 +1,5 @@
 ---
 title: "Pulumi Crosswalk for AWS"
-menu:
-  intro:
-    parent: clouds-and-languages
-    identifier: crosswalk-aws
-    name: Crosswalk for AWS
-    weight: 5
 ---
 
 <a href="{{< relref "_index.md" >}}">
