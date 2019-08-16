@@ -94,8 +94,8 @@ Create a core.v1.Binding resource with the given unique name, arguments, and opt
 
 
 Get the state of an existing `Binding` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -238,8 +238,8 @@ Create a core.v1.ComponentStatus resource with the given unique name, arguments,
 
 
 Get the state of an existing `ComponentStatus` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -382,8 +382,8 @@ Create a core.v1.ComponentStatusList resource with the given unique name, argume
 
 
 Get the state of an existing `ComponentStatusList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -526,8 +526,8 @@ Create a core.v1.ConfigMap resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `ConfigMap` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -687,8 +687,8 @@ Create a core.v1.ConfigMapList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `ConfigMapList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -841,8 +841,8 @@ Create a core.v1.Endpoints resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `Endpoints` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -990,8 +990,8 @@ Create a core.v1.EndpointsList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `EndpointsList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1134,8 +1134,8 @@ Create a core.v1.Event resource with the given unique name, arguments, and optio
 
 
 Get the state of an existing `Event` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1422,8 +1422,8 @@ Create a core.v1.EventList resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `EventList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1566,8 +1566,8 @@ Create a core.v1.LimitRange resource with the given unique name, arguments, and 
 
 
 Get the state of an existing `LimitRange` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1711,8 +1711,8 @@ Create a core.v1.LimitRangeList resource with the given unique name, arguments, 
 
 
 Get the state of an existing `LimitRangeList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1856,8 +1856,8 @@ Create a core.v1.Namespace resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `Namespace` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2013,8 +2013,8 @@ Create a core.v1.NamespaceList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `NamespaceList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2159,8 +2159,8 @@ Create a core.v1.Node resource with the given unique name, arguments, and option
 
 
 Get the state of an existing `Node` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2316,8 +2316,8 @@ Create a core.v1.NodeList resource with the given unique name, arguments, and op
 
 
 Get the state of an existing `NodeList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2461,8 +2461,8 @@ Create a core.v1.PersistentVolume resource with the given unique name, arguments
 
 
 Get the state of an existing `PersistentVolume` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2620,8 +2620,8 @@ Create a core.v1.PersistentVolumeClaim resource with the given unique name, argu
 
 
 Get the state of an existing `PersistentVolumeClaim` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2778,8 +2778,8 @@ Create a core.v1.PersistentVolumeClaimList resource with the given unique name, 
 
 
 Get the state of an existing `PersistentVolumeClaimList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -2923,8 +2923,8 @@ Create a core.v1.PersistentVolumeList resource with the given unique name, argum
 
 
 Get the state of an existing `PersistentVolumeList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3069,8 +3069,8 @@ Create a core.v1.Pod resource with the given unique name, arguments, and options
 
 
 Get the state of an existing `Pod` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3227,8 +3227,8 @@ Create a core.v1.PodList resource with the given unique name, arguments, and opt
 
 
 Get the state of an existing `PodList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3371,8 +3371,8 @@ Create a core.v1.PodTemplate resource with the given unique name, arguments, and
 
 
 Get the state of an existing `PodTemplate` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3516,8 +3516,8 @@ Create a core.v1.PodTemplateList resource with the given unique name, arguments,
 
 
 Get the state of an existing `PodTemplateList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3660,8 +3660,8 @@ Create a core.v1.ReplicationController resource with the given unique name, argu
 
 
 Get the state of an existing `ReplicationController` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3819,8 +3819,8 @@ Create a core.v1.ReplicationControllerList resource with the given unique name, 
 
 
 Get the state of an existing `ReplicationControllerList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -3964,8 +3964,8 @@ Create a core.v1.ResourceQuota resource with the given unique name, arguments, a
 
 
 Get the state of an existing `ResourceQuota` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -4121,8 +4121,8 @@ Create a core.v1.ResourceQuotaList resource with the given unique name, argument
 
 
 Get the state of an existing `ResourceQuotaList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -4267,8 +4267,8 @@ Create a core.v1.Secret resource with the given unique name, arguments, and opti
 
 
 Get the state of an existing `Secret` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -4438,8 +4438,8 @@ Create a core.v1.SecretList resource with the given unique name, arguments, and 
 
 
 Get the state of an existing `SecretList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -4585,8 +4585,8 @@ Create a core.v1.Service resource with the given unique name, arguments, and opt
 
 
 Get the state of an existing `Service` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -4744,8 +4744,8 @@ Create a core.v1.ServiceAccount resource with the given unique name, arguments, 
 
 
 Get the state of an existing `ServiceAccount` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -4916,8 +4916,8 @@ Create a core.v1.ServiceAccountList resource with the given unique name, argumen
 
 
 Get the state of an existing `ServiceAccountList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -5061,8 +5061,8 @@ Create a core.v1.ServiceList resource with the given unique name, arguments, and
 
 
 Get the state of an existing `ServiceList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 

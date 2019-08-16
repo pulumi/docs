@@ -77,8 +77,8 @@ Create a apps.v1.ControllerRevision resource with the given unique name, argumen
 
 
 Get the state of an existing `ControllerRevision` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -232,8 +232,8 @@ Create a apps.v1.ControllerRevisionList resource with the given unique name, arg
 
 
 Get the state of an existing `ControllerRevisionList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -375,8 +375,8 @@ Create a apps.v1.DaemonSet resource with the given unique name, arguments, and o
 
 
 Get the state of an existing `DaemonSet` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -533,8 +533,8 @@ Create a apps.v1.DaemonSetList resource with the given unique name, arguments, a
 
 
 Get the state of an existing `DaemonSetList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -677,8 +677,8 @@ Create a apps.v1.Deployment resource with the given unique name, arguments, and 
 
 
 Get the state of an existing `Deployment` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -831,8 +831,8 @@ Create a apps.v1.DeploymentList resource with the given unique name, arguments, 
 
 
 Get the state of an existing `DeploymentList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -974,8 +974,8 @@ Create a apps.v1.ReplicaSet resource with the given unique name, arguments, and 
 
 
 Get the state of an existing `ReplicaSet` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1133,8 +1133,8 @@ Create a apps.v1.ReplicaSetList resource with the given unique name, arguments, 
 
 
 Get the state of an existing `ReplicaSetList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1282,8 +1282,8 @@ Create a apps.v1.StatefulSet resource with the given unique name, arguments, and
 
 
 Get the state of an existing `StatefulSet` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1434,8 +1434,8 @@ Create a apps.v1.StatefulSetList resource with the given unique name, arguments,
 
 
 Get the state of an existing `StatefulSetList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 

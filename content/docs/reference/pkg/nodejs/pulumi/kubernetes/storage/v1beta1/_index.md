@@ -74,8 +74,8 @@ Create a storage.v1beta1.CSIDriver resource with the given unique name, argument
 
 
 Get the state of an existing `CSIDriver` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -221,8 +221,8 @@ Create a storage.v1beta1.CSIDriverList resource with the given unique name, argu
 
 
 Get the state of an existing `CSIDriverList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -371,8 +371,8 @@ Create a storage.v1beta1.CSINode resource with the given unique name, arguments,
 
 
 Get the state of an existing `CSINode` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -514,8 +514,8 @@ Create a storage.v1beta1.CSINodeList resource with the given unique name, argume
 
 
 Get the state of an existing `CSINodeList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -662,8 +662,8 @@ Create a storage.v1beta1.StorageClass resource with the given unique name, argum
 
 
 Get the state of an existing `StorageClass` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -881,8 +881,8 @@ Create a storage.v1beta1.StorageClassList resource with the given unique name, a
 
 
 Get the state of an existing `StorageClassList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1028,8 +1028,8 @@ Create a storage.v1beta1.VolumeAttachment resource with the given unique name, a
 
 
 Get the state of an existing `VolumeAttachment` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -1185,8 +1185,8 @@ Create a storage.v1beta1.VolumeAttachmentList resource with the given unique nam
 
 
 Get the state of an existing `VolumeAttachmentList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 

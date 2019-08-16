@@ -62,8 +62,8 @@ Create a auditregistration.v1alpha1.AuditSink resource with the given unique nam
 
 
 Get the state of an existing `AuditSink` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -202,8 +202,8 @@ Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique
 
 
 Get the state of an existing `AuditSinkList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 

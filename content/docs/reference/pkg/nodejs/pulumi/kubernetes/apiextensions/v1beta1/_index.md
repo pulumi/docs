@@ -33,7 +33,7 @@ title: Module apiextensions/v1beta1
 {{% md %}}
 
 CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
-name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;.
+name MUST be in the format <.spec.name>.<.spec.group>.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-constructor">
@@ -63,8 +63,8 @@ Create a apiextensions.v1beta1.CustomResourceDefinition resource with the given 
 
 
 Get the state of an existing `CustomResourceDefinition` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -214,8 +214,8 @@ Create a apiextensions.v1beta1.CustomResourceDefinitionList resource with the gi
 
 
 Get the state of an existing `CustomResourceDefinitionList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
