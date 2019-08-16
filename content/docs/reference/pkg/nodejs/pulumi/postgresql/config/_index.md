@@ -36,14 +36,14 @@ title: Module config
 <li><a href="#username">let username</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="{{< pkg-url pkg="postgresql" path="config/vars.ts" >}}">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="connectTimeout">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L12">let <b>connectTimeout</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L12" >}}">let <b>connectTimeout</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> connectTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;connectTimeout&#34;)</span>;</pre>
@@ -54,7 +54,7 @@ Maximum wait for connection, in seconds. Zero or not specified means wait indefi
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="database">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L16">let <b>database</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L16" >}}">let <b>database</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> database: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;database&#34;)</span>;</pre>
@@ -65,7 +65,7 @@ The name of the database to connect to in order to conenct to (defaults to `post
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="databaseUsername">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L20">let <b>databaseUsername</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L20" >}}">let <b>databaseUsername</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> databaseUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;databaseUsername&#34;)</span>;</pre>
@@ -76,7 +76,7 @@ Database username associated to the connected user (for user name maps)
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="expectedVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L24">let <b>expectedVersion</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L24" >}}">let <b>expectedVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> expectedVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;expectedVersion&#34;)</span>;</pre>
@@ -87,7 +87,7 @@ Specify the expected version of PostgreSQL.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="host">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L28">let <b>host</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L28" >}}">let <b>host</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;host&#34;)</span>;</pre>
@@ -98,7 +98,7 @@ Name of PostgreSQL server address to connect to
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="maxConnections">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L32">let <b>maxConnections</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L32" >}}">let <b>maxConnections</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> maxConnections: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;maxConnections&#34;)</span>;</pre>
@@ -109,7 +109,7 @@ Maximum number of connections to establish to the database. Zero means unlimited
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="password">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L36">let <b>password</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L36" >}}">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</pre>
@@ -120,7 +120,7 @@ Password to be used if the PostgreSQL server demands password authentication
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="port">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L40">let <b>port</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L40" >}}">let <b>port</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;port&#34;)</span>;</pre>
@@ -131,13 +131,13 @@ The PostgreSQL port number to connect to at the server host, or socket file name
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="sslMode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L41">let <b>sslMode</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L41" >}}">let <b>sslMode</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> sslMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslMode&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="sslmode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L46">let <b>sslmode</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L46" >}}">let <b>sslmode</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> sslmode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslmode&#34;)</span>;</pre>
@@ -149,7 +149,7 @@ PostgreSQL server
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="superuser">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L51">let <b>superuser</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L51" >}}">let <b>superuser</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> superuser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;superuser&#34;)</span>;</pre>
@@ -161,7 +161,7 @@ Refreshing state password from Postgres)
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="username">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/b7a86dd1bf641f5ac6c26e83988e5a07a60e98d6/sdk/nodejs/config/vars.ts#L55">let <b>username</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L55" >}}">let <b>username</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;username&#34;)</span>;</pre>
