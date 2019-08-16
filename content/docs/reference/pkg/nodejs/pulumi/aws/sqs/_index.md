@@ -39,14 +39,14 @@ title: Module sqs
 <li><a href="#QueueEventSubscriptionArgs">type QueueEventSubscriptionArgs</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts">sqs/getQueue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts">sqs/queue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts">sqs/queuePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/redrive.ts">sqs/redrive.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts">sqs/sqsMixins.ts</a> 
+<a href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts" >}}">sqs/getQueue.ts</a> <a href="{{< pkg-url pkg="aws" path="sqs/queue.ts" >}}">sqs/queue.ts</a> <a href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts" >}}">sqs/queuePolicy.ts</a> <a href="{{< pkg-url pkg="aws" path="sqs/redrive.ts" >}}">sqs/redrive.ts</a> <a href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts" >}}">sqs/sqsMixins.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Queue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L52">class <b>Queue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L52" >}}">class <b>Queue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -98,7 +98,7 @@ const queue = new aws.sqs.Queue("queue", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L138" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -115,7 +115,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -129,7 +129,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +139,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -153,7 +153,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L121">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L121" >}}">method <b>onEvent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -167,7 +167,7 @@ with options to control the behavior of the subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L82">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L82" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -178,7 +178,7 @@ The ARN of the SQS queue
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-contentBasedDeduplication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L86">property <b>contentBasedDeduplication</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L86" >}}">property <b>contentBasedDeduplication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>contentBasedDeduplication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -189,7 +189,7 @@ Enables content-based deduplication for FIFO queues. For more information, see t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-delaySeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L90">property <b>delaySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L90" >}}">property <b>delaySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>delaySeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -200,7 +200,7 @@ The time in seconds that the delivery of all messages in the queue will be delay
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-fifoQueue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L94">property <b>fifoQueue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L94" >}}">property <b>fifoQueue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fifoQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -211,7 +211,7 @@ Boolean designating a FIFO queue. If not set, it defaults to `false` making it s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -223,7 +223,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-kmsDataKeyReusePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L98">property <b>kmsDataKeyReusePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L98" >}}">property <b>kmsDataKeyReusePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsDataKeyReusePeriodSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -234,7 +234,7 @@ The length of time, in seconds, for which Amazon SQS can reuse a data key to enc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-kmsMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L102">property <b>kmsMasterKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L102" >}}">property <b>kmsMasterKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsMasterKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -245,7 +245,7 @@ The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-maxMessageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L106">property <b>maxMessageSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L106" >}}">property <b>maxMessageSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxMessageSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -256,7 +256,7 @@ The limit of how many bytes a message can contain before Amazon SQS rejects it. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-messageRetentionSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L110">property <b>messageRetentionSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L110" >}}">property <b>messageRetentionSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>messageRetentionSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -267,7 +267,7 @@ The number of seconds Amazon SQS retains a message. Integer representing seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -278,7 +278,7 @@ This is the human-readable name of the queue. If omitted, this provider will ass
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L118">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L118" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -289,7 +289,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L122">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L122" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -300,7 +300,7 @@ The JSON policy for the SQS queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-receiveWaitTimeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L126">property <b>receiveWaitTimeSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L126" >}}">property <b>receiveWaitTimeSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>receiveWaitTimeSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -311,7 +311,7 @@ The time for which a ReceiveMessage call will wait for a message to arrive (long
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-redrivePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L130">property <b>redrivePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L130" >}}">property <b>redrivePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>redrivePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -322,7 +322,7 @@ The JSON policy to set up the Dead Letter Queue, see [AWS docs](https://docs.aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L134" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -333,7 +333,7 @@ A mapping of tags to assign to the queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -345,7 +345,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-visibilityTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L138">property <b>visibilityTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L138" >}}">property <b>visibilityTimeoutSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>visibilityTimeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -357,12 +357,12 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueEventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L59">class <b>QueueEventSubscription</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L59" >}}">class <b>QueueEventSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a></pre>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L65" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -372,7 +372,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -382,7 +382,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -396,7 +396,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -406,7 +406,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-eventSourceMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L65">property <b>eventSourceMapping</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L65" >}}">property <b>eventSourceMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventSourceMapping: lambda.EventSourceMapping;</pre>
@@ -417,7 +417,7 @@ The underlying sns object created for the subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L227" >}}">property <b>func</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>func: LambdaFunction;</pre>
@@ -425,7 +425,7 @@ The underlying sns object created for the subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L226" >}}">property <b>permission</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>permission: permission.Permission;</pre>
@@ -433,7 +433,7 @@ The underlying sns object created for the subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-queue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L60">property <b>queue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L60" >}}">property <b>queue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>queue: queue.Queue;</pre>
@@ -441,7 +441,7 @@ The underlying sns object created for the subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -454,7 +454,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueuePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L44">class <b>QueuePolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L44" >}}">class <b>QueuePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -498,7 +498,7 @@ const test = new aws.sqs.QueuePolicy("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueuePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L78" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -515,7 +515,7 @@ Create a QueuePolicy resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -529,7 +529,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -539,7 +539,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -553,7 +553,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -565,7 +565,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L74">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L74" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -576,7 +576,7 @@ The JSON policy for the SQS queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-queueUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L78">property <b>queueUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L78" >}}">property <b>queueUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>queueUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -587,7 +587,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -600,7 +600,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getQueue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L25">function <b>getQueue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L25" >}}">function <b>getQueue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -628,7 +628,7 @@ const example = pulumi.output(aws.sqs.getQueue({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetQueueArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L43">interface <b>GetQueueArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L43" >}}">interface <b>GetQueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -637,7 +637,7 @@ A collection of arguments for invoking getQueue.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetQueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -649,7 +649,7 @@ The name of the queue to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetQueueResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L53">interface <b>GetQueueResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L53" >}}">interface <b>GetQueueResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -658,7 +658,7 @@ A collection of values returned by getQueue.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetQueueResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -669,7 +669,7 @@ The Amazon Resource Name (ARN) of the queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetQueueResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L66" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -680,7 +680,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetQueueResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L58" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -688,7 +688,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetQueueResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/getQueue.ts#L62">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/getQueue.ts#L62" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -700,7 +700,7 @@ The URL of the queue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L265">interface <b>QueueArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L265" >}}">interface <b>QueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -709,7 +709,7 @@ The set of arguments for constructing a Queue resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueArgs-contentBasedDeduplication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L269">property <b>contentBasedDeduplication</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L269" >}}">property <b>contentBasedDeduplication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contentBasedDeduplication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -720,7 +720,7 @@ Enables content-based deduplication for FIFO queues. For more information, see t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-delaySeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L273">property <b>delaySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L273" >}}">property <b>delaySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delaySeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -731,7 +731,7 @@ The time in seconds that the delivery of all messages in the queue will be delay
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-fifoQueue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L277">property <b>fifoQueue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L277" >}}">property <b>fifoQueue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fifoQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -742,7 +742,7 @@ Boolean designating a FIFO queue. If not set, it defaults to `false` making it s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-kmsDataKeyReusePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L281">property <b>kmsDataKeyReusePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L281" >}}">property <b>kmsDataKeyReusePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsDataKeyReusePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -753,7 +753,7 @@ The length of time, in seconds, for which Amazon SQS can reuse a data key to enc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-kmsMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L285">property <b>kmsMasterKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L285" >}}">property <b>kmsMasterKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsMasterKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -764,7 +764,7 @@ The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-maxMessageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L289">property <b>maxMessageSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L289" >}}">property <b>maxMessageSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxMessageSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -775,7 +775,7 @@ The limit of how many bytes a message can contain before Amazon SQS rejects it. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-messageRetentionSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L293">property <b>messageRetentionSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L293" >}}">property <b>messageRetentionSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>messageRetentionSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -786,7 +786,7 @@ The number of seconds Amazon SQS retains a message. Integer representing seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L297">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L297" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -797,7 +797,7 @@ This is the human-readable name of the queue. If omitted, this provider will ass
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L301">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L301" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -808,7 +808,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L305">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L305" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -819,7 +819,7 @@ The JSON policy for the SQS queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-receiveWaitTimeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L309">property <b>receiveWaitTimeSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L309" >}}">property <b>receiveWaitTimeSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>receiveWaitTimeSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -830,7 +830,7 @@ The time for which a ReceiveMessage call will wait for a message to arrive (long
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-redrivePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L313">property <b>redrivePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L313" >}}">property <b>redrivePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>redrivePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -841,7 +841,7 @@ The JSON policy to set up the Dead Letter Queue, see [AWS docs](https://docs.aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L317">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L317" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -852,7 +852,7 @@ A mapping of tags to assign to the queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-visibilityTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L321">property <b>visibilityTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L321" >}}">property <b>visibilityTimeoutSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityTimeoutSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -864,11 +864,11 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueEvent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L22">interface <b>QueueEvent</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L22" >}}">interface <b>QueueEvent</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="QueueEvent-Records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L23">property <b>Records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L23" >}}">property <b>Records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Records: <a href='#QueueRecord'>QueueRecord</a>[];</pre>
@@ -877,7 +877,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueuePolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L133">interface <b>QueuePolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L133" >}}">interface <b>QueuePolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -886,7 +886,7 @@ The set of arguments for constructing a QueuePolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueuePolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L137">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L137" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -897,7 +897,7 @@ The JSON policy for the SQS queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicyArgs-queueUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L141">property <b>queueUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L141" >}}">property <b>queueUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>queueUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -909,7 +909,7 @@ The URL of the SQS Queue to which to attach the policy
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueuePolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L119">interface <b>QueuePolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L119" >}}">interface <b>QueuePolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -918,7 +918,7 @@ Input properties used for looking up and filtering QueuePolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueuePolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L123">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L123" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -929,7 +929,7 @@ The JSON policy for the SQS queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicyState-queueUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queuePolicy.ts#L127">property <b>queueUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queuePolicy.ts#L127" >}}">property <b>queueUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>queueUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -941,11 +941,11 @@ The URL of the SQS Queue to which to attach the policy
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueRecord">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L26">interface <b>QueueRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L26" >}}">interface <b>QueueRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="QueueRecord-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L30">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L30" >}}">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attributes: {
@@ -958,7 +958,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-awsRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L40">property <b>awsRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L40" >}}">property <b>awsRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -966,7 +966,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L29">property <b>body</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L29" >}}">property <b>body</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>body: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -974,7 +974,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-eventSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L38">property <b>eventSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L38" >}}">property <b>eventSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventSource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -982,7 +982,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-eventSourceARN">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L39">property <b>eventSourceARN</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L39" >}}">property <b>eventSourceARN</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventSourceARN: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -990,7 +990,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-md5OfBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L37">property <b>md5OfBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L37" >}}">property <b>md5OfBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>md5OfBody: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -998,7 +998,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-messageAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L36">property <b>messageAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L36" >}}">property <b>messageAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>messageAttributes: <a href='#Record'>Record</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
@@ -1006,7 +1006,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-messageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L27">property <b>messageId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L27" >}}">property <b>messageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>messageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1014,7 +1014,7 @@ The URL of the SQS Queue to which to attach the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueRecord-receiptHandle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L28">property <b>receiptHandle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L28" >}}">property <b>receiptHandle</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>receiptHandle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1023,7 +1023,7 @@ The URL of the SQS Queue to which to attach the policy
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L199">interface <b>QueueState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L199" >}}">interface <b>QueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1032,7 +1032,7 @@ Input properties used for looking up and filtering Queue resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L203">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L203" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1043,7 +1043,7 @@ The ARN of the SQS queue
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-contentBasedDeduplication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L207">property <b>contentBasedDeduplication</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L207" >}}">property <b>contentBasedDeduplication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contentBasedDeduplication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1054,7 +1054,7 @@ Enables content-based deduplication for FIFO queues. For more information, see t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-delaySeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L211">property <b>delaySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L211" >}}">property <b>delaySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delaySeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1065,7 +1065,7 @@ The time in seconds that the delivery of all messages in the queue will be delay
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-fifoQueue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L215">property <b>fifoQueue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L215" >}}">property <b>fifoQueue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fifoQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1076,7 +1076,7 @@ Boolean designating a FIFO queue. If not set, it defaults to `false` making it s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-kmsDataKeyReusePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L219">property <b>kmsDataKeyReusePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L219" >}}">property <b>kmsDataKeyReusePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsDataKeyReusePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1087,7 +1087,7 @@ The length of time, in seconds, for which Amazon SQS can reuse a data key to enc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-kmsMasterKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L223">property <b>kmsMasterKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L223" >}}">property <b>kmsMasterKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsMasterKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1098,7 +1098,7 @@ The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-maxMessageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L227">property <b>maxMessageSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L227" >}}">property <b>maxMessageSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxMessageSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1109,7 +1109,7 @@ The limit of how many bytes a message can contain before Amazon SQS rejects it. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-messageRetentionSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L231">property <b>messageRetentionSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L231" >}}">property <b>messageRetentionSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>messageRetentionSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1120,7 +1120,7 @@ The number of seconds Amazon SQS retains a message. Integer representing seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L235">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L235" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1131,7 +1131,7 @@ This is the human-readable name of the queue. If omitted, this provider will ass
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L239">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L239" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1142,7 +1142,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L243">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L243" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1153,7 +1153,7 @@ The JSON policy for the SQS queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-receiveWaitTimeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L247">property <b>receiveWaitTimeSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L247" >}}">property <b>receiveWaitTimeSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>receiveWaitTimeSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1164,7 +1164,7 @@ The time for which a ReceiveMessage call will wait for a message to arrive (long
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-redrivePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L251">property <b>redrivePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L251" >}}">property <b>redrivePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>redrivePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1175,7 +1175,7 @@ The JSON policy to set up the Dead Letter Queue, see [AWS docs](https://docs.aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L255">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L255" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1186,7 +1186,7 @@ A mapping of tags to assign to the queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-visibilityTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/queue.ts#L259">property <b>visibilityTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L259" >}}">property <b>visibilityTimeoutSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>visibilityTimeoutSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1198,7 +1198,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RedrivePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/redrive.ts#L26">interface <b>RedrivePolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/redrive.ts#L26" >}}">interface <b>RedrivePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1210,7 +1210,7 @@ http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-de
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RedrivePolicy-deadLetterTargetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/redrive.ts#L31">property <b>deadLetterTargetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/redrive.ts#L31" >}}">property <b>deadLetterTargetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deadLetterTargetArn: <a href='#ARN'>ARN</a>;</pre>
@@ -1222,7 +1222,7 @@ The Amazon Resource Name (ARN) of the dead-letter queue to which Amazon SQS move
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RedrivePolicy-maxReceiveCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/redrive.ts#L38">property <b>maxReceiveCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/redrive.ts#L38" >}}">property <b>maxReceiveCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxReceiveCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1237,13 +1237,13 @@ standard queue must also be a standard queue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueEventHandler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L43">type <b>QueueEventHandler</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L43" >}}">type <b>QueueEventHandler</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> QueueEventHandler = lambda.EventHandler&lt;<a href='#QueueEvent'>QueueEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
 </div>
 <h2 class="pdoc-module-header" id="QueueEventSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/sqs/sqsMixins.ts#L48">type <b>QueueEventSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L48" >}}">type <b>QueueEventSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> QueueEventSubscriptionArgs = {
