@@ -7,9 +7,9 @@ authors: ["luke-hoban"]
 tags: ["Infrastructure"]
 ---
 
-Most cloud infrastructure projects involve working with existing cloud resources - either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
+Most cloud infrastructure projects involve working with existing cloud resources &mdash; either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
-Whether you are adopting resources that were deployed manually using your cloud provider's console or CLI - or migrating existing infrastructure from tools like Terraform or CloudFormation - Pulumi makes it easy to adopt and manage your existing resources.
+Whether you are adopting resources that were deployed manually using your cloud provider's console or CLI &mdash; or migrating existing infrastructure from tools like Terraform or CloudFormation &mdash; Pulumi makes it easy to adopt and manage your existing resources.
 
 <!--more-->
 
@@ -21,17 +21,17 @@ When working with existing resources, there are typically two scenarios:
 We'll review referencing existing resources, and then dive deeper into how you can adopt existing resources with Pulumi.
 
 ## Referencing Existing Resources
-For referencing existing resources, Pulumi offers several tools.  
+For referencing existing resources, Pulumi offers several tools.
 
-* The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on it's `id`.
-* The `StackReference` resource lets you reference outputs of another stack for use as inputs to another stack, which is very useful for [organizing projects and stack](https://www.pulumi.com/docs/reference/organizing-stacks-projects/). 
-* The [`terraform.state.RemoteStateReference()`](https://www.pulumi.com/blog/using-terraform-remote-state-with-pulumi/), [`aws.cloudformation.getStack()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack) and [`azure.core.TemplateDeployment.get()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
+* The `.get` methods available on every resource let you [get all the details for a resource](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc-get) from the cloud provider based just on its `id`.
+* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](https://www.pulumi.com/docs/reference/organizing-stacks-projects/).
+* [`terraform.state.RemoteStateReference()`](https://www.pulumi.com/blog/using-terraform-remote-state-with-pulumi/), [`aws.cloudformation.getStack()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack) and [`azure.core.TemplateDeployment.get()`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.
 
 ## Adopting Existing Resources
 
-For adopting existing resources, Pulumi offers the [`import`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with it's focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for you infrastructure deployment, instead of outside it in some manual workflow.  In it's simplest form looks like this:
+For adopting existing resources, Pulumi offers the [`import`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with its focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in some manual workflow.  In its simplest form, it looks like this:
 
 ```ts
 const myVpc = new aws.ec2.Vpc("my-vpc", {
@@ -47,10 +47,10 @@ We can see this when we deploy our Pulumi program with `pulumi up`:
 $ pulumi up
 Previewing update (dev):
 
-     Type                 Name               Plan       
-     pulumi:pulumi:Stack  importtestaws-dev             
- =   └─ aws:ec2:Vpc       my-vpc             import     
- 
+     Type                 Name               Plan
+     pulumi:pulumi:Stack  importtestaws-dev
+ =   └─ aws:ec2:Vpc       my-vpc             import
+
 Resources:
     = 1 to import
     1 unchanged
@@ -64,7 +64,7 @@ Import can be used for a wide variety of adoption scenarios, from importing a si
 
 To see one of these scenarios in action end-to-end, let's walk through the process of deploying some "existing" infrastructure outside of Pulumi, and then adopting it under management of a Pulumi program.  You can also check out the video below which walks through the same scenario.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kX_3Wdft0Ms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube "kX_3Wdft0Ms?rel=0" >}}
 
 We'll use Terraform to provision our "existing" infrastructure.  These resources could have been provisioned manually in the console, or using platform-native infrastructure-as-code solutions like CloudFormation, ARM or Kubernetes YAML.
 
@@ -76,7 +76,7 @@ For our "existing" infrastructure, we'll use a small Azure deployment of a Virtu
 
 #### 2. Create a Pulumi program
 
-Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) to automatically convert our `.tf` files to Pulumi.  
+Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) to automatically convert our `.tf` files to Pulumi.
 
 ```bash
 $ pulumi new azure-typescript --force
@@ -129,7 +129,7 @@ Instead of creating new resources though, we want to adopt the existing ones.
 
 #### 3.Add `import` IDs
 
-As we saw earlier, to import existing resources, we simply add `import: <id>` to the resource options of a resource defined in Pulumi.  That resources wil then be imported instead of created.
+As we saw earlier, to import existing resources, we simply add `import: <id>` to the resource options of a resource defined in Pulumi.  That resource will then be imported instead of created.
 
 We can try this for one resource first.  We can look in our `terraform.tfstate` file or in the Azure Portal and see that the id of the Resource Group is `/subscriptions/0282681f-7a9e-424b-80b2-96babd57a8a1/resourceGroups/tfvmex-resources`.  So let's use that:
 
@@ -148,29 +148,29 @@ Now our preview shows that it will import the `ResourceGroup` instead:
 $ pulumi up
 Previewing update (dev2):
 
-     Type                         Name              Plan       
- +   pulumi:pulumi:Stack          importazure-dev2  create     
- =   └─ azure:core:ResourceGroup  main              import     
- 
+     Type                         Name              Plan
+ +   pulumi:pulumi:Stack          importazure-dev2  create
+ =   └─ azure:core:ResourceGroup  main              import
+
 Resources:
     + 1 to create
     = 1 to import
     2 changes
 ```
 
-We can complete this process, adding `import: <id>` to all resources, and then import them all to Pulumi. 
+We can complete this process, adding `import: <id>` to all resources, and then import them all to Pulumi.
 
 ```
 Updating (dev2):
 
-     Type                               Name              Status       
- +   pulumi:pulumi:Stack                importazure-dev2  created      
- =   ├─ azure:core:ResourceGroup        main              imported     
- =   ├─ azure:network:VirtualNetwork    main              imported     
- =   ├─ azure:network:Subnet            internal          imported     
- =   ├─ azure:network:NetworkInterface  main              imported     
- =   └─ azure:compute:VirtualMachine    main              imported     
- 
+     Type                               Name              Status
+ +   pulumi:pulumi:Stack                importazure-dev2  created
+ =   ├─ azure:core:ResourceGroup        main              imported
+ =   ├─ azure:network:VirtualNetwork    main              imported
+ =   ├─ azure:network:Subnet            internal          imported
+ =   ├─ azure:network:NetworkInterface  main              imported
+ =   └─ azure:compute:VirtualMachine    main              imported
+
 Resources:
     + 1 created
     = 5 imported
@@ -181,7 +181,7 @@ Duration: 8s
 
 #### 5. Managing the resources with Pulumi
 
-Once all of the resources are adopted into Pulumi, we can manage them by making incremental changes in Pulumi, and can discontinue using the existing `.tf` files to manage this set of infrastructure.  For example, if we want to add a new tag to our Virtual Machine, we can use the code below.  We can also now remove the `import` property if we want, or else leave it intact so long as the `id` of the resource remains the same (if in the future we need to make a change that replaces one of these imported resources, Pulumi will require that the `id` property is removed, as it will no longer be correct.) 
+Once all of the resources are adopted into Pulumi, we can manage them by making incremental changes in Pulumi, and can discontinue using the existing `.tf` files to manage this set of infrastructure.  For example, if we want to add a new tag to our Virtual Machine, we can use the code below.  We can also now remove the `import` property if we want, or else leave it intact so long as the `id` of the resource remains the same. (If in the future we need to make a change that replaces one of these imported resources, Pulumi will require that the `id` property is removed, as it will no longer be correct.)
 
 ```diff
 const mainVirtualMachine = new azure.compute.VirtualMachine("main", {
@@ -228,7 +228,7 @@ Deploying this, Pulumi shows we will update the existing resource to add the new
         }
 ```
 
-Since the resources are now being managed by Pulumi, we can use the Pulumi Console to see our resources:
+Since the resources are now being managed by Pulumi, we can use the Pulumi Console to see them:
 
 ![The Pulumi Console stack resources page](./console.png)
 
