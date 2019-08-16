@@ -18,18 +18,18 @@ title: Module sns
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts">sns/metrics.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="sns/metrics.ts" >}}">sns/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L20" >}}">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L90">function <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L90" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -72,7 +72,7 @@ Amazon Simple Notification Service sends the following dimensions to CloudWatch:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfMessagesPublished">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L126">function <b>numberOfMessagesPublished</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L126" >}}">function <b>numberOfMessagesPublished</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -89,7 +89,7 @@ Valid Statistics: Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfNotificationsDelivered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L143">function <b>numberOfNotificationsDelivered</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L143" >}}">function <b>numberOfNotificationsDelivered</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -112,7 +112,7 @@ Valid Statistics: Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfNotificationsFailed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L162">function <b>numberOfNotificationsFailed</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L162" >}}">function <b>numberOfNotificationsFailed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -137,7 +137,7 @@ Valid Statistics: Sum, Average
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfNotificationsFilteredOut_InvalidAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L187">function <b>numberOfNotificationsFilteredOut_InvalidAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L187" >}}">function <b>numberOfNotificationsFilteredOut_InvalidAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -156,7 +156,7 @@ Valid Statistics: Sum, Average
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfNotificationsFilteredOut_NoMessageAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L174">function <b>numberOfNotificationsFilteredOut_NoMessageAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L174" >}}">function <b>numberOfNotificationsFilteredOut_NoMessageAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -174,7 +174,7 @@ Valid Statistics: Sum, Average
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="publishSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L198">function <b>publishSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L198" >}}">function <b>publishSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -191,7 +191,7 @@ Valid Statistics: Minimum, Maximum, Average and Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="smsMonthToDateSpentUSD">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L213">function <b>smsMonthToDateSpentUSD</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L213" >}}">function <b>smsMonthToDateSpentUSD</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -212,7 +212,7 @@ Valid Statistics: Maximum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="smsSuccessRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L224">function <b>smsSuccessRate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L224" >}}">function <b>smsSuccessRate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -229,14 +229,14 @@ Valid Statistics: Sum, Average, Data Samples
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnsMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L28">interface <b>SnsMetricChange</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L28" >}}">interface <b>SnsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnsMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sns/metrics.ts#L21">type <b>SnsMetricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L21" >}}">type <b>SnsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> SnsMetricName = <span class='s2'>"NumberOfMessagesPublished"</span> | <span class='s2'>"NumberOfNotificationsDelivered"</span> | <span class='s2'>"NumberOfNotificationsFailed"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-NoMessageAttributes"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-InvalidAttributes"</span> | <span class='s2'>"PublishSize"</span> | <span class='s2'>"SMSMonthToDateSpentUSD"</span> | <span class='s2'>"SMSSuccessRate"</span>;</pre>
