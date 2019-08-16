@@ -47,9 +47,9 @@ const bucket = new gcp.storage.Bucket("my-bucket");
 ```
 
 ```python
-from pulumi_aws import s3
+from pulumi_gcp import storage
 
-bucket = s3.Bucket('my-bucket')
+bucket = storage.Bucket('my-bucket')
 ```
 
 ```go
