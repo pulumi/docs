@@ -1211,7 +1211,7 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-## Dynamic Providers <span class="badge badge-preview">[PREVIEW]</span> {#dynamicproviders}
+## Dynamic Providers <span class="badge badge-preview">PREVIEW</span> {#dynamicproviders}
 
 Every `CustomResource` has a provider associated with it which knows how to `create`, `read`, `update`, and `delete` instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
 
@@ -1654,7 +1654,7 @@ class GithubLabelProvider(ResourceProvider):
             name=props["name"],
             color=props["color"],
             description=props.get("description", GithubObject.NotSet))
-        return CreateResult(l.name, {**props, **l.raw_data}) 
+        return CreateResult(l.name, {**props, **l.raw_data})
     def update(self, id, _olds, props):
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
         l.edit(name=props["name"],

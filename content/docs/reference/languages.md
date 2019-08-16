@@ -16,7 +16,7 @@ The following language runtimes are currently supported by Pulumi:
 
 * [Node.js]({{< relref "javascript.md" >}}) - JavaScript, TypeScript, or any other Node.js compatible language
 * [Python 3]({{< relref "python.md" >}}) - Python 3.6 or greater
-* Go <span class="badge badge-preview">[PREVIEW]</span> - statically compiled Go binaries (*documentation coming soon*)
+* Go <span class="badge badge-preview">PREVIEW</span> - statically compiled Go binaries (*documentation coming soon*)
 
 
 If your favorite language isn't listed, it may be on its way soon. Pulumi is [open
