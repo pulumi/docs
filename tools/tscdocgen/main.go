@@ -35,20 +35,20 @@ func main() {
 	// Grab the args.
 	flag.Parse()
 	args := flag.Args()
-	if len(args) < 3 {
-		fmt.Fprintf(os.Stderr, "error: usage: %s <src-dir> <doc-file> <out-dir> <git-hash>\n", os.Args[0])
+	if len(args) < 6 {
+		fmt.Fprintf(os.Stderr, "error: usage: %s <src-dir> <pkg-name> <doc-file> <out-dir> <out-data-dir> <pkg-repo-dir> <git-hash>\n", os.Args[0])
 		os.Exit(1)
 	}
 
 	// Load and parse the document.
-	doc, err := loadAndParseDoc(args[1])
+	doc, err := loadAndParseDoc(args[2])
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: reading and parsing docs file: %v\n", err)
 		os.Exit(1)
 	}
 
 	// Assuming that succeeded, simply emit the Markdown docs now.
-	if err = emitMarkdownDocs(args[0], doc, args[2], args[3]); err != nil {
+	if err = emitMarkdownDocs(args[0], args[1], doc, args[3], args[4], args[5], args[6]); err != nil {
 		fmt.Fprintf(os.Stderr, "error: emitting Markdown docs: %v\n", err)
 		os.Exit(2)
 	}
@@ -178,40 +178,10 @@ func hasTag(node *typeDocNode, value string) bool {
 	return false
 }
 
-// gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
-// TODO(joe): base this off the package.json file.
-var gitHubBaseURLs = map[string]string{
-	"@pulumi/pulumi":       "https://github.com/pulumi/pulumi/blob/{githash}/sdk/nodejs",
-	"@pulumi/aws":          "https://github.com/pulumi/pulumi-aws/blob/{githash}/sdk/nodejs",
-	"@pulumi/awsx":         "https://github.com/pulumi/pulumi-awsx/blob/{githash}/nodejs/awsx",
-	"@pulumi/azure":        "https://github.com/pulumi/pulumi-azure/blob/{githash}/sdk/nodejs",
-	"@pulumi/azuread":      "https://github.com/pulumi/pulumi-azuread/blob/{githash}/sdk/nodejs",
-	"@pulumi/cloud":        "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
-	"@pulumi/cloudflare":   "https://github.com/pulumi/pulumi-cloudflare/blob/{githash}/sdk/nodejs",
-	"@pulumi/datadog":      "https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
-	"@pulumi/digitalocean": "https://github.com/pulumi/pulumi-digitalocean/blob/{githash}/sdk/nodejs",
-	"@pulumi/dnsimple":     "https://github.com/pulumi/pulumi-dnsimple/blob/{githash}/sdk/nodejs",
-	"@pulumi/docker":       "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
-	"@pulumi/eks":          "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
-	"@pulumi/f5bigip":      "https://github.com/pulumi/pulumi-f5bigip/blob/{githash}/sdk/nodejs",
-	"@pulumi/gcp":          "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
-	"@pulumi/gitlab":       "https://github.com/pulumi/pulumi-gitlab/blob/{githash}/sdk/nodejs",
-	"@pulumi/kubernetes":   "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
-	"@pulumi/linode":       "https://github.com/pulumi/pulumi-linode/blob/{githash}/sdk/nodejs",
-	"@pulumi/mysql":        "https://github.com/pulumi/pulumi-mysql/blob/{githash}/sdk/nodejs",
-	"@pulumi/newrelic":     "https://github.com/pulumi/pulumi-newrelic/blob/{githash}/sdk/nodejs",
-	"@pulumi/openstack":    "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
-	"@pulumi/packet":       "https://github.com/pulumi/pulumi-packet/blob/{githash}/sdk/nodejs",
-	"@pulumi/postgresql":   "https://github.com/pulumi/pulumi-postgresql/blob/{githash}/sdk/nodejs",
-	"@pulumi/random":       "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
-	"@pulumi/terraform":    "https://github.com/pulumi/pulumi-terraform/blob/{githash}/sdk/nodejs",
-	"@pulumi/tls":          "https://github.com/pulumi/pulumi-tls/blob/{githash}/sdk/nodejs",
-	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
-}
-
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
 // website, and emits those files into the target directory.  If the target doesn't exist, it will be created.
-func emitMarkdownDocs(srcdir string, doc *typeDocNode, outdir, githash string) error {
+func emitMarkdownDocs(srcdir, pkgname string, doc *typeDocNode, outdir, outdatadir, pkgRepoDir, githash string) error {
+
 	// First, gather up the entries by module.  Note that we are doing something dubious here to make our docs
 	// easier to use and navigate than the default ones that Typedoc generates.  We are assuming an idiomatic module
 	// structure with top-level index-style exports for each submodule.  In the general case, this isn't always true,
@@ -220,12 +190,12 @@ func emitMarkdownDocs(srcdir string, doc *typeDocNode, outdir, githash string) e
 	// want to revisit this and make the logic here more sophisticated and general purpose someday.
 	pkg := doc.Name
 
-	gitHubBaseURL, ok := gitHubBaseURLs[pkg]
-	if !ok {
-		return errors.Errorf("package %q is missing from gitHubBaseURLs", pkg)
+	e := newEmitter(pkg, pkgname, srcdir, outdir, outdatadir)
+
+	// Emit the package data file.
+	if err := e.emitPackageDataFile(pkgRepoDir, githash); err != nil {
+		return err
 	}
-	repoURL := strings.Replace(gitHubBaseURL, "{githash}", githash, -1)
-	e := newEmitter(pkg, srcdir, repoURL, outdir)
 
 	// The kubernetes package requires some special handling since the structure differs from
 	// the tf-generated providers.
@@ -242,19 +212,50 @@ func emitMarkdownDocs(srcdir string, doc *typeDocNode, outdir, githash string) e
 }
 
 type emitter struct {
-	pkg     string // the NPM package name.
-	srcdir  string // the source directory for docs, etc.
-	repoURL string // the base repo URL for this package's code.
-	outdir  string // where to store the output files.
+	pkg        string // the NPM package name.
+	pkgname    string // the simple name of the package.
+	srcdir     string // the source directory for docs, etc.
+	outdir     string // where to store the output files.
+	outdatadir string // where to store output data.
 }
 
-func newEmitter(pkg, srcdir, repoURL, outdir string) *emitter {
+func newEmitter(pkg, pkgname, srcdir, outdir, outdatadir string) *emitter {
 	return &emitter{
-		pkg:     pkg,
-		srcdir:  srcdir,
-		repoURL: repoURL,
-		outdir:  outdir,
+		pkg:        pkg,
+		pkgname:    pkgname,
+		srcdir:     srcdir,
+		outdir:     outdir,
+		outdatadir: outdatadir,
 	}
+}
+
+// emitPackageDataFile writes a <pkgname>.toml file to the output data directory.
+// The content of the file is the base repo URL with Git commit hash.
+func (e *emitter) emitPackageDataFile(pkgRepoDir, githash string) error {
+	// Open the file for writing.
+	filename := filepath.Join(e.outdatadir, fmt.Sprintf("%s.toml", e.pkgname))
+	if err := os.MkdirAll(filepath.Dir(filename), 0700); err != nil {
+		return err
+	}
+	f, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	preamble := "# WARNING: this file was generated by a tool. Do not edit it by hand.\n" +
+		"# To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen.\n\n"
+
+	repo := strings.Split(pkgRepoDir, "/")[0]
+	dir := strings.TrimPrefix(pkgRepoDir, repo)
+	dir = strings.TrimPrefix(dir, "/")
+	url := fmt.Sprintf("https://github.com/pulumi/%s/blob/%s/%s", repo, githash, dir)
+
+	if _, err := fmt.Fprintf(f, "%surl = %q\n", preamble, url); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 // augmentNode recurses throughout a tree AST, adding information that we'll need when translating it to Markdown.
@@ -266,7 +267,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	}
 	node.Label = createLabel(node, parent)
 	node.CodeDetails = createCodeDetails(node)
-	node.RepoURL = getRepoURL(e.repoURL, node, parent)
+	node.URLPath = getURLPath(node, parent)
 
 	// If this extends or implements other types, render them.
 	if len(node.ExtendedTypes) > 0 {
@@ -454,8 +455,8 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	if err = indexTemplate.FRender(f, map[string]interface{}{
 		"Title":          title,
 		"Breadcrumbs":    breadcrumbs,
-		"RepoURL":        e.repoURL,
 		"Package":        pkg,
+		"PackageName":    e.pkgname,
 		"PackageComment": string(pkgcomm),
 		"PackageVar":     pkgvar,
 		"Files":          files,
@@ -725,22 +726,22 @@ func isLocalSource(source typeDocSource) bool {
 	return source.FileName != "" && source.FileName[0] != '/'
 }
 
-// getRepoURL returns a hyperlink to a given type node that is relative to a given repo.
-func getRepoURL(baseURL string, node *typeDocNode, parent *typeDocNode) string {
+// getURLPath returns a URL path to a given type node that is relative to a given repo.
+func getURLPath(node *typeDocNode, parent *typeDocNode) string {
 	for _, source := range node.Sources {
 		if isLocalSource(source) {
-			return fmt.Sprintf("%s/%s#L%d", baseURL, source.FileName, source.Line)
+			return fmt.Sprintf("%s#L%d", source.FileName, source.Line)
 		}
 	}
 
 	// If not relative, try returning a link to the parent, if any. This can happen if TypeDoc binds to,
 	// say, something in the standard ES library due to naming overloads (like anything named `name`).
 	if parent != nil {
-		return getRepoURL(baseURL, parent, nil)
+		return getURLPath(parent, nil)
 	}
 
 	// If no parent, simply return a link to the repo itself.
-	return baseURL
+	return ""
 }
 
 // Merge attempts to merge two different document nodes. Only certain kinds of nodes can be merged with
@@ -1165,8 +1166,8 @@ type typeDocNode struct {
 	Label string
 	// CodeDetails is used when a code-styled header is available to print before the details of a member.
 	CodeDetails string
-	// RepoURL is a link to this member in the relevant Git repo.  It's augmented information.
-	RepoURL string
+	// URLPath is the path to this member in the relevant Git repi.  It's augmented information.
+	URLPath string
 	// Extends is a rendered type this type inherits from (or empty if none).
 	Extends string
 	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).

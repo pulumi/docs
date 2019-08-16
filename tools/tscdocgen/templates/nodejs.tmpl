@@ -40,7 +40,7 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Members}}
 </ul>
 
-{{#Files}}<a href="{{RepoURL}}/{{.}}">{{.}}</a> {{/Files}}
+{{#Files}}<a href="{{=<% %>=}}{{< pkg-url pkg="<%PackageName%>" path="<%.%>" >}}<%={{ }}=%>">{{.}}</a> {{/Files}}
 </div>
 </div>
 </div>
@@ -66,7 +66,7 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#Members}}
 <h2 class="pdoc-module-header" id="{{AnchorName}}">
-<a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
+<a class="pdoc-member-name" href="{{=<% %>=}}{{< pkg-url pkg="<%PackageName%>" path="<%URLPath%>" >}}<%={{ }}=%>">{{{Label}}} <b>{{{Name}}}</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{#Extends}}
@@ -90,7 +90,7 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Comment.ShortText}}
 {{#Children}}
 <h3 class="pdoc-member-header" id="{{AnchorName}}">
-<a class="pdoc-child-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
+<a class="pdoc-child-name" href="{{=<% %>=}}{{< pkg-url pkg="<%PackageName%>" path="<%URLPath%>" >}}<%={{ }}=%>">{{{Label}}} <b>{{{Name}}}</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{#CodeDetails}}
