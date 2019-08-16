@@ -58,7 +58,7 @@ Resources:
 
 Because the `import` is provided in code, it can be configured in several different ways.  You can look up import ids from Pulumi config instead of hard-coding them into programs, construct ids from predictable names based on program parameters, or even conditionally add the `import: <id>` property depending on whether one wants to deploy a stack in "adoption" or "creation" mode.
 
-Import can be used for a wide variety of adoption scenarios, from importing a single resource to migrating an entire stack from an existing tool like Terraform.  You can even automate an entire migration process across dozens of instances of infrastructure deployment.
+Import can be used for a wide variety of adoption scenarios, from importing a single resource to migrating an entire stack from an existing tool like Terraform.  You can even automate an entire migration process across dozens of instances of infrastructure deployment.  For small numbers of resources, you can just paste in individual resource IDs.  For larger conversions, you can create a mapping of cloud resource ids (in JSON, CSV, or any other format) and load that into your Pulumi program with something like `import: idMapping[name]`.  If you are importing or migrating dozens of stacks, you can even select between which of these mappings to use via a Pulumi config setting.
 
 ### Walkthrough of Adopting Existing Infrastructure to Pulumi
 
@@ -178,6 +178,8 @@ Resources:
 
 Duration: 8s
 ```
+
+As noted earlier, if we were doing this at larger scale, instead of putting resource IDs inline in the code, we could load the IDs from a file or from Pulumi config.  These IDs could be automatically extracted from our `.tfstate` file or from queries against our cloud provider.
 
 #### 5. Managing the resources with Pulumi
 
