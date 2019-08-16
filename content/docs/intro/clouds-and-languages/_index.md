@@ -22,7 +22,7 @@ If your cloud isn't listed, check out the [Pulumi GitHub](https://github.com/pul
 ## Languages
 
 Pulumi is a multi-language runtime. Your choice of language does not affect which
-[clouds]({{< relref "clouds/_index.md" >}}) may be targeted. Each language is just as
+[clouds]({{< relref "intro/clouds-and-languages/_index.md" >}}) may be targeted. Each language is just as
 capable as the other and supports the entire surface area of resources available.
 
 The following language runtimes are currently supported by Pulumi:

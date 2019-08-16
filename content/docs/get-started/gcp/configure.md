@@ -9,7 +9,7 @@ menu:
 
 <!-- TODO inline a streamlined version of configuring the cloud here. -->
 
-<a href="{{< relref "/docs/reference/clouds/gcp/setup.md" >}}" target="_blank">Configure Google Cloud</a> so the Pulumi CLI can connect to Google Cloud.
+<a href="{{< relref "/docs/intro/clouds-and-languages/gcp/setup.md" >}}" target="_blank">Configure Google Cloud</a> so the Pulumi CLI can connect to Google Cloud.
 
 > If your <a href="https://cloud.google.com/sdk/gcloud/" target="_blank">Google Cloud CLI</a>, `gcloud`, is already working, you should be good to go as Pulumi respects its configuration.
 

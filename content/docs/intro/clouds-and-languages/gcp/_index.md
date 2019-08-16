@@ -18,11 +18,11 @@ The GCP provider supports several options for providing access to Google Cloud c
 
 ## Getting Started
 
-The quickest way to get started with GCP is to follow the [Get Started]({{< relref "/docs/quickstart/gcp" >}}) guide.
+The quickest way to get started with GCP is to follow the [Get Started]({{< relref "/docs/get-started/gcp" >}}) guide.
 
 Additionally, a tutorial is available to follow:
 
-* [Virtual Machine]({{< relref "/docs/reference/tutorials/gcp/tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
+* [Virtual Machine]({{< relref "/docs/tutorials/gcp/tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

@@ -90,7 +90,7 @@ and
 
 A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.
 
-Folders created live inside an Organization. See the [Organization documentation](https://cloud.google.com/resource-manager/docs/quickstarts) for more details.
+Folders created live inside an Organization. See the [Organization documentation](https://cloud.google.com/resource-manager/docs/get-starteds) for more details.
 
 The service account used to run this provider when creating a `gcp.organizations.Folder`
 resource must have `roles/resourcemanager.folderCreator`. See the
@@ -1204,7 +1204,7 @@ Version of the Policy. Default version is 0.
 Allows creation and management of a Google Cloud Platform project.
 
 Projects created with this resource must be associated with an Organization.
-See the [Organization documentation](https://cloud.google.com/resource-manager/docs/quickstarts) for more details.
+See the [Organization documentation](https://cloud.google.com/resource-manager/docs/get-starteds) for more details.
 
 The service account used to run this provider when creating a `gcp.organizations.Project`
 resource must have `roles/resourcemanager.projectCreator`. See the

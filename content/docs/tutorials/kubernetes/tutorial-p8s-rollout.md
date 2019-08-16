@@ -41,7 +41,7 @@ When the program is run, it will look something like the following (although thi
 The majority of the time is taken up by deploying Prometheus. Towards the end, at the bottom, you
 can see `canary-example-app` and `canary-staging-app` created.
 
-![gatedDeployment](/images/docs/quickstart/kubernetes/gatedDeployment.gif "Deployment gated by Prometheus check")
+![gatedDeployment](/images/docs/get-started/kubernetes/gatedDeployment.gif "Deployment gated by Prometheus check")
 
 ## Running the App
 
@@ -121,7 +121,7 @@ can see `canary-example-app` and `canary-staging-app` created.
    that was computed by the promise is `export`ed, which causes Pulumi to report its value just
    before it terminates.
 
-[install]: {{< relref "/docs/reference/install.md" >}}
-[configuration]: {{< relref "/docs/reference/clouds/kubernetes/setup.md" >}}
+[install]: {{< relref "/docs/install.md" >}}
+[configuration]: {{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}}
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/

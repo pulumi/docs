@@ -82,13 +82,13 @@
         {
             name: "CLI",
             predicate: function (url) {
-                return url.startsWith("/docs/reference/cli/") || url === "/docs/reference/commands/";
+                return url.startsWith("/docs/reference/cli/") || url === "/docs/refence/cli/";
             }
         },
         {
             name: "Tutorials",
             predicate: function (url) {
-                return url.startsWith("/docs/quickstart/") || url.startsWith("/docs/reference/tutorials/");
+                return url.startsWith("/docs/get-started/") || url.startsWith("/docs/tutorials/");
             }
         },
         {

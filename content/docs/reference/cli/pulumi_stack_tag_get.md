@@ -1,6 +1,6 @@
 ---
 title: "pulumi stack tag get"
-expanded_url: /docs/reference/commands/
+expanded_url: /docs/refence/cli/
 ---
 
 

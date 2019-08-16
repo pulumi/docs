@@ -28,4 +28,4 @@ no_on_this_page: true
     </a>
 </div>
 
-See [Supported Clouds]({{< relref "/docs/reference/clouds" >}}) for other clouds.
+See [Supported Clouds]({{< relref "/docs/intro/clouds-and-languages" >}}) for other clouds.

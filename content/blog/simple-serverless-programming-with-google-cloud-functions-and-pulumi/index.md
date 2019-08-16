@@ -175,11 +175,11 @@ takes care of that you would normally be responsible for. This includes:
     Function when it finally is triggered.
 8.  Figuring out a safe and secure way to encode and access secrets for
     your Cloud Function. Here, we can use Pulumi's
-    [Config Secrets]({{< ref "/docs/reference/config#secrets" >}}) to safely
+    [Config Secrets]({{< ref "/docs/intro/concepts/config#secrets" >}}) to safely
     encrypt and manage secrets for your Cloud Function code.
 
 Not to mention that by doing all of that, you can achieve continuous deployment
-[Pulumi and Google Cloud Build]({{< ref "/docs/console/continuous-delivery/google-cloud-build" >}}).
+[Pulumi and Google Cloud Build]({{< ref "/docs/intro/console/continuous-delivery/google-cloud-build" >}}).
 
 ## Updating Your Google Functions Code
 
@@ -226,7 +226,7 @@ create, update, and maintain.
 
 To check things out, get started today:
 
-- [Get Started with Pulumi on GCP]({{< ref "/docs/quickstart/gcp" >}})
+- [Get Started with Pulumi on GCP]({{< ref "/docs/get-started/gcp" >}})
 - [Deploy a Minimal Google Cloud Function Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
 
 PS: If you're interested in how Pulumi manages to take a

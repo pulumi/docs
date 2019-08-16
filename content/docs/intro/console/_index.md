@@ -40,7 +40,7 @@ or use [teams]({{< relref "teams" >}}) for role-based access control.
 
 ## Integrations and Extensions
 
-Pulumi is integrated with popular 3rd party services such as [GitHub]({{< ref "/docs/console/continuous-delivery/github-app" >}}).
+Pulumi is integrated with popular 3rd party services such as [GitHub]({{< ref "/docs/intro/console/continuous-delivery/github-app" >}}).
 You can integrate Pulumi into your current [continuous delivery]({{< relref "continuous-delivery" >}}) pipeline.
 
 <img class="shadow-2xl lg:max-w-xl" src="/images/docs/github-app/pr-comment.png" alt="Pulumi GitHub App">

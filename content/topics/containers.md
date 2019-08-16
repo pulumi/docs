@@ -59,7 +59,7 @@ examples:
 
           export let url = nginx.defaultEndpoint;
       cta:
-          url: /docs/quickstart/cloudfx/tutorial-service
+          url: /docs/get-started/cloudfx/tutorial-service
           label: GET STARTED
 
     - title: Deploying with a custom build
@@ -82,7 +82,7 @@ examples:
           FROM nginx
           COPY ./www /usr/share/nginx/html
       cta:
-          url: /docs/quickstart/cloudfx/tutorial-service
+          url: /docs/get-started/cloudfx/tutorial-service
           label: GET STARTED
 
     - title: Connecting containers
@@ -127,7 +127,7 @@ examples:
 
           export let frontendURL = frontend.endpoints.apply(e => e["votingAppFrontend"][80].hostname);
       cta:
-          url: /docs/quickstart/cloudfx/tutorial-service
+          url: /docs/get-started/cloudfx/tutorial-service
           label: GET STARTED
 
     - title: Deploy containers to Microsoft ACI
@@ -160,7 +160,7 @@ examples:
               },
           });
       cta:
-          url: /docs/quickstart/cloudfx/tutorial-service
+          url: /docs/get-started/cloudfx/tutorial-service
           label: GET STARTED
 
     - title: Invoke a long-running container as a task
@@ -194,7 +194,7 @@ examples:
 
           exports.bucketName = videos.bucket.name;
       cta:
-          url: /docs/quickstart/cloudfx/tutorial-service
+          url: /docs/get-started/cloudfx/tutorial-service
           label: GET STARTED
 
 ---

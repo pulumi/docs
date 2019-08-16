@@ -64,7 +64,7 @@ In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw reso
     $ npm install --save @pulumi/aws mime
     ```
 
-1.  Configure the AWS region to deploy to, such as `us-west-2`. After this step, a new file `Pulumi.website-testing.yaml` is created, next to your [Pulumi.yaml project file]({{< relref "/docs/reference/project.md" >}}). See [Defining and setting stack settings]({{< relref "/docs/reference/config.md#config-stack" >}}) for more information about this file.
+1.  Configure the AWS region to deploy to, such as `us-west-2`. After this step, a new file `Pulumi.website-testing.yaml` is created, next to your [Pulumi.yaml project file]({{< relref "/docs/intro/concepts/project.md" >}}). See [Defining and setting stack settings]({{< relref "/docs/intro/concepts/config.md#config-stack" >}}) for more information about this file.
 
     ```bash
     $ pulumi config set aws:region us-west-2
@@ -165,7 +165,7 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
     s3-website-bucket-8533d8b.s3-website-us-west-2.amazonaws.com
     ```
 
-    <img src="/images/docs/quickstart/s3-website.png" alt="Hello S3 example" width="700">
+    <img src="/images/docs/get-started/s3-website.png" alt="Hello S3 example" width="700">
 
 ## Clean up
 
@@ -196,8 +196,8 @@ To learn how to convert the raw AWS option to a high-level component, see the [P
 [pulumi.Output.apply]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
 [pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
 [pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
-[Component]: {{< relref "/docs/reference/programming-model#components" >}}
+[Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[Pulumi Cloud]: {{< relref "/docs/quickstart/cloudfx" >}}
+[Pulumi Cloud]: {{< relref "/docs/get-started/cloudfx" >}}
 <!-- End common links -->

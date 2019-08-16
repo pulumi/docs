@@ -31,8 +31,8 @@ organization. This can be a specific GitHub, GitLab or Atlassian
 organization or your solo organization. Inside each organization, users
 create Pulumi projects and stacks.
 
-Pulumi [projects]({{< ref "/docs/reference/project" >}})
-and [stacks]({{< ref "/docs/reference/stack" >}})
+Pulumi [projects]({{< ref "/docs/intro/concepts/project" >}})
+and [stacks]({{< ref "/docs/intro/concepts/stack" >}})
 are flexible to accommodate the diverse needs across teams, applications,
 and infrastructure scenarios. Just like Git repos that work with varying
 approaches Pulumi projects and stacks allow you to organize your code
@@ -62,7 +62,7 @@ please refer to our documentation
 - Pulumi Stacks have associated metadata in the form of key/value
     tags.
 - You can assign custom tags to stacks (when logged into the
-  [web backend]({{< ref "/docs/reference/state" >}}) to customize how
+  [web backend]({{< ref "/docs/intro/concepts/state" >}}) to customize how
   stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com/).
   - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
@@ -71,7 +71,7 @@ please refer to our documentation
     - In the Pulumi Cloud Console, you'll be able to group stacks by
       tag: `environment:dev` and tag: `environment:prod`.
 
-Please read more about managing [stack tags in Pulumi]({{< ref "/docs/reference/stack#stack-tags" >}}).
+Please read more about managing [stack tags in Pulumi]({{< ref "/docs/intro/concepts/stack#stack-tags" >}}).
 
 ![Stack tags](./image-4.png)
 

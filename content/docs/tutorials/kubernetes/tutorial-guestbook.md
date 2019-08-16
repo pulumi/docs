@@ -26,8 +26,8 @@ The code for this tutorial is
 You need to have the Pulumi CLI and a working Kubernetes cluster.
 [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube) is an easy way to get started.
 
-1. [Install Pulumi]({{< relref "/docs/reference/install.md" >}})
-2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/reference/clouds/kubernetes/setup.md" >}})
+1. [Install Pulumi]({{< relref "/docs/install.md" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}})
 
 ## Running the Guestbook
 
@@ -203,7 +203,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
     production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
     target cloud environment is allocated.
 
-    The above code uses [configuration]({{< relref "/docs/reference/config.md" >}}) to make this parameterizable.
+    The above code uses [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) to make this parameterizable.
     If you'd like our program to use a load balancer, simply run:
 
     ```shell
@@ -316,7 +316,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 5.  Now let's see our guestbook application in action.
 
-    ![Guestbook in browser](/images/docs/quickstart/kubernetes/guestbook.png)
+    ![Guestbook in browser](/images/docs/get-started/kubernetes/guestbook.png)
 
     **No Load Balancer (Minikube):**
 

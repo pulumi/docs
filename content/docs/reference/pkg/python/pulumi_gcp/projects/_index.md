@@ -1040,7 +1040,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">UsageExportBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>prefix=None</em>, <em>project=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.UsageExportBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a Google Cloud Platform project.</p>
 <p>Projects created with this resource must be associated with an Organization.
-See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
+See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/get-starteds">Organization documentation</a> for more details.</p>
 <p>The service account used to run this provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code>
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>

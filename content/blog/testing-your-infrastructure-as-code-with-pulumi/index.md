@@ -545,16 +545,16 @@ domains.
 Pulumi supports your existing CI systems. Here are a few of those
 supported:
 
-- [AWS Code Services]({{< ref "/docs/console/continuous-delivery/aws-code-services" >}})
-- [Azure DevOps]({{< ref "/docs/console/continuous-delivery/azure-devops" >}})
-- [CircleCI]({{< ref "/docs/console/continuous-delivery/circleci" >}})
-- [GitHub Actions]({{< ref "/docs/console/continuous-delivery/github-actions" >}})
-- [GitLab CI]({{< ref "/docs/console/continuous-delivery/gitlab-ci" >}})
-- [Google Cloud Build]({{< ref "/docs/console/continuous-delivery/google-cloud-build" >}})
-- [Travis]({{< ref "/docs/console/continuous-delivery/travis" >}})
+- [AWS Code Services]({{< ref "/docs/intro/console/continuous-delivery/aws-code-services" >}})
+- [Azure DevOps]({{< ref "/docs/intro/console/continuous-delivery/azure-devops" >}})
+- [CircleCI]({{< ref "/docs/intro/console/continuous-delivery/circleci" >}})
+- [GitHub Actions]({{< ref "/docs/intro/console/continuous-delivery/github-actions" >}})
+- [GitLab CI]({{< ref "/docs/intro/console/continuous-delivery/gitlab-ci" >}})
+- [Google Cloud Build]({{< ref "/docs/intro/console/continuous-delivery/google-cloud-build" >}})
+- [Travis]({{< ref "/docs/intro/console/continuous-delivery/travis" >}})
 
 Please refer to the
-[Continuous Delivery documentation]({{< ref "/docs/console/continuous-delivery" >}})) for a more
+[Continuous Delivery documentation]({{< ref "/docs/intro/console/continuous-delivery" >}})) for a more
 comprehensive guide.
 
 ## Ephemeral Environments
@@ -567,7 +567,7 @@ independent environments, and to tear them down, all in either a few
 easy CLI gestures, or by using the integration testing framework.
 
 If you are using GitHub, Pulumi offers a
-[GitHub App]({{< ref "/docs/console/continuous-delivery/github-app" >}}) that helps to glue
+[GitHub App]({{< ref "/docs/intro/console/continuous-delivery/github-app" >}}) that helps to glue
 together your Pull Request workflow with this sort of acceptance testing
 run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with

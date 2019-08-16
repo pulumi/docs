@@ -57,12 +57,12 @@ system will have its results reported back to GitHub.
 Pulumi supports a wide array of CI/CD systems, and the Pulumi GitHub App should pick up your changes
 automatically. For instructions for specific CI services, see one of our existing guides:
 
-* [AWS Code Services]({{< ref "/docs/console/continuous-delivery/aws-code-services.md" >}})
-* [Azure DevOps]({{< ref "/docs/console/continuous-delivery/azure-devops.md" >}})
-* [CircleCI]({{< ref "/docs/console/continuous-delivery/circleci.md" >}})
-* [GitHub Actions]({{< ref "/docs/console/continuous-delivery/github-actions.md" >}})
-* [GitLab CI]({{< ref "/docs/console/continuous-delivery/gitlab-ci.md" >}})
-* [Travis]({{< ref "/docs/console/continuous-delivery/travis.md" >}})
+* [AWS Code Services]({{< ref "/docs/intro/console/continuous-delivery/aws-code-services.md" >}})
+* [Azure DevOps]({{< ref "/docs/intro/console/continuous-delivery/azure-devops.md" >}})
+* [CircleCI]({{< ref "/docs/intro/console/continuous-delivery/circleci.md" >}})
+* [GitHub Actions]({{< ref "/docs/intro/console/continuous-delivery/github-actions.md" >}})
+* [GitLab CI]({{< ref "/docs/intro/console/continuous-delivery/gitlab-ci.md" >}})
+* [Travis]({{< ref "/docs/intro/console/continuous-delivery/travis.md" >}})
 
 If you are using a system we don't support yet, please [file an issue](https://github.com/pulumi/pulumi/issues/new)
 so we can add it.

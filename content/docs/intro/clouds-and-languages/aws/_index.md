@@ -20,15 +20,15 @@ The AWS provider supports several options for providing access to AWS credential
 
 ## Getting Started
 
-The quickest way to get started with AWS is to follow the [Get Started]({{< relref "/docs/quickstart/aws" >}}) guide.
+The quickest way to get started with AWS is to follow the [Get Started]({{< relref "/docs/get-started/aws" >}}) guide.
 
 Additionally, there are several tutorials available to follow:
 
-* [Containers on ECS "Fargate"]({{< relref "/docs/reference/tutorials/aws/tutorial-service.md" >}}): Deploy containers to Amazon
-* [EC2 Linux WebServer VM]({{< relref "/docs/reference/tutorials/aws/tutorial-ec2-webserver.md" >}}): Create an EC2 Linux Web Server virtual machine
-* [Serverless REST API Gateways using Lambda]({{< relref "/docs/reference/tutorials/aws/tutorial-rest-api.md" >}}): Create simple RESTful web server using AWS Lambdas
-* [Serve a Static Website from S3]({{< relref "/docs/reference/tutorials/aws/tutorial-s3-website.md" >}}): Serve a static website out of content in an S3 bucket
-* [Serverless + Containers + Infrastructure]({{< relref "/docs/reference/tutorials/aws/tutorial-thumbnailer.md" >}}): Deploy a complete  application using a combination of buckets, serverless functions and containers.
+* [Containers on ECS "Fargate"]({{< relref "/docs/tutorials/aws/tutorial-service.md" >}}): Deploy containers to Amazon
+* [EC2 Linux WebServer VM]({{< relref "/docs/tutorials/aws/tutorial-ec2-webserver.md" >}}): Create an EC2 Linux Web Server virtual machine
+* [Serverless REST API Gateways using Lambda]({{< relref "/docs/tutorials/aws/tutorial-rest-api.md" >}}): Create simple RESTful web server using AWS Lambdas
+* [Serve a Static Website from S3]({{< relref "/docs/tutorials/aws/tutorial-s3-website.md" >}}): Serve a static website out of content in an S3 bucket
+* [Serverless + Containers + Infrastructure]({{< relref "/docs/tutorials/aws/tutorial-thumbnailer.md" >}}): Deploy a complete  application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 

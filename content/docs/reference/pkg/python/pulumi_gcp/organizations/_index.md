@@ -62,7 +62,7 @@ anything, please consult the source <a class="reference external" href="https://
 and 
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v2/folders">API</a>.</p>
 <p>A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.</p>
-<p>Folders created live inside an Organization. See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
+<p>Folders created live inside an Organization. See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/get-starteds">Organization documentation</a> for more details.</p>
 <p>The service account used to run this provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Folder</span></code>
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.folderCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
@@ -1044,7 +1044,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>org_id=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a Google Cloud Platform project.</p>
 <p>Projects created with this resource must be associated with an Organization.
-See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
+See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/get-starteds">Organization documentation</a> for more details.</p>
 <p>The service account used to run this provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code>
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>

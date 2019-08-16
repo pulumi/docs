@@ -1,6 +1,6 @@
 ---
 title: "pulumi state"
-expanded_url: /docs/reference/commands/
+expanded_url: /docs/refence/cli/
 ---
 
 

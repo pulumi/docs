@@ -99,8 +99,8 @@ definition, and deployment pipeline in [Pulumi Examples repository](https://git
 ## Bootstrapping a Pulumi Program
 
 The Pulumi development experience is powered by the
-[Pulumi CLI]({{< relref "/docs/reference/commands" >}}). After
-[installing the CLI]({{< ref "/docs/reference/install" >}}), I jump into an empty
+[Pulumi CLI]({{< relref "/docs/refence/cli" >}}). After
+[installing the CLI]({{< ref "/docs/install" >}}), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS
 application. The code looks like this:
@@ -138,7 +138,7 @@ that such an application will run in multiple environments: production,
 staging, development, and so on.
 
 Pulumi comes with a handy concept of
-[stacks]({{< ref "/docs/reference/stack" >}})--- isolated,
+[stacks]({{< ref "/docs/intro/concepts/stack" >}})--- isolated,
 independently configurable instances of a Pulumi program. A separate
 stack can be designated for each deployment environment.
 
@@ -262,7 +262,7 @@ I'm using Azure SQL Database service.
 Setting up a SQL Server requires a couple of parameter values that might
 change between execution environments, for instance, a username and a
 password for the connection string. Pulumi provides
-[a way to configure]({{< ref "/docs/reference/config" >}}) the program's
+[a way to configure]({{< ref "/docs/intro/concepts/config" >}}) the program's
 parameters per stack.
 
 The configuration itself will happen in my CI/CD pipeline. For now, I
@@ -453,9 +453,9 @@ language.
 
 You can get going with these resources:
 
-- [Getting Started with Pulumi]({{< ref "/docs/quickstart" >}})
-- [Setup Pulumi to work with Azure]({{< ref "/docs/quickstart/azure" >}})
-- [Walkthroughs and Examples]({{< ref "/docs/quickstart/azure" >}})
+- [Getting Started with Pulumi]({{< ref "/docs/get-started" >}})
+- [Setup Pulumi to work with Azure]({{< ref "/docs/get-started/azure" >}})
+- [Walkthroughs and Examples]({{< ref "/docs/get-started/azure" >}})
 
 Pulumi enables developers to define cloud infrastructure using general
 purpose programming languages. Pulumi works with multiple cloud

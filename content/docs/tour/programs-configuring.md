@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/reference/config/
+redirect_to: /docs/intro/concepts/config/
 ---

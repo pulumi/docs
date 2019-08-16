@@ -7,7 +7,11 @@ menu:
     weight: 1
 ---
 
+<<<<<<< HEAD
 Pulumi uses a desired state model for managing infrastructure. A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS]({{< relref "/docs/quickstart/aws" >}}), [Azure]({{< relref "/docs/quickstart/azure" >}}), [Kubernetes]({{< relref "/docs/quickstart/kubernetes" >}}), and so on.) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
+=======
+When a Pulumi program is deployed via `pulumi up`, there are a few processes involved. The _language host_ launches Node or Python and observes the running program. The host interacts with the Pulumi _engine_, which is the part of the CLI that determines which resource changes to make (if any). Any resource changes are then executed via an underlying _provider_, such as [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}), and so on. The engine connects to pulumi.com to retrieve the stack's _checkpoint_, which stores the last known state of provisioned resources.
+>>>>>>> 1a65311f... Intermediate commit for fixing paths
 
 The following diagram illustrates the interaction between these parts of the system:
 

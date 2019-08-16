@@ -36,7 +36,7 @@ aliases: [/docs/reference/cd-google-cloud-build/]
 
 ### Hosted on Cloud Source
 
-Don't have a repo on Cloud Source yet? See this page for a [quickstart](https://cloud.google.com/source-repositories/docs/quickstart) tutorial.
+Don't have a repo on Cloud Source yet? See this page for a [quickstart](https://cloud.google.com/source-repositories/docs/get-started) tutorial.
 
 ### External repos
 

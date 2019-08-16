@@ -14,8 +14,8 @@ Pulumi then uses to drive the Azure Resource Manager (ARM) API.
 
 If this is your first time using this package, these two resources may be helpful:
 
-* [Azure Getting Started Guide](https://www.pulumi.com/docs/quickstart/azure): Get up and running quickly.
-* [Azure Pulumi Setup Documentation](https://www.pulumi.com/docs/quickstart/azure/configure/): How to configure Pulumi
+* [Azure Getting Started Guide](https://www.pulumi.com/docs/get-started/azure): Get up and running quickly.
+* [Azure Pulumi Setup Documentation](https://www.pulumi.com/docs/get-started/azure/configure/): How to configure Pulumi
     for use with your Azure account.
 
 Use the navigation below to see detailed documentation, including sample code, for each of the supported Azure services.
@@ -139,7 +139,7 @@ import * as azure from "@pulumi/azure";
 The provider type for the azurerm package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/index.html.markdown.
 

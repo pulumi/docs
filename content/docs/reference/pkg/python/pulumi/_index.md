@@ -928,7 +928,7 @@ are resolved asynchronously, but they also contain information about the depende
 program.</p>
 <p>Pulumi does not offer direct access to the values contained within Outputs. Instead, you must use the <cite>apply</cite> function
 on the Output class in order to observe the value of an output. See
-<a class="reference external" href="/docs/reference/programming-model/#outputs">the documentation</a> for more details on this part of the Pulumi programming model.</p>
+<a class="reference external" href="/docs/intro/concepts/programming-model/#outputs">the documentation</a> for more details on this part of the Pulumi programming model.</p>
 <dl class="class">
 <dt id="pulumi.Output">
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Output</code><span class="sig-paren">(</span><em>resources: Set[Resource], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>

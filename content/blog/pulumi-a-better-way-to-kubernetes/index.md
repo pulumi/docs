@@ -116,7 +116,7 @@ ready? Common workflows involve [scripting kubectl calls](https://kubernetes.io/
 and parsing JSON output in Bash. This approach is brittle, and the
 process is a little different for every Kubernetes resource type.
 Pulumi's [state reconciliation model]({{< ref "/docs/reference/how" >}}) is a
-[natural fit for CI/CD systems]({{< ref "/docs/console/continuous-delivery" >}}): review changes with a
+[natural fit for CI/CD systems]({{< ref "/docs/intro/console/continuous-delivery" >}}): review changes with a
 preview, and then proceed with confidence once an update succeeds. This
 is great for GitOps and [ChatOps]({{< relref "getting-to-chatops-with-pulumi-webhooks" >}})
 workflows. You don't have to be an expert on the inner workings of
@@ -136,7 +136,7 @@ scenarios.
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
+[click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 As always, you can check out our code on

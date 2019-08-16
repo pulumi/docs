@@ -132,7 +132,7 @@ Another fun example is
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
@@ -140,12 +140,12 @@ resources to check out:
 
 - [Overview of Pulumi Kubernetes Scenarios]({{< ref "/kubernetes" >}})
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-eks" >}}),
-  [Google GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}), or
+  [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/tutorial-eks" >}}),
+  [Google GKE]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/tutorials/kubernetes/tutorial-exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< ref "/docs/reference/programming-model" >}})
+  [overview of the programming model]({{< ref "/docs/intro/concepts/programming-model" >}})
 - Video: In February, we were honored to have Joe Beda
 [show where Pulumi fits in on his TGIK livestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
 highlighting how to use your favorite language and consistent workflows to create,

@@ -67,10 +67,10 @@ tbody tr td:first-child {
 | [AWS CloudHSM](https://aws.amazon.com/cloudhsm/) | Managed hardware security module (HSM) | | [cloudhsmv2]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudhsmv2/_index.md" >}}) |
 | [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) | Track user activity and API usage | | [cloudtrail]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/_index.md" >}}) |
 | [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) | Application and infrastructure monitoring | [User Guide]({{< relref "cloudwatch.md" >}}) | [cloudwatch]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/_index.md" >}}) |
-| [AWS CodeBuild](https://aws.amazon.com/codebuild/) | Build and test code | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codebuild]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codebuild/_index.md" >}}) |
-| [AWS CodeCommit](https://aws.amazon.com/codecommit/) | Host private Git repos | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codecommit]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codecommit/_index.md" >}}) |
-| [AWS CodeDeploy](https://aws.amazon.com/codedeploy/) | Automate code deployments | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codedeploy]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/_index.md" >}}) |
-| [AWS CodePipeline](https://aws.amazon.com/codepipeline) | Continuous delivery pipelines | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codepipeline]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/_index.md" >}}) |
+| [AWS CodeBuild](https://aws.amazon.com/codebuild/) | Build and test code | [User Guide]({{< relref "/docs/intro/console/continuous-delivery/aws-code-services.md" >}}) | [codebuild]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codebuild/_index.md" >}}) |
+| [AWS CodeCommit](https://aws.amazon.com/codecommit/) | Host private Git repos | [User Guide]({{< relref "/docs/intro/console/continuous-delivery/aws-code-services.md" >}}) | [codecommit]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codecommit/_index.md" >}}) |
+| [AWS CodeDeploy](https://aws.amazon.com/codedeploy/) | Automate code deployments | [User Guide]({{< relref "/docs/intro/console/continuous-delivery/aws-code-services.md" >}}) | [codedeploy]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/_index.md" >}}) |
+| [AWS CodePipeline](https://aws.amazon.com/codepipeline) | Continuous delivery pipelines | [User Guide]({{< relref "/docs/intro/console/continuous-delivery/aws-code-services.md" >}}) | [codepipeline]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/_index.md" >}}) |
 | [Amazon Cognito](https://aws.amazon.com/cognito/) | Simple and secure user identity | | [cognito]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cognito/_index.md" >}}) |
 | [AWS Cost and Usage Reporting](https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/) | Report on usage and cost | | [cur]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cur/_index.md" >}}) |
 | [AWS DataSync](https://aws.amazon.com/datasync/) | Easily transfer data | | [datasync]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/datasync/_index.md" >}}) |
@@ -148,7 +148,7 @@ tbody tr td:first-child {
 
 For more information about using Pulumi with AWS, please see the following:
 
-* [Pulumi AWS Get Started guide]({{< relref "/docs/quickstart/aws" >}})
+* [Pulumi AWS Get Started guide]({{< relref "/docs/get-started/aws" >}})
 * [Pulumi AWS API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}})
 * [Pulumi Blog entries tagged with "AWS"](/blog/tag/aws/)
 * [Pulumi Examples repository](https://github.com/pulumi/examples)

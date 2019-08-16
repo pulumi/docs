@@ -19,11 +19,11 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 ![Pulumi making EKS Easy](./easy-eks.png)
 
 To get started, download the free and open source
-[Pulumi SDK]({{< ref "/docs/reference/install.md" >}}). The SDK includes
+[Pulumi SDK]({{< ref "/docs/install.md" >}}). The SDK includes
 the CLI we'll be using below, and requires AWS credentials to access
 your AWS account and provision resources. If you already have the AWS
 CLI installed and configured, you're already all set to go. Otherwise,
-[check out the docs here]({{< ref "/docs/reference/clouds/aws/setup.md" >}})
+[check out the docs here]({{< ref "/docs/intro/clouds-and-languages/aws/setup.md" >}})
 to set things up.
 
 From here, there are two ways to proceed:
@@ -191,10 +191,10 @@ sizes.
 We've seen how Pulumi takes care of the heavy lifting with AWS EKS so
 you don't have to. You can use Pulumi to easily deploy new clusters,
 managed AWS resources, and then deploy Kubernetes apps to it. Support is
-also available for Azure AKS, [Google GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}),
+also available for Azure AKS, [Google GKE]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}),
 and custom clusters (including Minikube), using the same workflow and approach.
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}})
-- [Get started with Pulumi and AWS]({{< ref "/docs/quickstart/aws" >}})
+- [Get started with Pulumi and Kubernetes]({{< ref "/docs/get-started/kubernetes" >}})
+- [Get started with Pulumi and AWS]({{< ref "/docs/get-started/aws" >}})

@@ -56,8 +56,8 @@ This example uses the default VPC and reasonable security defaults, but supports
 
 ## Getting Started
 
-To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/reference/install.md" >}}), and [configure it to work with your AWS account]({{< relref "/docs/reference/clouds/aws/setup.md" >}}). Afterwards,
-[try the Getting Started tutorial]({{< relref "/docs/reference/tutorials/aws/tutorial-service.md" >}}) or select one of the
+To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/install.md" >}}), and [configure it to work with your AWS account]({{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}}). Afterwards,
+[try the Getting Started tutorial]({{< relref "/docs/tutorials/aws/tutorial-service.md" >}}) or select one of the
 relevant User Guides to get started:
 
 ### Containers
@@ -84,7 +84,7 @@ relevant User Guides to get started:
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services]({{< relref "/docs/console/continuous-delivery/aws-code-services" >}})
+* [Using Pulumi from AWS Code Services]({{< relref "/docs/intro/console/continuous-delivery/aws-code-services" >}})
 
 ### Other AWS Services
 

@@ -178,7 +178,7 @@ structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Please read more about
-[how these mapping are maintained here]({{< ref "/docs/console/continuous-delivery" >}}).
+[how these mapping are maintained here]({{< ref "/docs/intro/console/continuous-delivery" >}}).
 
 ## Tagging Stacks
 
@@ -186,6 +186,6 @@ Stacks have associated metadata in the form of name/value tags. You can assign c
 
 ## Examples
 
-See also the use of multiple projects and stacks in [Kubernetes the Prod Way]({{< relref "/docs/quickstart/k8s-the-prod-way" >}}), which contains a tutorial, reference architecture, and collection of prod-first code
+See also the use of multiple projects and stacks in [Kubernetes the Prod Way]({{< relref "/docs/get-started/k8s-the-prod-way" >}}), which contains a tutorial, reference architecture, and collection of prod-first code
 examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an
 **organization of people** must ship **production applications.**

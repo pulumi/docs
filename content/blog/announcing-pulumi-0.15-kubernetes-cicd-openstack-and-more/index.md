@@ -16,14 +16,14 @@ Today, we are excited to release [Pulumi 0.15]({{< ref "/changelog#v150" >}}) 
 it [available to download]({{< ref "/install" >}}).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
-([Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}}) and
-[OpenStack]({{< ref "/docs/reference/clouds/openstack" >}})), is faster
+([Kubernetes]({{< ref "/docs/get-started/kubernetes" >}}) and
+[OpenStack]({{< ref "/docs/intro/clouds-and-languages/openstack" >}})), is faster
 (Parallelism, simpler (native
 TypeScript support), richer
 (serverless frameworks for Azure and
 GCP),  and is more deeply
 integrated into the application lifecycle
-([GitHub App for CI/CD integration]({{< ref "/docs/console/continuous-delivery/github-app" >}})).
+([GitHub App for CI/CD integration]({{< ref "/docs/intro/console/continuous-delivery/github-app" >}})).
 
 In this post, we'll take a quick tour of these new features. Stay tuned
 for follow up blog posts to dive deeper into individual topics.
@@ -86,7 +86,7 @@ const kibana = new helm.v2.Chart("kibana", {
 ```
 
 Check out the [Kubernetes
-overview]({{< ref "/docs/quickstart/kubernetes" >}}) docs, the [API
+overview]({{< ref "/docs/get-started/kubernetes" >}}) docs, the [API
 documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details. 
@@ -241,7 +241,7 @@ export let url = f.function.httpsTriggerUrl;
 
 ## GitHub App for CI/CD Integration
 
-Pulumi already works with [your favorite CI/CD systems]({{< ref "/docs/console/continuous-delivery" >}})
+Pulumi already works with [your favorite CI/CD systems]({{< ref "/docs/intro/console/continuous-delivery" >}})
 to accomplish automated
 and continuous deployments of cloud infrastructure and applications.
 This is how Pulumi deploys and manages our own infrastructure that runs
@@ -263,14 +263,14 @@ infrastructure changes.
 The Pulumi GitHub App is still in preview as we work to support more CI
 systems and extend its capabilities. For information on how to install
 it and configure it with your CI system, please [read the
-documentation]({{< ref "/docs/console/continuous-delivery/github-app" >}}).
+documentation]({{< ref "/docs/intro/console/continuous-delivery/github-app" >}}).
 
 ## Summary
 
 We're excited about all the new features in this release and the new
 scenarios they enable for the Pulumi community . If you are new to
 Pulumi, [download the tools and get started
-today]({{< ref "/docs/quickstart" >}}), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
+today]({{< ref "/docs/get-started" >}}), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
 contributors who have helped shape this release -- we can't wait to see
 what you build next !
 

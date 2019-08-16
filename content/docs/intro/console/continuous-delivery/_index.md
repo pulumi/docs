@@ -78,8 +78,8 @@ which permit one stack to depend upon another. This facilitates continuous deliv
 
 ### Using Branches for Environments
 
-Pulumi is agnostic to what sort of branching strategy you take. Most people prefer to use Git-based flows; the most common is
-to use one branch-per-[stack]({{< relref "/docs/reference/stack.md" >}}). This allows you to control deployments to environments
+Pulumi is agnostic to what sort of branching strategy you take. Most customers use Git-based flows; the most common is
+to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack.md" >}}). This allows you to control deployments to environments
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the

@@ -184,7 +184,7 @@ tools we already use for software engineering:
    inner loop, instead of at deployment time
 
 Pulumi is open source, free to use, and works today with
-[a variety of clouds]({{< ref "/docs/reference/clouds" >}}) and bring a little more
+[a variety of clouds]({{< ref "/docs/intro/clouds-and-languages" >}}) and bring a little more
 software and less code into your infrastructure! If you'd like to see
 more about this particular code demo,
 [check out my DockerCon EU 2018 talk](https://www.youtube.com/watch?v=EbsE4p3uCu0)

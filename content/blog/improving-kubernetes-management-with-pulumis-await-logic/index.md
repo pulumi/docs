@@ -48,7 +48,7 @@ Pulumi's sophisticated await logic helps customers with a couple use
 cases:
 
 1) Visualize fine-grained, live, single-view status updates for all of
-the Kubernetes cluster resources belonging to a [**Pulumi stack**]({{< ref "/docs/reference/stack" >}}). Most applications
+the Kubernetes cluster resources belonging to a [**Pulumi stack**]({{< ref "/docs/intro/concepts/stack" >}}). Most applications
 deployed to Kubernetes have a variety of interacting components,
 including Pods, Deployments, Secrets, Persistent Volumes, Config Maps,
 Ingress and more. Rather than requiring multiple commands like
@@ -61,7 +61,7 @@ applications, or sharing responsibilities between teams.
 
 
 2) Reliably integrate with
-[**CI/CD systems**]({{< ref "/docs/console/continuous-delivery" >}}) for infrastructure and
+[**CI/CD systems**]({{< ref "/docs/intro/console/continuous-delivery" >}}) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant
@@ -110,7 +110,7 @@ interesting edge cases!
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
+[click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
@@ -118,12 +118,12 @@ resources to check out:
 
 - [Overview of Pulumi Kubernetes Scenarios]({{< ref "/kubernetes" >}})
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-eks" >}}),
-  [Google GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}), or
+  [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/tutorial-eks" >}}),
+  [Google GKE]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/tutorials/kubernetes/tutorial-exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< ref "/docs/reference/programming-model" >}})
+  [overview of the programming model]({{< ref "/docs/intro/concepts/programming-model" >}})
 - Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
 
 As always, you can check out our code

@@ -105,8 +105,8 @@ export const cluster = new eks.Cluster("my-cluster", {
 ```
 
 > If you want to create a fresh Pulumi project and follow along, simply
-> [install the CLI](https://www.pulumi.com/docs/reference/install/), ensure it is
-> [configured for your AWS account](https://www.pulumi.com/docs/reference/clouds/aws/setup/),
+> [install the CLI](https://www.pulumi.com/docs/install/), ensure it is
+> [configured for your AWS account](https://www.pulumi.com/docs/intro/clouds-and-languages/aws/setup/),
 > and run `pulumi new aws-typescript` to create an empty project. Swap out the contents
 > of `index.ts` with the above.
 
@@ -505,7 +505,7 @@ a preview, when all of these different states are possible. That has the downsid
 catching problems before they get deployed, however. As with many things, this is a tradeoff.
 
 For a more complete overview of `Output<T>`, please see the
-[Pulumi Programming Model documentation](https://www.pulumi.com/docs/reference/programming-model/#outputs).
+[Pulumi Programming Model documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs).
 
 ## Next Steps
 
@@ -519,4 +519,4 @@ can be used to enforce a wide array of team standards, best practices, and secur
 guidelines. If you can express it in your favorite test framework, you can check it!
 
 Everything we've seen in this article is open source and free to use --
-[give Pulumi a try today](https://pulumi.com/docs/quickstart).
+[give Pulumi a try today](https://pulumi.com/docs/get-started).

@@ -23,7 +23,7 @@ For example, if a project is named `broome-proj` and the active stack is `dev`, 
 $ pulumi config set name BroomeLLC
 ```
 
-To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package]({{< relref "/docs/quickstart/aws" >}}) defines the required setting `region`, which is set via `aws:region`.
+To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package]({{< relref "/docs/get-started/aws" >}}) defines the required setting `region`, which is set via `aws:region`.
 
 By default, configuration values are saved in plaintext. To explicitly save a setting as plaintext, use the `--plaintext` flag.
 
@@ -133,4 +133,4 @@ fmt.Println(c.Require("secretValue")) // prints "S3cr37"
 
 [`Pulumi.<stack-name>.yaml`]: {{< relref "project.md#stack-settings-file" >}}
 [project name]: {{< relref "project.md#project-name" >}}
-[AWS package]: {{< relref "/docs/quickstart/aws" >}}
+[AWS package]: {{< relref "/docs/get-started/aws" >}}

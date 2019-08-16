@@ -9,8 +9,8 @@ menu:
 
 Let's review some of the generated project files:
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/reference/project.md" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/reference/config.md" >}}) values for the [stack]({{< relref "/docs/reference/stack.md" >}}) we initialized.
+- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project.md" >}}).
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack.md" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< langchoose nogo >}}

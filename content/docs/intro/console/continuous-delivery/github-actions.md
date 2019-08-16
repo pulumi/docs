@@ -30,7 +30,7 @@ There are three ways to do this:
 
 1. [Clone an existing Pulumi example](https://github.com/pulumi/examples)
 2. [Use the New Project wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/docs/reference/install.md" >}}) and run `pulumi new` to select a template
+3. [Download the CLI]({{< relref "/docs/install.md" >}}) and run `pulumi new` to select a template
 
 # Creating a Workflow
 
@@ -127,10 +127,10 @@ GitHub Action to communicate with the Pulumi service.
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
 
-* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/reference/clouds/aws/setup.md" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/reference/clouds/azure/setup.md" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/reference/clouds/gcp/setup.md" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/reference/clouds/kubernetes/setup.md" >}})
+* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}})
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/clouds-and-languages/azure/setup.md" >}})
+* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/clouds-and-languages/gcp/setup.md" >}})
+* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}})
 
 > **Important**: Remember to add these variable names to the `secrets` lists in your
 > workflow `action` blocks, or GitHub Actions won't make them available to the running
@@ -295,7 +295,7 @@ stack, and then use Pull Requests to promote code between the two. This mappings
 intentionally flexible.
 
 Note that you'll need to create these stacks [in the usual
-way](https://www.pulumi.com/docs/reference/stack/) using the Pulumi Cloud Console or CLI.
+way](https://www.pulumi.com/docs/intro/concepts/stack/) using the Pulumi Cloud Console or CLI.
 After setting this up, everything will be on autopilot.
 
 # Demos and Examples

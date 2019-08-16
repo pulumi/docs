@@ -133,7 +133,7 @@ else:
     pulumi.export("ip", frontend.status.apply(lambda v: v["load_balancer"]["ingress"][0]["ip"] if "load_balancer" in v else None))
 ```
 
-Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/reference/config.md" >}}) value to indicate whether the program is being deployed to Minikube or not.
+Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/intro/concepts/config.md" >}}) value to indicate whether the program is being deployed to Minikube or not.
 
 The required config value must be set for the stack using `pulumi config set isMinikube <true|false>`:
 

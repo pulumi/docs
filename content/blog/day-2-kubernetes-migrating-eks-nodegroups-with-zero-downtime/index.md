@@ -148,12 +148,12 @@ load testing and decommissioning of the original node group.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [get started today]({{< ref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/reference/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -169,6 +169,6 @@ migrating your existing configuration code to Pulumi, please don't hesitate to [
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml
 [pod-lifecycle]: https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods
-[eks-nodegroup-tutorial]: {{< relref "/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups" >}}
+[eks-nodegroup-tutorial]: {{< relref "/docs/tutorials/kubernetes/tutorial-eks-migrate-nodegroups" >}}
 [crosswalk-aws]: {{< relref "/docs/reference/crosswalk/aws" >}}.
-[tutorial-ha-refs]: {{< relref "/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}
+[tutorial-ha-refs]: {{< relref "/docs/tutorials/kubernetes/tutorial-eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}

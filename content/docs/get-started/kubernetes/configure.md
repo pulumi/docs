@@ -9,7 +9,7 @@ menu:
 
 <!-- TODO inline a streamlined version of configuring the cloud here. -->
 
-<a href="{{< relref "/docs/reference/clouds/kubernetes/setup.md" >}}" target="_blank">Configure Kubernetes</a> so the Pulumi CLI can connect to a Kubernetes cluster.
+<a href="{{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}}" target="_blank">Configure Kubernetes</a> so the Pulumi CLI can connect to a Kubernetes cluster.
 
 > If your <a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank">kubectl CLI</a>, `kubectl`, is already working, you should be good to go as Pulumi respects its configuration.
 

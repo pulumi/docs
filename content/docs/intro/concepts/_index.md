@@ -26,4 +26,4 @@ This following topics describe the core concepts behind Pulumi in more detail:
 * [How Pulumi Works]({{< relref "how.md" >}}): a peek under the hood to learn more about how Pulumi performs deployments.
 * [State and Backends]({{< relref "state.md" >}}): an overview of how Pulumi stores state and manages concurrency.
 
-After learning these core concepts, you'll want to learn [more about the CLI]({{< relref "commands.md" >}}).
+After learning these core concepts, you'll want to learn [more about the CLI]({{< relref "cli.md" >}}).

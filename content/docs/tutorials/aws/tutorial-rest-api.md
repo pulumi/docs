@@ -20,16 +20,16 @@ $ pulumi new hello-aws-javascript
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
 
-<img src="/images/docs/quickstart/hello/Quickstart1.png" alt="Run Pulumi new" width="700">
+<img src="/images/docs/get-started/hello/Quickstart1.png" alt="Run Pulumi new" width="700">
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
-<img src="/images/docs/quickstart/hello/Quickstart2.png" alt="View files" width="700">
+<img src="/images/docs/get-started/hello/Quickstart2.png" alt="View files" width="700">
 
 Let's look at some of those.
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/reference/project.md" >}}).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/docs/reference/config.md" >}}) for the stack we initialized.
+- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project.md" >}}).
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/docs/intro/concepts/config.md" >}}) for the stack we initialized.
 - `www` contains our sample static content.
 - The key file for defining our stack resources `index.js` so let's examine that.
 
@@ -97,13 +97,13 @@ $ curl $(pulumi stack output url)
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
 
-<img src="/images/docs/quickstart/hello/Quickstart5.png" alt="Stack page in browser" width="600">
+<img src="/images/docs/get-started/hello/Quickstart5.png" alt="Stack page in browser" width="600">
 
 ## Manage the stack
 
 Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks.
 
-<img src="/images/docs/quickstart/hello/Quickstart6.png" width="600">
+<img src="/images/docs/get-started/hello/Quickstart6.png" width="600">
 
 ## Tear Down
 
@@ -131,7 +131,7 @@ From here, you can dive deeper:
   - [Containers]({{< relref "tutorial-service.md" >}}): Create a load-balanced, hosted NGINX container service
   - [Infrastructure]({{< relref "tutorial-ec2-webserver.md" >}}): Create an EC2-based WebServer and associated infrastructure
 - Try out some multi-cloud serverless and container tutorials (that also run on AWS):
-  - [Multi-cloud Serverless with Document Database]({{< relref "/docs/quickstart/cloudfx/tutorial-rest-api.md" >}}): Create multi-cloud serverless
+  - [Multi-cloud Serverless with Document Database]({{< relref "/docs/get-started/cloudfx/tutorial-rest-api.md" >}}): Create multi-cloud serverless
         REST APIs that use a document database
-  - [Multi-cloud Serverless plus Containers]({{< relref "/docs/quickstart/cloudfx/tutorial-thumbnailer.md" >}}): Create a multi-cloud video
+  - [Multi-cloud Serverless plus Containers]({{< relref "/docs/get-started/cloudfx/tutorial-thumbnailer.md" >}}): Create a multi-cloud video
         thumbnail app that uses containers, serverless, and infrastructure together

@@ -9,8 +9,8 @@ This section provides all published technical documentation for the Pulumi platf
 ## Learning Pulumi
 
 * [Architecture & Concepts]({{< relref "concepts.md" >}}): an overview of the programming model and relevant concepts
-* [Command Line]({{< relref "commands.md" >}}): most commonly used commands, in addition to full command and flag documentation
-* [Clouds]({{< relref "clouds/_index.md" >}}): learn what clouds are available and how to use them
+* [Command Line]({{< relref "cli.md" >}}): most commonly used commands, in addition to full command and flag documentation
+* [Clouds]({{< relref "intro/clouds-and-languages/_index.md" >}}): learn what clouds are available and how to use them
 * [Language]({{< relref "languages.md" >}}): learn what language runtimes are supported and how to use them
 
 ## Using Pulumi in Production or in a Team

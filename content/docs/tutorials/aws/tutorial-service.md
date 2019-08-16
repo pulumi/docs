@@ -9,8 +9,8 @@ using [Pulumi Crosswalk for AWS]({{< relref "/docs/reference/crosswalk/aws/_inde
 ## Prerequisites
 
 1.  [Install Docker Desktop](https://docs.docker.com/install/)
-1.  [Install Pulumi]({{< relref "/docs/reference/install.md" >}})
-1.  [Configure Pulumi to use your AWS account]({{< relref "/docs/reference/clouds/aws/setup.md" >}})
+1.  [Install Pulumi]({{< relref "/docs/install.md" >}})
+1.  [Configure Pulumi to use your AWS account]({{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}})
 
 ## Deploying the App and Infrastructure
 

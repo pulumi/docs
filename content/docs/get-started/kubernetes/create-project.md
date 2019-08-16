@@ -54,7 +54,7 @@ First, you will be asked for a project name and description. You can hit enter t
 
 Next, you will be asked for the name of a stack. You can hit enter to accept the default value of `dev`.
 
-> What are [projects]({{< relref "/docs/reference/project.md" >}}) and [stacks]({{< relref "/docs/reference/stack.md" >}})? Pulumi projects and stacks are a way to organize Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a single place for code — and a Stack to be an instance of that code which has separate configuration. For instance, Project Foo may have multiple stacks for Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic region). Please [see this guide]({{< relref "/docs/reference/organizing-stacks-projects.md" >}}) for some best practices on organizing your Pulumi projects and stacks.
+> What are [projects]({{< relref "/docs/intro/concepts/project.md" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack.md" >}})? Pulumi projects and stacks are a way to organize Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a single place for code — and a Stack to be an instance of that code which has separate configuration. For instance, Project Foo may have multiple stacks for Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic region). Please [see this guide]({{< relref "/docs/reference/organizing-stacks-projects.md" >}}) for some best practices on organizing your Pulumi projects and stacks.
 
 {{% lang nodejs %}}
 After some dependency installations from `npm`, the project and stack will be ready.

@@ -13,7 +13,7 @@ will expand the Helm Chart and submit the expanded YAML to the cluster.
 > **NOTE:** This example has a dependency on the `helm` CLI. **Be sure to install that first!** See
 > instructions below.
 
-![wordpress](/images/docs/quickstart/kubernetes/wp-deploy.gif "Wordpress Helm Chart deployment")
+![wordpress](/images/docs/get-started/kubernetes/wp-deploy.gif "Wordpress Helm Chart deployment")
 
 ## Running the App
 
@@ -34,8 +34,8 @@ $ helm init --client-only
 ```
 
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup]({{< relref "/docs/reference/install.md" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/reference/clouds/kubernetes/setup.md" >}}) to get setup with
+Setup]({{< relref "/docs/install.md" >}}) and [Configuring Pulumi
+Kubernetes]({{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}}) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

@@ -11,11 +11,11 @@ menu:
 [Kubernetes][k8s] is an open source project for running and managing containerized applications
 on a cluster of machines.
 
-[Pulumi]({{< relref "/docs/quickstart" >}}) is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
+[Pulumi]({{< relref "/docs/get-started" >}}) is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
 SDK, alongside other SDKs which span common cloud native utilities, cloud
 provider IaaS offerings, and their catalog of services - managed Kubernetes included.
 
-<center><img src="/images/docs/quickstart/kubernetes/cake.svg" width="670"></center>
+<center><img src="/images/docs/get-started/kubernetes/cake.svg" width="670"></center>
 
 The various SDK's allow Kubernetes users to leverage Pulumi for novel forms of cluster
 management, and deployment of app workloads to clusters. Users of
@@ -32,7 +32,7 @@ Kubernetes and Pulumi can:
 
 ## Getting Started
 
-The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/quickstart/kubernetes" >}}) guide.
+The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/get-started/kubernetes" >}}) guide.
 
 ## Library Packages
 
@@ -57,6 +57,6 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 - [Introduction]({{< relref "introduction.md" >}})
 - [Setup]({{< relref "setup.md" >}})
 - [FAQ]({{< relref "faq.md" >}})
-- [Tutorials]({{< relref "/docs/reference/tutorials/kubernetes/_index.md" >}})
+- [Tutorials]({{< relref "/docs/tutorials/kubernetes/_index.md" >}})
 
 [k8s]: https://kubernetes.io

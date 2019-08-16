@@ -48,7 +48,7 @@ test:
 	#       although valid and publicly available, is reported as a broken link.
 	./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
 		--exclude "/docs/reference/pkg" \
-		--exclude "/docs/reference/changelog" \
+		--exclude "/docs/changelog" \
 		--exclude "https://api.pulumi.com/" \
 		--exclude "https://github.com/pulls?" \
 		--exclude "https://github.com/pulumi/docs/edit/master" \

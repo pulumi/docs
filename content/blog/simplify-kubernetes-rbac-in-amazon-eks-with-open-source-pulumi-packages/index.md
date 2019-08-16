@@ -44,11 +44,11 @@ Here are a few highlights:
 
 ## Prerequisites to work with Pulumi
 
-[Install `pulumi` CLI]({{< ref "/docs/reference/install" >}}) and
+[Install `pulumi` CLI]({{< ref "/docs/install" >}}) and
 set up your
-[AWS credentials]({{< ref "/docs/quickstart/aws" >}}).
+[AWS credentials]({{< ref "/docs/get-started/aws" >}}).
 Initialize a new
-[Pulumi project]({{< ref "/docs/reference/project" >}}) from available
+[Pulumi project]({{< ref "/docs/intro/concepts/project" >}}) from available
 templates. We use `aws-typescript template` here to install all
 dependencies and save the configuration.
 
@@ -548,4 +548,4 @@ non-sequential and part of your everyday programming experience. You can find th
 
 
 Pulumi is open source and free to use. For more examples, visit our GitHub examples page
-[here](https://github.com/pulumi/examples). To learn more about Pulumi and how to manage Kubernetes through code, have a look at our ["Get Started with Kubernetes" guide]({{< ref "/docs/quickstart/kubernetes" >}}). 
+[here](https://github.com/pulumi/examples). To learn more about Pulumi and how to manage Kubernetes through code, have a look at our ["Get Started with Kubernetes" guide]({{< ref "/docs/get-started/kubernetes" >}}). 

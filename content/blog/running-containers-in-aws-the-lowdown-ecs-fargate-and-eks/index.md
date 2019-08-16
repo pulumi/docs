@@ -123,8 +123,8 @@ compute, and storage.
 [Kubernetes](https://kubernetes.io) is an open standard for running
 containers across a variety of public and private cloud environments.
 Most public cloud vendors now offer an EKS-like managed offering,
-including [Azure (AKS)]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-aks" >}}),
-[Google Cloud (GKE)]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}),
+including [Azure (AKS)]({{< ref "/docs/tutorials/kubernetes/tutorial-aks" >}}),
+[Google Cloud (GKE)]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}),
 and [Digital Ocean]({{< ref "/docs/reference/pkg/nodejs/pulumi/digitalocean#KubernetesCluster" >}}),
 and the availability of on-premises private cloud configurations enables
 hybrid cloud for large organizations. Kubernetes in inherently more
@@ -214,7 +214,7 @@ and CloudWatch. It's possible to use any of these services without
 Pulumi, but there are [many benefits to Pulumi's infrastructure as code](https://www.pulumi.com/why-pulumi/).
 
 In short, to get your containers up on AWS, in an easy yet
-production-ready way, [get started for free with Pulumi for AWS today]({{< ref "/docs/quickstart/aws" >}})!
+production-ready way, [get started for free with Pulumi for AWS today]({{< ref "/docs/get-started/aws" >}})!
 
 After getting started, here are some additional resources to go deeper
 on specific topics:

@@ -17,13 +17,13 @@ Here are some highlights we've added in partnership with the community
 since launching:
 
 -   Over 100 [examples](https://github.com/pulumi/examples),
-    [tutorials]({{< ref "/docs/reference/tutorials" >}}), and a brand new
-    [Getting Started guide]({{< ref "/docs/quickstart" >}}).
+    [tutorials]({{< ref "/docs/tutorials" >}}), and a brand new
+    [Getting Started guide]({{< ref "/docs/get-started" >}}).
 -   [A native Kubernetes provider with 100% Kubernetes API/version coverage.]({{< relref "pulumi-a-better-way-to-kubernetes" >}})
 -   A steady stream of improvements across
-    [AWS]({{< ref "/docs/quickstart/aws" >}}),
-    [Azure]({{< ref "/docs/quickstart/azure" >}}), and
-    [Google Cloud]({{< ref "/docs/quickstart/gcp" >}}) providers.
+    [AWS]({{< ref "/docs/get-started/aws" >}}),
+    [Azure]({{< ref "/docs/get-started/azure" >}}), and
+    [Google Cloud]({{< ref "/docs/get-started/gcp" >}}) providers.
 -   [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.]({{< relref "/crosswalk/aws" >}})
 -   Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
@@ -33,10 +33,10 @@ since launching:
     to parity with our
     [Node.js-based JavaScript and TypeScript SDKs]({{< ref "/docs/reference/pkg/nodejs" >}}).
 -   [Team and Enterprise SaaS editions for teams managing infrastructure in production.](https://www.pulumi.com/pricing)
--   [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< ref "/docs/console/accounts/organizations" >}})
--   [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< ref "/docs/console/continuous-delivery" >}})
+-   [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.]({{< ref "/docs/intro/console/accounts/organizations" >}})
+-   [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.]({{< ref "/docs/intro/console/continuous-delivery" >}})
 -   [Pluggable secrets management and transitive state encryption.]({{< relref "managing-secrets-with-pulumi" >}})
--   [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.]({{< ref "/docs/reference/state" >}})
+-   [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.]({{< ref "/docs/intro/concepts/state" >}})
 -   [Tools for managing complex, multi-stack environments, including Terraform integration.]({{< relref "using-terraform-remote-state-with-pulumi" >}})
 -   Numerous engine reliability and performance improvements, including parallelism.
 -   [75 blogs, increasingly focused on end to end solutions we see working with customers.]({{< ref "/blog" >}})

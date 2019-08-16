@@ -63,7 +63,7 @@ The differences between the two are:
     Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
     applying all resource configuration at one time.
 
- *  Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/reference/programming-model.md#autonaming" >}}).
+ *  Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/programming-model.md#autonaming" >}}).
 
 ## How does Pulumi compare to Helm?
 

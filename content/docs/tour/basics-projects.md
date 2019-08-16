@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/reference/project/
+redirect_to: /docs/intro/concepts/project/
 ---

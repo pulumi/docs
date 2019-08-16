@@ -120,8 +120,8 @@ In the next lab, we will see how to consume these stack outputs to provision app
 [azure]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/identity
 [gcp]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/identity
 
-[aws-cli]: {{< relref "/docs/reference/clouds/aws/setup.md" >}}
-[az-cli]: {{< relref "/docs/reference/clouds/azure/setup.md" >}}
-[gcp-cli]: {{< relref "/docs/reference/clouds/gcp/setup.md" >}}
+[aws-cli]: {{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}}
+[az-cli]: {{< relref "/docs/intro/clouds-and-languages/azure/setup.md" >}}
+[gcp-cli]: {{< relref "/docs/intro/clouds-and-languages/gcp/setup.md" >}}
 
 [identity]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/gcp/identity/index.ts

@@ -164,7 +164,7 @@ aws:region: (us-east-1)
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on pulumi.com has a link to the AWS console for the provisioned EC2 instance.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/reference/stack#outputs" >}}) corresponding to the IP and full-qualified host name of the EC2 instance we've created.
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) corresponding to the IP and full-qualified host name of the EC2 instance we've created.
 
     ```
     $ pulumi stack

@@ -35,7 +35,7 @@ a cloud storage service
 ### pulumi.com backend
 
 The `pulumi.com` backend requires no additional configuration after
-[installing the CLI](/docs/reference/install). By default, the CLI
+[installing the CLI](/docs/install). By default, the CLI
 uses a web backend hosted at [app.pulumi.com](https://app.pulumi.com).
 
 Pulumi offers this backend as a free service with
@@ -66,12 +66,12 @@ of your S3 bucket.
 Visit the following links for details on cloud provider
 CLI and storage setup:
 
-- **AWS S3.** _See [AWS Setup](/docs/reference/clouds/aws/setup)
+- **AWS S3.** _See [AWS Setup](/docs/intro/clouds-and-languages/aws/setup)
 and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)._
-- **Azure Blob.** _See [Azure Setup](/docs/reference/clouds/azure/setup)
+- **Azure Blob.** _See [Azure Setup](/docs/intro/clouds-and-languages/azure/setup)
 and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli)._
-- **Google Cloud Storage.** _See [GCP Setup](/docs/reference/clouds/gcp/setup)
-and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts)._
+- **Google Cloud Storage.** _See [GCP Setup](/docs/intro/clouds-and-languages/gcp/setup)
+and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/get-starteds)._
 
 ### Pulumi backend features
 
@@ -85,7 +85,7 @@ At a glance, the `pulumi.com` backend provides the following benefits:
 
 #### app.pulumi.com architecture
 
-<img src="/images/docs/reference/state_saas.png" alt="Pulumi SaaS Architecture"
+<img src="/images/docs/intro/concepts/state_saas.png" alt="Pulumi SaaS Architecture"
 class="img-bordered">
 
 #### Enterprise web architecture
@@ -93,7 +93,7 @@ class="img-bordered">
 Pulumi enterprise users have a self-hosting option, for using the Pulumi backend features without depending on
 `app.pulumi.com`.
 
-<img src="/images/docs/reference/state_enterprise.png" alt="Pulumi Enterprise
+<img src="/images/docs/intro/concepts/state_enterprise.png" alt="Pulumi Enterprise
 Architecture" class="img-bordered">
 
 [Contact us](https://www.pulumi.com/pricing/#contact) for more information on
@@ -149,7 +149,7 @@ target="_blank">app.pulumi.com/account/tokens</a>.  The **Access Tokens** page
 displays a list of past tokens, when they were last used, and gives you the
 option to revoke them.
 
-<img src="/images/docs/reference/state_tokens.png" alt="Pulumi.com Tokens Page"
+<img src="/images/docs/intro/concepts/state_tokens.png" alt="Pulumi.com Tokens Page"
 class="img-bordered">
 
 After logging in, _state_ will automatically get persisted with the service.

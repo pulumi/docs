@@ -117,4 +117,4 @@ In the next lab, we will see how to use the identities defined in lab 1 to set u
 these stacks.
 
 [app]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/services/wordpress/index.ts
-[ktpw]: {{< relref "/docs/quickstart/k8s-the-prod-way" >}}
+[ktpw]: {{< relref "/docs/get-started/k8s-the-prod-way" >}}

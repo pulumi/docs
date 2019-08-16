@@ -6,8 +6,8 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
 ## Prerequisites
 
-1.  [Install Pulumi]({{< relref "/docs/reference/install.md" >}})
-1.  [Configure GCP credentials]({{< relref "/docs/reference/clouds/gcp/setup.md" >}})
+1.  [Install Pulumi]({{< relref "/docs/install.md" >}})
+1.  [Configure GCP credentials]({{< relref "/docs/intro/clouds-and-languages/gcp/setup.md" >}})
 
 ## Create a Virtual Machine with SSH access {#webserver}
 
@@ -94,7 +94,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/reference/stack.md#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.  
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack.md#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.  
 
     ```
     $ pulumi stack

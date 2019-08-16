@@ -14,15 +14,15 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/a
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/reference/clouds/azure/setup.md" >}}) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/clouds-and-languages/azure/setup.md" >}}) for details.
 
 ## Getting Started
 
-The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/docs/quickstart/azure" >}}) guide.
+The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/docs/get-started/azure" >}}) guide.
 
 Additionally, a tutorial is available to follow:
 
-* [Azure Container Instances Web Server]({{< relref "/docs/reference/tutorials/azure/tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance
+* [Azure Container Instances Web Server]({{< relref "/docs/tutorials/azure/tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

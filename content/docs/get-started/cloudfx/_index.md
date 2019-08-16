@@ -2,7 +2,7 @@
 title: Pulumi Cloud Framework
 ---
 
-<img src="/images/docs/quickstart/cloudfx-purple.png" align="right">
+<img src="/images/docs/get-started/cloudfx-purple.png" align="right">
 
 The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
 
@@ -53,7 +53,7 @@ The Cloud framework is open source and available in the [pulumi/pulumi-cloud](ht
 
 ## Authentication
 
-Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/reference/clouds/aws/setup.md" >}}) for details (more providers for the Cloud framework coming soon).
+Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}}) for details (more providers for the Cloud framework coming soon).
 
 ## Configuration
 

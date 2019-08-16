@@ -6,7 +6,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 ## Prerequisites
 
-1. [Install Pulumi]({{< relref "/docs/reference/install.md" >}})
+1. [Install Pulumi]({{< relref "/docs/install.md" >}})
 1. [Install Node.js version 8 or later](https://nodejs.org/en/download/)
 1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
@@ -38,7 +38,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
-    * Enter in a name for the [Pulumi stack]({{< relref "/docs/reference/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
 
 1. Add the required dependencies:
 
@@ -268,7 +268,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     also output incremental status updates, as the Kubernetes changes progress.
 
 	> **Note:** Pulumi auto-generates a suffix for all objects.
-    > See the [Pulumi Programming Model]({{< relref "/docs/reference/programming-model.md#autonaming" >}}) for more info.
+    > See the [Pulumi Programming Model]({{< relref "/docs/intro/concepts/programming-model.md#autonaming" >}}) for more info.
     >
     > ```
     > ...

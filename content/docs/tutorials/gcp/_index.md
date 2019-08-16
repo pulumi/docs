@@ -9,4 +9,4 @@ menu:
 
 Additionally, a tutorial is available to follow:
 
-* [Virtual Machine]({{< relref "/docs/reference/tutorials/gcp/tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
+* [Virtual Machine]({{< relref "/docs/tutorials/gcp/tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
