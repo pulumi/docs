@@ -1,10 +1,5 @@
 ---
 title: "AWS Virtual Private Cloud (VPC)"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Virtual Private Cloud (VPC)
-    weight: 10
 ---
 
 <a href="{{< relref "_index.md" >}}">

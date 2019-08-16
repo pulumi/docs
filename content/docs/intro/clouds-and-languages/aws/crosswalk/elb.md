@@ -1,10 +1,5 @@
 ---
 title: "AWS Elastic Load Balancing (ELB)"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Elastic Load Balancing (ELB)
-    weight: 7
 ---
 
 <a href="{{< relref "_index.md" >}}">

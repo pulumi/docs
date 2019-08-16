@@ -1,10 +1,6 @@
 ---
 title: "AWS API Gateway"
 menu:
-  reference:
-    parent: crosswalk-aws
-    name: API Gateway
-    weight: 1
 ---
 
 <a href="{{< relref "_index.md" >}}">

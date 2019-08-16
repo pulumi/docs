@@ -1,10 +1,5 @@
 ---
 title: "AWS Identity and Access Management (IAM)"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Identity and Access Management (IAM)
-    weight: 8
 ---
 
 <a href="{{< relref "_index.md" >}}">

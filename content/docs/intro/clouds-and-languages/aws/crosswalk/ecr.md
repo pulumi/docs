@@ -1,10 +1,5 @@
 ---
 title: "AWS Elastic Container Registry (ECR)"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Elastic Container Registry (ECR)
-    weight: 4
 ---
 
 <a href="{{< relref "_index.md" >}}">

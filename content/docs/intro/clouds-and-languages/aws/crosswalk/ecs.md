@@ -1,10 +1,5 @@
 ---
 title: "AWS Elastic Container Service (ECS)"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Elastic Container Service (ECS)
-    weight: 5
 ---
 
 <a href="{{< relref "_index.md" >}}">

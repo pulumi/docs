@@ -1,10 +1,5 @@
 ---
 title: "Other AWS Services"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Other AWS Services
-    weight: 11
 ---
 
 <a href="{{< relref "_index.md" >}}">

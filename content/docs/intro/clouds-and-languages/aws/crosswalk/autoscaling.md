@@ -1,10 +1,5 @@
 ---
 title: "AWS Auto Scaling"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Auto Scaling
-    weight: 2
 ---
 
 <a href="{{< relref "_index.md" >}}">

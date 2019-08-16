@@ -1,10 +1,5 @@
 ---
 title: "AWS Elastic Kubernetes Service (EKS)"
-menu:
-  reference:
-    parent: crosswalk-aws
-    name: Elastic Kubernetes Service (EKS)
-    weight: 6
 ---
 
 <a href="{{< relref "_index.md" >}}">
