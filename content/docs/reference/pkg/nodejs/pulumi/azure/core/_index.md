@@ -45,14 +45,14 @@ title: Module core
 <li><a href="#TemplateDeploymentState">interface TemplateDeploymentState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts">core/getClientConfig.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts">core/getResourceGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts">core/getSubscription.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts">core/getSubscriptions.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts">core/getUserAssignedIdentity.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts">core/resourceGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts">core/templateDeployment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/zMixins.ts">core/zMixins.ts</a> 
+<a href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts" >}}">core/getClientConfig.ts</a> <a href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts" >}}">core/getResourceGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="core/getSubscription.ts" >}}">core/getSubscription.ts</a> <a href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts" >}}">core/getSubscriptions.ts</a> <a href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts" >}}">core/getUserAssignedIdentity.ts</a> <a href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts" >}}">core/resourceGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts" >}}">core/templateDeployment.ts</a> <a href="{{< pkg-url pkg="azure" path="core/zMixins.ts" >}}">core/zMixins.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ResourceGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L27">class <b>ResourceGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L27" >}}">class <b>ResourceGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -79,7 +79,7 @@ const test = new azure.core.ResourceGroup("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L67" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -96,7 +96,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -110,7 +110,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -120,7 +120,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -134,7 +134,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L58">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L58" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -158,7 +158,7 @@ For a list of all Azure locations, please consult [this link](http://azure.micro
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -170,7 +170,7 @@ Azure subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L67" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -181,7 +181,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -194,7 +194,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TemplateDeployment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L101">class <b>TemplateDeployment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L101" >}}">class <b>TemplateDeployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -295,7 +295,7 @@ This provider does not know about the individual resources created by Azure usin
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TemplateDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L159"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L159" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -312,7 +312,7 @@ Create a TemplateDeployment resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L110">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L110" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -326,7 +326,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -336,7 +336,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L121">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L121" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -350,7 +350,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L133">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L133" >}}">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -363,7 +363,7 @@ specified within the template, and this provider will not be aware of this.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -375,7 +375,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -387,7 +387,7 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L142">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L142" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -398,7 +398,7 @@ A map of supported scalar output types returned from the deployment (currently, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L146">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L146" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -409,7 +409,7 @@ Specifies the name and value pairs that define the deployment parameters for the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-parametersBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L150">property <b>parametersBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L150" >}}">property <b>parametersBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parametersBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -420,7 +420,7 @@ Specifies a valid Azure JSON parameters file that define the deployment paramete
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L155" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -432,7 +432,7 @@ create the template deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L159">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L159" >}}">property <b>templateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -443,7 +443,7 @@ Specifies the JSON definition for the template.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -456,7 +456,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getClientConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L23">function <b>getClientConfig</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L23" >}}">function <b>getClientConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -482,7 +482,7 @@ export const accountId = current.servicePrincipalApplicationId;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getResourceGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L31">function <b>getResourceGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L31" >}}">function <b>getResourceGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -516,7 +516,7 @@ const testManagedDisk = new azure.compute.ManagedDisk("test", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getServiceClientCredentials">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/zMixins.ts#L23">function <b>getServiceClientCredentials</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/zMixins.ts#L23" >}}">function <b>getServiceClientCredentials</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -530,7 +530,7 @@ are either based on MSI, a service principal, or Azure CLI user credentials.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L23">function <b>getSubscription</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L23" >}}">function <b>getSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -556,7 +556,7 @@ export const currentSubscriptionDisplayName = current.displayName;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSubscriptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L24">function <b>getSubscriptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L24" >}}">function <b>getSubscriptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -583,7 +583,7 @@ export const firstAvailableSubscriptionDisplayName = available.subscriptions[0].
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUserAssignedIdentity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L27">function <b>getUserAssignedIdentity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L27" >}}">function <b>getUserAssignedIdentity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -613,7 +613,7 @@ export const uaiPrincipalId = example.principalId;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetClientConfigResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L40">interface <b>GetClientConfigResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L40" >}}">interface <b>GetClientConfigResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -622,7 +622,7 @@ A collection of values returned by getClientConfig.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetClientConfigResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L41">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L41" >}}">property <b>clientId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -630,7 +630,7 @@ A collection of values returned by getClientConfig.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClientConfigResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -641,7 +641,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClientConfigResult-servicePrincipalApplicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L42">property <b>servicePrincipalApplicationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L42" >}}">property <b>servicePrincipalApplicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>servicePrincipalApplicationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -649,7 +649,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClientConfigResult-servicePrincipalObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L43">property <b>servicePrincipalObjectId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L43" >}}">property <b>servicePrincipalObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>servicePrincipalObjectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -657,7 +657,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClientConfigResult-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L44">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L44" >}}">property <b>subscriptionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -665,7 +665,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClientConfigResult-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getClientConfig.ts#L45">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getClientConfig.ts#L45" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -674,7 +674,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetResourceGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L49">interface <b>GetResourceGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L49" >}}">interface <b>GetResourceGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -683,7 +683,7 @@ A collection of arguments for invoking getResourceGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L53" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -695,7 +695,7 @@ Specifies the name of the resource group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetResourceGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L59">interface <b>GetResourceGroupResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L59" >}}">interface <b>GetResourceGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -704,7 +704,7 @@ A collection of values returned by getResourceGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L72" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -715,7 +715,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceGroupResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L63">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L63" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -726,7 +726,7 @@ The location of the resource group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L64" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -734,7 +734,7 @@ The location of the resource group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceGroupResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getResourceGroup.ts#L68">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getResourceGroup.ts#L68" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -746,7 +746,7 @@ A mapping of tags assigned to the resource group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L42">interface <b>GetSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L42" >}}">interface <b>GetSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -755,7 +755,7 @@ A collection of arguments for invoking getSubscription.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionArgs-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L46">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L46" >}}">property <b>subscriptionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subscriptionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -767,7 +767,7 @@ Specifies the ID of the subscription. If this argument is omitted, the subscript
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubscriptionResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L52">interface <b>GetSubscriptionResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L52" >}}">interface <b>GetSubscriptionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -776,7 +776,7 @@ A collection of values returned by getSubscription.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L56">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L56" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -787,7 +787,7 @@ The subscription display name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L80" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -798,7 +798,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-locationPlacementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L60">property <b>locationPlacementId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L60" >}}">property <b>locationPlacementId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>locationPlacementId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -809,7 +809,7 @@ The subscription location placement ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-quotaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L64">property <b>quotaId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L64" >}}">property <b>quotaId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>quotaId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -820,7 +820,7 @@ The subscription quota ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-spendingLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L68">property <b>spendingLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L68" >}}">property <b>spendingLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spendingLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -831,7 +831,7 @@ The subscription spending limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L72">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L72" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -842,7 +842,7 @@ The subscription state. Possible values are Enabled, Warned, PastDue, Disabled, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscription.ts#L76">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscription.ts#L76" >}}">property <b>subscriptionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -854,7 +854,7 @@ The subscription GUID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubscriptionsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L44">interface <b>GetSubscriptionsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L44" >}}">interface <b>GetSubscriptionsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -863,7 +863,7 @@ A collection of arguments for invoking getSubscriptions.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNameContains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L48">property <b>displayNameContains</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L48" >}}">property <b>displayNameContains</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNameContains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -874,7 +874,7 @@ A case-insensitive value which must be contained within the `displayName` field,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L52">property <b>displayNamePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L52" >}}">property <b>displayNamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNamePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -886,7 +886,7 @@ A case-insensitive prefix which can be used to filter on the `displayName` field
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubscriptionsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L58">interface <b>GetSubscriptionsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L58" >}}">interface <b>GetSubscriptionsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -895,7 +895,7 @@ A collection of values returned by getSubscriptions.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-displayNameContains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L59">property <b>displayNameContains</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L59" >}}">property <b>displayNameContains</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNameContains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -903,7 +903,7 @@ A collection of values returned by getSubscriptions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-displayNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L60">property <b>displayNamePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L60" >}}">property <b>displayNamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNamePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -911,7 +911,7 @@ A collection of values returned by getSubscriptions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L68" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -922,7 +922,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-subscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getSubscriptions.ts#L64">property <b>subscriptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L64" >}}">property <b>subscriptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subscriptions: {
@@ -941,7 +941,7 @@ One or more `subscription` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserAssignedIdentityArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L46">interface <b>GetUserAssignedIdentityArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L46" >}}">interface <b>GetUserAssignedIdentityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -950,7 +950,7 @@ A collection of arguments for invoking getUserAssignedIdentity.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L50" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -961,7 +961,7 @@ The name of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L54">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L54" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -973,7 +973,7 @@ The name of the Resource Group in which the User Assigned Identity exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserAssignedIdentityResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L60">interface <b>GetUserAssignedIdentityResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L60" >}}">interface <b>GetUserAssignedIdentityResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -982,7 +982,7 @@ A collection of values returned by getUserAssignedIdentity.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L64">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L64" >}}">property <b>clientId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -993,7 +993,7 @@ The Client ID of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L82" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1004,7 +1004,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L68">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L68" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1015,7 +1015,7 @@ The Azure location where the User Assigned Identity exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L69" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1023,7 +1023,7 @@ The Azure location where the User Assigned Identity exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L73">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L73" >}}">property <b>principalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1034,7 +1034,7 @@ The Service Principal ID of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L74">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L74" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1042,7 +1042,7 @@ The Service Principal ID of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/getUserAssignedIdentity.ts#L78">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L78" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1054,7 +1054,7 @@ A mapping of tags assigned to the User Assigned Identity.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L124">interface <b>ResourceGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L124" >}}">interface <b>ResourceGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1063,7 +1063,7 @@ The set of arguments for constructing a ResourceGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceGroupArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L129">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L129" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1075,7 +1075,7 @@ For a list of all Azure locations, please consult [this link](http://azure.micro
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1087,7 +1087,7 @@ Azure subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L138">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L138" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1099,7 +1099,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L104">interface <b>ResourceGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L104" >}}">interface <b>ResourceGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1108,7 +1108,7 @@ Input properties used for looking up and filtering ResourceGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceGroupState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L109">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L109" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1120,7 +1120,7 @@ For a list of all Azure locations, please consult [this link](http://azure.micro
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1132,7 +1132,7 @@ Azure subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/resourceGroup.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/resourceGroup.ts#L118" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1144,7 +1144,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TemplateDeploymentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L248">interface <b>TemplateDeploymentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L248" >}}">interface <b>TemplateDeploymentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1153,7 +1153,7 @@ The set of arguments for constructing a TemplateDeployment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L254">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L254" >}}">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1166,7 +1166,7 @@ specified within the template, and this provider will not be aware of this.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L259" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1178,7 +1178,7 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L263">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L263" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1189,7 +1189,7 @@ Specifies the name and value pairs that define the deployment parameters for the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-parametersBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L267">property <b>parametersBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L267" >}}">property <b>parametersBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parametersBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1200,7 +1200,7 @@ Specifies a valid Azure JSON parameters file that define the deployment paramete
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L272">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L272" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1212,7 +1212,7 @@ create the template deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L276">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L276" >}}">property <b>templateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1224,7 +1224,7 @@ Specifies the JSON definition for the template.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TemplateDeploymentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L210">interface <b>TemplateDeploymentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L210" >}}">interface <b>TemplateDeploymentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1233,7 +1233,7 @@ Input properties used for looking up and filtering TemplateDeployment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L216">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L216" >}}">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1246,7 +1246,7 @@ specified within the template, and this provider will not be aware of this.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L221" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1258,7 +1258,7 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L225">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L225" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1269,7 +1269,7 @@ A map of supported scalar output types returned from the deployment (currently, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L229">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L229" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1280,7 +1280,7 @@ Specifies the name and value pairs that define the deployment parameters for the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-parametersBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L233">property <b>parametersBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L233" >}}">property <b>parametersBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parametersBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1291,7 +1291,7 @@ Specifies a valid Azure JSON parameters file that define the deployment paramete
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L238">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L238" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1303,7 +1303,7 @@ create the template deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/core/templateDeployment.ts#L242">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/templateDeployment.ts#L242" >}}">property <b>templateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
