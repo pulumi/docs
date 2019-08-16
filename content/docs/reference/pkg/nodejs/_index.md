@@ -9,7 +9,7 @@ menu:
 
 ### General Purpose Packages
 
-The Pulumi SDK package is used for accessing the core programming model around resources, configuration, etc. 
+The Pulumi SDK package is used for accessing the core programming model around resources, configuration, etc.
 directly. Additional general purpose packages can be used across all cloud platforms:
 
 * [Pulumi SDK `@pulumi/pulumi`]({{< relref "pulumi/pulumi" >}})
@@ -38,4 +38,4 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 Pulumi offers a highly productive, cloud-agnostic package for container and serverless oriented programming in the
 `@pulumi/cloud` package which currently allows writing applications once and deploying to either AWS or Azure.
 
-* [Pulumi Cloud Framework (`@pulumi/cloud`)]({{< relref "pulumi/cloud" >}})
+* [Pulumi Cloud Framework (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "pulumi/cloud" >}})
