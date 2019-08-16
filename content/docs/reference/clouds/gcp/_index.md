@@ -41,7 +41,7 @@ const bucket = new gcp.storage.Bucket("my-bucket");
 ```
 
 ```typescript
-const gcp = require("@pulumi/gcp")
+import * as gcp from "@pulumi/gcp";
 
 const bucket = new gcp.storage.Bucket("my-bucket");
 ```

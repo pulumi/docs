@@ -21,7 +21,7 @@ The OpenStack provider supports several options for providing access to OpenStac
 {{< langchoose >}}
 
 ```javascript
-const openstack = require("@pulumi/openstack")
+const os = require("@pulumi/openstack")
 
 const instance = new os.compute.Instance("test", {
 	flavorName: "s1-2",
@@ -30,7 +30,7 @@ const instance = new os.compute.Instance("test", {
 ```
 
 ```typescript
-const openstack = require("@pulumi/openstack")
+import * as os from "@pulumi/openstack";
 
 const instance = new os.compute.Instance("test", {
 	flavorName: "s1-2",

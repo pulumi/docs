@@ -124,10 +124,10 @@ aws:region: (us-east-1)
 
     * **Security Group**, which allows access for incoming SSH access
         * JavaScript and TypeScript: [aws.ec2.SecurityGroup][Security Group]
-        * Python: [ec2.SecurityGroup](/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.SecurityGroup)
+        * Python: [ec2.SecurityGroup]({{< relref "/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.SecurityGroup" >}})
     * **EC2 Instance**, which is created in that security group using the appropriate Amazon Machine Image (AMI) for the region where you deploy the program
         * JavaScript and TypeScript: [aws.ec2.Instance][EC2 Instance]
-        * Python: [ec2.Instance](/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Instance)
+        * Python: [ec2.Instance]({{< relref "/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Instance" >}})
 
 1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
@@ -325,7 +325,7 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using our programming language of choice and its corresponding dependency manager. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using our programming language of choice and its corresponding package manager. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a similar example in other languages and clouds, see the [Pulumi examples collection](https://github.com/pulumi/examples).
 
