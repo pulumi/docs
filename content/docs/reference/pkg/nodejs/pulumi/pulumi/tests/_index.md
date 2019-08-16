@@ -20,7 +20,7 @@ title: Module tests
 <li><a href="#MochaFunc">type MochaFunc</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
+<a href="{{< pkg-url pkg="pulumi" path="tests/util.ts" >}}">tests/util.ts</a> 
 </div>
 </div>
 </div>
@@ -41,7 +41,7 @@ title: Module tests
 </div>
 
 <h2 class="pdoc-module-header" id="assertAsyncThrows">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/tests/util.ts#L40">function <b>assertAsyncThrows</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/util.ts#L40" >}}">function <b>assertAsyncThrows</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -51,7 +51,7 @@ title: Module tests
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="asyncTest">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/tests/util.ts#L21">function <b>asyncTest</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/util.ts#L21" >}}">function <b>asyncTest</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -61,7 +61,7 @@ title: Module tests
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="MochaFunc">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/tests/util.ts#L17">type <b>MochaFunc</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/util.ts#L17" >}}">type <b>MochaFunc</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> MochaFunc = (err: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>
