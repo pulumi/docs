@@ -17,8 +17,8 @@ altered to fit into any existing type of deployment setup.
 
 - A working installation of a recent version of Jenkins.
 - An account on the [Pulumi Console](https://app.pulumi.com).
-- The latest CLI. Installation instructions are [here]({{< relref "/docs/reference/install.md" >}}).
-- Setup a new project and stack using one of our [Get Started](https://www.pulumi.com/docs/quickstart/) guides or simply by running `pulumi new`
+- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/reference/install.md" >}}).
+- Setup a new project and [stack]({{< relref "/docs/reference/stack.md" >}}) using one of our [Get Started]({{< relref "/docs/quickstart" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
 and choosing one of the many templates that are available.
 - A bare repo and set the remote URL to be your GitHub project.
 
@@ -27,9 +27,10 @@ and choosing one of the many templates that are available.
 An example project is located [here](https://github.com/pulumi/examples/azure-ts-appservice-springboot). You may download the project and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo into your Jenkins workspace.
 
 ## Stack and Branch Mappings
+
 The scripts below act on a hypothetical stack: `homer/acme/product-catalog-service-stack`.
-You can create a new stack by running `pulumi stack init` if you have already created a project.
-The source code for the stack is in a repository in GitHub and uses `TypeScript` as the language.
+You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init.md" >}}) if you have already created a project.
+The source code for the stack is in a repository in GitHub and uses TypeScript as the language.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
@@ -64,7 +65,7 @@ You can find available plugins by navigating to the Jenkins administration page 
 
 ### Project Parameters (Environment Variables)
 
-In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal](https://www.pulumi.com/docs/reference/clouds/azure/setup/#creating-a-service-principal).
+In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal]({{< relref "/docs/reference/clouds/azure/setup#creating-a-service-principal" >}}).
 
 The screenshot below shows you how you can parameterize your `Jenkinsfile` using environment variables.
 
@@ -123,7 +124,7 @@ pipeline {
 
 ## Additional Information
 
-### Single-quotes vs. double-quotes in `Jenkinsfile`
+### Single-quotes vs. double-quotes in Jenkinsfile
 
 While the pipeline script editor may not complain about the use of single-quotes, we have noticed that using single-quotes can cause certain commands to silently fail. It is better to use double-quotes always to wrap arguments in your `Jenkinsfile`.
 
@@ -131,7 +132,7 @@ While the pipeline script editor may not complain about the use of single-quotes
 
 You can get to the administration in one of two ways depending on which UI (Classic vs. Blue Ocean) you are using. In the Classic UI, there is a **Manage Jenkins** link on the left nav menu, and in Blue Ocean you should see an **Administration** link on the top nav. You will only see these options if you are an admin in your Jenkins installation.
 
-### Using the `withCredentials` binding plugin
+### Using the withCredentials binding plugin
 
 Jenkins allows you to manage credentials in a global credentials store. Learn more [here](https://jenkins.io/doc/pipeline/steps/credentials-binding/). By using the `withCredentials` plugin, you could store your AWS, Azure or GCP credentials in the credentials store, and inject it into the pipeline easily. For example, in order to use the Azure CLI credentials, you will need the Azure CLI plugin additionally. Once added, you can add a new Service Principal credential and map its properties to the appropriate env variables needed by the Pulumi CLI.
 
