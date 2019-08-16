@@ -62,6 +62,14 @@ Ensure you have the following plugins installed:
 
 You can find available plugins by navigating to the Jenkins administration page and then selecting the **Manage Plugins** option on the Manage Jenkins page.
 
+### Project Parameters (Environment Variables)
+
+In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal](https://www.pulumi.com/docs/reference/clouds/azure/setup/#creating-a-service-principal).
+
+The screenshot below shows you how you can parameterize your `Jenkinsfile` using environment variables.
+
+![Jenkins Project Parameters](/images/docs/reference/jenkins/project-params.png)
+
 #### Configuring the Node JS plugin
 
 In order to use the Node JS plugin, you must first ensure you add at least one installation to it. Navigate to the **Global Tool Configuration** menu option on the Manage Jenkins page.
@@ -123,3 +131,15 @@ While the pipeline script editor may not complain about the use of single-quotes
 
 You can get to the administration in one of two ways depending on which UI (Classic vs. Blue Ocean) you are using. In the Classic UI, there is a **Manage Jenkins** link on the left nav menu, and in Blue Ocean you should see an **Administration** link on the top nav. You will only see these options if you are an admin in your Jenkins installation.
 
+### Using the `withCredentials` binding plugin
+
+Jenkins allows you to manage credentials in a global credentials store. Learn more [here](https://jenkins.io/doc/pipeline/steps/credentials-binding/). By using the `withCredentials` plugin, you could store your AWS, Azure or GCP credentials in the credentials store, and inject it into the pipeline easily. For example, in order to use the Azure CLI credentials, you will need the Azure CLI plugin additionally. Once added, you can add a new Service Principal credential and map its properties to the appropriate env variables needed by the Pulumi CLI.
+
+```groovy
+...
+withCredentials([azureServicePrincipal(credentialsId: "your-credentials-id", clientIdVariable: "ARM_CLIENT_ID", clientSecretVariable: "ARM_CLIENT_SECRET", subscriptionIdVariable: "ARM_SUBSCRIPTION_ID", tenantIdVariable: "ARM_TENANT_ID")]) {
+    ...
+    sh "pulumi preview"
+}
+...
+```
