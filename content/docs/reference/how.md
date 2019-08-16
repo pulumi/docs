@@ -15,9 +15,26 @@ During program execution, whenever there is a resource creation statement (via `
 
 For instance, suppose we have the following Pulumi program, which creates two S3 buckets:
 
+{{< langchoose >}}
+
 ```javascript
 const bucket = new aws.s3.Bucket("media-bucket");
 const bucket = new aws.s3.Bucket("content-bucket");
+```
+
+```typescript
+const bucket = new aws.s3.Bucket("media-bucket");
+const bucket = new aws.s3.Bucket("content-bucket");
+```
+
+```python
+bucket = s3.Bucket('media-bucket')
+bucket = s3.Bucket('content-bucket')
+```
+
+```go
+bucket, _ := s3.NewBucket(ctx, "media-bucket", nil)
+bucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```
 
 Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources.
@@ -34,9 +51,26 @@ stack mystack
 
 Now, suppose we rename `content-bucket` to `app-bucket`:
 
+{{< langchoose >}}
+
 ```javascript
 const bucket = new aws.s3.Bucket("media-bucket");
 const bucket = new aws.s3.Bucket("app-bucket"); // renamed bucket
+```
+
+```typescript
+const bucket = new aws.s3.Bucket("media-bucket");
+const bucket = new aws.s3.Bucket("app-bucket"); // renamed bucket
+```
+
+```python
+bucket = s3.Bucket('media-bucket')
+bucket = s3.Bucket('app-bucket') # renamed bucket
+```
+
+```go
+bucket, _ := s3.NewBucket(ctx, "media-bucket", nil)
+bucket, _ := s3.NewBucket(ctx, "app-bucket", nil) // renamed bucket
 ```
 
 This time, the engine will not create another `media-bucket`, since it exists in the checkpoint. Now, since an S3 bucket cannot be renamed in place, the engine makes a "replace" call to the AWS provider. The provider deletes the bucket `content-bucket125ce` and creates a new one.

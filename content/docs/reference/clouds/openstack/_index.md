@@ -18,13 +18,42 @@ The OpenStack provider supports several options for providing access to OpenStac
 
 ## Example
 
+{{< langchoose >}}
+
 ```javascript
-const openstack = require("@pulumi/openstack")
+const os = require("@pulumi/openstack")
 
 const instance = new os.compute.Instance("test", {
 	flavorName: "s1-2",
 	imageName: "Ubuntu 16.04",
 });
+```
+
+```typescript
+import * as os from "@pulumi/openstack";
+
+const instance = new os.compute.Instance("test", {
+	flavorName: "s1-2",
+	imageName: "Ubuntu 16.04",
+});
+```
+
+```python
+from pulumi_openstack import compute
+
+instance = compute.Instance("test",
+  flavor_name='s1-2',
+  image_name='Ubuntu 16.04'
+)
+```
+
+```go
+import "github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute"
+
+instance, _ := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
+  FlavorName: "s1-2",
+  ImageName: "Ubuntu 16.04",
+})
 ```
 
 ## Libraries

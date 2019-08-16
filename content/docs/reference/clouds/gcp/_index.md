@@ -32,10 +32,30 @@ In addition to the tutorial, several interesting examples are available complete
 
 ## Example
 
+{{< langchoose >}}
+
 ```javascript
 const gcp = require("@pulumi/gcp")
 
 const bucket = new gcp.storage.Bucket("my-bucket");
+```
+
+```typescript
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("my-bucket");
+```
+
+```python
+from pulumi_gcp import storage
+
+bucket = storage.Bucket('my-bucket')
+```
+
+```go
+import "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
+
+bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
 ```
 
 You can find additional examples of using Google Cloud in
