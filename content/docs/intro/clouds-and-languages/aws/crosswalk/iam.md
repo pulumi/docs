@@ -3,7 +3,7 @@ title: "AWS Identity and Access Management (IAM)"
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) enables you to manage access to AWS services

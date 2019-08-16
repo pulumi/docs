@@ -9,12 +9,12 @@ menu:
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure.
 
-<img src="/images/docs/reference/crosswalk/aws/arch.png">
+<img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/arch.png">
 
 ## Overview
 

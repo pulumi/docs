@@ -3,7 +3,7 @@ title: "AWS Elastic Kubernetes Service (EKS)"
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,

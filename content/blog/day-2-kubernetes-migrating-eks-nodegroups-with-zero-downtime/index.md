@@ -170,5 +170,5 @@ migrating your existing configuration code to Pulumi, please don't hesitate to [
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml
 [pod-lifecycle]: https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods
 [eks-nodegroup-tutorial]: {{< relref "/docs/tutorials/kubernetes/tutorial-eks-migrate-nodegroups" >}}
-[crosswalk-aws]: {{< relref "/docs/reference/crosswalk/aws" >}}.
+[crosswalk-aws]: {{< relref "/docs/intro/clouds-and-languages/aws/crosswalk" >}}.
 [tutorial-ha-refs]: {{< relref "/docs/tutorials/kubernetes/tutorial-eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}

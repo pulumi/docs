@@ -95,7 +95,7 @@ containers run in. That includes control over the precise numbers of
 servers, AMIs they are running, and their auto-scaling policies.
 
 To use an EC2 backed cluster, you will need to
-[create a cluster and configure the EC2 launch and autoscaling configurations]({{< ref "/docs/reference/crosswalk/aws/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances" >}}),
+[create a cluster and configure the EC2 launch and autoscaling configurations]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances" >}}),
 and then simply use the awsx.ecs.EC2Service class to create your service
 instead. Other than these differences, the resulting code would look
 very similar to Option 1 - ECS Fargate above.
@@ -195,7 +195,7 @@ more about Pulumi's support for Kubernetes, [go here]({{< relref "pulumi-a-bette
 
 ## Private ECR Container Registries
 
-In all of these cases, [Amazon Elastic Container Registry (ECR)]({{< ref "/docs/reference/crosswalk/aws/ecr" >}})
+In all of these cases, [Amazon Elastic Container Registry (ECR)]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/ecr" >}})
 lets you publish
 Docker container images to a privately hosted repository inside your AWS
 account. The benefit of this is that images are stored within your AWS
@@ -219,9 +219,9 @@ production-ready way, [get started for free with Pulumi for AWS today]({{< ref "
 After getting started, here are some additional resources to go deeper
 on specific topics:
 
--   [Getting Started with ECS]({{< ref "/docs/reference/crosswalk/aws/ecs" >}})
--   [Getting Started with EKS]({{< ref "/docs/reference/crosswalk/aws/eks" >}})
--   [Getting Started with ECR]({{< ref "/docs/reference/crosswalk/aws/ecr" >}})
-    -   [Using ECR from ECS Fargate or EC2]({{< ref "/docs/reference/crosswalk/aws/ecs#building-and-publishing-docker-images-automatically" >}})
-    -   [Using ECR from EKS]({{< ref "/docs/reference/crosswalk/aws/eks#using-an-ecr-container-image-from-an-eks-kubernetes-deployment" >}})
+-   [Getting Started with ECS]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/ecs" >}})
+-   [Getting Started with EKS]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/eks" >}})
+-   [Getting Started with ECR]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/ecr" >}})
+    -   [Using ECR from ECS Fargate or EC2]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/ecs#building-and-publishing-docker-images-automatically" >}})
+    -   [Using ECR from EKS]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk/eks#using-an-ecr-container-image-from-an-eks-kubernetes-deployment" >}})
     -   [Building and Publishing Docker Images to a Private Amazon ECR Repository]({{< relref "building-and-publishing-docker-images-to-a-private-amazon-ecr-repository" >}})

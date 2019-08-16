@@ -3,7 +3,7 @@ title: "AWS Elastic Container Registry (ECR)"
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry that

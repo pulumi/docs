@@ -3,7 +3,7 @@ title: "AWS CloudWatch Logs, Metrics, Alarms, and Dashboards"
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) is a monitoring and management service built for developers,

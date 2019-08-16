@@ -401,4 +401,4 @@ product platform, check out the following resources:
 
 - [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
 - [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/reference/crosswalk/aws" >}})
+- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< ref "/docs/intro/clouds-and-languages/aws/crosswalk" >}})
