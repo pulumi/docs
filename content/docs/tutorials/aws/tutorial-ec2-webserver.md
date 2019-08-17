@@ -121,10 +121,10 @@ aws:region: (us-east-1)
 
     * **Security Group**, which allows access for incoming SSH access
         * JavaScript and TypeScript: [aws.ec2.SecurityGroup][Security Group]
-        * Python: [ec2.SecurityGroup]({{< relref "../../pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.SecurityGroup" >}})
+        * Python: [ec2.SecurityGroup]({{< relref "/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.SecurityGroup" >}})
     * **EC2 Instance**, which is created in that security group using the appropriate Amazon Machine Image (AMI) for the region where you deploy the program
         * JavaScript and TypeScript: [aws.ec2.Instance][EC2 Instance]
-        * Python: [ec2.Instance]({{< relref "../../pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Instance" >}})
+        * Python: [ec2.Instance]({{< relref "/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.Instance" >}})
 
 1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
