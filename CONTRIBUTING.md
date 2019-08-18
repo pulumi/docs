@@ -68,7 +68,8 @@ Which, on a page inside the `./content/reference` directory, will generate:
 - Use hash marks for headings (`#`, `##`, etc)
 - Use double-asterisks for bold `**`
 - Use underscore for italic `_`
-
+- Use `--` for en dashes and `---` for em dashes
+  - Do not put spaces before or after the dashes
 - Use code fences (triple-backticks) and a [language identifier](https://gohugo.io/content-management/syntax-highlighting/) for code formatting and syntax highlighting:
   <pre><code>```typescript
   const foo = "bar";
