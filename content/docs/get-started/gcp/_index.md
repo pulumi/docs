@@ -10,9 +10,7 @@ menu:
 aliases: ["/docs/quickstart/gcp/"]
 ---
 
-This guide is intended to help you quickly get started provisioning infrastructure on Google Cloud with Pulumi.
-
-<!-- TODO embellish the summary/overview of the guide. -->
+{{< cloud-intro "Google Cloud" "https://github.com/pulumi/pulumi-gcp" >}}
 
 Let's start with installing Pulumi.
 
