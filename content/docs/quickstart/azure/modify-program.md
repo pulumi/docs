@@ -7,9 +7,7 @@ menu:
     identifier: azure-modify-program
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's enable:
-- Encryption on our storage account for blobs
-- Enable HTTPS-only communication
+Now that we have an instance of our Pulumi program deployed, let's enforce HTTPS-only communication for our storage account. This means, when making requests to this storage account only HTTPS traffic is allowed.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
@@ -28,7 +26,6 @@ const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
     accountTier: "Standard",
     accountReplicationType: "LRS",
-    enableBlobEncryption: true,
     enableHttpsTrafficOnly: true,
 });
 
@@ -48,7 +45,6 @@ const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
     accountTier: "Standard",
     accountReplicationType: "LRS",
-    enableBlobEncryption: true,
     enableHttpsTrafficOnly: true,
 });
 
@@ -68,7 +64,6 @@ account = storage.Account("storage",
     resource_group_name=resource_group.name,
     account_tier='Standard',
     account_replication_type='LRS',
-    enable_blob_encryption=True,
     enable_https_traffic_only=True)
 
 # Export the connection string for the storage account

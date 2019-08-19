@@ -15,27 +15,27 @@ To destroy resources, run the following:
 $ pulumi destroy
 ```
 
-You'll be prompted to make sure you really want to delete these resources. This takes some time; Pulumi waits for the ACI to shutdown and for the resource group to be removed before it considers the destroy operation to be complete.
+You'll be prompted to make sure you really want to delete these resources. Pulumi deletes the storage account and the resource group before it considers the destroy operation to be complete.
 
 ```
 Previewing destroy (dev):
 
-     Type                             Name            Plan
- -   pulumi:pulumi:Stack              quickstart-dev  delete
- -   ├─ azure:containerservice:Group  nginx           delete
- -   └─ azure:core:ResourceGroup      resourceGroup   delete
-
+     Type                         Name                     Plan       
+ -   pulumi:pulumi:Stack          update-az-templates-dev  delete     
+ -   ├─ azure:storage:Account     storage                  delete     
+ -   └─ azure:core:ResourceGroup  resourceGroup            delete     
+ 
 Resources:
     - 3 to delete
 
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                             Name            Status
- -   pulumi:pulumi:Stack              quickstart-dev  deleted
- -   ├─ azure:containerservice:Group  nginx           deleted
- -   └─ azure:core:ResourceGroup      resourceGroup   deleted
-
+     Type                         Name                     Status      
+ -   pulumi:pulumi:Stack          update-az-templates-dev  deleted     
+ -   ├─ azure:storage:Account     storage                  deleted     
+ -   └─ azure:core:ResourceGroup  resourceGroup            deleted     
+ 
 Resources:
     - 3 deleted
 
