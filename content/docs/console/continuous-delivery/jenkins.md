@@ -38,7 +38,7 @@ You may choose a naming convention that best suits your organization.
 Alternatively, you can also run `pulumi new [template]` to create a template project.
 Learn more [here]({{< ref "/docs/reference/cli/pulumi_new.md" >}}).
 
-## `PULUMI_ACCESS_TOKEN`
+## PULUMI_ACCESS_TOKEN
 
 To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a build parameter when setting up the Jenkins build. To create a new access token, go the [Access Tokens](https://app.pulumi.com/account/tokens) page on the Pulumi Console.
 
@@ -79,7 +79,7 @@ In order to use the Node JS plugin, you must first ensure you add at least one i
 
 ![Jenkins Global Tool Configuration](/images/docs/reference/jenkins/global-tool-config.png)
 
-### `Jenkinsfile`
+### Jenkinsfile
 
 ```groovy
 pipeline {
