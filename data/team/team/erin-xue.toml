@@ -3,7 +3,7 @@ name = "Erin Xue"
 title = "Growth Marketer"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "erinhyperplane"
