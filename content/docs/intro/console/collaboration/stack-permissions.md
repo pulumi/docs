@@ -1,11 +1,5 @@
 ---
 title: Stack Permissions
-
-menu:
-    console:
-        parent: collaboration
-        weight: 1
-
 aliases: [/docs/reference/service/roles-and-access-controls]
 ---
 

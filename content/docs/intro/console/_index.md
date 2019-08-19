@@ -1,9 +1,9 @@
 ---
-title: Pulumi Cloud Console
+title: Pulumi Console
 menu:
   intro:
-    parent: concepts
-    weight: 8
+    identifier: console
+    weight: 1
 
 aliases: [/docs/reference/service]
 ---
@@ -40,8 +40,8 @@ or use [teams]({{< relref "teams" >}}) for role-based access control.
 
 ## Integrations and Extensions
 
-Pulumi is integrated with popular 3rd party services such as [GitHub]({{< ref "/docs/intro/console/continuous-delivery/github-app" >}}).
-You can integrate Pulumi into your current [continuous delivery]({{< relref "continuous-delivery" >}}) pipeline.
+Pulumi is integrated with popular 3rd party services such as [GitHub]({{< ref "/docs/guides/continuous-delivery/github-app" >}}).
+You can integrate Pulumi with your current [continuous delivery]({{< relref "/docs/guides/continuous-delivery" >}}) pipeline.
 
 <img class="shadow-2xl lg:max-w-xl" src="/images/docs/github-app/pr-comment.png" alt="Pulumi GitHub App">
 

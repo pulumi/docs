@@ -33,7 +33,7 @@ To use the Pulumi task extension in Azure Pipelines, there are two
 options. The
 full [example](https://github.com/pulumi/pulumi-az-pipelines-task/tree/master/examples) is
 in the source repo. For contrast, without this task extension,
-[here's]({{< ref "/docs/intro/console/continuous-delivery/azure-devops#using-scripts-manual-approach" >}}) how
+[here's]({{< ref "/docs/guides/continuous-delivery/azure-devops#using-scripts-manual-approach" >}}) how
 you would achieve the same, but with scripts.
 
 ## OPTION 1: Using the Classic Editor Console

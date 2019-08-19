@@ -233,7 +233,7 @@ Pulumi's "everything is code" approach means deploying everything can be
 done with a CLI command, unlocking the power of the entire Docker
 platform with a great inner development loop, that works from the
 desktop all the way to production. This entire flow can be
-[easily integrated into your favorite CI/CD pipeline]({{< ref "/docs/intro/console/continuous-delivery" >}}),
+[easily integrated into your favorite CI/CD pipeline]({{< ref "/docs/guides/continuous-delivery" >}}),
 including GitOps workflows.
 
 If we want to augment our service with other AWS resources -- like S3

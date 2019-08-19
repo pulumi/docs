@@ -1,8 +1,9 @@
 ---
-title: Accounts & Billing
+title: Account Management
 
 menu:
-    console:
+    intro:
+        parent: console
         identifier: accounts
         weight: 1
 ---

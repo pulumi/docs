@@ -2,7 +2,8 @@
 title: Collaboration
 
 menu:
-    console:
+    intro:
+        parent: console
         identifier: collaboration
         weight: 2
 ---

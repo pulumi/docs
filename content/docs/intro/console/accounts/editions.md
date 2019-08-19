@@ -1,10 +1,5 @@
 ---
 title: Plans and Editions
-
-menu:
-    console:
-        parent: accounts
-        weight: 1
 ---
 
 There are multiple subscription plans available to Pulumi organizations, each offering an expanding set

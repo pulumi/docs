@@ -1,11 +1,5 @@
 ---
 title: Organizations
-
-menu:
-    console:
-        parent: accounts
-        weight: 3
-
 aliases: [/docs/reference/service/orgs]
 ---
 

@@ -1,8 +1,9 @@
 ---
-title: "Building Extensions"
+title: "Extensions"
 
 menu:
-    console:
+    intro:
+        parent: console
         identifier: extensions
         weight: 6
 ---

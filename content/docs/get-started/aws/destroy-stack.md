@@ -2,7 +2,7 @@
 title: Destroy the Stack
 weight: 10
 menu:
-  getstarted:
+  quickstart:
     parent: aws
     identifier: aws-destroy-stack
 ---

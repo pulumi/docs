@@ -1,10 +1,5 @@
 ---
 title: Accounts
-
-menu:
-    console:
-        parent: accounts
-        weight: 2
 ---
 
 Your Pulumi account is how you authenticate with the Pulumi Cloud Console, and

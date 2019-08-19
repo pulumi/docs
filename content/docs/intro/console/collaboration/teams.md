@@ -1,12 +1,5 @@
 ---
 title: Teams
-
-menu:
-    console:
-        parent: collaboration
-        weight: 3
-
-aliases: [/docs/reference/service/teams]
 ---
 
 The Pulumi Cloud Console offers role-based access control using teams.

@@ -79,7 +79,7 @@ relevant User Guides to get started:
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services]({{< relref "/docs/intro/console/continuous-delivery/aws-code-services" >}})
+* [Using Pulumi from AWS Code Services]({{< relref "/docs/guides/continuous-delivery/aws-code-services" >}})
 
 ### Other AWS Services
 

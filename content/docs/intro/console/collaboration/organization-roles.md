@@ -1,10 +1,5 @@
 ---
 title: Organization Roles
-
-menu:
-    console:
-        parent: collaboration
-        weight: 2
 ---
 
 Stacks in the Pulumi Cloud Console are grouped by organizations. And in order to access the

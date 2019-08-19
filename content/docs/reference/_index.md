@@ -9,13 +9,13 @@ This section provides all published technical documentation for the Pulumi platf
 ## Learning Pulumi
 
 * [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}): an overview of the programming model and relevant concepts
-* [Command Line]({{< relref "cli.md" >}}): most commonly used commands, in addition to full command and flag documentation
+* [Command Line]({{< relref "/docs/reference/cli" >}}): most commonly used commands, in addition to full command and flag documentation
 * [Clouds]({{< relref "/docs/intro/clouds-and-languages" >}}): learn what clouds and language runtimes are supported and how to use them
 
 ## Using Pulumi in Production or in a Team
 
 * [Teams and Collaboration]({{< relref "/docs/intro/console/collaboration" >}}): use Pulumi in your team, with organizations, RBAC, and more
-* [Continuous Delivery]({{< relref "/docs/intro/console/continuous-delivery" >}}): hook Pulumi up to your CI/CD system to get continuous apps and infrastructure delivery
+* [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}}): hook Pulumi up to your CI/CD system to get continuous apps and infrastructure delivery
 
 ## Useful Reference Material
 
