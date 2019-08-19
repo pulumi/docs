@@ -10,8 +10,6 @@ meta_image: "feature.png"
 
 We are very excited to announce that we have partnered with GitHub to offer our users better protection for their Pulumi Access Tokens.
 
-## Pulumi Access Tokens
-
 By default, Pulumi users manage the state of their cloud infrastructure deployments using https://app.pulumi.com. This service provides state storage, concurrency control, audit history and access controls for both individuals and teams working with Pulumi.  Each user and service account can generate one or more Pulumi Access Tokens to be used to authenticate with this service.  These access tokens can be used on both local development machines, as well as in CI/CD systems for automated infrastructure deployments.  These access tokens are sensitive secrets which should never be shared publicly, and in particular should never be committed to source control.
 
 ## How GitHub Token Scanning Works for Pulumi Users
