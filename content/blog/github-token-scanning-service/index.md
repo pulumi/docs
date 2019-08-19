@@ -4,6 +4,7 @@ authors: ["praneet-loke"]
 tags: ["Security", "GitHub", "Token Scanning", "Exposed Token", "Leaked Token", "Pulumi Token Scanning"]
 date: "2019-08-19"
 
+meta_desc: "Protect your Pulumi Access Tokens with GitHub Token Scanning."
 meta_image: "feature.png"
 ---
 
