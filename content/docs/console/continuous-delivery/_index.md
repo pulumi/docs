@@ -47,6 +47,10 @@ within a [generic CI/CD system]({{< relref "other.md" >}}).
         <img src="/logos/tech/ci-cd/google-cloud-build.png" alt="Google Cloud Build">
         <h4 class="no-anchor">Google Cloud Build</h4>
     </a>
+    <a href="{{< relref jenkins >}}">
+        <img src="/logos/tech/ci-cd/jenkins.svg" alt="Jenkins">
+        <h4 class="no-anchor">Jenkins</h4>
+    </a>
     <a href="{{< relref travis >}}">
         <img src="/logos/tech/ci-cd/travis-ci.svg" alt="TravisCI">
         <h4 class="no-anchor">TravisCI</h4>
