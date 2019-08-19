@@ -11,15 +11,15 @@ We are very excited to announce that we have partnered with GitHub to offer our 
 
 ## Pulumi Access Tokens
 
-Pulumi users by default manage the state of their cloud infrastructure deployments at https://app.pulumi.com. This provides state storage, concurrency control, auditable history and access controls for both individuals and teams working with Pulumi.  Each user and service account can generate one or more Pulumi Access Tokens to be used to authenticate with this service.  These access tokens can be used on both local development machines, as well as in CI/CD systems for automated infrastructure deployments.  These access tokens are sensitive secrets which should never be shared publicly, and in particular should never be committed to source control.
+By default, Pulumi users manage the state of their cloud infrastructure deployments using https://app.pulumi.com. This service provides state storage, concurrency control, audit history and access controls for both individuals and teams working with Pulumi.  Each user and service account can generate one or more Pulumi Access Tokens to be used to authenticate with this service.  These access tokens can be used on both local development machines, as well as in CI/CD systems for automated infrastructure deployments.  These access tokens are sensitive secrets which should never be shared publicly, and in particular should never be committed to source control.
 
 ## How GitHub Token Scanning Works for Pulumi Users
 
-With the recent changes to integrate Pulumi with GitHub Token Scanning, GitHub now scans each commit you push to a **public repo** on github.com for any files containing these tokens. When GitHub's [Token Scanning Service](https://developer.github.com/partnerships/token-scanning/) finds a potential match for our tokens, the service will call ours to have us verify the token. Only Pulumi [Access Tokens](https://app.pulumi.com/account/tokens) generated after 6/28 that contain the prefix `pul-` will be matched by the scanning service.
+With the recent changes to integrate Pulumi with GitHub Token Scanning, GitHub now scans each commit you push to a **public repo** on github.com for any files containing these tokens. When GitHub's [Token Scanning Service](https://developer.github.com/partnerships/token-scanning/) finds a potential match for our tokens, the service will call ours to have us verify the token. Only Pulumi [Access Tokens](https://app.pulumi.com/account/tokens) generated after June 28, 2019 that contain the prefix `pul-` will be matched by the scanning service.
 
 During the processing of the requests from the Token Scanning Service, if we find that the token belongs to a Pulumi account, we will use the primary email on the account to notify the user. We will not, however, revoke the token automatically. So ensure that your account's email address is up-to-date by going to your [profile](https://app.pulumi.com/account/profile) in the Pulumi Console.
 
-The whole process, from the check-in to the email notification, typically takes just a few seconds. So you would likely get notified before you even use the exposed token.
+The whole process, from the check-in to the email notification, typically takes just a few seconds, minimizing the window of an accidental breach.  Of course, best practice is to avoid checking in the token at all!
 
 ## Avoid Checking-In The Token In The First Place
 
