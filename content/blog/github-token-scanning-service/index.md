@@ -12,6 +12,8 @@ We are very excited to announce that we have partnered with GitHub to offer our 
 
 By default, Pulumi users manage the state of their cloud infrastructure deployments using [https://app.pulumi.com](https://app.pulumi.com). This service provides state storage, concurrency control, audit history and access controls for both individuals and teams working with Pulumi.  Each user and service account can generate one or more Pulumi Access Tokens to be used to authenticate with this service.  These access tokens can be used on both local development machines, as well as in CI/CD systems for automated infrastructure deployments.  These access tokens are sensitive secrets which should never be shared publicly, and in particular should never be committed to source control.
 
+<!--more-->
+
 ## How GitHub Token Scanning Works for Pulumi Users
 
 With the recent changes to integrate Pulumi with GitHub Token Scanning, GitHub now scans each commit you push to a **public repo** on github.com for any files containing these tokens. When GitHub's [Token Scanning Service](https://developer.github.com/partnerships/token-scanning/) finds a potential match for our tokens, the service will call ours to have us verify the token. Only Pulumi [Access Tokens](https://app.pulumi.com/account/tokens) generated after June 28, 2019 that contain the prefix `pul-` will be matched by the scanning service.
