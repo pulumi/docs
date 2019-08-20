@@ -2,7 +2,7 @@
 title: Pulumi Cloud Framework
 ---
 
-<img src="/images/docs/get-started/cloudfx-purple.png" align="right">
+<img src="/images/docs/quickstart/cloudfx-purple.png" align="right">
 
 The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
 
