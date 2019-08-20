@@ -7,7 +7,7 @@
     {{ else if hasPrefix .RelPermalink "/docs/" }}
         
         <!-- Get Started guides and installation -->
-        <h5>Getting Started</h5>
+        <h5 class="no-anchor">Getting Started</h5>
         <h4 class="no-anchor -mt-1">
             <a href="{{ relref . "/docs/get-started" }}">Overview</a>
         </h4>
@@ -17,22 +17,22 @@
         </h4>
         
         <!-- Core concepts, supported clouds, comparison -->
-        <h5>Intro</h5>
+        <h5 class="no-anchor">Intro</h5>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.intro) }}
         
         <!-- Guides and Tutorials -->
-        <h5>Guides and Tutorials</h5>
+        <h5 class="no-anchor">Guides and Tutorials</h5>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.userguides) }}
         
         <!-- API, CLI, and glossary -->
-        <h5>Reference</h5>
+        <h5 class="no-acnhor">Reference</h5>
         <h4 class="no-anchor -mt-1">
             <a href="{{ relref . "/docs/reference" }}">Overview</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
         
         <!-- Troubleshooting and FAQ -->
-        <h5>Support</h5>
+        <h5 class="no-anchor">Support</h5>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.troubleshooting) }}
     {{ end }}
 </aside>

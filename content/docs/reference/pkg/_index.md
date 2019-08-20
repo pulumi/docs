@@ -1,5 +1,5 @@
 ---
-title: API / SDK Reference
+title: API Reference
 menu:
   reference:
     identifier: api

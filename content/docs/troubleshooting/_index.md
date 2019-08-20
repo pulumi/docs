@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting & Support
+title: Troubleshooting
 menu:
   troubleshooting:
     weight: 1
