@@ -6,17 +6,13 @@ menu:
     weight: 1
 ---
 
-<<<<<<< HEAD
 Pulumi uses a desired state model for managing infrastructure. A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}), and so on.) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
-=======
-When a Pulumi program is deployed via `pulumi up`, there are a few processes involved. The _language host_ launches Node or Python and observes the running program. The host interacts with the Pulumi _engine_, which is the part of the CLI that determines which resource changes to make (if any). Any resource changes are then executed via an underlying _provider_, such as [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}), and so on. The engine connects to pulumi.com to retrieve the stack's _checkpoint_, which stores the last known state of provisioned resources.
->>>>>>> 1a65311f... Intermediate commit for fixing paths
 
 The following diagram illustrates the interaction between these parts of the system:
 
 <img src="/images/docs/reference/engine-block-diagram.png" alt="Pulumi engine and providers" width="600">
 
-Let's talk a little bit about each of these components and then see how they all fit together during an invocation of `pulumi up`
+In the next section, we will describe each of these components and see how they all fit together during an invocation of `pulumi up`.
 
 ## Language Hosts
 
@@ -144,13 +140,7 @@ mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-
 appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
 ```
 
-<<<<<<< HEAD
-This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its current state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state and so it must create a new S3 bucket.  Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
-||||||| merged common ancestors
-This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state and so it must create a new S3 bucket.  Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
-=======
 This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state and so it must create a new S3 bucket.  Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
->>>>>>> Respond to PR feedback
 
 ## Creation and Deletion Order
 
