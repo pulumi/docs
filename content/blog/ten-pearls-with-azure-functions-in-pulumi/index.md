@@ -1,7 +1,6 @@
 ---
 title: "Ten Pearls With Azure Functions in Pulumi"
 date: 2019-08-21
-draft: true
 meta_image: meta.png
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Serverless"]
