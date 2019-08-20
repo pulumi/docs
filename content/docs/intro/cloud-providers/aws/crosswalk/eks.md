@@ -3,7 +3,7 @@ title: "AWS Elastic Kubernetes Service (EKS)"
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/cloud-providers/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
@@ -525,7 +525,7 @@ To ease doing this against an EKS cluster just created, the cluster object itsel
 
 For more information about configuring access to multiple clusters, see [Configure Access to Multiple Clusters](
 https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) and the
-[Pulumi Kubernetes Setup documentation]({{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}}).
+[Pulumi Kubernetes Setup documentation]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}).
 
 ## Deploying Existing Kubernetes YAML Config to Your EKS Cluster
 

@@ -122,6 +122,6 @@ can see `canary-example-app` and `canary-staging-app` created.
    before it terminates.
 
 [install]: {{< relref "/docs/install.md" >}}
-[configuration]: {{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}}
+[configuration]: {{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/

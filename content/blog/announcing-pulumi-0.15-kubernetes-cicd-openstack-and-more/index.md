@@ -17,7 +17,7 @@ it [available to download]({{< ref "/install" >}}).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
 ([Kubernetes]({{< ref "/docs/get-started/kubernetes" >}}) and
-[OpenStack]({{< ref "/docs/intro/clouds-and-languages/openstack" >}})), is faster
+[OpenStack]({{< ref "/docs/intro/cloud-providers/openstack" >}})), is faster
 (Parallelism, simpler (native
 TypeScript support), richer
 (serverless frameworks for Azure and

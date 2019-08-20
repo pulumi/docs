@@ -48,7 +48,7 @@ Check out [Pulumi: A Better Way to Kubernetes][better-way-to-k8s] for details!
 
 [upstream]: https://kubernetes.io/docs/reference/
 [eks]: https://aws.amazon.com/eks/
-[faq]: {{< relref "/docs/intro/clouds-and-languages/kubernetes/faq.md" >}}
+[faq]: {{< relref "/docs/intro/cloud-providers/kubernetes/faq.md" >}}
 [gcp]: {{< relref "/docs/get-started/gcp" >}}
 [kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
 [gke-tutorial]: {{< relref "/docs/tutorials/kubernetes/tutorial-gke.md" >}}

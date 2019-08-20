@@ -61,7 +61,7 @@ In Pulumi, you can group multiple resources in a [component](#components). A com
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "/docs/intro/clouds-and-languages/javascript" >}}) or [Python]({{< relref "/docs/intro/clouds-and-languages/python" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "/docs/reference/pkg" >}}).
+Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}) or [Python]({{< relref "/docs/intro/languages/python" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "/docs/reference/pkg" >}}).
 
 When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or prebuilt Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 

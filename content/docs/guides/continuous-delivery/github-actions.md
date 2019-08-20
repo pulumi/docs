@@ -127,10 +127,10 @@ GitHub Action to communicate with the Pulumi service.
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
 
-* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/clouds-and-languages/azure/setup.md" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/clouds-and-languages/gcp/setup.md" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/clouds-and-languages/kubernetes/setup.md" >}})
+* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}})
+* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup.md" >}})
+* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}})
 
 > **Important**: Remember to add these variable names to the `secrets` lists in your
 > workflow `action` blocks, or GitHub Actions won't make them available to the running

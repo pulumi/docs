@@ -3,12 +3,12 @@ title: "Pulumi Crosswalk for AWS"
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/docs/intro/cloud-providers/aws/crosswalk/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure.
 
-<img src="/images/docs/intro/clouds-and-languages/aws/crosswalk/arch.png">
+<img src="/images/docs/intro/cloud-providers/aws/crosswalk/arch.png">
 
 ## Overview
 
@@ -51,7 +51,7 @@ This example uses the default VPC and reasonable security defaults, but supports
 
 ## Getting Started
 
-To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/install.md" >}}), and [configure it to work with your AWS account]({{< relref "/docs/intro/clouds-and-languages/aws/setup.md" >}}). Afterwards,
+To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/install.md" >}}), and [configure it to work with your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}). Afterwards,
 [try the Getting Started tutorial]({{< relref "/docs/tutorials/aws/tutorial-service.md" >}}) or select one of the
 relevant User Guides to get started:
 
@@ -98,7 +98,7 @@ and [Kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues/589)).
 ### What Languages are Supported?
 
 Pulumi Crosswalk for AWS is currently supported only in
-[Node.js (JavaScript or TypeScript) languages]({{< relref "/docs/intro/clouds-and-languages/javascript" >}}). Support for other languages,
+[Node.js (JavaScript or TypeScript) languages]({{< relref "/docs/intro/languages/javascript" >}}). Support for other languages,
 [including Python](https://github.com/pulumi/pulumi-awsx/issues/308), is on the future roadmap.
 
 ### What Packages Define Pulumi Crosswalk for AWS?

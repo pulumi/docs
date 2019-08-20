@@ -15,7 +15,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/a
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/clouds-and-languages/azure/setup.md" >}}) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}) for details.
 
 ## Getting Started
 

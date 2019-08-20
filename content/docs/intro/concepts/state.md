@@ -66,11 +66,11 @@ of your S3 bucket.
 Visit the following links for details on cloud provider
 CLI and storage setup:
 
-- **AWS S3.** _See [AWS Setup](/docs/intro/clouds-and-languages/aws/setup)
+- **AWS S3.** _See [AWS Setup](/docs/intro/cloud-providers/aws/setup)
 and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)._
-- **Azure Blob.** _See [Azure Setup](/docs/intro/clouds-and-languages/azure/setup)
+- **Azure Blob.** _See [Azure Setup](/docs/intro/cloud-providers/azure/setup)
 and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli)._
-- **Google Cloud Storage.** _See [GCP Setup](/docs/intro/clouds-and-languages/gcp/setup)
+- **Google Cloud Storage.** _See [GCP Setup](/docs/intro/cloud-providers/gcp/setup)
 and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/get-starteds)._
 
 ### Pulumi backend features

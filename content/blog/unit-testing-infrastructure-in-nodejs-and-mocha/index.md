@@ -106,7 +106,7 @@ export const cluster = new eks.Cluster("my-cluster", {
 
 > If you want to create a fresh Pulumi project and follow along, simply
 > [install the CLI](https://www.pulumi.com/docs/install/), ensure it is
-> [configured for your AWS account](https://www.pulumi.com/docs/intro/clouds-and-languages/aws/setup/),
+> [configured for your AWS account](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/),
 > and run `pulumi new aws-typescript` to create an empty project. Swap out the contents
 > of `index.ts` with the above.
 
