@@ -30,14 +30,14 @@ title: Module binaryauthorization
 <li><a href="#PolicyState">interface PolicyState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts">binaryauthorization/attestor.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts">binaryauthorization/policy.ts</a> 
+<a href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts" >}}">binaryauthorization/attestor.ts</a> <a href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts" >}}">binaryauthorization/policy.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Attestor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L58">class <b>Attestor</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L58" >}}">class <b>Attestor</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -94,7 +94,7 @@ qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Attestor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L88" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -111,7 +111,7 @@ Create a Attestor resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L67" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -125,7 +125,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -135,7 +135,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -149,7 +149,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-attestationAuthorityNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L85">property <b>attestationAuthorityNote</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L85" >}}">property <b>attestationAuthorityNote</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -169,7 +169,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L86">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L86" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -177,7 +177,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -189,7 +189,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L87" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -197,7 +197,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L88">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L88" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -205,7 +205,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attestor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -218,7 +218,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L55">class <b>Policy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L55" >}}">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -272,7 +272,7 @@ const policy = new gcp.binaryauthorization.Policy("policy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L86" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -289,7 +289,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L64" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -303,7 +303,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -313,7 +313,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L75" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -327,7 +327,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-admissionWhitelistPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L82">property <b>admissionWhitelistPatterns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L82" >}}">property <b>admissionWhitelistPatterns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>admissionWhitelistPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -337,7 +337,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-clusterAdmissionRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L83">property <b>clusterAdmissionRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L83" >}}">property <b>clusterAdmissionRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clusterAdmissionRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -350,7 +350,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-defaultAdmissionRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L84">property <b>defaultAdmissionRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L84" >}}">property <b>defaultAdmissionRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -362,7 +362,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L85" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -370,7 +370,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -382,7 +382,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L86">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L86" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -390,7 +390,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -403,7 +403,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AttestorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L140">interface <b>AttestorArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L140" >}}">interface <b>AttestorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -412,7 +412,7 @@ The set of arguments for constructing a Attestor resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AttestorArgs-attestationAuthorityNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L141">property <b>attestationAuthorityNote</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L141" >}}">property <b>attestationAuthorityNote</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -432,7 +432,7 @@ The set of arguments for constructing a Attestor resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttestorArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L142" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -440,7 +440,7 @@ The set of arguments for constructing a Attestor resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttestorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L143">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L143" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -448,7 +448,7 @@ The set of arguments for constructing a Attestor resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttestorArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L144">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L144" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -457,7 +457,7 @@ The set of arguments for constructing a Attestor resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AttestorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L130">interface <b>AttestorState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L130" >}}">interface <b>AttestorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -466,7 +466,7 @@ Input properties used for looking up and filtering Attestor resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AttestorState-attestationAuthorityNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L131">property <b>attestationAuthorityNote</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L131" >}}">property <b>attestationAuthorityNote</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attestationAuthorityNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -486,7 +486,7 @@ Input properties used for looking up and filtering Attestor resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttestorState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L132">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L132" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -494,7 +494,7 @@ Input properties used for looking up and filtering Attestor resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttestorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L133" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -502,7 +502,7 @@ Input properties used for looking up and filtering Attestor resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttestorState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/attestor.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/attestor.ts#L134" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -511,7 +511,7 @@ Input properties used for looking up and filtering Attestor resources.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L141">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L141" >}}">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -520,7 +520,7 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-admissionWhitelistPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L142">property <b>admissionWhitelistPatterns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L142" >}}">property <b>admissionWhitelistPatterns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -530,7 +530,7 @@ The set of arguments for constructing a Policy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-clusterAdmissionRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L143">property <b>clusterAdmissionRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L143" >}}">property <b>clusterAdmissionRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -543,7 +543,7 @@ The set of arguments for constructing a Policy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-defaultAdmissionRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L144">property <b>defaultAdmissionRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L144" >}}">property <b>defaultAdmissionRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -555,7 +555,7 @@ The set of arguments for constructing a Policy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L145">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L145" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -563,7 +563,7 @@ The set of arguments for constructing a Policy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L146">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L146" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -572,7 +572,7 @@ The set of arguments for constructing a Policy resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L130">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L130" >}}">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -581,7 +581,7 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-admissionWhitelistPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L131">property <b>admissionWhitelistPatterns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L131" >}}">property <b>admissionWhitelistPatterns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -591,7 +591,7 @@ Input properties used for looking up and filtering Policy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-clusterAdmissionRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L132">property <b>clusterAdmissionRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L132" >}}">property <b>clusterAdmissionRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -604,7 +604,7 @@ Input properties used for looking up and filtering Policy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-defaultAdmissionRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L133">property <b>defaultAdmissionRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L133" >}}">property <b>defaultAdmissionRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAdmissionRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -616,7 +616,7 @@ Input properties used for looking up and filtering Policy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L134">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L134" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -624,7 +624,7 @@ Input properties used for looking up and filtering Policy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/binaryauthorization/policy.ts#L135">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="binaryauthorization/policy.ts#L135" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

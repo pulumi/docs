@@ -30,14 +30,14 @@ title: Module pagerduty
 <li><a href="#ServiceObjectState">interface ServiceObjectState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts">pagerduty/integration.ts</a> <a href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts">pagerduty/serviceObject.ts</a> 
+<a href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts" >}}">pagerduty/integration.ts</a> <a href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts" >}}">pagerduty/serviceObject.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Integration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L10">class <b>Integration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L10" >}}">class <b>Integration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -47,7 +47,7 @@ title: Module pagerduty
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -64,7 +64,7 @@ Create a Integration resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -78,7 +78,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -88,7 +88,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -102,7 +102,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L40">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L40" >}}">property <b>apiToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -113,7 +113,7 @@ Your PagerDuty API token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -125,7 +125,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-individualServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L44">property <b>individualServices</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L44" >}}">property <b>individualServices</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>individualServices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -136,7 +136,7 @@ Boolean to specify whether or not individual service objects specified by [datad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-schedules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L48">property <b>schedules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L48" >}}">property <b>schedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -147,7 +147,7 @@ Array of your schedule URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L52">property <b>services</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L52" >}}">property <b>services</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -161,7 +161,7 @@ Array of PagerDuty service objects. **Deprecated** The `services` list is now de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-subdomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L56">property <b>subdomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L56" >}}">property <b>subdomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subdomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -172,7 +172,7 @@ Your PagerDuty account’s personalized subdomain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -185,7 +185,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L37">class <b>ServiceObject</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L37" >}}">class <b>ServiceObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -208,11 +208,11 @@ const pd = new datadog.pagerduty.Integration("pd", {
     ],
     subdomain: "ddog",
 });
-const testingBar = new datadog.pagerduty.ServiceObject("testingBar", {
+const testingBar = new datadog.IntegrationPagerdutyServiceObject("testingBar", {
     serviceKey: "54321098765432109876",
     serviceName: "testingBar",
 }, {dependsOn: [pd]});
-const testingFoo = new datadog.pagerduty.ServiceObject("testingFoo", {
+const testingFoo = new datadog.IntegrationPagerdutyServiceObject("testingFoo", {
     serviceKey: "9876543210123456789",
     serviceName: "testingFoo",
 }, {dependsOn: [pd]});
@@ -222,7 +222,7 @@ const testingFoo = new datadog.pagerduty.ServiceObject("testingFoo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceObject-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -239,7 +239,7 @@ Create a ServiceObject resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L46" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -253,7 +253,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -263,7 +263,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L57" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -277,7 +277,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -289,7 +289,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L64">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L64" >}}">property <b>serviceKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -297,7 +297,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L68">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L68" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -308,7 +308,7 @@ Your Service name in PagerDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -321,7 +321,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L126">interface <b>IntegrationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L126" >}}">interface <b>IntegrationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -330,7 +330,7 @@ The set of arguments for constructing a Integration resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationArgs-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L130">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L130" >}}">property <b>apiToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -341,7 +341,7 @@ Your PagerDuty API token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-individualServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L134">property <b>individualServices</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L134" >}}">property <b>individualServices</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>individualServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -352,7 +352,7 @@ Boolean to specify whether or not individual service objects specified by [datad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-schedules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L138">property <b>schedules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L138" >}}">property <b>schedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -363,7 +363,7 @@ Array of your schedule URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L142">property <b>services</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L142" >}}">property <b>services</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -377,7 +377,7 @@ Array of PagerDuty service objects. **Deprecated** The `services` list is now de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-subdomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L146">property <b>subdomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L146" >}}">property <b>subdomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subdomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -389,7 +389,7 @@ Your PagerDuty account’s personalized subdomain name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L100">interface <b>IntegrationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L100" >}}">interface <b>IntegrationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -398,7 +398,7 @@ Input properties used for looking up and filtering Integration resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationState-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L104">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L104" >}}">property <b>apiToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -409,7 +409,7 @@ Your PagerDuty API token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-individualServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L108">property <b>individualServices</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L108" >}}">property <b>individualServices</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>individualServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -420,7 +420,7 @@ Boolean to specify whether or not individual service objects specified by [datad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-schedules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L112">property <b>schedules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L112" >}}">property <b>schedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -431,7 +431,7 @@ Array of your schedule URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L116">property <b>services</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L116" >}}">property <b>services</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -445,7 +445,7 @@ Array of PagerDuty service objects. **Deprecated** The `services` list is now de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-subdomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/integration.ts#L120">property <b>subdomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L120" >}}">property <b>subdomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subdomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -457,7 +457,7 @@ Your PagerDuty account’s personalized subdomain name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceObjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L120">interface <b>ServiceObjectArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L120" >}}">interface <b>ServiceObjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -466,7 +466,7 @@ The set of arguments for constructing a ServiceObject resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceObjectArgs-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L121">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L121" >}}">property <b>serviceKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -474,7 +474,7 @@ The set of arguments for constructing a ServiceObject resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObjectArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L125">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L125" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -486,7 +486,7 @@ Your Service name in PagerDuty.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceObjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L109">interface <b>ServiceObjectState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L109" >}}">interface <b>ServiceObjectState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -495,7 +495,7 @@ Input properties used for looking up and filtering ServiceObject resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceObjectState-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L110">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L110" >}}">property <b>serviceKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -503,7 +503,7 @@ Input properties used for looking up and filtering ServiceObject resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObjectState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/d9a3c98a241117709c0ac0993d36a33cc3740e08/sdk/nodejs/pagerduty/serviceObject.ts#L114">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L114" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

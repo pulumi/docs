@@ -33,14 +33,14 @@ title: Module net
 <li><a href="#VlanState">interface VlanState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts">net/route.ts</a> <a href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts">net/selfIp.ts</a> <a href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts">net/vlan.ts</a> 
+<a href="{{< pkg-url pkg="f5bigip" path="net/route.ts" >}}">net/route.ts</a> <a href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts" >}}">net/selfIp.ts</a> <a href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts" >}}">net/vlan.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Route">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L29">class <b>Route</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L29" >}}">class <b>Route</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -69,7 +69,7 @@ const route2 = new f5bigip.net.Route("route2", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L67" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -86,7 +86,7 @@ Create a Route resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -100,7 +100,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -110,7 +110,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -124,7 +124,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-gw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L59">property <b>gw</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L59" >}}">property <b>gw</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gw: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -135,7 +135,7 @@ Gateway address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -158,7 +158,7 @@ Name of the route
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L67">property <b>network</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L67" >}}">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -169,7 +169,7 @@ Specifies a gateway address for the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -182,7 +182,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfIp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L14">class <b>SelfIp</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L14" >}}">class <b>SelfIp</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -196,7 +196,7 @@ Resource should be named with their "full path". The full path is the combinatio
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfIp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -213,7 +213,7 @@ Create a SelfIp resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L23" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -227,7 +227,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -237,7 +237,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L34" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -251,7 +251,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -263,7 +263,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L44">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L44" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -274,7 +274,7 @@ The Self IP's address and netmask.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L48" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -285,7 +285,7 @@ Name of the selfip
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-trafficGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L52">property <b>trafficGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L52" >}}">property <b>trafficGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>trafficGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -296,7 +296,7 @@ Specifies the traffic group, defaults to `traffic-group-local-only` if not speci
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -308,7 +308,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIp-vlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L56">property <b>vlan</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L56" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -320,7 +320,7 @@ Specifies the VLAN for which you are setting a self IP address. This setting mus
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Vlan">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L32">class <b>Vlan</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L32" >}}">class <b>Vlan</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -352,7 +352,7 @@ const vlan1 = new f5bigip.net.Vlan("vlan1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Vlan-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -369,7 +369,7 @@ Create a Vlan resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -383,7 +383,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -393,7 +393,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -407,7 +407,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -419,7 +419,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-interfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L62">property <b>interfaces</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L62" >}}">property <b>interfaces</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>interfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -433,7 +433,7 @@ Specifies which interfaces you want this VLAN to use for traffic management.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L66" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -444,7 +444,7 @@ Name of the vlan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L70">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L70" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -455,7 +455,7 @@ Specifies a number that the system adds into the header of any frame passing thr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vlan-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -468,7 +468,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L128">interface <b>RouteArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L128" >}}">interface <b>RouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -477,7 +477,7 @@ The set of arguments for constructing a Route resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RouteArgs-gw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L132">property <b>gw</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L132" >}}">property <b>gw</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -488,7 +488,7 @@ Gateway address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L136" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -499,7 +499,7 @@ Name of the route
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L140">property <b>network</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L140" >}}">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -511,7 +511,7 @@ Specifies a gateway address for the route.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L110">interface <b>RouteState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L110" >}}">interface <b>RouteState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -520,7 +520,7 @@ Input properties used for looking up and filtering Route resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RouteState-gw">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L114">property <b>gw</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L114" >}}">property <b>gw</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gw?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -531,7 +531,7 @@ Gateway address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -542,7 +542,7 @@ Name of the route
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/route.ts#L122">property <b>network</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/route.ts#L122" >}}">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -554,7 +554,7 @@ Specifies a gateway address for the route.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfIpArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L126">interface <b>SelfIpArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L126" >}}">interface <b>SelfIpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -563,7 +563,7 @@ The set of arguments for constructing a SelfIp resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfIpArgs-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L130">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L130" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -574,7 +574,7 @@ The Self IP's address and netmask.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIpArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -585,7 +585,7 @@ Name of the selfip
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIpArgs-trafficGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L138">property <b>trafficGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L138" >}}">property <b>trafficGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>trafficGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -596,7 +596,7 @@ Specifies the traffic group, defaults to `traffic-group-local-only` if not speci
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIpArgs-vlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L142">property <b>vlan</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L142" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -608,7 +608,7 @@ Specifies the VLAN for which you are setting a self IP address. This setting mus
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfIpState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L104">interface <b>SelfIpState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L104" >}}">interface <b>SelfIpState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -617,7 +617,7 @@ Input properties used for looking up and filtering SelfIp resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfIpState-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L108">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L108" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -628,7 +628,7 @@ The Self IP's address and netmask.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIpState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -639,7 +639,7 @@ Name of the selfip
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIpState-trafficGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L116">property <b>trafficGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L116" >}}">property <b>trafficGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>trafficGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -650,7 +650,7 @@ Specifies the traffic group, defaults to `traffic-group-local-only` if not speci
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfIpState-vlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/selfIp.ts#L120">property <b>vlan</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/selfIp.ts#L120" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -662,7 +662,7 @@ Specifies the VLAN for which you are setting a self IP address. This setting mus
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VlanArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L128">interface <b>VlanArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L128" >}}">interface <b>VlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -671,7 +671,7 @@ The set of arguments for constructing a Vlan resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VlanArgs-interfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L132">property <b>interfaces</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L132" >}}">property <b>interfaces</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -685,7 +685,7 @@ Specifies which interfaces you want this VLAN to use for traffic management.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VlanArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L136" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -696,7 +696,7 @@ Name of the vlan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VlanArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L140">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L140" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -708,7 +708,7 @@ Specifies a number that the system adds into the header of any frame passing thr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VlanState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L110">interface <b>VlanState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L110" >}}">interface <b>VlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -717,7 +717,7 @@ Input properties used for looking up and filtering Vlan resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VlanState-interfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L114">property <b>interfaces</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L114" >}}">property <b>interfaces</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>interfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -731,7 +731,7 @@ Specifies which interfaces you want this VLAN to use for traffic management.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VlanState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -742,7 +742,7 @@ Name of the vlan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VlanState-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/daf56d732931e580cea58d86df8c4c855cf3457a/sdk/nodejs/net/vlan.ts#L122">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="net/vlan.ts#L122" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>

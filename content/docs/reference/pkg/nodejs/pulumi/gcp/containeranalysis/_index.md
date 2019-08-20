@@ -27,14 +27,14 @@ title: Module containeranalysis
 <li><a href="#NoteState">interface NoteState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts">containeranalysis/note.ts</a> 
+<a href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts" >}}">containeranalysis/note.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Note">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L18">class <b>Note</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L18" >}}">class <b>Note</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -52,7 +52,7 @@ To get more information about Note, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Note-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L47"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L47" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -69,7 +69,7 @@ Create a Note resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L27" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -83,7 +83,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -93,7 +93,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L38" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -107,7 +107,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-attestationAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L45">property <b>attestationAuthority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L45" >}}">property <b>attestationAuthority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -119,7 +119,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -131,7 +131,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L46" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -139,7 +139,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L47">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L47" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Note-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -160,7 +160,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NoteArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L96">interface <b>NoteArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L96" >}}">interface <b>NoteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -169,7 +169,7 @@ The set of arguments for constructing a Note resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NoteArgs-attestationAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L97">property <b>attestationAuthority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L97" >}}">property <b>attestationAuthority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attestationAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -181,7 +181,7 @@ The set of arguments for constructing a Note resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NoteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L98" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -189,7 +189,7 @@ The set of arguments for constructing a Note resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NoteArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L99">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L99" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -198,7 +198,7 @@ The set of arguments for constructing a Note resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NoteState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L87">interface <b>NoteState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L87" >}}">interface <b>NoteState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -207,7 +207,7 @@ Input properties used for looking up and filtering Note resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NoteState-attestationAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L88">property <b>attestationAuthority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L88" >}}">property <b>attestationAuthority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attestationAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -219,7 +219,7 @@ Input properties used for looking up and filtering Note resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NoteState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L89" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -227,7 +227,7 @@ Input properties used for looking up and filtering Note resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NoteState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/e0c4a091bee188617832b38acaf43fc66101bbac/sdk/nodejs/containeranalysis/note.ts#L90">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="containeranalysis/note.ts#L90" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

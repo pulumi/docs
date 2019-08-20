@@ -25,14 +25,14 @@ title: Module config
 <li><a href="#authToken">let authToken</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-packet/blob/ec7bf7d2a78794a584168af72beb78a7c5b02e21/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="{{< pkg-url pkg="packet" path="config/vars.ts" >}}">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="authToken">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-packet/blob/ec7bf7d2a78794a584168af72beb78a7c5b02e21/sdk/nodejs/config/vars.ts#L12">let <b>authToken</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="config/vars.ts#L12" >}}">let <b>authToken</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> authToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;authToken&#34;) || utilities.getEnv(&#34;PACKET_AUTH_TOKEN&#34;)</span>;</pre>

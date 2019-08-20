@@ -33,14 +33,14 @@ title: Module mariadb
 <li><a href="#ServerState">interface ServerState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts">mariadb/database.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts">mariadb/firewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts">mariadb/server.ts</a> 
+<a href="{{< pkg-url pkg="azure" path="mariadb/database.ts" >}}">mariadb/database.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts" >}}">mariadb/firewallRule.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/server.ts" >}}">mariadb/server.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Database">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L51">class <b>Database</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L51" >}}">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -91,7 +91,7 @@ const exampleDatabase = new azure.mariadb.Database("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L98" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +108,7 @@ Create a Database resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -122,7 +122,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -132,7 +132,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -146,7 +146,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L81">property <b>charset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L81" >}}">property <b>charset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -157,7 +157,7 @@ Specifies the Charset for the MariaDB Database, which needs [to be a valid Maria
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L85">property <b>collation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L85" >}}">property <b>collation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -168,7 +168,7 @@ Specifies the Collation for the MariaDB Database, which needs [to be a valid Mar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -180,7 +180,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -192,7 +192,7 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L94">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L94" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -203,7 +203,7 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L98">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L98" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -214,7 +214,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -227,7 +227,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L42">class <b>FirewallRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L42" >}}">class <b>FirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -269,7 +269,7 @@ const test = new azure.mariadb.FirewallRule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L88" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -286,7 +286,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -300,7 +300,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -310,7 +310,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -324,7 +324,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L72">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L72" >}}">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -335,7 +335,7 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -347,7 +347,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -358,7 +358,7 @@ Specifies the name of the MariaDB Firewall Rule. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L80" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +369,7 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L84">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L84" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -380,7 +380,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L88">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L88" >}}">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -391,7 +391,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -404,7 +404,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Server">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L46">class <b>Server</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L46" >}}">class <b>Server</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -450,7 +450,7 @@ const testServer = new azure.mariadb.Server("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L116" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -467,7 +467,7 @@ Create a Server resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -481,7 +481,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -491,7 +491,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -505,7 +505,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L76">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L76" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -516,7 +516,7 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L80">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L80" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -527,7 +527,7 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L84">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L84" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -538,7 +538,7 @@ The FQDN of the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -550,7 +550,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L88">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L88" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -561,7 +561,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L92" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -572,7 +572,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L96">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L96" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -583,7 +583,7 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L100">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L100" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -599,7 +599,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L104">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L104" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -610,7 +610,7 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L108">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L108" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -625,7 +625,7 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L112" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -636,7 +636,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -648,7 +648,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L116">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L116" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -660,7 +660,7 @@ Specifies the version of MariaDB to use. The valid value is `10.2`. Changing thi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L178">interface <b>DatabaseArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L178" >}}">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -669,7 +669,7 @@ The set of arguments for constructing a Database resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L182">property <b>charset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L182" >}}">property <b>charset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -680,7 +680,7 @@ Specifies the Charset for the MariaDB Database, which needs [to be a valid Maria
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L186">property <b>collation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L186" >}}">property <b>collation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -691,7 +691,7 @@ Specifies the Collation for the MariaDB Database, which needs [to be a valid Mar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L191" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -703,7 +703,7 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L195">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L195" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -714,7 +714,7 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L199">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L199" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -726,7 +726,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L151">interface <b>DatabaseState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L151" >}}">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -735,7 +735,7 @@ Input properties used for looking up and filtering Database resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L155">property <b>charset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L155" >}}">property <b>charset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>charset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -746,7 +746,7 @@ Specifies the Charset for the MariaDB Database, which needs [to be a valid Maria
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L159">property <b>collation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L159" >}}">property <b>collation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -757,7 +757,7 @@ Specifies the Collation for the MariaDB Database, which needs [to be a valid Mar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L164" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -769,7 +769,7 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L168" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -780,7 +780,7 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/database.ts#L172">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L172" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -792,7 +792,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L167">interface <b>FirewallRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L167" >}}">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -801,7 +801,7 @@ The set of arguments for constructing a FirewallRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L171">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L171" >}}">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -812,7 +812,7 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L175" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -823,7 +823,7 @@ Specifies the name of the MariaDB Firewall Rule. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L179">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L179" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -834,7 +834,7 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L183">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L183" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -845,7 +845,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L187">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L187" >}}">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -857,7 +857,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L141">interface <b>FirewallRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L141" >}}">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -866,7 +866,7 @@ Input properties used for looking up and filtering FirewallRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L145">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L145" >}}">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -877,7 +877,7 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -888,7 +888,7 @@ Specifies the name of the MariaDB Firewall Rule. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L153">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L153" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -899,7 +899,7 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L157">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L157" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -910,7 +910,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/firewallRule.ts#L161">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L161" >}}">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -922,7 +922,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L240">interface <b>ServerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L240" >}}">interface <b>ServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -931,7 +931,7 @@ The set of arguments for constructing a Server resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L244">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L244" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -942,7 +942,7 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L248">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L248" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -953,7 +953,7 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L252">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L252" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -964,7 +964,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L256" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -975,7 +975,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L260">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L260" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -986,7 +986,7 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L264">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L264" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1002,7 +1002,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L268">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L268" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1013,7 +1013,7 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L272">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L272" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1028,7 +1028,7 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L276">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L276" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1039,7 +1039,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L280">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L280" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1051,7 +1051,7 @@ Specifies the version of MariaDB to use. The valid value is `10.2`. Changing thi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L190">interface <b>ServerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L190" >}}">interface <b>ServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1060,7 +1060,7 @@ Input properties used for looking up and filtering Server resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerState-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L194">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L194" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1071,7 +1071,7 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L198">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L198" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1082,7 +1082,7 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L202">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L202" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1093,7 +1093,7 @@ The FQDN of the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L206">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L206" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1104,7 +1104,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L210" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1115,7 +1115,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L214">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L214" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1126,7 +1126,7 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L218">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L218" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1142,7 +1142,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L222">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L222" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1153,7 +1153,7 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L226">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L226" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1168,7 +1168,7 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L230">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L230" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1179,7 +1179,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/c65ecc4d5fd47a6b7a09d5ea6a52c7a6c272d648/sdk/nodejs/mariadb/server.ts#L234">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L234" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

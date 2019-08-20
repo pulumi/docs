@@ -17,6 +17,7 @@ TOOL_APIDOCGEN="go run ./tools/tscdocgen/*.go"
 
 PULUMI_DOC_TMP=`mktemp -d`
 PULUMI_DOC_BASE=./content/docs/reference/pkg/nodejs/pulumi
+PULUMI_DOC_DATA_BASE=./data/pkg/nodejs/pulumi
 
 # Set this to 1 to run all generation in parallel.
 PARALLEL=0
@@ -54,6 +55,11 @@ generate_docs() {
             cd $3
         fi
 
+        PKG_REPO_DIR=$2
+        if [[ ! -z "$3" ]]; then
+        PKG_REPO_DIR=$PKG_REPO_DIR/$3
+        fi
+
         # Generate the docs, copy any READMEs, and remember the Git hash.
         ${TOOL_TYPEDOC} --json "${PULUMI_DOC_TMP}/$1.docs.json" \
             --mode modules --includeDeclarations --excludeExternals --excludePrivate
@@ -63,8 +69,8 @@ generate_docs() {
         # Change back to the origin directory and create the API documents.
         popd
         echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
-        echo -e ${TOOL_APIDOCGEN} "${PKGPATH}" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
-        ${TOOL_APIDOCGEN} "${PKGPATH}" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
+        echo -e ${TOOL_APIDOCGEN} "${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
+        ${TOOL_APIDOCGEN} "${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
     fi
 }
 

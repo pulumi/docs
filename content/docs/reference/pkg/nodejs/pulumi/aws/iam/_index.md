@@ -127,14 +127,14 @@ title: Module iam
 <li><a href="#Principal">type Principal</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts">iam/accessKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts">iam/accountAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts">iam/accountPasswordPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts">iam/documents.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getAccountAlias.ts">iam/getAccountAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts">iam/getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts">iam/getInstanceProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts">iam/getPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts">iam/getPolicyDocument.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts">iam/getRole.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts">iam/getServerCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts">iam/getUser.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts">iam/group.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts">iam/groupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts">iam/groupPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts">iam/groupPolicyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts">iam/instanceProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts">iam/managedPolicies.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts">iam/openIdConnectProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts">iam/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts">iam/policyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts">iam/principals.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts">iam/role.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts">iam/rolePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts">iam/rolePolicyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts">iam/samlProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts">iam/serverCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts">iam/serviceLinkedRole.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts">iam/sshKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts">iam/user.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts">iam/userGroupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts">iam/userLoginProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts">iam/userPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts">iam/userPolicyAttachment.ts</a> 
+<a href="{{< pkg-url pkg="aws" path="iam/accessKey.ts" >}}">iam/accessKey.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts" >}}">iam/accountAlias.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts" >}}">iam/accountPasswordPolicy.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/documents.ts" >}}">iam/documents.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getAccountAlias.ts" >}}">iam/getAccountAlias.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getGroup.ts" >}}">iam/getGroup.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts" >}}">iam/getInstanceProfile.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts" >}}">iam/getPolicy.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts" >}}">iam/getPolicyDocument.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getRole.ts" >}}">iam/getRole.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts" >}}">iam/getServerCertificate.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/getUser.ts" >}}">iam/getUser.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/group.ts" >}}">iam/group.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts" >}}">iam/groupMembership.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts" >}}">iam/groupPolicy.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts" >}}">iam/groupPolicyAttachment.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts" >}}">iam/instanceProfile.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts" >}}">iam/managedPolicies.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts" >}}">iam/openIdConnectProvider.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/policy.ts" >}}">iam/policy.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts" >}}">iam/policyAttachment.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/principals.ts" >}}">iam/principals.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/role.ts" >}}">iam/role.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts" >}}">iam/rolePolicy.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts" >}}">iam/rolePolicyAttachment.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts" >}}">iam/samlProvider.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts" >}}">iam/serverCertificate.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts" >}}">iam/serviceLinkedRole.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/sshKey.ts" >}}">iam/sshKey.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/user.ts" >}}">iam/user.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts" >}}">iam/userGroupMembership.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts" >}}">iam/userLoginProfile.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts" >}}">iam/userPolicy.ts</a> <a href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts" >}}">iam/userPolicyAttachment.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AccessKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L45">class <b>AccessKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L45" >}}">class <b>AccessKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -179,7 +179,7 @@ export const secret = lbAccessKey.encryptedSecret;
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccessKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L108" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -196,7 +196,7 @@ Create a AccessKey resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L54" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -210,7 +210,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -220,7 +220,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L65" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -234,7 +234,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-encryptedSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L77">property <b>encryptedSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L77" >}}">property <b>encryptedSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encryptedSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -247,7 +247,7 @@ for example: `... | base64 --decode | keybase pgp decrypt`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -259,7 +259,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L82">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L82" >}}">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>keyFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -271,7 +271,7 @@ the secret
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L87">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L87" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -283,7 +283,7 @@ keybase username in the form `keybase:some_person_that_exists`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L93">property <b>secret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L93" >}}">property <b>secret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -296,7 +296,7 @@ secret from being stored in plain text
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-sesSmtpPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L99">property <b>sesSmtpPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L99" >}}">property <b>sesSmtpPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sesSmtpPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -309,7 +309,7 @@ algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credential
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L104">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L104" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -321,7 +321,7 @@ Valid values are `Active` and `Inactive`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -333,7 +333,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKey-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L108">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L108" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -345,7 +345,7 @@ The IAM user to associate with this access key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountAlias">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L25">class <b>AccountAlias</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L25" >}}">class <b>AccountAlias</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -370,7 +370,7 @@ const alias = new aws.iam.AccountAlias("alias", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountAlias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L55" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -387,7 +387,7 @@ Create a AccountAlias resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountAlias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -401,7 +401,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountAlias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -411,7 +411,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountAlias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -425,7 +425,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountAlias-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L55">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L55" >}}">property <b>accountAlias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -436,7 +436,7 @@ The account alias
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountAlias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -448,7 +448,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountAlias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -461,7 +461,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountPasswordPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L32">class <b>AccountPasswordPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L32" >}}">class <b>AccountPasswordPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -493,7 +493,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L101" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -510,7 +510,7 @@ Create a AccountPasswordPolicy resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -524,7 +524,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -534,7 +534,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -548,7 +548,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-allowUsersToChangePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L62">property <b>allowUsersToChangePassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L62" >}}">property <b>allowUsersToChangePassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowUsersToChangePassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -559,7 +559,7 @@ Whether to allow users to change their own password
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-expirePasswords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L68">property <b>expirePasswords</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L68" >}}">property <b>expirePasswords</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expirePasswords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -572,7 +572,7 @@ Returns `false` if it is `0` or _not present_.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-hardExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L73">property <b>hardExpiry</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L73" >}}">property <b>hardExpiry</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hardExpiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -584,7 +584,7 @@ Whether users are prevented from setting a new password after their password has
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -596,7 +596,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-maxPasswordAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L77">property <b>maxPasswordAge</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L77" >}}">property <b>maxPasswordAge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxPasswordAge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -607,7 +607,7 @@ The number of days that an user password is valid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-minimumPasswordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L81">property <b>minimumPasswordLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L81" >}}">property <b>minimumPasswordLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>minimumPasswordLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -618,7 +618,7 @@ Minimum length to require for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-passwordReusePrevention">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L85">property <b>passwordReusePrevention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L85" >}}">property <b>passwordReusePrevention</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>passwordReusePrevention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -629,7 +629,7 @@ The number of previous passwords that users are prevented from reusing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-requireLowercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L89">property <b>requireLowercaseCharacters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L89" >}}">property <b>requireLowercaseCharacters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requireLowercaseCharacters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -640,7 +640,7 @@ Whether to require lowercase characters for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-requireNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L93">property <b>requireNumbers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L93" >}}">property <b>requireNumbers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requireNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -651,7 +651,7 @@ Whether to require numbers for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-requireSymbols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L97">property <b>requireSymbols</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L97" >}}">property <b>requireSymbols</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requireSymbols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -662,7 +662,7 @@ Whether to require symbols for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-requireUppercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L101">property <b>requireUppercaseCharacters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L101" >}}">property <b>requireUppercaseCharacters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requireUppercaseCharacters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -673,7 +673,7 @@ Whether to require uppercase characters for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -686,7 +686,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L23">class <b>Group</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L23" >}}">class <b>Group</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -709,7 +709,7 @@ const developers = new aws.iam.Group("developers", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L65" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -726,7 +726,7 @@ Create a Group resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L32" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -740,7 +740,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -750,7 +750,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L43" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -764,7 +764,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L53" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -775,7 +775,7 @@ The ARN assigned by AWS for this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -787,7 +787,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L57" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -798,7 +798,7 @@ The group's name. The name must consist of upper and lowercase alphanumeric char
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L61">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L61" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -809,7 +809,7 @@ Path in which to create the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L65">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L65" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -820,7 +820,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -833,7 +833,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMembership">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L37">class <b>GroupMembership</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L37" >}}">class <b>GroupMembership</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -870,7 +870,7 @@ const team = new aws.iam.GroupMembership("team", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -887,7 +887,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L46" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -901,7 +901,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -911,7 +911,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L57" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -925,7 +925,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L67">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L67" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -936,7 +936,7 @@ The IAM Group name to attach the list of `users` to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -948,7 +948,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L71" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -959,7 +959,7 @@ The name to identify the Group Membership
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -971,7 +971,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L75">property <b>users</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L75" >}}">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -983,7 +983,7 @@ A list of IAM User names to associate with the Group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L41">class <b>GroupPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L41" >}}">class <b>GroupPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1022,7 +1022,7 @@ const myDeveloperPolicy = new aws.iam.GroupPolicy("myDeveloperPolicy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L85" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1039,7 +1039,7 @@ Create a GroupPolicy resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1053,7 +1053,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1063,7 +1063,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1077,7 +1077,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L71">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L71" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1088,7 +1088,7 @@ The IAM group to attach to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1100,7 +1100,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1112,7 +1112,7 @@ assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L81">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L81" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1124,7 +1124,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L85">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L85" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1135,7 +1135,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1148,7 +1148,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupPolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L34">class <b>GroupPolicyAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L34" >}}">class <b>GroupPolicyAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1179,7 +1179,7 @@ const testAttach = new aws.iam.GroupPolicyAttachment("test-attach", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1196,7 +1196,7 @@ Create a GroupPolicyAttachment resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1210,7 +1210,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1220,7 +1220,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1234,7 +1234,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L64">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L64" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Group'>Group</a>&gt;;</pre>
@@ -1245,7 +1245,7 @@ The group the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1257,7 +1257,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L68">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L68" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -1268,7 +1268,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1281,7 +1281,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L44">class <b>InstanceProfile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L44" >}}">class <b>InstanceProfile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1323,7 +1323,7 @@ const testProfile = new aws.iam.InstanceProfile("testProfile", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L103" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1340,7 +1340,7 @@ Create a InstanceProfile resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1354,7 +1354,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1364,7 +1364,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1378,7 +1378,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L74">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L74" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1389,7 +1389,7 @@ The ARN assigned by AWS to the instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L78">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L78" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1400,7 +1400,7 @@ The creation timestamp of the instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1412,7 +1412,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L82" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1423,7 +1423,7 @@ The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L86">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L86" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1434,7 +1434,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L90">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L90" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1445,7 +1445,7 @@ Path in which to create the profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L94">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L94" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1456,7 +1456,7 @@ The role name to include in the profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L99">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L99" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1467,7 +1467,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L103">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L103" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1478,7 +1478,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1491,7 +1491,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OpenIdConnectProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L25">class <b>OpenIdConnectProvider</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L25" >}}">class <b>OpenIdConnectProvider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1516,7 +1516,7 @@ const defaultOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("default"
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L67" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1533,7 +1533,7 @@ Create a OpenIdConnectProvider resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1547,7 +1547,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1557,7 +1557,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1571,7 +1571,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L55" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1582,7 +1582,7 @@ The ARN assigned by AWS for this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-clientIdLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L59">property <b>clientIdLists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L59" >}}">property <b>clientIdLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientIdLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1593,7 +1593,7 @@ A list of client IDs (also known as audiences). When a mobile or web app registe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1605,7 +1605,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-thumbprintLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L63">property <b>thumbprintLists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L63" >}}">property <b>thumbprintLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>thumbprintLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1616,7 +1616,7 @@ A list of server certificate thumbprints for the OpenID Connect (OIDC) identity 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L67">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L67" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1627,7 +1627,7 @@ The URL of the identity provider. Corresponds to the _iss_ claim.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1640,7 +1640,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L39">class <b>Policy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L39" >}}">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1677,7 +1677,7 @@ const policy = new aws.iam.Policy("policy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1694,7 +1694,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1708,7 +1708,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1718,7 +1718,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1732,7 +1732,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L69">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L69" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1743,7 +1743,7 @@ The ARN assigned by AWS to this policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L73" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1754,7 +1754,7 @@ Description of the IAM policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1766,7 +1766,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L77" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1777,7 +1777,7 @@ The name of the policy. If omitted, this provider will assign a random, unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L81">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L81" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1788,7 +1788,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L86">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L86" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1800,7 +1800,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L90">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L90" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1811,7 +1811,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1824,7 +1824,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L69">class <b>PolicyAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L69" >}}">class <b>PolicyAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1888,7 +1888,7 @@ const testAttach = new aws.iam.PolicyAttachment("test-attach", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L115" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1905,7 +1905,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L78" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1919,7 +1919,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1929,7 +1929,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L89" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1943,7 +1943,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L99">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L99" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Group'>Group</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1954,7 +1954,7 @@ The group(s) the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1966,7 +1966,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1977,7 +1977,7 @@ The name of the attachment. This cannot be an empty string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L107">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L107" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -1988,7 +1988,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L111">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L111" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Role'>Role</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1999,7 +1999,7 @@ The role(s) the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2011,7 +2011,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L115">property <b>users</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L115" >}}">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#User'>User</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2023,7 +2023,7 @@ The user(s) the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L64">class <b>Role</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L64" >}}">class <b>Role</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2085,7 +2085,7 @@ const instance = new aws.iam.Role("instance", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L139" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2102,7 +2102,7 @@ Create a Role resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L73" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2116,7 +2116,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2126,7 +2126,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L84" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2140,7 +2140,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L94">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L94" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2151,7 +2151,7 @@ The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-assumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L98">property <b>assumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L98" >}}">property <b>assumeRolePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>assumeRolePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2162,7 +2162,7 @@ The policy that grants an entity permission to assume the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L102">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L102" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2173,7 +2173,7 @@ The creation date of the IAM role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L106">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L106" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2184,7 +2184,7 @@ The description of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-forceDetachPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L110">property <b>forceDetachPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L110" >}}">property <b>forceDetachPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>forceDetachPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2195,7 +2195,7 @@ Specifies to force detaching any policies the role has before destroying it. Def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2207,7 +2207,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L114">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L114" >}}">property <b>maxSessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxSessionDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2218,7 +2218,7 @@ The maximum session duration (in seconds) that you want to set for the specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2229,7 +2229,7 @@ The name of the role. If omitted, this provider will assign a random, unique nam
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L122">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L122" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2240,7 +2240,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L127">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L127" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2252,7 +2252,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L131">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L131" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>permissionsBoundary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2263,7 +2263,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L135">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L135" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2274,7 +2274,7 @@ Key-value mapping of tags for the IAM role
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L139">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L139" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2285,7 +2285,7 @@ The stable and unique string identifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2298,7 +2298,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RolePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L55">class <b>RolePolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L55" >}}">class <b>RolePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2350,7 +2350,7 @@ const testPolicy = new aws.iam.RolePolicy("testPolicy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RolePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2367,7 +2367,7 @@ Create a RolePolicy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L64" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2381,7 +2381,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2391,7 +2391,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L75" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2405,7 +2405,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2417,7 +2417,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L86" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2429,7 +2429,7 @@ assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L91">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L91" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2441,7 +2441,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L95">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L95" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2452,7 +2452,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L99">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L99" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2463,7 +2463,7 @@ The IAM role to attach to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2476,7 +2476,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RolePolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L61">class <b>RolePolicyAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L61" >}}">class <b>RolePolicyAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2534,7 +2534,7 @@ const testAttach = new aws.iam.RolePolicyAttachment("test-attach", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L95" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2551,7 +2551,7 @@ Create a RolePolicyAttachment resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L70" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2565,7 +2565,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2575,7 +2575,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L81" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2589,7 +2589,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2601,7 +2601,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L91">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L91" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -2612,7 +2612,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L95">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L95" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2623,7 +2623,7 @@ The role the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2636,7 +2636,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SamlProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L24">class <b>SamlProvider</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L24" >}}">class <b>SamlProvider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2660,7 +2660,7 @@ const defaultSamlProvider = new aws.iam.SamlProvider("default", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SamlProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2677,7 +2677,7 @@ Create a SamlProvider resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L33" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2691,7 +2691,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2701,7 +2701,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L44" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2715,7 +2715,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L54" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2726,7 +2726,7 @@ The ARN assigned by AWS for this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2738,7 +2738,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L58" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2749,7 +2749,7 @@ The name of the provider to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-samlMetadataDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L62">property <b>samlMetadataDocument</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L62" >}}">property <b>samlMetadataDocument</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>samlMetadataDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2760,7 +2760,7 @@ An XML document generated by an identity provider that supports SAML 2.0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2772,7 +2772,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProvider-validUntil">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L66">property <b>validUntil</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L66" >}}">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validUntil: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2784,7 +2784,7 @@ The expiration date and time for the SAML provider in RFC1123 format, e.g. `Mon,
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L89">class <b>ServerCertificate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L89" >}}">class <b>ServerCertificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2873,7 +2873,7 @@ const ourapp = new aws.elb.LoadBalancer("ourapp", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerCertificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L151" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2890,7 +2890,7 @@ Create a ServerCertificate resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L98">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L98" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2904,7 +2904,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2914,7 +2914,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L109">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L109" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2928,7 +2928,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L119">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L119" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2939,7 +2939,7 @@ The Amazon Resource Name (ARN) specifying the server certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L124">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L124" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2951,7 +2951,7 @@ PEM-encoded format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L130">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L130" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2964,7 +2964,7 @@ of the chain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2976,7 +2976,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L135" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2988,7 +2988,7 @@ path in this value. If omitted, this provider will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L140">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L140" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3000,7 +3000,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L147">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L147" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3014,7 +3014,7 @@ See [IAM Identifiers][1] for more details on IAM Paths.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L151">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L151" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3025,7 +3025,7 @@ The contents of the private key in PEM-encoded format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3038,7 +3038,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceLinkedRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L23">class <b>ServiceLinkedRole</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L23" >}}">class <b>ServiceLinkedRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3061,7 +3061,7 @@ const elasticbeanstalk = new aws.iam.ServiceLinkedRole("elasticbeanstalk", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3078,7 +3078,7 @@ Create a ServiceLinkedRole resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L32" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3092,7 +3092,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3102,7 +3102,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L43" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3116,7 +3116,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L53" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3127,7 +3127,7 @@ The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-awsServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L57">property <b>awsServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L57" >}}">property <b>awsServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>awsServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3138,7 +3138,7 @@ The AWS service to which this role is attached. You use a string similar to a UR
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L61">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L61" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3149,7 +3149,7 @@ The creation date of the IAM role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-customSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L65">property <b>customSuffix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L65" >}}">property <b>customSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>customSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3160,7 +3160,7 @@ Additional string appended to the role name. Not all AWS services support custom
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L69" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3171,7 +3171,7 @@ The description of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3183,7 +3183,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3194,7 +3194,7 @@ The name of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L77">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L77" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3205,7 +3205,7 @@ The path of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L81">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L81" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3216,7 +3216,7 @@ The stable and unique string identifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3229,7 +3229,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SshKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L28">class <b>SshKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L28" >}}">class <b>SshKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3257,7 +3257,7 @@ const userSshKey = new aws.iam.SshKey("user", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SshKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L78" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3274,7 +3274,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3288,7 +3288,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3298,7 +3298,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3312,7 +3312,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-encoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L58">property <b>encoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L58" >}}">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3323,7 +3323,7 @@ Specifies the public key encoding format to use in the response. To retrieve the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L62">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L62" >}}">property <b>fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3334,7 +3334,7 @@ The MD5 message digest of the SSH public key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3346,7 +3346,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L66">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L66" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3357,7 +3357,7 @@ The SSH public key. The public key must be encoded in ssh-rsa format or PEM form
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-sshPublicKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L70">property <b>sshPublicKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L70" >}}">property <b>sshPublicKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sshPublicKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3368,7 +3368,7 @@ The unique identifier for the SSH public key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L74">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L74" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3379,7 +3379,7 @@ The status to assign to the SSH public key. Active means the key can be used for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3391,7 +3391,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L78">property <b>username</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L78" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3403,7 +3403,7 @@ The name of the IAM user to associate the SSH public key with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L47">class <b>User</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L47" >}}">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3450,7 +3450,7 @@ const lbRo = new aws.iam.UserPolicy("lbRo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L103" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3467,7 +3467,7 @@ Create a User resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3481,7 +3481,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3491,7 +3491,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3505,7 +3505,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L77">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L77" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3516,7 +3516,7 @@ The ARN assigned by AWS for this user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L83">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L83" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3529,7 +3529,7 @@ a user with non-this provider-managed access keys and login profile will fail to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3541,7 +3541,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L87" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3552,7 +3552,7 @@ The user's name. The name must consist of upper and lowercase alphanumeric chara
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L91">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L91" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3563,7 +3563,7 @@ Path in which to create the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L95">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L95" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>permissionsBoundary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3574,7 +3574,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L99">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L99" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3585,7 +3585,7 @@ Key-value mapping of tags for the IAM user
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L103">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L103" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3596,7 +3596,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3609,7 +3609,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupMembership">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L40">class <b>UserGroupMembership</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L40" >}}">class <b>UserGroupMembership</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3649,7 +3649,7 @@ const example2 = new aws.iam.UserGroupMembership("example2", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L74" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3666,7 +3666,7 @@ Create a UserGroupMembership resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3680,7 +3680,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3690,7 +3690,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3704,7 +3704,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L70">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L70" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -3715,7 +3715,7 @@ A list of [IAM Groups][1] to add the user to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3727,7 +3727,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3739,7 +3739,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembership-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L74">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L74" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3751,7 +3751,7 @@ The name of the [IAM User][2] to add to groups
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserLoginProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L32">class <b>UserLoginProfile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L32" >}}">class <b>UserLoginProfile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3783,7 +3783,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserLoginProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3800,7 +3800,7 @@ Create a UserLoginProfile resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3814,7 +3814,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3824,7 +3824,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3838,7 +3838,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L62">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L62" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3849,7 +3849,7 @@ The encrypted password, base64 encoded. Only available if password was handled o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3861,7 +3861,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L66">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L66" >}}">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>keyFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3872,7 +3872,7 @@ The fingerprint of the PGP key used to encrypt the password. Only available if p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-passwordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L70">property <b>passwordLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L70" >}}">property <b>passwordLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>passwordLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3883,7 +3883,7 @@ The length of the generated password on resource creation. Only applies on resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-passwordResetRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L74">property <b>passwordResetRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L74" >}}">property <b>passwordResetRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>passwordResetRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3894,7 +3894,7 @@ Whether the user should be forced to reset the generated password on resource cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L78">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L78" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3905,7 +3905,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3917,7 +3917,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfile-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L82">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L82" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3929,7 +3929,7 @@ The IAM user's name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L44">class <b>UserPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L44" >}}">class <b>UserPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3971,7 +3971,7 @@ const lbRo = new aws.iam.UserPolicy("lbRo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L86" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3988,7 +3988,7 @@ Create a UserPolicy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4002,7 +4002,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4012,7 +4012,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4026,7 +4026,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4038,7 +4038,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L74" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4049,7 +4049,7 @@ The name of the policy. If omitted, this provider will assign a random, unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L78">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L78" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4060,7 +4060,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L82">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L82" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4071,7 +4071,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4083,7 +4083,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicy-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L86">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L86" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4095,7 +4095,7 @@ IAM user to which to attach this policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L34">class <b>UserPolicyAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L34" >}}">class <b>UserPolicyAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4126,7 +4126,7 @@ const testAttach = new aws.iam.UserPolicyAttachment("test-attach", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4143,7 +4143,7 @@ Create a UserPolicyAttachment resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4157,7 +4157,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4167,7 +4167,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4181,7 +4181,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4193,7 +4193,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L64">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L64" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -4204,7 +4204,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4216,7 +4216,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L68">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L68" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#User'>User</a>&gt;;</pre>
@@ -4228,7 +4228,7 @@ The user the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="assumeRolePolicyForPrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L180">function <b>assumeRolePolicyForPrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L180" >}}">function <b>assumeRolePolicyForPrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4243,7 +4243,7 @@ action to those principals.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getAccountAlias">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getAccountAlias.ts#L24">function <b>getAccountAlias</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getAccountAlias.ts#L24" >}}">function <b>getAccountAlias</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4270,7 +4270,7 @@ export const accountId = current.accountAlias;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L25">function <b>getGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L25" >}}">function <b>getGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4298,7 +4298,7 @@ const example = pulumi.output(aws.iam.getGroup({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getInstanceProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L25">function <b>getInstanceProfile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L25" >}}">function <b>getInstanceProfile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4326,7 +4326,7 @@ const example = pulumi.output(aws.iam.getInstanceProfile({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L24">function <b>getPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L24" >}}">function <b>getPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4353,7 +4353,7 @@ const example = pulumi.output(aws.iam.getPolicy({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getPolicyDocument">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L211">function <b>getPolicyDocument</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L211" >}}">function <b>getPolicyDocument</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4567,7 +4567,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L25">function <b>getRole</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L25" >}}">function <b>getRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4595,7 +4595,7 @@ const example = pulumi.output(aws.iam.getRole({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getServerCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L38">function <b>getServerCertificate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L38" >}}">function <b>getServerCertificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4636,7 +4636,7 @@ It will not retrieve the private key which is not available through the AWS API.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUser">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L25">function <b>getUser</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L25" >}}">function <b>getUser</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4664,7 +4664,7 @@ const example = pulumi.output(aws.iam.getUser({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AWSPrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L151">interface <b>AWSPrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L151" >}}">interface <b>AWSPrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4676,7 +4676,7 @@ consists of the AWS: prefix followed by the account ID.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AWSPrincipal-AWS">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L152">property <b>AWS</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L152" >}}">property <b>AWS</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>AWS: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -4685,7 +4685,7 @@ consists of the AWS: prefix followed by the account ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L199">interface <b>AccessKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L199" >}}">interface <b>AccessKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4694,7 +4694,7 @@ The set of arguments for constructing a AccessKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccessKeyArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L204">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L204" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4706,7 +4706,7 @@ keybase username in the form `keybase:some_person_that_exists`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L209">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L209" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4718,7 +4718,7 @@ Valid values are `Active` and `Inactive`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L213">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L213" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4730,7 +4730,7 @@ The IAM user to associate with this access key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L156">interface <b>AccessKeyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L156" >}}">interface <b>AccessKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4739,7 +4739,7 @@ Input properties used for looking up and filtering AccessKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccessKeyState-encryptedSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L162">property <b>encryptedSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L162" >}}">property <b>encryptedSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptedSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4752,7 +4752,7 @@ for example: `... | base64 --decode | keybase pgp decrypt`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyState-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L167">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L167" >}}">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4764,7 +4764,7 @@ the secret
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L172">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L172" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4776,7 +4776,7 @@ keybase username in the form `keybase:some_person_that_exists`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyState-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L178">property <b>secret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L178" >}}">property <b>secret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4789,7 +4789,7 @@ secret from being stored in plain text
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyState-sesSmtpPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L184">property <b>sesSmtpPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L184" >}}">property <b>sesSmtpPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sesSmtpPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4802,7 +4802,7 @@ algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credential
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L189">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L189" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4814,7 +4814,7 @@ Valid values are `Active` and `Inactive`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessKeyState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accessKey.ts#L193">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accessKey.ts#L193" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4826,7 +4826,7 @@ The IAM user to associate with this access key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountAliasArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L101">interface <b>AccountAliasArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L101" >}}">interface <b>AccountAliasArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4835,7 +4835,7 @@ The set of arguments for constructing a AccountAlias resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountAliasArgs-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L105">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L105" >}}">property <b>accountAlias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4847,7 +4847,7 @@ The account alias
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountAliasState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L91">interface <b>AccountAliasState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L91" >}}">interface <b>AccountAliasState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4856,7 +4856,7 @@ Input properties used for looking up and filtering AccountAlias resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountAliasState-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountAlias.ts#L95">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountAlias.ts#L95" >}}">property <b>accountAlias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4868,7 +4868,7 @@ The account alias
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountPasswordPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L201">interface <b>AccountPasswordPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L201" >}}">interface <b>AccountPasswordPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4877,7 +4877,7 @@ The set of arguments for constructing a AccountPasswordPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-allowUsersToChangePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L205">property <b>allowUsersToChangePassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L205" >}}">property <b>allowUsersToChangePassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowUsersToChangePassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4888,7 +4888,7 @@ Whether to allow users to change their own password
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-hardExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L210">property <b>hardExpiry</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L210" >}}">property <b>hardExpiry</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hardExpiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4900,7 +4900,7 @@ Whether users are prevented from setting a new password after their password has
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-maxPasswordAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L214">property <b>maxPasswordAge</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L214" >}}">property <b>maxPasswordAge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxPasswordAge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4911,7 +4911,7 @@ The number of days that an user password is valid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-minimumPasswordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L218">property <b>minimumPasswordLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L218" >}}">property <b>minimumPasswordLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minimumPasswordLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4922,7 +4922,7 @@ Minimum length to require for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-passwordReusePrevention">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L222">property <b>passwordReusePrevention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L222" >}}">property <b>passwordReusePrevention</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordReusePrevention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4933,7 +4933,7 @@ The number of previous passwords that users are prevented from reusing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireLowercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L226">property <b>requireLowercaseCharacters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L226" >}}">property <b>requireLowercaseCharacters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireLowercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4944,7 +4944,7 @@ Whether to require lowercase characters for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L230">property <b>requireNumbers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L230" >}}">property <b>requireNumbers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireNumbers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4955,7 +4955,7 @@ Whether to require numbers for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireSymbols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L234">property <b>requireSymbols</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L234" >}}">property <b>requireSymbols</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireSymbols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4966,7 +4966,7 @@ Whether to require symbols for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyArgs-requireUppercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L238">property <b>requireUppercaseCharacters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L238" >}}">property <b>requireUppercaseCharacters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireUppercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4978,7 +4978,7 @@ Whether to require uppercase characters for user passwords.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountPasswordPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L152">interface <b>AccountPasswordPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L152" >}}">interface <b>AccountPasswordPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4987,7 +4987,7 @@ Input properties used for looking up and filtering AccountPasswordPolicy resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-allowUsersToChangePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L156">property <b>allowUsersToChangePassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L156" >}}">property <b>allowUsersToChangePassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowUsersToChangePassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4998,7 +4998,7 @@ Whether to allow users to change their own password
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-expirePasswords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L162">property <b>expirePasswords</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L162" >}}">property <b>expirePasswords</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expirePasswords?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5011,7 +5011,7 @@ Returns `false` if it is `0` or _not present_.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-hardExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L167">property <b>hardExpiry</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L167" >}}">property <b>hardExpiry</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hardExpiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5023,7 +5023,7 @@ Whether users are prevented from setting a new password after their password has
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-maxPasswordAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L171">property <b>maxPasswordAge</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L171" >}}">property <b>maxPasswordAge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxPasswordAge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5034,7 +5034,7 @@ The number of days that an user password is valid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-minimumPasswordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L175">property <b>minimumPasswordLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L175" >}}">property <b>minimumPasswordLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minimumPasswordLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5045,7 +5045,7 @@ Minimum length to require for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-passwordReusePrevention">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L179">property <b>passwordReusePrevention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L179" >}}">property <b>passwordReusePrevention</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordReusePrevention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5056,7 +5056,7 @@ The number of previous passwords that users are prevented from reusing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-requireLowercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L183">property <b>requireLowercaseCharacters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L183" >}}">property <b>requireLowercaseCharacters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireLowercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5067,7 +5067,7 @@ Whether to require lowercase characters for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-requireNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L187">property <b>requireNumbers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L187" >}}">property <b>requireNumbers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireNumbers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5078,7 +5078,7 @@ Whether to require numbers for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-requireSymbols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L191">property <b>requireSymbols</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L191" >}}">property <b>requireSymbols</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireSymbols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5089,7 +5089,7 @@ Whether to require symbols for user passwords.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPasswordPolicyState-requireUppercaseCharacters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/accountPasswordPolicy.ts#L195">property <b>requireUppercaseCharacters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/accountPasswordPolicy.ts#L195" >}}">property <b>requireUppercaseCharacters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requireUppercaseCharacters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5101,12 +5101,12 @@ Whether to require uppercase characters for user passwords.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConditionArguments">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L113">interface <b>ConditionArguments</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L113" >}}">interface <b>ConditionArguments</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="Conditions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L94">interface <b>Conditions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L94" >}}">interface <b>Conditions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5121,11 +5121,11 @@ lets you write a condition using the s3:VersionId key, which is unique to that s
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="FederatedPrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L168">interface <b>FederatedPrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L168" >}}">interface <b>FederatedPrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="FederatedPrincipal-Federated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L169">property <b>Federated</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L169" >}}">property <b>Federated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Federated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5134,7 +5134,7 @@ lets you write a condition using the s3:VersionId key, which is unique to that s
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountAliasResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getAccountAlias.ts#L41">interface <b>GetAccountAliasResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getAccountAlias.ts#L41" >}}">interface <b>GetAccountAliasResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5143,7 +5143,7 @@ A collection of values returned by getAccountAlias.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountAliasResult-accountAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getAccountAlias.ts#L45">property <b>accountAlias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getAccountAlias.ts#L45" >}}">property <b>accountAlias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountAlias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5154,7 +5154,7 @@ The alias associated with the AWS account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountAliasResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getAccountAlias.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getAccountAlias.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5166,7 +5166,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L43">interface <b>GetGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L43" >}}">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5175,7 +5175,7 @@ A collection of arguments for invoking getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L47">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L47" >}}">property <b>groupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5187,7 +5187,7 @@ The friendly IAM group name to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L53">interface <b>GetGroupResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L53" >}}">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5196,7 +5196,7 @@ A collection of values returned by getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5207,7 +5207,7 @@ The Amazon Resource Name (ARN) specifying the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L61">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L61" >}}">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5218,7 +5218,7 @@ The stable and unique string identifying the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L62">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L62" >}}">property <b>groupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5226,7 +5226,7 @@ The stable and unique string identifying the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L70" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5237,7 +5237,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getGroup.ts#L66">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getGroup.ts#L66" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5249,7 +5249,7 @@ The path to the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetInstanceProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L43">interface <b>GetInstanceProfileArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L43" >}}">interface <b>GetInstanceProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5258,7 +5258,7 @@ A collection of arguments for invoking getInstanceProfile.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetInstanceProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5270,7 +5270,7 @@ The friendly IAM instance profile name to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetInstanceProfileResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L53">interface <b>GetInstanceProfileResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L53" >}}">interface <b>GetInstanceProfileResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5279,7 +5279,7 @@ A collection of values returned by getInstanceProfile.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5290,7 +5290,7 @@ The Amazon Resource Name (ARN) specifying the instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L62">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L62" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5302,7 +5302,7 @@ was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L83" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5313,7 +5313,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5321,7 +5321,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L67">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L67" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5332,7 +5332,7 @@ The path to the instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L71">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L71" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5343,7 +5343,7 @@ The role arn associated with this instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L75">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L75" >}}">property <b>roleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5354,7 +5354,7 @@ The role id associated with this instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceProfileResult-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getInstanceProfile.ts#L79">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getInstanceProfile.ts#L79" >}}">property <b>roleName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5366,7 +5366,7 @@ The role name associated with this instance profile.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L42">interface <b>GetPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L42" >}}">interface <b>GetPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5375,7 +5375,7 @@ A collection of arguments for invoking getPolicy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L46">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L46" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5387,7 +5387,7 @@ ARN of the IAM policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyDocumentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L234">interface <b>GetPolicyDocumentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L234" >}}">interface <b>GetPolicyDocumentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5396,7 +5396,7 @@ A collection of arguments for invoking getPolicyDocument.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-overrideJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L241">property <b>overrideJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L241" >}}">property <b>overrideJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>overrideJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5410,7 +5410,7 @@ Statements without an `sid` cannot be overwritten.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L245">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L245" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5421,7 +5421,7 @@ An ID for the policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-sourceJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L252">property <b>sourceJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L252" >}}">property <b>sourceJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5435,7 +5435,7 @@ json.  Statements without an `sid` cannot be overwritten.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-statements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L257">property <b>statements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L257" >}}">property <b>statements</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>statements?: {
@@ -5467,7 +5467,7 @@ configuring one *statement* to be included in the policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L261">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L261" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5479,7 +5479,7 @@ IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyDocumentResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L267">interface <b>GetPolicyDocumentResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L267" >}}">interface <b>GetPolicyDocumentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5488,7 +5488,7 @@ A collection of values returned by getPolicyDocument.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L280">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L280" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5499,7 +5499,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L271">property <b>json</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L271" >}}">property <b>json</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>json: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5510,7 +5510,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-overrideJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L272">property <b>overrideJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L272" >}}">property <b>overrideJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>overrideJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5518,7 +5518,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L273">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L273" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5526,7 +5526,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-sourceJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L274">property <b>sourceJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L274" >}}">property <b>sourceJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5534,7 +5534,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-statements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L275">property <b>statements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L275" >}}">property <b>statements</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>statements?: {
@@ -5562,7 +5562,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicyDocument.ts#L276">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L276" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5571,7 +5571,7 @@ The above arguments serialized as a standard JSON policy document.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L52">interface <b>GetPolicyResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L52" >}}">interface <b>GetPolicyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5580,7 +5580,7 @@ A collection of values returned by getPolicy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L56" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5591,7 +5591,7 @@ The Amazon Resource Name (ARN) specifying the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L60">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L60" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5602,7 +5602,7 @@ The description of the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L76" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5613,7 +5613,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L64" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5624,7 +5624,7 @@ The name of the IAM policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L68">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L68" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5635,7 +5635,7 @@ The path to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getPolicy.ts#L72">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicy.ts#L72" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5647,7 +5647,7 @@ The policy document of the policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L43">interface <b>GetRoleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L43" >}}">interface <b>GetRoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5656,7 +5656,7 @@ A collection of arguments for invoking getRole.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5668,7 +5668,7 @@ The friendly IAM role name to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRoleResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L53">interface <b>GetRoleResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L53" >}}">interface <b>GetRoleResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5677,7 +5677,7 @@ A collection of values returned by getRole.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5688,7 +5688,7 @@ The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-assumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L61">property <b>assumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L61" >}}">property <b>assumeRolePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assumeRolePolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5699,7 +5699,7 @@ The policy document associated with the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L65">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L65" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5710,7 +5710,7 @@ Creation date of the role in RFC 3339 format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L69" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5721,7 +5721,7 @@ Description for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L90" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5732,7 +5732,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L73">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L73" >}}">property <b>maxSessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSessionDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -5743,7 +5743,7 @@ Maximum session duration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L74" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5751,7 +5751,7 @@ Maximum session duration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L78">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L78" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5762,7 +5762,7 @@ The path to the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L82">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L82" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5773,7 +5773,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getRole.ts#L86">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L86" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5785,7 +5785,7 @@ The stable and unique string identifying the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServerCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L60">interface <b>GetServerCertificateArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L60" >}}">interface <b>GetServerCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5794,7 +5794,7 @@ A collection of arguments for invoking getServerCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-latest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L64">property <b>latest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L64" >}}">property <b>latest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -5805,7 +5805,7 @@ sort results by expiration date. returns the certificate with expiration date in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5816,7 +5816,7 @@ exact name of the cert to lookup
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L72">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L72" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5827,7 +5827,7 @@ prefix of cert to filter by
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-pathPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L76">property <b>pathPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L76" >}}">property <b>pathPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pathPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5839,7 +5839,7 @@ prefix of path to filter by
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServerCertificateResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L82">interface <b>GetServerCertificateResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L82" >}}">interface <b>GetServerCertificateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5848,7 +5848,7 @@ A collection of values returned by getServerCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L83">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L83" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5856,7 +5856,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L84">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L84" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateBody: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5864,7 +5864,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L85">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L85" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateChain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5872,7 +5872,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L86">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L86" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expirationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5880,7 +5880,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L96" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5891,7 +5891,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-latest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L87">property <b>latest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L87" >}}">property <b>latest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -5899,7 +5899,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L88" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5907,7 +5907,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L89">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L89" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5915,7 +5915,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L90">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L90" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5923,7 +5923,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-pathPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L91">property <b>pathPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L91" >}}">property <b>pathPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pathPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5931,7 +5931,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-uploadDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getServerCertificate.ts#L92">property <b>uploadDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L92" >}}">property <b>uploadDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uploadDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5940,7 +5940,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L43">interface <b>GetUserArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L43" >}}">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5949,7 +5949,7 @@ A collection of arguments for invoking getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L47">property <b>userName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L47" >}}">property <b>userName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5961,7 +5961,7 @@ The friendly IAM user name to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L53">interface <b>GetUserResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L53" >}}">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5970,7 +5970,7 @@ A collection of values returned by getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5981,7 +5981,7 @@ The Amazon Resource Name (ARN) assigned by AWS for this user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L77" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5992,7 +5992,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L61">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L61" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6003,7 +6003,7 @@ Path in which this user was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L65">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L65" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6014,7 +6014,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L69">property <b>userId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L69" >}}">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6025,7 +6025,7 @@ The unique ID assigned by AWS for this user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/getUser.ts#L73">property <b>userName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L73" >}}">property <b>userName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6037,7 +6037,7 @@ The name associated to this User
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L126">interface <b>GroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L126" >}}">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6046,7 +6046,7 @@ The set of arguments for constructing a Group resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L130" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6057,7 +6057,7 @@ The group's name. The name must consist of upper and lowercase alphanumeric char
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L134">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L134" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6069,7 +6069,7 @@ Path in which to create the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMembershipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L136">interface <b>GroupMembershipArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L136" >}}">interface <b>GroupMembershipArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6078,7 +6078,7 @@ The set of arguments for constructing a GroupMembership resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L140">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L140" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6089,7 +6089,7 @@ The IAM Group name to attach the list of `users` to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L144" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6100,7 +6100,7 @@ The name to identify the Group Membership
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L148">property <b>users</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L148" >}}">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6112,7 +6112,7 @@ A list of IAM User names to associate with the Group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMembershipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L118">interface <b>GroupMembershipState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L118" >}}">interface <b>GroupMembershipState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6121,7 +6121,7 @@ Input properties used for looking up and filtering GroupMembership resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMembershipState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L122">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L122" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6132,7 +6132,7 @@ The IAM Group name to attach the list of `users` to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L126" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6143,7 +6143,7 @@ The name to identify the Group Membership
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembershipState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupMembership.ts#L130">property <b>users</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupMembership.ts#L130" >}}">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6155,7 +6155,7 @@ A list of IAM User names to associate with the Group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L154">interface <b>GroupPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L154" >}}">interface <b>GroupPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6164,7 +6164,7 @@ The set of arguments for constructing a GroupPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupPolicyArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L158">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L158" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6175,7 +6175,7 @@ The IAM group to attach to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L163" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6187,7 +6187,7 @@ assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L168">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L168" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6199,7 +6199,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L172">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L172" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -6211,7 +6211,7 @@ The policy document. This is a JSON formatted string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupPolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L123">interface <b>GroupPolicyAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L123" >}}">interface <b>GroupPolicyAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6220,7 +6220,7 @@ The set of arguments for constructing a GroupPolicyAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupPolicyAttachmentArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L127">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L127" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Group'>Group</a>&gt;;</pre>
@@ -6231,7 +6231,7 @@ The group the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachmentArgs-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L131">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L131" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -6243,7 +6243,7 @@ The ARN of the policy you want to apply
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupPolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L109">interface <b>GroupPolicyAttachmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L109" >}}">interface <b>GroupPolicyAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6252,7 +6252,7 @@ Input properties used for looking up and filtering GroupPolicyAttachment resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupPolicyAttachmentState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L113">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L113" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Group'>Group</a>&gt;;</pre>
@@ -6263,7 +6263,7 @@ The group the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyAttachmentState-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicyAttachment.ts#L117">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicyAttachment.ts#L117" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -6275,7 +6275,7 @@ The ARN of the policy you want to apply
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L130">interface <b>GroupPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L130" >}}">interface <b>GroupPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6284,7 +6284,7 @@ Input properties used for looking up and filtering GroupPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupPolicyState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L134">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L134" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6295,7 +6295,7 @@ The IAM group to attach to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L139" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6307,7 +6307,7 @@ assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L144">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L144" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6319,7 +6319,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/groupPolicy.ts#L148">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/groupPolicy.ts#L148" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -6331,7 +6331,7 @@ The policy document. This is a JSON formatted string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L104">interface <b>GroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L104" >}}">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6340,7 +6340,7 @@ Input properties used for looking up and filtering Group resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L108">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L108" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6351,7 +6351,7 @@ The ARN assigned by AWS for this group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6362,7 +6362,7 @@ The group's name. The name must consist of upper and lowercase alphanumeric char
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L116">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L116" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6373,7 +6373,7 @@ Path in which to create the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/group.ts#L120">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/group.ts#L120" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6385,7 +6385,7 @@ The [unique ID][1] assigned by AWS.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L189">interface <b>InstanceProfileArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L189" >}}">interface <b>InstanceProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6394,7 +6394,7 @@ The set of arguments for constructing a InstanceProfile resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6405,7 +6405,7 @@ The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L197">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L197" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6416,7 +6416,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L201">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L201" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6427,7 +6427,7 @@ Path in which to create the profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L205">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L205" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;;</pre>
@@ -6438,7 +6438,7 @@ The role name to include in the profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L210">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L210" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;[]&gt;;</pre>
@@ -6450,7 +6450,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceProfileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L150">interface <b>InstanceProfileState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L150" >}}">interface <b>InstanceProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6459,7 +6459,7 @@ Input properties used for looking up and filtering InstanceProfile resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceProfileState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L154">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L154" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6470,7 +6470,7 @@ The ARN assigned by AWS to the instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L158">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L158" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6481,7 +6481,7 @@ The creation timestamp of the instance profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L162" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6492,7 +6492,7 @@ The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L166">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L166" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6503,7 +6503,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L170">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L170" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6514,7 +6514,7 @@ Path in which to create the profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L174">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L174" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;;</pre>
@@ -6525,7 +6525,7 @@ The role name to include in the profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L179">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L179" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;[]&gt;;</pre>
@@ -6536,7 +6536,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceProfileState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/instanceProfile.ts#L183">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/instanceProfile.ts#L183" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6548,7 +6548,7 @@ The [unique ID][1] assigned by AWS.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OpenIdConnectProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L137">interface <b>OpenIdConnectProviderArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L137" >}}">interface <b>OpenIdConnectProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6557,7 +6557,7 @@ The set of arguments for constructing a OpenIdConnectProvider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderArgs-clientIdLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L141">property <b>clientIdLists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L141" >}}">property <b>clientIdLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientIdLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6568,7 +6568,7 @@ A list of client IDs (also known as audiences). When a mobile or web app registe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderArgs-thumbprintLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L145">property <b>thumbprintLists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L145" >}}">property <b>thumbprintLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>thumbprintLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6579,7 +6579,7 @@ A list of server certificate thumbprints for the OpenID Connect (OIDC) identity 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L149">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L149" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6591,7 +6591,7 @@ The URL of the identity provider. Corresponds to the _iss_ claim.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OpenIdConnectProviderState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L115">interface <b>OpenIdConnectProviderState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L115" >}}">interface <b>OpenIdConnectProviderState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6600,7 +6600,7 @@ Input properties used for looking up and filtering OpenIdConnectProvider resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L119">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L119" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6611,7 +6611,7 @@ The ARN assigned by AWS for this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderState-clientIdLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L123">property <b>clientIdLists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L123" >}}">property <b>clientIdLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientIdLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6622,7 +6622,7 @@ A list of client IDs (also known as audiences). When a mobile or web app registe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderState-thumbprintLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L127">property <b>thumbprintLists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L127" >}}">property <b>thumbprintLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>thumbprintLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6633,7 +6633,7 @@ A list of server certificate thumbprints for the OpenID Connect (OIDC) identity 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/openIdConnectProvider.ts#L131">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/openIdConnectProvider.ts#L131" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6645,7 +6645,7 @@ The URL of the identity provider. Corresponds to the _iss_ claim.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L167">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L167" >}}">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6654,7 +6654,7 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L171" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6665,7 +6665,7 @@ Description of the IAM policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L175" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6676,7 +6676,7 @@ The name of the policy. If omitted, this provider will assign a random, unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L179">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L179" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6687,7 +6687,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L184">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L184" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6699,7 +6699,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L188">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L188" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -6711,7 +6711,7 @@ The policy document. This is a JSON formatted string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L185">interface <b>PolicyAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L185" >}}">interface <b>PolicyAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6720,7 +6720,7 @@ The set of arguments for constructing a PolicyAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L189">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L189" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Group'>Group</a>&gt;[]&gt;;</pre>
@@ -6731,7 +6731,7 @@ The group(s) the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6742,7 +6742,7 @@ The name of the attachment. This cannot be an empty string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L197">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L197" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -6753,7 +6753,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L201">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L201" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Role'>Role</a>&gt;[]&gt;;</pre>
@@ -6764,7 +6764,7 @@ The role(s) the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L205">property <b>users</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L205" >}}">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#User'>User</a>&gt;[]&gt;;</pre>
@@ -6776,7 +6776,7 @@ The user(s) the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L159">interface <b>PolicyAttachmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L159" >}}">interface <b>PolicyAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6785,7 +6785,7 @@ Input properties used for looking up and filtering PolicyAttachment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L163">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L163" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Group'>Group</a>&gt;[]&gt;;</pre>
@@ -6796,7 +6796,7 @@ The group(s) the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L167" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6807,7 +6807,7 @@ The name of the attachment. This cannot be an empty string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L171">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L171" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -6818,7 +6818,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L175">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L175" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Role'>Role</a>&gt;[]&gt;;</pre>
@@ -6829,7 +6829,7 @@ The role(s) the policy should be applied to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policyAttachment.ts#L179">property <b>users</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policyAttachment.ts#L179" >}}">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#User'>User</a>&gt;[]&gt;;</pre>
@@ -6841,7 +6841,7 @@ The user(s) the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyDocument">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L47">interface <b>PolicyDocument</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L47" >}}">interface <b>PolicyDocument</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6877,7 +6877,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyDocument-Id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L51">property <b>Id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L51" >}}">property <b>Id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6885,7 +6885,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyDocument-Statement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L53">property <b>Statement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L53" >}}">property <b>Statement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Statement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#PolicyStatement'>PolicyStatement</a>&gt;[]&gt;;</pre>
@@ -6893,7 +6893,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyDocument-Version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L49">property <b>Version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L49" >}}">property <b>Version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='s2'>"2008-10-17"</span> | <span class='s2'>"2012-10-17"</span>&gt;;</pre>
@@ -6902,7 +6902,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L136">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L136" >}}">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6911,7 +6911,7 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L140">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L140" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6922,7 +6922,7 @@ The ARN assigned by AWS to this policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L144">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L144" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6933,7 +6933,7 @@ Description of the IAM policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L148" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6944,7 +6944,7 @@ The name of the policy. If omitted, this provider will assign a random, unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L152">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L152" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6955,7 +6955,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L157">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L157" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6967,7 +6967,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/policy.ts#L161">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/policy.ts#L161" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -6979,7 +6979,7 @@ The policy document. This is a JSON formatted string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyStatement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L60">interface <b>PolicyStatement</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L60" >}}">interface <b>PolicyStatement</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6989,7 +6989,7 @@ The Statement element is the main element for a policy. This element is required
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyStatement-Action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L73">property <b>Action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L73" >}}">property <b>Action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6997,7 +6997,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L83">property <b>Condition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L83" >}}">property <b>Condition</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#Conditions'>Conditions</a>&gt;;</pre>
@@ -7005,7 +7005,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Effect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L64">property <b>Effect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L64" >}}">property <b>Effect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Effect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='s2'>"Allow"</span> | <span class='s2'>"Deny"</span>&gt;;</pre>
@@ -7013,7 +7013,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-NotAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L75">property <b>NotAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L75" >}}">property <b>NotAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>NotAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7021,7 +7021,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-NotPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L70">property <b>NotPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L70" >}}">property <b>NotPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>NotPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#Principal'>Principal</a>&gt;;</pre>
@@ -7029,7 +7029,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-NotResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L80">property <b>NotResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L80" >}}">property <b>NotResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>NotResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7037,7 +7037,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L68">property <b>Principal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L68" >}}">property <b>Principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#Principal'>Principal</a>&gt;;</pre>
@@ -7045,7 +7045,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L78">property <b>Resource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L78" >}}">property <b>Resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Resource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7053,7 +7053,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Sid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L62">property <b>Sid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L62" >}}">property <b>Sid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Sid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7062,7 +7062,7 @@ The Statement element is the main element for a policy. This element is required
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L252">interface <b>RoleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L252" >}}">interface <b>RoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7071,7 +7071,7 @@ The set of arguments for constructing a Role resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleArgs-assumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L256">property <b>assumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L256" >}}">property <b>assumeRolePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assumeRolePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -7082,7 +7082,7 @@ The policy that grants an entity permission to assume the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L260">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L260" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7093,7 +7093,7 @@ The description of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-forceDetachPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L264">property <b>forceDetachPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L264" >}}">property <b>forceDetachPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDetachPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7104,7 +7104,7 @@ Specifies to force detaching any policies the role has before destroying it. Def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L268">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L268" >}}">property <b>maxSessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7115,7 +7115,7 @@ The maximum session duration (in seconds) that you want to set for the specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L272">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L272" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7126,7 +7126,7 @@ The name of the role. If omitted, this provider will assign a random, unique nam
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L276">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L276" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7137,7 +7137,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L281">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L281" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7149,7 +7149,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L285">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L285" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7160,7 +7160,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L289">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L289" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7172,7 +7172,7 @@ Key-value mapping of tags for the IAM role
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RolePolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L168">interface <b>RolePolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L168" >}}">interface <b>RolePolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7181,7 +7181,7 @@ The set of arguments for constructing a RolePolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RolePolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L173" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7193,7 +7193,7 @@ assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L178">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L178" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7205,7 +7205,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L182">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L182" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -7216,7 +7216,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L186">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L186" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;;</pre>
@@ -7228,7 +7228,7 @@ The IAM role to attach to the policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RolePolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L150">interface <b>RolePolicyAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L150" >}}">interface <b>RolePolicyAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7237,7 +7237,7 @@ The set of arguments for constructing a RolePolicyAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RolePolicyAttachmentArgs-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L154">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L154" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -7248,7 +7248,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachmentArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L158">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L158" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;;</pre>
@@ -7260,7 +7260,7 @@ The role the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RolePolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L136">interface <b>RolePolicyAttachmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L136" >}}">interface <b>RolePolicyAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7269,7 +7269,7 @@ Input properties used for looking up and filtering RolePolicyAttachment resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RolePolicyAttachmentState-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L140">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L140" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -7280,7 +7280,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyAttachmentState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicyAttachment.ts#L144">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicyAttachment.ts#L144" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;;</pre>
@@ -7292,7 +7292,7 @@ The role the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RolePolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L144">interface <b>RolePolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L144" >}}">interface <b>RolePolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7301,7 +7301,7 @@ Input properties used for looking up and filtering RolePolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RolePolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7313,7 +7313,7 @@ assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L154">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L154" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7325,7 +7325,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L158">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L158" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -7336,7 +7336,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RolePolicyState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/rolePolicy.ts#L162">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/rolePolicy.ts#L162" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Role'>Role</a>&gt;;</pre>
@@ -7348,7 +7348,7 @@ The IAM role to attach to the policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L197">interface <b>RoleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L197" >}}">interface <b>RoleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7357,7 +7357,7 @@ Input properties used for looking up and filtering Role resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L201">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L201" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7368,7 +7368,7 @@ The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-assumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L205">property <b>assumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L205" >}}">property <b>assumeRolePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assumeRolePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -7379,7 +7379,7 @@ The policy that grants an entity permission to assume the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L209">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L209" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7390,7 +7390,7 @@ The creation date of the IAM role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L213">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L213" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7401,7 +7401,7 @@ The description of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-forceDetachPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L217">property <b>forceDetachPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L217" >}}">property <b>forceDetachPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDetachPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7412,7 +7412,7 @@ Specifies to force detaching any policies the role has before destroying it. Def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-maxSessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L221">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L221" >}}">property <b>maxSessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSessionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7423,7 +7423,7 @@ The maximum session duration (in seconds) that you want to set for the specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L225">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L225" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7434,7 +7434,7 @@ The name of the role. If omitted, this provider will assign a random, unique nam
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L229">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L229" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7445,7 +7445,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L234">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L234" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7457,7 +7457,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L238">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L238" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7468,7 +7468,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L242">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L242" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7479,7 +7479,7 @@ Key-value mapping of tags for the IAM role
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/role.ts#L246">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/role.ts#L246" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7491,7 +7491,7 @@ The stable and unique string identifying the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SamlProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L130">interface <b>SamlProviderArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L130" >}}">interface <b>SamlProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7500,7 +7500,7 @@ The set of arguments for constructing a SamlProvider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SamlProviderArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7511,7 +7511,7 @@ The name of the provider to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProviderArgs-samlMetadataDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L138">property <b>samlMetadataDocument</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L138" >}}">property <b>samlMetadataDocument</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>samlMetadataDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7523,7 +7523,7 @@ An XML document generated by an identity provider that supports SAML 2.0.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SamlProviderState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L108">interface <b>SamlProviderState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L108" >}}">interface <b>SamlProviderState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7532,7 +7532,7 @@ Input properties used for looking up and filtering SamlProvider resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SamlProviderState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L112">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L112" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7543,7 +7543,7 @@ The ARN assigned by AWS for this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProviderState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L116" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7554,7 +7554,7 @@ The name of the provider to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProviderState-samlMetadataDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L120">property <b>samlMetadataDocument</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L120" >}}">property <b>samlMetadataDocument</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>samlMetadataDocument?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7565,7 +7565,7 @@ An XML document generated by an identity provider that supports SAML 2.0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SamlProviderState-validUntil">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/samlProvider.ts#L124">property <b>validUntil</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/samlProvider.ts#L124" >}}">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7577,7 +7577,7 @@ The expiration date and time for the SAML provider in RFC1123 format, e.g. `Mon,
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L244">interface <b>ServerCertificateArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L244" >}}">interface <b>ServerCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7586,7 +7586,7 @@ The set of arguments for constructing a ServerCertificate resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L248">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L248" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7597,7 +7597,7 @@ The Amazon Resource Name (ARN) specifying the server certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L253">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L253" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7609,7 +7609,7 @@ PEM-encoded format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L259">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L259" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7622,7 +7622,7 @@ of the chain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L264">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L264" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7634,7 +7634,7 @@ path in this value. If omitted, this provider will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L269">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L269" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7646,7 +7646,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L276">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L276" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7660,7 +7660,7 @@ See [IAM Identifiers][1] for more details on IAM Paths.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L280">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L280" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7672,7 +7672,7 @@ The contents of the private key in PEM-encoded format.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerCertificateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L202">interface <b>ServerCertificateState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L202" >}}">interface <b>ServerCertificateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7681,7 +7681,7 @@ Input properties used for looking up and filtering ServerCertificate resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerCertificateState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L206">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L206" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7692,7 +7692,7 @@ The Amazon Resource Name (ARN) specifying the server certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateState-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L211">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L211" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7704,7 +7704,7 @@ PEM-encoded format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateState-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L217">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L217" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7717,7 +7717,7 @@ of the chain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L222" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7729,7 +7729,7 @@ path in this value. If omitted, this provider will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L227">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L227" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7741,7 +7741,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L234">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L234" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7755,7 +7755,7 @@ See [IAM Identifiers][1] for more details on IAM Paths.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerCertificateState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serverCertificate.ts#L238">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serverCertificate.ts#L238" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7767,7 +7767,7 @@ The contents of the private key in PEM-encoded format.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceLinkedRoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L169">interface <b>ServiceLinkedRoleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L169" >}}">interface <b>ServiceLinkedRoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7776,7 +7776,7 @@ The set of arguments for constructing a ServiceLinkedRole resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleArgs-awsServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L173">property <b>awsServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L173" >}}">property <b>awsServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7787,7 +7787,7 @@ The AWS service to which this role is attached. You use a string similar to a UR
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleArgs-customSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L177">property <b>customSuffix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L177" >}}">property <b>customSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>customSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7798,7 +7798,7 @@ Additional string appended to the role name. Not all AWS services support custom
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L181">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L181" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7810,7 +7810,7 @@ The description of the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceLinkedRoleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L131">interface <b>ServiceLinkedRoleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L131" >}}">interface <b>ServiceLinkedRoleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7819,7 +7819,7 @@ Input properties used for looking up and filtering ServiceLinkedRole resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L135">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L135" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7830,7 +7830,7 @@ The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-awsServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L139">property <b>awsServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L139" >}}">property <b>awsServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7841,7 +7841,7 @@ The AWS service to which this role is attached. You use a string similar to a UR
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L143">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L143" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7852,7 +7852,7 @@ The creation date of the IAM role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-customSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L147">property <b>customSuffix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L147" >}}">property <b>customSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>customSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7863,7 +7863,7 @@ Additional string appended to the role name. Not all AWS services support custom
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L151">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L151" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7874,7 +7874,7 @@ The description of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L155" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7885,7 +7885,7 @@ The name of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L159">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L159" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7896,7 +7896,7 @@ The path of the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceLinkedRoleState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/serviceLinkedRole.ts#L163">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/serviceLinkedRole.ts#L163" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7908,7 +7908,7 @@ The stable and unique string identifying the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L164">interface <b>ServicePrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L164" >}}">interface <b>ServicePrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7923,7 +7923,7 @@ service.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipal-Service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L165">property <b>Service</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L165" >}}">property <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7932,7 +7932,7 @@ service.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SshKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L160">interface <b>SshKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L160" >}}">interface <b>SshKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7941,7 +7941,7 @@ The set of arguments for constructing a SshKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SshKeyArgs-encoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L164">property <b>encoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L164" >}}">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7952,7 +7952,7 @@ Specifies the public key encoding format to use in the response. To retrieve the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyArgs-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L168">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L168" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7963,7 +7963,7 @@ The SSH public key. The public key must be encoded in ssh-rsa format or PEM form
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L172">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L172" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7974,7 +7974,7 @@ The status to assign to the SSH public key. Active means the key can be used for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L176">property <b>username</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L176" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7986,7 +7986,7 @@ The name of the IAM user to associate the SSH public key with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SshKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L130">interface <b>SshKeyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L130" >}}">interface <b>SshKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7995,7 +7995,7 @@ Input properties used for looking up and filtering SshKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SshKeyState-encoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L134">property <b>encoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L134" >}}">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8006,7 +8006,7 @@ Specifies the public key encoding format to use in the response. To retrieve the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L138">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L138" >}}">property <b>fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8017,7 +8017,7 @@ The MD5 message digest of the SSH public key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L142">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L142" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8028,7 +8028,7 @@ The SSH public key. The public key must be encoded in ssh-rsa format or PEM form
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-sshPublicKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L146">property <b>sshPublicKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L146" >}}">property <b>sshPublicKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sshPublicKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8039,7 +8039,7 @@ The unique identifier for the SSH public key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L150">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L150" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8050,7 +8050,7 @@ The status to assign to the SSH public key. Active means the key can be used for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/sshKey.ts#L154">property <b>username</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/sshKey.ts#L154" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8062,7 +8062,7 @@ The name of the IAM user to associate the SSH public key with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L184">interface <b>UserArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L184" >}}">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8071,7 +8071,7 @@ The set of arguments for constructing a User resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L190">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L190" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8084,7 +8084,7 @@ a user with non-this provider-managed access keys and login profile will fail to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L194" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8095,7 +8095,7 @@ The user's name. The name must consist of upper and lowercase alphanumeric chara
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L198">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L198" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8106,7 +8106,7 @@ Path in which to create the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L202">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L202" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8117,7 +8117,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L206">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L206" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -8129,7 +8129,7 @@ Key-value mapping of tags for the IAM user
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupMembershipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L129">interface <b>UserGroupMembershipArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L129" >}}">interface <b>UserGroupMembershipArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8138,7 +8138,7 @@ The set of arguments for constructing a UserGroupMembership resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupMembershipArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L133">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L133" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -8149,7 +8149,7 @@ A list of [IAM Groups][1] to add the user to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembershipArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L137">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L137" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8161,7 +8161,7 @@ The name of the [IAM User][2] to add to groups
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupMembershipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L115">interface <b>UserGroupMembershipState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L115" >}}">interface <b>UserGroupMembershipState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8170,7 +8170,7 @@ Input properties used for looking up and filtering UserGroupMembership resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupMembershipState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L119">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L119" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -8181,7 +8181,7 @@ A list of [IAM Groups][1] to add the user to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupMembershipState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userGroupMembership.ts#L123">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userGroupMembership.ts#L123" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8193,7 +8193,7 @@ The name of the [IAM User][2] to add to groups
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserLoginProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L161">interface <b>UserLoginProfileArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L161" >}}">interface <b>UserLoginProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8202,7 +8202,7 @@ The set of arguments for constructing a UserLoginProfile resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserLoginProfileArgs-passwordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L165">property <b>passwordLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L165" >}}">property <b>passwordLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8213,7 +8213,7 @@ The length of the generated password on resource creation. Only applies on resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileArgs-passwordResetRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L169">property <b>passwordResetRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L169" >}}">property <b>passwordResetRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordResetRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8224,7 +8224,7 @@ Whether the user should be forced to reset the generated password on resource cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L173">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L173" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8235,7 +8235,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L177">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L177" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8247,7 +8247,7 @@ The IAM user's name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserLoginProfileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L131">interface <b>UserLoginProfileState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L131" >}}">interface <b>UserLoginProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8256,7 +8256,7 @@ Input properties used for looking up and filtering UserLoginProfile resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserLoginProfileState-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L135">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L135" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8267,7 +8267,7 @@ The encrypted password, base64 encoded. Only available if password was handled o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileState-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L139">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L139" >}}">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8278,7 +8278,7 @@ The fingerprint of the PGP key used to encrypt the password. Only available if p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileState-passwordLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L143">property <b>passwordLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L143" >}}">property <b>passwordLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8289,7 +8289,7 @@ The length of the generated password on resource creation. Only applies on resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileState-passwordResetRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L147">property <b>passwordResetRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L147" >}}">property <b>passwordResetRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordResetRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8300,7 +8300,7 @@ Whether the user should be forced to reset the generated password on resource cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L151">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L151" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8311,7 +8311,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserLoginProfileState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userLoginProfile.ts#L155">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userLoginProfile.ts#L155" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8323,7 +8323,7 @@ The IAM user's name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L153">interface <b>UserPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L153" >}}">interface <b>UserPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8332,7 +8332,7 @@ The set of arguments for constructing a UserPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L157" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8343,7 +8343,7 @@ The name of the policy. If omitted, this provider will assign a random, unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L161">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L161" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8354,7 +8354,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L165">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L165" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -8365,7 +8365,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L169">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L169" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8377,7 +8377,7 @@ IAM user to which to attach this policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L123">interface <b>UserPolicyAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L123" >}}">interface <b>UserPolicyAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8386,7 +8386,7 @@ The set of arguments for constructing a UserPolicyAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPolicyAttachmentArgs-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L127">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L127" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -8397,7 +8397,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachmentArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L131">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L131" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#User'>User</a>&gt;;</pre>
@@ -8409,7 +8409,7 @@ The user the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L109">interface <b>UserPolicyAttachmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L109" >}}">interface <b>UserPolicyAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8418,7 +8418,7 @@ Input properties used for looking up and filtering UserPolicyAttachment resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPolicyAttachmentState-policyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L113">property <b>policyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L113" >}}">property <b>policyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
@@ -8429,7 +8429,7 @@ The ARN of the policy you want to apply
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyAttachmentState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicyAttachment.ts#L117">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicyAttachment.ts#L117" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#User'>User</a>&gt;;</pre>
@@ -8441,7 +8441,7 @@ The user the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L131">interface <b>UserPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L131" >}}">interface <b>UserPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8450,7 +8450,7 @@ Input properties used for looking up and filtering UserPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L135" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8461,7 +8461,7 @@ The name of the policy. If omitted, this provider will assign a random, unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L139">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L139" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8472,7 +8472,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L143">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L143" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -8483,7 +8483,7 @@ The policy document. This is a JSON formatted string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPolicyState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/userPolicy.ts#L147">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/userPolicy.ts#L147" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8495,7 +8495,7 @@ IAM user to which to attach this policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L148">interface <b>UserState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L148" >}}">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8504,7 +8504,7 @@ Input properties used for looking up and filtering User resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L152">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L152" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8515,7 +8515,7 @@ The ARN assigned by AWS for this user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L158">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L158" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8528,7 +8528,7 @@ a user with non-this provider-managed access keys and login profile will fail to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L162" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8539,7 +8539,7 @@ The user's name. The name must consist of upper and lowercase alphanumeric chara
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L166">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L166" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8550,7 +8550,7 @@ Path in which to create the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-permissionsBoundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L170">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L170" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8561,7 +8561,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L174">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L174" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -8572,7 +8572,7 @@ Key-value mapping of tags for the IAM user
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/user.ts#L178">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/user.ts#L178" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8584,11 +8584,11 @@ The [unique ID][1] assigned by AWS.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedPolicies">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L18">module <b>ManagedPolicies</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L18" >}}">module <b>ManagedPolicies</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="AWSAccountActivityAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L19">const <b>AWSAccountActivityAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L19" >}}">const <b>AWSAccountActivityAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSAccountActivityAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountActivityAccess&#34;</span>;</pre>
@@ -8596,7 +8596,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSAccountUsageReportAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L20">const <b>AWSAccountUsageReportAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L20" >}}">const <b>AWSAccountUsageReportAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountUsageReportAccess&#34;</span>;</pre>
@@ -8604,7 +8604,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSAgentlessDiscoveryService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L21">const <b>AWSAgentlessDiscoveryService</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L21" >}}">const <b>AWSAgentlessDiscoveryService</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService&#34;</span>;</pre>
@@ -8612,7 +8612,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSApplicationDiscoveryAgentAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L22">const <b>AWSApplicationDiscoveryAgentAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L22" >}}">const <b>AWSApplicationDiscoveryAgentAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess&#34;</span>;</pre>
@@ -8620,7 +8620,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSApplicationDiscoveryServiceFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L23">const <b>AWSApplicationDiscoveryServiceFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L23" >}}">const <b>AWSApplicationDiscoveryServiceFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess&#34;</span>;</pre>
@@ -8628,7 +8628,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSBatchFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L24">const <b>AWSBatchFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L24" >}}">const <b>AWSBatchFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSBatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSBatchFullAccess&#34;</span>;</pre>
@@ -8636,7 +8636,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSBatchServiceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L25">const <b>AWSBatchServiceRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L25" >}}">const <b>AWSBatchServiceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSBatchServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;</span>;</pre>
@@ -8644,7 +8644,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCertificateManagerFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L26">const <b>AWSCertificateManagerFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L26" >}}">const <b>AWSCertificateManagerFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess&#34;</span>;</pre>
@@ -8652,7 +8652,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCertificateManagerReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L27">const <b>AWSCertificateManagerReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L27" >}}">const <b>AWSCertificateManagerReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly&#34;</span>;</pre>
@@ -8660,7 +8660,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCloudFormationReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L28">const <b>AWSCloudFormationReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L28" >}}">const <b>AWSCloudFormationReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess&#34;</span>;</pre>
@@ -8668,7 +8668,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCloudHSMFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L29">const <b>AWSCloudHSMFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L29" >}}">const <b>AWSCloudHSMFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMFullAccess&#34;</span>;</pre>
@@ -8676,7 +8676,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCloudHSMReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L30">const <b>AWSCloudHSMReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L30" >}}">const <b>AWSCloudHSMReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess&#34;</span>;</pre>
@@ -8684,7 +8684,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCloudHSMRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L31">const <b>AWSCloudHSMRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L31" >}}">const <b>AWSCloudHSMRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCloudHSMRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole&#34;</span>;</pre>
@@ -8692,7 +8692,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCloudTrailFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L32">const <b>AWSCloudTrailFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L32" >}}">const <b>AWSCloudTrailFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailFullAccess&#34;</span>;</pre>
@@ -8700,7 +8700,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCloudTrailReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L33">const <b>AWSCloudTrailReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L33" >}}">const <b>AWSCloudTrailReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess&#34;</span>;</pre>
@@ -8708,7 +8708,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeBuildAdminAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L34">const <b>AWSCodeBuildAdminAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L34" >}}">const <b>AWSCodeBuildAdminAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess&#34;</span>;</pre>
@@ -8716,7 +8716,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeBuildDeveloperAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L35">const <b>AWSCodeBuildDeveloperAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L35" >}}">const <b>AWSCodeBuildDeveloperAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess&#34;</span>;</pre>
@@ -8724,7 +8724,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeBuildReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L36">const <b>AWSCodeBuildReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L36" >}}">const <b>AWSCodeBuildReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess&#34;</span>;</pre>
@@ -8732,7 +8732,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeCommitFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L37">const <b>AWSCodeCommitFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L37" >}}">const <b>AWSCodeCommitFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitFullAccess&#34;</span>;</pre>
@@ -8740,7 +8740,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeCommitPowerUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L38">const <b>AWSCodeCommitPowerUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L38" >}}">const <b>AWSCodeCommitPowerUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitPowerUser&#34;</span>;</pre>
@@ -8748,7 +8748,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeCommitReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L39">const <b>AWSCodeCommitReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L39" >}}">const <b>AWSCodeCommitReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitReadOnly&#34;</span>;</pre>
@@ -8756,7 +8756,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeDeployDeployerAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L40">const <b>AWSCodeDeployDeployerAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L40" >}}">const <b>AWSCodeDeployDeployerAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess&#34;</span>;</pre>
@@ -8764,7 +8764,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeDeployFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L41">const <b>AWSCodeDeployFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L41" >}}">const <b>AWSCodeDeployFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployFullAccess&#34;</span>;</pre>
@@ -8772,7 +8772,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeDeployReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L42">const <b>AWSCodeDeployReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L42" >}}">const <b>AWSCodeDeployReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess&#34;</span>;</pre>
@@ -8780,7 +8780,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeDeployRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L43">const <b>AWSCodeDeployRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L43" >}}">const <b>AWSCodeDeployRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeDeployRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;</span>;</pre>
@@ -8788,7 +8788,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodePipelineApproverAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L44">const <b>AWSCodePipelineApproverAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L44" >}}">const <b>AWSCodePipelineApproverAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess&#34;</span>;</pre>
@@ -8796,7 +8796,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodePipelineCustomActionAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L45">const <b>AWSCodePipelineCustomActionAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L45" >}}">const <b>AWSCodePipelineCustomActionAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess&#34;</span>;</pre>
@@ -8804,7 +8804,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodePipelineFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L46">const <b>AWSCodePipelineFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L46" >}}">const <b>AWSCodePipelineFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineFullAccess&#34;</span>;</pre>
@@ -8812,7 +8812,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodePipelineReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L47">const <b>AWSCodePipelineReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L47" >}}">const <b>AWSCodePipelineReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess&#34;</span>;</pre>
@@ -8820,7 +8820,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeStarFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L48">const <b>AWSCodeStarFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L48" >}}">const <b>AWSCodeStarFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeStarFullAccess&#34;</span>;</pre>
@@ -8828,7 +8828,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSCodeStarServiceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L49">const <b>AWSCodeStarServiceRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L49" >}}">const <b>AWSCodeStarServiceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole&#34;</span>;</pre>
@@ -8836,7 +8836,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSConfigRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L50">const <b>AWSConfigRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L50" >}}">const <b>AWSConfigRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSConfigRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;</span>;</pre>
@@ -8844,7 +8844,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSConfigRulesExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L51">const <b>AWSConfigRulesExecutionRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L51" >}}">const <b>AWSConfigRulesExecutionRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole&#34;</span>;</pre>
@@ -8852,7 +8852,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSConfigUserAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L52">const <b>AWSConfigUserAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L52" >}}">const <b>AWSConfigUserAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSConfigUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConfigUserAccess&#34;</span>;</pre>
@@ -8860,7 +8860,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L53">const <b>AWSConnector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L53" >}}">const <b>AWSConnector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConnector&#34;</span>;</pre>
@@ -8868,7 +8868,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDataPipelineRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L54">const <b>AWSDataPipelineRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L54" >}}">const <b>AWSDataPipelineRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole&#34;</span>;</pre>
@@ -8876,7 +8876,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDataPipeline_FullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L55">const <b>AWSDataPipeline_FullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L55" >}}">const <b>AWSDataPipeline_FullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess&#34;</span>;</pre>
@@ -8884,7 +8884,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDataPipeline_PowerUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L56">const <b>AWSDataPipeline_PowerUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L56" >}}">const <b>AWSDataPipeline_PowerUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser&#34;</span>;</pre>
@@ -8892,7 +8892,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDeviceFarmFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L57">const <b>AWSDeviceFarmFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L57" >}}">const <b>AWSDeviceFarmFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess&#34;</span>;</pre>
@@ -8900,7 +8900,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDirectConnectFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L58">const <b>AWSDirectConnectFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L58" >}}">const <b>AWSDirectConnectFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectFullAccess&#34;</span>;</pre>
@@ -8908,7 +8908,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDirectConnectReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L59">const <b>AWSDirectConnectReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L59" >}}">const <b>AWSDirectConnectReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess&#34;</span>;</pre>
@@ -8916,7 +8916,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDirectoryServiceFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L60">const <b>AWSDirectoryServiceFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L60" >}}">const <b>AWSDirectoryServiceFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess&#34;</span>;</pre>
@@ -8924,7 +8924,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSDirectoryServiceReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L61">const <b>AWSDirectoryServiceReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L61" >}}">const <b>AWSDirectoryServiceReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess&#34;</span>;</pre>
@@ -8932,7 +8932,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkCustomPlatformforEC2Role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L62">const <b>AWSElasticBeanstalkCustomPlatformforEC2Role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L62" >}}">const <b>AWSElasticBeanstalkCustomPlatformforEC2Role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role&#34;</span>;</pre>
@@ -8940,7 +8940,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkEnhancedHealth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L63">const <b>AWSElasticBeanstalkEnhancedHealth</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L63" >}}">const <b>AWSElasticBeanstalkEnhancedHealth</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth&#34;</span>;</pre>
@@ -8948,7 +8948,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L64">const <b>AWSElasticBeanstalkFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L64" >}}">const <b>AWSElasticBeanstalkFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess&#34;</span>;</pre>
@@ -8956,7 +8956,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkMulticontainerDocker">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L65">const <b>AWSElasticBeanstalkMulticontainerDocker</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L65" >}}">const <b>AWSElasticBeanstalkMulticontainerDocker</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker&#34;</span>;</pre>
@@ -8964,7 +8964,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L66">const <b>AWSElasticBeanstalkReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L66" >}}">const <b>AWSElasticBeanstalkReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess&#34;</span>;</pre>
@@ -8972,7 +8972,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L67">const <b>AWSElasticBeanstalkService</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L67" >}}">const <b>AWSElasticBeanstalkService</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService&#34;</span>;</pre>
@@ -8980,7 +8980,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkWebTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L68">const <b>AWSElasticBeanstalkWebTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L68" >}}">const <b>AWSElasticBeanstalkWebTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier&#34;</span>;</pre>
@@ -8988,7 +8988,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBeanstalkWorkerTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L69">const <b>AWSElasticBeanstalkWorkerTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L69" >}}">const <b>AWSElasticBeanstalkWorkerTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier&#34;</span>;</pre>
@@ -8996,7 +8996,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSGreengrassFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L70">const <b>AWSGreengrassFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L70" >}}">const <b>AWSGreengrassFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSGreengrassFullAccess&#34;</span>;</pre>
@@ -9004,7 +9004,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSGreengrassResourceAccessRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L71">const <b>AWSGreengrassResourceAccessRolePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L71" >}}">const <b>AWSGreengrassResourceAccessRolePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy&#34;</span>;</pre>
@@ -9012,7 +9012,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSHealthFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L72">const <b>AWSHealthFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L72" >}}">const <b>AWSHealthFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSHealthFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSHealthFullAccess&#34;</span>;</pre>
@@ -9020,7 +9020,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSImportExportFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L73">const <b>AWSImportExportFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L73" >}}">const <b>AWSImportExportFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSImportExportFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportFullAccess&#34;</span>;</pre>
@@ -9028,7 +9028,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSImportExportReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L74">const <b>AWSImportExportReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L74" >}}">const <b>AWSImportExportReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess&#34;</span>;</pre>
@@ -9036,7 +9036,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSIoTConfigAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L75">const <b>AWSIoTConfigAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L75" >}}">const <b>AWSIoTConfigAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSIoTConfigAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigAccess&#34;</span>;</pre>
@@ -9044,7 +9044,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSIoTConfigReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L76">const <b>AWSIoTConfigReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L76" >}}">const <b>AWSIoTConfigReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess&#34;</span>;</pre>
@@ -9052,7 +9052,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSIoTDataAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L77">const <b>AWSIoTDataAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L77" >}}">const <b>AWSIoTDataAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSIoTDataAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTDataAccess&#34;</span>;</pre>
@@ -9060,7 +9060,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSIoTFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L78">const <b>AWSIoTFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L78" >}}">const <b>AWSIoTFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSIoTFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTFullAccess&#34;</span>;</pre>
@@ -9068,7 +9068,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSIoTLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L79">const <b>AWSIoTLogging</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L79" >}}">const <b>AWSIoTLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSIoTLogging: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTLogging&#34;</span>;</pre>
@@ -9076,7 +9076,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSIoTRuleActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L80">const <b>AWSIoTRuleActions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L80" >}}">const <b>AWSIoTRuleActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSIoTRuleActions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions&#34;</span>;</pre>
@@ -9084,7 +9084,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSKeyManagementServicePowerUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L81">const <b>AWSKeyManagementServicePowerUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L81" >}}">const <b>AWSKeyManagementServicePowerUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser&#34;</span>;</pre>
@@ -9092,7 +9092,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaBasicExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L82">const <b>AWSLambdaBasicExecutionRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L82" >}}">const <b>AWSLambdaBasicExecutionRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#34;</span>;</pre>
@@ -9100,7 +9100,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaDynamoDBExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L83">const <b>AWSLambdaDynamoDBExecutionRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L83" >}}">const <b>AWSLambdaDynamoDBExecutionRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole&#34;</span>;</pre>
@@ -9108,7 +9108,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaENIManagementAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L84">const <b>AWSLambdaENIManagementAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L84" >}}">const <b>AWSLambdaENIManagementAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess&#34;</span>;</pre>
@@ -9116,7 +9116,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaExecute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L85">const <b>AWSLambdaExecute</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L85" >}}">const <b>AWSLambdaExecute</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaExecute: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaExecute&#34;</span>;</pre>
@@ -9124,7 +9124,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L86">const <b>AWSLambdaFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L86" >}}">const <b>AWSLambdaFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34;</span>;</pre>
@@ -9132,7 +9132,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaInvocationDynamoDB">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L87">const <b>AWSLambdaInvocationDynamoDB</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L87" >}}">const <b>AWSLambdaInvocationDynamoDB</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB&#34;</span>;</pre>
@@ -9140,7 +9140,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaKinesisExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L88">const <b>AWSLambdaKinesisExecutionRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L88" >}}">const <b>AWSLambdaKinesisExecutionRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole&#34;</span>;</pre>
@@ -9148,7 +9148,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L89">const <b>AWSLambdaReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L89" >}}">const <b>AWSLambdaReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess&#34;</span>;</pre>
@@ -9156,7 +9156,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L90">const <b>AWSLambdaRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L90" >}}">const <b>AWSLambdaRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaRole&#34;</span>;</pre>
@@ -9164,7 +9164,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSLambdaVPCAccessExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L91">const <b>AWSLambdaVPCAccessExecutionRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L91" >}}">const <b>AWSLambdaVPCAccessExecutionRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole&#34;</span>;</pre>
@@ -9172,7 +9172,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMarketplaceFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L92">const <b>AWSMarketplaceFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L92" >}}">const <b>AWSMarketplaceFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceFullAccess&#34;</span>;</pre>
@@ -9180,7 +9180,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMarketplaceGetEntitlements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L93">const <b>AWSMarketplaceGetEntitlements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L93" >}}">const <b>AWSMarketplaceGetEntitlements</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements&#34;</span>;</pre>
@@ -9188,7 +9188,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMarketplaceManageSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L94">const <b>AWSMarketplaceManageSubscriptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L94" >}}">const <b>AWSMarketplaceManageSubscriptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions&#34;</span>;</pre>
@@ -9196,7 +9196,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMarketplaceMeteringFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L95">const <b>AWSMarketplaceMeteringFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L95" >}}">const <b>AWSMarketplaceMeteringFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess&#34;</span>;</pre>
@@ -9204,7 +9204,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMarketplaceReadonly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L96">const <b>AWSMarketplaceReadonly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L96" >}}">const <b>AWSMarketplaceReadonly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceRead-only&#34;</span>;</pre>
@@ -9212,7 +9212,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMobileHub_FullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L97">const <b>AWSMobileHub_FullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L97" >}}">const <b>AWSMobileHub_FullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_FullAccess&#34;</span>;</pre>
@@ -9220,7 +9220,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMobileHub_ReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L98">const <b>AWSMobileHub_ReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L98" >}}">const <b>AWSMobileHub_ReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly&#34;</span>;</pre>
@@ -9228,7 +9228,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSMobileHub_ServiceUseOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L99">const <b>AWSMobileHub_ServiceUseOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L99" >}}">const <b>AWSMobileHub_ServiceUseOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly&#34;</span>;</pre>
@@ -9236,7 +9236,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksCMInstanceProfileRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L100">const <b>AWSOpsWorksCMInstanceProfileRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L100" >}}">const <b>AWSOpsWorksCMInstanceProfileRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole&#34;</span>;</pre>
@@ -9244,7 +9244,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksCMServiceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L101">const <b>AWSOpsWorksCMServiceRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L101" >}}">const <b>AWSOpsWorksCMServiceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole&#34;</span>;</pre>
@@ -9252,7 +9252,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksCloudWatchLogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L102">const <b>AWSOpsWorksCloudWatchLogs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L102" >}}">const <b>AWSOpsWorksCloudWatchLogs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs&#34;</span>;</pre>
@@ -9260,7 +9260,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L103">const <b>AWSOpsWorksFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L103" >}}">const <b>AWSOpsWorksFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksFullAccess&#34;</span>;</pre>
@@ -9268,7 +9268,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksInstanceRegistration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L104">const <b>AWSOpsWorksInstanceRegistration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L104" >}}">const <b>AWSOpsWorksInstanceRegistration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration&#34;</span>;</pre>
@@ -9276,7 +9276,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksRegisterCLI">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L105">const <b>AWSOpsWorksRegisterCLI</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L105" >}}">const <b>AWSOpsWorksRegisterCLI</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI&#34;</span>;</pre>
@@ -9284,7 +9284,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSOpsWorksRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L106">const <b>AWSOpsWorksRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L106" >}}">const <b>AWSOpsWorksRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSOpsWorksRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole&#34;</span>;</pre>
@@ -9292,7 +9292,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSQuickSightDescribeRDS">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L107">const <b>AWSQuickSightDescribeRDS</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L107" >}}">const <b>AWSQuickSightDescribeRDS</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS&#34;</span>;</pre>
@@ -9300,7 +9300,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSQuickSightDescribeRedshift">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L108">const <b>AWSQuickSightDescribeRedshift</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L108" >}}">const <b>AWSQuickSightDescribeRedshift</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift&#34;</span>;</pre>
@@ -9308,7 +9308,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSQuickSightListIAM">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L109">const <b>AWSQuickSightListIAM</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L109" >}}">const <b>AWSQuickSightListIAM</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSQuickSightListIAM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM&#34;</span>;</pre>
@@ -9316,7 +9316,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSQuicksightAthenaAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L110">const <b>AWSQuicksightAthenaAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L110" >}}">const <b>AWSQuicksightAthenaAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess&#34;</span>;</pre>
@@ -9324,7 +9324,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSStepFunctionsConsoleFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L111">const <b>AWSStepFunctionsConsoleFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L111" >}}">const <b>AWSStepFunctionsConsoleFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess&#34;</span>;</pre>
@@ -9332,7 +9332,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSStepFunctionsFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L112">const <b>AWSStepFunctionsFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L112" >}}">const <b>AWSStepFunctionsFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess&#34;</span>;</pre>
@@ -9340,7 +9340,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSStepFunctionsReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L113">const <b>AWSStepFunctionsReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L113" >}}">const <b>AWSStepFunctionsReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess&#34;</span>;</pre>
@@ -9348,7 +9348,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSStorageGatewayFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L114">const <b>AWSStorageGatewayFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L114" >}}">const <b>AWSStorageGatewayFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess&#34;</span>;</pre>
@@ -9356,7 +9356,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSStorageGatewayReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L115">const <b>AWSStorageGatewayReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L115" >}}">const <b>AWSStorageGatewayReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess&#34;</span>;</pre>
@@ -9364,7 +9364,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSSupportAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L116">const <b>AWSSupportAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L116" >}}">const <b>AWSSupportAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSSupportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSSupportAccess&#34;</span>;</pre>
@@ -9372,7 +9372,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSWAFFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L117">const <b>AWSWAFFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L117" >}}">const <b>AWSWAFFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSWAFFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFFullAccess&#34;</span>;</pre>
@@ -9380,7 +9380,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSWAFReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L118">const <b>AWSWAFReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L118" >}}">const <b>AWSWAFReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess&#34;</span>;</pre>
@@ -9388,7 +9388,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSXrayFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L119">const <b>AWSXrayFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L119" >}}">const <b>AWSXrayFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSXrayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayFullAccess&#34;</span>;</pre>
@@ -9396,7 +9396,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSXrayReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L120">const <b>AWSXrayReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L120" >}}">const <b>AWSXrayReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess&#34;</span>;</pre>
@@ -9404,7 +9404,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSXrayWriteOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L121">const <b>AWSXrayWriteOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L121" >}}">const <b>AWSXrayWriteOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess&#34;</span>;</pre>
@@ -9412,7 +9412,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdministratorAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L122">const <b>AdministratorAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L122" >}}">const <b>AdministratorAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AdministratorAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AdministratorAccess&#34;</span>;</pre>
@@ -9420,7 +9420,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAPIGatewayAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L123">const <b>AmazonAPIGatewayAdministrator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L123" >}}">const <b>AmazonAPIGatewayAdministrator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator&#34;</span>;</pre>
@@ -9428,7 +9428,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAPIGatewayInvokeFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L124">const <b>AmazonAPIGatewayInvokeFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L124" >}}">const <b>AmazonAPIGatewayInvokeFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess&#34;</span>;</pre>
@@ -9436,7 +9436,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAPIGatewayPushToCloudWatchLogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L125">const <b>AmazonAPIGatewayPushToCloudWatchLogs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L125" >}}">const <b>AmazonAPIGatewayPushToCloudWatchLogs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs&#34;</span>;</pre>
@@ -9444,7 +9444,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAppStreamFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L126">const <b>AmazonAppStreamFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L126" >}}">const <b>AmazonAppStreamFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamFullAccess&#34;</span>;</pre>
@@ -9452,7 +9452,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAppStreamReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L127">const <b>AmazonAppStreamReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L127" >}}">const <b>AmazonAppStreamReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess&#34;</span>;</pre>
@@ -9460,7 +9460,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAppStreamServiceAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L128">const <b>AmazonAppStreamServiceAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L128" >}}">const <b>AmazonAppStreamServiceAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess&#34;</span>;</pre>
@@ -9468,7 +9468,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonAthenaFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L129">const <b>AmazonAthenaFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L129" >}}">const <b>AmazonAthenaFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAthenaFullAccess&#34;</span>;</pre>
@@ -9476,7 +9476,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonCloudDirectoryFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L130">const <b>AmazonCloudDirectoryFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L130" >}}">const <b>AmazonCloudDirectoryFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess&#34;</span>;</pre>
@@ -9484,7 +9484,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonCloudDirectoryReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L131">const <b>AmazonCloudDirectoryReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L131" >}}">const <b>AmazonCloudDirectoryReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess&#34;</span>;</pre>
@@ -9492,7 +9492,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonCognitoDeveloperAuthenticatedIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L132">const <b>AmazonCognitoDeveloperAuthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L132" >}}">const <b>AmazonCognitoDeveloperAuthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities&#34;</span>;</pre>
@@ -9500,7 +9500,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonCognitoPowerUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L133">const <b>AmazonCognitoPowerUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L133" >}}">const <b>AmazonCognitoPowerUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoPowerUser&#34;</span>;</pre>
@@ -9508,7 +9508,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonCognitoReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L134">const <b>AmazonCognitoReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L134" >}}">const <b>AmazonCognitoReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoReadOnly&#34;</span>;</pre>
@@ -9516,7 +9516,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDMSCloudWatchLogsRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L135">const <b>AmazonDMSCloudWatchLogsRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L135" >}}">const <b>AmazonDMSCloudWatchLogsRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;</span>;</pre>
@@ -9524,7 +9524,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDMSRedshiftS3Role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L136">const <b>AmazonDMSRedshiftS3Role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L136" >}}">const <b>AmazonDMSRedshiftS3Role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;</span>;</pre>
@@ -9532,7 +9532,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDMSVPCManagementRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L137">const <b>AmazonDMSVPCManagementRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L137" >}}">const <b>AmazonDMSVPCManagementRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;</span>;</pre>
@@ -9540,7 +9540,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDRSVPCManagement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L138">const <b>AmazonDRSVPCManagement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L138" >}}">const <b>AmazonDRSVPCManagement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDRSVPCManagement&#34;</span>;</pre>
@@ -9548,7 +9548,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDynamoDBFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L139">const <b>AmazonDynamoDBFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L139" >}}">const <b>AmazonDynamoDBFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess&#34;</span>;</pre>
@@ -9556,7 +9556,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDynamoDBFullAccesswithDataPipeline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L140">const <b>AmazonDynamoDBFullAccesswithDataPipeline</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L140" >}}">const <b>AmazonDynamoDBFullAccesswithDataPipeline</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline&#34;</span>;</pre>
@@ -9564,7 +9564,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonDynamoDBReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L141">const <b>AmazonDynamoDBReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L141" >}}">const <b>AmazonDynamoDBReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess&#34;</span>;</pre>
@@ -9572,7 +9572,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerRegistryFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L142">const <b>AmazonEC2ContainerRegistryFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L142" >}}">const <b>AmazonEC2ContainerRegistryFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess&#34;</span>;</pre>
@@ -9580,7 +9580,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerRegistryPowerUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L143">const <b>AmazonEC2ContainerRegistryPowerUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L143" >}}">const <b>AmazonEC2ContainerRegistryPowerUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser&#34;</span>;</pre>
@@ -9588,7 +9588,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerRegistryReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L144">const <b>AmazonEC2ContainerRegistryReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L144" >}}">const <b>AmazonEC2ContainerRegistryReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;</span>;</pre>
@@ -9596,7 +9596,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerServiceAutoscaleRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L145">const <b>AmazonEC2ContainerServiceAutoscaleRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L145" >}}">const <b>AmazonEC2ContainerServiceAutoscaleRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole&#34;</span>;</pre>
@@ -9604,7 +9604,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerServiceFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L146">const <b>AmazonEC2ContainerServiceFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L146" >}}">const <b>AmazonEC2ContainerServiceFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess&#34;</span>;</pre>
@@ -9612,7 +9612,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerServiceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L147">const <b>AmazonEC2ContainerServiceRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L147" >}}">const <b>AmazonEC2ContainerServiceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole&#34;</span>;</pre>
@@ -9620,7 +9620,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ContainerServiceforEC2Role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L148">const <b>AmazonEC2ContainerServiceforEC2Role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L148" >}}">const <b>AmazonEC2ContainerServiceforEC2Role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;</span>;</pre>
@@ -9628,7 +9628,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2FullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L149">const <b>AmazonEC2FullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L149" >}}">const <b>AmazonEC2FullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2FullAccess&#34;</span>;</pre>
@@ -9636,7 +9636,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L150">const <b>AmazonEC2ReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L150" >}}">const <b>AmazonEC2ReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess&#34;</span>;</pre>
@@ -9644,7 +9644,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2ReportsAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L151">const <b>AmazonEC2ReportsAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L151" >}}">const <b>AmazonEC2ReportsAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReportsAccess&#34;</span>;</pre>
@@ -9652,7 +9652,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2RoleforAWSCodeDeploy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L152">const <b>AmazonEC2RoleforAWSCodeDeploy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L152" >}}">const <b>AmazonEC2RoleforAWSCodeDeploy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy&#34;</span>;</pre>
@@ -9660,7 +9660,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2RoleforDataPipelineRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L153">const <b>AmazonEC2RoleforDataPipelineRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L153" >}}">const <b>AmazonEC2RoleforDataPipelineRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole&#34;</span>;</pre>
@@ -9668,7 +9668,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2RoleforSSM">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L154">const <b>AmazonEC2RoleforSSM</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L154" >}}">const <b>AmazonEC2RoleforSSM</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM&#34;</span>;</pre>
@@ -9676,7 +9676,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2SpotFleetAutoscaleRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L155">const <b>AmazonEC2SpotFleetAutoscaleRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L155" >}}">const <b>AmazonEC2SpotFleetAutoscaleRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole&#34;</span>;</pre>
@@ -9684,7 +9684,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonEC2SpotFleetRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L156">const <b>AmazonEC2SpotFleetRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L156" >}}">const <b>AmazonEC2SpotFleetRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole&#34;</span>;</pre>
@@ -9692,7 +9692,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonESFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L157">const <b>AmazonESFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L157" >}}">const <b>AmazonESFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESFullAccess&#34;</span>;</pre>
@@ -9700,7 +9700,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonESReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L158">const <b>AmazonESReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L158" >}}">const <b>AmazonESReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESReadOnlyAccess&#34;</span>;</pre>
@@ -9708,7 +9708,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElastiCacheFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L159">const <b>AmazonElastiCacheFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L159" >}}">const <b>AmazonElastiCacheFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess&#34;</span>;</pre>
@@ -9716,7 +9716,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElastiCacheReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L160">const <b>AmazonElastiCacheReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L160" >}}">const <b>AmazonElastiCacheReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess&#34;</span>;</pre>
@@ -9724,7 +9724,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticFileSystemFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L161">const <b>AmazonElasticFileSystemFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L161" >}}">const <b>AmazonElasticFileSystemFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess&#34;</span>;</pre>
@@ -9732,7 +9732,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticFileSystemReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L162">const <b>AmazonElasticFileSystemReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L162" >}}">const <b>AmazonElasticFileSystemReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess&#34;</span>;</pre>
@@ -9740,7 +9740,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticMapReduceFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L163">const <b>AmazonElasticMapReduceFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L163" >}}">const <b>AmazonElasticMapReduceFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess&#34;</span>;</pre>
@@ -9748,7 +9748,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticMapReduceReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L164">const <b>AmazonElasticMapReduceReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L164" >}}">const <b>AmazonElasticMapReduceReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess&#34;</span>;</pre>
@@ -9756,7 +9756,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticMapReduceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L165">const <b>AmazonElasticMapReduceRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L165" >}}">const <b>AmazonElasticMapReduceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole&#34;</span>;</pre>
@@ -9764,7 +9764,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticMapReduceforAutoScalingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L166">const <b>AmazonElasticMapReduceforAutoScalingRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L166" >}}">const <b>AmazonElasticMapReduceforAutoScalingRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole&#34;</span>;</pre>
@@ -9772,7 +9772,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticMapReduceforEC2Role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L167">const <b>AmazonElasticMapReduceforEC2Role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L167" >}}">const <b>AmazonElasticMapReduceforEC2Role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role&#34;</span>;</pre>
@@ -9780,7 +9780,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticTranscoderFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L168">const <b>AmazonElasticTranscoderFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L168" >}}">const <b>AmazonElasticTranscoderFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess&#34;</span>;</pre>
@@ -9788,7 +9788,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticTranscoderJobsSubmitter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L169">const <b>AmazonElasticTranscoderJobsSubmitter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L169" >}}">const <b>AmazonElasticTranscoderJobsSubmitter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter&#34;</span>;</pre>
@@ -9796,7 +9796,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticTranscoderReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L170">const <b>AmazonElasticTranscoderReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L170" >}}">const <b>AmazonElasticTranscoderReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess&#34;</span>;</pre>
@@ -9804,7 +9804,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonElasticTranscoderRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L171">const <b>AmazonElasticTranscoderRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L171" >}}">const <b>AmazonElasticTranscoderRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole&#34;</span>;</pre>
@@ -9812,7 +9812,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonGlacierFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L172">const <b>AmazonGlacierFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L172" >}}">const <b>AmazonGlacierFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierFullAccess&#34;</span>;</pre>
@@ -9820,7 +9820,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonGlacierReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L173">const <b>AmazonGlacierReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L173" >}}">const <b>AmazonGlacierReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess&#34;</span>;</pre>
@@ -9828,7 +9828,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonInspectorFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L174">const <b>AmazonInspectorFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L174" >}}">const <b>AmazonInspectorFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorFullAccess&#34;</span>;</pre>
@@ -9836,7 +9836,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonInspectorReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L175">const <b>AmazonInspectorReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L175" >}}">const <b>AmazonInspectorReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess&#34;</span>;</pre>
@@ -9844,7 +9844,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonKinesisAnalyticsFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L176">const <b>AmazonKinesisAnalyticsFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L176" >}}">const <b>AmazonKinesisAnalyticsFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess&#34;</span>;</pre>
@@ -9852,7 +9852,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonKinesisAnalyticsReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L177">const <b>AmazonKinesisAnalyticsReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L177" >}}">const <b>AmazonKinesisAnalyticsReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly&#34;</span>;</pre>
@@ -9860,7 +9860,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonKinesisFirehoseFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L178">const <b>AmazonKinesisFirehoseFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L178" >}}">const <b>AmazonKinesisFirehoseFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess&#34;</span>;</pre>
@@ -9868,7 +9868,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonKinesisFirehoseReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L179">const <b>AmazonKinesisFirehoseReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L179" >}}">const <b>AmazonKinesisFirehoseReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess&#34;</span>;</pre>
@@ -9876,7 +9876,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonKinesisFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L180">const <b>AmazonKinesisFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L180" >}}">const <b>AmazonKinesisFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFullAccess&#34;</span>;</pre>
@@ -9884,7 +9884,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonKinesisReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L181">const <b>AmazonKinesisReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L181" >}}">const <b>AmazonKinesisReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess&#34;</span>;</pre>
@@ -9892,7 +9892,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonLexFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L182">const <b>AmazonLexFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L182" >}}">const <b>AmazonLexFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonLexFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexFullAccess&#34;</span>;</pre>
@@ -9900,7 +9900,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonLexReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L183">const <b>AmazonLexReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L183" >}}">const <b>AmazonLexReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonLexReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexReadOnly&#34;</span>;</pre>
@@ -9908,7 +9908,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonLexRunBotsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L184">const <b>AmazonLexRunBotsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L184" >}}">const <b>AmazonLexRunBotsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexRunBotsOnly&#34;</span>;</pre>
@@ -9916,7 +9916,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningBatchPredictionsAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L185">const <b>AmazonMachineLearningBatchPredictionsAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L185" >}}">const <b>AmazonMachineLearningBatchPredictionsAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess&#34;</span>;</pre>
@@ -9924,7 +9924,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningCreateOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L186">const <b>AmazonMachineLearningCreateOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L186" >}}">const <b>AmazonMachineLearningCreateOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess&#34;</span>;</pre>
@@ -9932,7 +9932,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L187">const <b>AmazonMachineLearningFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L187" >}}">const <b>AmazonMachineLearningFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess&#34;</span>;</pre>
@@ -9940,7 +9940,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningManageRealTimeEndpointOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L188">const <b>AmazonMachineLearningManageRealTimeEndpointOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L188" >}}">const <b>AmazonMachineLearningManageRealTimeEndpointOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess&#34;</span>;</pre>
@@ -9948,7 +9948,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L189">const <b>AmazonMachineLearningReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L189" >}}">const <b>AmazonMachineLearningReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess&#34;</span>;</pre>
@@ -9956,7 +9956,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningRealTimePredictionOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L190">const <b>AmazonMachineLearningRealTimePredictionOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L190" >}}">const <b>AmazonMachineLearningRealTimePredictionOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess&#34;</span>;</pre>
@@ -9964,7 +9964,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMachineLearningRoleforRedshiftDataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L191">const <b>AmazonMachineLearningRoleforRedshiftDataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L191" >}}">const <b>AmazonMachineLearningRoleforRedshiftDataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource&#34;</span>;</pre>
@@ -9972,7 +9972,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMechanicalTurkFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L192">const <b>AmazonMechanicalTurkFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L192" >}}">const <b>AmazonMechanicalTurkFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess&#34;</span>;</pre>
@@ -9980,7 +9980,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMechanicalTurkReadOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L193">const <b>AmazonMechanicalTurkReadOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L193" >}}">const <b>AmazonMechanicalTurkReadOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly&#34;</span>;</pre>
@@ -9988,7 +9988,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMobileAnalyticsFinancialReportAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L194">const <b>AmazonMobileAnalyticsFinancialReportAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L194" >}}">const <b>AmazonMobileAnalyticsFinancialReportAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess&#34;</span>;</pre>
@@ -9996,7 +9996,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMobileAnalyticsFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L195">const <b>AmazonMobileAnalyticsFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L195" >}}">const <b>AmazonMobileAnalyticsFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess&#34;</span>;</pre>
@@ -10004,7 +10004,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMobileAnalyticsNonfinancialReportAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L196">const <b>AmazonMobileAnalyticsNonfinancialReportAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L196" >}}">const <b>AmazonMobileAnalyticsNonfinancialReportAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess&#34;</span>;</pre>
@@ -10012,7 +10012,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonMobileAnalyticsWriteOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L197">const <b>AmazonMobileAnalyticsWriteOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L197" >}}">const <b>AmazonMobileAnalyticsWriteOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess&#34;</span>;</pre>
@@ -10020,7 +10020,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonPollyFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L198">const <b>AmazonPollyFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L198" >}}">const <b>AmazonPollyFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonPollyFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyFullAccess&#34;</span>;</pre>
@@ -10028,7 +10028,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonPollyReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L199">const <b>AmazonPollyReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L199" >}}">const <b>AmazonPollyReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess&#34;</span>;</pre>
@@ -10036,7 +10036,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRDSDirectoryServiceAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L200">const <b>AmazonRDSDirectoryServiceAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L200" >}}">const <b>AmazonRDSDirectoryServiceAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess&#34;</span>;</pre>
@@ -10044,7 +10044,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRDSEnhancedMonitoringRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L201">const <b>AmazonRDSEnhancedMonitoringRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L201" >}}">const <b>AmazonRDSEnhancedMonitoringRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole&#34;</span>;</pre>
@@ -10052,7 +10052,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRDSFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L202">const <b>AmazonRDSFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L202" >}}">const <b>AmazonRDSFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRDSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSFullAccess&#34;</span>;</pre>
@@ -10060,7 +10060,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRDSReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L203">const <b>AmazonRDSReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L203" >}}">const <b>AmazonRDSReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&#34;</span>;</pre>
@@ -10068,7 +10068,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRedshiftFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L204">const <b>AmazonRedshiftFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L204" >}}">const <b>AmazonRedshiftFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftFullAccess&#34;</span>;</pre>
@@ -10076,7 +10076,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRedshiftReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L205">const <b>AmazonRedshiftReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L205" >}}">const <b>AmazonRedshiftReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess&#34;</span>;</pre>
@@ -10084,7 +10084,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRekognitionFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L206">const <b>AmazonRekognitionFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L206" >}}">const <b>AmazonRekognitionFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionFullAccess&#34;</span>;</pre>
@@ -10092,7 +10092,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRekognitionReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L207">const <b>AmazonRekognitionReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L207" >}}">const <b>AmazonRekognitionReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess&#34;</span>;</pre>
@@ -10100,7 +10100,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRoute53DomainsFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L208">const <b>AmazonRoute53DomainsFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L208" >}}">const <b>AmazonRoute53DomainsFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess&#34;</span>;</pre>
@@ -10108,7 +10108,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRoute53DomainsReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L209">const <b>AmazonRoute53DomainsReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L209" >}}">const <b>AmazonRoute53DomainsReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess&#34;</span>;</pre>
@@ -10116,7 +10116,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRoute53FullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L210">const <b>AmazonRoute53FullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L210" >}}">const <b>AmazonRoute53FullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53FullAccess&#34;</span>;</pre>
@@ -10124,7 +10124,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonRoute53ReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L211">const <b>AmazonRoute53ReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L211" >}}">const <b>AmazonRoute53ReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess&#34;</span>;</pre>
@@ -10132,7 +10132,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonS3FullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L212">const <b>AmazonS3FullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L212" >}}">const <b>AmazonS3FullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonS3FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3FullAccess&#34;</span>;</pre>
@@ -10140,7 +10140,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonS3ReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L213">const <b>AmazonS3ReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L213" >}}">const <b>AmazonS3ReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess&#34;</span>;</pre>
@@ -10148,7 +10148,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSESFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L214">const <b>AmazonSESFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L214" >}}">const <b>AmazonSESFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESFullAccess&#34;</span>;</pre>
@@ -10156,7 +10156,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSESReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L215">const <b>AmazonSESReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L215" >}}">const <b>AmazonSESReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess&#34;</span>;</pre>
@@ -10164,7 +10164,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSNSFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L216">const <b>AmazonSNSFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L216" >}}">const <b>AmazonSNSFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSNSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSFullAccess&#34;</span>;</pre>
@@ -10172,7 +10172,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSNSReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L217">const <b>AmazonSNSReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L217" >}}">const <b>AmazonSNSReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess&#34;</span>;</pre>
@@ -10180,7 +10180,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSNSRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L218">const <b>AmazonSNSRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L218" >}}">const <b>AmazonSNSRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSNSRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSNSRole&#34;</span>;</pre>
@@ -10188,7 +10188,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSQSFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L219">const <b>AmazonSQSFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L219" >}}">const <b>AmazonSQSFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSQSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSFullAccess&#34;</span>;</pre>
@@ -10196,7 +10196,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSQSReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L220">const <b>AmazonSQSReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L220" >}}">const <b>AmazonSQSReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess&#34;</span>;</pre>
@@ -10204,7 +10204,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSSMAutomationRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L221">const <b>AmazonSSMAutomationRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L221" >}}">const <b>AmazonSSMAutomationRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole&#34;</span>;</pre>
@@ -10212,7 +10212,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSSMFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L222">const <b>AmazonSSMFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L222" >}}">const <b>AmazonSSMFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMFullAccess&#34;</span>;</pre>
@@ -10220,7 +10220,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSSMMaintenanceWindowRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L223">const <b>AmazonSSMMaintenanceWindowRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L223" >}}">const <b>AmazonSSMMaintenanceWindowRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole&#34;</span>;</pre>
@@ -10228,7 +10228,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonSSMReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L224">const <b>AmazonSSMReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L224" >}}">const <b>AmazonSSMReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess&#34;</span>;</pre>
@@ -10236,7 +10236,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonVPCFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L225">const <b>AmazonVPCFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L225" >}}">const <b>AmazonVPCFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonVPCFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCFullAccess&#34;</span>;</pre>
@@ -10244,7 +10244,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonVPCReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L226">const <b>AmazonVPCReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L226" >}}">const <b>AmazonVPCReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess&#34;</span>;</pre>
@@ -10252,7 +10252,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonWorkMailFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L227">const <b>AmazonWorkMailFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L227" >}}">const <b>AmazonWorkMailFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailFullAccess&#34;</span>;</pre>
@@ -10260,7 +10260,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonWorkMailReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L228">const <b>AmazonWorkMailReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L228" >}}">const <b>AmazonWorkMailReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess&#34;</span>;</pre>
@@ -10268,7 +10268,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonWorkSpacesAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L229">const <b>AmazonWorkSpacesAdmin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L229" >}}">const <b>AmazonWorkSpacesAdmin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin&#34;</span>;</pre>
@@ -10276,7 +10276,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonWorkSpacesApplicationManagerAdminAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L230">const <b>AmazonWorkSpacesApplicationManagerAdminAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L230" >}}">const <b>AmazonWorkSpacesApplicationManagerAdminAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess&#34;</span>;</pre>
@@ -10284,7 +10284,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonZocaloFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L231">const <b>AmazonZocaloFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L231" >}}">const <b>AmazonZocaloFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloFullAccess&#34;</span>;</pre>
@@ -10292,7 +10292,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AmazonZocaloReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L232">const <b>AmazonZocaloReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L232" >}}">const <b>AmazonZocaloReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess&#34;</span>;</pre>
@@ -10300,7 +10300,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationAutoScalingForAmazonAppStreamAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L233">const <b>ApplicationAutoScalingForAmazonAppStreamAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L233" >}}">const <b>ApplicationAutoScalingForAmazonAppStreamAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess&#34;</span>;</pre>
@@ -10308,7 +10308,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingConsoleFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L234">const <b>AutoScalingConsoleFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L234" >}}">const <b>AutoScalingConsoleFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess&#34;</span>;</pre>
@@ -10316,7 +10316,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingConsoleReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L235">const <b>AutoScalingConsoleReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L235" >}}">const <b>AutoScalingConsoleReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess&#34;</span>;</pre>
@@ -10324,7 +10324,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L236">const <b>AutoScalingFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L236" >}}">const <b>AutoScalingFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AutoScalingFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingFullAccess&#34;</span>;</pre>
@@ -10332,7 +10332,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingNotificationAccessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L237">const <b>AutoScalingNotificationAccessRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L237" >}}">const <b>AutoScalingNotificationAccessRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole&#34;</span>;</pre>
@@ -10340,7 +10340,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L238">const <b>AutoScalingReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L238" >}}">const <b>AutoScalingReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess&#34;</span>;</pre>
@@ -10348,7 +10348,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Billing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L239">const <b>Billing</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L239" >}}">const <b>Billing</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> Billing: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/Billing&#34;</span>;</pre>
@@ -10356,7 +10356,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudFrontFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L240">const <b>CloudFrontFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L240" >}}">const <b>CloudFrontFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudFrontFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontFullAccess&#34;</span>;</pre>
@@ -10364,7 +10364,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudFrontReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L241">const <b>CloudFrontReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L241" >}}">const <b>CloudFrontReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess&#34;</span>;</pre>
@@ -10372,7 +10372,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudSearchFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L242">const <b>CloudSearchFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L242" >}}">const <b>CloudSearchFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudSearchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchFullAccess&#34;</span>;</pre>
@@ -10380,7 +10380,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudSearchReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L243">const <b>CloudSearchReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L243" >}}">const <b>CloudSearchReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess&#34;</span>;</pre>
@@ -10388,7 +10388,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchActionsEC2Access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L244">const <b>CloudWatchActionsEC2Access</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L244" >}}">const <b>CloudWatchActionsEC2Access</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchActionsEC2Access&#34;</span>;</pre>
@@ -10396,7 +10396,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchEventsBuiltInTargetExecutionAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L245">const <b>CloudWatchEventsBuiltInTargetExecutionAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L245" >}}">const <b>CloudWatchEventsBuiltInTargetExecutionAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess&#34;</span>;</pre>
@@ -10404,7 +10404,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchEventsFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L246">const <b>CloudWatchEventsFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L246" >}}">const <b>CloudWatchEventsFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsFullAccess&#34;</span>;</pre>
@@ -10412,7 +10412,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchEventsInvocationAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L247">const <b>CloudWatchEventsInvocationAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L247" >}}">const <b>CloudWatchEventsInvocationAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess&#34;</span>;</pre>
@@ -10420,7 +10420,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchEventsReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L248">const <b>CloudWatchEventsReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L248" >}}">const <b>CloudWatchEventsReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess&#34;</span>;</pre>
@@ -10428,7 +10428,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L249">const <b>CloudWatchFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L249" >}}">const <b>CloudWatchFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchFullAccess&#34;</span>;</pre>
@@ -10436,7 +10436,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchLogsFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L250">const <b>CloudWatchLogsFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L250" >}}">const <b>CloudWatchLogsFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsFullAccess&#34;</span>;</pre>
@@ -10444,7 +10444,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchLogsReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L251">const <b>CloudWatchLogsReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L251" >}}">const <b>CloudWatchLogsReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess&#34;</span>;</pre>
@@ -10452,7 +10452,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudWatchReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L252">const <b>CloudWatchReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L252" >}}">const <b>CloudWatchReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess&#34;</span>;</pre>
@@ -10460,7 +10460,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataScientist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L253">const <b>DataScientist</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L253" >}}">const <b>DataScientist</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> DataScientist: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DataScientist&#34;</span>;</pre>
@@ -10468,7 +10468,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L254">const <b>DatabaseAdministrator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L254" >}}">const <b>DatabaseAdministrator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> DatabaseAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DatabaseAdministrator&#34;</span>;</pre>
@@ -10476,7 +10476,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IAMFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L255">const <b>IAMFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L255" >}}">const <b>IAMFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> IAMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMFullAccess&#34;</span>;</pre>
@@ -10484,7 +10484,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IAMReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L256">const <b>IAMReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L256" >}}">const <b>IAMReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> IAMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMReadOnlyAccess&#34;</span>;</pre>
@@ -10492,7 +10492,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IAMSelfManageServiceSpecificCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L257">const <b>IAMSelfManageServiceSpecificCredentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L257" >}}">const <b>IAMSelfManageServiceSpecificCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials&#34;</span>;</pre>
@@ -10500,7 +10500,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IAMUserChangePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L258">const <b>IAMUserChangePassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L258" >}}">const <b>IAMUserChangePassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> IAMUserChangePassword: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserChangePassword&#34;</span>;</pre>
@@ -10508,7 +10508,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IAMUserSSHKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L259">const <b>IAMUserSSHKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L259" >}}">const <b>IAMUserSSHKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> IAMUserSSHKeys: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserSSHKeys&#34;</span>;</pre>
@@ -10516,7 +10516,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L260">const <b>NetworkAdministrator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L260" >}}">const <b>NetworkAdministrator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> NetworkAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/NetworkAdministrator&#34;</span>;</pre>
@@ -10524,7 +10524,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PowerUserAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L261">const <b>PowerUserAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L261" >}}">const <b>PowerUserAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> PowerUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/PowerUserAccess&#34;</span>;</pre>
@@ -10532,7 +10532,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RDSCloudHsmAuthorizationRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L262">const <b>RDSCloudHsmAuthorizationRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L262" >}}">const <b>RDSCloudHsmAuthorizationRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole&#34;</span>;</pre>
@@ -10540,7 +10540,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L263">const <b>ReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L263" >}}">const <b>ReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ReadOnlyAccess&#34;</span>;</pre>
@@ -10548,7 +10548,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroupsandTagEditorFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L264">const <b>ResourceGroupsandTagEditorFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L264" >}}">const <b>ResourceGroupsandTagEditorFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess&#34;</span>;</pre>
@@ -10556,7 +10556,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceGroupsandTagEditorReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L265">const <b>ResourceGroupsandTagEditorReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L265" >}}">const <b>ResourceGroupsandTagEditorReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess&#34;</span>;</pre>
@@ -10564,7 +10564,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityAudit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L266">const <b>SecurityAudit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L266" >}}">const <b>SecurityAudit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SecurityAudit: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SecurityAudit&#34;</span>;</pre>
@@ -10572,7 +10572,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerMigrationConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L267">const <b>ServerMigrationConnector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L267" >}}">const <b>ServerMigrationConnector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ServerMigrationConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServerMigrationConnector&#34;</span>;</pre>
@@ -10580,7 +10580,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerMigrationServiceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L268">const <b>ServerMigrationServiceRole</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L268" >}}">const <b>ServerMigrationServiceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ServerMigrationServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole&#34;</span>;</pre>
@@ -10588,7 +10588,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceCatalogAdminFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L269">const <b>ServiceCatalogAdminFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L269" >}}">const <b>ServiceCatalogAdminFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess&#34;</span>;</pre>
@@ -10596,7 +10596,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceCatalogAdminReadOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L270">const <b>ServiceCatalogAdminReadOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L270" >}}">const <b>ServiceCatalogAdminReadOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess&#34;</span>;</pre>
@@ -10604,7 +10604,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceCatalogEndUserAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L271">const <b>ServiceCatalogEndUserAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L271" >}}">const <b>ServiceCatalogEndUserAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess&#34;</span>;</pre>
@@ -10612,7 +10612,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceCatalogEndUserFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L272">const <b>ServiceCatalogEndUserFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L272" >}}">const <b>ServiceCatalogEndUserFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess&#34;</span>;</pre>
@@ -10620,7 +10620,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SimpleWorkflowFullAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L273">const <b>SimpleWorkflowFullAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L273" >}}">const <b>SimpleWorkflowFullAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SimpleWorkflowFullAccess&#34;</span>;</pre>
@@ -10628,7 +10628,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SupportUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L274">const <b>SupportUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L274" >}}">const <b>SupportUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SupportUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SupportUser&#34;</span>;</pre>
@@ -10636,7 +10636,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SystemAdministrator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L275">const <b>SystemAdministrator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L275" >}}">const <b>SystemAdministrator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SystemAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SystemAdministrator&#34;</span>;</pre>
@@ -10644,7 +10644,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VMImportExportRoleForAWSConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L276">const <b>VMImportExportRoleForAWSConnector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L276" >}}">const <b>VMImportExportRoleForAWSConnector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector&#34;</span>;</pre>
@@ -10652,7 +10652,7 @@ The [unique ID][1] assigned by AWS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ViewOnlyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/managedPolicies.ts#L277">const <b>ViewOnlyAccess</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/managedPolicies.ts#L277" >}}">const <b>ViewOnlyAccess</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> ViewOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/ViewOnlyAccess&#34;</span>;</pre>
@@ -10661,11 +10661,11 @@ The [unique ID][1] assigned by AWS.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Principals">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L17">module <b>Principals</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L17" >}}">module <b>Principals</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="AcmServicePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L21">const <b>AcmServicePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L21" >}}">const <b>AcmServicePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10675,7 +10675,7 @@ Service Principal for Amazon Certificate Manager
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiGatewayPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L26">const <b>ApiGatewayPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L26" >}}">const <b>ApiGatewayPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10685,7 +10685,7 @@ Service Principal for API Gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AthenaPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L31">const <b>AthenaPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L31" >}}">const <b>AthenaPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10695,7 +10695,7 @@ Service Principal for Athena
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscalingPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L36">const <b>AutoscalingPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L36" >}}">const <b>AutoscalingPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10705,7 +10705,7 @@ Service Principal for Autoscaling
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudDirectoryPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L41">const <b>CloudDirectoryPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L41" >}}">const <b>CloudDirectoryPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10715,7 +10715,7 @@ Service Principal for Cloud Directory
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudSearchPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L56">const <b>CloudSearchPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L56" >}}">const <b>CloudSearchPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10725,7 +10725,7 @@ Service Principal for Cloud Search
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudformationPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L46">const <b>CloudformationPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L46" >}}">const <b>CloudformationPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10735,7 +10735,7 @@ Service Principal for Cloudformation
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudfrontPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L51">const <b>CloudfrontPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L51" >}}">const <b>CloudfrontPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10745,7 +10745,7 @@ Service Principal for Cloudfront
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudtrailPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L61">const <b>CloudtrailPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L61" >}}">const <b>CloudtrailPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10755,7 +10755,7 @@ Service Principal for Cloudtrail
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CodeCommitPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L66">const <b>CodeCommitPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L66" >}}">const <b>CodeCommitPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10765,7 +10765,7 @@ Service Principal for CodeCommit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CodeDeployPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L71">const <b>CodeDeployPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L71" >}}">const <b>CodeDeployPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10775,7 +10775,7 @@ Service Principal for CodeDeploy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CodePipelinePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L76">const <b>CodePipelinePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L76" >}}">const <b>CodePipelinePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10785,7 +10785,7 @@ Service Principal for CodePipeline
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L81">const <b>ConfigPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L81" >}}">const <b>ConfigPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10795,7 +10795,7 @@ Service Principal for EC2 Config Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataPipelinePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L86">const <b>DataPipelinePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L86" >}}">const <b>DataPipelinePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10805,7 +10805,7 @@ Service Principal for Data Pipeline
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectConnectPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L91">const <b>DirectConnectPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L91" >}}">const <b>DirectConnectPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10815,7 +10815,7 @@ Service Principal for DirectConnect
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryServicesPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L96">const <b>DirectoryServicesPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L96" >}}">const <b>DirectoryServicesPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10825,7 +10825,7 @@ Service Principal for Directory Services
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DynamoDbPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L101">const <b>DynamoDbPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L101" >}}">const <b>DynamoDbPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10835,7 +10835,7 @@ Service Principal for DynamoDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ec2Principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L106">const <b>Ec2Principal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L106" >}}">const <b>Ec2Principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10845,7 +10845,7 @@ Service Principal for EC2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EcrPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L111">const <b>EcrPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L111" >}}">const <b>EcrPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10855,7 +10855,7 @@ Service Principal for Elastic Container Registry
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EcsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L116">const <b>EcsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L116" >}}">const <b>EcsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10865,7 +10865,7 @@ Service Principal for Elastic Container Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EdgeLambdaPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L121">const <b>EdgeLambdaPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L121" >}}">const <b>EdgeLambdaPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10875,7 +10875,7 @@ Service Principal for Edge Lambda
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticBeanstalkPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L131">const <b>ElasticBeanstalkPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L131" >}}">const <b>ElasticBeanstalkPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10885,7 +10885,7 @@ Service Principal for Elastic Beanstalk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticFileSystemPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L136">const <b>ElasticFileSystemPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L136" >}}">const <b>ElasticFileSystemPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10895,7 +10895,7 @@ Service Principal for Elastic File System
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticLoadBalancingPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L141">const <b>ElasticLoadBalancingPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L141" >}}">const <b>ElasticLoadBalancingPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10905,7 +10905,7 @@ Service Principal for Elastic Load Balancing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticMapReducePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L146">const <b>ElasticMapReducePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L146" >}}">const <b>ElasticMapReducePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10915,7 +10915,7 @@ Service Principal for Elastic MapReduce
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticachePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L126">const <b>ElasticachePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L126" >}}">const <b>ElasticachePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10925,7 +10925,7 @@ Service Principal for Elasticache
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L151">const <b>EventsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L151" >}}">const <b>EventsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10935,7 +10935,7 @@ Service Principal for Events
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L156">const <b>HealthPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L156" >}}">const <b>HealthPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10945,7 +10945,7 @@ Service Principal for Health
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IamPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L161">const <b>IamPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L161" >}}">const <b>IamPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10955,7 +10955,7 @@ Service Principal for IAM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InspectorPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L166">const <b>InspectorPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L166" >}}">const <b>InspectorPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10965,7 +10965,7 @@ Service Principal for AWS Inspector
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KinesisPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L171">const <b>KinesisPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L171" >}}">const <b>KinesisPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10975,7 +10975,7 @@ Service Principal for Kinesis
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KmsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L176">const <b>KmsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L176" >}}">const <b>KmsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10985,7 +10985,7 @@ Service Principal for Key Mangaement Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LambdaPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L181">const <b>LambdaPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L181" >}}">const <b>LambdaPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10995,7 +10995,7 @@ Service Principal for Lambda
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LightsailPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L186">const <b>LightsailPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L186" >}}">const <b>LightsailPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11005,7 +11005,7 @@ Service Principal for Lightsail
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L191">const <b>LogsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L191" >}}">const <b>LogsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11015,7 +11015,7 @@ Service Principal for Cloudwatch Logs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitoringPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L196">const <b>MonitoringPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L196" >}}">const <b>MonitoringPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11025,7 +11025,7 @@ Service Principal for Cloudwatch Monitoring
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OpsworksPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L201">const <b>OpsworksPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L201" >}}">const <b>OpsworksPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11035,7 +11035,7 @@ Service Principal for Opsworks
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L206">const <b>OrganizationsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L206" >}}">const <b>OrganizationsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11045,7 +11045,7 @@ Service Principal for Organizations
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L211">const <b>RdsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L211" >}}">const <b>RdsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11055,7 +11055,7 @@ Service Principal for Relational Database Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RedshiftPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L216">const <b>RedshiftPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L216" >}}">const <b>RedshiftPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11065,7 +11065,7 @@ Service Principal for Redshift
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route53Principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L221">const <b>Route53Principal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L221" >}}">const <b>Route53Principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11075,7 +11075,7 @@ Service Principal for Route 53
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="S3Principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L226">const <b>S3Principal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L226" >}}">const <b>S3Principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11085,7 +11085,7 @@ Service Principal for S3
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceCatalogPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L231">const <b>ServiceCatalogPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L231" >}}">const <b>ServiceCatalogPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11095,7 +11095,7 @@ Service Principal for Service Catalog
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SesPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L236">const <b>SesPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L236" >}}">const <b>SesPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11105,7 +11105,7 @@ Service Principal for Simple Email Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SigninPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L241">const <b>SigninPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L241" >}}">const <b>SigninPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11115,7 +11115,7 @@ Service Principal for Signin Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L246">const <b>SnsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L246" >}}">const <b>SnsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11125,7 +11125,7 @@ Service Principal for Simple Notification Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L251">const <b>SqsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L251" >}}">const <b>SqsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11135,7 +11135,7 @@ Service Principal for Simple Queue Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SsmPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L256">const <b>SsmPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L256" >}}">const <b>SsmPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11145,7 +11145,7 @@ Service Principal for Systems Manager
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageGatewayPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L261">const <b>StorageGatewayPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L261" >}}">const <b>StorageGatewayPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11155,7 +11155,7 @@ Service Principal for Storage Gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L266">const <b>StsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L266" >}}">const <b>StsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11165,7 +11165,7 @@ Service Principal for Security Token Service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SupportPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L271">const <b>SupportPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L271" >}}">const <b>SupportPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11175,7 +11175,7 @@ Service Principal for AWS Support
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VmiePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L276">const <b>VmiePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L276" >}}">const <b>VmiePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11185,7 +11185,7 @@ Service Principal for VM Import/Export
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcFlowLogsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L281">const <b>VpcFlowLogsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L281" >}}">const <b>VpcFlowLogsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11195,7 +11195,7 @@ Service Principal for VPC Flow Logs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L286">const <b>WafPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L286" >}}">const <b>WafPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11205,7 +11205,7 @@ Service Principal for Web Application Firewall
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkDocsPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L291">const <b>WorkDocsPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L291" >}}">const <b>WorkDocsPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11215,7 +11215,7 @@ Service Principal for WorkDocs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkspacesPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/principals.ts#L296">const <b>WorkspacesPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L296" >}}">const <b>WorkspacesPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11226,7 +11226,7 @@ Service Principal for Workspaces
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Principal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/iam/documents.ts#L143">type <b>Principal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L143" >}}">type <b>Principal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Principal = <span class='s2'>"*"</span> | <a href='#AWSPrincipal'>AWSPrincipal</a> | <a href='#ServicePrincipal'>ServicePrincipal</a> | <a href='#FederatedPrincipal'>FederatedPrincipal</a>;</pre>

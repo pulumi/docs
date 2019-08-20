@@ -18,18 +18,18 @@ title: Module codebuild
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts">codebuild/metrics.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts" >}}">codebuild/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L20" >}}">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="buildDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L83">function <b>buildDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L83" >}}">function <b>buildDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -45,7 +45,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="builds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L93">function <b>builds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L93" >}}">function <b>builds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -61,7 +61,7 @@ Valid CloudWatch statistics: Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="downloadSourceDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L103">function <b>downloadSourceDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L103" >}}">function <b>downloadSourceDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -77,7 +77,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L113">function <b>duration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L113" >}}">function <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -93,7 +93,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="failedBuilds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L123">function <b>failedBuilds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L123" >}}">function <b>failedBuilds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -109,7 +109,7 @@ Valid CloudWatch statistics: Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="finalizingDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L133">function <b>finalizingDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L133" >}}">function <b>finalizingDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -125,7 +125,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="installDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L143">function <b>installDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L143" >}}">function <b>installDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -141,7 +141,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L64">function <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L64" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -181,7 +181,7 @@ are for that project. If it is not specified, then the metrics are for the curre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="postBuildDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L153">function <b>postBuildDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L153" >}}">function <b>postBuildDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -197,7 +197,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="preBuildDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L163">function <b>preBuildDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L163" >}}">function <b>preBuildDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -213,7 +213,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="provisioningDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L173">function <b>provisioningDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L173" >}}">function <b>provisioningDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -229,7 +229,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="queuedDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L183">function <b>queuedDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L183" >}}">function <b>queuedDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -245,7 +245,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="submittedDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L193">function <b>submittedDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L193" >}}">function <b>submittedDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -261,7 +261,7 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="succeededBuilds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L203">function <b>succeededBuilds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L203" >}}">function <b>succeededBuilds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -277,7 +277,7 @@ Valid CloudWatch statistics: Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="uploadArtifactsDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L213">function <b>uploadArtifactsDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L213" >}}">function <b>uploadArtifactsDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -293,14 +293,14 @@ Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CodebuildMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L27">interface <b>CodebuildMetricChange</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L27" >}}">interface <b>CodebuildMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CodebuildMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/codebuild/metrics.ts#L21">type <b>CodebuildMetricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="codebuild/metrics.ts#L21" >}}">type <b>CodebuildMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> CodebuildMetricName = <span class='s2'>"BuildDuration"</span> | <span class='s2'>"Builds"</span> | <span class='s2'>"DownloadSourceDuration"</span> | <span class='s2'>"Duration"</span> | <span class='s2'>"FailedBuilds"</span> | <span class='s2'>"FinalizingDuration"</span> | <span class='s2'>"InstallDuration"</span> | <span class='s2'>"PostBuildDuration"</span> | <span class='s2'>"PreBuildDuration"</span> | <span class='s2'>"ProvisioningDuration"</span> | <span class='s2'>"QueuedDuration"</span> | <span class='s2'>"SubmittedDuration"</span> | <span class='s2'>"SucceededBuilds"</span> | <span class='s2'>"UploadArtifactsDuration"</span>;</pre>

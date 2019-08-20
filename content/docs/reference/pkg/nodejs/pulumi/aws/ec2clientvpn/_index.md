@@ -30,14 +30,14 @@ title: Module ec2clientvpn
 <li><a href="#NetworkAssociationState">interface NetworkAssociationState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts">ec2clientvpn/endpoint.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts">ec2clientvpn/networkAssociation.ts</a> 
+<a href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts" >}}">ec2clientvpn/endpoint.ts</a> <a href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts" >}}">ec2clientvpn/networkAssociation.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Endpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L35">class <b>Endpoint</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L35" >}}">class <b>Endpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -72,7 +72,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L105" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -89,7 +89,7 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -103,7 +103,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -113,7 +113,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -127,7 +127,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-authenticationOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L65">property <b>authenticationOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L65" >}}">property <b>authenticationOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>authenticationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -142,7 +142,7 @@ Information about the authentication method to be used to authenticate clients.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-clientCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L69">property <b>clientCidrBlock</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L69" >}}">property <b>clientCidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientCidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -153,7 +153,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-connectionLogOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L73">property <b>connectionLogOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L73" >}}">property <b>connectionLogOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionLogOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -168,7 +168,7 @@ Information about the client connection logging options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L77">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L77" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -179,7 +179,7 @@ Name of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L81">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L81" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -190,7 +190,7 @@ The DNS name to be used by clients when establishing their VPN session.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L85">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L85" >}}">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dnsServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -201,7 +201,7 @@ Information about the DNS servers to be used for DNS resolution. A Client VPN en
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -213,7 +213,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-serverCertificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L89">property <b>serverCertificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L89" >}}">property <b>serverCertificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverCertificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -224,7 +224,7 @@ The ARN of the ACM server certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-splitTunnel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L93">property <b>splitTunnel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L93" >}}">property <b>splitTunnel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>splitTunnel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -235,7 +235,7 @@ Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `fal
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L97">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L97" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -246,7 +246,7 @@ The current state of the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L101">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L101" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -257,7 +257,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-transportProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L105">property <b>transportProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L105" >}}">property <b>transportProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>transportProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -268,7 +268,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -281,7 +281,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L25">class <b>NetworkAssociation</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L25" >}}">class <b>NetworkAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -306,7 +306,7 @@ const example = new aws.ec2clientvpn.NetworkAssociation("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -323,7 +323,7 @@ Create a NetworkAssociation resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -337,7 +337,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -347,7 +347,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -361,7 +361,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-clientVpnEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L55">property <b>clientVpnEndpointId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L55" >}}">property <b>clientVpnEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientVpnEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -372,7 +372,7 @@ The ID of the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -384,7 +384,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L59">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L59" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -395,7 +395,7 @@ The IDs of the security groups applied to the target network association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L63">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L63" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -406,7 +406,7 @@ The current state of the target network association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L67">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L67" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -417,7 +417,7 @@ The ID of the subnet to associate with the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -429,7 +429,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociation-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L71">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L71" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -441,7 +441,7 @@ The ID of the VPC in which the target network (subnet) is located.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L220">interface <b>EndpointArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L220" >}}">interface <b>EndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -450,7 +450,7 @@ The set of arguments for constructing a Endpoint resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointArgs-authenticationOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L224">property <b>authenticationOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L224" >}}">property <b>authenticationOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authenticationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -465,7 +465,7 @@ Information about the authentication method to be used to authenticate clients.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-clientCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L228">property <b>clientCidrBlock</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L228" >}}">property <b>clientCidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -476,7 +476,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-connectionLogOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L232">property <b>connectionLogOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L232" >}}">property <b>connectionLogOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLogOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -491,7 +491,7 @@ Information about the client connection logging options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L236">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L236" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -502,7 +502,7 @@ Name of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L240">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L240" >}}">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -513,7 +513,7 @@ Information about the DNS servers to be used for DNS resolution. A Client VPN en
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-serverCertificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L244">property <b>serverCertificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L244" >}}">property <b>serverCertificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverCertificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -524,7 +524,7 @@ The ARN of the ACM server certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-splitTunnel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L248">property <b>splitTunnel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L248" >}}">property <b>splitTunnel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>splitTunnel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -535,7 +535,7 @@ Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `fal
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L252" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -546,7 +546,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-transportProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L256">property <b>transportProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L256" >}}">property <b>transportProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transportProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -558,7 +558,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L170">interface <b>EndpointState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L170" >}}">interface <b>EndpointState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -567,7 +567,7 @@ Input properties used for looking up and filtering Endpoint resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointState-authenticationOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L174">property <b>authenticationOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L174" >}}">property <b>authenticationOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authenticationOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -582,7 +582,7 @@ Information about the authentication method to be used to authenticate clients.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-clientCidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L178">property <b>clientCidrBlock</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L178" >}}">property <b>clientCidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -593,7 +593,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-connectionLogOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L182">property <b>connectionLogOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L182" >}}">property <b>connectionLogOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLogOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -608,7 +608,7 @@ Information about the client connection logging options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L186">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L186" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -619,7 +619,7 @@ Name of the repository.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L190">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L190" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -630,7 +630,7 @@ The DNS name to be used by clients when establishing their VPN session.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L194">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L194" >}}">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -641,7 +641,7 @@ Information about the DNS servers to be used for DNS resolution. A Client VPN en
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-serverCertificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L198">property <b>serverCertificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L198" >}}">property <b>serverCertificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverCertificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -652,7 +652,7 @@ The ARN of the ACM server certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-splitTunnel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L202">property <b>splitTunnel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L202" >}}">property <b>splitTunnel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>splitTunnel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -663,7 +663,7 @@ Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `fal
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L206">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L206" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -674,7 +674,7 @@ The current state of the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L210">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L210" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -685,7 +685,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-transportProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/endpoint.ts#L214">property <b>transportProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/endpoint.ts#L214" >}}">property <b>transportProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transportProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -697,7 +697,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L144">interface <b>NetworkAssociationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L144" >}}">interface <b>NetworkAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -706,7 +706,7 @@ The set of arguments for constructing a NetworkAssociation resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkAssociationArgs-clientVpnEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L148">property <b>clientVpnEndpointId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L148" >}}">property <b>clientVpnEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientVpnEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -717,7 +717,7 @@ The ID of the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociationArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L152">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L152" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -729,7 +729,7 @@ The ID of the subnet to associate with the Client VPN endpoint.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L118">interface <b>NetworkAssociationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L118" >}}">interface <b>NetworkAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -738,7 +738,7 @@ Input properties used for looking up and filtering NetworkAssociation resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkAssociationState-clientVpnEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L122">property <b>clientVpnEndpointId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L122" >}}">property <b>clientVpnEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientVpnEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -749,7 +749,7 @@ The ID of the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociationState-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L126">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L126" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -760,7 +760,7 @@ The IDs of the security groups applied to the target network association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociationState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L130">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L130" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -771,7 +771,7 @@ The current state of the target network association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociationState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L134">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L134" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -782,7 +782,7 @@ The ID of the subnet to associate with the Client VPN endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkAssociationState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/ec2clientvpn/networkAssociation.ts#L138">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2clientvpn/networkAssociation.ts#L138" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
