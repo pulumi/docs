@@ -51,7 +51,7 @@ And so on.
 
 We advocate splitting infrastructure up into (roughly) 3 sets of resources. As we will see, this is
 particularly easy with Pulumi, as the notion of a [Pulumi
-stack]({{< relref "/docs/reference/organizing-stacks-projects.md" >}}) was specifically designed for
+stack]({{< relref "/docs/intro/concepts/organizing-stacks-projects.md" >}}) was specifically designed for
 this use case.
 
 An explanation of the 3 stacks follows the diagram. In the next section, we begin to provision and

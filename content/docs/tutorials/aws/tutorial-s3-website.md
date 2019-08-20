@@ -182,7 +182,7 @@ The full source of the example is available in the [Pulumi examples repo](https:
 - [S3 website][s3-folder]
 - [S3 website as component][s3-folder-component]
 
-To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components]({{< relref "/docs/reference/component-tutorial.md" >}}) tutorial.
+To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components]({{< relref "/docs/tutorials/component-tutorial" >}}) tutorial.
 
 <!-- Common links -->
 [@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}

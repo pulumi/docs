@@ -82,7 +82,7 @@
         {
             name: "CLI",
             predicate: function (url) {
-                return url.startsWith("/docs/reference/cli/") || url === "/docs/refence/cli/";
+                return url.startsWith("/docs/reference/cli/") || url === "/docs/reference/cli/";
             }
         },
         {

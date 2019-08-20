@@ -27,7 +27,7 @@ Supported languages run out of process and communicate over gRPC with the Pulumi
 
 When you set a configuration value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack, pulumi.com manages a unique encryption key, which it uses to encrypt secrets for that stack. Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you can not copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
-When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object. To learn more, see [Configuration]({{< relref "config.md" >}}).
+When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object. To learn more, see [Configuration]({{< relref "/docs/intro/concepts/config" >}}).
 
 ## Are my secrets ever visible?
 
@@ -44,7 +44,7 @@ $ pulumi stack init acme-corp/widget-server
 
 ## How does Pulumi depend on pulumi.com?
 
-Pulumi uses pulumi.com to store information about the current state of your application, which is used during updates, previews and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, pulumi.com ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, pulumi.com ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on pulumi.com. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works]({{< relref "how.md" >}}).
+Pulumi uses pulumi.com to store information about the current state of your application, which is used during updates, previews and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, pulumi.com ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, pulumi.com ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on pulumi.com. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}).
 
 ## What happens if pulumi.com is down?
 
@@ -58,7 +58,7 @@ We think that using the Pulumi service and the Pulumi tool together provides the
 
 When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the pulumi.com features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends]({{< relref "state.md" >}}).
+To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 
 ## How can I go back to using the Pulumi service?
 

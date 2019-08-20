@@ -99,7 +99,7 @@ definition, and deployment pipeline in [Pulumi Examples repository](https://git
 ## Bootstrapping a Pulumi Program
 
 The Pulumi development experience is powered by the
-[Pulumi CLI]({{< relref "/docs/refence/cli" >}}). After
+[Pulumi CLI]({{< relref "/docs/reference/cli" >}}). After
 [installing the CLI]({{< ref "/docs/install" >}}), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS

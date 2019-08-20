@@ -29,7 +29,7 @@ We've
 how Pulumi [**tracks the status**]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
 of Kubernetes resources to provide fine-grained status messages for both
 your [**infrastructure and applications**]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}}).
-Pulumi [**uses a resource graph**]({{< ref "/docs/reference/how" >}})
+Pulumi [**uses a resource graph**]({{< ref "/docs/intro/concepts/how-pulumi-works" >}})
 for orchestration, dependency management, differential updates, and
 cascading rollouts.
 

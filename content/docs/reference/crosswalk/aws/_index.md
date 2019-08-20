@@ -103,7 +103,7 @@ and [Kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues/589)).
 ### What Languages are Supported?
 
 Pulumi Crosswalk for AWS is currently supported only in
-[Node.js (JavaScript or TypeScript) languages]({{< relref "/docs/reference/javascript.md" >}}). Support for other languages,
+[Node.js (JavaScript or TypeScript) languages]({{< relref "/docs/intro/clouds-and-languages/javascript" >}}). Support for other languages,
 [including Python](https://github.com/pulumi/pulumi-awsx/issues/308), is on the future roadmap.
 
 ### What Packages Define Pulumi Crosswalk for AWS?

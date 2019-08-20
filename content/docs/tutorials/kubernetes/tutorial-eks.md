@@ -24,7 +24,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 
 1. Add the required dependencies:
 
-    This installs the dependent packages [needed]({{< relref "/docs/reference/how.md" >}}) for our Pulumi program.
+    This installs the dependent packages [needed]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}) for our Pulumi program.
 
 	```bash
 	$ npm install --save @pulumi/eks @pulumi/kubernetes

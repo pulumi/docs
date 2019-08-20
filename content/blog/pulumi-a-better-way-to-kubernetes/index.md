@@ -115,7 +115,7 @@ integrate with CI/CD systems. How do you know when your application is
 ready? Common workflows involve [scripting kubectl calls](https://kubernetes.io/docs/reference/kubectl/conventions/#using-kubectl-in-reusable-scripts)
 and parsing JSON output in Bash. This approach is brittle, and the
 process is a little different for every Kubernetes resource type.
-Pulumi's [state reconciliation model]({{< ref "/docs/reference/how" >}}) is a
+Pulumi's [state reconciliation model]({{< ref "/docs/intro/concepts/how-pulumi-works" >}}) is a
 [natural fit for CI/CD systems]({{< ref "/docs/intro/console/continuous-delivery" >}}): review changes with a
 preview, and then proceed with confidence once an update succeeds. This
 is great for GitOps and [ChatOps]({{< relref "getting-to-chatops-with-pulumi-webhooks" >}})

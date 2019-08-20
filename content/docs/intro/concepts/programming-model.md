@@ -61,7 +61,7 @@ In Pulumi, you can group multiple resources in a [component](#components). A com
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "javascript.md" >}}) or [Python]({{< relref "python.md" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "pkg" >}}).
+Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "/docs/intro/clouds-and-languages/javascript" >}}) or [Python]({{< relref "/docs/intro/clouds-and-languages/python" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "/docs/reference/pkg" >}}).
 
 When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or prebuilt Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
@@ -507,7 +507,7 @@ Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw va
 
 ##### Apply {#apply}
 
-To transform an output into a new value, use the [`apply` method]({{< relref "pkg/nodejs/pulumi/pulumi/#OutputInstance-apply" >}}). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine:
+To transform an output into a new value, use the [`apply` method]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#OutputInstance-apply" >}}). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine:
 
 {{< langchoose >}}
 
@@ -688,7 +688,7 @@ def split(input):
 
 ##### Working with Outputs and strings {#outputs-and-strings}
 
-It's very common to want to build a string out of the values contained in `Outputs`.  Common uses include either providing a custom [stack output](#stack-outputs), or providing a dynamically computed string as an [Input]({{< relref "pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
+It's very common to want to build a string out of the values contained in `Outputs`.  Common uses include either providing a custom [stack output](#stack-outputs), or providing a dynamically computed string as an [Input]({{< relref "docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
 
 {{< langchoose >}}
 
@@ -1411,7 +1411,7 @@ class MyResource(Resource):
 
 We can now create instances of the new `MyResource` resource kind in our program with `new MyResource("name", args)`.  When doing so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no replacement is needed, Pulumi will call `update`.  In all cases, Pulumi first calls the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
 
-> **Note:** _Dynamic Providers_ are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations, such as `create` or `update`, runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely separate processes.  The construction of a `new MyResource` happens inside the JavaScript, Python, or Go process running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "serializing-functions.md" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions.  Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
+> **Note:** _Dynamic Providers_ are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations, such as `create` or `update`, runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely separate processes.  The construction of a `new MyResource` happens inside the JavaScript, Python, or Go process running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "/docs/tutorials/aws/serializing-functions" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
 
 ### Dynamic Resource Inputs
 
@@ -1850,38 +1850,38 @@ When serializing a function to text, the following steps are taken:
 2. The values of those variables are serialized.
 3. When the values are objects, all properties and prototype chains are serialized.  When the values are functions, those functions are serialized by following these same steps.
 
-See [Serializing Functions]({{< relref "serializing-functions.md" >}}) for more details.
+See [Serializing Functions]({{< relref "/docs/tutorials/aws/serializing-functions" >}}) for more details.
 
 ## Design Guidelines {#design-guidelines}
 
 ### OutputInstance.apply
 
-It is recommended that the `func` argument of [OutputInstance.apply]({{< relref "pkg/nodejs/pulumi/pulumi/#OutputInstance-apply" >}}) not create any resources. Doing so can lead to the results of `pulumi preview` being wrong, since the `apply` callback will not get run during a preview. This is because the real output values are not yet known until the resources are deployed, so any resources created in the callback will not be seen during the `preview`.
+It is recommended that the `func` argument of [OutputInstance.apply]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#OutputInstance-apply" >}}) not create any resources. Doing so can lead to the results of `pulumi preview` being wrong, since the `apply` callback will not get run during a preview. This is because the real output values are not yet known until the resources are deployed, so any resources created in the callback will not be seen during the `preview`.
 
-However, you may have a scenario in which the actual value, such as an array of Outputs, is needed to create a resource but is not determined until the time of `pulumi update` and after part of the deployment has already happened. For example, an array of [Nameservers]({{< relref "pkg/nodejs/pulumi/aws/route53#Zone-nameServers" >}})).  In that case, Pulumi lets you express this within the `apply`, but be cautioned that the preview may not include some changes to resources that are created or later removed from within the `apply`.
+However, you may have a scenario in which the actual value, such as an array of Outputs, is needed to create a resource but is not determined until the time of `pulumi update` and after part of the deployment has already happened. For example, an array of [Nameservers]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/route53#Zone-nameServers" >}})).  In that case, Pulumi lets you express this within the `apply`, but be cautioned that the preview may not include some changes to resources that are created or later removed from within the `apply`.
 
 <!-- MARKDOWN LINKS -->
-[pulumi.Resource]: {{< relref "pkg/nodejs/pulumi/pulumi#Resource" >}}
-[pulumi.ComponentResource]: {{< relref "pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
-[pulumi.CustomResource]: {{< relref "pkg/nodejs/pulumi/pulumi#CustomResource" >}}
-[pulumi.Output]: {{< relref "pkg/nodejs/pulumi/pulumi#Output" >}}
-[pulumi.Input]: {{< relref "pkg/nodejs/pulumi/pulumi#Input" >}}
-[@pulumi/pulumi]: {{< relref "pkg/nodejs/pulumi/pulumi" >}}
-[@pulumi/aws]: {{< relref "pkg/nodejs/pulumi/aws" >}}
-[@pulumi/kubernetes]: {{< relref "pkg/nodejs/pulumi/kubernetes" >}}
-[@pulumi/cloud]: {{< relref "pkg/nodejs/pulumi/cloud" >}}
-[@pulumi/awsx]: {{< relref "pkg/nodejs/pulumi/awsx" >}}
+[pulumi.Resource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Resource" >}}
+[pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
+[pulumi.CustomResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#CustomResource" >}}
+[pulumi.Output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
+[pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
+[@pulumi/pulumi]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}
+[@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
+[@pulumi/kubernetes]: {{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}}
+[@pulumi/cloud]: {{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}
+[@pulumi/awsx]: {{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}
 
-[pulumi.getStack]: {{< relref "pkg/nodejs/pulumi/pulumi#getStack" >}}
-[pulumi.log]: {{< relref "pkg/nodejs/pulumi/pulumi/log/" >}}
-[pulumi.runtime.serializeFunction]: {{< relref "pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}
-[pulumi.output]: {{< relref "pkg/nodejs/pulumi/pulumi#output" >}}
-[pulumi.all]: {{< relref "pkg/nodejs/pulumi/pulumi#all" >}}
+[pulumi.getStack]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#getStack" >}}
+[pulumi.log]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/log" >}}
+[pulumi.runtime.serializeFunction]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}
+[pulumi.output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#output" >}}
+[pulumi.all]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#all" >}}
 
-[config.get]: {{< relref "pkg/nodejs/pulumi/pulumi#method-get" >}}
-[config.require]: {{< relref "pkg/nodejs/pulumi/pulumi#method-require" >}}
-[config.getNumber]: {{< relref "pkg/nodejs/pulumi/pulumi#method-getnumber" >}}
-[config.getObject]: {{< relref "pkg/nodejs/pulumi/pulumi#method-getobject" >}}
+[config.get]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-get" >}}
+[config.require]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-require" >}}
+[config.getNumber]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-getnumber" >}}
+[config.getObject]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-getobject" >}}
 
-[registerOutputs]: {{< relref "pkg/nodejs/pulumi/pulumi#method-registeroutputs" >}}
+[registerOutputs]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-registeroutputs" >}}
 <!-- END LINKS -->

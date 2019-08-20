@@ -34,7 +34,7 @@ The major differences between Terraform and Pulumi are as follows:
 3. Terraform, by default, requires that you manage concurrency and state manually, by way of its "state files." Pulumi,
    in contrast, uses the free app.pulumi.com service to eliminate these concerns. This makes getting started with
    Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, [it is possible to use
-   Pulumi without the service]({{< relref "/docs/reference/faq.md#can-i-use-pulumi-without-depending-on-pulumicom" >}}),
+   Pulumi without the service]({{< relref "/docs/troubleshooting/faq#can-i-use-pulumi-without-depending-on-pulumicom" >}}),
    which works a lot more like Terraform, but it is harder to do and opt-in. Pulumi errs on the side of ease-of-use.
 
 4. Pulumi has deep support for cloud native technologies, like Kubernetes, and supports advanced deployment

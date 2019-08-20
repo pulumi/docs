@@ -73,8 +73,8 @@ sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-s
 ### Managing Complex Environments
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
-and application stacks. Pulumi supports [inter-stack dependencies]({{< relref "/docs/reference/organizing-stacks-projects.md#inter-stack-dependencies" >}}),
-which permit one stack to depend upon another. This facilitates continuous delivery at scale.
+and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects.md" >}}), which
+permit one stack to depend upon another. This facilitates continuous delivery at scale.
 
 ### Using Branches for Environments
 

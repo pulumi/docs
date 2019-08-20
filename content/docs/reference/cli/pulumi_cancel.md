@@ -1,6 +1,6 @@
 ---
 title: "pulumi cancel"
-expanded_url: /docs/refence/cli/
+expanded_url: /docs/reference/cli/
 ---
 
 

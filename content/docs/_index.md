@@ -37,7 +37,7 @@ Describe your resources in code---VMs, networks, databases, containers, Kubernet
     <div>
         <h3 class="no-anchor">Why Pulumi?</h3>
         <p class="text-sm text-gray-600">
-            By using <a href="{{< relref "/docs/reference/languages" >}}">general purpose languages</a>
+            By using <a href="{{< relref "/docs/intro/clouds-and-languages" >}}">general purpose languages</a>
             for infrastructure as code,
             you get all the benefits of real languages&mdash;IDEs, abstractions, and
             reuse thanks to functions, classes, and packages, debugging, testability,
@@ -48,7 +48,7 @@ Describe your resources in code---VMs, networks, databases, containers, Kubernet
     <div class="md:mx-8">
         <h3 class="no-anchor">Alternatives</h3>
         <p class="text-sm text-gray-600">
-            <a href="{{< relref "/docs/reference/vs" >}}">Other approaches</a> use YAML,
+            <a href="{{< relref "/docs/intro/vs" >}}">Other approaches</a> use YAML,
             JSON, or bespoke DSLs (Domain-Specific Languages) that you need to
             master and convince your team to use. These "languages" fall short of
             general purpose languages, since they lack abstractions and reuse, and reinvent

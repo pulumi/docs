@@ -71,7 +71,7 @@ In this tutorial, we'll create a simplified version of the example above, that j
     ```
 
 <!-- LINKS -->
-[pulumi.ComponentResource]: {{< relref "pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
+[pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
 [Component]: {{< relref "programming-model.md#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component

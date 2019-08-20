@@ -5,7 +5,7 @@ menu:
     identifier: cli
     weight: 2
 
-aliases: [/docs/refence/cli]
+aliases: [/docs/reference/cli]
 ---
 
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service

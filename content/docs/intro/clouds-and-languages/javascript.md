@@ -102,7 +102,7 @@ information on additional settings, see the [TypeScript documentation for `tscon
 
 Tools like VS Code will give you completion lists, live error reporting and inline documentation help.
 
-<img src="/images/docs/reference/vscode.png" alt="Pulumi TypeScript in VS Code" width="700">
+<img src="/images/docs/intro/vscode.png" alt="Pulumi TypeScript in VS Code" width="700">
 
 ## Disabling built in TypeScript support
 

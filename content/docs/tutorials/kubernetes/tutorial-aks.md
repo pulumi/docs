@@ -26,7 +26,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
 1. Add the required dependencies:
 
-    This installs the dependent packages [needed]({{< relref "/docs/reference/how.md" >}}) for our Pulumi program.
+    This installs the dependent packages [needed]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}) for our Pulumi program.
 
 	```bash
 	$ pip install pulumi pulumi_azure pulumi_kubernetes

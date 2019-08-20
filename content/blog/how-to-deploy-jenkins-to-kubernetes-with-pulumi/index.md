@@ -166,4 +166,4 @@ Find out more:
 
 -   Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
 -   Read the docs on [Kubernetes]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
--   See the tutorial on [building components]({{< ref "/docs/reference/component-tutorial" >}})
+-   See the tutorial on [building components]({{< ref "/docs/tutorials/component-tutorial" >}})
