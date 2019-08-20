@@ -8,6 +8,13 @@ menu:
         weight: 1
 ---
 
+We have the following resources to help you with managing your Pulumi account:
+
+* [Plans and Editions]({{< relref "editions" >}})
+* [Accounts]({{< relref "account" >}})
+* [Organizations]({{< relref "organizations" >}})
+* [Single Sign-on (SSO)]({{< relref "saml" >}})
+
 You can create a [Pulumi User account]({{< relref "account" >}}) for free by signing into the
 Pulumi Cloud Console. This is how you authenticate with the Pulumi Cloud Console.
 

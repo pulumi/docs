@@ -68,12 +68,12 @@ GitLab group membership expires, those users will lose access to the GitLab-back
 The Pulumi Enterprise edition provides more options for identity and access, including support for
 any SAML 2.0 based identity provider.
 
-[Learn more]({{< relref "saml" >}}) about configuring a SAML-based organization on Pulumi. Or refer to one
+[Learn more]({{< relref "/docs/guides/saml" >}}) about configuring a SAML-based organization on Pulumi. Or refer to one
 of our guides below:
 
-- [Azure Active Directory]({{< relref "aad" >}})
-- [G Suite]({{< relref "gsuite" >}})
-- [Okta]({{< relref "okta" >}})
+- [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
+- [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
+- [Okta]({{< relref "/docs/guides/saml/okta" >}})
 
 
 

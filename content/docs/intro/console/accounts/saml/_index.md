@@ -14,7 +14,7 @@ with the [Pulumi Cloud Console](https://app.pulumi.com).
 
 > For a specific example, you can refer to one of our integration guides:
 >
-> - [Azure Active Directory]({{< relref "aad" >}})
+> - [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
 > - [G Suite (Google)]({{< relref "gsuite" >}})
 > - [Okta]({{< relref "okta" >}})
 

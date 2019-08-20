@@ -17,8 +17,8 @@ altered to fit into any existing type of deployment setup.
 
 - A working installation of a recent version of Jenkins.
 - An account on the [Pulumi Console](https://app.pulumi.com).
-- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/reference/install.md" >}}).
-- Setup a new project and [stack]({{< relref "/docs/reference/stack.md" >}}) using one of our [Get Started]({{< relref "/docs/quickstart" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
+- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/install" >}}).
+- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
 and choosing one of the many templates that are available.
 - A bare repo and set the remote URL to be your GitHub project.
 
@@ -65,7 +65,7 @@ You can find available plugins by navigating to the Jenkins administration page 
 
 ### Project Parameters (Environment Variables)
 
-In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal]({{< relref "/docs/reference/clouds/azure/setup#creating-a-service-principal" >}}).
+In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal]({{< relref "/docs/intro/clouds-and-languages/azure/setup#creating-a-service-principal" >}}).
 
 The screenshot below shows you how you can parameterize your `Jenkinsfile` using environment variables.
 

@@ -9,7 +9,11 @@ menu:
 ---
 
 Pulumi Cloud Console provides ways for you to access your data to power workflows
-and integrations.
+and integrations:
+
+
+* [Webhooks]({{< relref "webhooks" >}})
+* [Deploy with Pulumi]({{< relref "pulumi-button" >}})
 
 > Some features are only found in the Pulumi Team and Enterprise editions. See
 > [product editions]({{< relref "editions" >}}) for more information.
