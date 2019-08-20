@@ -372,24 +372,24 @@ vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider}
 
 ### Resource names {#names}
 
-Every resource managed by Pulumi has a **logical name** that you specify as an argument to its constructor. For instance, the logical name of this AWS S3 Bucket is `my-bucket`:
+Every resource managed by Pulumi has a **logical name** that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
 {{< langchoose >}}
 
 ```javascript
-let b = new aws.s3.Bucket("my-bucket");
+let role = new aws.iam.Role("my-role");
 ```
 
 ```typescript
-let b = new aws.s3.Bucket("my-bucket");
+let role = new aws.iam.Role("my-role");
 ```
 
 ```python
-b = Bucket("my-bucket")
+role = iam.Role("my-role")
 ```
 
 ```go
-bucket, _ := s3.Bucket(ctx, "my-bucket", &s3.BucketArgs{}, pulumi.ResourceOpt{})
+role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{}, pulumi.ResourceOpt{})
 ```
 
 This logical name is used by Pulumi to track the identity of a resource across multiple deployments of the same program and is how Pulumi knows to choose between creating new resources versus updating existing ones.
@@ -399,9 +399,11 @@ The name specified during resource creation is used in two key ways:
 1. As a default prefix for the resource's **physical name** in the target cloud provider.
 2. To construct the Universal Resource Name (URN) used by Pulumi to track the resource across updates.
 
+Note that the variable name a resource object is assigned to isn't used in any way for either logical or physical naming.
+
 #### Auto-naming {#autonaming}
 
-A resource's logical and physical names may not match. In fact, most physical resource names in Pulumi are "auto-named." As a result, even if you call your bucket with a logical name of `my-bucket`, as shown above, the physical name will typically look like this: `my-bucket-d7c2fa0`.
+A resource's logical and physical names may not match. In fact, most physical resource names in Pulumi are "auto-named." As a result, even if you give your IAM role has a logical name of `my-role`, as shown above, the physical name will typically look something like `my-role-d7c2fa0`.
 
 This random suffix is added for two reasons:
 
@@ -409,63 +411,65 @@ This random suffix is added for two reasons:
 
 * It allows Pulumi to do zero-downtime resource updates. Certain updates require replacing resources, rather than updating them in place. This is because Pulumi can create replacements first, then update existing references to them, and finally delete the old resources. If it weren't for auto-naming, Pulumi would need to do things in a very different order: namely, it would need to delete resources first, and create new instances afterwards, which is far more impactful and leads to downtime.
 
-We understand that some end users will prefer precise names. Auto-naming can be overridden by manually specifying a physical name on your resource. Most resources offer this option by way of a `name` property that may be specified in the argument object to the constructor. It just so happens that our running example of an S3 Bucket uses `bucket` instead:
+Auto-naming can be overridden by manually specifying a physical name on your resource for use cases that require precise names. Most resources offer this option by way of a `name` property that may be specified in the argument object to the constructor:
 
 {{< langchoose >}}
 
 ```javascript
-let b = new aws.s3.Bucket("my-bucket", {
-    bucket: "my-bucket-001",
+let role = new aws.iam.Role("my-role", {
+    name: "my-role-001",
 });
 ```
 
 ```typescript
-let b = new aws.s3.Bucket("my-bucket", {
-    bucket: "my-bucket-001",
+let role = new aws.iam.Role("my-role", {
+    name: "my-role-001",
 });
 ```
 
 ```python
-b = Bucket('my-bucket', {
-    bucket='my-bucket-001'
+role = iam.Role('my-role', {
+    name='my-role-001'
 })
 ```
 
 ```go
-bucket, _ := s3.Bucket(ctx, "my-bucket", &s3.BucketArgs{
-    Bucket: "my-bucket-001",
+role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
+    Name: "my-role-001",
 }, pulumi.ResourceOpt{})
 ```
 
-Notice here that the physical and logical names do not need to match. You may even elect to construct the name using the name of your project and/or stack instead:
+> If `name` doesn't work, please consult the documentation for the specific resource you are creating. Some resources use a different property to override the auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of `name`. Other resources, like `aws.kms.Key`, don't even have physical names and instead use other auto-generated IDs to uniquely identify them.
+
+Notice above that the physical and logical names do not need to match. You may even elect to construct the name using the name of your project and/or stack instead. This is often necessary if you are going to create multiple stacks for your project:
 
 {{< langchoose >}}
 
 ```javascript
-let b = new aws.s3.Bucket("my-bucket", {
-    bucket: "my-bucket-"+pulumi.getProject() + "-" + pulumi.getStack(),
+let role = new aws.iam.Role("my-role", {
+    name: "my-role-" + pulumi.getProject() + "-" + pulumi.getStack(),
 });
 ```
 
 ```typescript
-let b = new aws.s3.Bucket("my-bucket", {
-    bucket: `my-bucket-${pulumi.getProject()}-${pulumi.getStack()}`,
+let role = new aws.iam.Role("my-role", {
+    name: `my-role-${pulumi.getProject()}-${pulumi.getStack()}`,
 });
 ```
 
 ```python
-b = Bucket('my-bucket', {
-    bucket='my-bucket-%s-%s'.format(pulumi.get_project(), pulumi.get_stack())
+role = iam.Role('my-role', {
+    name='my-role-%s-%s'.format(pulumi.get_project(), pulumi.get_stack())
 })
 ```
 
 ```go
-bucket, _ := s3.Bucket(ctx, "my-bucket", &s3.BucketArgs{
-    Bucket: "my-bucket-"+pulumi.GetProject()+"-"+pulumi.GetStack(),
+role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
+    Name: "my-role-"+pulumi.GetProject()+"-"+pulumi.GetStack(),
 }, pulumi.ResourceOpt{})
 ```
 
-Note that this can open up your project to naming collisions. As a result, for resources that may need to be replaced you will also need to specify `deleteBeforeReplace: true` in the resources's `ResourceOptions`. This ensures old resources are deleted before new ones are recreated.
+Overriding auto-naming typically opens up your project to naming collisions. As a result, for resources that may need to be replaced, you will also need to specify `deleteBeforeReplace: true` in the resources's `ResourceOptions`. This ensures old resources are deleted before new ones are recreated.
 
 #### URNs {#urns}
 

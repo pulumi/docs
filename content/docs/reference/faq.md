@@ -11,7 +11,7 @@ Pulumi resources have different logical names and physical names. The logical na
 
 To ensure that as many logical Pulumi resources and stacks can be stood up side-by-side without them conflicting, Pulumi automatically creates each resource's name by combining the logical name with a random suffix appended afterwards. This approach to auto-naming also ensures Pulumi can replace resources with less downtime, by creating the replacement before needing to delete the old resource. In practice, both of these provide significant benefits. This means, however, that your resource's physical name will typically look like `my-bucket-d7c2fa0` instead of `my-bucket`.
 
-You can disable this "auto-naming" on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes. Doing so does mean you lose the two benefits above. To learn more, see [the product documentation about auto-naming]({{< relref "programming-model" >}}#autonaming).
+You can disable this "auto-naming" on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above. To learn more, see [the product documentation about auto-naming]({{< relref "programming-model" >}}#autonaming).
 
 ## How can I add support for my favorite cloud?
 
