@@ -3,7 +3,7 @@ title: Supported Languages
 menu:
   intro:
     identifier: languages
-    weight: 3
+    weight: 4
 ---
 
 {{< get-started-note >}}

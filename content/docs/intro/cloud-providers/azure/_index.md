@@ -2,7 +2,7 @@
 title: Azure
 menu:
   intro:
-    parent: clouds-and-languages
+    parent: cloud-providers
     identifier: clouds-azure
     weight: 2
 ---

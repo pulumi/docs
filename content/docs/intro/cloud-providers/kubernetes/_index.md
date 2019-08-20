@@ -2,7 +2,7 @@
 title: Kubernetes
 menu:
   intro:
-    parent: clouds-and-languages
+    parent: cloud-providers
     identifier: clouds-kubernetes
     weight: 4
 ---

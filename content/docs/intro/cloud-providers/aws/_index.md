@@ -2,7 +2,7 @@
 title: AWS
 menu:
   intro:
-    parent: clouds-and-languages
+    parent: cloud-providers
     identifier: clouds-aws
     weight: 1
 ---

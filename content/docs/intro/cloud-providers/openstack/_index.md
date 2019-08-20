@@ -2,7 +2,7 @@
 title: OpenStack
 menu:
   intro:
-    parent: clouds-and-languages
+    parent: cloud-providers
     identifier: clouds-openstack
     weight: 5
 ---

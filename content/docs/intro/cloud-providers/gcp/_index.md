@@ -2,7 +2,7 @@
 title: Google Cloud
 menu:
   intro:
-    parent: clouds-and-languages
+    parent: cloud-providers
     identifier: clouds-gcp
     weight: 3
 ---
