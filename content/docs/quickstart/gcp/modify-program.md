@@ -84,8 +84,6 @@ bucket = storage.Bucket('my-bucket',
 pulumi.export('bucket_name',  bucket.url)
 ```
 
-Our program now creates a simple virtual machine running a Python web server.
-
 Next, we'll deploy the changes.
 
 {{< get-started-stepper >}}
