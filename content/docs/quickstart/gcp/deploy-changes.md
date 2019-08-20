@@ -35,7 +35,7 @@ Do you want to perform this update?
   details
 ```
 
-Pulumi will create the new two new resources, and then update the previously created bucket with the new encryption settings we defined.
+Pulumi will create two new resources, and then update the previously created bucket with the new encryption settings we defined.
 
 Choosing `yes` will proceed with the update.
 
