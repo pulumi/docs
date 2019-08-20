@@ -64,8 +64,8 @@ Create a scheduling.v1alpha1.PriorityClass resource with the given unique name, 
 
 
 Get the state of an existing `PriorityClass` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -249,8 +249,8 @@ Create a scheduling.v1alpha1.PriorityClassList resource with the given unique na
 
 
 Get the state of an existing `PriorityClassList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 

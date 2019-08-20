@@ -65,8 +65,8 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfiguration resource wit
 
 
 Get the state of an existing `MutatingWebhookConfiguration` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -209,8 +209,8 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfigurationList resource
 
 
 Get the state of an existing `MutatingWebhookConfigurationList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -354,8 +354,8 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfiguration resource w
 
 
 Get the state of an existing `ValidatingWebhookConfiguration` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -498,8 +498,8 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfigurationList resour
 
 
 Get the state of an existing `ValidatingWebhookConfigurationList` resource, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
