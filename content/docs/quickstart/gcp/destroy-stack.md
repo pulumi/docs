@@ -15,33 +15,33 @@ To destroy resources, run the following:
 $ pulumi destroy
 ```
 
-You'll be prompted to make sure you really want to delete these resources. This can take several minutes; Pulumi waits for the virtual machine instance to shutdown and for the compute network to be removed before it considers the destroy operation to be complete.
+You'll be prompted to make sure you really want to delete these resources.
 
 ```
 Previewing destroy (dev):
 
-     Type                     Name            Plan
- -   pulumi:pulumi:Stack      quickstart-dev  delete
- -   ├─ gcp:compute:Instance  instance        delete
- -   ├─ gcp:compute:Firewall  firewall        delete
- -   └─ gcp:compute:Network   network         delete
-
+     Type                   Name            Plan       
+ -   pulumi:pulumi:Stack    gcp-bucket-dev  delete     
+ -   ├─ gcp:storage:Bucket  my-bucket       delete     
+ -   ├─ gcp:kms:CryptoKey   my-cryptokey    delete     
+ -   └─ gcp:kms:KeyRing     my-keyring      delete     
+ 
 Resources:
     - 4 to delete
 
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                     Name            Status
- -   pulumi:pulumi:Stack      quickstart-dev  deleted
- -   ├─ gcp:compute:Instance  instance        deleted
- -   ├─ gcp:compute:Firewall  firewall        deleted
- -   └─ gcp:compute:Network   network         deleted
-
+     Type                   Name            Status      
+ -   pulumi:pulumi:Stack    gcp-bucket-dev  deleted     
+ -   ├─ gcp:storage:Bucket  my-bucket       deleted     
+ -   ├─ gcp:kms:CryptoKey   my-cryptokey    deleted     
+ -   └─ gcp:kms:KeyRing     my-keyring      deleted     
+ 
 Resources:
     - 4 deleted
 
-Duration: 6m1s
+Duration: 3s
 ```
 
 To delete the stack itself, run `pulumi stack rm`.
