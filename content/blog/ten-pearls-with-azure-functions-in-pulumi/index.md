@@ -4,7 +4,7 @@ date: 2019-08-21
 meta_image: meta.png
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Serverless"]
-meta_desc: "In this post, we'll take a look at 10 pearls&mdash;bite-sized code snippets&mdash;that demonstrate using Pulumi to build serverless applications with Azure Functions and infrastructure as code."
+meta_desc: "Ten bite-sized code snippets that use Pulumi to build serverless applications with Azure Functions and infrastructure as code."
 ---
 
 In this post, we'll take a look at 10 "pearls"&mdash;bite-sized code snippets&mdash;that demonstrate using Pulumi to build serverless applications with Azure Functions and infrastructure as code. These pearls are organized into four categories, each demonstrating a unique scenario:
@@ -57,7 +57,7 @@ const dotnetApp = new azure.appservice.ArchiveFunctionApp("http-dotnet", {
 });
 ```
 
-There are only four things required: 
+There are only four things required:
 
 - the Function App name ("http-dotnet")
 - the resource group it belongs to
@@ -285,7 +285,7 @@ This simple piece of code is an easy launching point for many automation, auditi
 
 ## Data Flows with Function Bindings
 
-Azure Functions come with a powerful system of bindings. So far, we only saw examples of using event sources as trigger bindings. However, Azure also supports a powerful set of so called "input" and "output" bindings. 
+Azure Functions come with a powerful system of bindings. So far, we only saw examples of using event sources as trigger bindings. However, Azure also supports a powerful set of so called "input" and "output" bindings.
 
 ### 9. Output Bindings
 
