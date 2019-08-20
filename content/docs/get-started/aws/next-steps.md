@@ -3,7 +3,7 @@ title: Next Steps
 weight: 11
 no_on_this_page: true
 menu:
-  get-started:
+  getstarted:
     parent: aws
     identifier: aws-next-steps
 ---

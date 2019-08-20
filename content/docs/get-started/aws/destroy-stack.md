@@ -2,7 +2,7 @@
 title: Destroy the Stack
 weight: 10
 menu:
-  get-started:
+  getstarted:
     parent: aws
     identifier: aws-destroy-stack
 ---
@@ -15,7 +15,7 @@ To destroy resources, run the following:
 $ pulumi destroy
 ```
 
-You'll be prompted to make sure you really want to delete these resources. This can take a minute or two; Pulumi waits for the EC2 instance to finish shutting down before it considers the destroy operation to be complete.
+You'll be prompted to make sure you really want to delete these resources. This can take a minute or two; Pulumi waits until all resources are shut down and deleted before it considers the destroy operation to be complete.
 
 ```
 Previewing destroy (dev):

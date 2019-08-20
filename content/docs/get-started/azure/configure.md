@@ -2,7 +2,7 @@
 title: Configure Azure
 weight: 4
 menu:
-  get-started:
+  getstarted:
     parent: azure
     identifier: azure-configure
 ---

@@ -2,12 +2,12 @@
 title: Modify the Program
 weight: 8
 menu:
-  get-started:
+  getstarted:
     parent: azure
     identifier: azure-modify-program
 ---
 
-Let's update our program to do something a little more interesting.
+Now that we have an instance of our Pulumi program deployed, let's enforce HTTPS-only communication for our storage account. This means, when making requests to this storage account only HTTPS traffic is allowed.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
@@ -19,29 +19,18 @@ const pulumi = require("@pulumi/pulumi");
 const azure = require("@pulumi/azure");
 
 // Create an Azure Resource Group
-const resourceGroup = new azure.core.ResourceGroup("resourceGroup", {
-    location: "WestUS",
-});
+const resourceGroup = new azure.core.ResourceGroup("resourceGroup");
 
-// Create an Azure Container Group
-const container = new azure.containerservice.Group("nginx", {
-    containers: [{
-        name: "nginx",
-        image: "nginx",
-        memory: 1,
-        cpu: 1,
-        ports: [{
-            port: 80,
-            protocol: "TCP"
-        }],
-    }],
-    osType: "Linux",
+// Create an Azure resource (Storage Account)
+const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
-    location: resourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    enableHttpsTrafficOnly: true,
 });
 
-// Export the public IP of the container
-exports.ip = container.ipAddress;
+// Export the connection string for the storage account
+exports.connectionString = account.primaryConnectionString;
 ```
 
 ```typescript
@@ -49,60 +38,37 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 // Create an Azure Resource Group
-const resourceGroup = new azure.core.ResourceGroup("resourceGroup", {
-    location: "WestUS",
-});
+const resourceGroup = new azure.core.ResourceGroup("resourceGroup");
 
-// Create an Azure Container Group
-const container = new azure.containerservice.Group("nginx", {
-    containers: [{
-        name: "nginx",
-        image: "nginx",
-        memory: 1,
-        cpu: 1,
-        ports: [{
-            port: 80,
-            protocol: "TCP"
-        }],
-    }],
-    osType: "Linux",
+// Create an Azure resource (Storage Account)
+const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
-    location: resourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    enableHttpsTrafficOnly: true,
 });
 
-// Export the public IP of the container
-export const ip = container.ipAddress;
+// Export the connection string for the storage account
+export const connectionString = account.primaryConnectionString;
 ```
 
 ```python
 import pulumi
-from pulumi_azure import core, containerservice
+from pulumi_azure import core, storage
 
 # Create an Azure Resource Group
-resource_group = core.ResourceGroup("resource_group",
-    location='WestUS')
+resource_group = core.ResourceGroup("resource_group")
 
-# Create an Azure Container Group
-container = containerservice.Group("nginx",
-    containers=[{
-        "name": "nginx",
-        "image": "nginx",
-        "memory": 1,
-        "cpu": 1,
-        "ports": [{
-            "port": 80,
-            "protocol": "TCP"
-        }],
-    }],
-    os_type="Linux",
+# Create an Azure resource (Storage Account)
+account = storage.Account("storage",
     resource_group_name=resource_group.name,
-    location=resource_group.location)
+    account_tier='Standard',
+    account_replication_type='LRS',
+    enable_https_traffic_only=True)
 
-# Export the public IP of the container
-pulumi.export('ip', container.ip_address)
+# Export the connection string for the storage account
+pulumi.export('connection_string', account.primary_connection_string)
 ```
-
-Our program now creates a simple NGINX container to Azure Container Instance (ACI).
 
 Next, we'll deploy the changes.
 

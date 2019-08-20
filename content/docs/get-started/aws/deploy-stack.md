@@ -2,7 +2,7 @@
 title: Deploy the Stack
 weight: 7
 menu:
-  quickstart:
+  getstarted:
     parent: aws
     identifier: aws-deploy-stack
 ---

@@ -2,7 +2,7 @@
 title: Get Started with Google Cloud
 weight: 1
 menu:
-  get-started:
+  getstarted:
     identifier: gcp
     name: Google Cloud
     weight: 2

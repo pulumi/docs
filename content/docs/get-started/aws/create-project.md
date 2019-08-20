@@ -2,7 +2,7 @@
 title: Create a New Project
 weight: 5
 menu:
-  get-started:
+  getstarted:
     parent: aws
     identifier: aws-create-project
 ---

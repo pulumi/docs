@@ -6,9 +6,9 @@
         {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
     {{ else if hasPrefix .RelPermalink "/docs/" }}
         <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+            <a href="{{ relref . "/docs/get-started" }}">Get Started</a>
         </h4>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.quickstart) }}
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.getstarted) }}
 
         <h4 class="no-anchor">
             <a href="{{ relref . "/docs/reference" }}">Reference</a>

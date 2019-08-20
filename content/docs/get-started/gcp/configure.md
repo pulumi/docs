@@ -2,7 +2,7 @@
 title: Configure Google Cloud
 weight: 4
 menu:
-  get-started:
+  getstarted:
     parent: gcp
     identifier: gcp-configure
 ---

@@ -2,7 +2,7 @@
 title: Get Started with Azure
 weight: 1
 menu:
-  get-started:
+  getstarted:
     identifier: azure
     name: Azure
     weight: 2

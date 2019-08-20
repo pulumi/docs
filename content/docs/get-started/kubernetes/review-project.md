@@ -2,7 +2,7 @@
 title: Review the New Project
 weight: 6
 menu:
-  get-started:
+  getstarted:
     parent: kubernetes
     identifier: kubernetes-review-project
 ---

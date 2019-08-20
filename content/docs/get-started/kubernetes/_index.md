@@ -2,7 +2,7 @@
 title: Get Started with Kubernetes
 weight: 1
 menu:
-  get-started:
+  getstarted:
     identifier: kubernetes
     name: Kubernetes
     weight: 2

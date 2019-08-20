@@ -3,7 +3,7 @@ title: Install Language Runtime
 weight: 3
 no_on_this_page: true
 menu:
-  get-started:
+  getstarted:
     parent: azure
     identifier: azure-install-language-runtime
 ---

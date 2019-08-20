@@ -2,7 +2,7 @@
 title: Install Pulumi
 weight: 2
 menu:
-  get-started:
+  getstarted:
     parent: gcp
     identifier: gcp-install-pulumi
 ---

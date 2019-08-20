@@ -2,7 +2,7 @@
 title: Next Steps
 weight: 11
 menu:
-  get-started:
+  getstarted:
     parent: kubernetes
     identifier: kubernetes-next-steps
 ---

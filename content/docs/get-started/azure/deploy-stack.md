@@ -2,7 +2,7 @@
 title: Deploy the Stack
 weight: 7
 menu:
-  get-started:
+  getstarted:
     parent: azure
     identifier: azure-deploy-stack
 ---

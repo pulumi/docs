@@ -2,7 +2,7 @@
 title: Modify the Program
 weight: 8
 menu:
-  get-started:
+  getstarted:
     parent: gcp
     identifier: gcp-modify-program
 ---

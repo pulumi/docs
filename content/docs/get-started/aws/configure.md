@@ -2,7 +2,7 @@
 title: Configure AWS
 weight: 2
 menu:
-  get-started:
+  getstarted:
     parent: aws
     identifier: aws-configure
 ---

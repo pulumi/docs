@@ -2,7 +2,7 @@
 title: Get Started with AWS
 weight: 1
 menu:
-  get-started:
+  getstarted:
     identifier: aws
     name: AWS
     weight: 2

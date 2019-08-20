@@ -2,7 +2,7 @@
 title: Deploy the Changes
 weight: 9
 menu:
-  get-started:
+  getstarted:
     parent: kubernetes
     identifier: kubernetes-deploy-changes
 ---

@@ -2,7 +2,7 @@
 title: Destroy the Stack
 weight: 10
 menu:
-  get-started:
+  getstarted:
     parent: kubernetes
     identifier: kubernetes-destroy-stack
 ---

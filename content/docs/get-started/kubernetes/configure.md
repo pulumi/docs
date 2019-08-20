@@ -2,7 +2,7 @@
 title: Configure Kubernetes
 weight: 4
 menu:
-  get-started:
+  getstarted:
     parent: kubernetes
     identifier: kubernetes-configure
 ---
