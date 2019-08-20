@@ -1,6 +1,5 @@
 ---
 title: "How Pulumi Works"
-expanded_url: /docs/reference/concepts/
 menu:
   intro:
     parent: concepts
