@@ -3,7 +3,7 @@ title: Tutorials
 menu:
   userguides:
     identifier: tutorials
-    weight: 1
+    weight: 2
 ---
 
 {{< get-started-note >}}

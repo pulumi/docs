@@ -3,7 +3,7 @@ title: Guides
 menu:
   userguides:
     identifier: guides
-    weight: 2
+    weight: 1
 ---
 
 {{< get-started-note >}}

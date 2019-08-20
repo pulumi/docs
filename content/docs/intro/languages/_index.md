@@ -1,5 +1,5 @@
 ---
-title: Supported Languages
+title: Languages
 menu:
   intro:
     identifier: languages

@@ -1,5 +1,5 @@
 ---
-title: Supported Cloud Providers
+title: Cloud Providers
 menu:
   intro:
     identifier: cloud-providers
