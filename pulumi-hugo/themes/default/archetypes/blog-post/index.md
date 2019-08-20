@@ -11,6 +11,12 @@ date: {{ .Date }}
 # Set this property to `false` before submitting your post for review.
 draft: true
 
+# Use the optional meta_desc property to provide a brief summary (one or two sentences)
+# of the content of the post, which is useful for targeting search results or social-media
+# previews. If omitted or left blank, the content preceding the `<!--more-->` token
+# will be used in its place.
+meta_desc:
+
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
