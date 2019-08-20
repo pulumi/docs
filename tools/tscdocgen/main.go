@@ -351,16 +351,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
-
-		if pkgvar == "cloud" {
-			// We special case where we find the README.md for pulumi/cloud.  The readme is in the
-			// root, but we start processing in the /api directory.  We don't want to copy the
-			// readme into two places in the repo, and we don't want so symlink.  So this is the
-			// cheap hack to get the right file to be picked up.
-			readme = filepath.Join(filepath.Dir(e.srcdir), "README.md")
-		} else {
-			readme = filepath.Join(e.srcdir, "README.md")
-		}
+		readme = filepath.Join(e.srcdir, "README.md")
 	} else {
 		title = fmt.Sprintf("Module %s", name)
 		readme = filepath.Join(e.srcdir, name, "README.md")
