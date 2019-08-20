@@ -4,7 +4,7 @@ expanded_url: /docs/reference/concepts/
 menu:
   intro:
     parent: concepts
-    weight: 2
+    weight: 1
 ---
 
 ## Overview {#overview}
