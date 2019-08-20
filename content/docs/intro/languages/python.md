@@ -1,6 +1,5 @@
 ---
 title: "Python"
-expanded_url: /docs/intro/clouds-and-languages/
 menu:
   intro:
     parent: languages

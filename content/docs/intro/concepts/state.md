@@ -5,7 +5,6 @@ keywords:
  - IaC
  - infrastructure state
  - state backend
-expanded_url: /docs/intro/concepts/
 menu:
   intro:
     parent: concepts

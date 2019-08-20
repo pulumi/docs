@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-expanded_url: /docs/reference/concepts/
 menu:
   intro:
     parent: concepts

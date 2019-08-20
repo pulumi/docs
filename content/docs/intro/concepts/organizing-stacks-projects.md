@@ -1,6 +1,5 @@
 ---
 title: Organizing Projects and Stacks
-expanded_url: /docs/reference/concepts/
 menu:
   intro:
     parent: concepts

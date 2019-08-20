@@ -1,6 +1,5 @@
 ---
 title: "Configuration and Secrets"
-expanded_url: /docs/intro/concepts/
 menu:
   intro:
     parent: concepts
