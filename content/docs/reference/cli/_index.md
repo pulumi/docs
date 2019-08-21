@@ -3,7 +3,7 @@ title: "Pulumi CLI"
 menu:
   reference:
     identifier: cli
-    weight: 2
+    weight: 3
 
 aliases: [/docs/reference/commands]
 ---

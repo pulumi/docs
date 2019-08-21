@@ -1,6 +1,9 @@
 ---
 title: "Download and Install"
 no_on_this_page: true
+menu:
+  getstarted:
+      weight: 10
 ---
 
 <!--

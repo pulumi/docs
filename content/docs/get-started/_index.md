@@ -1,6 +1,10 @@
 ---
 title: Get Started
 no_on_this_page: true
+menu:
+  getstarted:
+      name: Overview
+      weight: 1
 ---
 
 <div class="flex max-w-2xl">

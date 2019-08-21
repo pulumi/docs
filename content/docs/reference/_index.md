@@ -1,5 +1,9 @@
 ---
 title: Reference
+menu:
+  reference:
+    name: Overview
+    weight: 1
 ---
 
 This section includes all reference documentation for Pulumi.
