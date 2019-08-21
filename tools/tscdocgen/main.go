@@ -268,7 +268,16 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	node.Label = createLabel(node, parent)
 	node.CodeDetails = createCodeDetails(node)
 	node.URLPath = getURLPath(node, parent)
-	if k8s && node.Comment.ShortText != "" &&
+
+	// In K8S docs, ShortText can contain placeholder references that look like HTML tags.
+	// We need to replace those with the HTML-encoded characters.
+	// For example, the text might contain references like this:
+	// "<namespace>/<name>", where <namespace> is a placeholder for an actual namespace value,
+	// and <name> is a placeholder for an actual name value.
+	//
+	// This is done specifically for K8S because other providers can contain valid use of the
+	// > and < characters, which we don't want to escape.
+	if k8s &&
 		strings.Contains(node.Comment.ShortText, "<") &&
 		strings.Contains(node.Comment.ShortText, ">") {
 		// To avoid double-encoding strings that are already encoded, we make a targeted replacement
