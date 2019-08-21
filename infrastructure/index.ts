@@ -32,15 +32,6 @@ const contentBucket = new aws.s3.Bucket(
         website: {
             indexDocument: "index.html",
             errorDocument: "404.html",
-            routingRules: JSON.stringify([{
-                "Condition": {
-                    "KeyPrefixEquals": "reference/pkg/nodejs/@pulumi/",
-                },
-                "Redirect": {
-                    "HostName": config.targetDomain,
-                    "ReplaceKeyPrefixWith": "reference/pkg/nodejs/pulumi/",
-                },
-            }]),
         },
     },
     {
@@ -235,11 +226,6 @@ const cdn = new aws.cloudfront.Distribution(
 function crawlDirectory(dir: string, f: (_: string) => void) {
     const files = fs.readdirSync(dir);
     for (const file of files) {
-        // Skip the `node_modules` and Ruby `vendor` directories.
-        if (file === "node_modules" || file === "vendor" || file === "package-lock.json") {
-            continue;
-        }
-
         const filePath = `${dir}/${file}`;
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {
