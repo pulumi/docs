@@ -207,7 +207,7 @@ func emitMarkdownDocs(srcdir, pkgname string, doc *typeDocNode, outdir, outdatad
 	if err != nil {
 		return err
 	}
-	e.augmentNode(doc, nil)
+	e.augmentNode(doc, nil, k8s)
 	return e.emitMarkdownModule(rootModule, root, true)
 }
 
@@ -259,7 +259,7 @@ func (e *emitter) emitPackageDataFile(pkgRepoDir, githash string) error {
 }
 
 // augmentNode recurses throughout a tree AST, adding information that we'll need when translating it to Markdown.
-func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
+func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) {
 	// Add some labels.
 	node.AnchorName = node.Name
 	if parent != nil && (parent.Kind == typeDocClassNode || parent.Kind == typeDocInterfaceNode) {
@@ -268,6 +268,23 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	node.Label = createLabel(node, parent)
 	node.CodeDetails = createCodeDetails(node)
 	node.URLPath = getURLPath(node, parent)
+
+	// In K8S docs, ShortText can contain placeholder references that look like HTML tags.
+	// We need to replace those with the HTML-encoded characters.
+	// For example, the text might contain references like this:
+	// "<namespace>/<name>", where <namespace> is a placeholder for an actual namespace value,
+	// and <name> is a placeholder for an actual name value.
+	//
+	// This is done specifically for K8S because other providers can contain valid use of the
+	// > and < characters, which we don't want to escape.
+	if k8s &&
+		strings.Contains(node.Comment.ShortText, "<") &&
+		strings.Contains(node.Comment.ShortText, ">") {
+		// To avoid double-encoding strings that are already encoded, we make a targeted replacement
+		// of the < and > characters alone.
+		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, "<", "&lt;")
+		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, ">", "&gt;")
+	}
 
 	// If this extends or implements other types, render them.
 	if len(node.ExtendedTypes) > 0 {
@@ -291,13 +308,13 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 
 	// Augment everything deeply.
 	for _, child := range node.Children {
-		e.augmentNode(child, node)
+		e.augmentNode(child, node, k8s)
 	}
 	for _, sig := range node.Signatures {
-		e.augmentNode(sig, node)
+		e.augmentNode(sig, node, k8s)
 	}
 	for _, param := range node.Parameters {
-		e.augmentNode(param, node)
+		e.augmentNode(param, node, k8s)
 	}
 
 	// Reorder children based on their labels.
