@@ -32,4 +32,4 @@ menu:
     </a>
 </div>
 
-See [Supported Clouds]({{< relref "/docs/intro/cloud-providers" >}}) for other clouds.
+See [Cloud Providers]({{< relref "/docs/intro/cloud-providers" >}}) for other clouds.
