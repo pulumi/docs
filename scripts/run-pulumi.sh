@@ -23,9 +23,8 @@ fi
 
 cd ./infrastructure
 
-# Sync dependencies and build the Pulumi program.
+# Sync dependencies.
 yarn install
-yarn build
 
 pulumi login
 pulumi stack select "pulumi/${STACK_NAME}"

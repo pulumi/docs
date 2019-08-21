@@ -1,20 +1,17 @@
 {
     "name": "www.pulumi.com",
-    "main": "bin/index.js",
-    "typings": "bin/index.d.ts",
     "scripts": {
-        "build": "tsc",
         "lint": "tslint --project tsconfig.json"
     },
     "devDependencies": {
-        "tslint": "^5.10.0",
-        "typescript": "^2.7.2",
-        "@types/mime": "^2.0.0",
-        "@types/node": "latest"
+        "@types/mime": "^2.0.1",
+        "@types/node": "^12.7.2",
+        "tslint": "^5.19.0",
+        "typescript": "^3.5.3"
     },
     "dependencies": {
-        "mime": "^2.0.3",
-        "@pulumi/pulumi": "^0.16.0",
-        "@pulumi/aws": "^0.16.0"
+        "@pulumi/aws": "^0.18.27",
+        "@pulumi/pulumi": "^0.17.28",
+        "mime": "^2.4.4"
     }
 }
