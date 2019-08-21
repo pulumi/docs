@@ -19,7 +19,7 @@ and sign up. The [Pulumi Community Edition]({{< relref "editions#community-editi
 for unlimited individual use.
 
 <a class="btn" href="https://app.pulumi.com/signup" target="_blank">
-    GET STARTED
+    SIGN UP
 </a>
 
 ## Stack Management
