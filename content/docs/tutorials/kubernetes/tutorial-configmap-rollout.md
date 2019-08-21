@@ -20,7 +20,7 @@ For example, in the gif below, we can see how updating one resource (in this cas
 -   [Updating an application](#updating-an-application)
 -   [Deleting resources safely](#deleting-resources-safely)
 
-![configmapRollout](/images/docs/get-started/kubernetes/cm-rollout.gif "ConfigMap-induced Rollout")
+![configmapRollout](/images/docs/quickstart/kubernetes/cm-rollout.gif "ConfigMap-induced Rollout")
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ To provision the application, we need to:
     > can't allocate a load balancer, you can answer `true`, but you won't be able to bring up the
     > service in your browser without using something like `kubectl port-forward`.
 
-    ![Pulumi CLI questions](/images/docs/get-started/kubernetes/questions.png "Pulumi CLI questions prompt")
+    ![Pulumi CLI questions](/images/docs/quickstart/kubernetes/questions.png "Pulumi CLI questions prompt")
 
 1. **Accept the update.** After all the questions are answered, you should see a prompt like the
    following, asking if you'd like to proceed with the update. You can opt to view the diff, if you like, but we'll also do this later when we update the application.
@@ -96,7 +96,7 @@ There are several things to notice here:
 
 These two things will be important in the next sections.
 
-![Allocating a public IP to a Deployment](/images/docs/get-started/kubernetes/exposed-deploy.gif "Allocating a public IP to a Deployment")
+![Allocating a public IP to a Deployment](/images/docs/quickstart/kubernetes/exposed-deploy.gif "Allocating a public IP to a Deployment")
 
 ## Using Pulumi's notion of "stack outputs"
 
@@ -185,12 +185,12 @@ Here are the steps to make this change:
    rollout in the `Deployment` by replacing the `ConfigMap`. This is in contrast to `kubectl`, which
    will silently sync the new version of the file to the containers.
 
-    ![Preview](/images/docs/get-started/kubernetes/preview.png "Preview")
+    ![Preview](/images/docs/quickstart/kubernetes/preview.png "Preview")
 
 1. **Get a more detailed view of the changes with** `pulumi preview --diff`**.**. It will look
    conceptually something like the following gif (though this gif is a different app).
 
-    ![diff](/images/docs/get-started/kubernetes/diff.gif "Diff")
+    ![diff](/images/docs/quickstart/kubernetes/diff.gif "Diff")
 
 ## Updating an application
 
@@ -204,7 +204,7 @@ Once we're confident this is what we want, we can run the update:
 
     The output should look something like this.
 
-    ![configmapRollout](/images/docs/get-started/kubernetes/cm-rollout.gif)
+    ![configmapRollout](/images/docs/quickstart/kubernetes/cm-rollout.gif)
 
 2. **Verify the rollout worked.** You can do this by pasting the URL into the browser (be sure to
    disable the cache), or by running the following:

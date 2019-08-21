@@ -13,7 +13,7 @@ will expand the Helm Chart and submit the expanded YAML to the cluster.
 > **NOTE:** This example has a dependency on the `helm` CLI. **Be sure to install that first!** See
 > instructions below.
 
-![wordpress](/images/docs/get-started/kubernetes/wp-deploy.gif "Wordpress Helm Chart deployment")
+![wordpress](/images/docs/quickstart/kubernetes/wp-deploy.gif "Wordpress Helm Chart deployment")
 
 ## Running the App
 

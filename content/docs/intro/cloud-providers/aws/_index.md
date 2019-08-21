@@ -45,7 +45,7 @@ In addition to the tutorials, several interesting examples are available complet
 ## Introducing Pulumi Crosswalk for AWS
 
 <a href="{{< relref "/docs/intro/cloud-providers/aws/crosswalk" >}}">
-    <img src="/images/docs/intro/cloud-providers/aws/crosswalk/logo.svg" width="150" align="right" style="margin-left: 16px">
+    <img src="/images/docs/reference/crosswalk/aws/logo.svg" width="150" align="right" style="margin-left: 16px">
 </a>
 
 Use Pulumi Crosswalk for AWS to easily use the best of what AWS has to offer, with

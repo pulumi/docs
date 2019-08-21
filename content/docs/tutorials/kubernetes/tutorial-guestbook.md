@@ -316,7 +316,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 5.  Now let's see our guestbook application in action.
 
-    ![Guestbook in browser](/images/docs/get-started/kubernetes/guestbook.png)
+    ![Guestbook in browser](/images/docs/quickstart/kubernetes/guestbook.png)
 
     **No Load Balancer (Minikube):**
 

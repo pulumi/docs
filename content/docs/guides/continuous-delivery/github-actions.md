@@ -295,7 +295,7 @@ stack, and then use Pull Requests to promote code between the two. This mappings
 intentionally flexible.
 
 Note that you'll need to create these stacks [in the usual
-way](https://www.pulumi.com/docs/intro/concepts/stack/) using the Pulumi Cloud Console or CLI.
+way]({{< relref "/docs/intro/concepts/stack" >}}) using the Pulumi Cloud Console or CLI.
 After setting this up, everything will be on autopilot.
 
 # Demos and Examples

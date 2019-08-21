@@ -12,7 +12,7 @@ Pulumi has an inherent notion of "done-ness" -- Pulumi waits for the IP address 
 the `Service`. Because this example uses the Pulumi concept of _stack exports_ to report this IP
 address, in this example we are also able to use `curl` to reach the `nginx` server.
 
-![Allocating a public IP to a Deployment](/images/docs/get-started/kubernetes/exposed-deploy.gif "Allocating a public IP to a Deployment")
+![Allocating a public IP to a Deployment](/images/docs/quickstart/kubernetes/exposed-deploy.gif "Allocating a public IP to a Deployment")
 
 ## Running the App
 
@@ -94,9 +94,9 @@ example!
 If we change the `nginx` image to `nginx:1.16-alpine`, we can run `pulumi preview --diff` and see
 this change reported to us:
 
-![Diff](/images/docs/get-started/kubernetes/diff.gif "Reporting a diff after we change the app")
+![Diff](/images/docs/quickstart/kubernetes/diff.gif "Reporting a diff after we change the app")
 
 Notice also that if you provide an image that does not exist, Pulumi will report errors as it sees
 them. You should see something similar in principle to this:
 
-![Diff](/images/docs/get-started/kubernetes/error.gif "Error reporting")
+![Diff](/images/docs/quickstart/kubernetes/error.gif "Error reporting")

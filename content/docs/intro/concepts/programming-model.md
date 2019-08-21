@@ -687,7 +687,7 @@ def split(input):
 
 ##### Working with Outputs and strings {#outputs-and-strings}
 
-It's very common to want to build a string out of the values contained in `Outputs`.  Common uses include either providing a custom [stack output](#stack-outputs), or providing a dynamically computed string as an [Input]({{< relref "docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
+It's very common to want to build a string out of the values contained in `Outputs`.  Common uses include either providing a custom [stack output](#stack-outputs), or providing a dynamically computed string as an [Input]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
 
 {{< langchoose >}}
 
@@ -1141,7 +1141,7 @@ component = MyResource("component", ResourceOptions(providers={
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-For more information about components, see the [Pulumi Components]({{< relref "component-tutorial.md" >}}) tutorial.
+For more information about components, see the [Pulumi Components]({{< relref "/docs/tutorials/component-tutorial" >}}) tutorial.
 
 ## Providers {#providers}
 

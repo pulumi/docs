@@ -245,4 +245,4 @@ The result is that we have migrated our existing infrastructure into Pulumi and 
 
 With Pulumi, you can easily work with existing cloud infrastructure, either referencing the existing infrastructure as inputs to new cloud infrastructure defined in Pulumi, or adopting existing infrastructure under management with Pulumi.
 
-[Get started](https://www.pulumi.com/docs/get-started/) with Pulumi today!
+[Get started]({{< relref "/docs/get-started" >}}) with Pulumi today!
