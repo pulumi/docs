@@ -1,5 +1,7 @@
 ---
-title: "Tutorial: Containers"
+title: "Containers"
+
+aliases: ["/docs/quickstart/cloudfx/tutorial-service/"]
 ---
 
 In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
@@ -144,6 +146,6 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
 ## Next steps
 
-For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer]({{< relref "tutorial-thumbnailer.md" >}}) tutorial.
+For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer]({{< relref "thumbnailer" >}}) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.

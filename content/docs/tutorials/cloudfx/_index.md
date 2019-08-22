@@ -1,5 +1,7 @@
 ---
-title: Pulumi Cloud Framework
+title: Pulumi Cloud Framework (Preview)
+
+aliases: ["/docs/quickstart/cloudfx/"]
 ---
 
 <img src="/images/docs/quickstart/cloudfx-purple.png" align="right">
@@ -16,9 +18,9 @@ For AWS-specific use cases, see also the [awsx]({{< relref "/docs/reference/pkg/
 
 The easiest way to start with the Cloud Framework is to follow one of the tutorials:
 
-* [A simple serverless REST API]({{< relref "tutorial-rest-api.md" >}}): Deploy cloud-agnostic managed REST API
-* [A simple containerized app]({{< relref "tutorial-service.md" >}}): Deploy cloud-agnostic containerized services
-* [Serverless + Containers + Infrastructure]({{< relref "tutorial-thumbnailer.md" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
+* [A simple serverless REST API]({{< relref "rest-api" >}}): Deploy cloud-agnostic managed REST API
+* [A simple containerized app]({{< relref "service" >}}): Deploy cloud-agnostic containerized services
+* [Serverless + Containers + Infrastructure]({{< relref "thumbnailer" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 

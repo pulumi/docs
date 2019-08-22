@@ -1,5 +1,7 @@
 ---
-title: "Tutorial: Multi-Cloud Containers and Serverless"
+title: "Multi-Cloud Containers and Serverless"
+
+aliases: ["/docs/quickstart/cloudfx/tutorial-thumbnailer/"]
 ---
 
 In this tutorial, we'll use JavaScript to combine serverless, containers and cloud infrastructure together into a
