@@ -43,7 +43,7 @@ code as an included class. 
 ## Running the App
 
 Follow the steps in
-[Pulumi Installation and Setup]({{< ref "/docs/install" >}}) and
+[Pulumi Installation and Setup]({{< ref "/docs/get-started/install" >}}) and
 [Configuring Pulumi Kubernetes]({{< ref "/docs/get-started/kubernetes" >}})
 to get setup with Pulumi and Kubernetes.
 

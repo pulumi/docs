@@ -44,7 +44,7 @@ Here are a few highlights:
 
 ## Prerequisites to work with Pulumi
 
-[Install `pulumi` CLI]({{< ref "/docs/install" >}}) and
+[Install `pulumi` CLI]({{< ref "/docs/get-started/install" >}}) and
 set up your
 [AWS credentials]({{< ref "/docs/get-started/aws" >}}).
 Initialize a new

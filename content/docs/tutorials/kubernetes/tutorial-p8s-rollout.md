@@ -121,7 +121,7 @@ can see `canary-example-app` and `canary-staging-app` created.
    that was computed by the promise is `export`ed, which causes Pulumi to report its value just
    before it terminates.
 
-[install]: {{< relref "/docs/install.md" >}}
+[install]: {{< relref "/docs/get-started/install" >}}
 [configuration]: {{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/

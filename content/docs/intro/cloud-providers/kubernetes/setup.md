@@ -12,7 +12,7 @@ title: Setup
 [provider-args]: {{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes#ProviderArgs" >}}
 [provider-kubeconfig]: {{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes#ProviderArgs-kubeconfig" >}}
 [kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-[install]: {{< relref "/docs/install.md" >}}
+[install]: {{< relref "/docs/get-started/install" >}}
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
 [yarn]: https://yarnpkg.com/en/docs/install

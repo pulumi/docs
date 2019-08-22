@@ -17,7 +17,7 @@ altered to fit into any existing type of deployment setup.
 
 - A working installation of a recent version of Jenkins.
 - An account on the [Pulumi Console](https://app.pulumi.com).
-- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/install" >}}).
+- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
 - Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
 and choosing one of the many templates that are available.
 - A bare repo and set the remote URL to be your GitHub project.

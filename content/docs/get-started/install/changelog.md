@@ -2,7 +2,7 @@
 title: Changelog
 no_on_this_page: true
 
-aliases: [/docs/changelog]
+aliases: ["/docs/reference/changelog/"]
 ---
 
 ## Available Pulumi versions {#all-versions}

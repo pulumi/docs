@@ -13,7 +13,7 @@ platform.  The response has been overwhelming and we've been hard at
 work responding to your feedback ever since. 
 
 Today, we are excited to release [Pulumi 0.15]({{< ref "/changelog#v150" >}}) and make
-it [available to download]({{< ref "/install" >}}).  This release
+it [available to download]({{< ref "/docs/get-started/install" >}}).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
 ([Kubernetes]({{< ref "/docs/get-started/kubernetes" >}}) and

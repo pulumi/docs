@@ -100,7 +100,7 @@ definition, and deployment pipeline in [Pulumi Examples repository](https://git
 
 The Pulumi development experience is powered by the
 [Pulumi CLI]({{< relref "/docs/reference/cli" >}}). After
-[installing the CLI]({{< ref "/docs/install" >}}), I jump into an empty
+[installing the CLI]({{< ref "/docs/get-started/install" >}}), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS
 application. The code looks like this:

@@ -9,7 +9,7 @@ using [Pulumi Crosswalk for AWS]({{< relref "/docs/intro/cloud-providers/aws/cro
 ## Prerequisites
 
 1.  [Install Docker Desktop](https://docs.docker.com/install/)
-1.  [Install Pulumi]({{< relref "/docs/install.md" >}})
+1.  [Install Pulumi]({{< relref "/docs/get-started/install" >}})
 1.  [Configure Pulumi to use your AWS account]({{< relref "/docs/intro/cloud-providers/aws/setup.md" >}})
 
 ## Deploying the App and Infrastructure

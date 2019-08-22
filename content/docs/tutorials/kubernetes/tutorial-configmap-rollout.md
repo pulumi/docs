@@ -225,6 +225,6 @@ $ pulumi destroy
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
 [yarn]: https://yarnpkg.com/en/docs/install
-[install]: {{< relref "/docs/install.md" >}}
+[install]: {{< relref "/docs/get-started/install" >}}
 [pulumi-test]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
 [index.ts]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/index.ts
