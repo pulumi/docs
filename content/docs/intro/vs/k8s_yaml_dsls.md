@@ -1,9 +1,9 @@
 ---
 title: Pulumi vs. Kubernetes YAML and DSLs
+linktitle: Kubernetes YAML
 menu:
   intro:
     parent: vs
-    name: Kubernetes YAML
     weight: 5
 ---
 

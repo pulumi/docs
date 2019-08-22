@@ -1,9 +1,9 @@
 ---
 title: Pulumi vs. Serverless Framework
+linktitle: Serverless
 menu:
   intro:
     parent: vs
-    name: Serverless
     weight: 4
 ---
 

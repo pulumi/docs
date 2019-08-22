@@ -1,10 +1,10 @@
 ---
 title: Node.js Packages
+linktitle: Node.js
 menu:
   reference:
     parent: api
     identifier: node
-    name: Node.js
 ---
 
 ### General Purpose Packages

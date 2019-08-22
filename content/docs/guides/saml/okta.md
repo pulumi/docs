@@ -1,5 +1,5 @@
 ---
-title: SAML Configuration > Okta
+title: Okta
 
 aliases: [/docs/reference/service/saml-okta]
 ---

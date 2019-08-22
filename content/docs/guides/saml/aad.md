@@ -1,5 +1,5 @@
 ---
-title: SAML Configuration > Azure Active Directory
+title: Azure Active Directory
 
 aliases: [/docs/reference/service/saml-aad]
 ---

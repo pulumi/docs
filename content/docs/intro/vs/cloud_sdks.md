@@ -1,9 +1,9 @@
 ---
 title: Pulumi vs. Cloud SDKs (AWS Boto, etc.)
+linktitle: Cloud SDKs
 menu:
   intro:
     parent: vs
-    name: Cloud SDKs
     weight: 3
 ---
 

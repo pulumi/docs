@@ -1,10 +1,10 @@
 ---
 title: Get Started with Kubernetes
+linktitle: Kubernetes
 weight: 1
 menu:
   getstarted:
     identifier: kubernetes
-    name: Kubernetes
     weight: 2
 ---
 

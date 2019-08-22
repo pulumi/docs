@@ -1,9 +1,9 @@
 ---
 title: Pulumi vs. Other Solutions
+linktitle: Pulumi vs. Other
 menu:
   intro:
     identifier: vs
-    name: Pulumi vs. Other
     weight: 5
 ---
 

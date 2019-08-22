@@ -1,9 +1,9 @@
 ---
 title: Pulumi vs. Chef, Puppet, etc.
+linktitle: Chef, Puppet, etc.
 menu:
   intro:
     parent: vs
-    name: Chef, Puppet, etc.
     weight: 6
 ---
 

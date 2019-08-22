@@ -1,5 +1,5 @@
 ---
-title: SAML Configuration > G Suite (Google)
+title: G Suite (Google)
 
 aliases: [/docs/reference/service/saml-gsuite]
 ---

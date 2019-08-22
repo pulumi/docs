@@ -1,9 +1,9 @@
 ---
 title: Pulumi vs. Custom Solutions
+linktitle: Custom Solutions
 menu:
   intro:
     parent: vs
-    name: Custom Solutions
     weight: 7
 ---
 
