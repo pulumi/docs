@@ -1141,7 +1141,7 @@ component = MyResource("component", ResourceOptions(providers={
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-For more information about components, see the [Pulumi Components]({{< relref "/docs/tutorials/component-tutorial" >}}) tutorial.
+For more information about components, see the [Pulumi Components]({{< relref "/docs/tutorials/aws/s3-folder-component" >}}) tutorial.
 
 ## Providers {#providers}
 
