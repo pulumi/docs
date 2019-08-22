@@ -18,7 +18,12 @@ const config = {
     alias: stackConfig.get("alias") || undefined,
     // ACM certificate for the target domain. Must be in the us-east-1 region.
     certificateArn: stackConfig.require("certificateArn"),
+    // redirectDomain is the domain to use for any redirects.
+    redirectDomain: stackConfig.get("redirectDomain") || undefined,
 };
+
+// redirectDomain is the domain to use when redirecting.
+const redirectDomain = config.redirectDomain || config.targetDomain;
 
 // contentBucket stores the static content to be served via the CDN.
 const contentBucket = new aws.s3.Bucket(
@@ -239,14 +244,14 @@ function crawlDirectory(dir: string, f: (_: string) => void) {
 
 // Some files do not get the correct mime/type inferred from the mime package, and we
 // need to set our own.
-function getMimeType(filePath: string): string | null {
+function getMimeType(filePath: string): string | undefined {
     // Ensure that latest-version's mime type is always text/plain. Otherwise it
     // will end up being set to binary/octet-stream, which is not what we want.
     if (path.basename(filePath) === "latest-version") {
         return "text/plain";
     }
 
-    return mime.getType(filePath);
+    return mime.getType(filePath) || undefined;
 }
 
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
@@ -256,19 +261,64 @@ crawlDirectory(
     webContentsRootPath,
     (filePath: string) => {
         const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+
+        // If the file is a .html file that contains a meta refresh redirect, configure the bucket object to be a
+        // webpage redirect to make S3 return a 301 response when the object is requested. This is done to allow
+        // #anchors in URLs to flow across to the destination page, which browsers will do with 301 redirects, but won't
+        // do with meta refresh redirects.
+        // https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html
+        const redirect = getMetaRefreshRedirect(filePath);
+
         const contentFile = new aws.s3.BucketObject(
             relativeFilePath,
             {
                 acl: "public-read",
                 key: relativeFilePath,
                 bucket: contentBucket,
-                source: new pulumi.asset.FileAsset(filePath),
-                contentType: getMimeType(filePath) || undefined,
+
+                // Use "/dev/null" for an empty object if this is a redirect, otherwise the actual file path.
+                source: new pulumi.asset.FileAsset(redirect ? "/dev/null" : filePath),
+
+                // Add `contentType` if this isn't a redirect.
+                ...!redirect && { contentType: getMimeType(filePath) },
+
+                // Add `websiteRedirect` if this is a redirect.
+                ...redirect && { websiteRedirect: redirect },
             },
             {
                 parent: contentBucket,
             });
     });
+
+// Returns the redirect URL if filePath is a .html file that contains a meta refresh redirect, otherwise undefined.
+function getMetaRefreshRedirect(filePath: string): string | undefined {
+    // Only .html files contain meta refresh redirects.
+    if (path.extname(filePath) !== ".html") {
+        return undefined;
+    }
+
+    // Extract the redirect from the content of the file.
+    const text = fs.readFileSync(filePath, "utf8");
+    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gm;
+    const match = regex.exec(text);
+    if (!match || match.length !== 2 || !match[1]) {
+        return undefined;
+    }
+
+    const redirect = match[1];
+
+    // If the redirect already has the https or http protocol specified, return it.
+    if (redirect.startsWith("https://") || redirect.startsWith("http://")) {
+        return redirect;
+    }
+
+    // If the redirect starts with "/", prefix with the redirect domain and return it.
+    if (redirect.startsWith("/")) {
+        return `https://${redirectDomain}${redirect}`;
+    }
+
+    return undefined;
+}
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
