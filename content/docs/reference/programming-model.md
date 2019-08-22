@@ -1517,7 +1517,7 @@ Check is invoked before any other methods, and is passed the resolved input prop
 Create is invoked when the URN of the resource created by the user is not found in the existing state of the deployment.  The engine passes the provider the checked inputs returned from the call to `check`.  The `create` method is expected to do the work in the backing cloud provider to create the requested resource.  It then returns two pieces of data: (1) an `id` that can uniquely identify the resource in the backing provider for later lookups, and (2) a set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the _checkpoint_ file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
 
 ##### `diff(id, olds, news)`
-Diff is invoked when the URN of the resoruce created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource---as returned by `create`, as well as the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`.  It is also passed the new checked inputs from the current deployment.  It returns four optional values:
+Diff is invoked when the URN of the resource created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource---as returned by `create`, as well as the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`.  It is also passed the new checked inputs from the current deployment.  It returns four optional values:
 
 * `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
 * `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to schedule a replacement instead of an update, which might involve downtime, so this should only be used when a `diff` requested by the user cannot be implemented as an in-place update on the backing cloud provider.
@@ -1567,7 +1567,7 @@ export class MyResource extends pulumi.dynamic.Resource {
     public readonly myNumberOutput: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, { myStringOutput: undefined, myNumberOutput: unedfiend, ...props }, opts);
+        super(myprovider, name, { myStringOutput: undefined, myNumberOutput: undefined, ...props }, opts);
     }
 }
 ```
