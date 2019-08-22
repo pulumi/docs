@@ -1,5 +1,7 @@
 ---
 title: Provisioning Shared, Managed Infrastructure
+
+aliases: ["/docs/quickstart/k8s-the-prod-way/infrastructure/"]
 ---
 
 This lab assumes you have successfully completed [lab 1]({{< relref "identity.md" >}}), the results of which are

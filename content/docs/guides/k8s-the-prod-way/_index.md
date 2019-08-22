@@ -1,5 +1,7 @@
 ---
 title: Kubernetes the Prod Way
+
+aliases: ["/docs/quickstart/k8s-the-prod-way/"]
 ---
 
 **Kubernetes the Prod Way** is a tutorial, reference architecture, and collection of prod-first code

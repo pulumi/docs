@@ -1,5 +1,7 @@
 ---
 title: Prerequisites
+
+aliases: ["/docs/quickstart/k8s-the-prod-way/prerequisites/"]
 ---
 
 This tutorial leverages [Pulumi][pulumi] and [Node.js][nodejs] to provision and configure
