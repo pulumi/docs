@@ -262,35 +262,44 @@ crawlDirectory(
     (filePath: string) => {
         const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
 
-        // If the file is a .html file that contains a meta refresh redirect, configure the bucket object to be a
-        // webpage redirect to make S3 return a 301 response when the object is requested. This is done to allow
-        // #anchors in URLs to flow across to the destination page, which browsers will do with 301 redirects, but won't
-        // do with meta refresh redirects.
-        // https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html
+        const baseArgs = {
+            acl: "public-read",
+            key: relativeFilePath,
+            bucket: contentBucket,
+        };
+
+        // Create a new S3 object for most files, but HTML files that contain a redirect
+        // just create a stubbed out S3 object with the right metadata so they return a
+        // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
+        // the right HTTP code response is returned for search engines, as well as
+        // enables better support for URL anchors.
         const redirect = getMetaRefreshRedirect(filePath);
-
-        const contentFile = new aws.s3.BucketObject(
-            relativeFilePath,
-            {
-                acl: "public-read",
-                key: relativeFilePath,
-                bucket: contentBucket,
-
-                // Use "/dev/null" for an empty object if this is a redirect, otherwise the actual file path.
-                source: new pulumi.asset.FileAsset(redirect ? "/dev/null" : filePath),
-
-                // Add `contentType` if this isn't a redirect.
-                ...!redirect && { contentType: getMimeType(filePath) },
-
-                // Add `websiteRedirect` if this is a redirect.
-                ...redirect && { websiteRedirect: redirect },
-            },
-            {
-                parent: contentBucket,
-            });
+        if (!redirect) {
+            const contentFile = new aws.s3.BucketObject(
+                relativeFilePath,
+                {
+                    ...baseArgs,
+                    source: new pulumi.asset.FileAsset(filePath),
+                    contentType: getMimeType(filePath) || undefined,
+                },
+                {
+                    parent: contentBucket,
+                });
+        } else {
+            const s3Redirect = new aws.s3.BucketObject(
+                relativeFilePath,
+                {
+                    ...baseArgs,
+                    source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
+                    websiteRedirect: translateRedirect(filePath, redirect),
+                },
+                {
+                    parent: contentBucket,
+                });
+        }
     });
 
-// Returns the redirect URL if filePath is a .html file that contains a meta refresh redirect, otherwise undefined.
+// Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
 function getMetaRefreshRedirect(filePath: string): string | undefined {
     // Only .html files contain meta refresh redirects.
     if (path.extname(filePath) !== ".html") {
@@ -299,14 +308,25 @@ function getMetaRefreshRedirect(filePath: string): string | undefined {
 
     // Extract the redirect from the content of the file.
     const text = fs.readFileSync(filePath, "utf8");
-    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gm;
+    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gmi;
     const match = regex.exec(text);
-    if (!match || match.length !== 2 || !match[1]) {
-        return undefined;
+
+    if (match && match.length === 2) {
+        const redirect = match[1];
+        if (!redirect || redirect.length === 0) {
+            throw new Error(`Meta refresh tag found in "${filePath}" but the redirect URL was empty.`);
+        }
+        return redirect;
     }
 
-    const redirect = match[1];
+    return match && match.length === 2 ? match[1] : undefined;
+}
 
+// translateRedirect fixes up the redirect, if needed.
+// If the redirect is already prefixed with "https://" or "http://", it is returned unmodified.
+// If the redirect starts with "/", it is translated to an `https://${redirectDomain}${redirect}`.
+// Otherwise, an Error is thrown.
+function translateRedirect(filePath: string, redirect: string): string {
     // If the redirect already has the https or http protocol specified, return it.
     if (redirect.startsWith("https://") || redirect.startsWith("http://")) {
         return redirect;
@@ -317,7 +337,8 @@ function getMetaRefreshRedirect(filePath: string): string | undefined {
         return `https://${redirectDomain}${redirect}`;
     }
 
-    return undefined;
+    // Otherwise, it's not in a format that we expect so throw an error.
+    throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
 }
 
 // Split a domain name into its subdomain and parent domain names.
