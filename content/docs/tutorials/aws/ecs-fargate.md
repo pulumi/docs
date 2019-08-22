@@ -1,5 +1,7 @@
 ---
 title: "Containers on ECS \"Fargate\""
+
+aliases: ["/docs/reference/tutorials/aws/tutorial-service/"]
 ---
 
 In this tutorial, we'll build and publish a Docker container image to a private Elastic Container Registry (ECR), and

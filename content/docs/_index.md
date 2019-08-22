@@ -71,38 +71,38 @@ Describe your resources in code---VMs, networks, databases, containers, Kubernet
 
 <div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex py-8 px-4 max-w-3xl">
     <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2 mb-12 md:mb-0">
-        <a href="{{< relref "/docs/tutorials/aws/tutorial-service" >}}">
+        <a href="{{< relref "/docs/tutorials/aws/ecs-fargate" >}}">
             <img class="inline-block w-24" src="/images/docs/icon-feature-containers.svg">
             <h3 class="no-anchor mt-2 mb-0">Containers</h3>
         </a>
         <p class="mb-8 text-sm text-gray-600">
             Deploy a Docker container to production in 5 minutes using your favorite orchestrator.
         </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/tutorial-service" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/ecs-fargate" >}}">
             Start Now
         </a>
     </div>
     <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2 mb-12 md:mb-0">
-        <a href="{{< relref "/docs/tutorials/aws/tutorial-rest-api" >}}">
+        <a href="{{< relref "/docs/tutorials/aws/rest-api" >}}">
             <img class="inline-block w-24" src="/images/docs/icon-feature-serverless.svg">
             <h3 class="no-anchor mt-2 mb-0">Serverless</h3>
         </a>
         <p class="mb-8 text-sm text-gray-600">
             Stand up a serverless API or event handler in 5 minutes using a real lambda in code.
         </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/tutorial-rest-api" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/rest-api" >}}">
             Start Now
         </a>
     </div>
     <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2 mb-12 md:mb-0">
-        <a href="{{< relref "/docs/tutorials/aws/tutorial-ec2-webserver" >}}">
+        <a href="{{< relref "/docs/tutorials/aws/ec2-webserver" >}}">
             <img class="inline-block w-24" src="/images/docs/icon-feature-data.svg">
             <h3 class="no-anchor mt-2 mb-0">Infrastructure</h3>
         </a>
         <p class="mb-8 text-sm text-gray-600">
             Manage cloud infrastructure or hosted services using infrastructure as code.
         </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/tutorial-ec2-webserver" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/ec2-webserver" >}}">
             Start Now
         </a>
     </div>

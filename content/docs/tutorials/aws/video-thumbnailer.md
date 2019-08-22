@@ -1,5 +1,7 @@
 ---
 title: "Video Thumbnailer"
+
+aliases: ["/docs/reference/tutorials/aws/tutorial-thumbnailer/"]
 ---
 
 In this tutorial, we'll use combine serverless, containers and cloud infrastructure together into a fully functioning

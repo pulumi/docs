@@ -1,5 +1,7 @@
 ---
 title: "Serve a Static Website from S3"
+
+aliases: ["/docs/reference/tutorials/aws/tutorial-s3-website/"]
 ---
 
 In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw resources. First, we'll create a Pulumi program that uploads files from the `www` directory to S3. Then, we'll configure the bucket to serve a website. The [code for this tutorial][s3-folder] is available on GitHub. 

@@ -1,5 +1,7 @@
 ---
 title: "API Gateways and Lambda"
+
+aliases: ["/docs/reference/tutorials/aws/tutorial-rest-api/"]
 ---
 
 In this tutorial, we'll use Pulumi to create a serverless app that serves static content, in addition to dynamic routes
@@ -129,7 +131,7 @@ From here, you can dive deeper:
 
 - Try out additional AWS tutorials:
   - [Containers]({{< relref "tutorial-service.md" >}}): Create a load-balanced, hosted NGINX container service
-  - [Infrastructure]({{< relref "tutorial-ec2-webserver.md" >}}): Create an EC2-based WebServer and associated infrastructure
+  - [Infrastructure]({{< relref "ec2-webserver.md" >}}): Create an EC2-based WebServer and associated infrastructure
 - Try out some multi-cloud serverless and container tutorials (that also run on AWS):
   - [Multi-cloud Serverless with Document Database]({{< relref "/docs/get-started/cloudfx/tutorial-rest-api.md" >}}): Create multi-cloud serverless
         REST APIs that use a document database
