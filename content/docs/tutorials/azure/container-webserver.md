@@ -1,5 +1,7 @@
 ---
 title: "Web Server Container Instance"
+
+aliases: ["/docs/reference/tutorials/azure/tutorial-container-webserver/"]
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azure Container Instance (ACI).

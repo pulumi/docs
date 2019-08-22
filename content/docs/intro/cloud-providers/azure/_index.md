@@ -23,7 +23,7 @@ The quickest way to get started with Azure is to follow the [Get Started]({{< re
 
 Additionally, a tutorial is available to follow:
 
-* [Azure Container Instances Web Server]({{< relref "/docs/tutorials/azure/tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance
+* [Azure Container Instances Web Server]({{< relref "/docs/tutorials/azure/container-webserver" >}}): Create an NGINX web server Azure Container Instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 
