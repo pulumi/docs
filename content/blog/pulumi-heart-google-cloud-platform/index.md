@@ -98,7 +98,7 @@ will it proceed (with a full audit history):
     ...
 
 Learn more about working with Pulumi and Google Cloud infrastructure in
-this [GCE Web Server]({{< ref "/docs/tutorials/gcp/tutorial-gce-webserver" >}})
+this [GCE Web Server]({{< ref "/docs/tutorials/gcp/gce-webserver" >}})
 tutorial.
 
 ## Working with Kubernetes and Google Container Engine (GKE)
@@ -267,7 +267,7 @@ GCP:
 
 - [Google Cloud Platform Getting Started Guide]({{< ref "/docs/get-started/gcp" >}})
 - [GKE Tutorial]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}})
-- [GCE Tutorial]({{< ref "/docs/tutorials/gcp/tutorial-gce-webserver" >}})
+- [GCE Tutorial]({{< ref "/docs/tutorials/gcp/gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
 - [Pulumi Community Slack](https://slack.pulumi.com/)

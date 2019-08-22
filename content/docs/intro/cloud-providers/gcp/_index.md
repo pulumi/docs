@@ -23,7 +23,7 @@ The quickest way to get started with GCP is to follow the [Get Started]({{< relr
 
 Additionally, a tutorial is available to follow:
 
-* [Virtual Machine]({{< relref "/docs/tutorials/gcp/tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
+* [Virtual Machine]({{< relref "/docs/tutorials/gcp/gce-webserver" >}}): Create a Debian virtual machine web server instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 
