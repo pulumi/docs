@@ -5,7 +5,9 @@ keywords:
 - javascript
 - aws lambda
 - function serialization
-- pulumi sdk 
+- pulumi sdk
+
+aliases: ["/docs/reference/serializing-functions/"]
 ---
 
 The Pulumi [Node.js SDK](https://github.com/pulumi/pulumi/tree/master/sdk/nodejs) provides a core API for converting a JavaScript function into all the code and files necessary to have that function be used at runtime within some cloud, like in an [AWS Lambda](https://aws.amazon.com/lambda/) for example.
