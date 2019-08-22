@@ -133,7 +133,7 @@ From here, you can dive deeper:
   - [Containers]({{< relref "ecs-fargate" >}}): Create a load-balanced, hosted NGINX container service
   - [Infrastructure]({{< relref "ec2-webserver" >}}): Create an EC2-based WebServer and associated infrastructure
 - Try out some multi-cloud serverless and container tutorials (that also run on AWS):
-  - [Multi-cloud Serverless with Document Database]({{< relref "/docs/get-started/cloudfx/tutorial-rest-api.md" >}}): Create multi-cloud serverless
+  - [Multi-cloud Serverless with Document Database]({{< relref "/docs/tutorials/cloudfx/rest-api" >}}): Create multi-cloud serverless
         REST APIs that use a document database
-  - [Multi-cloud Serverless plus Containers]({{< relref "/docs/get-started/cloudfx/tutorial-thumbnailer.md" >}}): Create a multi-cloud video
+  - [Multi-cloud Serverless plus Containers]({{< relref "/docs/tutorials/cloudfx/thumbnailer" >}}): Create a multi-cloud video
         thumbnail app that uses containers, serverless, and infrastructure together

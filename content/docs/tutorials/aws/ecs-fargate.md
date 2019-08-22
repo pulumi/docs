@@ -152,7 +152,7 @@ For more information about containerized applications on AWS, please read these 
 * [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/intro/cloud-providers/aws/crosswalk/eks.md" >}})
 
 For an end-to-end application also includes serverless functions, see the
-[Serverless plus Containers Thumbnailer tutorial]({{< relref "tutorial-thumbnailer.md" >}}).
+[Serverless plus Containers Thumbnailer tutorial]({{< relref "video-thumbnailer" >}}).
 
 For an example application that connects two containers, see the
 [Voting App](https://github.com/pulumi/examples/tree/master/aws-ts-voting-app) sample.
