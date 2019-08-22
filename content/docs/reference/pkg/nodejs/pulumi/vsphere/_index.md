@@ -1045,16 +1045,16 @@ const hosts = config.get("hosts") || [
     "esxi3",
 ];
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}));
-const hostsHost: Output<vsphere.GETHOSTResult>[] = [];
+});
+const hostsHost: vsphere.GetHostResult[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(vsphere.getHost);
-%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+    hostsHost.push(vsphere.getHost({
         datacenterId: dc.id,
         name: hosts[i],
-    })))}
+    }));
+}
 const computeCluster = new vsphere.ComputeCluster("computeCluster", {
     datacenterId: dc.id,
     drsAutomationLevel: "fullyAutomated",
@@ -1237,21 +1237,21 @@ will run on the same host whenever possible.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -1467,21 +1467,21 @@ they will run on different hosts whenever possible.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -1693,21 +1693,21 @@ exist, which may not possibly happen in the event that the names came from a
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm1 = new vsphere.VirtualMachine("vm1", {
     datastoreId: datastore.id,
     disks: [{
@@ -1953,21 +1953,21 @@ then creates a group from these two virtual machines.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -2169,25 +2169,25 @@ exist, which may not possibly happen in the event that the names came from a
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const host = dc.apply(dc => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: dc.id,
     name: "esxi1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const clusterHostGroup = new vsphere.ComputeClusterHostGroup("clusterHostGroup", {
     computeClusterId: cluster.id,
     hostSystemIds: [host.id],
@@ -3121,21 +3121,21 @@ ensuring they will run on different datastores whenever possible.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+});
+const datastoreCluster = vsphere.getDatastoreCluster({
     datacenterId: dc.id,
     name: "datastore-cluster1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -3352,16 +3352,16 @@ const networkInterfaces = config.get("networkInterfaces") || [
     "vmnic3",
 ];
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const host: Output<vsphere.GETHOSTResult>[] = [];
+});
+const host: vsphere.GetHostResult[] = [];
 for (let i = 0; i < esxiHosts.length; i++) {
-    host.push(vsphere.getHost);
-%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+    host.push(vsphere.getHost({
         datacenterId: dc.id,
         name: esxiHosts[i],
-    })))}
+    }));
+}
 const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
     activeUplinks: [
         "uplink1",
@@ -5274,16 +5274,16 @@ const hosts = config.get("hosts") || [
     "esxi3",
 ];
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}));
-const hostsHost: Output<vsphere.GETHOSTResult>[] = [];
+});
+const hostsHost: vsphere.GetHostResult[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(vsphere.getHost);
-%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+    hostsHost.push(vsphere.getHost({
         datacenterId: dc.id,
         name: hosts[i],
-    })))}
+    }));
+}
 const computeCluster = new vsphere.ComputeCluster("computeCluster", {
     datacenterId: dc.id,
     drsAutomationLevel: "fullyAutomated",
@@ -5473,25 +5473,25 @@ machine, ensuring that it does not move.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const host = dc.apply(dc => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: dc.id,
     name: "esxi1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: datastore.id,
     disks: [{
@@ -6014,21 +6014,21 @@ failure.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: datastore.id,
     disks: [{
@@ -6367,13 +6367,13 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+});
+const esxiHost = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}));
+});
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -6401,13 +6401,13 @@ the implicit default of `false` set on the virtual switch.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+});
+const esxiHost = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}));
+});
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -7696,13 +7696,13 @@ const config = new pulumi.Config();
 const cluster = config.get("cluster") || "cluster1";
 const datacenter = config.get("datacenter") || "dc1";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}));
-const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const computeCluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-}));
+});
 const resourcePool = new vsphere.ResourcePool("resourcePool", {
     parentResourcePoolId: computeCluster.resourcePoolId,
 });
@@ -8012,25 +8012,25 @@ the datastore.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}));
-const memberDatastore = dc.apply(dc => vsphere.getDatastore({
+});
+const memberDatastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore-cluster1-member1",
-}));
-const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+});
+const datastoreCluster = vsphere.getDatastoreCluster({
     datacenterId: dc.id,
     name: "datastore-cluster1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "public",
-}));
-const pool = dc.apply(dc => vsphere.getResourcePool({
+});
+const pool = vsphere.getResourcePool({
     datacenterId: dc.id,
     name: "cluster1/Resources",
-}));
+});
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: memberDatastore.id,
     disks: [{
@@ -8495,13 +8495,13 @@ const config = new pulumi.Config();
 const cluster = config.get("cluster") || "cluster1";
 const datacenter = config.get("datacenter") || "dc1";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}));
-const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const computeCluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-}));
+});
 const vappContainer = new vsphere.VappContainer("vappContainer", {
     parentResourcePoolId: computeCluster.id,
 });
@@ -8521,21 +8521,21 @@ const config = new pulumi.Config();
 const cluster = config.get("cluster") || "cluster1";
 const datacenter = config.get("datacenter") || "dc1";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}));
-const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const computeCluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-}));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}));
+});
 const vappContainer = new vsphere.VappContainer("vappContainer", {
     parentResourcePoolId: computeCluster.id,
 });
@@ -10829,9 +10829,9 @@ data source.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown.
@@ -10860,13 +10860,13 @@ want to use to create virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: datacenter.id,
     name: "datastore1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown.
@@ -10900,9 +10900,9 @@ virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
+});
 const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatastoreCluster({
     datacenterId: id,
     name: "datastore-cluster1",
@@ -10975,9 +10975,9 @@ datacenter.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const folder = pulumi.output(vsphere.getFolder({
+const folder = vsphere.getFolder({
     path: "/dc1/datastore/folder1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/folder.html.markdown.
@@ -11003,13 +11003,13 @@ managed object reference ID.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const host = datacenter.apply(datacenter => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown.
@@ -11051,13 +11051,13 @@ that you want to use to create virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const pool = datacenter.apply(datacenter => vsphere.getResourcePool({
+});
+const pool = vsphere.getResourcePool({
     datacenterId: datacenter.id,
     name: "resource-pool-1",
-}));
+});
 ```
 
 ### Specifying the root resource pool for a standalone host
@@ -11140,13 +11140,13 @@ that you want to use to create virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const pool = datacenter.apply(datacenter => vsphere.getVappContainer({
+});
+const pool = vsphere.getVappContainer({
     datacenterId: datacenter.id,
     name: "vapp-container-1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown.
@@ -11186,13 +11186,13 @@ reads the guest ID so that can be supplied as well.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
+});
+const template = vsphere.getVirtualMachine({
     datacenterId: datacenter.id,
     name: "test-vm-template",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown.
@@ -11221,18 +11221,18 @@ datastores based off a set of discovered disks.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}));
-const host = datacenter.apply(datacenter => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}));
-const available = host.apply(host => vsphere.getVmfsDisks({
+});
+const available = vsphere.getVmfsDisks({
     filter: "mpx.vmhba1:C0:T[12]:L0",
     hostSystemId: host.id,
     rescan: true,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown.

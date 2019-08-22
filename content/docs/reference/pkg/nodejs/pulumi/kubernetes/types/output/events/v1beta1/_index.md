@@ -27,7 +27,7 @@ title: Module types/output/events/v1beta1
 
 
 <h2 class="pdoc-module-header" id="Event">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14242" >}}">interface <b>Event</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14232" >}}">interface <b>Event</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -37,7 +37,7 @@ change in the system.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Event-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14246" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14236" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -48,7 +48,7 @@ What action was taken/failed regarding to the regarding object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14254" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14244" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"events.k8s.io/v1beta1"</span>;</pre>
@@ -62,7 +62,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-deprecatedCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14259" >}}">property <b>deprecatedCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14249" >}}">property <b>deprecatedCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deprecatedCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -73,7 +73,7 @@ Deprecated field assuring backward compatibility with core.v1 Event type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-deprecatedFirstTimestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14264" >}}">property <b>deprecatedFirstTimestamp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14254" >}}">property <b>deprecatedFirstTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deprecatedFirstTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -84,7 +84,7 @@ Deprecated field assuring backward compatibility with core.v1 Event type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-deprecatedLastTimestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14269" >}}">property <b>deprecatedLastTimestamp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14259" >}}">property <b>deprecatedLastTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deprecatedLastTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -95,7 +95,7 @@ Deprecated field assuring backward compatibility with core.v1 Event type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-deprecatedSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14274" >}}">property <b>deprecatedSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14264" >}}">property <b>deprecatedSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deprecatedSource: <a href='#EventSource'>EventSource</a>;</pre>
@@ -106,7 +106,7 @@ Deprecated field assuring backward compatibility with core.v1 Event type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-eventTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14279" >}}">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14269" >}}">property <b>eventTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -117,7 +117,7 @@ Required. Time when this Event was first observed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14287" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14277" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Event"</span>;</pre>
@@ -131,7 +131,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14290" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14280" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -139,7 +139,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-note">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14296" >}}">property <b>note</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14286" >}}">property <b>note</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>note: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -151,7 +151,7 @@ the note is 1kB, but libraries should be prepared to handle values up to 64kB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14301" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14291" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -162,7 +162,7 @@ Why the action was taken.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-regarding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14308" >}}">property <b>regarding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14298" >}}">property <b>regarding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regarding: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -175,7 +175,7 @@ because it acts on some changes in a ReplicaSet object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-related">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14314" >}}">property <b>related</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14304" >}}">property <b>related</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>related: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -187,7 +187,7 @@ creation or deletion of related object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingController">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14319" >}}">property <b>reportingController</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14309" >}}">property <b>reportingController</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reportingController: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -198,7 +198,7 @@ Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14324" >}}">property <b>reportingInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14314" >}}">property <b>reportingInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reportingInstance: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -209,7 +209,7 @@ ID of the controller instance, e.g. `kubelet-xyzf`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-series">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14329" >}}">property <b>series</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14319" >}}">property <b>series</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>series: <a href='#EventSeries'>EventSeries</a>;</pre>
@@ -220,7 +220,7 @@ Data about the Event series this event represents or nil if it's a singleton Eve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14334" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14324" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -232,7 +232,7 @@ Type of this event (Normal, Warning), new types could be added in the future.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14341" >}}">interface <b>EventList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14331" >}}">interface <b>EventList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -241,7 +241,7 @@ EventList is a list of Event objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14348" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14338" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"events.k8s.io/v1beta1"</span>;</pre>
@@ -255,7 +255,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14353" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14343" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Event'>Event</a>[];</pre>
@@ -266,7 +266,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14361" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14351" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"EventList"</span>;</pre>
@@ -280,7 +280,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14367" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14357" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -293,7 +293,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventSeries">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14375" >}}">interface <b>EventSeries</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14365" >}}">interface <b>EventSeries</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -303,7 +303,7 @@ continuously for some time.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventSeries-count">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14379" >}}">property <b>count</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14369" >}}">property <b>count</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -314,7 +314,7 @@ Number of occurrences in this series up to the last heartbeat time
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSeries-lastObservedTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14384" >}}">property <b>lastObservedTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14374" >}}">property <b>lastObservedTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastObservedTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -325,7 +325,7 @@ Time when last Event from the series was seen before last heartbeat.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSeries-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14390" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14380" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

@@ -1019,7 +1019,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 const exampleFactory = new azure.datafactory.Factory("example", {
     location: exampleResourceGroup.location,
     name: "example",

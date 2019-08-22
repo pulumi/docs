@@ -244,9 +244,9 @@ deployments.
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const app = pulumi.output(newrelic.getApplication({
+const app = newrelic.getApplication({
     name: "my-app",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertCondition = new newrelic.AlertCondition("foo", {
     entities: [app.id],
@@ -1544,9 +1544,9 @@ Use this data source to get information about an specific alert channel in New R
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const fooAlertChannel = pulumi.output(newrelic.getAlertChannel({
+const fooAlertChannel = newrelic.getAlertChannel({
     name: "foo@example.com",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
     channelId: newrelic_alert_channel_foo.id,
@@ -1575,12 +1575,12 @@ Use this data source to get information about an specific alert policy in New Re
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const fooAlertChannel = pulumi.output(newrelic.getAlertChannel({
+const fooAlertChannel = newrelic.getAlertChannel({
     name: "foo@example.com",
-}));
-const fooAlertPolicy = pulumi.output(newrelic.getAlertPolicy({
+});
+const fooAlertPolicy = newrelic.getAlertPolicy({
     name: "foo policy",
-}));
+});
 const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
     channelId: fooAlertChannel.id,
     policyId: fooAlertPolicy.id,
@@ -1608,9 +1608,9 @@ Use this data source to get information about a specific application in New Reli
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const app = pulumi.output(newrelic.getApplication({
+const app = newrelic.getApplication({
     name: "my-app",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertCondition = new newrelic.AlertCondition("foo", {
     entities: [app.id],
@@ -1679,9 +1679,9 @@ Use this data source to get information about a specific key transaction in New 
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const txn = pulumi.output(newrelic.getKeyTransaction({
+const txn = newrelic.getKeyTransaction({
     name: "txn",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertCondition = new newrelic.AlertCondition("foo", {
     entities: [txn.id],

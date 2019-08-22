@@ -1931,9 +1931,9 @@ The parts of web requests that you want to inspect for cross-site scripting atta
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.waf.getIpset({
+const example = aws.waf.getIpset({
     name: "tfWAFIPSet",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_ipset.html.markdown.
@@ -1957,9 +1957,9 @@ const example = pulumi.output(aws.waf.getIpset({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.waf.getRule({
+const example = aws.waf.getRule({
     name: "tfWAFRule",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_rule.html.markdown.
@@ -1983,9 +1983,9 @@ const example = pulumi.output(aws.waf.getRule({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.waf.getWebAcl({
+const example = aws.waf.getWebAcl({
     name: "tfWAFRule",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_web_acl.html.markdown.

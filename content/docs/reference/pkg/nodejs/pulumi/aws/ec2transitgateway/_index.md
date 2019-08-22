@@ -1386,7 +1386,7 @@ Get information on an EC2 Transit Gateway Route Table.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
+const example = aws.ec2transitgateway.getRouteTable({
     filters: [
         {
             name: "default-association-route-table",
@@ -1397,7 +1397,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
             values: ["tgw-12345678"],
         },
     ],
-}));
+});
 ```
 
 ### By Identifier
@@ -1406,9 +1406,9 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
+const example = aws.ec2transitgateway.getRouteTable({
     id: "tgw-rtb-12345678",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway_route_table.html.markdown.
@@ -1434,12 +1434,12 @@ Get information on an EC2 Transit Gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
+const example = aws.ec2transitgateway.getTransitGateway({
     filters: [{
         name: "options.amazon-side-asn",
         values: ["64512"],
     }],
-}));
+});
 ```
 
 ### By Identifier
@@ -1448,9 +1448,9 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
+const example = aws.ec2transitgateway.getTransitGateway({
     id: "tgw-12345678",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway.html.markdown.
@@ -1476,12 +1476,12 @@ Get information on an EC2 Transit Gateway VPC Attachment.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
+const example = aws.ec2transitgateway.getVpcAttachment({
     filters: [{
         name: "vpc-id",
         values: ["vpc-12345678"],
     }],
-}));
+});
 ```
 
 ### By Identifier
@@ -1490,9 +1490,9 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
+const example = aws.ec2transitgateway.getVpcAttachment({
     id: "tgw-attach-12345678",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway_vpc_attachment.html.markdown.

@@ -968,7 +968,7 @@ Use this data source to get the default EBS encryption KMS key in the current re
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.ebs.getDefaultKmsKey({}));
+const current = aws.ebs.getDefaultKmsKey({});
 const example = new aws.ebs.Volume("example", {
     availabilityZone: "us-west-2a",
     encrypted: true,
@@ -997,7 +997,7 @@ Provides a way to check whether default EBS encryption is enabled for your AWS a
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.ebs.getEncryptionByDefault({}));
+const current = aws.ebs.getEncryptionByDefault({});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_encryption_by_default.html.markdown.
@@ -1021,7 +1021,7 @@ Use this data source to get information about an EBS Snapshot for use when provi
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
+const ebsVolume = aws.ebs.getSnapshot({
     filters: [
         {
             name: "volume-size",
@@ -1034,7 +1034,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
     ],
     mostRecent: true,
     owners: ["self"],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown.
@@ -1059,7 +1059,7 @@ criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
+const ebsVolumes = aws.ebs.getSnapshotIds({
     filters: [
         {
             name: "volume-size",
@@ -1071,7 +1071,7 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
         },
     ],
     owners: ["self"],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown.
@@ -1096,7 +1096,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolume = pulumi.output(aws.ebs.getVolume({
+const ebsVolume = aws.ebs.getVolume({
     filters: [
         {
             name: "volume-type",
@@ -1108,7 +1108,7 @@ const ebsVolume = pulumi.output(aws.ebs.getVolume({
         },
     ],
     mostRecent: true,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown.

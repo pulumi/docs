@@ -320,7 +320,7 @@ Provides access to available Cloud Composer versions in a region for a given pro
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const all = pulumi.output(gcp.composer.getImageVersions({}));
+const all = gcp.composer.getImageVersions({});
 const test = new gcp.composer.Environment("test", {
     config: {
         softwareConfig: {

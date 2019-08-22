@@ -1067,9 +1067,9 @@ Retrieve information about an Elastic Beanstalk Application.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.elasticbeanstalk.getApplication({
+const example = aws.elasticbeanstalk.getApplication({
     name: "example",
-}));
+});
 
 export const arn = example.arn;
 export const description = example.description;
@@ -1096,7 +1096,7 @@ Use this data source to get the ID of an [elastic beanstalk hosted zone](http://
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.elasticbeanstalk.getHostedZone({}));
+const current = aws.elasticbeanstalk.getHostedZone({});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown.
@@ -1120,10 +1120,10 @@ Use this data source to get the name of a elastic beanstalk solution stack.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const multiDocker = pulumi.output(aws.elasticbeanstalk.getSolutionStack({
+const multiDocker = aws.elasticbeanstalk.getSolutionStack({
     mostRecent: true,
     nameRegex: "^64bit Amazon Linux (.*) Multi-container Docker (.*)$",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown.

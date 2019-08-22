@@ -1214,10 +1214,10 @@ Use this data source to access information about an existing Managed Kubernetes 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.containerservice.getKubernetesCluster({
+const test = azure.containerservice.getKubernetesCluster({
     name: "myakscluster",
     resourceGroupName: "my-example-resource-group",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown.
@@ -1241,9 +1241,9 @@ Use this data source to retrieve the version of Kubernetes supported by Azure Ku
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = pulumi.output(azure.containerservice.getKubernetesServiceVersions({
+const current = azure.containerservice.getKubernetesServiceVersions({
     location: "West Europe",
-}));
+});
 
 export const latestVersion = current.latestVersion;
 export const versions = current.versions;
@@ -1270,10 +1270,10 @@ Use this data source to access information about an existing Container Registry.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.containerservice.getRegistry({
+const test = azure.containerservice.getRegistry({
     name: "testacr",
     resourceGroupName: "test",
-}));
+});
 
 export const loginServer = test.loginServer;
 ```

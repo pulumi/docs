@@ -396,7 +396,7 @@ const model = new aws.sagemaker.Model("m", {
         image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
     },
 });
-const assumeRole = pulumi.output(aws.iam.getPolicyDocument({
+const assumeRole = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -404,7 +404,7 @@ const assumeRole = pulumi.output(aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-}));
+});
 const role = new aws.iam.Role("r", {
     assumeRolePolicy: assumeRole.json,
 });

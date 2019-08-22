@@ -956,9 +956,9 @@ Use this data source to get the ID of an available OpenStack Magnum cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
+const cluster1 = openstack.containerinfra.getCluster({
     name: "cluster1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown.
@@ -983,9 +983,9 @@ template.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTemplate({
+const clustertemplate1 = openstack.containerinfra.getClusterTemplate({
     name: "clustertemplate1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown.

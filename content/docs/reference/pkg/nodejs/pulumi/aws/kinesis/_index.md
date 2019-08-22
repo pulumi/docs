@@ -46,6 +46,19 @@ title: Module kinesis
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="stream">kinesis/stream</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="AnalyticsApplication">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="kinesis/analyticsApplication.ts#L55" >}}">class <b>AnalyticsApplication</b></a>
@@ -1123,20 +1136,6 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Stream-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="kinesis/kinesisMixins.ts#L129" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#StreamEventHandler'>StreamEventHandler</a>, args: <a href='#StreamEventSubscriptionArgs'>StreamEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#StreamEventSubscription'>StreamEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Stream to the handler provided, along
-with options to control the behavior of the subscription.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Stream-arn">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="kinesis/stream.ts#L64" >}}">property <b>arn</b></a>
 </h3>
@@ -1376,9 +1375,9 @@ For more details, see the [Amazon Kinesis Documentation][1].
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const stream = pulumi.output(aws.kinesis.getStream({
+const stream = aws.kinesis.getStream({
     name: "stream-name",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kinesis_stream.html.markdown.

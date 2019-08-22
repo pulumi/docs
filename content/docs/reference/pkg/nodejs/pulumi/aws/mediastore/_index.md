@@ -197,8 +197,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const exampleContainer = new aws.mediastore.Container("example", {});
-const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({}));
-const currentRegion = pulumi.output(aws.getRegion({}));
+const currentCallerIdentity = aws.getCallerIdentity({});
+const currentRegion = aws.getRegion({});
 const exampleContainerPolicy = new aws.mediastore.ContainerPolicy("example", {
     containerName: exampleContainer.name,
     policy: pulumi.interpolate`{

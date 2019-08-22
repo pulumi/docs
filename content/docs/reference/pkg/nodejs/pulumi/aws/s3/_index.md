@@ -82,6 +82,19 @@ title: Module s3
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="bucket">s3/bucket</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="AccountPublicAccessBlock">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L28" >}}">class <b>AccountPublicAccessBlock</b></a>
@@ -499,52 +512,6 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Bucket.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L242" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args: <a href='#BucketEventSubscriptionArgs'>BucketEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Bucket to the handler provided,
-along with options to control the behavior of the subscription.  This function should be
-used when full control over the subscription is wanted, and other helpers (like
-onObjectCreated/onObjectRemoved) are not sufficient.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectCreated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L223" >}}">method <b>onObjectCreated</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args?: <a href='#ObjectCreatedSubscriptionArgs'>ObjectCreatedSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Bucket to the handler provided,
-along with options to control the behavior of the subscription.  The handler will be
-called whenever a matching [s3.Object] is created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectRemoved">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L232" >}}">method <b>onObjectRemoved</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectRemoved(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args?: <a href='#ObjectRemovedSubscriptionArgs'>ObjectRemovedSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Bucket to the handler provided,
-along with options to control the behavior of the subscription.  The handler will be
-called whenever an matching [s3.Object] is removed.
 
 {{% /md %}}
 </div>
@@ -2509,12 +2476,12 @@ Distribution.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testZone = pulumi.output(aws.route53.getZone({
+const testZone = aws.route53.getZone({
     name: "test.com.",
-}));
-const selected = pulumi.output(aws.s3.getBucket({
+});
+const selected = aws.s3.getBucket({
     bucket: "bucket.test.com",
-}));
+});
 const example = new aws.route53.Record("example", {
     aliases: [{
         name: selected.websiteDomain,
@@ -2531,9 +2498,9 @@ const example = new aws.route53.Record("example", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.s3.getBucket({
+const selected = aws.s3.getBucket({
     bucket: "a-test-bucket",
-}));
+});
 const test = new aws.cloudfront.Distribution("test", {
     origins: [{
         domainName: selected.bucketDomainName,
@@ -2569,10 +2536,10 @@ value starting with `text/`) and uses it as the `userData` for an EC2 instance:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bootstrapScript = pulumi.output(aws.s3.getBucketObject({
+const bootstrapScript = aws.s3.getBucketObject({
     bucket: "ourcorp-deploy-config",
     key: "ec2-bootstrap-script.sh",
-}));
+});
 const example = new aws.ec2.Instance("example", {
     ami: "ami-2757f631",
     instanceType: "t2.micro",
@@ -2590,10 +2557,10 @@ Lambda functions is available in the documentation for
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const lambda = pulumi.output(aws.s3.getBucketObject({
+const lambda = aws.s3.getBucketObject({
     bucket: "ourcorp-lambda-functions",
     key: "hello-world.zip",
-}));
+});
 const testLambda = new aws.lambda.Function("testLambda", {
     handler: "exports.test",
     role: aws_iam_role_iam_for_lambda.arn, // (not shown)

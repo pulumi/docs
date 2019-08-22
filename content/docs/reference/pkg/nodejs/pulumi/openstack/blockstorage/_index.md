@@ -1467,7 +1467,7 @@ Use this data source to get a list of Block Storage availability zones from Open
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = pulumi.output(openstack.blockstorage.getAvailabilityZonesV3({}));
+const zones = openstack.blockstorage.getAvailabilityZonesV3({});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown.
@@ -1491,10 +1491,10 @@ Use this data source to get information about an existing snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV2({
+const snapshot1 = openstack.blockstorage.getSnapshotV2({
     mostRecent: true,
     name: "snapshot1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown.
@@ -1518,10 +1518,10 @@ Use this data source to get information about an existing snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV3({
+const snapshot1 = openstack.blockstorage.getSnapshotV3({
     mostRecent: true,
     name: "snapshot1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown.

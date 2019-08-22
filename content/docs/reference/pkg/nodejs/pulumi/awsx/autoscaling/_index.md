@@ -294,17 +294,29 @@ Other adjustment types are possible as well.  The full list is:
 <li><a href="#TargetTrackingPolicyArgs">interface TargetTrackingPolicyArgs</a></li>
 <li><a href="#TemplateParameters">interface TemplateParameters</a></li>
 <li><a href="#UserDataLine">interface UserDataLine</a></li>
-<li><a href="#metrics">module metrics</a></li>
 <li><a href="#AdjustmentType">type AdjustmentType</a></li>
 <li><a href="#DayOfWeek">type DayOfWeek</a></li>
 <li><a href="#Month">type Month</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="autoscaling/autoscaling.ts" >}}">autoscaling/autoscaling.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/launchConfiguration.ts" >}}">autoscaling/launchConfiguration.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts" >}}">autoscaling/metrics.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/schedule.ts" >}}">autoscaling/schedule.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/stepScaling.ts" >}}">autoscaling/stepScaling.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/targetTracking.ts" >}}">autoscaling/targetTracking.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="autoscaling/autoscaling.ts" >}}">autoscaling/autoscaling.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/launchConfiguration.ts" >}}">autoscaling/launchConfiguration.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/schedule.ts" >}}">autoscaling/schedule.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/stepScaling.ts" >}}">autoscaling/stepScaling.ts</a> <a href="{{< pkg-url pkg="awsx" path="autoscaling/targetTracking.ts" >}}">autoscaling/targetTracking.ts</a> 
 </div>
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="metrics">autoscaling/metrics</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="AutoScalingGroup">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="autoscaling/autoscaling.ts#L26" >}}">class <b>AutoScalingGroup</b></a>
@@ -1992,158 +2004,6 @@ Set explicitly to [false] to control all indentation.
 
 Actual contents of the line.
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L19" >}}">module <b>metrics</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="groupDesiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L78" >}}">function <b>groupDesiredCapacity</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupDesiredCapacity(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that the Auto Scaling group attempts to maintain.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupInServiceInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L86" >}}">function <b>groupInServiceInstances</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupInServiceInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are running as part of the Auto Scaling group. This metric does not
-include instances that are pending or terminating.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupMaxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L71" >}}">function <b>groupMaxSize</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupMaxSize(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The maximum size of the Auto Scaling group.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupMinSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L64" >}}">function <b>groupMinSize</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupMinSize(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The minimum size of the Auto Scaling group.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupPendingInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L94" >}}">function <b>groupPendingInstances</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupPendingInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are pending. A pending instance is not yet in service. This metric
-does not include instances that are in service or terminating.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupStandbyInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L102" >}}">function <b>groupStandbyInstances</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupStandbyInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are in a Standby state. Instances in this state are still running
-but are not actively in service.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupTerminatingInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L110" >}}">function <b>groupTerminatingInstances</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupTerminatingInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are in the process of terminating. This metric does not include
-instances that are in service or pending.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="groupTotalInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L118" >}}">function <b>groupTotalInstances</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>groupTotalInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The total number of instances in the Auto Scaling group. This metric identifies the number of
-instances that are in service, pending, and terminating.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L48" >}}">function <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>metric(metricName: aws.autoscaling.Metric, change: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-Creates an AWS/AutoScaling metric with the requested [metricName]. See
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html for list
-of all metric-names.
-
-Note, individual metrics can easily be obtained without supplying the name using the other
-[metricXXX] functions.
-
-Amazon CloudWatch enables you to retrieve statistics as an ordered set of time-series data, known
-as metrics. You can use these metrics to verify that your system is performing as expected.
-
-Amazon EC2 sends metrics to CloudWatch that describe your Auto Scaling instances. These metrics
-are available for any EC2 instance, not just those in an Auto Scaling group. For more
-information, see Instance Metrics in the Amazon EC2 User Guide for Linux Instances.
-
-Auto Scaling groups can send metrics to CloudWatch that describe the group itself. You must
-enable these metrics.
-
-To filter the metrics for your Auto Scaling group by group name, use the "AutoScalingGroupName"
-dimension.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="autoscaling/metrics.ts#L20" >}}">interface <b>AutoScalingMetricChange</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

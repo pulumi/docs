@@ -263,12 +263,12 @@ Three different resources help you manage your IAM policy for a service account.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/iam.serviceAccountUser",
     }],
-}));
+});
 const sa = new gcp.serviceAccount.Account("sa", {
     accountId: "my-service-account",
     displayName: "A service account that only Jane can interact with",
@@ -302,7 +302,7 @@ const adminAccountIam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultDefaultServiceAccount = pulumi.output(gcp.compute.getDefaultServiceAccount({}));
+const defaultDefaultServiceAccount = gcp.compute.getDefaultServiceAccount({});
 const sa = new gcp.serviceAccount.Account("sa", {
     accountId: "my-service-account",
     displayName: "A service account that Jane can use",
@@ -471,12 +471,12 @@ Three different resources help you manage your IAM policy for a service account.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/iam.serviceAccountUser",
     }],
-}));
+});
 const sa = new gcp.serviceAccount.Account("sa", {
     accountId: "my-service-account",
     displayName: "A service account that only Jane can interact with",
@@ -510,7 +510,7 @@ const adminAccountIam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultDefaultServiceAccount = pulumi.output(gcp.compute.getDefaultServiceAccount({}));
+const defaultDefaultServiceAccount = gcp.compute.getDefaultServiceAccount({});
 const sa = new gcp.serviceAccount.Account("sa", {
     accountId: "my-service-account",
     displayName: "A service account that Jane can use",
@@ -679,12 +679,12 @@ Three different resources help you manage your IAM policy for a service account.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/iam.serviceAccountUser",
     }],
-}));
+});
 const sa = new gcp.serviceAccount.Account("sa", {
     accountId: "my-service-account",
     displayName: "A service account that only Jane can interact with",
@@ -718,7 +718,7 @@ const adminAccountIam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultDefaultServiceAccount = pulumi.output(gcp.compute.getDefaultServiceAccount({}));
+const defaultDefaultServiceAccount = gcp.compute.getDefaultServiceAccount({});
 const sa = new gcp.serviceAccount.Account("sa", {
     accountId: "my-service-account",
     displayName: "A service account that Jane can use",
@@ -1142,9 +1142,9 @@ the official [API](https://cloud.google.com/compute/docs/access/service-accounts
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const objectViewer = pulumi.output(gcp.serviceAccount.getAccount({
+const objectViewer = gcp.serviceAccount.getAccount({
     accountId: "object-viewer",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account.html.markdown.

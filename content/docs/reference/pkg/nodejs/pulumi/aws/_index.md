@@ -336,7 +336,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.getAmi({
+const example = aws.getAmi({
     executableUsers: ["self"],
     filters: [
         {
@@ -355,7 +355,7 @@ const example = pulumi.output(aws.getAmi({
     mostRecent: true,
     nameRegex: "^myami-\\d{3}",
     owners: ["self"],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ami.html.markdown.
@@ -379,13 +379,13 @@ Use this data source to get a list of AMI IDs matching the specified criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmiIds({
+const ubuntu = aws.getAmiIds({
     filters: [{
         name: "name",
         values: ["ubuntu/images/ubuntu-*-*-amd64-server-*"],
     }],
     owners: ["099720109477"],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ami_ids.html.markdown.
@@ -409,9 +409,9 @@ Parses an Amazon Resource Name (ARN) into its constituent parts.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const dbInstance = pulumi.output(aws.getArn({
+const dbInstance = aws.getArn({
     arn: "arn:aws:rds:eu-west-1:123456789012:db:mysql-db",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/arn.html.markdown.
@@ -436,7 +436,7 @@ ASGs within a specific region. This will allow you to pass a list of AutoScaling
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const groups = pulumi.output(aws.getAutoscalingGroups({
+const groups = aws.getAutoscalingGroups({
     filters: [
         {
             name: "key",
@@ -447,7 +447,7 @@ const groups = pulumi.output(aws.getAutoscalingGroups({
             values: ["Pets"],
         },
     ],
-}));
+});
 const slackNotifications = new aws.autoscaling.Notification("slackNotifications", {
     groupNames: groups.names,
     notifications: [
@@ -513,19 +513,19 @@ const regionNumber = config.get("regionNumber") || {
 
 // Retrieve the AZ where we want to create network resources
 // This must be in the region selected on the AWS provider.
-const exampleAvailabilityZone = pulumi.output(aws.getAvailabilityZone({
+const exampleAvailabilityZone = aws.getAvailabilityZone({
     name: "eu-central-1a",
-}));
+});
 // Create a VPC for the region associated with the AZ
 const exampleVpc = new aws.ec2.Vpc("example", {
-    cidrBlock: exampleAvailabilityZone.apply(exampleAvailabilityZone => (() => {
+    cidrBlock: (() => {
         throw "tf2pulumi error: NYI: call to cidrsubnet";
         return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
+    })(),
 });
 // Create a subnet for the AZ within the regional VPC
 const exampleSubnet = new aws.ec2.Subnet("example", {
-    cidrBlock: pulumi.all([exampleVpc.cidrBlock, exampleAvailabilityZone]).apply(([cidrBlock, exampleAvailabilityZone]) => (() => {
+    cidrBlock: exampleVpc.cidrBlock.apply(cidrBlock => (() => {
         throw "tf2pulumi error: NYI: call to cidrsubnet";
         return (() => { throw "NYI: call to cidrsubnet"; })();
     })()),
@@ -560,14 +560,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Declare the data source
-const available = pulumi.output(aws.getAvailabilityZones({
+const available = aws.getAvailabilityZones({
     state: "available",
-}));
+});
 const primary = new aws.ec2.Subnet("primary", {
-    availabilityZone: available.apply(available => available.names[0]),
+    availabilityZone: available.names[0],
 });
 const secondary = new aws.ec2.Subnet("secondary", {
-    availabilityZone: available.apply(available => available.names[1]),
+    availabilityZone: available.names[1],
 });
 ```
 
@@ -592,10 +592,10 @@ Use this data source to get the Account ID of the [AWS Billing and Cost Manageme
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.getBillingServiceAccount({}));
+const main = aws.getBillingServiceAccount({});
 const billingLogs = new aws.s3.Bucket("billingLogs", {
     acl: "private",
-    policy: pulumi.interpolate`{
+    policy: `{
   "Id": "Policy",
   "Version": "2012-10-17",
   "Statement": [
@@ -651,7 +651,7 @@ which this provider is authorized.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getCallerIdentity({}));
+const current = aws.getCallerIdentity({});
 
 export const accountId = current.accountId;
 export const callerArn = current.arn;
@@ -680,7 +680,7 @@ for the effective account in which this provider is working.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getCanonicalUserId({}));
+const current = aws.getCanonicalUserId({});
 
 export const canonicalUserId = current.id;
 ```
@@ -708,9 +708,9 @@ export const canonicalUserId = current.id;
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byAllocationId = pulumi.output(aws.getElasticIp({
+const byAllocationId = aws.getElasticIp({
     id: "eipalloc-12345678",
-}));
+});
 ```
 
 ### Search By Filters (EC2-Classic or VPC)
@@ -719,12 +719,12 @@ const byAllocationId = pulumi.output(aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byFilter = pulumi.output(aws.getElasticIp({
+const byFilter = aws.getElasticIp({
     filters: [{
         name: "tag:Name",
         values: ["exampleNameTagValue"],
     }],
-}));
+});
 ```
 
 ### Search By Public IP (EC2-Classic or VPC)
@@ -733,9 +733,9 @@ const byFilter = pulumi.output(aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byPublicIp = pulumi.output(aws.getElasticIp({
+const byPublicIp = aws.getElasticIp({
     publicIp: "1.2.3.4",
-}));
+});
 ```
 
 ### Search By Tags (EC2-Classic or VPC)
@@ -744,11 +744,11 @@ const byPublicIp = pulumi.output(aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byTags = pulumi.output(aws.getElasticIp({
+const byTags = aws.getElasticIp({
     tags: {
         Name: "exampleNameTagValue",
     },
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/eip.html.markdown.
@@ -802,13 +802,13 @@ Use this data source to get the IP ranges of various AWS products and services. 
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const europeanEc2 = pulumi.output(aws.getIpRanges({
+const europeanEc2 = aws.getIpRanges({
     regions: [
         "eu-west-1",
         "eu-central-1",
     ],
     services: ["ec2"],
-}));
+});
 const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
     ingress: [{
         cidrBlocks: europeanEc2.cidrBlocks,
@@ -845,14 +845,14 @@ Use this data source to lookup current AWS partition in which this provider is w
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getPartition({}));
-const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
+const current = aws.getPartition({});
+const s3Policy = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:ListBucket"],
         resources: [`arn:${current.partition}:s3:::my-bucket`],
         sid: "1",
     }],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/partition.html.markdown.
@@ -933,7 +933,7 @@ the name of the AWS region configured on the provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getRegion({}));
+const current = aws.getRegion({});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/region.html.markdown.

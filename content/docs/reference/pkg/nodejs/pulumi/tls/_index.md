@@ -998,9 +998,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as tls from "@pulumi/tls";
 
-const example = pulumi.output(tls.getPublicKey({
+const example = tls.getPublicKey({
     privateKeyPem: fs.readFileSync("~/.ssh/id_rsa", "utf-8"),
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/d/public_key.html.markdown.

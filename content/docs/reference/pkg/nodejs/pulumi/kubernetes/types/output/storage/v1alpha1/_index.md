@@ -30,7 +30,7 @@ title: Module types/output/storage/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="VolumeAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20138" >}}">interface <b>VolumeAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20126" >}}">interface <b>VolumeAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -42,7 +42,7 @@ VolumeAttachment objects are non-namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20145" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20133" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1alpha1"</span>;</pre>
@@ -56,7 +56,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20153" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20141" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"VolumeAttachment"</span>;</pre>
@@ -70,7 +70,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20159" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20147" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -82,7 +82,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20165" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20153" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#VolumeAttachmentSpec'>VolumeAttachmentSpec</a>;</pre>
@@ -94,7 +94,7 @@ system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20171" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20159" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#VolumeAttachmentStatus'>VolumeAttachmentStatus</a>;</pre>
@@ -107,7 +107,7 @@ detach operation, i.e. the external-attacher.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20178" >}}">interface <b>VolumeAttachmentList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20166" >}}">interface <b>VolumeAttachmentList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -116,7 +116,7 @@ VolumeAttachmentList is a collection of VolumeAttachment objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20185" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20173" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1alpha1"</span>;</pre>
@@ -130,7 +130,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20190" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20178" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#VolumeAttachment'>VolumeAttachment</a>[];</pre>
@@ -141,7 +141,7 @@ Items is the list of VolumeAttachments
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20198" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20186" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"VolumeAttachmentList"</span>;</pre>
@@ -155,7 +155,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20204" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20192" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -168,7 +168,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20213" >}}">interface <b>VolumeAttachmentSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20201" >}}">interface <b>VolumeAttachmentSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -179,7 +179,7 @@ volumes in pods. Exactly one member can be set.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentSource-inlineVolumeSpec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20221" >}}">property <b>inlineVolumeSpec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20209" >}}">property <b>inlineVolumeSpec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>inlineVolumeSpec: <a href='#PersistentVolumeSpec'>PersistentVolumeSpec</a>;</pre>
@@ -194,7 +194,7 @@ the CSIMigration feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentSource-persistentVolumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20226" >}}">property <b>persistentVolumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20214" >}}">property <b>persistentVolumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistentVolumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -206,7 +206,7 @@ Name of the persistent volume to attach.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20233" >}}">interface <b>VolumeAttachmentSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20221" >}}">interface <b>VolumeAttachmentSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -215,7 +215,7 @@ VolumeAttachmentSpec is the specification of a VolumeAttachment request.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentSpec-attacher">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20238" >}}">property <b>attacher</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20226" >}}">property <b>attacher</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attacher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -227,7 +227,7 @@ name returned by GetPluginName().
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentSpec-nodeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20243" >}}">property <b>nodeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20231" >}}">property <b>nodeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -238,7 +238,7 @@ The node that the volume should be attached to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentSpec-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20248" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20236" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source: <a href='#VolumeAttachmentSource'>VolumeAttachmentSource</a>;</pre>
@@ -250,7 +250,7 @@ Source represents the volume that should be attached.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20255" >}}">interface <b>VolumeAttachmentStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20243" >}}">interface <b>VolumeAttachmentStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -259,7 +259,7 @@ VolumeAttachmentStatus is the status of a VolumeAttachment request.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attachError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20260" >}}">property <b>attachError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20248" >}}">property <b>attachError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attachError: <a href='#VolumeError'>VolumeError</a>;</pre>
@@ -271,7 +271,7 @@ the entity completing the attach operation, i.e. the external-attacher.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attached">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20266" >}}">property <b>attached</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20254" >}}">property <b>attached</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attached: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -283,7 +283,7 @@ completing the attach operation, i.e. the external-attacher.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attachmentMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20273" >}}">property <b>attachmentMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20261" >}}">property <b>attachmentMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attachmentMetadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -296,7 +296,7 @@ only be set by the entity completing the attach operation, i.e. the external-att
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-detachError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20279" >}}">property <b>detachError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20267" >}}">property <b>detachError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>detachError: <a href='#VolumeError'>VolumeError</a>;</pre>
@@ -309,7 +309,7 @@ the entity completing the detach operation, i.e. the external-attacher.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeError">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20286" >}}">interface <b>VolumeError</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20274" >}}">interface <b>VolumeError</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -318,7 +318,7 @@ VolumeError captures an error encountered during a volume operation.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeError-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20291" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20279" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -330,7 +330,7 @@ logged, so it should not contain sensitive information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeError-time">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20296" >}}">property <b>time</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20284" >}}">property <b>time</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>time: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

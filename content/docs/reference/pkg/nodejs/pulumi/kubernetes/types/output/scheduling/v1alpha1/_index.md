@@ -26,7 +26,7 @@ title: Module types/output/scheduling/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="PriorityClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19568" >}}">interface <b>PriorityClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19556" >}}">interface <b>PriorityClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -37,7 +37,7 @@ to the priority integer value. The value can be any valid integer.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PriorityClass-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19575" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19563" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"scheduling.k8s.io/v1alpha1"</span>;</pre>
@@ -51,7 +51,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClass-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19581" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19569" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -63,7 +63,7 @@ class should be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClass-globalDefault">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19590" >}}">property <b>globalDefault</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19578" >}}">property <b>globalDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>globalDefault: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -78,7 +78,7 @@ PriorityClasses will be used as the default priority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClass-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19598" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19586" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PriorityClass"</span>;</pre>
@@ -92,7 +92,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClass-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19604" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19592" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -104,7 +104,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClass-preemptionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19611" >}}">property <b>preemptionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19599" >}}">property <b>preemptionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preemptionPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -117,7 +117,7 @@ and is only honored by servers that enable the NonPreemptingPriority feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClass-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19617" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19605" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -130,7 +130,7 @@ have the name of this class in their pod spec.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PriorityClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19624" >}}">interface <b>PriorityClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19612" >}}">interface <b>PriorityClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -139,7 +139,7 @@ PriorityClassList is a collection of priority classes.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PriorityClassList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19631" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19619" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"scheduling.k8s.io/v1alpha1"</span>;</pre>
@@ -153,7 +153,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClassList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19636" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19624" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PriorityClass'>PriorityClass</a>[];</pre>
@@ -164,7 +164,7 @@ items is the list of PriorityClasses
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClassList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19644" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19632" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PriorityClassList"</span>;</pre>
@@ -178,7 +178,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PriorityClassList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19650" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19638" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>

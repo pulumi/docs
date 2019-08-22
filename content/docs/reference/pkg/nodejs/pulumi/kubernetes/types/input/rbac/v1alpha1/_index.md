@@ -45,7 +45,7 @@ title: Module types/input/rbac/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="isClusterRole">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19739" >}}">function <b>isClusterRole</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19727" >}}">function <b>isClusterRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -55,7 +55,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isClusterRoleBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19782" >}}">function <b>isClusterRoleBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19770" >}}">function <b>isClusterRoleBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -65,7 +65,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isClusterRoleBindingList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19818" >}}">function <b>isClusterRoleBindingList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19806" >}}">function <b>isClusterRoleBindingList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -75,7 +75,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isClusterRoleList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19854" >}}">function <b>isClusterRoleList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19842" >}}">function <b>isClusterRoleList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -85,7 +85,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isRole">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19934" >}}">function <b>isRole</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19922" >}}">function <b>isRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -95,7 +95,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isRoleBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19979" >}}">function <b>isRoleBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19967" >}}">function <b>isRoleBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -105,7 +105,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isRoleBindingList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20015" >}}">function <b>isRoleBindingList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20003" >}}">function <b>isRoleBindingList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -115,7 +115,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isRoleList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20051" >}}">function <b>isRoleList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20039" >}}">function <b>isRoleList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -125,7 +125,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isSubject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20110" >}}">function <b>isSubject</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20098" >}}">function <b>isSubject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -135,7 +135,7 @@ title: Module types/input/rbac/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AggregationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19688" >}}">interface <b>AggregationRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19676" >}}">interface <b>AggregationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -144,7 +144,7 @@ AggregationRule describes how to locate ClusterRoles to aggregate into the Clust
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AggregationRule-clusterRoleSelectors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19694" >}}">property <b>clusterRoleSelectors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19682" >}}">property <b>clusterRoleSelectors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterRoleSelectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;[]&gt;;</pre>
@@ -158,7 +158,7 @@ added
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClusterRole">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19703" >}}">interface <b>ClusterRole</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19691" >}}">interface <b>ClusterRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -168,7 +168,7 @@ unit by a RoleBinding or ClusterRoleBinding.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRole-aggregationRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19709" >}}">property <b>aggregationRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19697" >}}">property <b>aggregationRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aggregationRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AggregationRule'>AggregationRule</a>&gt;;</pre>
@@ -181,7 +181,7 @@ changes to Rules will be stomped by the controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRole-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19717" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19705" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -195,7 +195,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRole-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19725" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19713" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ClusterRole"</span>&gt;;</pre>
@@ -209,7 +209,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRole-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19730" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19718" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -220,7 +220,7 @@ Standard object's metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRole-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19735" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19723" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PolicyRule'>PolicyRule</a>&gt;[]&gt;;</pre>
@@ -232,7 +232,7 @@ Rules holds all the PolicyRules for this ClusterRole
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClusterRoleBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19747" >}}">interface <b>ClusterRoleBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19735" >}}">interface <b>ClusterRoleBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -242,7 +242,7 @@ ClusterRole in the global namespace, and adds who information via Subject.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRoleBinding-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19760" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19748" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -256,7 +256,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBinding-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19768" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19756" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ClusterRoleBinding"</span>&gt;;</pre>
@@ -270,7 +270,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBinding-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19773" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19761" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -281,7 +281,7 @@ Standard object's metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBinding-roleRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19752" >}}">property <b>roleRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19740" >}}">property <b>roleRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RoleRef'>RoleRef</a>&gt;;</pre>
@@ -293,7 +293,7 @@ resolved, the Authorizer must return an error.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBinding-subjects">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19778" >}}">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19766" >}}">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Subject'>Subject</a>&gt;[]&gt;;</pre>
@@ -305,7 +305,7 @@ Subjects holds references to the objects the role applies to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClusterRoleBindingList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19789" >}}">interface <b>ClusterRoleBindingList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19777" >}}">interface <b>ClusterRoleBindingList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -314,7 +314,7 @@ ClusterRoleBindingList is a collection of ClusterRoleBindings
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRoleBindingList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19801" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19789" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -328,7 +328,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBindingList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19793" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19781" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterRoleBinding'>ClusterRoleBinding</a>&gt;[]&gt;;</pre>
@@ -339,7 +339,7 @@ Items is a list of ClusterRoleBindings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBindingList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19809" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19797" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ClusterRoleBindingList"</span>&gt;;</pre>
@@ -353,7 +353,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleBindingList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19814" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19802" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -365,7 +365,7 @@ Standard object's metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClusterRoleList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19825" >}}">interface <b>ClusterRoleList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19813" >}}">interface <b>ClusterRoleList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -374,7 +374,7 @@ ClusterRoleList is a collection of ClusterRoles
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRoleList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19837" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19825" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -388,7 +388,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19829" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19817" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterRole'>ClusterRole</a>&gt;[]&gt;;</pre>
@@ -399,7 +399,7 @@ Items is a list of ClusterRoles
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19845" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19833" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ClusterRoleList"</span>&gt;;</pre>
@@ -413,7 +413,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterRoleList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19850" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19838" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -425,7 +425,7 @@ Standard object's metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19862" >}}">interface <b>PolicyRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19850" >}}">interface <b>PolicyRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -435,7 +435,7 @@ about who the rule applies to or which namespace the rule applies to.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyRule-apiGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19874" >}}">property <b>apiGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19862" >}}">property <b>apiGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -448,7 +448,7 @@ group will be allowed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyRule-nonResourceURLs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19884" >}}">property <b>nonResourceURLs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19872" >}}">property <b>nonResourceURLs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nonResourceURLs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -464,7 +464,7 @@ ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyRule-resourceNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19890" >}}">property <b>resourceNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19878" >}}">property <b>resourceNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -476,7 +476,7 @@ means that everything is allowed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyRule-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19896" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19884" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -488,7 +488,7 @@ resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyRule-verbs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19867" >}}">property <b>verbs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19855" >}}">property <b>verbs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>verbs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -501,7 +501,7 @@ contained in this rule.  VerbAll represents all kinds.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19905" >}}">interface <b>Role</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19893" >}}">interface <b>Role</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -511,7 +511,7 @@ RoleBinding.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Role-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19912" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19900" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -525,7 +525,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19920" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19908" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"Role"</span>&gt;;</pre>
@@ -539,7 +539,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19925" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19913" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -550,7 +550,7 @@ Standard object's metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19930" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19918" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PolicyRule'>PolicyRule</a>&gt;[]&gt;;</pre>
@@ -562,7 +562,7 @@ Rules holds all the PolicyRules for this Role
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19944" >}}">interface <b>RoleBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19932" >}}">interface <b>RoleBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -574,7 +574,7 @@ only have effect in that namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleBinding-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19957" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19945" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -588,7 +588,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBinding-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19965" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19953" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RoleBinding"</span>&gt;;</pre>
@@ -602,7 +602,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBinding-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19970" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19958" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -613,7 +613,7 @@ Standard object's metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBinding-roleRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19949" >}}">property <b>roleRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19937" >}}">property <b>roleRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RoleRef'>RoleRef</a>&gt;;</pre>
@@ -625,7 +625,7 @@ namespace. If the RoleRef cannot be resolved, the Authorizer must return an erro
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBinding-subjects">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19975" >}}">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19963" >}}">property <b>subjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Subject'>Subject</a>&gt;[]&gt;;</pre>
@@ -637,7 +637,7 @@ Subjects holds references to the objects the role applies to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleBindingList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19986" >}}">interface <b>RoleBindingList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19974" >}}">interface <b>RoleBindingList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -646,7 +646,7 @@ RoleBindingList is a collection of RoleBindings
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleBindingList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19998" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19986" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -660,7 +660,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBindingList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19990" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19978" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RoleBinding'>RoleBinding</a>&gt;[]&gt;;</pre>
@@ -671,7 +671,7 @@ Items is a list of RoleBindings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBindingList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20006" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19994" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RoleBindingList"</span>&gt;;</pre>
@@ -685,7 +685,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleBindingList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20011" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L19999" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -697,7 +697,7 @@ Standard object's metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20022" >}}">interface <b>RoleList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20010" >}}">interface <b>RoleList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -706,7 +706,7 @@ RoleList is a collection of Roles
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20034" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20022" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -720,7 +720,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20026" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20014" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Role'>Role</a>&gt;[]&gt;;</pre>
@@ -731,7 +731,7 @@ Items is a list of Roles
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20042" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20030" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RoleList"</span>&gt;;</pre>
@@ -745,7 +745,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20047" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20035" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -757,7 +757,7 @@ Standard object's metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleRef">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20058" >}}">interface <b>RoleRef</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20046" >}}">interface <b>RoleRef</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -766,7 +766,7 @@ RoleRef contains information that points to the role being used
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleRef-apiGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20062" >}}">property <b>apiGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20050" >}}">property <b>apiGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -777,7 +777,7 @@ APIGroup is the group for the resource being referenced
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleRef-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20067" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20055" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -788,7 +788,7 @@ Kind is the type of resource being referenced
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleRef-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20072" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20060" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -800,7 +800,7 @@ Name is the name of resource being referenced
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Subject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20082" >}}">interface <b>Subject</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20070" >}}">interface <b>Subject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -811,7 +811,7 @@ and group names.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Subject-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20100" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20088" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -824,7 +824,7 @@ Group subjects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subject-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20088" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20076" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -837,7 +837,7 @@ should report an error.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subject-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20093" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20081" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -848,7 +848,7 @@ Name of the object being referenced.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subject-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20106" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L20094" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

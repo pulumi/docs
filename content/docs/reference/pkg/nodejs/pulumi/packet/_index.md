@@ -89,13 +89,6 @@ import * as packet from "@pulumi/packet";
 <li><a href="#VolumeAttachmentArgs">interface VolumeAttachmentArgs</a></li>
 <li><a href="#VolumeAttachmentState">interface VolumeAttachmentState</a></li>
 <li><a href="#VolumeState">interface VolumeState</a></li>
-<li><a href="#BillingCycles">module BillingCycles</a></li>
-<li><a href="#Facilities">module Facilities</a></li>
-<li><a href="#IpAddressTypes">module IpAddressTypes</a></li>
-<li><a href="#IpBlockTypes">module IpBlockTypes</a></li>
-<li><a href="#NetworkTypes">module NetworkTypes</a></li>
-<li><a href="#OperatingSystems">module OperatingSystems</a></li>
-<li><a href="#Plans">module Plans</a></li>
 <li><a href="#BillingCycle">type BillingCycle</a></li>
 <li><a href="#Facility">type Facility</a></li>
 <li><a href="#IpAddressType">type IpAddressType</a></li>
@@ -119,6 +112,13 @@ import * as packet from "@pulumi/packet";
 <div class="pdoc-module-contents">
 <ul>
 <li><a href="config">config</a></li>
+<li><a href="BillingCycles">index/BillingCycles</a></li>
+<li><a href="Facilities">index/Facilities</a></li>
+<li><a href="IpAddressTypes">index/IpAddressTypes</a></li>
+<li><a href="IpBlockTypes">index/IpBlockTypes</a></li>
+<li><a href="NetworkTypes">index/NetworkTypes</a></li>
+<li><a href="OperatingSystems">index/OperatingSystems</a></li>
+<li><a href="Plans">index/Plans</a></li>
 </ul>
 </div>
 </div>
@@ -3256,12 +3256,12 @@ Use this data source to get Packet Operating System image.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = pulumi.output(packet.getOperatingSystem({
+const example = packet.getOperatingSystem({
     distro: "coreos",
     name: "Container Linux",
     provisionableOn: "c1.small.x86",
     version: "alpha",
-}));
+});
 const server = new packet.Device("server", {
     billingCycle: "hourly",
     facilities: ["ewr1"],
@@ -3295,12 +3295,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
 const projectId = "<UUID_of_your_project>";
-const test = pulumi.output(packet.getPrecreatedIpBlock({
+const test = packet.getPrecreatedIpBlock({
     addressFamily: 6,
     facility: "ewr1",
     projectId: projectId,
     public: true,
-}));
+});
 const web1 = new packet.Device("web1", {
     billingCycle: "hourly",
     facilities: ["ewr1"],
@@ -3310,10 +3310,10 @@ const web1 = new packet.Device("web1", {
     projectId: projectId,
 });
 const fromIpv6Block = new packet.IpAttachment("fromIpv6Block", {
-    cidrNotation: test.apply(test => (() => {
+    cidrNotation: (() => {
         throw "tf2pulumi error: NYI: call to cidrsubnet";
         return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
+    })(),
     deviceId: web1.id,
 });
 ```
@@ -3339,10 +3339,10 @@ Use this data source to get Packet Spot Market Price.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = pulumi.output(packet.getSpotMarketPrice({
+const example = packet.getSpotMarketPrice({
     facility: "ewr1",
     plan: "c1.small.x86",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown.
@@ -6303,577 +6303,6 @@ The state of the volume
 
 The timestamp for the last time the volume was updated
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="BillingCycles">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="billingCycle.ts#L15" >}}">module <b>BillingCycles</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="Hourly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="billingCycle.ts#L16" >}}">const <b>Hourly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Hourly: <a href='#BillingCycle'>BillingCycle</a> = <span class='s2'>&#34;hourly&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Monthly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="billingCycle.ts#L17" >}}">const <b>Monthly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Monthly: <a href='#BillingCycle'>BillingCycle</a> = <span class='s2'>&#34;monthly&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Facilities">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="facility.ts#L15" >}}">module <b>Facilities</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="AMS1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L20" >}}">const <b>AMS1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> AMS1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;ams1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ATL1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L25" >}}">const <b>ATL1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> ATL1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;atl1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DFW1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L18" >}}">const <b>DFW1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DFW1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;dfw1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DFW2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L19" >}}">const <b>DFW2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DFW2: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;dfw2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EWR1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L16" >}}">const <b>EWR1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> EWR1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;ewr1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="FRA2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L32" >}}">const <b>FRA2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> FRA2: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;fra2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="HKG1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L28" >}}">const <b>HKG1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> HKG1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;hkg1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="IAD1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L26" >}}">const <b>IAD1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> IAD1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;iad1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="LAX1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L23" >}}">const <b>LAX1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> LAX1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;lax1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="MRS1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L30" >}}">const <b>MRS1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> MRS1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;mrs1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NRT1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L21" >}}">const <b>NRT1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NRT1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;nrt1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ORD1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L24" >}}">const <b>ORD1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> ORD1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;ord1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SEA1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L22" >}}">const <b>SEA1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SEA1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;sea1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SIN1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L27" >}}">const <b>SIN1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SIN1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;sin1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SJC1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L17" >}}">const <b>SJC1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SJC1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;sjc1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SYD1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L29" >}}">const <b>SYD1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SYD1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;syd1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="YYZ1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="facility.ts#L31" >}}">const <b>YYZ1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> YYZ1: <a href='#Facility'>Facility</a> = <span class='s2'>&#34;yyz1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="IpAddressTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="ipAddressType.ts#L15" >}}">module <b>IpAddressTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="PrivateIPv4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="ipAddressType.ts#L16" >}}">const <b>PrivateIPv4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> PrivateIPv4: <a href='#IpAddressType'>IpAddressType</a> = <span class='s2'>&#34;private_ipv4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="PublicIPv4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="ipAddressType.ts#L17" >}}">const <b>PublicIPv4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> PublicIPv4: <a href='#IpAddressType'>IpAddressType</a> = <span class='s2'>&#34;public_ipv4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="PublicIPv6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="ipAddressType.ts#L18" >}}">const <b>PublicIPv6</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> PublicIPv6: <a href='#IpAddressType'>IpAddressType</a> = <span class='s2'>&#34;public_ipv6&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="IpBlockTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="ipBlockType.ts#L15" >}}">module <b>IpBlockTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="GlobalIPv4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="ipBlockType.ts#L16" >}}">const <b>GlobalIPv4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> GlobalIPv4: <a href='#IpBlockType'>IpBlockType</a> = <span class='s2'>&#34;global_ipv4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="PublicIPv4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="ipBlockType.ts#L17" >}}">const <b>PublicIPv4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> PublicIPv4: <a href='#IpBlockType'>IpBlockType</a> = <span class='s2'>&#34;public_ipv4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NetworkTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="networkType.ts#L15" >}}">module <b>NetworkTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="Hybrid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="networkType.ts#L17" >}}">const <b>Hybrid</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Hybrid: <a href='#NetworkType'>NetworkType</a> = <span class='s2'>&#34;hybrid&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Layer2Bonded">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="networkType.ts#L19" >}}">const <b>Layer2Bonded</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Layer2Bonded: <a href='#NetworkType'>NetworkType</a> = <span class='s2'>&#34;layer2-bonded&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Layer2Individual">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="networkType.ts#L18" >}}">const <b>Layer2Individual</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Layer2Individual: <a href='#NetworkType'>NetworkType</a> = <span class='s2'>&#34;layer2-individual&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Layer3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="networkType.ts#L16" >}}">const <b>Layer3</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Layer3: <a href='#NetworkType'>NetworkType</a> = <span class='s2'>&#34;layer3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="OperatingSystems">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L15" >}}">module <b>OperatingSystems</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="Alpine3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L16" >}}">const <b>Alpine3</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Alpine3: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;alpine_3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CentOS6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L17" >}}">const <b>CentOS6</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CentOS6: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;centos_6&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CentOS7">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L18" >}}">const <b>CentOS7</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CentOS7: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;centos_7&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CoreOSAlpha">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L19" >}}">const <b>CoreOSAlpha</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CoreOSAlpha: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;coreos_alpha&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CoreOSBeta">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L20" >}}">const <b>CoreOSBeta</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CoreOSBeta: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;coreos_beta&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CoreOSStable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L21" >}}">const <b>CoreOSStable</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CoreOSStable: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;coreos_stable&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CustomIPXE">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L22" >}}">const <b>CustomIPXE</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CustomIPXE: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;custom_ipxe&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Debian8">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L23" >}}">const <b>Debian8</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Debian8: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;debian_8&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Debian9">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L24" >}}">const <b>Debian9</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Debian9: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;debian_9&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="FreeBSD10_4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L25" >}}">const <b>FreeBSD10_4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> FreeBSD10_4: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;freebsd_10_4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="FreeBSD11_1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L26" >}}">const <b>FreeBSD11_1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> FreeBSD11_1: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;freebsd_11_1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="FreeBSD11_2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L27" >}}">const <b>FreeBSD11_2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> FreeBSD11_2: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;freebsd_11_2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="FreeBSD12Testing">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L28" >}}">const <b>FreeBSD12Testing</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> FreeBSD12Testing: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;freebsd_12_testing&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NixOS18_03">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L29" >}}">const <b>NixOS18_03</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NixOS18_03: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;nixos_18_03&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NixOS19_03">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L30" >}}">const <b>NixOS19_03</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NixOS19_03: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;nixos_19_03&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="OpenSUSE42_3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L31" >}}">const <b>OpenSUSE42_3</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> OpenSUSE42_3: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;opensuse_42_3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="RHEL7">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L33" >}}">const <b>RHEL7</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> RHEL7: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;rhel_7&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="RancherOS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L32" >}}">const <b>RancherOS</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> RancherOS: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;rancher&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SLES12SP3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L35" >}}">const <b>SLES12SP3</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SLES12SP3: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;suse_sles12_sp3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ScientificLinux6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L34" >}}">const <b>ScientificLinux6</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> ScientificLinux6: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;scientific_6&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Ubuntu1404">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L36" >}}">const <b>Ubuntu1404</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Ubuntu1404: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;ubuntu_14_04&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Ubuntu1604">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L37" >}}">const <b>Ubuntu1604</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Ubuntu1604: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;ubuntu_16_04&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Ubuntu1710">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L38" >}}">const <b>Ubuntu1710</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Ubuntu1710: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;ubuntu_17_10&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Ubuntu1804">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L39" >}}">const <b>Ubuntu1804</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Ubuntu1804: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;ubuntu_18_04&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="VMWareEsxi6_5">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L40" >}}">const <b>VMWareEsxi6_5</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> VMWareEsxi6_5: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;vmware_esxi_6_5&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Windows2012R2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L41" >}}">const <b>Windows2012R2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Windows2012R2: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;windows_2012_r2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Windows2016">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="operatingSystem.ts#L42" >}}">const <b>Windows2016</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Windows2016: <a href='#OperatingSystem'>OperatingSystem</a> = <span class='s2'>&#34;windows_2016&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Plans">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="packet" path="plan.ts#L15" >}}">module <b>Plans</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="C1LargeARM">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L19" >}}">const <b>C1LargeARM</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C1LargeARM: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_2a&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C1SmallX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L18" >}}">const <b>C1SmallX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C1SmallX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C1XLargeX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L20" >}}">const <b>C1XLargeX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C1XLargeX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C2LargeARM">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L16" >}}">const <b>C2LargeARM</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C2LargeARM: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;c2.large.arm&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C2MediumX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L17" >}}">const <b>C2MediumX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C2MediumX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;c2.medium.x86&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G2LargeX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L23" >}}">const <b>G2LargeX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G2LargeX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;g2.large.x86&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M1XLargeX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L25" >}}">const <b>M1XLargeX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M1XLargeX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M2XLargeX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L24" >}}">const <b>M2XLargeX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M2XLargeX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;m2.xlarge.x86&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="S1LargeX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L27" >}}">const <b>S1LargeX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> S1LargeX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_s&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T1SmallX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L26" >}}">const <b>T1SmallX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T1SmallX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_0&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1SmallX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L22" >}}">const <b>X1SmallX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1SmallX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;baremetal_1e&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X2XLargeX86">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="packet" path="plan.ts#L21" >}}">const <b>X2XLargeX86</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X2XLargeX86: <a href='#Plan'>Plan</a> = <span class='s2'>&#34;x2.xlarge.x86&#34;</span>;</pre>
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

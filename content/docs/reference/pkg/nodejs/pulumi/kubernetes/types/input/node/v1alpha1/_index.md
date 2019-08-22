@@ -29,7 +29,7 @@ title: Module types/input/node/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="isRuntimeClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18385" >}}">function <b>isRuntimeClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18373" >}}">function <b>isRuntimeClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -39,7 +39,7 @@ title: Module types/input/node/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isRuntimeClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18422" >}}">function <b>isRuntimeClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18410" >}}">function <b>isRuntimeClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -49,7 +49,7 @@ title: Module types/input/node/v1alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18355" >}}">interface <b>RuntimeClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18343" >}}">interface <b>RuntimeClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -63,7 +63,7 @@ https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClass-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18368" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18356" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"node.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -77,7 +77,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18376" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18364" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RuntimeClass"</span>&gt;;</pre>
@@ -91,7 +91,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18381" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18369" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -102,7 +102,7 @@ More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18360" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18348" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RuntimeClassSpec'>RuntimeClassSpec</a>&gt;;</pre>
@@ -115,7 +115,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18392" >}}">interface <b>RuntimeClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18380" >}}">interface <b>RuntimeClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -124,7 +124,7 @@ RuntimeClassList is a list of RuntimeClass objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18404" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18392" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"node.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -138,7 +138,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18396" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18384" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RuntimeClass'>RuntimeClass</a>&gt;[]&gt;;</pre>
@@ -149,7 +149,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18412" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18400" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RuntimeClassList"</span>&gt;;</pre>
@@ -163,7 +163,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18418" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18406" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -176,7 +176,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18432" >}}">interface <b>RuntimeClassSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18420" >}}">interface <b>RuntimeClassSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -188,7 +188,7 @@ run. The RuntimeClassSpec is immutable.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassSpec-runtimeHandler">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18442" >}}">property <b>runtimeHandler</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18430" >}}">property <b>runtimeHandler</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtimeHandler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -31,7 +31,7 @@ title: Module types/input/certificates/v1beta1
 
 
 <h2 class="pdoc-module-header" id="isCertificateSigningRequest">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8011" >}}">function <b>isCertificateSigningRequest</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8007" >}}">function <b>isCertificateSigningRequest</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -41,7 +41,7 @@ title: Module types/input/certificates/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isCertificateSigningRequestList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8070" >}}">function <b>isCertificateSigningRequestList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8062" >}}">function <b>isCertificateSigningRequestList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -51,7 +51,7 @@ title: Module types/input/certificates/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CertificateSigningRequest">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7979" >}}">interface <b>CertificateSigningRequest</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7975" >}}">interface <b>CertificateSigningRequest</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -60,7 +60,7 @@ Describes a certificate signing request
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateSigningRequest-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7986" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7982" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"certificates.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -74,7 +74,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequest-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7994" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7990" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"CertificateSigningRequest"</span>&gt;;</pre>
@@ -88,7 +88,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequest-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7997" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7993" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -96,7 +96,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequest-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8002" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7998" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateSigningRequestSpec'>CertificateSigningRequestSpec</a>&gt;;</pre>
@@ -107,7 +107,7 @@ The certificate request itself and any additional information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequest-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8007" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8003" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateSigningRequestStatus'>CertificateSigningRequestStatus</a>&gt;;</pre>
@@ -119,11 +119,11 @@ Derived information about the request.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateSigningRequestCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8018" >}}">interface <b>CertificateSigningRequestCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8012" >}}">interface <b>CertificateSigningRequestCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="CertificateSigningRequestCondition-lastUpdateTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8027" >}}">property <b>lastUpdateTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8021" >}}">property <b>lastUpdateTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -134,7 +134,7 @@ timestamp for the last update to this condition
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8032" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8026" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -145,7 +145,7 @@ human readable message with details about the request state
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8037" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8031" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -156,7 +156,7 @@ brief reason for the request state
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8022" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8016" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -168,11 +168,11 @@ request approval state, currently Approved or Denied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateSigningRequestList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8045" >}}">interface <b>CertificateSigningRequestList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8037" >}}">interface <b>CertificateSigningRequestList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="CertificateSigningRequestList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8055" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8047" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"certificates.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -186,7 +186,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8047" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8039" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateSigningRequest'>CertificateSigningRequest</a>&gt;[]&gt;;</pre>
@@ -194,7 +194,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8063" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8055" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"CertificateSigningRequestList"</span>&gt;;</pre>
@@ -208,7 +208,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8066" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8058" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -217,7 +217,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateSigningRequestSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8079" >}}">interface <b>CertificateSigningRequestSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8071" >}}">interface <b>CertificateSigningRequestSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -228,7 +228,7 @@ by users.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateSigningRequestSpec-extra">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8088" >}}">property <b>extra</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8080" >}}">property <b>extra</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>extra?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>&gt;;</pre>
@@ -239,7 +239,7 @@ Extra information about the requesting user. See user.Info interface for details
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestSpec-groups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8093" >}}">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8085" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -250,7 +250,7 @@ Group information about the requesting user. See user.Info interface for details
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestSpec-request">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8083" >}}">property <b>request</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8075" >}}">property <b>request</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -261,7 +261,7 @@ Base64-encoded PKCS#10 CSR data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestSpec-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8098" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8090" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -272,7 +272,7 @@ UID information about the requesting user. See user.Info interface for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestSpec-usages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8105" >}}">property <b>usages</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8097" >}}">property <b>usages</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>usages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -285,7 +285,7 @@ https://tools.ietf.org/html/rfc5280#section-4.2.1.3
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestSpec-username">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8110" >}}">property <b>username</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8102" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -297,11 +297,11 @@ Information about the requesting user. See user.Info interface for details.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateSigningRequestStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8118" >}}">interface <b>CertificateSigningRequestStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8108" >}}">interface <b>CertificateSigningRequestStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="CertificateSigningRequestStatus-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8122" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8112" >}}">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -312,7 +312,7 @@ If request was approved, the controller will place the issued certificate here.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateSigningRequestStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8127" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L8117" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateSigningRequestCondition'>CertificateSigningRequestCondition</a>&gt;[]&gt;;</pre>

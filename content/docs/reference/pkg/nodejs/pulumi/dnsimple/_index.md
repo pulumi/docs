@@ -41,7 +41,6 @@ import * as dnsimple from "@pulumi/dnsimple";
 <li><a href="#ProviderArgs">interface ProviderArgs</a></li>
 <li><a href="#RecordArgs">interface RecordArgs</a></li>
 <li><a href="#RecordState">interface RecordState</a></li>
-<li><a href="#RecordTypes">module RecordTypes</a></li>
 <li><a href="#RecordType">type RecordType</a></li>
 </ul>
 
@@ -59,6 +58,7 @@ import * as dnsimple from "@pulumi/dnsimple";
 <div class="pdoc-module-contents">
 <ul>
 <li><a href="config">config</a></li>
+<li><a href="RecordTypes">index/RecordTypes</a></li>
 </ul>
 </div>
 </div>
@@ -577,139 +577,6 @@ The type of the record
 
 The value of the record
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="RecordTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L1" >}}">module <b>RecordTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="A">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L2" >}}">const <b>A</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="AAAA">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L3" >}}">const <b>AAAA</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ALIAS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L4" >}}">const <b>ALIAS</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> ALIAS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;ALIAS&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CAA">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L5" >}}">const <b>CAA</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CNAME">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L6" >}}">const <b>CNAME</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="HINFO">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L7" >}}">const <b>HINFO</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> HINFO: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;HINFO&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="MX">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L8" >}}">const <b>MX</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NAPTR">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L9" >}}">const <b>NAPTR</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NAPTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NAPTR&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L10" >}}">const <b>NS</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="POOL">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L11" >}}">const <b>POOL</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> POOL: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;POOL&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="PTR">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L12" >}}">const <b>PTR</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> PTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;PTR&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SPF">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L13" >}}">const <b>SPF</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SPF: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SPF&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SRV">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L14" >}}">const <b>SRV</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SSHFP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L15" >}}">const <b>SSHFP</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SSHFP: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SSHFP&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TXT">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L16" >}}">const <b>TXT</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="URL">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L17" >}}">const <b>URL</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> URL: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;URL&#34;</span>;</pre>
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

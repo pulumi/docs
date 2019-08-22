@@ -265,9 +265,9 @@ Retrieve information about a Service Quotas Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.servicequotas.getService({
+const example = aws.servicequotas.getService({
     serviceName: "Amazon Virtual Private Cloud (Amazon VPC)",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown.
@@ -291,14 +291,14 @@ Retrieve information about a Service Quota.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byQuotaCode = pulumi.output(aws.servicequotas.getServiceQuota({
+const byQuotaCode = aws.servicequotas.getServiceQuota({
     quotaCode: "L-F678F1CE",
     serviceCode: "vpc",
-}));
-const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
+});
+const byQuotaName = aws.servicequotas.getServiceQuota({
     quotaName: "VPCs per Region",
     serviceCode: "vpc",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown.

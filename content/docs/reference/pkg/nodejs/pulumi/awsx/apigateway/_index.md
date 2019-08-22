@@ -538,7 +538,6 @@ let endpoint = new awsx.apigateway.API("example", {
 <li><a href="#IntegrationRouteTargetProvider">interface IntegrationRouteTargetProvider</a></li>
 <li><a href="#IntegrationTarget">interface IntegrationTarget</a></li>
 <li><a href="#StaticRoute">interface StaticRoute</a></li>
-<li><a href="#metrics">module metrics</a></li>
 <li><a href="#RawDataRoute">type RawDataRoute</a></li>
 <li><a href="#Request">type Request</a></li>
 <li><a href="#RequestContext">type RequestContext</a></li>
@@ -546,11 +545,24 @@ let endpoint = new awsx.apigateway.API("example", {
 <li><a href="#Route">type Route</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="apigateway/api.ts" >}}">apigateway/api.ts</a> <a href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts" >}}">apigateway/metrics.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="apigateway/api.ts" >}}">apigateway/api.ts</a> 
 </div>
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="metrics">apigateway/metrics</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="API">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L331" >}}">class <b>API</b></a>
@@ -1273,186 +1285,6 @@ defined at the API level.
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
 gateway will validate these before sending traffic to the event handler.
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L21" >}}">module <b>metrics</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="cacheHitCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L162" >}}">function <b>cacheHitCount</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>cacheHitCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of requests served from the API cache in a given period.
-
-The Sum statistic represents this metric, namely, the total count of the cache hits in the
-specified period. The Average statistic represents the cache hit rate, namely, the total count of
-the cache hits divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="cacheMissCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L176" >}}">function <b>cacheMissCount</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>cacheMissCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of requests served from the back end in a given period, when API caching is enabled.
-
-The Sum statistic represents this metric, namely, the total count of the cache misses in the
-specified period. The Average statistic represents the cache miss rate, namely, the total count
-of the cache hits divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-Unit: Count
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="count">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L187" >}}">function <b>count</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>count(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The total number API requests in a given period.
-
-The SampleCount statistic represents this metric.
-
-Unit: Count
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="error4XX">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L136" >}}">function <b>error4XX</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>error4XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of client-side errors captured in a specified period.
-
-The Sum statistic represents this metric, namely, the total count of the 4XXError errors in the
-given period. The Average statistic represents the 4XXError error rate, namely, the total count
-of the 4XXError errors divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-Unit: Count
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="error5XX">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L150" >}}">function <b>error5XX</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>error5XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of server-side errors captured in a given period.
-
-The Sum statistic represents this metric, namely, the total count of the 5XXError errors in the
-given period. The Average statistic represents the 5XXError error rate, namely, the total count
-of the 5XXError errors divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-Unit: Count
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="integrationLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L197" >}}">function <b>integrationLatency</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>integrationLatency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The time between when API Gateway relays a request to the back end and when it receives a
-response from the back end.
-
-Unit: Milliseconds
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="latency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L207" >}}">function <b>latency</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>latency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The time between when API Gateway receives a request from a client and when it returns a response
-to the client. The latency includes the integration latency and other API Gateway overhead.
-
-Unit: Milliseconds
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L97" >}}">function <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#ApigatewayMetricName'>ApigatewayMetricName</a>, change: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-Creates an AWS/ApiGateway metric with the requested [metricName]. See
-https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html
-for list of all metric-names.
-
-Note, individual metrics can easily be obtained without supplying the name using the other
-[metricXXX] functions.
-
-You can use the dimensions in the following table to filter API Gateway metrics.
-
-1. "ApiName": Filters API Gateway metrics for an API of the specified API name.
-2. "ApiName, Method, Resource, Stage": Filters API Gateway metrics for an API method of the
-   specified API, stage, resource, and method.
-
-   API Gateway will not send such metrics unless you have explicitly enabled detailed CloudWatch
-   metrics. You can do this in the console by selecting Enable CloudWatch Metrics under a stage
-   Settings tab. Alternatively, you can call the stage:update action of the API Gateway REST API
-   to update the metricsEnabled property to true.
-
-   Enabling such metrics will incur additional charges to your account. For pricing information,
-   see Amazon CloudWatch Pricing.
-3. "ApiName, Stage": Filters API Gateway metrics for an API stage of the specified API and stage.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L26" >}}">interface <b>ApigatewayMetricChange</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/metrics.ts#L22" >}}">type <b>ApigatewayMetricName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>type</span> ApigatewayMetricName = <span class='s2'>"4XXError"</span> | <span class='s2'>"5XXError"</span> | <span class='s2'>"CacheHitCount"</span> | <span class='s2'>"CacheMissCount"</span> | <span class='s2'>"Count"</span> | <span class='s2'>"IntegrationLatency"</span> | <span class='s2'>"Latency"</span>;</pre>
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

@@ -787,9 +787,9 @@ Use this data source to get firewall policy information of an available OpenStac
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const policy = pulumi.output(openstack.firewall.getPolicy({
+const policy = openstack.firewall.getPolicy({
     name: "tfTestPolicy",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown.

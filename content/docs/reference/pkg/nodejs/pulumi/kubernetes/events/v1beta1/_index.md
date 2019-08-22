@@ -42,7 +42,7 @@ change in the system.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Event(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/events/v1beta1/#Event'>inputs.events.v1beta1.Event</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Event(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.events.v1beta1.Event, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a events.v1beta1.Event resource with the given unique name, arguments, and options.
@@ -156,7 +156,7 @@ Deprecated field assuring backward compatibility with core.v1 Event type
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/Event.ts#L45" >}}">property <b>deprecatedSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>deprecatedSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/core/v1/#EventSource'>outputs.core.v1.EventSource</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>deprecatedSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EventSource&gt;;</pre>
 {{% md %}}
 
 Deprecated field assuring backward compatibility with core.v1 Event type
@@ -204,7 +204,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/Event.ts#L61" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -235,7 +235,7 @@ Why the action was taken.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/Event.ts#L79" >}}">property <b>regarding</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>regarding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/core/v1/#ObjectReference'>outputs.core.v1.ObjectReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>regarding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
 {{% md %}}
 
 The object this Event is about. In most cases it's an Object reporting controller
@@ -248,7 +248,7 @@ because it acts on some changes in a ReplicaSet object.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/Event.ts#L85" >}}">property <b>related</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>related: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/core/v1/#ObjectReference'>outputs.core.v1.ObjectReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>related: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
 {{% md %}}
 
 Optional secondary object for more complex actions. E.g. when regarding object triggers a
@@ -282,7 +282,7 @@ ID of the controller instance, e.g. `kubelet-xyzf`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/Event.ts#L100" >}}">property <b>series</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>series: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/events/v1beta1/#EventSeries'>outputs.events.v1beta1.EventSeries</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>series: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.events.v1beta1.EventSeries&gt;;</pre>
 {{% md %}}
 
 Data about the Event series this event represents or nil if it's a singleton Event.
@@ -329,7 +329,7 @@ EventList is a list of Event objects.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/events/v1beta1/#EventList'>inputs.events.v1beta1.EventList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.events.v1beta1.EventList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a events.v1beta1.EventList resource with the given unique name, arguments, and options.
@@ -411,7 +411,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/EventList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/events/v1beta1/#Event'>outputs.events.v1beta1.Event</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.events.v1beta1.Event[]&gt;;</pre>
 {{% md %}}
 
 Items is a list of schema objects.
@@ -436,7 +436,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="events/v1beta1/EventList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

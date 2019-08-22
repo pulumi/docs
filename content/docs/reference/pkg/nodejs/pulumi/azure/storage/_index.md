@@ -79,6 +79,21 @@ title: Module storage
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="container">storage/container</a></li>
+<li><a href="queue">storage/queue</a></li>
+<li><a href="table">storage/table</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Account">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L77" >}}">class <b>Account</b></a>
@@ -1300,21 +1315,6 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Container-getEventFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L217" >}}">method <b>getEventFunction</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BlobCallback'>BlobCallback</a> | <a href='#GetBlobFunctionArgs'>GetBlobFunctionArgs</a>): <a href='#BlobFunction'>BlobFunction</a></pre>
-
-
-Creates a new Function triggered by events in the given Container using the callback provided.
-[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
-a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Container-getProvider">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
@@ -1322,19 +1322,6 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 {{% md %}}
 
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Container-input">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L222" >}}">method <b>input</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>input(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BlobInputBindingArgs'>BlobInputBindingArgs</a>): appservice.InputBindingSettings</pre>
-
-
-Creates an input binding linked to the given Blob Container to be used for an Azure Function.
 
 {{% /md %}}
 </div>
@@ -1349,22 +1336,6 @@ Creates an input binding linked to the given Blob Container to be used for an Az
 
 Returns true if the given object is an instance of Container.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Container-onBlobEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L208" >}}">method <b>onBlobEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onBlobEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BlobCallback'>BlobCallback</a> | <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BlobEventSubscription'>BlobEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Container to the handler provided, along
-with options to control the behavior of the subscription.
-A dedicated Function App is created behind the scenes with a single Azure Function in it.
-Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
 
 {{% /md %}}
 </div>
@@ -1517,21 +1488,6 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Queue-getEventFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L491" >}}">method <b>getEventFunction</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></pre>
-
-
-Creates a new Function triggered by messages in the given queue using the callback provided.
-[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
-a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Queue-getProvider">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
@@ -1553,35 +1509,6 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Queue-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L482" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></pre>
-
-
-Creates a new subscription to the given queue using the callback provided, along with
-optional options to control the behavior of the subscription.
-A dedicated Function App is created behind the scenes with a single Azure Function in it.
-Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Queue-output">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L496" >}}">method <b>output</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>output(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): appservice.OutputBindingSettings</pre>
-
-
-Creates an output binding linked to the given queue to be used for an Azure Function.
 
 {{% /md %}}
 </div>
@@ -2068,19 +1995,6 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Table-input">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L713" >}}">method <b>input</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>input(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#TableInputBindingArgs'>TableInputBindingArgs</a>): appservice.InputBindingSettings</pre>
-
-
-Creates an input binding linked to the given table to be used for an Azure Function.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Table-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
@@ -2092,19 +2006,6 @@ Creates an input binding linked to the given table to be used for an Azure Funct
 
 Returns true if the given object is an instance of Table.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Table-output">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zMixins.ts#L718" >}}">method <b>output</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>output(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): appservice.OutputBindingSettings</pre>
-
-
-Creates an output binding linked to the given table to be used for an Azure Function.
 
 {{% /md %}}
 </div>
@@ -2438,10 +2339,10 @@ Use this data source to access information about an existing Storage Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.storage.getAccount({
+const test = azure.storage.getAccount({
     name: "packerimages",
     resourceGroupName: "packer-storage",
-}));
+});
 
 export const storageAccountTier = test.accountTier;
 ```

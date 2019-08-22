@@ -86,8 +86,6 @@ title: Module rds
 <li><a href="#ParallelQueryEngine">let ParallelQueryEngine</a></li>
 <li><a href="#ProvisionedEngine">let ProvisionedEngine</a></li>
 <li><a href="#ServerlessEngine">let ServerlessEngine</a></li>
-<li><a href="#InstanceTypes">module InstanceTypes</a></li>
-<li><a href="#StorageTypes">module StorageTypes</a></li>
 <li><a href="#EngineMode">type EngineMode</a></li>
 <li><a href="#EngineType">type EngineType</a></li>
 <li><a href="#InstanceType">type InstanceType</a></li>
@@ -99,6 +97,20 @@ title: Module rds
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="InstanceTypes">rds/InstanceTypes</a></li>
+<li><a href="StorageTypes">rds/StorageTypes</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Cluster">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="rds/cluster.ts#L101" >}}">class <b>Cluster</b></a>
@@ -4379,9 +4391,9 @@ Provides information about a RDS cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const clusterName = pulumi.output(aws.rds.getCluster({
+const clusterName = aws.rds.getCluster({
     clusterIdentifier: "clusterName",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown.
@@ -4408,10 +4420,10 @@ See the [`aws.rds.Snapshot` data source](https://www.terraform.io/docs/providers
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const developmentFinalSnapshot = pulumi.output(aws.rds.getClusterSnapshot({
+const developmentFinalSnapshot = aws.rds.getClusterSnapshot({
     dbClusterIdentifier: "developmentCluster",
     mostRecent: true,
-}));
+});
 // Use the last snapshot of the dev database before it was destroyed to create
 // a new dev database.
 const auroraCluster = new aws.rds.Cluster("aurora", {
@@ -4447,7 +4459,7 @@ List the event categories of all the RDS resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({}));
+const exampleEventCategories = aws.rds.getEventCategories({});
 
 export const example = exampleEventCategories.eventCategories;
 ```
@@ -4458,9 +4470,9 @@ List the event categories specific to the RDS resource `db-snapshot`.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({
+const exampleEventCategories = aws.rds.getEventCategories({
     sourceType: "db-snapshot",
-}));
+});
 
 export const example = exampleEventCategories.eventCategories;
 ```
@@ -4486,9 +4498,9 @@ Use this data source to get information about an RDS instance
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const database = pulumi.output(aws.rds.getInstance({
+const database = aws.rds.getInstance({
     dbInstanceIdentifier: "my-test-database",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown.
@@ -10716,464 +10728,6 @@ A mapping of tags to assign to the resource.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> ServerlessEngine: <a href='#EngineMode'>EngineMode</a> = <span class='s2'>&#34;serverless&#34;</span>;</pre>
-</div>
-<h2 class="pdoc-module-header" id="InstanceTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L23" >}}">module <b>InstanceTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="M1_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L32" >}}">const <b>M1_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M1_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M1_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L31" >}}">const <b>M1_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M1_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M1_Small">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L30" >}}">const <b>M1_Small</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M1_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.small&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M1_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L33" >}}">const <b>M1_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M1_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M2_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L35" >}}">const <b>M2_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m2.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M2_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L36" >}}">const <b>M2_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M2_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m2.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M2_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L34" >}}">const <b>M2_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m2.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L40" >}}">const <b>M3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L38" >}}">const <b>M3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L37" >}}">const <b>M3_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L39" >}}">const <b>M3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_10XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L45" >}}">const <b>M4_10XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_10XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.10xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L46" >}}">const <b>M4_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.10xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L43" >}}">const <b>M4_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L44" >}}">const <b>M4_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L41" >}}">const <b>M4_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L42" >}}">const <b>M4_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L51" >}}">const <b>M5_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L52" >}}">const <b>M5_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L49" >}}">const <b>M5_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L50" >}}">const <b>M5_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L47" >}}">const <b>M5_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L48" >}}">const <b>M5_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L55" >}}">const <b>R3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L56" >}}">const <b>R3_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L57" >}}">const <b>R3_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L53" >}}">const <b>R3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L54" >}}">const <b>R3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L63" >}}">const <b>R4_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L60" >}}">const <b>R4_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L61" >}}">const <b>R4_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L62" >}}">const <b>R4_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L58" >}}">const <b>R4_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L59" >}}">const <b>R4_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L68" >}}">const <b>R5_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L69" >}}">const <b>R5_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L66" >}}">const <b>R5_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L67" >}}">const <b>R5_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L64" >}}">const <b>R5_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L65" >}}">const <b>R5_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L29" >}}">const <b>T2_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L27" >}}">const <b>T2_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L26" >}}">const <b>T2_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Micro">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L24" >}}">const <b>T2_Micro</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Micro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.micro&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Small">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L25" >}}">const <b>T2_Small</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.small&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L28" >}}">const <b>T2_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1E_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L73" >}}">const <b>X1E_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1E_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1E_32XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L76" >}}">const <b>X1E_32XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1E_32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.32xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1E_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L74" >}}">const <b>X1E_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1E_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1E_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L75" >}}">const <b>X1E_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1E_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1E_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L72" >}}">const <b>X1E_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1E_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L70" >}}">const <b>X1_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1_32XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/instanceType.ts#L71" >}}">const <b>X1_32XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1_32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1.32xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="StorageTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="rds/storageType.ts#L23" >}}">module <b>StorageTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="GP2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/storageType.ts#L25" >}}">const <b>GP2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> GP2: <a href='#StorageType'>StorageType</a> = <span class='s2'>&#34;gp2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Io1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/storageType.ts#L26" >}}">const <b>Io1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Io1: <a href='#StorageType'>StorageType</a> = <span class='s2'>&#34;io1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Standard">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="rds/storageType.ts#L24" >}}">const <b>Standard</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Standard: <a href='#StorageType'>StorageType</a> = <span class='s2'>&#34;standard&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
 </div>
 <h2 class="pdoc-module-header" id="EngineMode">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="rds/engineMode.ts#L20" >}}">type <b>EngineMode</b></a>

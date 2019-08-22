@@ -302,14 +302,26 @@ const service = new awsx.ecs.EC2Service("custom", {
 <li><a href="#ServiceLoadBalancer">interface ServiceLoadBalancer</a></li>
 <li><a href="#ServiceLoadBalancerProvider">interface ServiceLoadBalancerProvider</a></li>
 <li><a href="#TaskDefinitionArgs">interface TaskDefinitionArgs</a></li>
-<li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="ecs/cluster.ts" >}}">ecs/cluster.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/container.ts" >}}">ecs/container.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/ec2Service.ts" >}}">ecs/ec2Service.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/fargateService.ts" >}}">ecs/fargateService.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/image.ts" >}}">ecs/image.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts" >}}">ecs/metrics.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/service.ts" >}}">ecs/service.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/taskDefinition.ts" >}}">ecs/taskDefinition.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="ecs/cluster.ts" >}}">ecs/cluster.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/container.ts" >}}">ecs/container.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/ec2Service.ts" >}}">ecs/ec2Service.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/fargateService.ts" >}}">ecs/fargateService.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/image.ts" >}}">ecs/image.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/service.ts" >}}">ecs/service.ts</a> <a href="{{< pkg-url pkg="awsx" path="ecs/taskDefinition.ts" >}}">ecs/taskDefinition.ts</a> 
 </div>
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="metrics">ecs/metrics</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Cluster">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ecs/cluster.ts#L26" >}}">class <b>Cluster</b></a>
@@ -3688,193 +3700,6 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 
 A set of volume blocks that containers in your task may use.
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L23" >}}">module <b>metrics</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="cpuReservation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L111" >}}">function <b>cpuReservation</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>cpuReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of CPU units that are reserved by running tasks in the cluster.
-
-Cluster CPU reservation (this metric can only be filtered by ClusterName) is measured as the
-total CPU units that are reserved by Amazon ECS tasks on the cluster, divided by the total
-CPU units that were registered for all of the container instances in the cluster. This metric
-is only used for tasks using the EC2 launch type.
-
-Valid dimensions: ClusterName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="cpuUtilization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L136" >}}">function <b>cpuUtilization</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of CPU units that are used in the cluster or service.
-
-Cluster CPU utilization (metrics that are filtered by ClusterName without ServiceName) is
-measured as the total CPU units in use by Amazon ECS tasks on the cluster, divided by the
-total CPU units that were registered for all of the container instances in the cluster.
-Cluster CPU utilization metrics are only used for tasks using the EC2 launch type.
-
-Service CPU utilization (metrics that are filtered by ClusterName and ServiceName) is
-measured as the total CPU units in use by the tasks that belong to the service, divided by
-the total number of CPU units that are reserved for the tasks that belong to the service.
-Service CPU utilization metrics are used for tasks using both the Fargate and the EC2 launch
-type.
-
-Valid dimensions: ClusterName, ServiceName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="gpuReservation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L197" >}}">function <b>gpuReservation</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>gpuReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of total available GPUs that are reserved by running tasks in the cluster.
-
-Cluster GPU reservation is measured as the number of GPUs reserved by Amazon ECS tasks on the
-cluster, divided by the total number of GPUs that was available on all of the GPU-enabled
-container instances in the cluster.
-
-Valid dimensions: ClusterName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="memoryReservation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L155" >}}">function <b>memoryReservation</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>memoryReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of memory that is reserved by running tasks in the cluster.
-
-Cluster memory reservation (this metric can only be filtered by ClusterName) is measured as
-the total memory that is reserved by Amazon ECS tasks on the cluster, divided by the total
-amount of memory that was registered for all of the container instances in the cluster. This
-metric is only used for tasks using the EC2 launch type.
-
-Valid dimensions: ClusterName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="memoryUtilization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L179" >}}">function <b>memoryUtilization</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>memoryUtilization(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of memory that is used in the cluster or service.
-
-Cluster memory utilization (metrics that are filtered by ClusterName without ServiceName) is
-measured as the total memory in use by Amazon ECS tasks on the cluster, divided by the total
-amount of memory that was registered for all of the container instances in the cluster.
-Cluster memory utilization metrics are only used for tasks using the EC2 launch type.
-
-Service memory utilization (metrics that are filtered by ClusterName and ServiceName) is
-measured as the total memory in use by the tasks that belong to the service, divided by the
-total memory that is reserved for the tasks that belong to the service. Service memory
-utilization metrics are used for tasks using both the Fargate and EC2 launch types.
-
-Valid dimensions: ClusterName, ServiceName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L64" >}}">function <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#EcsMetricName'>EcsMetricName</a>, change: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-Creates an AWS/ECS metric with the requested [metricName]. See
-https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html for list of
-all metric-names.
-
-Note, individual metrics can easily be obtained without supplying the name using the other
-[metricXXX] functions.
-
-You can monitor your Amazon ECS resources using Amazon CloudWatch, which collects and processes
-raw data from Amazon ECS into readable, near real-time metrics. These statistics are recorded for
-a period of two weeks so that you can access historical information and gain a better perspective
-on how your clusters or services are performing. Amazon ECS metric data is automatically sent to
-CloudWatch in 1-minute periods. For more information about CloudWatch, see the
-[Amazon-CloudWatch-User-Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/).
-
-Amazon ECS metrics use the AWS/ECS namespace and provide metrics for the following dimensions.
-
-1. "ClusterName": This dimension filters the data that you request for all resources in a
-   specified cluster. All Amazon ECS metrics are filtered by ClusterName.
-2. "ServiceName": This dimension filters the data that you request for all resources in a
-   specified service within a specified cluster.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L27" >}}">interface <b>EcsMetricChange</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecs/metrics.ts#L24" >}}">type <b>EcsMetricName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>type</span> EcsMetricName = <span class='s2'>"CPUReservation"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"MemoryReservation"</span> | <span class='s2'>"MemoryUtilization"</span> | <span class='s2'>"GPUReservation"</span>;</pre>
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

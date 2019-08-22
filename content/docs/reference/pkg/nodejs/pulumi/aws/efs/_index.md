@@ -488,9 +488,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const fileSystemId = config.get("fileSystemId") || "";
 
-const byId = pulumi.output(aws.efs.getFileSystem({
+const byId = aws.efs.getFileSystem({
     fileSystemId: fileSystemId,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown.
@@ -517,9 +517,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const mountTargetId = config.get("mountTargetId") || "";
 
-const byId = pulumi.output(aws.efs.getMountTarget({
+const byId = aws.efs.getMountTarget({
     mountTargetId: mountTargetId,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown.

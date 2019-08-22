@@ -25,7 +25,7 @@ title: Module types/output/pkg/version
 
 
 <h2 class="pdoc-module-header" id="Info">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17661" >}}">interface <b>Info</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17649" >}}">interface <b>Info</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -34,7 +34,7 @@ Info contains versioning information. how we'll want to distribute that informat
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Info-buildDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17663" >}}">property <b>buildDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17651" >}}">property <b>buildDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>buildDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -42,7 +42,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-compiler">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17666" >}}">property <b>compiler</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17654" >}}">property <b>compiler</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>compiler: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -50,7 +50,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-gitCommit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17669" >}}">property <b>gitCommit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17657" >}}">property <b>gitCommit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gitCommit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -58,7 +58,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-gitTreeState">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17672" >}}">property <b>gitTreeState</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17660" >}}">property <b>gitTreeState</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gitTreeState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -66,7 +66,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-gitVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17675" >}}">property <b>gitVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17663" >}}">property <b>gitVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gitVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -74,7 +74,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-goVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17678" >}}">property <b>goVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17666" >}}">property <b>goVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>goVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -82,7 +82,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-major">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17681" >}}">property <b>major</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17669" >}}">property <b>major</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>major: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -90,7 +90,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-minor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17684" >}}">property <b>minor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17672" >}}">property <b>minor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -98,7 +98,7 @@ Info contains versioning information. how we'll want to distribute that informat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Info-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17687" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17675" >}}">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>platform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

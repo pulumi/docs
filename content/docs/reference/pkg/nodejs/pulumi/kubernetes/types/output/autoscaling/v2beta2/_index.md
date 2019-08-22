@@ -43,7 +43,7 @@ title: Module types/output/autoscaling/v2beta2
 
 
 <h2 class="pdoc-module-header" id="CrossVersionObjectReference">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6502" >}}">interface <b>CrossVersionObjectReference</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6498" >}}">interface <b>CrossVersionObjectReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -53,7 +53,7 @@ resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CrossVersionObjectReference-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6506" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6502" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -64,7 +64,7 @@ API version of the referent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrossVersionObjectReference-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6512" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6508" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -76,7 +76,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrossVersionObjectReference-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6517" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6513" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -88,7 +88,7 @@ Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifier
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExternalMetricSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6526" >}}">interface <b>ExternalMetricSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6522" >}}">interface <b>ExternalMetricSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -99,7 +99,7 @@ running outside of cluster).
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ExternalMetricSource-metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6530" >}}">property <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6526" >}}">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
@@ -110,7 +110,7 @@ metric identifies the target metric by name and selector
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ExternalMetricSource-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6535" >}}">property <b>target</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6531" >}}">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
@@ -122,7 +122,7 @@ target specifies the target value for the given metric
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExternalMetricStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6543" >}}">interface <b>ExternalMetricStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6539" >}}">interface <b>ExternalMetricStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -132,7 +132,7 @@ Kubernetes object.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ExternalMetricStatus-current">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6547" >}}">property <b>current</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6543" >}}">property <b>current</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
@@ -143,7 +143,7 @@ current contains the current value for the given metric
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ExternalMetricStatus-metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6552" >}}">property <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6548" >}}">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
@@ -155,7 +155,7 @@ metric identifies the target metric by name and selector
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscaler">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6561" >}}">interface <b>HorizontalPodAutoscaler</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6557" >}}">interface <b>HorizontalPodAutoscaler</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -166,7 +166,7 @@ based on the metrics specified.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6568" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6564" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"autoscaling/v2beta2"</span>;</pre>
@@ -180,7 +180,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6576" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6572" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"HorizontalPodAutoscaler"</span>;</pre>
@@ -194,7 +194,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6582" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6578" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -206,7 +206,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6588" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6584" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#HorizontalPodAutoscalerSpec'>HorizontalPodAutoscalerSpec</a>;</pre>
@@ -218,7 +218,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6593" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6589" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#HorizontalPodAutoscalerStatus'>HorizontalPodAutoscalerStatus</a>;</pre>
@@ -230,7 +230,7 @@ status is the current information about the autoscaler.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6601" >}}">interface <b>HorizontalPodAutoscalerCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6597" >}}">interface <b>HorizontalPodAutoscalerCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -240,7 +240,7 @@ certain point.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6605" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6601" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -251,7 +251,7 @@ lastTransitionTime is the last time the condition transitioned from one status t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6610" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6606" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -262,7 +262,7 @@ message is a human-readable explanation containing details about the transition
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6615" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6611" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -273,7 +273,7 @@ reason is the reason for the condition's last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6620" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6616" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -284,7 +284,7 @@ status is the status of the condition (True, False, Unknown)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6625" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6621" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -296,7 +296,7 @@ type describes the current condition
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6632" >}}">interface <b>HorizontalPodAutoscalerList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6628" >}}">interface <b>HorizontalPodAutoscalerList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -305,7 +305,7 @@ HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6639" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6635" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"autoscaling/v2beta2"</span>;</pre>
@@ -319,7 +319,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6644" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6640" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a>[];</pre>
@@ -330,7 +330,7 @@ items is the list of horizontal pod autoscaler objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6652" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6648" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"HorizontalPodAutoscalerList"</span>;</pre>
@@ -344,7 +344,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6657" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6653" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -356,7 +356,7 @@ metadata is the standard list metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6665" >}}">interface <b>HorizontalPodAutoscalerSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6661" >}}">interface <b>HorizontalPodAutoscalerSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -366,7 +366,7 @@ HorizontalPodAutoscaler.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-maxReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6670" >}}">property <b>maxReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6666" >}}">property <b>maxReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -378,7 +378,7 @@ up. It cannot be less that minReplicas.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-metrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6681" >}}">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6677" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metrics: <a href='#MetricSpec'>MetricSpec</a>[];</pre>
@@ -395,7 +395,7 @@ utilization.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-minReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6687" >}}">property <b>minReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6683" >}}">property <b>minReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -407,7 +407,7 @@ down. It defaults to 1 pod.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-scaleTargetRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6693" >}}">property <b>scaleTargetRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6689" >}}">property <b>scaleTargetRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scaleTargetRef: <a href='#CrossVersionObjectReference'>CrossVersionObjectReference</a>;</pre>
@@ -420,7 +420,7 @@ metrics should be collected, as well as to actually change the replica count.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6700" >}}">interface <b>HorizontalPodAutoscalerStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6696" >}}">interface <b>HorizontalPodAutoscalerStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -429,7 +429,7 @@ HorizontalPodAutoscalerStatus describes the current status of a horizontal pod a
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6705" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6701" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions: <a href='#HorizontalPodAutoscalerCondition'>HorizontalPodAutoscalerCondition</a>[];</pre>
@@ -441,7 +441,7 @@ indicates whether or not those conditions are met.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-currentMetrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6710" >}}">property <b>currentMetrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6706" >}}">property <b>currentMetrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>currentMetrics: <a href='#MetricStatus'>MetricStatus</a>[];</pre>
@@ -452,7 +452,7 @@ currentMetrics is the last read state of the metrics used by this autoscaler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-currentReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6716" >}}">property <b>currentReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6712" >}}">property <b>currentReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>currentReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -464,7 +464,7 @@ seen by the autoscaler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-desiredReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6722" >}}">property <b>desiredReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6718" >}}">property <b>desiredReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>desiredReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -476,7 +476,7 @@ last calculated by the autoscaler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-lastScaleTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6728" >}}">property <b>lastScaleTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6724" >}}">property <b>lastScaleTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastScaleTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -488,7 +488,7 @@ by the autoscaler to control how often the number of pods is changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-observedGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6733" >}}">property <b>observedGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6729" >}}">property <b>observedGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>observedGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -500,7 +500,7 @@ observedGeneration is the most recent generation observed by this autoscaler.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricIdentifier">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6740" >}}">interface <b>MetricIdentifier</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6736" >}}">interface <b>MetricIdentifier</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -509,7 +509,7 @@ MetricIdentifier defines the name and optionally selector for a metric
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricIdentifier-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6744" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6740" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -520,7 +520,7 @@ name is the name of the given metric
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricIdentifier-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6751" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6747" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -534,7 +534,7 @@ specific metrics scoping. When unset, just the metricName will be used to gather
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6759" >}}">interface <b>MetricSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6755" >}}">interface <b>MetricSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -544,7 +544,7 @@ matching field should be set at once).
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricSpec-external">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6766" >}}">property <b>external</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6762" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>external: <a href='#ExternalMetricSource'>ExternalMetricSource</a>;</pre>
@@ -558,7 +558,7 @@ outside of cluster).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricSpec-object">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6772" >}}">property <b>object</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6768" >}}">property <b>object</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>object: <a href='#ObjectMetricSource'>ObjectMetricSource</a>;</pre>
@@ -570,7 +570,7 @@ hits-per-second on an Ingress object).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricSpec-pods">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6779" >}}">property <b>pods</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6775" >}}">property <b>pods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pods: <a href='#PodsMetricSource'>PodsMetricSource</a>;</pre>
@@ -583,7 +583,7 @@ compared to the target value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricSpec-resource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6787" >}}">property <b>resource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6783" >}}">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resource: <a href='#ResourceMetricSource'>ResourceMetricSource</a>;</pre>
@@ -597,7 +597,7 @@ available to normal per-pod metrics using the "pods" source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricSpec-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6793" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6789" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -610,7 +610,7 @@ each mapping to a matching field in the object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6800" >}}">interface <b>MetricStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6796" >}}">interface <b>MetricStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -619,7 +619,7 @@ MetricStatus describes the last-read state of a single metric.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricStatus-external">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6807" >}}">property <b>external</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6803" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>external: <a href='#ExternalMetricStatus'>ExternalMetricStatus</a>;</pre>
@@ -633,7 +633,7 @@ outside of cluster).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricStatus-object">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6813" >}}">property <b>object</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6809" >}}">property <b>object</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>object: <a href='#ObjectMetricStatus'>ObjectMetricStatus</a>;</pre>
@@ -645,7 +645,7 @@ hits-per-second on an Ingress object).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricStatus-pods">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6820" >}}">property <b>pods</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6816" >}}">property <b>pods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pods: <a href='#PodsMetricStatus'>PodsMetricStatus</a>;</pre>
@@ -658,7 +658,7 @@ compared to the target value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricStatus-resource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6828" >}}">property <b>resource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6824" >}}">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resource: <a href='#ResourceMetricStatus'>ResourceMetricStatus</a>;</pre>
@@ -672,7 +672,7 @@ available to normal per-pod metrics using the "pods" source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricStatus-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6834" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6830" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -685,7 +685,7 @@ corresponds to a matching field in the object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricTarget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6842" >}}">interface <b>MetricTarget</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6838" >}}">interface <b>MetricTarget</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -695,7 +695,7 @@ metric
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricTarget-averageUtilization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6848" >}}">property <b>averageUtilization</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6844" >}}">property <b>averageUtilization</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>averageUtilization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -708,7 +708,7 @@ pods. Currently only valid for Resource metric source type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricTarget-averageValue">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6854" >}}">property <b>averageValue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6850" >}}">property <b>averageValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>averageValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -720,7 +720,7 @@ a quantity)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricTarget-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6859" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6855" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -731,7 +731,7 @@ type represents whether the metric type is Utilization, Value, or AverageValue
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricTarget-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6864" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6860" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -743,7 +743,7 @@ value is the target value of the metric (as a quantity).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricValueStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6871" >}}">interface <b>MetricValueStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6867" >}}">interface <b>MetricValueStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -752,7 +752,7 @@ MetricValueStatus holds the current value for a metric
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricValueStatus-averageUtilization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6877" >}}">property <b>averageUtilization</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6873" >}}">property <b>averageUtilization</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>averageUtilization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -765,7 +765,7 @@ the pods.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricValueStatus-averageValue">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6883" >}}">property <b>averageValue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6879" >}}">property <b>averageValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>averageValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -777,7 +777,7 @@ a quantity)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricValueStatus-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6888" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6884" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -789,7 +789,7 @@ value is the current value of the metric (as a quantity).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ObjectMetricSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6896" >}}">interface <b>ObjectMetricSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6892" >}}">interface <b>ObjectMetricSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -799,7 +799,7 @@ example, hits-per-second on an Ingress object).
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ObjectMetricSource-describedObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6898" >}}">property <b>describedObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6894" >}}">property <b>describedObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>describedObject: <a href='#CrossVersionObjectReference'>CrossVersionObjectReference</a>;</pre>
@@ -807,7 +807,7 @@ example, hits-per-second on an Ingress object).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMetricSource-metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6903" >}}">property <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6899" >}}">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
@@ -818,7 +818,7 @@ metric identifies the target metric by name and selector
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMetricSource-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6908" >}}">property <b>target</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6904" >}}">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
@@ -830,7 +830,7 @@ target specifies the target value for the given metric
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ObjectMetricStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6916" >}}">interface <b>ObjectMetricStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6912" >}}">interface <b>ObjectMetricStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -840,7 +840,7 @@ ObjectMetricStatus indicates the current value of a metric describing a kubernet
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ObjectMetricStatus-current">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6920" >}}">property <b>current</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6916" >}}">property <b>current</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
@@ -851,7 +851,7 @@ current contains the current value for the given metric
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMetricStatus-describedObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6923" >}}">property <b>describedObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6919" >}}">property <b>describedObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>describedObject: <a href='#CrossVersionObjectReference'>CrossVersionObjectReference</a>;</pre>
@@ -859,7 +859,7 @@ current contains the current value for the given metric
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMetricStatus-metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6928" >}}">property <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6924" >}}">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
@@ -871,7 +871,7 @@ metric identifies the target metric by name and selector
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodsMetricSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6937" >}}">interface <b>PodsMetricSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6933" >}}">interface <b>PodsMetricSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -882,7 +882,7 @@ before being compared to the target value.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodsMetricSource-metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6941" >}}">property <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6937" >}}">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
@@ -893,7 +893,7 @@ metric identifies the target metric by name and selector
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodsMetricSource-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6946" >}}">property <b>target</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6942" >}}">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
@@ -905,7 +905,7 @@ target specifies the target value for the given metric
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodsMetricStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6954" >}}">interface <b>PodsMetricStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6950" >}}">interface <b>PodsMetricStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -915,7 +915,7 @@ scale target (for example, transactions-processed-per-second).
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodsMetricStatus-current">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6958" >}}">property <b>current</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6954" >}}">property <b>current</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
@@ -926,7 +926,7 @@ current contains the current value for the given metric
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodsMetricStatus-metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6963" >}}">property <b>metric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6959" >}}">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
@@ -938,7 +938,7 @@ metric identifies the target metric by name and selector
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceMetricSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6975" >}}">interface <b>ResourceMetricSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6971" >}}">interface <b>ResourceMetricSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -952,7 +952,7 @@ be set.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceMetricSource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6979" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6975" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -963,7 +963,7 @@ name is the name of the resource in question.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceMetricSource-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6984" >}}">property <b>target</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6980" >}}">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
@@ -975,7 +975,7 @@ target specifies the target value for the given metric
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceMetricStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6994" >}}">interface <b>ResourceMetricStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6990" >}}">interface <b>ResourceMetricStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -987,7 +987,7 @@ of those available to normal per-pod metrics using the "pods" source.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceMetricStatus-current">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6998" >}}">property <b>current</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6994" >}}">property <b>current</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
@@ -998,7 +998,7 @@ current contains the current value for the given metric
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceMetricStatus-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7003" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L6999" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

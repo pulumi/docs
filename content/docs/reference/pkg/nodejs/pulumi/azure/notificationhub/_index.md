@@ -679,11 +679,11 @@ Use this data source to access information about an existing Notification Hub wi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.notificationhub.getHub({
+const test = azure.notificationhub.getHub({
     name: "notification-hub",
     namespaceName: "namespace-name",
     resourceGroupName: "resource-group-name",
-}));
+});
 
 export const id = test.id;
 ```
@@ -709,10 +709,10 @@ Use this data source to access information about an existing Notification Hub Na
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.notificationhub.getNamespace({
+const test = azure.notificationhub.getNamespace({
     name: "my-namespace",
     resourceGroupName: "my-resource-group",
-}));
+});
 
 export const servicebusEndpoint = test.servicebusEndpoint;
 ```

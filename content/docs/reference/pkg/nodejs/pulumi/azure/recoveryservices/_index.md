@@ -684,11 +684,11 @@ Use this data source to access information about an existing Recovery Services V
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const policy = pulumi.output(azure.recoveryservices.getVMProtectionPolicy({
+const policy = azure.recoveryservices.getVMProtectionPolicy({
     name: "policy",
     recoveryVaultName: "recoveryVault",
     resourceGroupName: "resourceGroup",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_protection_policy_vm.html.markdown.
@@ -712,10 +712,10 @@ Use this data source to access information about an existing Recovery Services V
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const vault = pulumi.output(azure.recoveryservices.getVault({
+const vault = azure.recoveryservices.getVault({
     name: "tfex-recovery_vault",
     resourceGroupName: "tfex-resource_group",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.html.markdown.

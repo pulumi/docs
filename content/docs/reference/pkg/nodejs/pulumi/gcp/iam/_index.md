@@ -48,9 +48,9 @@ Use this data source to get information about a Google IAM Role.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const roleinfo = pulumi.output(gcp.iam.getRule({
+const roleinfo = gcp.iam.getRule({
     name: "roles/compute.viewer",
-}));
+});
 
 export const theRolePermissions = roleinfo.includedPermissions;
 ```

@@ -27,7 +27,7 @@ title: Module types/output/node/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="RuntimeClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17441" >}}">interface <b>RuntimeClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17429" >}}">interface <b>RuntimeClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -41,7 +41,7 @@ https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClass-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17448" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17436" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"node.k8s.io/v1alpha1"</span>;</pre>
@@ -55,7 +55,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17456" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17444" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"RuntimeClass"</span>;</pre>
@@ -69,7 +69,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17461" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17449" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -80,7 +80,7 @@ More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17467" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17455" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#RuntimeClassSpec'>RuntimeClassSpec</a>;</pre>
@@ -93,7 +93,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17474" >}}">interface <b>RuntimeClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17462" >}}">interface <b>RuntimeClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -102,7 +102,7 @@ RuntimeClassList is a list of RuntimeClass objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17481" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17469" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"node.k8s.io/v1alpha1"</span>;</pre>
@@ -116,7 +116,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17486" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17474" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#RuntimeClass'>RuntimeClass</a>[];</pre>
@@ -127,7 +127,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17494" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17482" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"RuntimeClassList"</span>;</pre>
@@ -141,7 +141,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17500" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17488" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -154,7 +154,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17510" >}}">interface <b>RuntimeClassSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17498" >}}">interface <b>RuntimeClassSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -166,7 +166,7 @@ run. The RuntimeClassSpec is immutable.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassSpec-runtimeHandler">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17520" >}}">property <b>runtimeHandler</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17508" >}}">property <b>runtimeHandler</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtimeHandler: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

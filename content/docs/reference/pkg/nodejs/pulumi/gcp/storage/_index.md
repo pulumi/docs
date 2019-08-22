@@ -83,6 +83,19 @@ title: Module storage
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="bucket">storage/bucket</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Bucket">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="storage/bucket.ts#L41" >}}">class <b>Bucket</b></a>
@@ -177,89 +190,6 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Bucket.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectArchived">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L112" >}}">method <b>onObjectArchived</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectArchived(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Creates and publishes a Cloud Functions that will be triggered when a live version of an
-object is archived or deleted.
-
-This event is only sent for versioning buckets.
-
-See https://cloud.google.com/storage/docs/object-versioning for more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectDeleted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L102" >}}">method <b>onObjectDeleted</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Creates and publishes a Cloud Functions that will be triggered when an object is
-permanently deleted. Depending on the object versioning setting for a bucket this means:
-
-1. For versioning buckets, this is only sent when a version is permanently deleted (but
-   not when an object is archived).
-
-2. For non-versioning buckets, this is sent when an object is deleted or overwritten.
-
-See https://cloud.google.com/storage/docs/object-versioning for more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L125" >}}">method <b>onObjectEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args: <a href='#BucketEventArgs'>BucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Generic helper for registering for any event.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectFinalized">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L89" >}}">method <b>onObjectFinalized</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectFinalized(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Creates and publishes a Cloud Functions that will be triggered when a new object is
-created (or an existing object is overwritten, and a new generation of that object is
-created) in this bucket.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Bucket-onObjectMetadataUpdated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L120" >}}">method <b>onObjectMetadataUpdated</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onObjectMetadataUpdated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Creates and publishes a Cloud Functions that will be triggered when the metadata of an
-existing object changes.
-
-See https://cloud.google.com/storage/docs/metadata for more details.
 
 {{% /md %}}
 </div>
@@ -722,12 +652,12 @@ If this happens only an entity with `roles/storage.admin` privileges can repair 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const fooPolicy = pulumi.output(gcp.organizations.getIAMPolicy({
+const fooPolicy = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["group:yourgroup@example.com"],
         role: "roles/your-role",
     }],
-}));
+});
 const member = new gcp.storage.BucketIAMPolicy("member", {
     bucket: "your-bucket-name",
     policyData: foo_policy.policyData,
@@ -913,12 +843,12 @@ If this happens only an entity with `roles/storage.admin` privileges can repair 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const fooPolicy = pulumi.output(gcp.organizations.getIAMPolicy({
+const fooPolicy = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["group:yourgroup@example.com"],
         role: "roles/your-role",
     }],
-}));
+});
 const member = new gcp.storage.BucketIAMPolicy("member", {
     bucket: "your-bucket-name",
     policyData: foo_policy.policyData,
@@ -1104,12 +1034,12 @@ If this happens only an entity with `roles/storage.admin` privileges can repair 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const fooPolicy = pulumi.output(gcp.organizations.getIAMPolicy({
+const fooPolicy = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["group:yourgroup@example.com"],
         role: "roles/your-role",
     }],
-}));
+});
 const member = new gcp.storage.BucketIAMPolicy("member", {
     bucket: "your-bucket-name",
     policyData: foo_policy.policyData,
@@ -1881,11 +1811,11 @@ for an example of enabling notifications by granting the correct IAM permission.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const gcsAccount = pulumi.output(gcp.storage.getProjectServiceAccount({}));
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
 const topic = new gcp.pubsub.Topic("topic", {});
 const bucket = new gcp.storage.Bucket("bucket", {});
 const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    members: [pulumi.interpolate`serviceAccount:${gcsAccount.emailAddress}`],
+    members: [`serviceAccount:${gcsAccount.emailAddress}`],
     role: "roles/pubsub.publisher",
     topic: topic.name,
 });
@@ -2466,16 +2396,16 @@ Example creating a nightly Transfer Job from an AWS S3 Bucket to a GCS bucket.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultTransferProjectServieAccount = pulumi.output(gcp.storage.getTransferProjectServieAccount({
+const defaultTransferProjectServieAccount = gcp.storage.getTransferProjectServieAccount({
     project: var_project,
-}));
+});
 const s3_backup_bucketBucket = new gcp.storage.Bucket("s3-backup-bucket", {
     project: var_project,
     storageClass: "NEARLINE",
 });
 const s3_backup_bucketBucketIAMMember = new gcp.storage.BucketIAMMember("s3-backup-bucket", {
     bucket: s3_backup_bucketBucket.name,
-    member: pulumi.interpolate`serviceAccount:${defaultTransferProjectServieAccount.email}`,
+    member: `serviceAccount:${defaultTransferProjectServieAccount.email}`,
     role: "roles/storage.admin",
 }, {dependsOn: [s3_backup_bucketBucket]});
 const s3BucketNightlyBackup = new gcp.storage.TransferJob("s3-bucket-nightly-backup", {
@@ -2771,10 +2701,10 @@ Example picture stored within a folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const picture = pulumi.output(gcp.storage.getBucketObject({
+const picture = gcp.storage.getBucketObject({
     bucket: "image-store",
     name: "folder/butterfly01.jpg",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_bucket_object.html.markdown.
@@ -2801,7 +2731,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as gcp from "@pulumi/gcp";
 
-const getUrl = pulumi.output(gcp.storage.getObjectSignedUrl({
+const getUrl = gcp.storage.getObjectSignedUrl({
     bucket: "friedChicken",
     contentMd5: "pRviqwS4c4OTJRTe03FD1w==",
     contentType: "text/plain",
@@ -2811,7 +2741,7 @@ const getUrl = pulumi.output(gcp.storage.getObjectSignedUrl({
         "x-goog-if-generation-match": 1,
     },
     path: "path/to/file",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_object_signed_url.html.markdown.
@@ -2841,9 +2771,9 @@ For more information see
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const gcsAccount = pulumi.output(gcp.storage.getProjectServiceAccount({}));
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
 const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    members: [pulumi.interpolate`serviceAccount:${gcsAccount.emailAddress}`],
+    members: [`serviceAccount:${gcsAccount.emailAddress}`],
     role: "roles/pubsub.publisher",
     topic: google_pubsub_topic_topic.name,
 });
@@ -2870,7 +2800,7 @@ Use this data source to retrieve Storage Transfer service account for this proje
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultTransferProjectServieAccount = pulumi.output(gcp.storage.getTransferProjectServieAccount({}));
+const defaultTransferProjectServieAccount = gcp.storage.getTransferProjectServieAccount({});
 
 export const defaultAccount = defaultTransferProjectServieAccount.email;
 ```

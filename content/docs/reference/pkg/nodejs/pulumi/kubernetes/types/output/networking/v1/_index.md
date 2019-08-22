@@ -32,7 +32,7 @@ title: Module types/output/networking/v1
 
 
 <h2 class="pdoc-module-header" id="IPBlock">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16985" >}}">interface <b>IPBlock</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16973" >}}">interface <b>IPBlock</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -43,7 +43,7 @@ not be included within this rule.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IPBlock-cidr">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16989" >}}">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16977" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -54,7 +54,7 @@ CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPBlock-except">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16995" >}}">property <b>except</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16983" >}}">property <b>except</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>except: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -67,7 +67,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17002" >}}">interface <b>NetworkPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16990" >}}">interface <b>NetworkPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -76,7 +76,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17009" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16997" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"networking.k8s.io/v1"</span>;</pre>
@@ -90,7 +90,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17017" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17005" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"NetworkPolicy"</span>;</pre>
@@ -104,7 +104,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17023" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17011" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -116,7 +116,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17028" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17016" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#NetworkPolicySpec'>NetworkPolicySpec</a>;</pre>
@@ -128,7 +128,7 @@ Specification of the desired behavior for this NetworkPolicy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyEgressRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17037" >}}">interface <b>NetworkPolicyEgressRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17025" >}}">interface <b>NetworkPolicyEgressRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -139,7 +139,7 @@ type is beta-level in 1.8
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyEgressRule-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17044" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17032" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports: <a href='#NetworkPolicyPort'>NetworkPolicyPort</a>[];</pre>
@@ -153,7 +153,7 @@ rule allows traffic only if the traffic matches at least one port in the list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyEgressRule-to">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17053" >}}">property <b>to</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17041" >}}">property <b>to</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>to: <a href='#NetworkPolicyPeer'>NetworkPolicyPeer</a>[];</pre>
@@ -169,7 +169,7 @@ matches at least one item in the to list.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyIngressRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17061" >}}">interface <b>NetworkPolicyIngressRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17049" >}}">interface <b>NetworkPolicyIngressRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -179,7 +179,7 @@ matched by a NetworkPolicySpec's podSelector. The traffic must match both ports 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyIngressRule-from">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17069" >}}">property <b>from</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17057" >}}">property <b>from</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>from: <a href='#NetworkPolicyPeer'>NetworkPolicyPeer</a>[];</pre>
@@ -194,7 +194,7 @@ least one item in the from list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyIngressRule-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17078" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17066" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports: <a href='#NetworkPolicyPort'>NetworkPolicyPort</a>[];</pre>
@@ -210,7 +210,7 @@ port in the list.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17085" >}}">interface <b>NetworkPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17073" >}}">interface <b>NetworkPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -219,7 +219,7 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17092" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17080" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"networking.k8s.io/v1"</span>;</pre>
@@ -233,7 +233,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17097" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17085" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#NetworkPolicy'>NetworkPolicy</a>[];</pre>
@@ -244,7 +244,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17105" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17093" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"NetworkPolicyList"</span>;</pre>
@@ -258,7 +258,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17111" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17099" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -271,7 +271,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyPeer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17119" >}}">interface <b>NetworkPolicyPeer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17107" >}}">interface <b>NetworkPolicyPeer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -281,7 +281,7 @@ are allowed
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyPeer-ipBlock">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17124" >}}">property <b>ipBlock</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17112" >}}">property <b>ipBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipBlock: <a href='#IPBlock'>IPBlock</a>;</pre>
@@ -293,7 +293,7 @@ other fields can be.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyPeer-namespaceSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17134" >}}">property <b>namespaceSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17122" >}}">property <b>namespaceSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -309,7 +309,7 @@ in the Namespaces selected by NamespaceSelector.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyPeer-podSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17144" >}}">property <b>podSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17132" >}}">property <b>podSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -326,7 +326,7 @@ the Pods matching PodSelector in the policy's own Namespace.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyPort">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17151" >}}">interface <b>NetworkPolicyPort</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17139" >}}">interface <b>NetworkPolicyPort</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -335,7 +335,7 @@ NetworkPolicyPort describes a port to allow traffic on
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyPort-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17156" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17144" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -347,7 +347,7 @@ this field is not provided, this matches all port names and numbers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyPort-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17162" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17150" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -360,7 +360,7 @@ defaults to TCP.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicySpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17169" >}}">interface <b>NetworkPolicySpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17157" >}}">interface <b>NetworkPolicySpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -369,7 +369,7 @@ NetworkPolicySpec provides the specification of a NetworkPolicy
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-egress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17178" >}}">property <b>egress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17166" >}}">property <b>egress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>egress: <a href='#NetworkPolicyEgressRule'>NetworkPolicyEgressRule</a>[];</pre>
@@ -385,7 +385,7 @@ selects are isolated by default). This field is beta-level in 1.8
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-ingress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17188" >}}">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17176" >}}">property <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ingress: <a href='#NetworkPolicyIngressRule'>NetworkPolicyIngressRule</a>[];</pre>
@@ -401,7 +401,7 @@ serves solely to ensure that the pods it selects are isolated by default)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-podSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17197" >}}">property <b>podSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17185" >}}">property <b>podSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -416,7 +416,7 @@ all pods in this namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-policyTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17210" >}}">property <b>policyTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17198" >}}">property <b>policyTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>

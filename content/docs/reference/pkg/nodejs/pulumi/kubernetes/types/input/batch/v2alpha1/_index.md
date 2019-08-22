@@ -31,7 +31,7 @@ title: Module types/input/batch/v2alpha1
 
 
 <h2 class="pdoc-module-header" id="isCronJob">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7844" >}}">function <b>isCronJob</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7840" >}}">function <b>isCronJob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -41,7 +41,7 @@ title: Module types/input/batch/v2alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isCronJobList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7881" >}}">function <b>isCronJobList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7877" >}}">function <b>isCronJobList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -51,7 +51,7 @@ title: Module types/input/batch/v2alpha1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CronJob">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7807" >}}">interface <b>CronJob</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7803" >}}">interface <b>CronJob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -60,7 +60,7 @@ CronJob represents the configuration of a single cron job.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJob-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7814" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7810" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"batch/v2alpha1"</span>&gt;;</pre>
@@ -74,7 +74,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7822" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7818" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"CronJob"</span>&gt;;</pre>
@@ -88,7 +88,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7828" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7824" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -100,7 +100,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7834" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7830" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CronJobSpec'>CronJobSpec</a>&gt;;</pre>
@@ -112,7 +112,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7840" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7836" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CronJobStatus'>CronJobStatus</a>&gt;;</pre>
@@ -125,7 +125,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7851" >}}">interface <b>CronJobList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7847" >}}">interface <b>CronJobList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -134,7 +134,7 @@ CronJobList is a collection of cron jobs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7863" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7859" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"batch/v2alpha1"</span>&gt;;</pre>
@@ -148,7 +148,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7855" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7851" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CronJob'>CronJob</a>&gt;[]&gt;;</pre>
@@ -159,7 +159,7 @@ items is the list of CronJobs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7871" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7867" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"CronJobList"</span>&gt;;</pre>
@@ -173,7 +173,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7877" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7873" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -186,7 +186,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7888" >}}">interface <b>CronJobSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7884" >}}">interface <b>CronJobSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -195,7 +195,7 @@ CronJobSpec describes how the job execution will look like and when it will actu
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobSpec-concurrencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7905" >}}">property <b>concurrencyPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7901" >}}">property <b>concurrencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>concurrencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -209,7 +209,7 @@ running job and replaces it with a new one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-failedJobsHistoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7911" >}}">property <b>failedJobsHistoryLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7907" >}}">property <b>failedJobsHistoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failedJobsHistoryLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -221,7 +221,7 @@ explicit zero and not specified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-jobTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7892" >}}">property <b>jobTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7888" >}}">property <b>jobTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jobTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobTemplateSpec'>JobTemplateSpec</a>&gt;;</pre>
@@ -232,7 +232,7 @@ Specifies the job that will be created when executing a CronJob.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7897" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7893" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -243,7 +243,7 @@ The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-startingDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7917" >}}">property <b>startingDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7913" >}}">property <b>startingDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startingDeadlineSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -255,7 +255,7 @@ reason.  Missed jobs executions will be counted as failed ones.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-successfulJobsHistoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7923" >}}">property <b>successfulJobsHistoryLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7919" >}}">property <b>successfulJobsHistoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>successfulJobsHistoryLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -267,7 +267,7 @@ explicit zero and not specified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-suspend">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7929" >}}">property <b>suspend</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7925" >}}">property <b>suspend</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>suspend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -280,7 +280,7 @@ already started executions.  Defaults to false.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7937" >}}">interface <b>CronJobStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7933" >}}">interface <b>CronJobStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -289,7 +289,7 @@ CronJobStatus represents the current state of a cron job.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobStatus-active">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7941" >}}">property <b>active</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7937" >}}">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectReference'>ObjectReference</a>&gt;[]&gt;;</pre>
@@ -300,7 +300,7 @@ A list of pointers to currently running jobs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobStatus-lastScheduleTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7946" >}}">property <b>lastScheduleTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7942" >}}">property <b>lastScheduleTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastScheduleTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -312,7 +312,7 @@ Information when was the last time the job was successfully scheduled.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobTemplateSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7954" >}}">interface <b>JobTemplateSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7950" >}}">interface <b>JobTemplateSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -321,7 +321,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobTemplateSpec-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7959" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7955" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -333,7 +333,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobTemplateSpec-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7965" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L7961" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobSpec'>JobSpec</a>&gt;;</pre>

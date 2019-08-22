@@ -297,7 +297,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "key-vault-certificate-example",
 });
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 const testKeyVault = new azure.keyvault.KeyVault("test", {
     accessPolicies: [{
         certificatePermissions: [
@@ -391,7 +391,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "key-vault-certificate-example",
 });
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 const testKeyVault = new azure.keyvault.KeyVault("test", {
     accessPolicies: [{
         certificatePermissions: [
@@ -743,7 +743,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West US",
     name: "my-resource-group",
 });
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 const server = new random.RandomId("server", {
     byteLength: 8,
     keepers: {
@@ -1318,7 +1318,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West US",
     name: "my-resource-group",
 });
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 const server = new random.RandomId("server", {
     byteLength: 8,
     keepers: {
@@ -1550,10 +1550,10 @@ Use this data source to access information about an existing Key Vault Key.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.keyvault.getKey({
+const test = azure.keyvault.getKey({
     name: "secret-sauce",
     vaultUri: "https://rickslab.vault.azure.net/",
-}));
+});
 
 export const keyType = azurerm_key_vault_secret_test.keyType;
 ```
@@ -1579,10 +1579,10 @@ Use this data source to access information about an existing Key Vault.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.keyvault.getKeyVault({
+const test = azure.keyvault.getKeyVault({
     name: "mykeyvault",
     resourceGroupName: "some-resource-group",
-}));
+});
 
 export const vaultUri = test.vaultUri;
 ```

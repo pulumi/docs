@@ -25,7 +25,7 @@ title: Module types/input/pkg/runtime
 
 
 <h2 class="pdoc-module-header" id="RawExtension">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18578" >}}">interface <b>RawExtension</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18566" >}}">interface <b>RawExtension</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -69,7 +69,7 @@ and stored.)
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RawExtension-Raw">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18582" >}}">property <b>Raw</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L18570" >}}">property <b>Raw</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Raw: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

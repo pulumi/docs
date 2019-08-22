@@ -2708,10 +2708,10 @@ Use this data source to access information about an existing HDInsight Cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.hdinsight.getCluster({
+const example = azure.hdinsight.getCluster({
     name: "example",
     resourceGroupName: "example-resources",
-}));
+});
 
 export const httpsEndpoint = example.httpsEndpoint;
 ```

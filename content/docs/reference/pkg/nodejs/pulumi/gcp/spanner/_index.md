@@ -242,12 +242,12 @@ Three different resources help you manage your IAM policy for a Spanner database
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const database = new gcp.spanner.DatabaseIAMPolicy("database", {
     database: "your-database-name",
     instance: "your-instance-name",
@@ -458,12 +458,12 @@ Three different resources help you manage your IAM policy for a Spanner database
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const database = new gcp.spanner.DatabaseIAMPolicy("database", {
     database: "your-database-name",
     instance: "your-instance-name",
@@ -674,12 +674,12 @@ Three different resources help you manage your IAM policy for a Spanner database
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const database = new gcp.spanner.DatabaseIAMPolicy("database", {
     database: "your-database-name",
     instance: "your-instance-name",
@@ -1057,12 +1057,12 @@ Three different resources help you manage your IAM policy for a Spanner instance
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const instance = new gcp.spanner.InstanceIAMPolicy("instance", {
     instance: "your-instance-name",
     policyData: admin.policyData,
@@ -1259,12 +1259,12 @@ Three different resources help you manage your IAM policy for a Spanner instance
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const instance = new gcp.spanner.InstanceIAMPolicy("instance", {
     instance: "your-instance-name",
     policyData: admin.policyData,
@@ -1461,12 +1461,12 @@ Three different resources help you manage your IAM policy for a Spanner instance
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const instance = new gcp.spanner.InstanceIAMPolicy("instance", {
     instance: "your-instance-name",
     policyData: admin.policyData,

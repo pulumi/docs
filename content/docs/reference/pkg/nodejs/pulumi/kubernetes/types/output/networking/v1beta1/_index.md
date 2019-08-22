@@ -33,7 +33,7 @@ title: Module types/output/networking/v1beta1
 
 
 <h2 class="pdoc-module-header" id="HTTPIngressPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17221" >}}">interface <b>HTTPIngressPath</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17209" >}}">interface <b>HTTPIngressPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -43,7 +43,7 @@ forwarded to the backend.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HTTPIngressPath-backend">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17225" >}}">property <b>backend</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17213" >}}">property <b>backend</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backend: <a href='#IngressBackend'>IngressBackend</a>;</pre>
@@ -54,7 +54,7 @@ Backend defines the referenced service endpoint to which the traffic will be for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPIngressPath-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17234" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17222" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -70,7 +70,7 @@ catch all sending traffic to the backend.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HTTPIngressRuleValue">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17244" >}}">interface <b>HTTPIngressRuleValue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17232" >}}">interface <b>HTTPIngressRuleValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -82,7 +82,7 @@ the first '?' or '#'.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HTTPIngressRuleValue-paths">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17248" >}}">property <b>paths</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17236" >}}">property <b>paths</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paths: <a href='#HTTPIngressPath'>HTTPIngressPath</a>[];</pre>
@@ -94,7 +94,7 @@ A collection of paths that map requests to backends.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Ingress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17257" >}}">interface <b>Ingress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17245" >}}">interface <b>Ingress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -105,7 +105,7 @@ urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Ingress-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17264" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17252" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"networking.k8s.io/v1beta1"</span>;</pre>
@@ -119,7 +119,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17272" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17260" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Ingress"</span>;</pre>
@@ -133,7 +133,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17278" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17266" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -145,7 +145,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17284" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17272" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#IngressSpec'>IngressSpec</a>;</pre>
@@ -157,7 +157,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17290" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17278" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#IngressStatus'>IngressStatus</a>;</pre>
@@ -170,7 +170,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressBackend">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17297" >}}">interface <b>IngressBackend</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17285" >}}">interface <b>IngressBackend</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -179,7 +179,7 @@ IngressBackend describes all endpoints for a given service and port.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressBackend-serviceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17301" >}}">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17289" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -190,7 +190,7 @@ Specifies the name of the referenced service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressBackend-servicePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17306" >}}">property <b>servicePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17294" >}}">property <b>servicePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>servicePort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -202,7 +202,7 @@ Specifies the port of the referenced service.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17313" >}}">interface <b>IngressList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17301" >}}">interface <b>IngressList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -211,7 +211,7 @@ IngressList is a collection of Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17320" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17308" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"networking.k8s.io/v1beta1"</span>;</pre>
@@ -225,7 +225,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17325" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17313" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Ingress'>Ingress</a>[];</pre>
@@ -236,7 +236,7 @@ Items is the list of Ingress.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17333" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17321" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"IngressList"</span>;</pre>
@@ -250,7 +250,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17339" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17327" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -263,7 +263,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17348" >}}">interface <b>IngressRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17336" >}}">interface <b>IngressRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -274,7 +274,7 @@ backend associated with the matching IngressRuleValue.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressRule-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17361" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17349" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -294,7 +294,7 @@ the specified IngressRuleValue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressRule-http">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17364" >}}">property <b>http</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17352" >}}">property <b>http</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>http: <a href='#HTTPIngressRuleValue'>HTTPIngressRuleValue</a>;</pre>
@@ -303,7 +303,7 @@ the specified IngressRuleValue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17371" >}}">interface <b>IngressSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17359" >}}">interface <b>IngressSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -312,7 +312,7 @@ IngressSpec describes the Ingress the user wishes to exist.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressSpec-backend">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17377" >}}">property <b>backend</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17365" >}}">property <b>backend</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backend: <a href='#IngressBackend'>IngressBackend</a>;</pre>
@@ -325,7 +325,7 @@ controller or defaulting logic to specify a global default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSpec-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17383" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17371" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules: <a href='#IngressRule'>IngressRule</a>[];</pre>
@@ -337,7 +337,7 @@ traffic is sent to the default backend.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSpec-tls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17391" >}}">property <b>tls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17379" >}}">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tls: <a href='#IngressTLS'>IngressTLS</a>[];</pre>
@@ -352,7 +352,7 @@ controller fulfilling the ingress supports SNI.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17398" >}}">interface <b>IngressStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17386" >}}">interface <b>IngressStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -361,7 +361,7 @@ IngressStatus describe the current state of the Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressStatus-loadBalancer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17402" >}}">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17390" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancer: <a href='#LoadBalancerStatus'>LoadBalancerStatus</a>;</pre>
@@ -373,7 +373,7 @@ LoadBalancer contains the current status of the load-balancer.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressTLS">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17409" >}}">interface <b>IngressTLS</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17397" >}}">interface <b>IngressTLS</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -382,7 +382,7 @@ IngressTLS describes the transport layer security associated with an Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressTLS-hosts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17415" >}}">property <b>hosts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17403" >}}">property <b>hosts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hosts: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -395,7 +395,7 @@ loadbalancer controller fulfilling this Ingress, if left unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressTLS-secretName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17423" >}}">property <b>secretName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17411" >}}">property <b>secretName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

@@ -16,6 +16,8 @@ title: Module types
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents">
 <ul>
+<li><a href="index">types/index</a></li>
+<li><a href="input">types/input</a></li>
 <li><a href="input/admissionregistration">types/input/admissionregistration</a></li>
 <li><a href="input/admissionregistration/v1beta1">types/input/admissionregistration/v1beta1</a></li>
 <li><a href="input/apiextensions">types/input/apiextensions</a></li>
@@ -81,6 +83,7 @@ title: Module types
 <li><a href="input/storage/v1">types/input/storage/v1</a></li>
 <li><a href="input/storage/v1alpha1">types/input/storage/v1alpha1</a></li>
 <li><a href="input/storage/v1beta1">types/input/storage/v1beta1</a></li>
+<li><a href="output">types/output</a></li>
 <li><a href="output/admissionregistration">types/output/admissionregistration</a></li>
 <li><a href="output/admissionregistration/v1beta1">types/output/admissionregistration/v1beta1</a></li>
 <li><a href="output/apiextensions">types/output/apiextensions</a></li>

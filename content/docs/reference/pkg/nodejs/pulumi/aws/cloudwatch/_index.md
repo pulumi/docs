@@ -79,6 +79,20 @@ title: Module cloudwatch
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="eventRule">cloudwatch/eventRule</a></li>
+<li><a href="logGroup">cloudwatch/logGroup</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Dashboard">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cloudwatch/dashboard.ts#L59" >}}">class <b>Dashboard</b></a>
@@ -527,20 +541,6 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventRule-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/eventRuleMixins.ts#L124" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventRuleEventHandler'>EventRuleEventHandler</a>, args?: <a href='#EventRuleEventSubscriptionArgs'>EventRuleEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventRuleEventSubscription'>EventRuleEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this EventRule to the handler provided, along
-with options to control the behavior of the subscription.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="EventRule-arn">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/eventRule.ts#L79" >}}">property <b>arn</b></a>
 </h3>
@@ -842,7 +842,7 @@ const stopInstance = new aws.ssm.Document("stopInstance", {
 `,
     documentType: "Command",
 });
-const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
+const ssmLifecycleTrust = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -850,7 +850,7 @@ const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-}));
+});
 const ssmLifecycleRole = new aws.iam.Role("ssmLifecycle", {
     assumeRolePolicy: ssmLifecycleTrust.json,
 });
@@ -1582,40 +1582,6 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="LogGroup-onDecodedEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/logGroupMixins.ts#L133" >}}">method <b>onDecodedEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onDecodedEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, callback: lambda.Callback&lt;<a href='#DecodedLogGroupEvent'>DecodedLogGroupEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;, args?: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#LogGroupEventSubscription'>LogGroupEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this LogGroup to the callback provided,
-along with options to control the behavior of the subscription.
-
-The events will be provided in their decoded form.  Because this event hookup needs to
-execute code to convert the raw messages, it can only be passed an [EntryPoint] callback,
-not a [lambda.Function] instance.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="LogGroup-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/logGroupMixins.ts#L122" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#LogGroupEventHandler'>LogGroupEventHandler</a>, args?: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#LogGroupEventSubscription'>LogGroupEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this LogGroup to the handler provided,
-along with options to control the behavior of the subscription.
-
-The events will be produced in raw (gzipped + base64 encoded) form.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="LogGroup-arn">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/logGroup.ts#L56" >}}">property <b>arn</b></a>
 </h3>
@@ -1982,7 +1948,7 @@ Provides a resource to manage a CloudWatch log resource policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const elasticsearch_log_publishing_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const elasticsearch_log_publishing_policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
@@ -1995,7 +1961,7 @@ const elasticsearch_log_publishing_policyPolicyDocument = pulumi.output(aws.iam.
         }],
         resources: ["arn:aws:logs:*"],
     }],
-}));
+});
 const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policy", {
     policyDocument: elasticsearch_log_publishing_policyPolicyDocument.json,
     policyName: "elasticsearch-log-publishing-policy",
@@ -2008,7 +1974,7 @@ const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const route53_query_logging_policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
@@ -2020,7 +1986,7 @@ const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPoli
         }],
         resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     }],
-}));
+});
 const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policy", {
     policyDocument: route53_query_logging_policyPolicyDocument.json,
     policyName: "route53-query-logging-policy",
@@ -2913,9 +2879,9 @@ Use this data source to get information about an AWS Cloudwatch Log Group
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.cloudwatch.getLogGroup({
+const example = aws.cloudwatch.getLogGroup({
     name: "MyImportantLogs",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown.

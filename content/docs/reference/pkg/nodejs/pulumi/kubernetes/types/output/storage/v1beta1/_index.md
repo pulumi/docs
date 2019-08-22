@@ -39,7 +39,7 @@ title: Module types/output/storage/v1beta1
 
 
 <h2 class="pdoc-module-header" id="CSIDriver">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20312" >}}">interface <b>CSIDriver</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20300" >}}">interface <b>CSIDriver</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -54,7 +54,7 @@ are non-namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSIDriver-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20319" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20307" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -68,7 +68,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20327" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20315" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"CSIDriver"</span>;</pre>
@@ -82,7 +82,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20336" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20324" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -97,7 +97,7 @@ More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20341" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20329" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#CSIDriverSpec'>CSIDriverSpec</a>;</pre>
@@ -109,7 +109,7 @@ Specification of the CSI Driver.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSIDriverList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20348" >}}">interface <b>CSIDriverList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20336" >}}">interface <b>CSIDriverList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -118,7 +118,7 @@ CSIDriverList is a collection of CSIDriver objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSIDriverList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20355" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20343" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -132,7 +132,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20360" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20348" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#CSIDriver'>CSIDriver</a>[];</pre>
@@ -143,7 +143,7 @@ items is the list of CSIDriver
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20368" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20356" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"CSIDriverList"</span>;</pre>
@@ -157,7 +157,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20374" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20362" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -170,7 +170,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSIDriverSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20381" >}}">interface <b>CSIDriverSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20369" >}}">interface <b>CSIDriverSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -179,7 +179,7 @@ CSIDriverSpec is the specification of a CSIDriver.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSIDriverSpec-attachRequired">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20392" >}}">property <b>attachRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20380" >}}">property <b>attachRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attachRequired: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -197,7 +197,7 @@ Otherwise the attach operation will be called.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverSpec-podInfoOnMount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20406" >}}">property <b>podInfoOnMount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20394" >}}">property <b>podInfoOnMount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podInfoOnMount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -218,7 +218,7 @@ string(pod.UID)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSINode">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20419" >}}">interface <b>CSINode</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20407" >}}">interface <b>CSINode</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -233,7 +233,7 @@ points to the corresponding node object.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSINode-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20426" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20414" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -247,7 +247,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20434" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20422" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"CSINode"</span>;</pre>
@@ -261,7 +261,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20439" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20427" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -272,7 +272,7 @@ metadata.name must be the Kubernetes node name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20444" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20432" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#CSINodeSpec'>CSINodeSpec</a>;</pre>
@@ -284,7 +284,7 @@ spec is the specification of CSINode
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSINodeDriver">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20451" >}}">interface <b>CSINodeDriver</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20439" >}}">interface <b>CSINodeDriver</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -293,7 +293,7 @@ CSINodeDriver holds information about the specification of one CSI driver instal
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSINodeDriver-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20456" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20444" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -305,7 +305,7 @@ returned by the CSI GetPluginName() call for that driver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeDriver-nodeID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20467" >}}">property <b>nodeID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20455" >}}">property <b>nodeID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -322,7 +322,7 @@ is required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeDriver-topologyKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20479" >}}">property <b>topologyKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20467" >}}">property <b>topologyKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>topologyKeys: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -341,7 +341,7 @@ driver does not support topology.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSINodeList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20486" >}}">interface <b>CSINodeList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20474" >}}">interface <b>CSINodeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -350,7 +350,7 @@ CSINodeList is a collection of CSINode objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSINodeList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20493" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20481" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -364,7 +364,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20498" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20486" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#CSINode'>CSINode</a>[];</pre>
@@ -375,7 +375,7 @@ items is the list of CSINode
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20506" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20494" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"CSINodeList"</span>;</pre>
@@ -389,7 +389,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20512" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20500" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -402,7 +402,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSINodeSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20519" >}}">interface <b>CSINodeSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20507" >}}">interface <b>CSINodeSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -411,7 +411,7 @@ CSINodeSpec holds information about the specification of all CSI drivers install
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSINodeSpec-drivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20524" >}}">property <b>drivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20512" >}}">property <b>drivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>drivers: <a href='#CSINodeDriver'>CSINodeDriver</a>[];</pre>
@@ -424,7 +424,7 @@ the list are uninstalled, this can become empty.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20535" >}}">interface <b>StorageClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20523" >}}">interface <b>StorageClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -437,7 +437,7 @@ ObjectMeta.Name.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClass-allowVolumeExpansion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20539" >}}">property <b>allowVolumeExpansion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20527" >}}">property <b>allowVolumeExpansion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowVolumeExpansion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -448,7 +448,7 @@ AllowVolumeExpansion shows whether the storage class allow volume expand
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-allowedTopologies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20547" >}}">property <b>allowedTopologies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20535" >}}">property <b>allowedTopologies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedTopologies: <a href='#TopologySelectorTerm'>TopologySelectorTerm</a>[];</pre>
@@ -462,7 +462,7 @@ enable the VolumeScheduling feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20555" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20543" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -476,7 +476,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20563" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20551" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"StorageClass"</span>;</pre>
@@ -490,7 +490,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20569" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20557" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -502,7 +502,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-mountOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20576" >}}">property <b>mountOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20564" >}}">property <b>mountOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mountOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -515,7 +515,7 @@ is invalid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20582" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20570" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -527,7 +527,7 @@ storage class.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-provisioner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20587" >}}">property <b>provisioner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20575" >}}">property <b>provisioner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>provisioner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -538,7 +538,7 @@ Provisioner indicates the type of the provisioner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-reclaimPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20593" >}}">property <b>reclaimPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20581" >}}">property <b>reclaimPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reclaimPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -550,7 +550,7 @@ reclaimPolicy. Defaults to Delete.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-volumeBindingMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20600" >}}">property <b>volumeBindingMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20588" >}}">property <b>volumeBindingMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeBindingMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -564,7 +564,7 @@ enable the VolumeScheduling feature.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20607" >}}">interface <b>StorageClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20595" >}}">interface <b>StorageClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -573,7 +573,7 @@ StorageClassList is a collection of storage classes.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClassList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20614" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20602" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -587,7 +587,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20619" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20607" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#StorageClass'>StorageClass</a>[];</pre>
@@ -598,7 +598,7 @@ Items is the list of StorageClasses
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20627" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20615" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"StorageClassList"</span>;</pre>
@@ -612,7 +612,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20633" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20621" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -625,7 +625,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20643" >}}">interface <b>VolumeAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20631" >}}">interface <b>VolumeAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -637,7 +637,7 @@ VolumeAttachment objects are non-namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20650" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20638" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -651,7 +651,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20658" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20646" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"VolumeAttachment"</span>;</pre>
@@ -665,7 +665,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20664" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20652" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -677,7 +677,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20670" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20658" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#VolumeAttachmentSpec'>VolumeAttachmentSpec</a>;</pre>
@@ -689,7 +689,7 @@ system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20676" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20664" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#VolumeAttachmentStatus'>VolumeAttachmentStatus</a>;</pre>
@@ -702,7 +702,7 @@ detach operation, i.e. the external-attacher.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20683" >}}">interface <b>VolumeAttachmentList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20671" >}}">interface <b>VolumeAttachmentList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -711,7 +711,7 @@ VolumeAttachmentList is a collection of VolumeAttachment objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20690" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20678" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"storage.k8s.io/v1beta1"</span>;</pre>
@@ -725,7 +725,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20695" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20683" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#VolumeAttachment'>VolumeAttachment</a>[];</pre>
@@ -736,7 +736,7 @@ Items is the list of VolumeAttachments
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20703" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20691" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"VolumeAttachmentList"</span>;</pre>
@@ -750,7 +750,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20709" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20697" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -763,7 +763,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20718" >}}">interface <b>VolumeAttachmentSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20706" >}}">interface <b>VolumeAttachmentSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -774,7 +774,7 @@ volumes in pods. Exactly one member can be set.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentSource-inlineVolumeSpec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20726" >}}">property <b>inlineVolumeSpec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20714" >}}">property <b>inlineVolumeSpec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>inlineVolumeSpec: <a href='#PersistentVolumeSpec'>PersistentVolumeSpec</a>;</pre>
@@ -789,7 +789,7 @@ the CSIMigration feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentSource-persistentVolumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20731" >}}">property <b>persistentVolumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20719" >}}">property <b>persistentVolumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistentVolumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -801,7 +801,7 @@ Name of the persistent volume to attach.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20738" >}}">interface <b>VolumeAttachmentSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20726" >}}">interface <b>VolumeAttachmentSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -810,7 +810,7 @@ VolumeAttachmentSpec is the specification of a VolumeAttachment request.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentSpec-attacher">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20743" >}}">property <b>attacher</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20731" >}}">property <b>attacher</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attacher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -822,7 +822,7 @@ name returned by GetPluginName().
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentSpec-nodeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20748" >}}">property <b>nodeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20736" >}}">property <b>nodeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -833,7 +833,7 @@ The node that the volume should be attached to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentSpec-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20753" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20741" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source: <a href='#VolumeAttachmentSource'>VolumeAttachmentSource</a>;</pre>
@@ -845,7 +845,7 @@ Source represents the volume that should be attached.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20760" >}}">interface <b>VolumeAttachmentStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20748" >}}">interface <b>VolumeAttachmentStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -854,7 +854,7 @@ VolumeAttachmentStatus is the status of a VolumeAttachment request.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attachError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20765" >}}">property <b>attachError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20753" >}}">property <b>attachError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attachError: <a href='#VolumeError'>VolumeError</a>;</pre>
@@ -866,7 +866,7 @@ the entity completing the attach operation, i.e. the external-attacher.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attached">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20771" >}}">property <b>attached</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20759" >}}">property <b>attached</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attached: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -878,7 +878,7 @@ completing the attach operation, i.e. the external-attacher.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attachmentMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20778" >}}">property <b>attachmentMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20766" >}}">property <b>attachmentMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attachmentMetadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -891,7 +891,7 @@ only be set by the entity completing the attach operation, i.e. the external-att
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentStatus-detachError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20784" >}}">property <b>detachError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20772" >}}">property <b>detachError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>detachError: <a href='#VolumeError'>VolumeError</a>;</pre>
@@ -904,7 +904,7 @@ the entity completing the detach operation, i.e. the external-attacher.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeError">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20791" >}}">interface <b>VolumeError</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20779" >}}">interface <b>VolumeError</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -913,7 +913,7 @@ VolumeError captures an error encountered during a volume operation.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeError-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20796" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20784" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -925,7 +925,7 @@ be logged, so it should not contain sensitive information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeError-time">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20801" >}}">property <b>time</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L20789" >}}">property <b>time</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>time: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

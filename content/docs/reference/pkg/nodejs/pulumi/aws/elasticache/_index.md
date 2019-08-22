@@ -1494,9 +1494,9 @@ Use this data source to get information about an Elasticache Cluster
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myCluster = pulumi.output(aws.elasticache.getCluster({
+const myCluster = aws.elasticache.getCluster({
     clusterId: "my-cluster-id",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown.
@@ -1520,9 +1520,9 @@ Use this data source to get information about an Elasticache Replication Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bar = pulumi.output(aws.elasticache.getReplicationGroup({
+const bar = aws.elasticache.getReplicationGroup({
     replicationGroupId: "example",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown.

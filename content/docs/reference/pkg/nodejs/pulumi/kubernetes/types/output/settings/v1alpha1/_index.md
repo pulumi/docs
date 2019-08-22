@@ -27,7 +27,7 @@ title: Module types/output/settings/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="PodPreset">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19757" >}}">interface <b>PodPreset</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19745" >}}">interface <b>PodPreset</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -36,7 +36,7 @@ PodPreset is a policy resource that defines additional runtime requirements for 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodPreset-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19764" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19752" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"settings.k8s.io/v1alpha1"</span>;</pre>
@@ -50,7 +50,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPreset-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19772" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19760" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodPreset"</span>;</pre>
@@ -64,7 +64,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPreset-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19775" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19763" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -72,7 +72,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPreset-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19778" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19766" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PodPresetSpec'>PodPresetSpec</a>;</pre>
@@ -81,7 +81,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodPresetList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19785" >}}">interface <b>PodPresetList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19773" >}}">interface <b>PodPresetList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -90,7 +90,7 @@ PodPresetList is a list of PodPreset objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodPresetList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19792" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19780" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"settings.k8s.io/v1alpha1"</span>;</pre>
@@ -104,7 +104,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19797" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19785" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PodPreset'>PodPreset</a>[];</pre>
@@ -115,7 +115,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19805" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19793" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodPresetList"</span>;</pre>
@@ -129,7 +129,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19811" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19799" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -142,7 +142,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodPresetSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19818" >}}">interface <b>PodPresetSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19806" >}}">interface <b>PodPresetSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -151,7 +151,7 @@ PodPresetSpec is a description of a pod preset.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodPresetSpec-env">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19822" >}}">property <b>env</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19810" >}}">property <b>env</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>env: <a href='#EnvVar'>EnvVar</a>[];</pre>
@@ -162,7 +162,7 @@ Env defines the collection of EnvVar to inject into containers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetSpec-envFrom">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19827" >}}">property <b>envFrom</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19815" >}}">property <b>envFrom</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>envFrom: <a href='#EnvFromSource'>EnvFromSource</a>[];</pre>
@@ -173,7 +173,7 @@ EnvFrom defines the collection of EnvFromSource to inject into containers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19832" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19820" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -184,7 +184,7 @@ Selector is a label query over a set of resources, in this case pods. Required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetSpec-volumeMounts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19837" >}}">property <b>volumeMounts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19825" >}}">property <b>volumeMounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeMounts: <a href='#VolumeMount'>VolumeMount</a>[];</pre>
@@ -195,7 +195,7 @@ VolumeMounts defines the collection of VolumeMount to inject into containers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodPresetSpec-volumes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19842" >}}">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L19830" >}}">property <b>volumes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumes: <a href='#Volume'>Volume</a>[];</pre>

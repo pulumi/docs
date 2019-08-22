@@ -472,7 +472,7 @@ Use this data source to access the configuration of the AzureRM provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 
 export const accountId = current.servicePrincipalApplicationId;
 ```
@@ -498,9 +498,9 @@ Use this data source to access information about an existing Resource Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const testResourceGroup = azure.core.getResourceGroup({
     name: "dsrgTest",
-}));
+});
 const testManagedDisk = new azure.compute.ManagedDisk("test", {
     createOption: "Empty",
     diskSizeGb: 1,
@@ -546,7 +546,7 @@ Use this data source to access information about an existing Subscription.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = pulumi.output(azure.core.getSubscription({}));
+const current = azure.core.getSubscription({});
 
 export const currentSubscriptionDisplayName = current.displayName;
 ```
@@ -572,7 +572,7 @@ Use this data source to access information about all the Subscriptions currently
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const available = pulumi.output(azure.core.getSubscriptions({}));
+const available = azure.core.getSubscriptions({});
 
 export const availableSubscriptions = available.subscriptions;
 export const firstAvailableSubscriptionDisplayName = available.subscriptions[0].displayName;
@@ -599,10 +599,10 @@ Use this data source to access information about an existing User Assigned Ident
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.core.getUserAssignedIdentity({
+const example = azure.core.getUserAssignedIdentity({
     name: "nameOfUserAssignedIdentity",
     resourceGroupName: "nameOfResourceGroup",
-}));
+});
 
 export const uaiClientId = example.clientId;
 export const uaiPrincipalId = example.principalId;

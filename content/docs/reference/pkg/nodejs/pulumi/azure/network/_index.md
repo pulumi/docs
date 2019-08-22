@@ -8842,10 +8842,10 @@ Use this data source to access information about an existing Application Securit
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getApplicationSecurityGroup({
+const test = azure.network.getApplicationSecurityGroup({
     name: "tf-appsecuritygroup",
     resourceGroupName: "my-resource-group",
-}));
+});
 
 export const applicationSecurityGroupId = test.id;
 ```
@@ -8901,10 +8901,10 @@ Use this data source to access information about an existing Azure Firewall.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getFirewall({
+const test = azure.network.getFirewall({
     name: "firewall1",
     resourceGroupName: "firewall-RG",
-}));
+});
 
 export const firewallPrivateIp = test.ipConfiguration.privateIpAddress;
 ```
@@ -8930,10 +8930,10 @@ Use this data source to access information about an existing Virtual Network Gat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getGatewayConnection({
+const test = azure.network.getGatewayConnection({
     name: "production",
     resourceGroupName: "networking",
-}));
+});
 
 export const virtualNetworkGatewayConnectionId = test.id;
 ```
@@ -8959,10 +8959,10 @@ Use this data source to access information about an existing Network Interface.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getNetworkInterface({
+const test = azure.network.getNetworkInterface({
     name: "acctest-nic",
     resourceGroupName: "networking",
-}));
+});
 
 export const networkInterfaceId = test.id;
 ```
@@ -9046,10 +9046,10 @@ Use this data source to access information about an existing Public IP Address.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getPublicIP({
+const test = azure.network.getPublicIP({
     name: "nameOfPublicIp",
     resourceGroupName: "nameOfResourceGroup",
-}));
+});
 
 export const domainNameLabel = test.domainNameLabel;
 export const publicIpAddress = test.ipAddress;
@@ -9134,10 +9134,10 @@ Use this data source to access information about a set of existing Public IP Add
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getPublicIPs({
+const test = azure.network.getPublicIPs({
     attached: false,
     resourceGroupName: "pip-test",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ips.html.markdown.
@@ -9161,10 +9161,10 @@ Use this data source to access information about an existing Route Table.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getRouteTable({
+const test = azure.network.getRouteTable({
     name: "myroutetable",
     resourceGroupName: "some-resource-group",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/route_table.html.markdown.
@@ -9188,11 +9188,11 @@ Use this data source to access information about an existing Subnet within a Vir
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getSubnet({
+const test = azure.network.getSubnet({
     name: "backend",
     resourceGroupName: "networking",
     virtualNetworkName: "production",
-}));
+});
 
 export const subnetId = test.id;
 ```
@@ -9218,10 +9218,10 @@ Use this data source to access information about an existing Virtual Network.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getVirtualNetwork({
+const test = azure.network.getVirtualNetwork({
     name: "production",
     resourceGroupName: "networking",
-}));
+});
 
 export const virtualNetworkId = test.id;
 ```
@@ -9247,10 +9247,10 @@ Use this data source to access information about an existing Virtual Network Gat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getVirtualNetworkGateway({
+const test = azure.network.getVirtualNetworkGateway({
     name: "production",
     resourceGroupName: "networking",
-}));
+});
 
 export const virtualNetworkGatewayId = test.id;
 ```

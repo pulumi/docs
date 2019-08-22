@@ -57,8 +57,8 @@ Assigns a given Principal (User or Application) to a given Role.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testClientConfig = pulumi.output(azure.core.getClientConfig({}));
-const primary = pulumi.output(azure.core.getSubscription({}));
+const testClientConfig = azure.core.getClientConfig({});
+const primary = azure.core.getSubscription({});
 const testAssignment = new azure.role.Assignment("test", {
     principalId: testClientConfig.servicePrincipalObjectId,
     roleDefinitionName: "Reader",
@@ -72,8 +72,8 @@ const testAssignment = new azure.role.Assignment("test", {
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testClientConfig = pulumi.output(azure.core.getClientConfig({}));
-const primary = pulumi.output(azure.core.getSubscription({}));
+const testClientConfig = azure.core.getClientConfig({});
+const primary = azure.core.getSubscription({});
 const testDefinition = new azure.role.Definition("test", {
     assignableScopes: [primary.id],
     name: "my-custom-role-definition",
@@ -98,8 +98,8 @@ const testAssignment = new azure.role.Assignment("test", {
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testClientConfig = pulumi.output(azure.core.getClientConfig({}));
-const primary = pulumi.output(azure.core.getSubscription({}));
+const testClientConfig = azure.core.getClientConfig({});
+const primary = azure.core.getSubscription({});
 const testDefinition = new azure.role.Definition("test", {
     assignableScopes: [primary.id],
     name: "my-custom-role-definition",
@@ -271,7 +271,7 @@ Manages a custom Role Definition, used to assign Roles to Users/Principals. See 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const primary = pulumi.output(azure.core.getSubscription({}));
+const primary = azure.core.getSubscription({});
 const test = new azure.role.Definition("test", {
     assignableScopes: [primary.id],
     description: "This is a custom role",
@@ -457,9 +457,9 @@ Use this data source to access information about a built-in Role Definition. To 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const contributor = pulumi.output(azure.role.getBuiltinRoleDefinition({
+const contributor = azure.role.getBuiltinRoleDefinition({
     name: "Contributor",
-}));
+});
 
 export const contributorRoleDefinitionId = contributor.id;
 ```
@@ -485,22 +485,22 @@ Use this data source to access information about an existing Role Definition.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const builtin = pulumi.output(azure.role.getBuiltinRoleDefinition({
+const builtin = azure.role.getBuiltinRoleDefinition({
     name: "Contributor",
-}));
-const primary = pulumi.output(azure.core.getSubscription({}));
+});
+const primary = azure.core.getSubscription({});
 const customDefinition = new azure.role.Definition("custom", {
     name: "CustomRoleDef",
     roleDefinitionId: "00000000-0000-0000-0000-000000000000",
     scope: primary.id,
 });
-const customRoleDefinition = pulumi.all([customDefinition.roleDefinitionId, primary]).apply(([roleDefinitionId, primary]) => azure.role.getRoleDefinition({
+const customRoleDefinition = customDefinition.roleDefinitionId.apply(roleDefinitionId => azure.role.getRoleDefinition({
     roleDefinitionId: roleDefinitionId,
-    scope: primary.id,
+    scope: primary, // /subscriptions/00000000-0000-0000-0000-000000000000
 }));
-const customByname = pulumi.all([customDefinition.name, primary]).apply(([name, primary]) => azure.role.getRoleDefinition({
+const customByname = customDefinition.name.apply(name => azure.role.getRoleDefinition({
     name: name,
-    scope: primary.id,
+    scope: primary,
 }));
 
 export const contributorRoleDefinitionId = azurerm_role_definition_builtin.id;

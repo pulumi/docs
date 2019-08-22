@@ -29,7 +29,7 @@ title: Module types/output/batch/v1beta1
 
 
 <h2 class="pdoc-module-header" id="CronJob">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7240" >}}">interface <b>CronJob</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7236" >}}">interface <b>CronJob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -38,7 +38,7 @@ CronJob represents the configuration of a single cron job.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJob-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7247" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7243" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"batch/v1beta1"</span>;</pre>
@@ -52,7 +52,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7255" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7251" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"CronJob"</span>;</pre>
@@ -66,7 +66,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7261" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7257" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -78,7 +78,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7267" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7263" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#CronJobSpec'>CronJobSpec</a>;</pre>
@@ -90,7 +90,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7273" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7269" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#CronJobStatus'>CronJobStatus</a>;</pre>
@@ -103,7 +103,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7280" >}}">interface <b>CronJobList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7276" >}}">interface <b>CronJobList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -112,7 +112,7 @@ CronJobList is a collection of cron jobs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7287" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7283" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"batch/v1beta1"</span>;</pre>
@@ -126,7 +126,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7292" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7288" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#CronJob'>CronJob</a>[];</pre>
@@ -137,7 +137,7 @@ items is the list of CronJobs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7300" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7296" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"CronJobList"</span>;</pre>
@@ -151,7 +151,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7306" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7302" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -164,7 +164,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7313" >}}">interface <b>CronJobSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7309" >}}">interface <b>CronJobSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -173,7 +173,7 @@ CronJobSpec describes how the job execution will look like and when it will actu
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobSpec-concurrencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7320" >}}">property <b>concurrencyPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7316" >}}">property <b>concurrencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>concurrencyPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -187,7 +187,7 @@ running job and replaces it with a new one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-failedJobsHistoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7326" >}}">property <b>failedJobsHistoryLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7322" >}}">property <b>failedJobsHistoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failedJobsHistoryLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -199,7 +199,7 @@ explicit zero and not specified. Defaults to 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-jobTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7331" >}}">property <b>jobTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7327" >}}">property <b>jobTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jobTemplate: <a href='#JobTemplateSpec'>JobTemplateSpec</a>;</pre>
@@ -210,7 +210,7 @@ Specifies the job that will be created when executing a CronJob.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7336" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7332" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -221,7 +221,7 @@ The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-startingDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7342" >}}">property <b>startingDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7338" >}}">property <b>startingDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startingDeadlineSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -233,7 +233,7 @@ reason.  Missed jobs executions will be counted as failed ones.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-successfulJobsHistoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7348" >}}">property <b>successfulJobsHistoryLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7344" >}}">property <b>successfulJobsHistoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>successfulJobsHistoryLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -245,7 +245,7 @@ explicit zero and not specified. Defaults to 3.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobSpec-suspend">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7354" >}}">property <b>suspend</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7350" >}}">property <b>suspend</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>suspend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -258,7 +258,7 @@ already started executions.  Defaults to false.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7361" >}}">interface <b>CronJobStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7357" >}}">interface <b>CronJobStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -267,7 +267,7 @@ CronJobStatus represents the current state of a cron job.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobStatus-active">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7365" >}}">property <b>active</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7361" >}}">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active: <a href='#ObjectReference'>ObjectReference</a>[];</pre>
@@ -278,7 +278,7 @@ A list of pointers to currently running jobs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobStatus-lastScheduleTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7370" >}}">property <b>lastScheduleTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7366" >}}">property <b>lastScheduleTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastScheduleTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -290,7 +290,7 @@ Information when was the last time the job was successfully scheduled.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobTemplateSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7377" >}}">interface <b>JobTemplateSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7373" >}}">interface <b>JobTemplateSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -299,7 +299,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobTemplateSpec-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7382" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7378" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -311,7 +311,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobTemplateSpec-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7388" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7384" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#JobSpec'>JobSpec</a>;</pre>

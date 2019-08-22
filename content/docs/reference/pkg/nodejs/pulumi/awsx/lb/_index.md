@@ -139,18 +139,32 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/lb/).
 <li><a href="#TargetGroupArgs">interface TargetGroupArgs</a></li>
 <li><a href="#TargetGroupAttachmentArgs">interface TargetGroupAttachmentArgs</a></li>
 <li><a href="#TargetGroupHealthCheck">interface TargetGroupHealthCheck</a></li>
-<li><a href="#metrics">module metrics</a></li>
 <li><a href="#ApplicationProtocol">type ApplicationProtocol</a></li>
 <li><a href="#LoadBalancerTarget">type LoadBalancerTarget</a></li>
 <li><a href="#NetworkProtocol">type NetworkProtocol</a></li>
 <li><a href="#TargetType">type TargetType</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="lb/application.ts" >}}">lb/application.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/listener.ts" >}}">lb/listener.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts" >}}">lb/listenerRule.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts" >}}">lb/loadBalancer.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/metrics.ts" >}}">lb/metrics.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/network.ts" >}}">lb/network.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts" >}}">lb/targetGroup.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts" >}}">lb/targetGroupAttachment.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="lb/application.ts" >}}">lb/application.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/listener.ts" >}}">lb/listener.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts" >}}">lb/listenerRule.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts" >}}">lb/loadBalancer.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/network.ts" >}}">lb/network.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts" >}}">lb/targetGroup.ts</a> <a href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts" >}}">lb/targetGroupAttachment.ts</a> 
 </div>
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="metrics">lb/metrics</a></li>
+<li><a href="metrics/application">lb/metrics/application</a></li>
+<li><a href="metrics/network">lb/metrics/network</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="ApplicationListener">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L182" >}}">class <b>ApplicationListener</b></a>
@@ -4369,42 +4383,6 @@ The number of consecutive health check failures required before considering the 
 unhealthy . For Network Load Balancers, this value must be the same as the
 healthy_threshold. Defaults to 3.
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L26" >}}">module <b>metrics</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="createDimensions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L46" >}}">function <b>createDimensions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>createDimensions(change: <a href='#CoreMetricChange'>CoreMetricChange</a>): { ... }</pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CoreMetricChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L27" >}}">interface <b>CoreMetricChange</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L78" >}}">module <b>application</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="network">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L576" >}}">module <b>network</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

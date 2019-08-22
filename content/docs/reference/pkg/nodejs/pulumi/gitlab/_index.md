@@ -3564,9 +3564,9 @@ Provides details about a specific group in the gitlab provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const foo = pulumi.output(gitlab.getGroup({
+const foo = gitlab.getGroup({
     groupId: 123,
-}));
+});
 ```
 
 **By group's full path**
@@ -3575,9 +3575,9 @@ const foo = pulumi.output(gitlab.getGroup({
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const foo = pulumi.output(gitlab.getGroup({
+const foo = gitlab.getGroup({
     fullPath: "foo/bar",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/group.html.markdown.
@@ -3601,9 +3601,9 @@ Provides details about a specific project in the gitlab provider. The results in
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getProject({
+const example = gitlab.getProject({
     id: 30,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/project.html.markdown.
@@ -3627,9 +3627,9 @@ Provides details about a specific user in the gitlab provider. Especially the ab
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getUser({
+const example = gitlab.getUser({
     username: "myuser",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/user.html.markdown.
@@ -3655,11 +3655,11 @@ Provides details about a list of users in the gitlab provider. The results inclu
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getUsers({
+const example = gitlab.getUsers({
     createdBefore: "2019-01-01",
     orderBy: "name",
     sort: "desc",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/users.html.markdown.

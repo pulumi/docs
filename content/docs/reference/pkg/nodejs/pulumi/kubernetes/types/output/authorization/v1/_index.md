@@ -508,11 +508,11 @@ Status is filled in by the server and indicates the set of actions a user can pe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSubjectRulesReviewSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5181" >}}">interface <b>SelfSubjectRulesReviewSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5179" >}}">interface <b>SelfSubjectRulesReviewSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReviewSpec-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5185" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5183" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -524,7 +524,7 @@ Namespace to evaluate rules for. Required.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReview">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5192" >}}">interface <b>SubjectAccessReview</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5190" >}}">interface <b>SubjectAccessReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -533,7 +533,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReview-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5199" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5197" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"authorization.k8s.io/v1"</span>;</pre>
@@ -547,7 +547,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5207" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5205" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"SubjectAccessReview"</span>;</pre>
@@ -561,7 +561,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5210" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5208" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -569,7 +569,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5215" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5213" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#SubjectAccessReviewSpec'>SubjectAccessReviewSpec</a>;</pre>
@@ -580,7 +580,7 @@ Spec holds information about the request being evaluated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5220" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5218" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#SubjectAccessReviewStatus'>SubjectAccessReviewStatus</a>;</pre>
@@ -592,7 +592,7 @@ Status is filled in by the server and indicates whether the request is allowed o
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReviewSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5228" >}}">interface <b>SubjectAccessReviewSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5226" >}}">interface <b>SubjectAccessReviewSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -602,7 +602,7 @@ ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be s
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-extra">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5233" >}}">property <b>extra</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5231" >}}">property <b>extra</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>extra: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -614,7 +614,7 @@ input to the authorizer it needs a reflection here.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-groups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5238" >}}">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5236" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -625,7 +625,7 @@ Groups is the groups you're testing for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-nonResourceAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5243" >}}">property <b>nonResourceAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5241" >}}">property <b>nonResourceAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nonResourceAttributes: <a href='#NonResourceAttributes'>NonResourceAttributes</a>;</pre>
@@ -636,7 +636,7 @@ NonResourceAttributes describes information for a non-resource access request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-resourceAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5248" >}}">property <b>resourceAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5246" >}}">property <b>resourceAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceAttributes: <a href='#ResourceAttributes'>ResourceAttributes</a>;</pre>
@@ -647,7 +647,7 @@ ResourceAuthorizationAttributes describes information for a resource access requ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5253" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5251" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -658,7 +658,7 @@ UID information about the requesting user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5259" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5257" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -671,7 +671,7 @@ interpreted as "What if User were not a member of any groups
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReviewStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5266" >}}">interface <b>SubjectAccessReviewStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5264" >}}">interface <b>SubjectAccessReviewStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -680,7 +680,7 @@ SubjectAccessReviewStatus
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-allowed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5270" >}}">property <b>allowed</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5268" >}}">property <b>allowed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -691,7 +691,7 @@ Allowed is required. True if the action would be allowed, false otherwise.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-denied">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5277" >}}">property <b>denied</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5275" >}}">property <b>denied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>denied: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -704,7 +704,7 @@ action. Denied may not be true if Allowed is true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-evaluationError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5285" >}}">property <b>evaluationError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5283" >}}">property <b>evaluationError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>evaluationError: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -718,7 +718,7 @@ present and bound to reason about the request.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5290" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5288" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -730,7 +730,7 @@ Reason is optional.  It indicates why a request was allowed or denied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectRulesReviewStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5300" >}}">interface <b>SubjectRulesReviewStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5298" >}}">interface <b>SubjectRulesReviewStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -742,7 +742,7 @@ safe to assume the subject has that permission, even if that list is incomplete.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-evaluationError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5306" >}}">property <b>evaluationError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5304" >}}">property <b>evaluationError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>evaluationError: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -755,7 +755,7 @@ ResourceRules and/or NonResourceRules may be incomplete.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-incomplete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5313" >}}">property <b>incomplete</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5311" >}}">property <b>incomplete</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>incomplete: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -768,7 +768,7 @@ rules evaluation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-nonResourceRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5319" >}}">property <b>nonResourceRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5317" >}}">property <b>nonResourceRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nonResourceRules: <a href='#NonResourceRule'>NonResourceRule</a>[];</pre>
@@ -780,7 +780,7 @@ The list ordering isn't significant, may contain duplicates, and possibly be inc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-resourceRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5325" >}}">property <b>resourceRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L5323" >}}">property <b>resourceRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceRules: <a href='#ResourceRule'>ResourceRule</a>[];</pre>

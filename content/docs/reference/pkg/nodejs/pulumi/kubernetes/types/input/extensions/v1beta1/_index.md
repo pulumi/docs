@@ -93,7 +93,7 @@ title: Module types/input/extensions/v1beta1
 
 
 <h2 class="pdoc-module-header" id="isDaemonSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15234" >}}">function <b>isDaemonSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15224" >}}">function <b>isDaemonSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -103,7 +103,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isDaemonSetList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15303" >}}">function <b>isDaemonSetList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15293" >}}">function <b>isDaemonSetList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -113,7 +113,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isDeployment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15475" >}}">function <b>isDeployment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15463" >}}">function <b>isDeployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -123,7 +123,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isDeploymentList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15548" >}}">function <b>isDeploymentList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15536" >}}">function <b>isDeploymentList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -133,7 +133,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isDeploymentRollback">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15589" >}}">function <b>isDeploymentRollback</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15577" >}}">function <b>isDeploymentRollback</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -143,7 +143,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isIngress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15886" >}}">function <b>isIngress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15874" >}}">function <b>isIngress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -153,7 +153,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isIngressList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15940" >}}">function <b>isIngressList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15928" >}}">function <b>isIngressList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -163,7 +163,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isNetworkPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16067" >}}">function <b>isNetworkPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16055" >}}">function <b>isNetworkPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -173,7 +173,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isNetworkPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16159" >}}">function <b>isNetworkPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16147" >}}">function <b>isNetworkPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -183,7 +183,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isPodSecurityPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16303" >}}">function <b>isPodSecurityPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16291" >}}">function <b>isPodSecurityPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -193,7 +193,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isPodSecurityPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16341" >}}">function <b>isPodSecurityPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16329" >}}">function <b>isPodSecurityPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -203,7 +203,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isReplicaSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16553" >}}">function <b>isReplicaSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16541" >}}">function <b>isReplicaSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -213,7 +213,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isReplicaSetList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16623" >}}">function <b>isReplicaSetList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16611" >}}">function <b>isReplicaSetList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -223,7 +223,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isScale">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16885" >}}">function <b>isScale</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16873" >}}">function <b>isScale</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -233,7 +233,7 @@ title: Module types/input/extensions/v1beta1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AllowedCSIDriver">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15146" >}}">interface <b>AllowedCSIDriver</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15136" >}}">interface <b>AllowedCSIDriver</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -242,7 +242,7 @@ AllowedCSIDriver represents a single inline CSI Driver that is allowed to be use
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AllowedCSIDriver-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15150" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -254,7 +254,7 @@ Name is the registered name of the CSI driver
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AllowedFlexVolume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15159" >}}">interface <b>AllowedFlexVolume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15149" >}}">interface <b>AllowedFlexVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -264,7 +264,7 @@ AllowedFlexVolume from policy API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AllowedFlexVolume-driver">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15163" >}}">property <b>driver</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15153" >}}">property <b>driver</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>driver: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -276,7 +276,7 @@ driver is the name of the Flexvolume driver.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AllowedHostPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15173" >}}">interface <b>AllowedHostPath</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15163" >}}">interface <b>AllowedHostPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -287,7 +287,7 @@ policy API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AllowedHostPath-pathPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15181" >}}">property <b>pathPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15171" >}}">property <b>pathPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pathPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -302,7 +302,7 @@ or `/etc/foo`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllowedHostPath-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15187" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15177" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -315,7 +315,7 @@ are readOnly.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15196" >}}">interface <b>DaemonSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15186" >}}">interface <b>DaemonSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -325,7 +325,7 @@ release notes for more information. DaemonSet represents the configuration of a 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSet-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15203" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15193" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -339,7 +339,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSet-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15211" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15201" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"DaemonSet"</span>&gt;;</pre>
@@ -353,7 +353,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSet-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15217" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15207" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -365,7 +365,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSet-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15223" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15213" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DaemonSetSpec'>DaemonSetSpec</a>&gt;;</pre>
@@ -377,7 +377,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSet-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15230" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15220" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DaemonSetStatus'>DaemonSetStatus</a>&gt;;</pre>
@@ -391,7 +391,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonSetCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15241" >}}">interface <b>DaemonSetCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15231" >}}">interface <b>DaemonSetCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -400,7 +400,7 @@ DaemonSetCondition describes the state of a DaemonSet at a certain point.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSetCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15255" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15245" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -411,7 +411,7 @@ Last time the condition transitioned from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15260" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15250" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -422,7 +422,7 @@ A human readable message indicating details about the transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15265" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15255" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -433,7 +433,7 @@ The reason for the condition's last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15245" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15235" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -444,7 +444,7 @@ Status of the condition, one of True, False, Unknown.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15250" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15240" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -456,7 +456,7 @@ Type of DaemonSet condition.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonSetList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15273" >}}">interface <b>DaemonSetList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15263" >}}">interface <b>DaemonSetList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -465,7 +465,7 @@ DaemonSetList is a collection of daemon sets.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSetList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15285" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15275" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -479,7 +479,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15277" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15267" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DaemonSet'>DaemonSet</a>&gt;[]&gt;;</pre>
@@ -490,7 +490,7 @@ A list of daemon sets.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15293" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15283" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"DaemonSetList"</span>&gt;;</pre>
@@ -504,7 +504,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15299" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15289" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -517,7 +517,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonSetSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15310" >}}">interface <b>DaemonSetSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15300" >}}">interface <b>DaemonSetSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -526,7 +526,7 @@ DaemonSetSpec is the specification of a daemon set.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSetSpec-minReadySeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15324" >}}">property <b>minReadySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15314" >}}">property <b>minReadySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minReadySeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -539,7 +539,7 @@ without any of its container crashing, for it to be considered available. Defaul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetSpec-revisionHistoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15330" >}}">property <b>revisionHistoryLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15320" >}}">property <b>revisionHistoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>revisionHistoryLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -551,7 +551,7 @@ between explicit zero and not specified. Defaults to 10.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15337" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15327" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;;</pre>
@@ -564,7 +564,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetSpec-template">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15317" >}}">property <b>template</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15307" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PodTemplateSpec'>PodTemplateSpec</a>&gt;;</pre>
@@ -578,7 +578,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetSpec-templateGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15343" >}}">property <b>templateGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15333" >}}">property <b>templateGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>templateGeneration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -590,7 +590,7 @@ by the system. It can be set only during the creation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetSpec-updateStrategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15348" >}}">property <b>updateStrategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15338" >}}">property <b>updateStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>updateStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DaemonSetUpdateStrategy'>DaemonSetUpdateStrategy</a>&gt;;</pre>
@@ -602,7 +602,7 @@ An update strategy to replace existing DaemonSet pods with new pods.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonSetStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15356" >}}">interface <b>DaemonSetStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15346" >}}">interface <b>DaemonSetStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -611,7 +611,7 @@ DaemonSetStatus represents the current status of a daemon set.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSetStatus-collisionCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15387" >}}">property <b>collisionCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15377" >}}">property <b>collisionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>collisionCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -624,7 +624,7 @@ ControllerRevision.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15392" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15382" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DaemonSetCondition'>DaemonSetCondition</a>&gt;[]&gt;;</pre>
@@ -635,7 +635,7 @@ Represents the latest available observations of a DaemonSet's current state.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-currentNumberScheduled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15361" >}}">property <b>currentNumberScheduled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15351" >}}">property <b>currentNumberScheduled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>currentNumberScheduled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -647,7 +647,7 @@ daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-desiredNumberScheduled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15368" >}}">property <b>desiredNumberScheduled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15358" >}}">property <b>desiredNumberScheduled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>desiredNumberScheduled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -660,7 +660,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-numberAvailable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15398" >}}">property <b>numberAvailable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15388" >}}">property <b>numberAvailable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberAvailable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -672,7 +672,7 @@ daemon pod running and available (ready for at least spec.minReadySeconds)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-numberMisscheduled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15374" >}}">property <b>numberMisscheduled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15364" >}}">property <b>numberMisscheduled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberMisscheduled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -684,7 +684,7 @@ pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-numberReady">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15380" >}}">property <b>numberReady</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15370" >}}">property <b>numberReady</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberReady: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -696,7 +696,7 @@ daemon pod running and ready.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-numberUnavailable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15404" >}}">property <b>numberUnavailable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15394" >}}">property <b>numberUnavailable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberUnavailable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -708,7 +708,7 @@ running and available (ready for at least spec.minReadySeconds)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-observedGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15409" >}}">property <b>observedGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15399" >}}">property <b>observedGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>observedGeneration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -719,7 +719,7 @@ The most recent generation observed by the daemon set controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetStatus-updatedNumberScheduled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15414" >}}">property <b>updatedNumberScheduled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15404" >}}">property <b>updatedNumberScheduled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>updatedNumberScheduled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -731,11 +731,11 @@ The total number of nodes that are running updated daemon pod
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonSetUpdateStrategy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15422" >}}">interface <b>DaemonSetUpdateStrategy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15410" >}}">interface <b>DaemonSetUpdateStrategy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="DaemonSetUpdateStrategy-rollingUpdate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15426" >}}">property <b>rollingUpdate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15414" >}}">property <b>rollingUpdate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rollingUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RollingUpdateDaemonSet'>RollingUpdateDaemonSet</a>&gt;;</pre>
@@ -746,7 +746,7 @@ Rolling update config params. Present only if type = "RollingUpdate".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DaemonSetUpdateStrategy-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15431" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15419" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -758,7 +758,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Deployment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15441" >}}">interface <b>Deployment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15429" >}}">interface <b>Deployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -769,7 +769,7 @@ ReplicaSets.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Deployment-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15448" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15436" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -783,7 +783,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15456" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15444" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"Deployment"</span>&gt;;</pre>
@@ -797,7 +797,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15461" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15449" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -808,7 +808,7 @@ Standard object metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15466" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15454" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DeploymentSpec'>DeploymentSpec</a>&gt;;</pre>
@@ -819,7 +819,7 @@ Specification of the desired behavior of the Deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15471" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15459" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DeploymentStatus'>DeploymentStatus</a>&gt;;</pre>
@@ -831,7 +831,7 @@ Most recently observed status of the Deployment.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15482" >}}">interface <b>DeploymentCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15470" >}}">interface <b>DeploymentCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -840,7 +840,7 @@ DeploymentCondition describes the state of a deployment at a certain point.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15496" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15484" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -851,7 +851,7 @@ Last time the condition transitioned from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentCondition-lastUpdateTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15501" >}}">property <b>lastUpdateTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15489" >}}">property <b>lastUpdateTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -862,7 +862,7 @@ The last time this condition was updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15506" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15494" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -873,7 +873,7 @@ A human readable message indicating details about the transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15511" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15499" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -884,7 +884,7 @@ The reason for the condition's last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15486" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15474" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -895,7 +895,7 @@ Status of the condition, one of True, False, Unknown.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15491" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15479" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -907,7 +907,7 @@ Type of deployment condition.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15519" >}}">interface <b>DeploymentList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15507" >}}">interface <b>DeploymentList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -916,7 +916,7 @@ DeploymentList is a list of Deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15531" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15519" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -930,7 +930,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15523" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15511" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Deployment'>Deployment</a>&gt;[]&gt;;</pre>
@@ -941,7 +941,7 @@ Items is the list of Deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15539" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15527" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"DeploymentList"</span>&gt;;</pre>
@@ -955,7 +955,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15544" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15532" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -967,7 +967,7 @@ Standard list metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentRollback">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15555" >}}">interface <b>DeploymentRollback</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15543" >}}">interface <b>DeploymentRollback</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -976,7 +976,7 @@ DEPRECATED. DeploymentRollback stores the information required to rollback a dep
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentRollback-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15572" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15560" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -990,7 +990,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentRollback-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15580" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15568" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1004,7 +1004,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentRollback-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15559" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15547" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1015,7 +1015,7 @@ Required: This must match the Name of a deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentRollback-rollbackTo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15564" >}}">property <b>rollbackTo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15552" >}}">property <b>rollbackTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rollbackTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RollbackConfig'>RollbackConfig</a>&gt;;</pre>
@@ -1026,7 +1026,7 @@ The config of this deployment rollback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentRollback-updatedAnnotations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15585" >}}">property <b>updatedAnnotations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15573" >}}">property <b>updatedAnnotations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>updatedAnnotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1038,7 +1038,7 @@ The annotations to be updated to a deployment
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15596" >}}">interface <b>DeploymentSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15584" >}}">interface <b>DeploymentSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1047,7 +1047,7 @@ DeploymentSpec is the specification of the desired behavior of the Deployment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentSpec-minReadySeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15607" >}}">property <b>minReadySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15595" >}}">property <b>minReadySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minReadySeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1060,7 +1060,7 @@ considered available as soon as it is ready)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-paused">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15613" >}}">property <b>paused</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15601" >}}">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1072,7 +1072,7 @@ controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-progressDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15622" >}}">property <b>progressDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15610" >}}">property <b>progressDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>progressDeadlineSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1087,7 +1087,7 @@ set to the max value of int32 (i.e. 2147483647) by default, which means "no dead
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15628" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15616" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1099,7 +1099,7 @@ specified. Defaults to 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-revisionHistoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15635" >}}">property <b>revisionHistoryLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15623" >}}">property <b>revisionHistoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>revisionHistoryLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1112,7 +1112,7 @@ between explicit zero and not specified. This is set to the max value of int32 (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-rollbackTo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15641" >}}">property <b>rollbackTo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15629" >}}">property <b>rollbackTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rollbackTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RollbackConfig'>RollbackConfig</a>&gt;;</pre>
@@ -1124,7 +1124,7 @@ is done.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15647" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15635" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;;</pre>
@@ -1136,7 +1136,7 @@ ones affected by this deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-strategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15652" >}}">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15640" >}}">property <b>strategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DeploymentStrategy'>DeploymentStrategy</a>&gt;;</pre>
@@ -1147,7 +1147,7 @@ The deployment strategy to use to replace existing pods with new ones.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentSpec-template">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15600" >}}">property <b>template</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15588" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PodTemplateSpec'>PodTemplateSpec</a>&gt;;</pre>
@@ -1159,7 +1159,7 @@ Template describes the pods that will be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15660" >}}">interface <b>DeploymentStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15648" >}}">interface <b>DeploymentStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1168,7 +1168,7 @@ DeploymentStatus is the most recently observed status of the Deployment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentStatus-availableReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15665" >}}">property <b>availableReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15653" >}}">property <b>availableReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1180,7 +1180,7 @@ deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-collisionCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15671" >}}">property <b>collisionCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15659" >}}">property <b>collisionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>collisionCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1192,7 +1192,7 @@ collision avoidance mechanism when it needs to create the name for the newest Re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15676" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15664" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DeploymentCondition'>DeploymentCondition</a>&gt;[]&gt;;</pre>
@@ -1203,7 +1203,7 @@ Represents the latest available observations of a deployment's current state.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-observedGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15681" >}}">property <b>observedGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15669" >}}">property <b>observedGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>observedGeneration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1214,7 +1214,7 @@ The generation observed by the deployment controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-readyReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15686" >}}">property <b>readyReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15674" >}}">property <b>readyReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readyReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1225,7 +1225,7 @@ Total number of ready pods targeted by this deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15692" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15680" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1237,7 +1237,7 @@ selector).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-unavailableReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15700" >}}">property <b>unavailableReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15688" >}}">property <b>unavailableReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>unavailableReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1251,7 +1251,7 @@ created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStatus-updatedReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15706" >}}">property <b>updatedReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15694" >}}">property <b>updatedReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>updatedReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1264,7 +1264,7 @@ template spec.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentStrategy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15714" >}}">interface <b>DeploymentStrategy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15702" >}}">interface <b>DeploymentStrategy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1273,7 +1273,7 @@ DeploymentStrategy describes how to replace existing pods with new ones.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentStrategy-rollingUpdate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15718" >}}">property <b>rollingUpdate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15706" >}}">property <b>rollingUpdate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rollingUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RollingUpdateDeployment'>RollingUpdateDeployment</a>&gt;;</pre>
@@ -1284,7 +1284,7 @@ Rolling update config params. Present only if DeploymentStrategyType = RollingUp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentStrategy-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15723" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15711" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1296,7 +1296,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FSGroupStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15732" >}}">interface <b>FSGroupStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15720" >}}">interface <b>FSGroupStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1306,7 +1306,7 @@ Deprecated: use FSGroupStrategyOptions from policy API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FSGroupStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15737" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15725" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IDRange'>IDRange</a>&gt;[]&gt;;</pre>
@@ -1318,7 +1318,7 @@ then supply a single range with the same start and end. Required for MustRunAs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FSGroupStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15742" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15730" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1330,7 +1330,7 @@ rule is the strategy that will dictate what FSGroup is used in the SecurityConte
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HTTPIngressPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15751" >}}">interface <b>HTTPIngressPath</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15739" >}}">interface <b>HTTPIngressPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1340,7 +1340,7 @@ forwarded to the backend.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HTTPIngressPath-backend">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15755" >}}">property <b>backend</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15743" >}}">property <b>backend</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IngressBackend'>IngressBackend</a>&gt;;</pre>
@@ -1351,7 +1351,7 @@ Backend defines the referenced service endpoint to which the traffic will be for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPIngressPath-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15764" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15752" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1367,7 +1367,7 @@ catch all sending traffic to the backend.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HTTPIngressRuleValue">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15775" >}}">interface <b>HTTPIngressRuleValue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15763" >}}">interface <b>HTTPIngressRuleValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1379,7 +1379,7 @@ the first '?' or '#'.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HTTPIngressRuleValue-paths">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15779" >}}">property <b>paths</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15767" >}}">property <b>paths</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HTTPIngressPath'>HTTPIngressPath</a>&gt;[]&gt;;</pre>
@@ -1391,7 +1391,7 @@ A collection of paths that map requests to backends.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostPortRange">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15789" >}}">interface <b>HostPortRange</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15777" >}}">interface <b>HostPortRange</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1402,7 +1402,7 @@ API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HostPortRange-max">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15793" >}}">property <b>max</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15781" >}}">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>max: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1413,7 +1413,7 @@ max is the end of the range, inclusive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPortRange-min">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15798" >}}">property <b>min</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15786" >}}">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>min: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1425,7 +1425,7 @@ min is the start of the range, inclusive.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IDRange">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15807" >}}">interface <b>IDRange</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15795" >}}">interface <b>IDRange</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1435,7 +1435,7 @@ API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IDRange-max">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15811" >}}">property <b>max</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15799" >}}">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>max: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1446,7 +1446,7 @@ max is the end of the range, inclusive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IDRange-min">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15816" >}}">property <b>min</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15804" >}}">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>min: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1458,7 +1458,7 @@ min is the start of the range, inclusive.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IPBlock">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15827" >}}">interface <b>IPBlock</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15815" >}}">interface <b>IPBlock</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1470,7 +1470,7 @@ not be included within this rule.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IPBlock-cidr">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15831" >}}">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15819" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1481,7 +1481,7 @@ CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPBlock-except">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15837" >}}">property <b>except</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15825" >}}">property <b>except</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>except?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1494,7 +1494,7 @@ are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Ingress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15849" >}}">interface <b>Ingress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15837" >}}">interface <b>Ingress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1507,7 +1507,7 @@ release notes for more information.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Ingress-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15856" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15844" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -1521,7 +1521,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15864" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15852" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"Ingress"</span>&gt;;</pre>
@@ -1535,7 +1535,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15870" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15858" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -1547,7 +1547,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15876" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15864" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IngressSpec'>IngressSpec</a>&gt;;</pre>
@@ -1559,7 +1559,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15882" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15870" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IngressStatus'>IngressStatus</a>&gt;;</pre>
@@ -1572,7 +1572,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressBackend">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15893" >}}">interface <b>IngressBackend</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15881" >}}">interface <b>IngressBackend</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1581,7 +1581,7 @@ IngressBackend describes all endpoints for a given service and port.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressBackend-serviceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15897" >}}">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15885" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1592,7 +1592,7 @@ Specifies the name of the referenced service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressBackend-servicePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15902" >}}">property <b>servicePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15890" >}}">property <b>servicePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>servicePort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1604,7 +1604,7 @@ Specifies the port of the referenced service.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15910" >}}">interface <b>IngressList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15898" >}}">interface <b>IngressList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1613,7 +1613,7 @@ IngressList is a collection of Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15922" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15910" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -1627,7 +1627,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15914" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15902" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Ingress'>Ingress</a>&gt;[]&gt;;</pre>
@@ -1638,7 +1638,7 @@ Items is the list of Ingress.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15930" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15918" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"IngressList"</span>&gt;;</pre>
@@ -1652,7 +1652,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15936" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15924" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -1665,7 +1665,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15949" >}}">interface <b>IngressRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15937" >}}">interface <b>IngressRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1676,7 +1676,7 @@ backend associated with the matching IngressRuleValue.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressRule-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15962" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15950" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1696,7 +1696,7 @@ the specified IngressRuleValue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressRule-http">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15965" >}}">property <b>http</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15953" >}}">property <b>http</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>http?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HTTPIngressRuleValue'>HTTPIngressRuleValue</a>&gt;;</pre>
@@ -1705,7 +1705,7 @@ the specified IngressRuleValue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15973" >}}">interface <b>IngressSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15961" >}}">interface <b>IngressSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1714,7 +1714,7 @@ IngressSpec describes the Ingress the user wishes to exist.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressSpec-backend">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15979" >}}">property <b>backend</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15967" >}}">property <b>backend</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IngressBackend'>IngressBackend</a>&gt;;</pre>
@@ -1727,7 +1727,7 @@ controller or defaulting logic to specify a global default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSpec-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15985" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15973" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IngressRule'>IngressRule</a>&gt;[]&gt;;</pre>
@@ -1739,7 +1739,7 @@ traffic is sent to the default backend.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSpec-tls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15993" >}}">property <b>tls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15981" >}}">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IngressTLS'>IngressTLS</a>&gt;[]&gt;;</pre>
@@ -1754,7 +1754,7 @@ controller fulfilling the ingress supports SNI.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16001" >}}">interface <b>IngressStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15989" >}}">interface <b>IngressStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1763,7 +1763,7 @@ IngressStatus describe the current state of the Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressStatus-loadBalancer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16005" >}}">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L15993" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerStatus'>LoadBalancerStatus</a>&gt;;</pre>
@@ -1775,7 +1775,7 @@ LoadBalancer contains the current status of the load-balancer.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressTLS">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16013" >}}">interface <b>IngressTLS</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16001" >}}">interface <b>IngressTLS</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1784,7 +1784,7 @@ IngressTLS describes the transport layer security associated with an Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressTLS-hosts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16019" >}}">property <b>hosts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16007" >}}">property <b>hosts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1797,7 +1797,7 @@ loadbalancer controller fulfilling this Ingress, if left unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressTLS-secretName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16027" >}}">property <b>secretName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16015" >}}">property <b>secretName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1812,7 +1812,7 @@ termination and value of the Host header is used for routing.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16037" >}}">interface <b>NetworkPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16025" >}}">interface <b>NetworkPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1823,7 +1823,7 @@ set of Pods
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16044" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16032" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -1837,7 +1837,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16052" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16040" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</pre>
@@ -1851,7 +1851,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16058" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16046" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -1863,7 +1863,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16063" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16051" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</pre>
@@ -1875,7 +1875,7 @@ Specification of the desired behavior for this NetworkPolicy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyEgressRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16077" >}}">interface <b>NetworkPolicyEgressRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16065" >}}">interface <b>NetworkPolicyEgressRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1887,7 +1887,7 @@ must match both ports and to. This type is beta-level in 1.8
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyEgressRule-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16084" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16072" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicyPort'>NetworkPolicyPort</a>&gt;[]&gt;;</pre>
@@ -1901,7 +1901,7 @@ rule allows traffic only if the traffic matches at least one port in the list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyEgressRule-to">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16093" >}}">property <b>to</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16081" >}}">property <b>to</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>to?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicyPeer'>NetworkPolicyPeer</a>&gt;[]&gt;;</pre>
@@ -1917,7 +1917,7 @@ matches at least one item in the to list.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyIngressRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16103" >}}">interface <b>NetworkPolicyIngressRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16091" >}}">interface <b>NetworkPolicyIngressRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1928,7 +1928,7 @@ only if the traffic matches both ports AND from.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyIngressRule-from">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16111" >}}">property <b>from</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16099" >}}">property <b>from</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>from?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicyPeer'>NetworkPolicyPeer</a>&gt;[]&gt;;</pre>
@@ -1943,7 +1943,7 @@ least one item in the from list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyIngressRule-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16120" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16108" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicyPort'>NetworkPolicyPort</a>&gt;[]&gt;;</pre>
@@ -1959,7 +1959,7 @@ port in the list.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16129" >}}">interface <b>NetworkPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16117" >}}">interface <b>NetworkPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1969,7 +1969,7 @@ networking/v1/NetworkPolicyList. Network Policy List is a list of NetworkPolicy 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16141" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16129" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -1983,7 +1983,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16133" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16121" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicy'>NetworkPolicy</a>&gt;[]&gt;;</pre>
@@ -1994,7 +1994,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16149" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16137" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</pre>
@@ -2008,7 +2008,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16155" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16143" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -2021,7 +2021,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyPeer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16167" >}}">interface <b>NetworkPolicyPeer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16155" >}}">interface <b>NetworkPolicyPeer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2031,7 +2031,7 @@ networking/v1/NetworkPolicyPeer.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyPeer-ipBlock">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16172" >}}">property <b>ipBlock</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16160" >}}">property <b>ipBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IPBlock'>IPBlock</a>&gt;;</pre>
@@ -2043,7 +2043,7 @@ other fields can be.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyPeer-namespaceSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16182" >}}">property <b>namespaceSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16170" >}}">property <b>namespaceSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;;</pre>
@@ -2059,7 +2059,7 @@ in the Namespaces selected by NamespaceSelector.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyPeer-podSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16192" >}}">property <b>podSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16180" >}}">property <b>podSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;;</pre>
@@ -2076,7 +2076,7 @@ the Pods matching PodSelector in the policy's own Namespace.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyPort">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16201" >}}">interface <b>NetworkPolicyPort</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16189" >}}">interface <b>NetworkPolicyPort</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2086,7 +2086,7 @@ networking/v1/NetworkPolicyPort.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyPort-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16207" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16195" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2099,7 +2099,7 @@ present, only traffic on the specified protocol AND port will be matched.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyPort-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16213" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16201" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2112,7 +2112,7 @@ this field defaults to TCP.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicySpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16222" >}}">interface <b>NetworkPolicySpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16210" >}}">interface <b>NetworkPolicySpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2122,7 +2122,7 @@ networking/v1/NetworkPolicySpec.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-egress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16240" >}}">property <b>egress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16228" >}}">property <b>egress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>egress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicyEgressRule'>NetworkPolicyEgressRule</a>&gt;[]&gt;;</pre>
@@ -2138,7 +2138,7 @@ selects are isolated by default). This field is beta-level in 1.8
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-ingress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16250" >}}">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16238" >}}">property <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkPolicyIngressRule'>NetworkPolicyIngressRule</a>&gt;[]&gt;;</pre>
@@ -2154,7 +2154,7 @@ isolated by default).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-podSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16230" >}}">property <b>podSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16218" >}}">property <b>podSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;;</pre>
@@ -2169,7 +2169,7 @@ all pods in this namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicySpec-policyTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16263" >}}">property <b>policyTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16251" >}}">property <b>policyTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2189,7 +2189,7 @@ just [ "Ingress" ]). This field is beta-level in 1.8
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16273" >}}">interface <b>PodSecurityPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16261" >}}">interface <b>PodSecurityPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2200,7 +2200,7 @@ Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16280" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16268" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -2214,7 +2214,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16288" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16276" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodSecurityPolicy"</span>&gt;;</pre>
@@ -2228,7 +2228,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16294" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16282" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -2240,7 +2240,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16299" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16287" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PodSecurityPolicySpec'>PodSecurityPolicySpec</a>&gt;;</pre>
@@ -2252,7 +2252,7 @@ spec defines the policy enforced.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16311" >}}">interface <b>PodSecurityPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16299" >}}">interface <b>PodSecurityPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2262,7 +2262,7 @@ PodSecurityPolicyList from policy API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16323" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16311" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -2276,7 +2276,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16315" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16303" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PodSecurityPolicy'>PodSecurityPolicy</a>&gt;[]&gt;;</pre>
@@ -2287,7 +2287,7 @@ items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16331" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16319" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodSecurityPolicyList"</span>&gt;;</pre>
@@ -2301,7 +2301,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16337" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16325" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -2314,7 +2314,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicySpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16349" >}}">interface <b>PodSecurityPolicySpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16337" >}}">interface <b>PodSecurityPolicySpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2324,7 +2324,7 @@ policy API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowPrivilegeEscalation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16375" >}}">property <b>allowPrivilegeEscalation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16363" >}}">property <b>allowPrivilegeEscalation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowPrivilegeEscalation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2336,7 +2336,7 @@ unspecified, defaults to true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedCSIDrivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16383" >}}">property <b>allowedCSIDrivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16371" >}}">property <b>allowedCSIDrivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedCSIDrivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AllowedCSIDriver'>AllowedCSIDriver</a>&gt;[]&gt;;</pre>
@@ -2350,7 +2350,7 @@ enables the CSIInlineVolume feature gate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedCapabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16390" >}}">property <b>allowedCapabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16378" >}}">property <b>allowedCapabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2363,7 +2363,7 @@ not list a capability in both allowedCapabilities and requiredDropCapabilities.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedFlexVolumes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16397" >}}">property <b>allowedFlexVolumes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16385" >}}">property <b>allowedFlexVolumes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedFlexVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AllowedFlexVolume'>AllowedFlexVolume</a>&gt;[]&gt;;</pre>
@@ -2376,7 +2376,7 @@ Flexvolumes is allowed in the "volumes" field.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedHostPaths">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16403" >}}">property <b>allowedHostPaths</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16391" >}}">property <b>allowedHostPaths</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedHostPaths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AllowedHostPath'>AllowedHostPath</a>&gt;[]&gt;;</pre>
@@ -2388,7 +2388,7 @@ may be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedProcMountTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16410" >}}">property <b>allowedProcMountTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16398" >}}">property <b>allowedProcMountTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedProcMountTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2401,7 +2401,7 @@ be enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedUnsafeSysctls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16421" >}}">property <b>allowedUnsafeSysctls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16409" >}}">property <b>allowedUnsafeSysctls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedUnsafeSysctls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2418,7 +2418,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-defaultAddCapabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16429" >}}">property <b>defaultAddCapabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16417" >}}">property <b>defaultAddCapabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAddCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2432,7 +2432,7 @@ here are implicitly allowed, and need not be included in the allowedCapabilities
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-defaultAllowPrivilegeEscalation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16435" >}}">property <b>defaultAllowPrivilegeEscalation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16423" >}}">property <b>defaultAllowPrivilegeEscalation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAllowPrivilegeEscalation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2444,7 +2444,7 @@ more privileges than its parent process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-forbiddenSysctls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16445" >}}">property <b>forbiddenSysctls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16433" >}}">property <b>forbiddenSysctls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forbiddenSysctls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2460,7 +2460,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-fsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16353" >}}">property <b>fsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16341" >}}">property <b>fsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FSGroupStrategyOptions'>FSGroupStrategyOptions</a>&gt;;</pre>
@@ -2471,7 +2471,7 @@ fsGroup is the strategy that will dictate what fs group is used by the SecurityC
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostIPC">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16450" >}}">property <b>hostIPC</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16438" >}}">property <b>hostIPC</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostIPC?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2482,7 +2482,7 @@ hostIPC determines if the policy allows the use of HostIPC in the pod spec.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostNetwork">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16455" >}}">property <b>hostNetwork</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16443" >}}">property <b>hostNetwork</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2493,7 +2493,7 @@ hostNetwork determines if the policy allows the use of HostNetwork in the pod sp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostPID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16460" >}}">property <b>hostPID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16448" >}}">property <b>hostPID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPID?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2504,7 +2504,7 @@ hostPID determines if the policy allows the use of HostPID in the pod spec.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostPorts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16465" >}}">property <b>hostPorts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16453" >}}">property <b>hostPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HostPortRange'>HostPortRange</a>&gt;[]&gt;;</pre>
@@ -2515,7 +2515,7 @@ hostPorts determines which host port ranges are allowed to be exposed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-privileged">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16470" >}}">property <b>privileged</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16458" >}}">property <b>privileged</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileged?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2526,7 +2526,7 @@ privileged determines if a pod can request to be run as privileged.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-readOnlyRootFilesystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16478" >}}">property <b>readOnlyRootFilesystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16466" >}}">property <b>readOnlyRootFilesystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnlyRootFilesystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2540,7 +2540,7 @@ root file system if it wishes but it will not be forced to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-requiredDropCapabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16484" >}}">property <b>requiredDropCapabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16472" >}}">property <b>requiredDropCapabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requiredDropCapabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2552,7 +2552,7 @@ These are required to be dropped and cannot be added.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runAsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16491" >}}">property <b>runAsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16479" >}}">property <b>runAsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RunAsGroupStrategyOptions'>RunAsGroupStrategyOptions</a>&gt;;</pre>
@@ -2565,7 +2565,7 @@ the RunAsGroup feature gate to be enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runAsUser">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16358" >}}">property <b>runAsUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16346" >}}">property <b>runAsUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RunAsUserStrategyOptions'>RunAsUserStrategyOptions</a>&gt;;</pre>
@@ -2576,7 +2576,7 @@ runAsUser is the strategy that will dictate the allowable RunAsUser values that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runtimeClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16498" >}}">property <b>runtimeClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16486" >}}">property <b>runtimeClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtimeClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RuntimeClassStrategyOptions'>RuntimeClassStrategyOptions</a>&gt;;</pre>
@@ -2589,7 +2589,7 @@ this field depends on the RuntimeClass feature gate being enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-seLinux">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16363" >}}">property <b>seLinux</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16351" >}}">property <b>seLinux</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>seLinux: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SELinuxStrategyOptions'>SELinuxStrategyOptions</a>&gt;;</pre>
@@ -2600,7 +2600,7 @@ seLinux is the strategy that will dictate the allowable labels that may be set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-supplementalGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16369" >}}">property <b>supplementalGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16357" >}}">property <b>supplementalGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supplementalGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SupplementalGroupsStrategyOptions'>SupplementalGroupsStrategyOptions</a>&gt;;</pre>
@@ -2612,7 +2612,7 @@ the SecurityContext.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-volumes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16504" >}}">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16492" >}}">property <b>volumes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2625,7 +2625,7 @@ used. To allow all volumes you may use '*'.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicaSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16514" >}}">interface <b>ReplicaSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16502" >}}">interface <b>ReplicaSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2636,7 +2636,7 @@ replicas are running at any given time.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSet-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16521" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16509" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -2650,7 +2650,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSet-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16529" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16517" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ReplicaSet"</span>&gt;;</pre>
@@ -2664,7 +2664,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSet-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16536" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16524" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -2677,7 +2677,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSet-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16542" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16530" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ReplicaSetSpec'>ReplicaSetSpec</a>&gt;;</pre>
@@ -2689,7 +2689,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSet-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16549" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16537" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ReplicaSetStatus'>ReplicaSetStatus</a>&gt;;</pre>
@@ -2703,7 +2703,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicaSetCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16560" >}}">interface <b>ReplicaSetCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16548" >}}">interface <b>ReplicaSetCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2712,7 +2712,7 @@ ReplicaSetCondition describes the state of a replica set at a certain point.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSetCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16574" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16562" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2723,7 +2723,7 @@ The last time the condition transitioned from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16579" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16567" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2734,7 +2734,7 @@ A human readable message indicating details about the transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16584" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16572" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2745,7 +2745,7 @@ The reason for the condition's last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16564" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16552" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2756,7 +2756,7 @@ Status of the condition, one of True, False, Unknown.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16569" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16557" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2768,7 +2768,7 @@ Type of replica set condition.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicaSetList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16592" >}}">interface <b>ReplicaSetList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16580" >}}">interface <b>ReplicaSetList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2777,7 +2777,7 @@ ReplicaSetList is a collection of ReplicaSets.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSetList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16605" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16593" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</pre>
@@ -2791,7 +2791,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16597" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16585" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ReplicaSet'>ReplicaSet</a>&gt;[]&gt;;</pre>
@@ -2803,7 +2803,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16613" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16601" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ReplicaSetList"</span>&gt;;</pre>
@@ -2817,7 +2817,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16619" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16607" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
@@ -2830,7 +2830,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicaSetSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16630" >}}">interface <b>ReplicaSetSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16618" >}}">interface <b>ReplicaSetSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2839,7 +2839,7 @@ ReplicaSetSpec is the specification of a ReplicaSet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSetSpec-minReadySeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16636" >}}">property <b>minReadySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16624" >}}">property <b>minReadySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minReadySeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2852,7 +2852,7 @@ considered available as soon as it is ready)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetSpec-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16643" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16631" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2865,7 +2865,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16651" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16639" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LabelSelector'>LabelSelector</a>&gt;;</pre>
@@ -2879,7 +2879,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetSpec-template">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16658" >}}">property <b>template</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16646" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PodTemplateSpec'>PodTemplateSpec</a>&gt;;</pre>
@@ -2893,7 +2893,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicaSetStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16666" >}}">interface <b>ReplicaSetStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16654" >}}">interface <b>ReplicaSetStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2902,7 +2902,7 @@ ReplicaSetStatus represents the current status of a ReplicaSet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSetStatus-availableReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16676" >}}">property <b>availableReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16664" >}}">property <b>availableReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2913,7 +2913,7 @@ The number of available replicas (ready for at least minReadySeconds) for this r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16681" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16669" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ReplicaSetCondition'>ReplicaSetCondition</a>&gt;[]&gt;;</pre>
@@ -2924,7 +2924,7 @@ Represents the latest available observations of a replica set's current state.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetStatus-fullyLabeledReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16687" >}}">property <b>fullyLabeledReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16675" >}}">property <b>fullyLabeledReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullyLabeledReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2936,7 +2936,7 @@ replicaset.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetStatus-observedGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16692" >}}">property <b>observedGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16680" >}}">property <b>observedGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>observedGeneration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2947,7 +2947,7 @@ ObservedGeneration reflects the generation of the most recently observed Replica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetStatus-readyReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16697" >}}">property <b>readyReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16685" >}}">property <b>readyReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readyReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2958,7 +2958,7 @@ The number of ready replicas for this replica set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicaSetStatus-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16671" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16659" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2971,7 +2971,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RollbackConfig">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16705" >}}">interface <b>RollbackConfig</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16693" >}}">interface <b>RollbackConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2980,7 +2980,7 @@ DEPRECATED.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RollbackConfig-revision">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16709" >}}">property <b>revision</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16697" >}}">property <b>revision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>revision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2992,7 +2992,7 @@ The revision to rollback to. If set to 0, rollback to the last revision.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RollingUpdateDaemonSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16717" >}}">interface <b>RollingUpdateDaemonSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16705" >}}">interface <b>RollingUpdateDaemonSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3001,7 +3001,7 @@ Spec to control the desired behavior of daemon set rolling update.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RollingUpdateDaemonSet-maxUnavailable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16730" >}}">property <b>maxUnavailable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16718" >}}">property <b>maxUnavailable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxUnavailable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3022,7 +3022,7 @@ available at all times during the update.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RollingUpdateDeployment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16738" >}}">interface <b>RollingUpdateDeployment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16726" >}}">interface <b>RollingUpdateDeployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3031,7 +3031,7 @@ Spec to control the desired behavior of rolling update.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RollingUpdateDeployment-maxSurge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16749" >}}">property <b>maxSurge</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16737" >}}">property <b>maxSurge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSurge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3049,7 +3049,7 @@ is at most 130% of desired pods.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RollingUpdateDeployment-maxUnavailable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16761" >}}">property <b>maxUnavailable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16749" >}}">property <b>maxUnavailable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxUnavailable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3068,7 +3068,7 @@ ensuring that the total number of pods available at all times during the update 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RunAsGroupStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16770" >}}">interface <b>RunAsGroupStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16758" >}}">interface <b>RunAsGroupStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3078,7 +3078,7 @@ strategy. Deprecated: use RunAsGroupStrategyOptions from policy API Group instea
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RunAsGroupStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16780" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16768" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IDRange'>IDRange</a>&gt;[]&gt;;</pre>
@@ -3090,7 +3090,7 @@ gid then supply a single range with the same start and end. Required for MustRun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RunAsGroupStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16774" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16762" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3102,7 +3102,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RunAsUserStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16789" >}}">interface <b>RunAsUserStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16777" >}}">interface <b>RunAsUserStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3112,7 +3112,7 @@ strategy. Deprecated: use RunAsUserStrategyOptions from policy API Group instead
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RunAsUserStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16799" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16787" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IDRange'>IDRange</a>&gt;[]&gt;;</pre>
@@ -3124,7 +3124,7 @@ uid then supply a single range with the same start and end. Required for MustRun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RunAsUserStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16793" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16781" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3136,7 +3136,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16808" >}}">interface <b>RuntimeClassStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16796" >}}">interface <b>RuntimeClassStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3146,7 +3146,7 @@ RuntimeClasses for a pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassStrategyOptions-allowedRuntimeClassNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16814" >}}">property <b>allowedRuntimeClassNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16802" >}}">property <b>allowedRuntimeClassNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedRuntimeClassNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3159,7 +3159,7 @@ in the list. An empty list requires the RuntimeClassName field to be unset.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassStrategyOptions-defaultRuntimeClassName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16820" >}}">property <b>defaultRuntimeClassName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16808" >}}">property <b>defaultRuntimeClassName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRuntimeClassName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3172,7 +3172,7 @@ be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SELinuxStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16829" >}}">interface <b>SELinuxStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16817" >}}">interface <b>SELinuxStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3182,7 +3182,7 @@ Deprecated: use SELinuxStrategyOptions from policy API Group instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SELinuxStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16833" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16821" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3193,7 +3193,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SELinuxStrategyOptions-seLinuxOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16839" >}}">property <b>seLinuxOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16827" >}}">property <b>seLinuxOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>seLinuxOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SELinuxOptions'>SELinuxOptions</a>&gt;;</pre>
@@ -3206,7 +3206,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Scale">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16847" >}}">interface <b>Scale</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16835" >}}">interface <b>Scale</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3215,7 +3215,7 @@ represents a scaling request for a resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Scale-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16854" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16842" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3229,7 +3229,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Scale-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16862" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16850" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3243,7 +3243,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Scale-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16868" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16856" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -3255,7 +3255,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Scale-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16874" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16862" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScaleSpec'>ScaleSpec</a>&gt;;</pre>
@@ -3267,7 +3267,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Scale-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16881" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16869" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScaleStatus'>ScaleStatus</a>&gt;;</pre>
@@ -3281,7 +3281,7 @@ Read-only.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16892" >}}">interface <b>ScaleSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16880" >}}">interface <b>ScaleSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3290,7 +3290,7 @@ describes the attributes of a scale subresource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleSpec-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16896" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16884" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3302,7 +3302,7 @@ desired number of instances for the scaled object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16904" >}}">interface <b>ScaleStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16892" >}}">interface <b>ScaleStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3311,7 +3311,7 @@ represents the current status of a scale subresource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleStatus-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16908" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16896" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3322,7 +3322,7 @@ actual number of observed instances of the scaled object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleStatus-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16914" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16902" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3334,7 +3334,7 @@ http://kubernetes.io/docs/user-guide/labels#label-selectors
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleStatus-targetSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16924" >}}">property <b>targetSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16912" >}}">property <b>targetSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3351,7 +3351,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SupplementalGroupsStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16933" >}}">interface <b>SupplementalGroupsStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16921" >}}">interface <b>SupplementalGroupsStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3361,7 +3361,7 @@ strategy. Deprecated: use SupplementalGroupsStrategyOptions from policy API Grou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SupplementalGroupsStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16939" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16927" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IDRange'>IDRange</a>&gt;[]&gt;;</pre>
@@ -3374,7 +3374,7 @@ MustRunAs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SupplementalGroupsStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16945" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L16933" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

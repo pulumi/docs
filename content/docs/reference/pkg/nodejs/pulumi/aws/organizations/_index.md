@@ -980,8 +980,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const snsTopic = new aws.sns.Topic("snsTopic", {});
-const example = pulumi.output(aws.organizations.getOrganization({}));
-const snsTopicPolicyPolicyDocument = pulumi.all([example, snsTopic.arn]).apply(([example, arn]) => aws.iam.getPolicyDocument({
+const example = aws.organizations.getOrganization({});
+const snsTopicPolicyPolicyDocument = snsTopic.arn.apply(arn => aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "SNS:Subscribe",
@@ -989,7 +989,7 @@ const snsTopicPolicyPolicyDocument = pulumi.all([example, snsTopic.arn]).apply((
         ],
         conditions: [{
             test: "StringEquals",
-            values: [example.id],
+            values: [example],
             variable: "aws:PrincipalOrgID",
         }],
         effect: "Allow",

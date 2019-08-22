@@ -48,7 +48,7 @@ Manages a Management Lock which is scoped to a Subscription, Resource Group or R
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = pulumi.output(azure.core.getSubscription({}));
+const current = azure.core.getSubscription({});
 const subscriptionLevel = new azure.managementresource.ManangementLock("subscription-level", {
     lockLevel: "CanNotDelete",
     name: "subscription-level",

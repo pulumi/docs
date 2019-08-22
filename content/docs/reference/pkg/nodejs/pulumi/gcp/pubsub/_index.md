@@ -58,6 +58,19 @@ title: Module pubsub
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="topic">pubsub/topic</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Subscription">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L80" >}}">class <b>Subscription</b></a>
@@ -330,12 +343,12 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
     policyData: admin.policyData,
     subscription: "your-subscription-name",
@@ -529,12 +542,12 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
     policyData: admin.policyData,
     subscription: "your-subscription-name",
@@ -728,12 +741,12 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
     policyData: admin.policyData,
     subscription: "your-subscription-name",
@@ -999,24 +1012,6 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Topic-onMessagePublished">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L78" >}}">method <b>onMessagePublished</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onMessagePublished(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a> | <a href='#TopicEventCallbackFunctionArgs'>TopicEventCallbackFunctionArgs</a>, args?: <a href='#TopicMessagePublishedArgs'>TopicMessagePublishedArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Creates and publishes a Cloud Functions that will be triggered by messages published to
-Cloud Pub/Sub topics in the same GCP project as the Function. Cloud Pub/Sub is a globally
-distributed message bus that automatically scales as you need it and provides a
-foundation for building your own robust, global services.
-
-See https://cloud.google.com/functions/docs/calling/pubsub for more details.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Topic-id">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
@@ -1103,12 +1098,12 @@ Three different resources help you manage your IAM policy for Pubsub Topic. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.pubsub.TopicIAMPolicy("editor", {
     policyData: admin.policyData,
     topic: "projects/{{project}}/topics/{{topic}}",
@@ -1304,12 +1299,12 @@ Three different resources help you manage your IAM policy for Pubsub Topic. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.pubsub.TopicIAMPolicy("editor", {
     policyData: admin.policyData,
     topic: "projects/{{project}}/topics/{{topic}}",
@@ -1505,12 +1500,12 @@ Three different resources help you manage your IAM policy for Pubsub Topic. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.pubsub.TopicIAMPolicy("editor", {
     policyData: admin.policyData,
     topic: "projects/{{project}}/topics/{{topic}}",

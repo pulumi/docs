@@ -434,12 +434,12 @@ Manages an API Operation within an API Management Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleApi = pulumi.output(azure.apimanagement.getApi({
+const exampleApi = azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
     revision: "2",
-}));
+});
 const exampleApiOperation = new azure.apimanagement.ApiOperation("example", {
     apiManagementName: exampleApi.apiManagementName,
     apiName: exampleApi.name,
@@ -914,11 +914,11 @@ Manages an API Management API Policy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleApi = pulumi.output(azure.apimanagement.getApi({
+const exampleApi = azure.apimanagement.getApi({
     apiManagementName: "example-apim",
     apiName: "my-api",
     resourceGroupName: "search-service",
-}));
+});
 const exampleApiPolicy = new azure.apimanagement.ApiPolicy("example", {
     apiManagementName: exampleApi.apiManagementName,
     apiName: exampleApi.name,
@@ -1086,12 +1086,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 import * as fs from "fs";
 
-const exampleApi = pulumi.output(azure.apimanagement.getApi({
+const exampleApi = azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
     revision: "2",
-}));
+});
 const exampleApiSchema = new azure.apimanagement.ApiSchema("example", {
     apiManagementName: exampleApi.apiManagementName,
     apiName: exampleApi.name,
@@ -1486,12 +1486,12 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
     name: "test-server",
     resourceGroupName: azurerm_api_management_example.resourceGroupName,
 });
-const exampleApi = pulumi.output(azure.apimanagement.getApi({
+const exampleApi = azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
     revision: "2",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_authorization_server.html.markdown.
@@ -2212,11 +2212,11 @@ Manages an API Management User Assignment to a Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleUser = pulumi.output(azure.apimanagement.getUser({
+const exampleUser = azure.apimanagement.getUser({
     apiManagementName: "example-apim",
     resourceGroupName: "search-service",
     userId: "my-user",
-}));
+});
 const exampleGroupUser = new azure.apimanagement.GroupUser("example", {
     apiManagementName: exampleUser.apiManagementName,
     groupName: "example-group",
@@ -3023,27 +3023,27 @@ Manages an API Management API Assignment to a Product.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleService = pulumi.output(azure.apimanagement.getService({
+const exampleService = azure.apimanagement.getService({
     name: "example-api",
     resourceGroupName: "example-resources",
-}));
-const exampleApi = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getApi({
+});
+const exampleApi = azure.apimanagement.getApi({
     apiManagementName: exampleService.name,
     name: "search-api",
-    resourceGroupName: exampleService1.resourceGroupName,
+    resourceGroupName: exampleService.resourceGroupName,
     revision: "2",
-}));
+});
 const exampleProductApi = new azure.apimanagement.ProductApi("example", {
     apiManagementName: exampleService.name,
     apiName: exampleApi.name,
     productId: azurerm_api_management_product_example.productId,
     resourceGroupName: exampleService.resourceGroupName,
 });
-const test = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getProduct({
+const test = azure.apimanagement.getProduct({
     apiManagementName: exampleService.name,
     productId: "my-product",
-    resourceGroupName: exampleService1.resourceGroupName,
-}));
+    resourceGroupName: exampleService.resourceGroupName,
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_api.html.markdown.
@@ -3188,26 +3188,26 @@ Manages an API Management Product Assignment to a Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleService = pulumi.output(azure.apimanagement.getService({
+const exampleService = azure.apimanagement.getService({
     name: "example-api",
     resourceGroupName: "example-resources",
-}));
-const exampleGroup = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getGroup({
+});
+const exampleGroup = azure.apimanagement.getGroup({
     apiManagementName: exampleService.name,
     name: "my-group",
-    resourceGroupName: exampleService1.resourceGroupName,
-}));
+    resourceGroupName: exampleService.resourceGroupName,
+});
 const exampleProductGroup = new azure.apimanagement.ProductGroup("example", {
     apiManagementName: exampleService.name,
     groupName: exampleGroup.name,
     productId: azurerm_api_management_user_example.id,
     resourceGroupName: exampleService.resourceGroupName,
 });
-const exampleProduct = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getProduct({
+const exampleProduct = azure.apimanagement.getProduct({
     apiManagementName: exampleService.name,
     productId: "my-product",
-    resourceGroupName: exampleService1.resourceGroupName,
-}));
+    resourceGroupName: exampleService.resourceGroupName,
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_group.html.markdown.
@@ -3352,11 +3352,11 @@ Manages an API Management Product Policy
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleProduct = pulumi.output(azure.apimanagement.getProduct({
+const exampleProduct = azure.apimanagement.getProduct({
     apiManagementName: "example-apim",
     productId: "my-product",
     resourceGroupName: "search-service",
-}));
+});
 const exampleProductPolicy = new azure.apimanagement.ProductPolicy("example", {
     apiManagementName: exampleProduct.apiManagementName,
     productId: exampleProduct.productId,
@@ -4145,20 +4145,20 @@ Manages a Subscription within a API Management Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testService = pulumi.output(azure.apimanagement.getService({
+const testService = azure.apimanagement.getService({
     name: "example-apim",
     resourceGroupName: "example-resources",
-}));
-const testProduct = pulumi.all([testService, testService]).apply(([testService, testService1]) => azure.apimanagement.getProduct({
+});
+const testProduct = azure.apimanagement.getProduct({
     apiManagementName: testService.name,
     productId: "00000000-0000-0000-0000-000000000000",
-    resourceGroupName: testService1.resourceGroupName,
-}));
-const testUser = pulumi.all([testService, testService]).apply(([testService, testService1]) => azure.apimanagement.getUser({
+    resourceGroupName: testService.resourceGroupName,
+});
+const testUser = azure.apimanagement.getUser({
     apiManagementName: testService.name,
-    resourceGroupName: testService1.resourceGroupName,
+    resourceGroupName: testService.resourceGroupName,
     userId: "11111111-1111-1111-1111-111111111111",
-}));
+});
 const testSubscription = new azure.apimanagement.Subscription("test", {
     apiManagementName: testService.name,
     displayName: "Parser API",
@@ -4595,12 +4595,12 @@ Use this data source to access information about an existing API Management API.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.apimanagement.getApi({
+const test = azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
     revision: "2",
-}));
+});
 
 export const apiManagementApiId = test.id;
 ```
@@ -4626,11 +4626,11 @@ Use this data source to access information about an existing API Management Grou
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.apimanagement.getGroup({
+const test = azure.apimanagement.getGroup({
     apiManagementName: "example-apim",
     name: "my-group",
     resourceGroupName: "search-service",
-}));
+});
 
 export const groupType = test.type;
 ```
@@ -4656,11 +4656,11 @@ Use this data source to access information about an existing API Management Prod
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.apimanagement.getProduct({
+const test = azure.apimanagement.getProduct({
     apiManagementName: "example-apim",
     productId: "my-product",
     resourceGroupName: "search-service",
-}));
+});
 
 export const productTerms = test.terms;
 ```
@@ -4686,10 +4686,10 @@ Use this data source to access information about an existing API Management Serv
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.apimanagement.getService({
+const test = azure.apimanagement.getService({
     name: "search-api",
     resourceGroupName: "search-service",
-}));
+});
 
 export const apiManagementId = test.id;
 ```
@@ -4715,11 +4715,11 @@ Use this data source to access information about an existing API Management User
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.apimanagement.getUser({
+const test = azure.apimanagement.getUser({
     apiManagementName: "example-apim",
     resourceGroupName: "search-service",
     userId: "my-user",
-}));
+});
 
 export const notes = test.notes;
 ```

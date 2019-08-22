@@ -222,17 +222,31 @@ More complex widget customization is possible.  See the invidual types and argum
 <li><a href="#WidgetAnnotation">interface WidgetAnnotation</a></li>
 <li><a href="#WidgetMetric">interface WidgetMetric</a></li>
 <li><a href="#YAxis">interface YAxis</a></li>
-<li><a href="#metrics">module metrics</a></li>
 <li><a href="#AlarmComparisonOperator">type AlarmComparisonOperator</a></li>
 <li><a href="#MetricStatistic">type MetricStatistic</a></li>
 <li><a href="#MetricUnit">type MetricUnit</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts" >}}">cloudwatch/dashboard.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts" >}}">cloudwatch/metric.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts" >}}">cloudwatch/metrics.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widget.ts" >}}">cloudwatch/widget.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts" >}}">cloudwatch/widgets_annotations.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts" >}}">cloudwatch/widgets_flow.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts" >}}">cloudwatch/widgets_graph.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts" >}}">cloudwatch/widgets_simple.ts</a> 
+<a href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts" >}}">cloudwatch/dashboard.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts" >}}">cloudwatch/metric.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widget.ts" >}}">cloudwatch/widget.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts" >}}">cloudwatch/widgets_annotations.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts" >}}">cloudwatch/widgets_flow.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts" >}}">cloudwatch/widgets_graph.ts</a> <a href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts" >}}">cloudwatch/widgets_simple.ts</a> 
 </div>
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="metrics">cloudwatch/metrics</a></li>
+<li><a href="metrics/events">cloudwatch/metrics/events</a></li>
+<li><a href="metrics/logs">cloudwatch/metrics/logs</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="AlarmAnnotation">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L35" >}}">class <b>AlarmAnnotation</b></a>
@@ -3204,25 +3218,6 @@ Optional min and max settings for the left Y-axis.
 
 Optional min and max settings for the right Y-axis.
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L20" >}}">module <b>metrics</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="events">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L21" >}}">module <b>events</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L131" >}}">module <b>logs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

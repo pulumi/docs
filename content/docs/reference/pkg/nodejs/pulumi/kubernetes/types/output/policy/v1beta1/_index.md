@@ -43,7 +43,7 @@ title: Module types/output/policy/v1beta1
 
 
 <h2 class="pdoc-module-header" id="AllowedCSIDriver">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17700" >}}">interface <b>AllowedCSIDriver</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17688" >}}">interface <b>AllowedCSIDriver</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -52,7 +52,7 @@ AllowedCSIDriver represents a single inline CSI Driver that is allowed to be use
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AllowedCSIDriver-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17704" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17692" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -64,7 +64,7 @@ Name is the registered name of the CSI driver
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AllowedFlexVolume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17711" >}}">interface <b>AllowedFlexVolume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17699" >}}">interface <b>AllowedFlexVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -73,7 +73,7 @@ AllowedFlexVolume represents a single Flexvolume that is allowed to be used.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AllowedFlexVolume-driver">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17715" >}}">property <b>driver</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17703" >}}">property <b>driver</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -85,7 +85,7 @@ driver is the name of the Flexvolume driver.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AllowedHostPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17723" >}}">interface <b>AllowedHostPath</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17711" >}}">interface <b>AllowedHostPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -95,7 +95,7 @@ to use. It requires the path prefix to be defined.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AllowedHostPath-pathPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17731" >}}">property <b>pathPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17719" >}}">property <b>pathPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pathPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -110,7 +110,7 @@ or `/etc/foo`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllowedHostPath-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17737" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17725" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -123,7 +123,7 @@ are readOnly.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Eviction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17746" >}}">interface <b>Eviction</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17734" >}}">interface <b>Eviction</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -134,7 +134,7 @@ is a subresource of Pod.  A request to cause such an eviction is created by POST
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Eviction-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17753" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17741" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -148,7 +148,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Eviction-deleteOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17758" >}}">property <b>deleteOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17746" >}}">property <b>deleteOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deleteOptions: <a href='#DeleteOptions'>DeleteOptions</a>;</pre>
@@ -159,7 +159,7 @@ DeleteOptions may be provided
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Eviction-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17766" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17754" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -173,7 +173,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Eviction-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17771" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17759" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -185,7 +185,7 @@ ObjectMeta describes the pod that is being evicted.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FSGroupStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17778" >}}">interface <b>FSGroupStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17766" >}}">interface <b>FSGroupStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -194,7 +194,7 @@ FSGroupStrategyOptions defines the strategy type and options used to create the 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FSGroupStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17783" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17771" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
@@ -206,7 +206,7 @@ then supply a single range with the same start and end. Required for MustRunAs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FSGroupStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17788" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17776" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -218,7 +218,7 @@ rule is the strategy that will dictate what FSGroup is used in the SecurityConte
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostPortRange">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17796" >}}">interface <b>HostPortRange</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17784" >}}">interface <b>HostPortRange</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -228,7 +228,7 @@ It requires both the start and end to be defined.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HostPortRange-max">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17800" >}}">property <b>max</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17788" >}}">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>max: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -239,7 +239,7 @@ max is the end of the range, inclusive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPortRange-min">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17805" >}}">property <b>min</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17793" >}}">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>min: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -251,7 +251,7 @@ min is the start of the range, inclusive.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IDRange">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17812" >}}">interface <b>IDRange</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17800" >}}">interface <b>IDRange</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -260,7 +260,7 @@ IDRange provides a min/max of an allowed range of IDs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IDRange-max">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17816" >}}">property <b>max</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17804" >}}">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>max: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -271,7 +271,7 @@ max is the end of the range, inclusive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IDRange-min">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17821" >}}">property <b>min</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17809" >}}">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>min: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -283,7 +283,7 @@ min is the start of the range, inclusive.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodDisruptionBudget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17829" >}}">interface <b>PodDisruptionBudget</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17817" >}}">interface <b>PodDisruptionBudget</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -293,7 +293,7 @@ collection of pods
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17836" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17824" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"policy/v1beta1"</span>;</pre>
@@ -307,7 +307,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17844" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17832" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodDisruptionBudget"</span>;</pre>
@@ -321,7 +321,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17847" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17835" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -329,7 +329,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17852" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17840" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PodDisruptionBudgetSpec'>PodDisruptionBudgetSpec</a>;</pre>
@@ -340,7 +340,7 @@ Specification of the desired behavior of the PodDisruptionBudget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17857" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17845" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#PodDisruptionBudgetStatus'>PodDisruptionBudgetStatus</a>;</pre>
@@ -352,7 +352,7 @@ Most recently observed status of the PodDisruptionBudget.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodDisruptionBudgetList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17864" >}}">interface <b>PodDisruptionBudgetList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17852" >}}">interface <b>PodDisruptionBudgetList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -361,7 +361,7 @@ PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17871" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17859" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"policy/v1beta1"</span>;</pre>
@@ -375,7 +375,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17874" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17862" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PodDisruptionBudget'>PodDisruptionBudget</a>[];</pre>
@@ -383,7 +383,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17882" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17870" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodDisruptionBudgetList"</span>;</pre>
@@ -397,7 +397,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17885" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17873" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -406,7 +406,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodDisruptionBudgetSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17892" >}}">interface <b>PodDisruptionBudgetSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17880" >}}">interface <b>PodDisruptionBudgetSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -415,7 +415,7 @@ PodDisruptionBudgetSpec is a description of a PodDisruptionBudget.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetSpec-maxUnavailable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17899" >}}">property <b>maxUnavailable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17887" >}}">property <b>maxUnavailable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxUnavailable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -429,7 +429,7 @@ with "minAvailable".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetSpec-minAvailable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17906" >}}">property <b>minAvailable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17894" >}}">property <b>minAvailable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minAvailable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -442,7 +442,7 @@ you can prevent all voluntary evictions by specifying "100%".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17911" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17899" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -454,7 +454,7 @@ Label query over pods whose evictions are managed by the disruption budget.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodDisruptionBudgetStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17919" >}}">interface <b>PodDisruptionBudgetStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17907" >}}">interface <b>PodDisruptionBudgetStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -464,7 +464,7 @@ Status may trail the actual state of a system.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-currentHealthy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17923" >}}">property <b>currentHealthy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17911" >}}">property <b>currentHealthy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>currentHealthy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -475,7 +475,7 @@ current number of healthy pods
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-desiredHealthy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17928" >}}">property <b>desiredHealthy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17916" >}}">property <b>desiredHealthy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>desiredHealthy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -486,7 +486,7 @@ minimum desired number of healthy pods
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-disruptedPods">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17942" >}}">property <b>disruptedPods</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17930" >}}">property <b>disruptedPods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disruptedPods: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -506,7 +506,7 @@ indicate problems with pod deletions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-disruptionsAllowed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17947" >}}">property <b>disruptionsAllowed</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17935" >}}">property <b>disruptionsAllowed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disruptionsAllowed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -517,7 +517,7 @@ Number of pod disruptions that are currently allowed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-expectedPods">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17952" >}}">property <b>expectedPods</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17940" >}}">property <b>expectedPods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedPods: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -528,7 +528,7 @@ total number of pods counted by this disruption budget
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-observedGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17959" >}}">property <b>observedGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17947" >}}">property <b>observedGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>observedGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -542,7 +542,7 @@ generation.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17967" >}}">interface <b>PodSecurityPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17955" >}}">interface <b>PodSecurityPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -552,7 +552,7 @@ will be applied to a pod and container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17974" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17962" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"policy/v1beta1"</span>;</pre>
@@ -566,7 +566,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17982" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17970" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodSecurityPolicy"</span>;</pre>
@@ -580,7 +580,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17988" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17976" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -592,7 +592,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17993" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17981" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PodSecurityPolicySpec'>PodSecurityPolicySpec</a>;</pre>
@@ -604,7 +604,7 @@ spec defines the policy enforced.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18000" >}}">interface <b>PodSecurityPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17988" >}}">interface <b>PodSecurityPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -613,7 +613,7 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18007" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L17995" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"policy/v1beta1"</span>;</pre>
@@ -627,7 +627,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18012" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18000" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PodSecurityPolicy'>PodSecurityPolicy</a>[];</pre>
@@ -638,7 +638,7 @@ items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18020" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18008" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodSecurityPolicyList"</span>;</pre>
@@ -652,7 +652,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18026" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18014" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -665,7 +665,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicySpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18033" >}}">interface <b>PodSecurityPolicySpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18021" >}}">interface <b>PodSecurityPolicySpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -674,7 +674,7 @@ PodSecurityPolicySpec defines the policy enforced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowPrivilegeEscalation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18038" >}}">property <b>allowPrivilegeEscalation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18026" >}}">property <b>allowPrivilegeEscalation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowPrivilegeEscalation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -686,7 +686,7 @@ unspecified, defaults to true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedCSIDrivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18046" >}}">property <b>allowedCSIDrivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18034" >}}">property <b>allowedCSIDrivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedCSIDrivers: <a href='#AllowedCSIDriver'>AllowedCSIDriver</a>[];</pre>
@@ -700,7 +700,7 @@ enables the CSIInlineVolume feature gate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedCapabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18053" >}}">property <b>allowedCapabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18041" >}}">property <b>allowedCapabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedCapabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -713,7 +713,7 @@ not list a capability in both allowedCapabilities and requiredDropCapabilities.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedFlexVolumes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18060" >}}">property <b>allowedFlexVolumes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18048" >}}">property <b>allowedFlexVolumes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedFlexVolumes: <a href='#AllowedFlexVolume'>AllowedFlexVolume</a>[];</pre>
@@ -726,7 +726,7 @@ Flexvolumes is allowed in the "volumes" field.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedHostPaths">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18066" >}}">property <b>allowedHostPaths</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18054" >}}">property <b>allowedHostPaths</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedHostPaths: <a href='#AllowedHostPath'>AllowedHostPath</a>[];</pre>
@@ -738,7 +738,7 @@ may be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedProcMountTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18073" >}}">property <b>allowedProcMountTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18061" >}}">property <b>allowedProcMountTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedProcMountTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -751,7 +751,7 @@ be enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedUnsafeSysctls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18084" >}}">property <b>allowedUnsafeSysctls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18072" >}}">property <b>allowedUnsafeSysctls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedUnsafeSysctls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -768,7 +768,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-defaultAddCapabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18092" >}}">property <b>defaultAddCapabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18080" >}}">property <b>defaultAddCapabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAddCapabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -782,7 +782,7 @@ here are implicitly allowed, and need not be included in the allowedCapabilities
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-defaultAllowPrivilegeEscalation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18098" >}}">property <b>defaultAllowPrivilegeEscalation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18086" >}}">property <b>defaultAllowPrivilegeEscalation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAllowPrivilegeEscalation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -794,7 +794,7 @@ more privileges than its parent process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-forbiddenSysctls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18108" >}}">property <b>forbiddenSysctls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18096" >}}">property <b>forbiddenSysctls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forbiddenSysctls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -810,7 +810,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-fsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18113" >}}">property <b>fsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18101" >}}">property <b>fsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsGroup: <a href='#FSGroupStrategyOptions'>FSGroupStrategyOptions</a>;</pre>
@@ -821,7 +821,7 @@ fsGroup is the strategy that will dictate what fs group is used by the SecurityC
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostIPC">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18118" >}}">property <b>hostIPC</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18106" >}}">property <b>hostIPC</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostIPC: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -832,7 +832,7 @@ hostIPC determines if the policy allows the use of HostIPC in the pod spec.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostNetwork">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18123" >}}">property <b>hostNetwork</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18111" >}}">property <b>hostNetwork</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -843,7 +843,7 @@ hostNetwork determines if the policy allows the use of HostNetwork in the pod sp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostPID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18128" >}}">property <b>hostPID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18116" >}}">property <b>hostPID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -854,7 +854,7 @@ hostPID determines if the policy allows the use of HostPID in the pod spec.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostPorts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18133" >}}">property <b>hostPorts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18121" >}}">property <b>hostPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPorts: <a href='#HostPortRange'>HostPortRange</a>[];</pre>
@@ -865,7 +865,7 @@ hostPorts determines which host port ranges are allowed to be exposed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-privileged">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18138" >}}">property <b>privileged</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18126" >}}">property <b>privileged</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileged: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -876,7 +876,7 @@ privileged determines if a pod can request to be run as privileged.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-readOnlyRootFilesystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18146" >}}">property <b>readOnlyRootFilesystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18134" >}}">property <b>readOnlyRootFilesystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnlyRootFilesystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -890,7 +890,7 @@ root file system if it wishes but it will not be forced to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-requiredDropCapabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18152" >}}">property <b>requiredDropCapabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18140" >}}">property <b>requiredDropCapabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requiredDropCapabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -902,7 +902,7 @@ These are required to be dropped and cannot be added.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runAsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18159" >}}">property <b>runAsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18147" >}}">property <b>runAsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsGroup: <a href='#RunAsGroupStrategyOptions'>RunAsGroupStrategyOptions</a>;</pre>
@@ -915,7 +915,7 @@ the RunAsGroup feature gate to be enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runAsUser">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18164" >}}">property <b>runAsUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18152" >}}">property <b>runAsUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsUser: <a href='#RunAsUserStrategyOptions'>RunAsUserStrategyOptions</a>;</pre>
@@ -926,7 +926,7 @@ runAsUser is the strategy that will dictate the allowable RunAsUser values that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runtimeClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18171" >}}">property <b>runtimeClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18159" >}}">property <b>runtimeClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtimeClass: <a href='#RuntimeClassStrategyOptions'>RuntimeClassStrategyOptions</a>;</pre>
@@ -939,7 +939,7 @@ this field depends on the RuntimeClass feature gate being enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-seLinux">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18176" >}}">property <b>seLinux</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18164" >}}">property <b>seLinux</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>seLinux: <a href='#SELinuxStrategyOptions'>SELinuxStrategyOptions</a>;</pre>
@@ -950,7 +950,7 @@ seLinux is the strategy that will dictate the allowable labels that may be set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-supplementalGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18182" >}}">property <b>supplementalGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18170" >}}">property <b>supplementalGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supplementalGroups: <a href='#SupplementalGroupsStrategyOptions'>SupplementalGroupsStrategyOptions</a>;</pre>
@@ -962,7 +962,7 @@ the SecurityContext.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicySpec-volumes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18188" >}}">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18176" >}}">property <b>volumes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -975,7 +975,7 @@ used. To allow all volumes you may use '*'.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RunAsGroupStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18196" >}}">interface <b>RunAsGroupStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18184" >}}">interface <b>RunAsGroupStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -985,7 +985,7 @@ strategy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RunAsGroupStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18201" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18189" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
@@ -997,7 +997,7 @@ gid then supply a single range with the same start and end. Required for MustRun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RunAsGroupStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18206" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18194" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1009,7 +1009,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RunAsUserStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18214" >}}">interface <b>RunAsUserStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18202" >}}">interface <b>RunAsUserStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1019,7 +1019,7 @@ strategy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RunAsUserStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18219" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18207" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
@@ -1031,7 +1031,7 @@ uid then supply a single range with the same start and end. Required for MustRun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RunAsUserStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18224" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18212" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1043,7 +1043,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18232" >}}">interface <b>RuntimeClassStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18220" >}}">interface <b>RuntimeClassStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1053,7 +1053,7 @@ RuntimeClasses for a pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassStrategyOptions-allowedRuntimeClassNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18238" >}}">property <b>allowedRuntimeClassNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18226" >}}">property <b>allowedRuntimeClassNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedRuntimeClassNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1066,7 +1066,7 @@ in the list. An empty list requires the RuntimeClassName field to be unset.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassStrategyOptions-defaultRuntimeClassName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18244" >}}">property <b>defaultRuntimeClassName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18232" >}}">property <b>defaultRuntimeClassName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRuntimeClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1079,7 +1079,7 @@ be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SELinuxStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18251" >}}">interface <b>SELinuxStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18239" >}}">interface <b>SELinuxStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1088,7 +1088,7 @@ SELinuxStrategyOptions defines the strategy type and any options used to create 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SELinuxStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18255" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18243" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1099,7 +1099,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SELinuxStrategyOptions-seLinuxOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18261" >}}">property <b>seLinuxOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18249" >}}">property <b>seLinuxOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>seLinuxOptions: <a href='#SELinuxOptions'>SELinuxOptions</a>;</pre>
@@ -1112,7 +1112,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SupplementalGroupsStrategyOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18269" >}}">interface <b>SupplementalGroupsStrategyOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18257" >}}">interface <b>SupplementalGroupsStrategyOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1122,7 +1122,7 @@ strategy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SupplementalGroupsStrategyOptions-ranges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18275" >}}">property <b>ranges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18263" >}}">property <b>ranges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
@@ -1135,7 +1135,7 @@ MustRunAs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SupplementalGroupsStrategyOptions-rule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18281" >}}">property <b>rule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L18269" >}}">property <b>rule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

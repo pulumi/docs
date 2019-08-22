@@ -689,10 +689,10 @@ Use this data source to access information about an existing Log Analytics (form
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.operationalinsights.getAnalyticsWorkspace({
+const test = azure.operationalinsights.getAnalyticsWorkspace({
     name: "acctest-01",
     resourceGroupName: "acctest",
-}));
+});
 
 export const logAnalyticsWorkspaceId = test.workspaceId;
 ```

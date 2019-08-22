@@ -44,7 +44,7 @@ or reject and may change the object.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MutatingWebhookConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/admissionregistration/v1beta1/#MutatingWebhookConfiguration'>inputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MutatingWebhookConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.admissionregistration.v1beta1.MutatingWebhookConfiguration, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a admissionregistration.v1beta1.MutatingWebhookConfiguration resource with the given unique name, arguments, and options.
@@ -140,7 +140,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 Standard object metadata; More info:
@@ -164,7 +164,7 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L39" >}}">property <b>webhooks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/admissionregistration/v1beta1/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.MutatingWebhook[]&gt;;</pre>
 {{% md %}}
 
 Webhooks is a list of webhooks and the affected resources and operations.
@@ -188,7 +188,7 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MutatingWebhookConfigurationList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/admissionregistration/v1beta1/#MutatingWebhookConfigurationList'>inputs.admissionregistration.v1beta1.MutatingWebhookConfigurationList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MutatingWebhookConfigurationList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.admissionregistration.v1beta1.MutatingWebhookConfigurationList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a admissionregistration.v1beta1.MutatingWebhookConfigurationList resource with the given unique name, arguments, and options.
@@ -270,7 +270,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/admissionregistration/v1beta1/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.MutatingWebhookConfiguration[]&gt;;</pre>
 {{% md %}}
 
 List of MutatingWebhookConfiguration.
@@ -295,7 +295,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -333,7 +333,7 @@ accept or reject and object without changing it.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ValidatingWebhookConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/admissionregistration/v1beta1/#ValidatingWebhookConfiguration'>inputs.admissionregistration.v1beta1.ValidatingWebhookConfiguration</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ValidatingWebhookConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.admissionregistration.v1beta1.ValidatingWebhookConfiguration, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a admissionregistration.v1beta1.ValidatingWebhookConfiguration resource with the given unique name, arguments, and options.
@@ -429,7 +429,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 Standard object metadata; More info:
@@ -453,7 +453,7 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L39" >}}">property <b>webhooks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/admissionregistration/v1beta1/#ValidatingWebhook'>outputs.admissionregistration.v1beta1.ValidatingWebhook</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.ValidatingWebhook[]&gt;;</pre>
 {{% md %}}
 
 Webhooks is a list of webhooks and the affected resources and operations.
@@ -477,7 +477,7 @@ ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ValidatingWebhookConfigurationList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/admissionregistration/v1beta1/#ValidatingWebhookConfigurationList'>inputs.admissionregistration.v1beta1.ValidatingWebhookConfigurationList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ValidatingWebhookConfigurationList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.admissionregistration.v1beta1.ValidatingWebhookConfigurationList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a admissionregistration.v1beta1.ValidatingWebhookConfigurationList resource with the given unique name, arguments, and options.
@@ -559,7 +559,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/admissionregistration/v1beta1/#ValidatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.ValidatingWebhookConfiguration</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.ValidatingWebhookConfiguration[]&gt;;</pre>
 {{% md %}}
 
 List of ValidatingWebhookConfiguration.
@@ -584,7 +584,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

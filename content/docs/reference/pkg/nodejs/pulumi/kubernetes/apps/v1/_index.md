@@ -56,7 +56,7 @@ stability. It is primarily for internal use by controllers.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ControllerRevision(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#ControllerRevision'>inputs.apps.v1.ControllerRevision</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ControllerRevision(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.ControllerRevision, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.ControllerRevision resource with the given unique name, arguments, and options.
@@ -126,7 +126,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ControllerRevision.ts#L31" >}}">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/pkg/runtime/#RawExtension'>outputs.pkg.runtime.RawExtension</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.pkg.runtime.RawExtension&gt;;</pre>
 {{% md %}}
 
 Data is the serialized representation of the state.
@@ -163,7 +163,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ControllerRevision.ts#L45" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -211,7 +211,7 @@ ControllerRevisionList is a resource containing a list of ControllerRevision obj
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ControllerRevisionList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#ControllerRevisionList'>inputs.apps.v1.ControllerRevisionList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ControllerRevisionList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.ControllerRevisionList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.ControllerRevisionList resource with the given unique name, arguments, and options.
@@ -293,7 +293,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ControllerRevisionList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#ControllerRevision'>outputs.apps.v1.ControllerRevision</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.ControllerRevision[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of ControllerRevisions
@@ -318,7 +318,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ControllerRevisionList.ts#L37" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
@@ -354,7 +354,7 @@ DaemonSet represents the configuration of a daemon set.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#DaemonSet'>inputs.apps.v1.DaemonSet</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.DaemonSet, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.DaemonSet resource with the given unique name, arguments, and options.
@@ -450,7 +450,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DaemonSet.ts#L33" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -462,7 +462,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DaemonSet.ts#L39" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#DaemonSetSpec'>outputs.apps.v1.DaemonSetSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.DaemonSetSpec&gt;;</pre>
 {{% md %}}
 
 The desired behavior of this daemon set. More info:
@@ -474,7 +474,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DaemonSet.ts#L46" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#DaemonSetStatus'>outputs.apps.v1.DaemonSetStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.DaemonSetStatus&gt;;</pre>
 {{% md %}}
 
 The current status of this daemon set. This data may be out of date by some window of time.
@@ -512,7 +512,7 @@ DaemonSetList is a collection of daemon sets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#DaemonSetList'>inputs.apps.v1.DaemonSetList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.DaemonSetList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.DaemonSetList resource with the given unique name, arguments, and options.
@@ -594,7 +594,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DaemonSetList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#DaemonSet'>outputs.apps.v1.DaemonSet</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.DaemonSet[]&gt;;</pre>
 {{% md %}}
 
 A list of daemon sets.
@@ -619,7 +619,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DaemonSetList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -641,7 +641,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Deployment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L35" >}}">class <b>Deployment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L12" >}}">class <b>Deployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -649,37 +649,14 @@ deployments.
 
 Deployment enables declarative updates for Pods and ReplicaSets.
 
-This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
-The following conditions are used to determine whether the resource creation has
-succeeded or failed:
-1. The Deployment has begun to be updated by the Deployment controller. If the current
-   generation of the Deployment is > 1, then this means that the current generation must
-   be different from the generation reported by the last outputs.
-2. There exists a ReplicaSet whose revision is equal to the current revision of the
-   Deployment.
-3. The Deployment's '.status.conditions' has a status of type 'Available' whose 'status'
-   member is set to 'True'.
-4. If the Deployment has generation > 1, then '.status.conditions' has a status of type
-   'Progressing', whose 'status' member is set to 'True', and whose 'reason' is
-   'NewReplicaSetAvailable'. For generation <= 1, this status field does not exist,
-   because it doesn't do a rollout (i.e., it simply creates the Deployment and
-   corresponding ReplicaSet), and therefore there is no rollout to mark as 'Progressing'.
-
-If the Deployment has not reached a Ready state after 5 minutes, it will
-time out and mark the resource update as Failed. You can override the default timeout value
-by setting 'pulumi.com/timeoutSeconds' as a '.metadata.annotation' on the resource.
-This approach will be deprecated in favor of customTimeouts. See
-https://github.com/pulumi/pulumi-kubernetes/issues/672 for details.
-
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L96" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Deployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#Deployment'>inputs.apps.v1.Deployment</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Deployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.Deployment, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.Deployment resource with the given unique name, arguments, and options.
@@ -691,7 +668,7 @@ Create a apps.v1.Deployment resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L79" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -718,7 +695,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L90" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -732,7 +709,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L42" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L19" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apps/v1"</span>&gt;;</pre>
@@ -758,7 +735,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L50" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L27" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Deployment"</span>&gt;;</pre>
@@ -772,10 +749,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L55" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L32" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 Standard object metadata.
@@ -783,10 +760,10 @@ Standard object metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L60" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L37" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#DeploymentSpec'>outputs.apps.v1.DeploymentSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.DeploymentSpec&gt;;</pre>
 {{% md %}}
 
 Specification of the desired behavior of the Deployment.
@@ -794,10 +771,10 @@ Specification of the desired behavior of the Deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L65" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/Deployment.ts#L42" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#DeploymentStatus'>outputs.apps.v1.DeploymentStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.DeploymentStatus&gt;;</pre>
 {{% md %}}
 
 Most recently observed status of the Deployment.
@@ -833,7 +810,7 @@ DeploymentList is a list of Deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DeploymentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#DeploymentList'>inputs.apps.v1.DeploymentList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DeploymentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.DeploymentList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.DeploymentList resource with the given unique name, arguments, and options.
@@ -915,7 +892,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DeploymentList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#Deployment'>outputs.apps.v1.Deployment</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.Deployment[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of Deployments.
@@ -940,7 +917,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/DeploymentList.ts#L37" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 Standard list metadata.
@@ -976,7 +953,7 @@ ReplicaSet ensures that a specified number of pod replicas are running at any gi
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#ReplicaSet'>inputs.apps.v1.ReplicaSet</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.ReplicaSet, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.ReplicaSet resource with the given unique name, arguments, and options.
@@ -1072,7 +1049,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ReplicaSet.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 
 If the Labels of a ReplicaSet are empty, they are defaulted to be the same as the Pod(s)
@@ -1085,7 +1062,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ReplicaSet.ts#L40" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#ReplicaSetSpec'>outputs.apps.v1.ReplicaSetSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.ReplicaSetSpec&gt;;</pre>
 {{% md %}}
 
 Spec defines the specification of the desired behavior of the ReplicaSet. More info:
@@ -1097,7 +1074,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ReplicaSet.ts#L47" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#ReplicaSetStatus'>outputs.apps.v1.ReplicaSetStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.ReplicaSetStatus&gt;;</pre>
 {{% md %}}
 
 Status is the most recently observed status of the ReplicaSet. This data may be out of date
@@ -1135,7 +1112,7 @@ ReplicaSetList is a collection of ReplicaSets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#ReplicaSetList'>inputs.apps.v1.ReplicaSetList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.ReplicaSetList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.ReplicaSetList resource with the given unique name, arguments, and options.
@@ -1217,7 +1194,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ReplicaSetList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#ReplicaSet'>outputs.apps.v1.ReplicaSet</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.ReplicaSet[]&gt;;</pre>
 {{% md %}}
 
 List of ReplicaSets. More info:
@@ -1243,7 +1220,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/ReplicaSetList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -1265,7 +1242,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StatefulSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L30" >}}">class <b>StatefulSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L16" >}}">class <b>StatefulSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1277,28 +1254,14 @@ StatefulSet represents a set of pods with consistent identities. Identities are 
 The StatefulSet guarantees that a given network identity will always map to the same storage
 identity.
 
-This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
-The following conditions are used to determine whether the resource creation has
-succeeded or failed:
-1. The value of 'spec.replicas' matches '.status.replicas', '.status.currentReplicas',
-   and '.status.readyReplicas'.
-2. The value of '.status.updateRevision' matches '.status.currentRevision'.
-
-If the StatefulSet has not reached a Ready state after 5 minutes, it will
-time out and mark the resource update as Failed. You can override the default timeout value
-by setting 'pulumi.com/timeoutSeconds' as a '.metadata.annotation' on the resource.
-This approach will be deprecated in favor of customTimeouts. See
-https://github.com/pulumi/pulumi-kubernetes/issues/672 for details.
-
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StatefulSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L90" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L76" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StatefulSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#StatefulSet'>inputs.apps.v1.StatefulSet</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StatefulSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.StatefulSet, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.StatefulSet resource with the given unique name, arguments, and options.
@@ -1310,7 +1273,7 @@ Create a apps.v1.StatefulSet resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L73" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1337,7 +1300,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L84" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1351,7 +1314,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L37" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L23" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apps/v1"</span>&gt;;</pre>
@@ -1377,7 +1340,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L45" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L31" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"StatefulSet"</span>&gt;;</pre>
@@ -1391,18 +1354,18 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L48" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L53" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L39" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#StatefulSetSpec'>outputs.apps.v1.StatefulSetSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.StatefulSetSpec&gt;;</pre>
 {{% md %}}
 
 Spec defines the desired identities of pods in this set.
@@ -1410,10 +1373,10 @@ Spec defines the desired identities of pods in this set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatefulSet-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L59" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSet.ts#L45" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#StatefulSetStatus'>outputs.apps.v1.StatefulSetStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.StatefulSetStatus&gt;;</pre>
 {{% md %}}
 
 Status is the current status of Pods in this StatefulSet. This data may be out of date by
@@ -1450,7 +1413,7 @@ StatefulSetList is a collection of StatefulSets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StatefulSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/input/apps/v1/#StatefulSetList'>inputs.apps.v1.StatefulSetList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StatefulSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.apps.v1.StatefulSetList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apps.v1.StatefulSetList resource with the given unique name, arguments, and options.
@@ -1532,7 +1495,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSetList.ts#L22" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/apps/v1/#StatefulSet'>outputs.apps.v1.StatefulSet</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.apps.v1.StatefulSet[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1554,7 +1517,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apps/v1/StatefulSetList.ts#L33" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/@pulumi/kubernetes/types/output/meta/v1/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

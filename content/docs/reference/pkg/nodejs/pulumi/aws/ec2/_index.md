@@ -280,9 +280,6 @@ title: Module ec2
 <li><a href="#VpnGatewayState">interface VpnGatewayState</a></li>
 <li><a href="#ClusterStrategy">let ClusterStrategy</a></li>
 <li><a href="#SpreadStrategy">let SpreadStrategy</a></li>
-<li><a href="#InstancePlatforms">module InstancePlatforms</a></li>
-<li><a href="#InstanceTypes">module InstanceTypes</a></li>
-<li><a href="#Tenancies">module Tenancies</a></li>
 <li><a href="#InstancePlatform">type InstancePlatform</a></li>
 <li><a href="#InstanceType">type InstanceType</a></li>
 <li><a href="#PlacementStrategy">type PlacementStrategy</a></li>
@@ -295,6 +292,21 @@ title: Module ec2
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="InstancePlatforms">ec2/InstancePlatforms</a></li>
+<li><a href="InstanceTypes">ec2/InstanceTypes</a></li>
+<li><a href="Tenancies">ec2/Tenancies</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="Ami">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/ami.ts#L39" >}}">class <b>Ami</b></a>
@@ -4411,7 +4423,7 @@ and deleted. Instances also support [provisioning](https://www.terraform.io/docs
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -4424,7 +4436,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const web = new aws.ec2.Instance("web", {
     ami: ubuntu.id,
     instanceType: "t2.micro",
@@ -5304,7 +5316,7 @@ Provides a resource to create a new launch configuration, used for autoscaling g
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -5317,7 +5329,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -5338,7 +5350,7 @@ with `namePrefix`.  Example:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -5351,7 +5363,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -5381,7 +5393,7 @@ for more information or how to launch [Spot Instances][3] with this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -5394,7 +5406,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     imageId: ubuntu.id,
     instanceType: "m4.large",
@@ -7480,14 +7492,14 @@ const sg = new aws.ec2.SecurityGroup("sg", {
         type: "test-security-group",
     },
 });
-const ami = pulumi.output(aws.getAmi({
+const ami = aws.getAmi({
     filters: [{
         name: "name",
         values: ["amzn-ami-hvm-*"],
     }],
     mostRecent: true,
     owners: ["amazon"],
-}));
+});
 const instance = new aws.ec2.Instance("instance", {
     ami: ami.id,
     instanceType: "t2.micro",
@@ -7514,9 +7526,9 @@ const sg = new aws.ec2.SecurityGroup("sg", {
         type: "test-security-group",
     },
 });
-const instance = pulumi.output(aws.ec2.getInstance({
+const instance = aws.ec2.getInstance({
     instanceId: "i-1234567890abcdef0",
-}));
+});
 const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", {
     networkInterfaceId: instance.networkInterfaceId,
     securityGroupId: sg.id,
@@ -11804,11 +11816,11 @@ const ptfeServiceVpcEndpoint = new aws.ec2.VpcEndpoint("ptfeService", {
     vpcEndpointType: "Interface",
     vpcId: var_vpc_id,
 });
-const internal = pulumi.output(aws.route53.getZone({
+const internal = aws.route53.getZone({
     name: "vpc.internal.",
     privateZone: true,
     vpcId: var_vpc_id,
-}));
+});
 const ptfeServiceRecord = new aws.route53.Record("ptfeService", {
     records: [ptfeServiceVpcEndpoint.dnsEntries.apply(dnsEntries => (<any>dnsEntries[0])["dnsName"])],
     ttl: 300,
@@ -12684,7 +12696,7 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getCallerIdentity({}));
+const current = aws.getCallerIdentity({});
 const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allowMeToFoo", {
     principalArn: current.arn,
     vpcEndpointServiceId: aws_vpc_endpoint_service_foo.id,
@@ -14527,12 +14539,12 @@ const main = new aws.ec2.VpnGateway("main", {
     amazonSideAsn: "7224",
     vpcId: aws_vpc_main.id,
 });
-const foo = pulumi.output(aws.ec2.getCustomerGateway({
+const foo = aws.ec2.getCustomerGateway({
     filters: [{
         name: "tag:Name",
         values: ["foo-prod"],
     }],
-}));
+});
 const transit = new aws.ec2.VpnConnection("transit", {
     customerGatewayId: foo.id,
     staticRoutesOnly: false,
@@ -14563,7 +14575,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.ec2.getInstance({
+const foo = aws.ec2.getInstance({
     filters: [
         {
             name: "image-id",
@@ -14575,7 +14587,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
         },
     ],
     instanceId: "i-instanceid",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown.
@@ -14615,12 +14627,12 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const vpcId = config.require("vpcId");
 
-const defaultInternetGateway = pulumi.output(aws.ec2.getInternetGateway({
+const defaultInternetGateway = aws.ec2.getInternetGateway({
     filters: [{
         name: "attachment.vpc-id",
         values: [vpcId],
     }],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown.
@@ -14644,9 +14656,9 @@ Provides information about a Launch Configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
+const ubuntu = aws.ec2.getLaunchConfiguration({
     name: "test-launch-config",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown.
@@ -14670,9 +14682,9 @@ Provides information about a Launch Template.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
+const defaultLaunchTemplate = aws.ec2.getLaunchTemplate({
     name: "my-launch-template",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown.
@@ -14739,9 +14751,9 @@ The following shows outputing all network ACL ids in a vpc.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkAcls = pulumi.output(aws.ec2.getNetworkAcls({
+const exampleNetworkAcls = aws.ec2.getNetworkAcls({
     vpcId: var_vpc_id,
-}));
+});
 
 export const example = exampleNetworkAcls.ids;
 ```
@@ -14753,12 +14765,12 @@ tag of `Tier` set to a value of "Private".
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getNetworkAcls({
+const example = aws.ec2.getNetworkAcls({
     tags: {
         Tier: "Private",
     },
     vpcId: var_vpc_id,
-}));
+});
 ```
 
 The following example retrieves a network ACL id in a VPC which associated
@@ -14798,9 +14810,9 @@ Use this data source to get information about a Network Interface.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bar = pulumi.output(aws.ec2.getNetworkInterface({
+const bar = aws.ec2.getNetworkInterface({
     id: "eni-01234567",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown.
@@ -14824,7 +14836,7 @@ The following shows outputing all network interface ids in a region.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkInterfaces = pulumi.output(aws.ec2.getNetworkInterfaces({}));
+const exampleNetworkInterfaces = aws.ec2.getNetworkInterfaces({});
 
 export const example = exampleNetworkInterfaces.ids;
 ```
@@ -14835,11 +14847,11 @@ The following example retrieves a list of all network interface ids with a custo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getNetworkInterfaces({
+const example = aws.ec2.getNetworkInterfaces({
     tags: {
         Name: "test",
     },
-}));
+});
 
 export const example1 = example.ids;
 ```
@@ -14899,9 +14911,9 @@ const route = aws_route_table_selected.id.apply(id => aws.ec2.getRoute({
 const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterface({
     networkInterfaceId: route.networkInterfaceId,
 }));
-const selected = pulumi.output(aws.ec2.getRouteTable({
+const selected = aws.ec2.getRouteTable({
     subnetId: subnetId,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown.
@@ -14935,9 +14947,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const subnetId = config.require("subnetId");
 
-const selected = pulumi.output(aws.ec2.getRouteTable({
+const selected = aws.ec2.getRouteTable({
     subnetId: subnetId,
-}));
+});
 const route = new aws.ec2.Route("route", {
     destinationCidrBlock: "10.0.1.0/22",
     routeTableId: selected.id,
@@ -14970,18 +14982,18 @@ connection.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const rts = pulumi.output(aws.ec2.getRouteTables({
+const rts = aws.ec2.getRouteTables({
     filters: [{
         name: "tag:kubernetes.io/kops/role",
         values: ["private*"],
     }],
     vpcId: var_vpc_id,
-}));
+});
 const route: aws.ec2.Route[] = [];
-for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
+for (let i = 0; i < rts.ids.length; i++) {
     route.push(new aws.ec2.Route(`r-${i}`, {
         destinationCidrBlock: "10.0.1.0/22",
-        routeTableId: rts.apply(rts => rts.ids[i]),
+        routeTableId: rts.ids[i],
         vpcPeeringConnectionId: "pcx-0e9a7a9ecd137dc54",
     }));
 }
@@ -15018,9 +15030,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const securityGroupId = config.require("securityGroupId");
 
-const selected = pulumi.output(aws.ec2.getSecurityGroup({
+const selected = aws.ec2.getSecurityGroup({
     id: securityGroupId,
-}));
+});
 const subnet = new aws.ec2.Subnet("subnet", {
     cidrBlock: "10.0.1.0/24",
     vpcId: selected.vpcId,
@@ -15049,19 +15061,19 @@ outside of this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = pulumi.output(aws.ec2.getSecurityGroups({
+const test = aws.ec2.getSecurityGroups({
     tags: {
         Application: "k8s",
         Environment: "dev",
     },
-}));
+});
 ```
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = pulumi.output(aws.ec2.getSecurityGroups({
+const test = aws.ec2.getSecurityGroups({
     filters: [
         {
             name: "group-name",
@@ -15072,7 +15084,7 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
             values: [varVpcId],
         },
     ],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown.
@@ -15107,9 +15119,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const subnetId = config.require("subnetId");
 
-const selected = pulumi.output(aws.ec2.getSubnet({
+const selected = aws.ec2.getSubnet({
     id: subnetId,
-}));
+});
 const subnet = new aws.ec2.SecurityGroup("subnet", {
     ingress: [{
         cidrBlocks: [selected.cidrBlock],
@@ -15146,15 +15158,15 @@ The following shows outputing all cidr blocks for every subnet id in a vpc.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleSubnetIds = pulumi.output(aws.ec2.getSubnetIds({
+const exampleSubnetIds = aws.ec2.getSubnetIds({
     vpcId: var_vpc_id,
-}));
-const exampleSubnet: Output<aws.ec2.GETSUBNETResult>[] = [];
-for (let i = 0; i < exampleSubnetIds.apply(exampleSubnetIds => exampleSubnetIds.ids.length); i++) {
-    exampleSubnet.push(aws.ec2.getSubnet);
-%!(EXTRA string=exampleSubnetIds.apply(exampleSubnetIds => aws.ec2.getSubnet({
+});
+const exampleSubnet: aws.ec2.GetSubnetResult[] = [];
+for (let i = 0; i < exampleSubnetIds.ids.length; i++) {
+    exampleSubnet.push(aws.ec2.getSubnet({
         id: exampleSubnetIds.ids[i],
-    })))}
+    }));
+}
 
 export const subnetCidrBlocks = exampleSubnet.map(v => v.cidrBlock);
 ```
@@ -15167,18 +15179,18 @@ can loop through the subnets, putting instances across availability zones.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const privateSubnetIds = pulumi.output(aws.ec2.getSubnetIds({
+const privateSubnetIds = aws.ec2.getSubnetIds({
     tags: {
         Tier: "Private",
     },
     vpcId: var_vpc_id,
-}));
+});
 const app: aws.ec2.Instance[] = [];
 for (let i = 0; i < 3; i++) {
     app.push(new aws.ec2.Instance(`app-${i}`, {
         ami: var_ami,
         instanceType: "t2.micro",
-        subnetId: privateSubnetIds.apply(privateSubnetIds => privateSubnetIds.ids[i]),
+        subnetId: privateSubnetIds.ids[i],
     }));
 }
 ```
@@ -15215,15 +15227,15 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const vpcId = config.require("vpcId");
 
-const selected = pulumi.output(aws.ec2.getVpc({
+const selected = aws.ec2.getVpc({
     id: vpcId,
-}));
+});
 const example = new aws.ec2.Subnet("example", {
     availabilityZone: "us-west-2a",
-    cidrBlock: selected.apply(selected => (() => {
+    cidrBlock: (() => {
         throw "tf2pulumi error: NYI: call to cidrsubnet";
         return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
+    })(),
     vpcId: selected.id,
 });
 ```
@@ -15251,9 +15263,9 @@ Retrieve information about an EC2 DHCP Options configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
+const example = aws.ec2.getVpcDhcpOptions({
     dhcpOptionsId: "dopts-12345678",
-}));
+});
 ```
 
 ### Lookup by Filter
@@ -15262,7 +15274,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
+const example = aws.ec2.getVpcDhcpOptions({
     filters: [
         {
             name: "key",
@@ -15273,7 +15285,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
             values: ["example.com"],
         },
     ],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown.
@@ -15338,9 +15350,9 @@ const foo = new aws.ec2.Vpc("foo", {
     cidrBlock: "10.0.0.0/16",
 });
 // Declare the data source
-const s3 = pulumi.output(aws.ec2.getVpcEndpointService({
+const s3 = aws.ec2.getVpcEndpointService({
     service: "s3",
-}));
+});
 // Create a VPC endpoint
 const ep = new aws.ec2.VpcEndpoint("ep", {
     serviceName: s3.serviceName,
@@ -15354,9 +15366,9 @@ Non-AWS service usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const custome = pulumi.output(aws.ec2.getVpcEndpointService({
+const custome = aws.ec2.getVpcEndpointService({
     serviceName: "com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown.
@@ -15403,7 +15415,7 @@ const route = new aws.ec2.Route("r", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVpcs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L48" >}}">function <b>getVpcs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L49" >}}">function <b>getVpcs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -15423,11 +15435,11 @@ The following shows outputing all VPC Ids.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpcs = pulumi.output(aws.ec2.getVpcs({
+const fooVpcs = aws.ec2.getVpcs({
     tags: {
         service: "production",
     },
-}));
+});
 
 export const foo = fooVpcs.ids;
 ```
@@ -15438,11 +15450,12 @@ An example use case would be interpolate the `aws.ec2.getVpcs` output into `coun
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpcs = pulumi.output(aws.ec2.getVpcs({}));
+const fooVpcs = aws.ec2.getVpcs({});
 const testFlowLog: aws.ec2.FlowLog[] = [];
-for (let i = 0; i < fooVpcs.apply(fooVpcs => fooVpcs.ids.length); i++) {
+for (let i = 0; i < fooVpcs.ids.length; i++) {
     testFlowLog.push(new aws.ec2.FlowLog(`test_flow_log-${i}`, {
-        vpcId: fooVpcs.apply(fooVpcs => fooVpcs.ids[i]),
+        // ...
+        vpcId: fooVpcs.ids[i],
     }));
 }
 
@@ -15471,12 +15484,12 @@ a specific VPN gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.ec2.getVpnGateway({
+const selected = aws.ec2.getVpnGateway({
     filters: [{
         name: "tag:Name",
         values: ["vpn-gw"],
     }],
-}));
+});
 
 export const vpnGatewayId = selected.id;
 ```
@@ -23391,7 +23404,7 @@ The State of the association.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L68" >}}">interface <b>GetVpcsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L69" >}}">interface <b>GetVpcsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -23400,7 +23413,7 @@ A collection of arguments for invoking getVpcs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcsArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L72" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L73" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters?: {
@@ -23414,7 +23427,7 @@ Custom filter block as described below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L77" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L78" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -23427,7 +23440,7 @@ a pair on the desired vpcs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcsResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L83" >}}">interface <b>GetVpcsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L84" >}}">interface <b>GetVpcsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -23436,7 +23449,7 @@ A collection of values returned by getVpcs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcsResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L84" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L85" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters?: {
@@ -23447,7 +23460,7 @@ A collection of values returned by getVpcs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L93" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L94" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -23458,7 +23471,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsResult-ids">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L88" >}}">property <b>ids</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L89" >}}">property <b>ids</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -23469,7 +23482,7 @@ A list of all the VPC Ids found. This data source will fail if none are found.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L89" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L90" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -33008,1317 +33021,6 @@ Availability Zone that benefit from low network latency, high network throughput
  A `spread` placement group places instances on distinct hardware.
 
 {{% /md %}}
-</div>
-<h2 class="pdoc-module-header" id="InstancePlatforms">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L22" >}}">module <b>InstancePlatforms</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="LinuxUnixPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L23" >}}">const <b>LinuxUnixPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> LinuxUnixPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Linux/UNIX&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="RedHatEnterpriseLinuxPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L24" >}}">const <b>RedHatEnterpriseLinuxPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> RedHatEnterpriseLinuxPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Red Hat Enterprise Linux&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SuseLinuxPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L25" >}}">const <b>SuseLinuxPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SuseLinuxPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;SUSE Linux&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="WindowsPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L26" >}}">const <b>WindowsPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> WindowsPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="WindowsWithSqlServerEnterprisePlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L28" >}}">const <b>WindowsWithSqlServerEnterprisePlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerEnterprisePlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server Enterprise&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="WindowsWithSqlServerPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L27" >}}">const <b>WindowsWithSqlServerPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="WindowsWithSqlServerStandardPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L29" >}}">const <b>WindowsWithSqlServerStandardPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerStandardPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server Standard&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="WindowsWithSqlServerWebPlatform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L30" >}}">const <b>WindowsWithSqlServerWebPlatform</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerWebPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server Web&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="InstanceTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L24" >}}">module <b>InstanceTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="A1_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L25" >}}">const <b>A1_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A1_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;a1.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="A1_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L26" >}}">const <b>A1_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A1_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;a1.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="A1_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L27" >}}">const <b>A1_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A1_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;a1.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="A1_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L28" >}}">const <b>A1_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A1_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;a1.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="A1_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L29" >}}">const <b>A1_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A1_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;a1.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L30" >}}">const <b>C3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C3_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L31" >}}">const <b>C3_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C3_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C3_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L32" >}}">const <b>C3_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L33" >}}">const <b>C3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L34" >}}">const <b>C3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C4_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L35" >}}">const <b>C4_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C4_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L36" >}}">const <b>C4_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C4_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L37" >}}">const <b>C4_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C4_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C4_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L38" >}}">const <b>C4_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C4_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L39" >}}">const <b>C4_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5_18XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L40" >}}">const <b>C5_18XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5_18XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5.18xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L41" >}}">const <b>C5_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L42" >}}">const <b>C5_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5_9XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L43" >}}">const <b>C5_9XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5_9XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5.9xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L44" >}}">const <b>C5_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L45" >}}">const <b>C5_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5d_18XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L46" >}}">const <b>C5d_18XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5d_18XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5d.18xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5d_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L47" >}}">const <b>C5d_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5d_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5d.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5d_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L48" >}}">const <b>C5d_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5d_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5d.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5d_9XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L49" >}}">const <b>C5d_9XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5d_9XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5d.9xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5d_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L50" >}}">const <b>C5d_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5d_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5d.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5d_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L51" >}}">const <b>C5d_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5d_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5d.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5n_18XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L52" >}}">const <b>C5n_18XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5n_18XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5n.18xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5n_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L53" >}}">const <b>C5n_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5n_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5n.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5n_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L54" >}}">const <b>C5n_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5n_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5n.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5n_9XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L55" >}}">const <b>C5n_9XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5n_9XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5n.9xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5n_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L56" >}}">const <b>C5n_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5n_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5n.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="C5n_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L57" >}}">const <b>C5n_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> C5n_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c5n.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="D2_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L58" >}}">const <b>D2_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> D2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="D2_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L59" >}}">const <b>D2_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> D2_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="D2_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L60" >}}">const <b>D2_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> D2_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="D2_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L61" >}}">const <b>D2_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> D2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="F1_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L62" >}}">const <b>F1_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> F1_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;f1.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="F1_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L63" >}}">const <b>F1_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> F1_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;f1.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G2_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L64" >}}">const <b>G2_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g2.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G2_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L65" >}}">const <b>G2_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G2_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g2.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G3_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L66" >}}">const <b>G3_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G3_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g3.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G3_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L67" >}}">const <b>G3_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G3_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g3.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G3_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L68" >}}">const <b>G3_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g3.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="G3s_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L69" >}}">const <b>G3s_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> G3s_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g3s.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="H1_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L70" >}}">const <b>H1_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> H1_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;h1.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="H1_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L71" >}}">const <b>H1_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> H1_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;h1.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="H1_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L72" >}}">const <b>H1_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> H1_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;h1.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="H1_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L73" >}}">const <b>H1_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> H1_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;h1.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Hs1_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L74" >}}">const <b>Hs1_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Hs1_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;hs1.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L75" >}}">const <b>I3_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L76" >}}">const <b>I3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L77" >}}">const <b>I3_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L78" >}}">const <b>I3_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L79" >}}">const <b>I3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_Metal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L81" >}}">const <b>I3_Metal</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_Metal: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.metal&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="I3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L80" >}}">const <b>I3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> I3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L82" >}}">const <b>M3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L83" >}}">const <b>M3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L84" >}}">const <b>M3_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L85" >}}">const <b>M3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_10XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L86" >}}">const <b>M4_10XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_10XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.10xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L87" >}}">const <b>M4_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L88" >}}">const <b>M4_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L89" >}}">const <b>M4_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L90" >}}">const <b>M4_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M4_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L91" >}}">const <b>M4_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L96" >}}">const <b>M5_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L97" >}}">const <b>M5_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L94" >}}">const <b>M5_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L95" >}}">const <b>M5_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L92" >}}">const <b>M5_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L93" >}}">const <b>M5_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5a_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L104" >}}">const <b>M5a_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5a_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5a.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5a_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L105" >}}">const <b>M5a_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5a_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5a.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5a_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L106" >}}">const <b>M5a_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5a_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5a.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5a_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L107" >}}">const <b>M5a_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5a_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5a.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5a_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L108" >}}">const <b>M5a_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5a_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5a.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5a_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L109" >}}">const <b>M5a_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5a_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5a.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5d_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L102" >}}">const <b>M5d_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5d_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5d_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L103" >}}">const <b>M5d_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5d_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5d_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L100" >}}">const <b>M5d_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5d_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5d_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L101" >}}">const <b>M5d_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5d_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5d_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L98" >}}">const <b>M5d_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5d_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="M5d_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L99" >}}">const <b>M5d_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> M5d_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P2_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L110" >}}">const <b>P2_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P2_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p2.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P2_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L111" >}}">const <b>P2_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P2_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p2.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P2_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L112" >}}">const <b>P2_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p2.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P3_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L113" >}}">const <b>P3_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P3_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L114" >}}">const <b>P3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P3_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L115" >}}">const <b>P3_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="P3dn_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L116" >}}">const <b>P3dn_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> P3dn_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3dn.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L117" >}}">const <b>R3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L118" >}}">const <b>R3_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L119" >}}">const <b>R3_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L120" >}}">const <b>R3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L121" >}}">const <b>R3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L122" >}}">const <b>R4_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L123" >}}">const <b>R4_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L124" >}}">const <b>R4_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L125" >}}">const <b>R4_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L126" >}}">const <b>R4_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R4_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L127" >}}">const <b>R4_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L128" >}}">const <b>R5_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L129" >}}">const <b>R5_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L130" >}}">const <b>R5_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L131" >}}">const <b>R5_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L132" >}}">const <b>R5_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L133" >}}">const <b>R5_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5a_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L134" >}}">const <b>R5a_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5a_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5a.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5a_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L135" >}}">const <b>R5a_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5a_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5a.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5a_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L136" >}}">const <b>R5a_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5a_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5a.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5a_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L137" >}}">const <b>R5a_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5a_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5a.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5a_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L138" >}}">const <b>R5a_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5a_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5a.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5a_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L139" >}}">const <b>R5a_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5a_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5a.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5d_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L140" >}}">const <b>R5d_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5d_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5d.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5d_24XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L141" >}}">const <b>R5d_24XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5d_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5d.24xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5d_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L142" >}}">const <b>R5d_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5d_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5d.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5d_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L143" >}}">const <b>R5d_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5d_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5d.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5d_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L144" >}}">const <b>R5d_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5d_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5d.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="R5d_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L145" >}}">const <b>R5d_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> R5d_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r5d.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L146" >}}">const <b>T2_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L147" >}}">const <b>T2_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L148" >}}">const <b>T2_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Micro">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L149" >}}">const <b>T2_Micro</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Micro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.micro&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Nano">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L150" >}}">const <b>T2_Nano</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Nano: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.nano&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_Small">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L151" >}}">const <b>T2_Small</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.small&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T2_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L152" >}}">const <b>T2_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L153" >}}">const <b>T3_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L154" >}}">const <b>T3_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_Medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L155" >}}">const <b>T3_Medium</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.medium&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_Micro">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L156" >}}">const <b>T3_Micro</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_Micro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.micro&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_Nano">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L157" >}}">const <b>T3_Nano</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_Nano: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.nano&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_Small">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L158" >}}">const <b>T3_Small</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.small&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="T3_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L159" >}}">const <b>T3_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> T3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t3.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="U_12tb1Metal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L160" >}}">const <b>U_12tb1Metal</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> U_12tb1Metal: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;u-12tb1.metal&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="U_6tb1Metal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L161" >}}">const <b>U_6tb1Metal</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> U_6tb1Metal: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;u-6tb1.metal&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="U_9tb1Metal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L162" >}}">const <b>U_9tb1Metal</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> U_9tb1Metal: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;u-9tb1.metal&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L163" >}}">const <b>X1_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1_32XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L164" >}}">const <b>X1_32XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1_32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1.32xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1e_16XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L165" >}}">const <b>X1e_16XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1e_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1e.16xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1e_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L166" >}}">const <b>X1e_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1e_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1e.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1e_32XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L167" >}}">const <b>X1e_32XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1e_32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1e.32xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1e_4XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L168" >}}">const <b>X1e_4XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1e_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1e.4xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1e_8XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L169" >}}">const <b>X1e_8XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1e_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1e.8xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="X1e_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L170" >}}">const <b>X1e_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> X1e_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1e.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Z1d_12XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L171" >}}">const <b>Z1d_12XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Z1d_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;z1d.12xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Z1d_2XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L172" >}}">const <b>Z1d_2XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Z1d_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;z1d.2xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Z1d_3XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L173" >}}">const <b>Z1d_3XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Z1d_3XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;z1d.3xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Z1d_6XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L174" >}}">const <b>Z1d_6XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Z1d_6XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;z1d.6xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Z1d_Large">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L175" >}}">const <b>Z1d_Large</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Z1d_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;z1d.large&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Z1d_XLarge">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/instanceType.ts#L176" >}}">const <b>Z1d_XLarge</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Z1d_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;z1d.xlarge&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Tenancies">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/tenancy.ts#L22" >}}">module <b>Tenancies</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="DedicatedTenancy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/tenancy.ts#L24" >}}">const <b>DedicatedTenancy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DedicatedTenancy: <a href='#Tenancy'>Tenancy</a> = <span class='s2'>&#34;dedicated&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DefaultTenancy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/tenancy.ts#L23" >}}">const <b>DefaultTenancy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DefaultTenancy: <a href='#Tenancy'>Tenancy</a> = <span class='s2'>&#34;default&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
 </div>
 <h2 class="pdoc-module-header" id="InstancePlatform">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/instancePlatform.ts#L33" >}}">type <b>InstancePlatform</b></a>

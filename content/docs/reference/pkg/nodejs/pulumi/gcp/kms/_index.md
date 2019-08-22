@@ -758,12 +758,12 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
     keyRingId: "your-key-ring-id",
     policyData: admin.policyData,
@@ -948,12 +948,12 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
     keyRingId: "your-key-ring-id",
     policyData: admin.policyData,
@@ -1138,12 +1138,12 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
     keyRingId: "your-key-ring-id",
     policyData: admin.policyData,
@@ -1546,14 +1546,14 @@ Google Cloud KMS KeyRing.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
+const myKeyRing = gcp.kms.getKMSKeyRing({
     location: "us-central1",
     name: "my-key-ring",
-}));
-const myCryptoKey = myKeyRing.apply(myKeyRing => gcp.kms.getKMSCryptoKey({
+});
+const myCryptoKey = gcp.kms.getKMSCryptoKey({
     keyRing: myKeyRing.selfLink,
     name: "my-crypto-key",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_crypto_key.html.markdown.
@@ -1585,14 +1585,14 @@ import * as gcp from "@pulumi/gcp";
 const myCryptoKeyVersion = google_kms_key_my_key.selfLink.apply(selfLink => gcp.kms.getKMSCryptoKeyVersion({
     cryptoKey: selfLink,
 }));
-const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
+const myKeyRing = gcp.kms.getKMSKeyRing({
     location: "us-central1",
     name: "my-key-ring",
-}));
-const myCryptoKey = myKeyRing.apply(myKeyRing => gcp.kms.getKMSCryptoKey({
+});
+const myCryptoKey = gcp.kms.getKMSCryptoKey({
     keyRing: myKeyRing.selfLink,
     name: "my-crypto-key",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_crypto_key_version.html.markdown.
@@ -1622,10 +1622,10 @@ and resides in a specific location.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
+const myKeyRing = gcp.kms.getKMSKeyRing({
     location: "us-central1",
     name: "my-key-ring",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/kms_key_ring.html.markdown.

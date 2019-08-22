@@ -1716,14 +1716,14 @@ Use this data source to access information about an existing Load Balancer Backe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testLB = pulumi.output(azure.lb.getLB({
+const testLB = azure.lb.getLB({
     name: "example-lb",
     resourceGroupName: "example-resources",
-}));
-const testBackendAddressPool = testLB.apply(testLB => azure.lb.getBackendAddressPool({
+});
+const testBackendAddressPool = azure.lb.getBackendAddressPool({
     loadbalancerId: testLB.id,
     name: "first",
-}));
+});
 
 export const backendAddressPoolId = testBackendAddressPool.id;
 ```
@@ -1749,10 +1749,10 @@ Use this data source to access information about an existing Load Balancer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.lb.getLB({
+const test = azure.lb.getLB({
     name: "example-lb",
     resourceGroupName: "example-resources",
-}));
+});
 
 export const loadbalancerId = test.id;
 ```

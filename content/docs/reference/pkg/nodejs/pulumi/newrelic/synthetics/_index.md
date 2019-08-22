@@ -55,9 +55,9 @@ title: Module synthetics
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const fooMonitor = pulumi.output(newrelic.synthetics.getMonitor({
+const fooMonitor = newrelic.synthetics.getMonitor({
     name: "foo",
-}));
+});
 const fooAlertCondition = new newrelic.synthetics.AlertCondition("foo", {
     monitorId: fooMonitor.id,
     policyId: newrelic_alert_policy_foo.id,
@@ -556,9 +556,9 @@ Use this data source to get information about a specific synthetics monitor in N
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const bar = pulumi.output(newrelic.synthetics.getMonitor({
+const bar = newrelic.synthetics.getMonitor({
     name: "bar",
-}));
+});
 const baz = new newrelic.synthetics.AlertCondition("baz", {
     monitorId: bar.id,
     policyId: newrelic_alert_policy_foo.id,

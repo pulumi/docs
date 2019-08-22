@@ -54,6 +54,19 @@ title: Module sns
 </div>
 </div>
 
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="topic">sns/topic</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 <h2 class="pdoc-module-header" id="PlatformApplication">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sns/platformApplication.ts#L39" >}}">class <b>PlatformApplication</b></a>
@@ -589,20 +602,6 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Topic-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sns/snsMixins.ts#L107" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args?: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TopicEventSubscription'>TopicEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Topic to the handler provided, along
-with options to control the behavior of the subscription.
 
 {{% /md %}}
 </div>
@@ -1326,9 +1325,9 @@ without having to hard code the ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.sns.getTopic({
+const example = aws.sns.getTopic({
     name: "anExampleTopic",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sns_topic.html.markdown.

@@ -367,10 +367,10 @@ const certCertificate = new aws.acm.Certificate("cert", {
     domainName: "example.com",
     validationMethod: "DNS",
 });
-const zone = pulumi.output(aws.route53.getZone({
+const zone = aws.route53.getZone({
     name: "example.com.",
     privateZone: false,
-}));
+});
 const certValidation = new aws.route53.Record("certValidation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
@@ -401,14 +401,14 @@ const certCertificate = new aws.acm.Certificate("cert", {
     ],
     validationMethod: "DNS",
 });
-const zone = pulumi.output(aws.route53.getZone({
+const zone = aws.route53.getZone({
     name: "example.com.",
     privateZone: false,
-}));
-const zoneAlt = pulumi.output(aws.route53.getZone({
+});
+const zoneAlt = aws.route53.getZone({
     name: "example.org.",
     privateZone: false,
-}));
+});
 const certValidation = new aws.route53.Record("certValidation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
@@ -583,10 +583,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Find a RSA 4096 bit certificate
-const example = pulumi.output(aws.acm.getCertificate({
+const example = aws.acm.getCertificate({
     domain: "tf.example.com",
     keyTypes: ["RSA_4096"],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acm_certificate.html.markdown.

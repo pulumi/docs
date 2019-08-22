@@ -965,10 +965,10 @@ Use this data source to access information about an existing Data Lake Store.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.datalake.getStore({
+const test = azure.datalake.getStore({
     name: "testdatalake",
     resourceGroupName: "testdatalake",
-}));
+});
 
 export const dataLakeStoreId = test.id;
 ```

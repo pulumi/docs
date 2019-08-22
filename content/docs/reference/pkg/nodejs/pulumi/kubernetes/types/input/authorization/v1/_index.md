@@ -71,7 +71,7 @@ title: Module types/input/authorization/v1
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isSubjectAccessReview">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5506" >}}">function <b>isSubjectAccessReview</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5504" >}}">function <b>isSubjectAccessReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -552,11 +552,11 @@ Status is filled in by the server and indicates the set of actions a user can pe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSubjectRulesReviewSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5462" >}}">interface <b>SelfSubjectRulesReviewSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5460" >}}">interface <b>SelfSubjectRulesReviewSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReviewSpec-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5466" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5464" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -568,7 +568,7 @@ Namespace to evaluate rules for. Required.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReview">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5474" >}}">interface <b>SubjectAccessReview</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5472" >}}">interface <b>SubjectAccessReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -577,7 +577,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReview-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5486" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5484" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"authorization.k8s.io/v1"</span>&gt;;</pre>
@@ -591,7 +591,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5494" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5492" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"SubjectAccessReview"</span>&gt;;</pre>
@@ -605,7 +605,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5497" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5495" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
@@ -613,7 +613,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5478" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5476" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SubjectAccessReviewSpec'>SubjectAccessReviewSpec</a>&gt;;</pre>
@@ -624,7 +624,7 @@ Spec holds information about the request being evaluated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5502" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5500" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SubjectAccessReviewStatus'>SubjectAccessReviewStatus</a>&gt;;</pre>
@@ -636,7 +636,7 @@ Status is filled in by the server and indicates whether the request is allowed o
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReviewSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5514" >}}">interface <b>SubjectAccessReviewSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5512" >}}">interface <b>SubjectAccessReviewSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -646,7 +646,7 @@ ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be s
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-extra">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5519" >}}">property <b>extra</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5517" >}}">property <b>extra</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>extra?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>&gt;;</pre>
@@ -658,7 +658,7 @@ input to the authorizer it needs a reflection here.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-groups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5524" >}}">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5522" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -669,7 +669,7 @@ Groups is the groups you're testing for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-nonResourceAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5529" >}}">property <b>nonResourceAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5527" >}}">property <b>nonResourceAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nonResourceAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NonResourceAttributes'>NonResourceAttributes</a>&gt;;</pre>
@@ -680,7 +680,7 @@ NonResourceAttributes describes information for a non-resource access request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-resourceAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5534" >}}">property <b>resourceAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5532" >}}">property <b>resourceAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResourceAttributes'>ResourceAttributes</a>&gt;;</pre>
@@ -691,7 +691,7 @@ ResourceAuthorizationAttributes describes information for a resource access requ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5539" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5537" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -702,7 +702,7 @@ UID information about the requesting user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewSpec-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5545" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5543" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -715,7 +715,7 @@ interpreted as "What if User were not a member of any groups
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReviewStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5553" >}}">interface <b>SubjectAccessReviewStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5551" >}}">interface <b>SubjectAccessReviewStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -724,7 +724,7 @@ SubjectAccessReviewStatus
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-allowed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5557" >}}">property <b>allowed</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5555" >}}">property <b>allowed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -735,7 +735,7 @@ Allowed is required. True if the action would be allowed, false otherwise.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-denied">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5564" >}}">property <b>denied</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5562" >}}">property <b>denied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>denied?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -748,7 +748,7 @@ action. Denied may not be true if Allowed is true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-evaluationError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5572" >}}">property <b>evaluationError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5570" >}}">property <b>evaluationError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>evaluationError?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -762,7 +762,7 @@ present and bound to reason about the request.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReviewStatus-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5577" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5575" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -774,7 +774,7 @@ Reason is optional.  It indicates why a request was allowed or denied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectRulesReviewStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5588" >}}">interface <b>SubjectRulesReviewStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5586" >}}">interface <b>SubjectRulesReviewStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -786,7 +786,7 @@ safe to assume the subject has that permission, even if that list is incomplete.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-evaluationError">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5613" >}}">property <b>evaluationError</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5611" >}}">property <b>evaluationError</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>evaluationError?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -799,7 +799,7 @@ ResourceRules and/or NonResourceRules may be incomplete.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-incomplete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5594" >}}">property <b>incomplete</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5592" >}}">property <b>incomplete</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>incomplete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -812,7 +812,7 @@ rules evaluation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-nonResourceRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5600" >}}">property <b>nonResourceRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5598" >}}">property <b>nonResourceRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nonResourceRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NonResourceRule'>NonResourceRule</a>&gt;[]&gt;;</pre>
@@ -824,7 +824,7 @@ The list ordering isn't significant, may contain duplicates, and possibly be inc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectRulesReviewStatus-resourceRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5606" >}}">property <b>resourceRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/input.ts#L5604" >}}">property <b>resourceRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResourceRule'>ResourceRule</a>&gt;[]&gt;;</pre>

@@ -45,7 +45,7 @@ title: Module types/output/meta/v1
 
 
 <h2 class="pdoc-module-header" id="APIGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16119" >}}">interface <b>APIGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16107" >}}">interface <b>APIGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -54,7 +54,7 @@ APIGroup contains the name, the supported versions, and the preferred version of
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIGroup-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16126" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16114" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -68,7 +68,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroup-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16134" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16122" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -82,7 +82,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroup-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16139" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16127" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -93,7 +93,7 @@ name is the name of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroup-preferredVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16145" >}}">property <b>preferredVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16133" >}}">property <b>preferredVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preferredVersion: <a href='#GroupVersionForDiscovery'>GroupVersionForDiscovery</a>;</pre>
@@ -105,7 +105,7 @@ version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroup-serverAddressByClientCIDRs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16156" >}}">property <b>serverAddressByClientCIDRs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16144" >}}">property <b>serverAddressByClientCIDRs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverAddressByClientCIDRs: <a href='#ServerAddressByClientCIDR'>ServerAddressByClientCIDR</a>[];</pre>
@@ -122,7 +122,7 @@ X-Real-Ip header or request.RemoteAddr (in that order) to get the client IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroup-versions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16161" >}}">property <b>versions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16149" >}}">property <b>versions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>versions: <a href='#GroupVersionForDiscovery'>GroupVersionForDiscovery</a>[];</pre>
@@ -134,7 +134,7 @@ versions are the versions supported in this group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="APIGroupList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16168" >}}">interface <b>APIGroupList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16156" >}}">interface <b>APIGroupList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -143,7 +143,7 @@ APIGroupList is a list of APIGroup, to allow clients to discover the API at /api
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIGroupList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16175" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16163" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -157,7 +157,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroupList-groups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16180" >}}">property <b>groups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16168" >}}">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groups: <a href='#APIGroup'>APIGroup</a>[];</pre>
@@ -168,7 +168,7 @@ groups is a list of APIGroup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIGroupList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16188" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16176" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -183,7 +183,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="APIResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16195" >}}">interface <b>APIResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16183" >}}">interface <b>APIResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -192,7 +192,7 @@ APIResource specifies the name of a resource and whether it is namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIResource-categories">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16199" >}}">property <b>categories</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16187" >}}">property <b>categories</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>categories: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -203,7 +203,7 @@ categories is a list of the grouped resources this resource belongs to (e.g. 'al
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-group">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16205" >}}">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16193" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -215,7 +215,7 @@ resource list. For subresources, this may have a different value, for example: S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16210" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16198" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -226,7 +226,7 @@ kind is the kind for the resource (e.g. 'Foo' is the kind for a resource 'foo')
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16215" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16203" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -237,7 +237,7 @@ name is the plural name of the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-namespaced">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16220" >}}">property <b>namespaced</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16208" >}}">property <b>namespaced</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaced: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -248,7 +248,7 @@ namespaced indicates if a resource is namespaced or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-shortNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16225" >}}">property <b>shortNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16213" >}}">property <b>shortNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shortNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -259,7 +259,7 @@ shortNames is a list of suggested short names of the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-singularName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16232" >}}">property <b>singularName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16220" >}}">property <b>singularName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>singularName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -272,7 +272,7 @@ item and both singular and plural are allowed from the kubectl CLI interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-storageVersionHash">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16241" >}}">property <b>storageVersionHash</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16229" >}}">property <b>storageVersionHash</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageVersionHash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -287,7 +287,7 @@ gate is enabled. This field will remain optional even if it graduates.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-verbs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16247" >}}">property <b>verbs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16235" >}}">property <b>verbs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>verbs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -299,7 +299,7 @@ patch, delete, deletecollection, and proxy)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResource-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16254" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16242" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -313,7 +313,7 @@ containing resource list For subresources, this may have a different value, for 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="APIResourceList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16262" >}}">interface <b>APIResourceList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16250" >}}">interface <b>APIResourceList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -323,7 +323,7 @@ supported in a specific group and version, and if the resource is namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIResourceList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16269" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16257" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -337,7 +337,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResourceList-groupVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16274" >}}">property <b>groupVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16262" >}}">property <b>groupVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -348,7 +348,7 @@ groupVersion is the group and version this APIResourceList is for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResourceList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16282" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16270" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -362,7 +362,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIResourceList-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16287" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16275" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resources: <a href='#APIResource'>APIResource</a>[];</pre>
@@ -374,7 +374,7 @@ resources contains the name of the resources and if they are namespaced.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="APIVersions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16295" >}}">interface <b>APIVersions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16283" >}}">interface <b>APIVersions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -384,7 +384,7 @@ APIVersions lists the versions that are available, to allow clients to discover 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIVersions-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16302" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16290" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -398,7 +398,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIVersions-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16310" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16298" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -412,7 +412,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIVersions-serverAddressByClientCIDRs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16321" >}}">property <b>serverAddressByClientCIDRs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16309" >}}">property <b>serverAddressByClientCIDRs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverAddressByClientCIDRs: <a href='#ServerAddressByClientCIDR'>ServerAddressByClientCIDR</a>[];</pre>
@@ -429,7 +429,7 @@ X-Real-Ip header or request.RemoteAddr (in that order) to get the client IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIVersions-versions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16326" >}}">property <b>versions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16314" >}}">property <b>versions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>versions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -441,7 +441,7 @@ versions are the api versions that are available.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeleteOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16333" >}}">interface <b>DeleteOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16321" >}}">interface <b>DeleteOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -450,7 +450,7 @@ DeleteOptions may be provided when deleting an API object.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeleteOptions-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16340" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16328" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -464,7 +464,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeleteOptions-dryRun">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16347" >}}">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16335" >}}">property <b>dryRun</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dryRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -477,7 +477,7 @@ the request. Valid values are: - All: all dry run stages will be processed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeleteOptions-gracePeriodSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16355" >}}">property <b>gracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16343" >}}">property <b>gracePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gracePeriodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -491,7 +491,7 @@ specified. zero means delete immediately.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeleteOptions-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16363" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16351" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -505,7 +505,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeleteOptions-orphanDependents">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16371" >}}">property <b>orphanDependents</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16359" >}}">property <b>orphanDependents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>orphanDependents: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -519,7 +519,7 @@ set, but not both.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeleteOptions-preconditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16377" >}}">property <b>preconditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16365" >}}">property <b>preconditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preconditions: <a href='#Preconditions'>Preconditions</a>;</pre>
@@ -531,7 +531,7 @@ will be returned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeleteOptions-propagationPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16387" >}}">property <b>propagationPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16375" >}}">property <b>propagationPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>propagationPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -548,7 +548,7 @@ in the foreground.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupVersionForDiscovery">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16395" >}}">interface <b>GroupVersionForDiscovery</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16383" >}}">interface <b>GroupVersionForDiscovery</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -558,7 +558,7 @@ struct to keep extensibility.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupVersionForDiscovery-groupVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16399" >}}">property <b>groupVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16387" >}}">property <b>groupVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -569,7 +569,7 @@ groupVersion specifies the API group and version in the form "group/version"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVersionForDiscovery-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16405" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16393" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -582,7 +582,7 @@ trouble of splitting the GroupVersion.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Initializer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16412" >}}">interface <b>Initializer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16400" >}}">interface <b>Initializer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -591,7 +591,7 @@ Initializer is information about an initializer that has not yet completed.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Initializer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16416" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16404" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -603,7 +603,7 @@ name of the process that is responsible for initializing this object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Initializers">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16423" >}}">interface <b>Initializers</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16411" >}}">interface <b>Initializers</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -612,7 +612,7 @@ Initializers tracks the progress of initialization.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Initializers-pending">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16430" >}}">property <b>pending</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16418" >}}">property <b>pending</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pending: <a href='#Initializer'>Initializer</a>[];</pre>
@@ -626,7 +626,7 @@ visible to all clients.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Initializers-result">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16436" >}}">property <b>result</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16424" >}}">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>result: <a href='#Status'>Status</a>;</pre>
@@ -639,7 +639,7 @@ deleted, ensuring that other clients can observe the deletion.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LabelSelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16445" >}}">interface <b>LabelSelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16433" >}}">interface <b>LabelSelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -650,7 +650,7 @@ selector matches no objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LabelSelector-matchExpressions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16449" >}}">property <b>matchExpressions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16437" >}}">property <b>matchExpressions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchExpressions: <a href='#LabelSelectorRequirement'>LabelSelectorRequirement</a>[];</pre>
@@ -661,7 +661,7 @@ matchExpressions is a list of label selector requirements. The requirements are 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelSelector-matchLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16456" >}}">property <b>matchLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16444" >}}">property <b>matchLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchLabels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -675,7 +675,7 @@ equivalent to an element of matchExpressions, whose key field is "key", the oper
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LabelSelectorRequirement">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16464" >}}">interface <b>LabelSelectorRequirement</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16452" >}}">interface <b>LabelSelectorRequirement</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -685,7 +685,7 @@ relates the key and values.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LabelSelectorRequirement-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16468" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16456" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -696,7 +696,7 @@ key is the label key that the selector applies to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelSelectorRequirement-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16474" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16462" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -708,7 +708,7 @@ Exists and DoesNotExist.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LabelSelectorRequirement-values">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16481" >}}">property <b>values</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16469" >}}">property <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -722,7 +722,7 @@ This array is replaced during a strategic merge patch.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListMeta">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16489" >}}">interface <b>ListMeta</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16477" >}}">interface <b>ListMeta</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -732,7 +732,7 @@ status objects. A resource may have only one of {ObjectMeta, ListMeta}.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ListMeta-continue">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16499" >}}">property <b>continue</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16487" >}}">property <b>continue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>continue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -749,7 +749,7 @@ have received this token from an error message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListMeta-remainingItemCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16513" >}}">property <b>remainingItemCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16501" >}}">property <b>remainingItemCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>remainingItemCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -769,7 +769,7 @@ This field is alpha and can be changed or removed without notice.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListMeta-resourceVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16521" >}}">property <b>resourceVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16509" >}}">property <b>resourceVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -783,7 +783,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListMeta-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16526" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16514" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -795,7 +795,7 @@ selfLink is a URL representing this object. Populated by the system. Read-only.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedFieldsEntry">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16534" >}}">interface <b>ManagedFieldsEntry</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16522" >}}">interface <b>ManagedFieldsEntry</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -805,7 +805,7 @@ the fieldset applies to.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedFieldsEntry-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16540" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16528" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -818,7 +818,7 @@ version of a field set because it cannot be automatically converted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedFieldsEntry-fields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16545" >}}">property <b>fields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16533" >}}">property <b>fields</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fields: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -829,7 +829,7 @@ Fields identifies a set of fields.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedFieldsEntry-manager">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16550" >}}">property <b>manager</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16538" >}}">property <b>manager</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>manager: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -840,7 +840,7 @@ Manager is an identifier of the workflow managing these fields.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedFieldsEntry-operation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16556" >}}">property <b>operation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16544" >}}">property <b>operation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -852,7 +852,7 @@ only valid values for this field are 'Apply' and 'Update'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedFieldsEntry-time">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16562" >}}">property <b>time</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16550" >}}">property <b>time</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>time: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -865,7 +865,7 @@ Time is timestamp of when these fields were set. It should always be empty if Op
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ObjectMeta">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16570" >}}">interface <b>ObjectMeta</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16558" >}}">interface <b>ObjectMeta</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -875,7 +875,7 @@ users must create.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ObjectMeta-annotations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16577" >}}">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16565" >}}">property <b>annotations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>annotations: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -889,7 +889,7 @@ http://kubernetes.io/docs/user-guide/annotations
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-clusterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16584" >}}">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16572" >}}">property <b>clusterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -902,7 +902,7 @@ now and apiserver is going to ignore it if set in create or update request.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-creationTimestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16594" >}}">property <b>creationTimestamp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16582" >}}">property <b>creationTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>creationTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -918,7 +918,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-deletionGracePeriodSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16601" >}}">property <b>deletionGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16589" >}}">property <b>deletionGracePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deletionGracePeriodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -931,7 +931,7 @@ Read-only.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-deletionTimestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16622" >}}">property <b>deletionTimestamp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16610" >}}">property <b>deletionTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deletionTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -958,7 +958,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-finalizers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16629" >}}">property <b>finalizers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16617" >}}">property <b>finalizers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>finalizers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -971,7 +971,7 @@ deletionTimestamp of the object is non-nil, entries in this list can only be rem
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-generateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16646" >}}">property <b>generateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16634" >}}">property <b>generateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>generateName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -994,7 +994,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-generation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16652" >}}">property <b>generation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16640" >}}">property <b>generation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>generation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1006,7 +1006,7 @@ system. Read-only.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-initializers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16667" >}}">property <b>initializers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16655" >}}">property <b>initializers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initializers: <a href='#Initializers'>Initializers</a>;</pre>
@@ -1027,7 +1027,7 @@ DEPRECATED - initializers are an alpha field and will be removed in v1.15.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16674" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16662" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -1040,7 +1040,7 @@ http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-managedFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16685" >}}">property <b>managedFields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16673" >}}">property <b>managedFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>managedFields: <a href='#ManagedFieldsEntry'>ManagedFieldsEntry</a>[];</pre>
@@ -1057,7 +1057,7 @@ This field is alpha and can be changed or removed without notice.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16694" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16682" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1072,7 +1072,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16705" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16693" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1089,7 +1089,7 @@ http://kubernetes.io/docs/user-guide/namespaces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-ownerReferences">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16713" >}}">property <b>ownerReferences</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16701" >}}">property <b>ownerReferences</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownerReferences: <a href='#OwnerReference'>OwnerReference</a>[];</pre>
@@ -1103,7 +1103,7 @@ cannot be more than one managing controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-resourceVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16726" >}}">property <b>resourceVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16714" >}}">property <b>resourceVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1122,7 +1122,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16731" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16719" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1133,7 +1133,7 @@ SelfLink is a URL representing this object. Populated by the system. Read-only.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectMeta-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16740" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16728" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1149,7 +1149,7 @@ http://kubernetes.io/docs/user-guide/identifiers#uids
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OwnerReference">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16749" >}}">interface <b>OwnerReference</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16737" >}}">interface <b>OwnerReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1160,7 +1160,7 @@ namespace field.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OwnerReference-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16753" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16741" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1171,7 +1171,7 @@ API version of the referent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OwnerReference-blockOwnerDeletion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16761" >}}">property <b>blockOwnerDeletion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16749" >}}">property <b>blockOwnerDeletion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>blockOwnerDeletion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1185,7 +1185,7 @@ Entity) will be returned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OwnerReference-controller">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16766" >}}">property <b>controller</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16754" >}}">property <b>controller</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>controller: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1196,7 +1196,7 @@ If true, this reference points to the managing controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OwnerReference-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16772" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16760" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1208,7 +1208,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OwnerReference-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16777" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16765" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1219,7 +1219,7 @@ Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifier
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OwnerReference-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16782" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16770" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1231,7 +1231,7 @@ UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Preconditions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16789" >}}">interface <b>Preconditions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16777" >}}">interface <b>Preconditions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1240,7 +1240,7 @@ Preconditions must be fulfilled before an operation (update, delete, etc.) is ca
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Preconditions-resourceVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16793" >}}">property <b>resourceVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16781" >}}">property <b>resourceVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1251,7 +1251,7 @@ Specifies the target ResourceVersion
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Preconditions-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16798" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16786" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1263,7 +1263,7 @@ Specifies the target UID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerAddressByClientCIDR">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16806" >}}">interface <b>ServerAddressByClientCIDR</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16794" >}}">interface <b>ServerAddressByClientCIDR</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1273,7 +1273,7 @@ use, depending on the clientCIDR that they match.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerAddressByClientCIDR-clientCIDR">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16811" >}}">property <b>clientCIDR</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16799" >}}">property <b>clientCIDR</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCIDR: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1285,7 +1285,7 @@ should use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerAddressByClientCIDR-serverAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16817" >}}">property <b>serverAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16805" >}}">property <b>serverAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1298,7 +1298,7 @@ hostname, hostname:port, IP or IP:port.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Status">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16824" >}}">interface <b>Status</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16812" >}}">interface <b>Status</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1307,7 +1307,7 @@ Status is a return value for calls that don't return other objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Status-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16831" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16819" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -1321,7 +1321,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-code">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16836" >}}">property <b>code</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16824" >}}">property <b>code</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1332,7 +1332,7 @@ Suggested HTTP return code for this status, 0 if not set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-details">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16843" >}}">property <b>details</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16831" >}}">property <b>details</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>details: <a href='#StatusDetails'>StatusDetails</a>;</pre>
@@ -1345,7 +1345,7 @@ except that defined by the reason type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16851" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16839" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Status"</span>;</pre>
@@ -1359,7 +1359,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16856" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16844" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1370,7 +1370,7 @@ A human-readable description of the status of this operation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16862" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16850" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -1382,7 +1382,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16869" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16857" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1395,7 +1395,7 @@ but does not override it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16875" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16863" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1408,7 +1408,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StatusCause">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16883" >}}">interface <b>StatusCause</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16871" >}}">interface <b>StatusCause</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1418,7 +1418,7 @@ multiple errors are encountered.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StatusCause-field">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16894" >}}">property <b>field</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16882" >}}">property <b>field</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>field: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1436,7 +1436,7 @@ Examples:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusCause-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16900" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16888" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1448,7 +1448,7 @@ to a reader.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusCause-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16906" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16894" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1461,7 +1461,7 @@ no information available.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StatusDetails">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16916" >}}">interface <b>StatusDetails</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16904" >}}">interface <b>StatusDetails</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1473,7 +1473,7 @@ attribute, and should assume that any attribute may be empty, invalid, or under 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StatusDetails-causes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16921" >}}">property <b>causes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16909" >}}">property <b>causes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>causes: <a href='#StatusCause'>StatusCause</a>[];</pre>
@@ -1485,7 +1485,7 @@ StatusReasons may provide detailed causes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusDetails-group">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16926" >}}">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16914" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1496,7 +1496,7 @@ The group attribute of the resource associated with the status StatusReason.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusDetails-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16933" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16921" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1509,7 +1509,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusDetails-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16939" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16927" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1521,7 +1521,7 @@ single name which can be described).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusDetails-retryAfterSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16946" >}}">property <b>retryAfterSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16934" >}}">property <b>retryAfterSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retryAfterSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1534,7 +1534,7 @@ indicate how long to wait before taking the alternate action.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StatusDetails-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16952" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16940" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1547,7 +1547,7 @@ http://kubernetes.io/docs/user-guide/identifiers#uids
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WatchEvent">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16959" >}}">interface <b>WatchEvent</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16947" >}}">interface <b>WatchEvent</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1556,7 +1556,7 @@ Event represents a single event to a watched resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WatchEvent-object">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16967" >}}">property <b>object</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16955" >}}">property <b>object</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>object: <a href='#RawExtension'>RawExtension</a>;</pre>
@@ -1571,7 +1571,7 @@ Object is:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WatchEvent-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16970" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L16958" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

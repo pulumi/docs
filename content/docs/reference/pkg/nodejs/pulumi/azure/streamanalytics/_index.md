@@ -75,9 +75,9 @@ Manages a JavaScript UDF Function within Stream Analytics Streaming Job.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -533,9 +533,9 @@ Manages a Stream Analytics Output to Blob Storage.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -784,9 +784,9 @@ Manages a Stream Analytics Output to an EventHub.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -1019,9 +1019,9 @@ const exampleSqlServer = new azure.sql.SqlServer("example", {
     resourceGroupName: azurerm_resource_group_example.name,
     version: "12.0",
 });
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -1231,9 +1231,9 @@ Manages a Stream Analytics Output to a ServiceBus Queue.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -1462,9 +1462,9 @@ const exampleAccount = new azure.storage.Account("example", {
     name: "examplestoracc",
     resourceGroupName: azurerm_resource_group_example.name,
 });
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -1710,9 +1710,9 @@ const testEventHubConsumerGroup = new azure.eventhub.EventHubConsumerGroup("test
     namespaceName: azurerm_eventhub_namespace_test.name,
     resourceGroupName: azurerm_resource_group_test.name,
 });
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -1959,9 +1959,9 @@ const testIoTHub = new azure.iot.IoTHub("test", {
         tier: "Standard",
     },
 });
-const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
+const exampleResourceGroup = azure.core.getResourceGroup({
     name: "example-resources",
-}));
+});
 const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
@@ -2185,10 +2185,10 @@ Use this data source to access information about an existing Stream Analytics Jo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.streamanalytics.getJob({
+const test = azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: "example-resources",
-}));
+});
 
 export const jobId = test.jobId;
 ```

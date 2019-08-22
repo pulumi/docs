@@ -595,9 +595,9 @@ Use this data source to access the ID of a specified Traffic Manager Geographica
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.trafficmanager.getGeographicalLocation({
+const test = azure.trafficmanager.getGeographicalLocation({
     name: "World",
-}));
+});
 
 export const locationCode = test.id;
 ```

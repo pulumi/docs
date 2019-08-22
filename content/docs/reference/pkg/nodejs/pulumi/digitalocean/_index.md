@@ -140,14 +140,6 @@ import * as digitalocean from "@pulumi/digitalocean";
 <li><a href="#VolumeSnapshotArgs">interface VolumeSnapshotArgs</a></li>
 <li><a href="#VolumeSnapshotState">interface VolumeSnapshotState</a></li>
 <li><a href="#VolumeState">interface VolumeState</a></li>
-<li><a href="#CertificateTypes">module CertificateTypes</a></li>
-<li><a href="#DatabaseSlugs">module DatabaseSlugs</a></li>
-<li><a href="#DropletSlugs">module DropletSlugs</a></li>
-<li><a href="#FilesystemTypes">module FilesystemTypes</a></li>
-<li><a href="#LoadBalancerAlgorithms">module LoadBalancerAlgorithms</a></li>
-<li><a href="#Protocols">module Protocols</a></li>
-<li><a href="#RecordTypes">module RecordTypes</a></li>
-<li><a href="#Regions">module Regions</a></li>
 <li><a href="#Algorithm">type Algorithm</a></li>
 <li><a href="#CertificateType">type CertificateType</a></li>
 <li><a href="#DatabaseSlug">type DatabaseSlug</a></li>
@@ -172,6 +164,14 @@ import * as digitalocean from "@pulumi/digitalocean";
 <div class="pdoc-module-contents">
 <ul>
 <li><a href="config">config</a></li>
+<li><a href="CertificateTypes">index/CertificateTypes</a></li>
+<li><a href="DatabaseSlugs">index/DatabaseSlugs</a></li>
+<li><a href="DropletSlugs">index/DropletSlugs</a></li>
+<li><a href="FilesystemTypes">index/FilesystemTypes</a></li>
+<li><a href="LoadBalancerAlgorithms">index/LoadBalancerAlgorithms</a></li>
+<li><a href="Protocols">index/Protocols</a></li>
+<li><a href="RecordTypes">index/RecordTypes</a></li>
+<li><a href="Regions">index/Regions</a></li>
 </ul>
 </div>
 </div>
@@ -3842,9 +3842,9 @@ You can also create a volume from an existing snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const foobarVolumeSnapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+const foobarVolumeSnapshot = digitalocean.getVolumeSnapshot({
     name: "baz",
-}));
+});
 const foobarVolume = new digitalocean.Volume("foobar", {
     region: "lon1",
     size: foobarVolumeSnapshot.minDiskSize,
@@ -4389,9 +4389,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
 // Create a new database cluster
-const example = pulumi.output(digitalocean.DatabaseCluster({
+const example = digitalocean.getDatabaseCluster({
     name: "example-cluster",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown.
@@ -4445,11 +4445,11 @@ Get the Droplet snapshot:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const webSnapshot = pulumi.output(digitalocean.getDropletSnapshot({
+const webSnapshot = digitalocean.getDropletSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown.
@@ -4621,11 +4621,11 @@ Get the volume snapshot:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+const snapshot = digitalocean.getVolumeSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}));
+});
 ```
 
 Reuse the data about a volume snapshot to create a new volume based on it:
@@ -4634,11 +4634,11 @@ Reuse the data about a volume snapshot to create a new volume based on it:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+const snapshot = digitalocean.getVolumeSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}));
+});
 const foobar = new digitalocean.Volume("foobar", {
     region: "nyc3",
     size: 100,
@@ -10032,670 +10032,6 @@ The ID of an existing volume snapshot from which the new volume will be created.
 
 the uniform resource name for the volume.
 
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CertificateTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="certificateType.ts#L15" >}}">module <b>CertificateTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="Custom">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificateType.ts#L16" >}}">const <b>Custom</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Custom: <a href='#CertificateType'>CertificateType</a> = <span class='s2'>&#34;custom&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="LetsEncrypt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificateType.ts#L17" >}}">const <b>LetsEncrypt</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> LetsEncrypt: <a href='#CertificateType'>CertificateType</a> = <span class='s2'>&#34;lets_encrypt&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DatabaseSlugs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L15" >}}">module <b>DatabaseSlugs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="DB_16VPCU64GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L22" >}}">const <b>DB_16VPCU64GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_16VPCU64GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-16vcpu-64gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DB_1VPCU1GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L16" >}}">const <b>DB_1VPCU1GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_1VPCU1GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-1vcpu-1gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DB_1VPCU2GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L17" >}}">const <b>DB_1VPCU2GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_1VPCU2GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-1vcpu-2gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DB_2VPCU4GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L18" >}}">const <b>DB_2VPCU4GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_2VPCU4GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-2vcpu-4gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DB_4VPCU8GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L19" >}}">const <b>DB_4VPCU8GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_4VPCU8GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-4vcpu-8gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DB_6VPCU16GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L20" >}}">const <b>DB_6VPCU16GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_6VPCU16GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-6vcpu-16gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DB_8VPCU32GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L21" >}}">const <b>DB_8VPCU32GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DB_8VPCU32GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-8vcpu-32gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DropletSlugs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L15" >}}">module <b>DropletSlugs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="Droplet16GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L21" >}}">const <b>Droplet16GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;16gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet1GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L17" >}}">const <b>Droplet1GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;1gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet2GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L18" >}}">const <b>Droplet2GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;2gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet32GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L22" >}}">const <b>Droplet32GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;32gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet48GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L23" >}}">const <b>Droplet48GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet48GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;48gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet4GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L19" >}}">const <b>Droplet4GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet4GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;4gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet512mb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L16" >}}">const <b>Droplet512mb</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet512mb: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;512mb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet64GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L24" >}}">const <b>Droplet64GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;64gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="Droplet8GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L20" >}}">const <b>Droplet8GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> Droplet8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;8gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletC16">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L28" >}}">const <b>DropletC16</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletC16: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-16&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletC2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L25" >}}">const <b>DropletC2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletC2: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletC32">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L29" >}}">const <b>DropletC32</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletC32: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-32&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletC4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L26" >}}">const <b>DropletC4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletC4: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletC8">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L27" >}}">const <b>DropletC8</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletC8: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-8&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletG16VPCU64GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L47" >}}">const <b>DropletG16VPCU64GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletG16VPCU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-16vcpu-64gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletG2VPCU8GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L44" >}}">const <b>DropletG2VPCU8GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletG2VPCU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-2vcpu-8gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletG32VPCU128GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L48" >}}">const <b>DropletG32VPCU128GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletG32VPCU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-32vcpu-128gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletG40VPCU160GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L49" >}}">const <b>DropletG40VPCU160GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletG40VPCU160GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-40vcpu-160gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletG4VPCU16GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L45" >}}">const <b>DropletG4VPCU16GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletG4VPCU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-4vcpu-16gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletG8VPCU32GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L46" >}}">const <b>DropletG8VPCU32GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletG8VPCU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-8vcpu-32gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletGD16VPCU64GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L53" >}}">const <b>DropletGD16VPCU64GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletGD16VPCU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-16vcpu-64gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletGD2VPCU8GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L50" >}}">const <b>DropletGD2VPCU8GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletGD2VPCU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-2vcpu-8gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletGD32VPCU128GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L54" >}}">const <b>DropletGD32VPCU128GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletGD32VPCU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-32vcpu-128gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletGD40VPCU160GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L55" >}}">const <b>DropletGD40VPCU160GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletGD40VPCU160GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-40vcpu-160gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletGD4VPCU16GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L51" >}}">const <b>DropletGD4VPCU16GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletGD4VPCU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-4vcpu-16gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletGD8VPCU32GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L52" >}}">const <b>DropletGD8VPCU32GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletGD8VPCU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-8vcpu-32gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS12VPCU48GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L39" >}}">const <b>DropletS12VPCU48GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS12VPCU48GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-12vcpu-48gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS16VPCU64GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L40" >}}">const <b>DropletS16VPCU64GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS16VPCU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-16vcpu-64gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS1VPCU1GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L30" >}}">const <b>DropletS1VPCU1GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS1VPCU1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-1gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS1VPCU2GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L31" >}}">const <b>DropletS1VPCU2GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS1VPCU2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-2gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS1VPCU3GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L32" >}}">const <b>DropletS1VPCU3GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS1VPCU3GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-3gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS20VPCU96GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L41" >}}">const <b>DropletS20VPCU96GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS20VPCU96GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-20vcpu-96gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS24VPCU128GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L42" >}}">const <b>DropletS24VPCU128GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS24VPCU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-24vcpu-128gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS2VPCU2GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L33" >}}">const <b>DropletS2VPCU2GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS2VPCU2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-2vcpu-2gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS2VPCU4GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L34" >}}">const <b>DropletS2VPCU4GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS2VPCU4GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-2vcpu-4gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS32VPCU192GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L43" >}}">const <b>DropletS32VPCU192GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS32VPCU192GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-32vcpu-192gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS3VPCU1GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L35" >}}">const <b>DropletS3VPCU1GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS3VPCU1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-3vcpu-1gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS4VPCU8GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L36" >}}">const <b>DropletS4VPCU8GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS4VPCU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-4vcpu-8gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS6VPCU16GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L37" >}}">const <b>DropletS6VPCU16GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS6VPCU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-6vcpu-16gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="DropletS8VPCU32GB">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L38" >}}">const <b>DropletS8VPCU32GB</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> DropletS8VPCU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-8vcpu-32gb&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FilesystemTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="filesystemType.ts#L15" >}}">module <b>FilesystemTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="EXT4">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="filesystemType.ts#L17" >}}">const <b>EXT4</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> EXT4: <a href='#FilesystemType'>FilesystemType</a> = <span class='s2'>&#34;ext4&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="XFS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="filesystemType.ts#L16" >}}">const <b>XFS</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> XFS: <a href='#FilesystemType'>FilesystemType</a> = <span class='s2'>&#34;xfs&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LoadBalancerAlgorithms">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadbalancerAlgorithm.ts#L15" >}}">module <b>LoadBalancerAlgorithms</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="LeastConnections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadbalancerAlgorithm.ts#L17" >}}">const <b>LeastConnections</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> LeastConnections: <a href='#Algorithm'>Algorithm</a> = <span class='s2'>&#34;least_connections&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="RoundRobin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadbalancerAlgorithm.ts#L16" >}}">const <b>RoundRobin</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> RoundRobin: <a href='#Algorithm'>Algorithm</a> = <span class='s2'>&#34;round_robin&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Protocols">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L15" >}}">module <b>Protocols</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="HTTP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L19" >}}">const <b>HTTP</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> HTTP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;http&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="HTTPS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L20" >}}">const <b>HTTPS</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> HTTPS: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;https&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ICMP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L18" >}}">const <b>ICMP</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> ICMP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;icmp&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TCP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L16" >}}">const <b>TCP</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> TCP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;tcp&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="UDP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L17" >}}">const <b>UDP</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> UDP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;udp&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="RecordTypes">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L15" >}}">module <b>RecordTypes</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="A">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L16" >}}">const <b>A</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="AAAA">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L17" >}}">const <b>AAAA</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CAA">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L18" >}}">const <b>CAA</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="CNAME">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L19" >}}">const <b>CNAME</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="MX">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L20" >}}">const <b>MX</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L21" >}}">const <b>NS</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SRV">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L23" >}}">const <b>SRV</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TXT">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L22" >}}">const <b>TXT</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Regions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L15" >}}">module <b>Regions</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<h3 class="pdoc-member-header" id="AMS2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L21" >}}">const <b>AMS2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> AMS2: <a href='#Region'>Region</a> = <span class='s2'>&#34;ams2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="AMS3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L22" >}}">const <b>AMS3</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> AMS3: <a href='#Region'>Region</a> = <span class='s2'>&#34;ams3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="BLR1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L27" >}}">const <b>BLR1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> BLR1: <a href='#Region'>Region</a> = <span class='s2'>&#34;blr1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="FRA1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L23" >}}">const <b>FRA1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> FRA1: <a href='#Region'>Region</a> = <span class='s2'>&#34;fra1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="LON1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L20" >}}">const <b>LON1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> LON1: <a href='#Region'>Region</a> = <span class='s2'>&#34;lon1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NYC1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L16" >}}">const <b>NYC1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NYC1: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NYC2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L17" >}}">const <b>NYC2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NYC2: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="NYC3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L18" >}}">const <b>NYC3</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> NYC3: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc3&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SFO1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L25" >}}">const <b>SFO1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SFO1: <a href='#Region'>Region</a> = <span class='s2'>&#34;sfo1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SFO2">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L26" >}}">const <b>SFO2</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SFO2: <a href='#Region'>Region</a> = <span class='s2'>&#34;sfo2&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="SGP1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L19" >}}">const <b>SGP1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> SGP1: <a href='#Region'>Region</a> = <span class='s2'>&#34;sgp1&#34;</span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TOR1">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L24" >}}">const <b>TOR1</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>const</span> TOR1: <a href='#Region'>Region</a> = <span class='s2'>&#34;tor1&#34;</span>;</pre>
-{{% md %}}
 {{% /md %}}
 </div>
 </div>

@@ -204,7 +204,7 @@ title: Module types/output/core/v1
 
 
 <h2 class="pdoc-module-header" id="AWSElasticBlockStoreVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7919" >}}">interface <b>AWSElasticBlockStoreVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7909" >}}">interface <b>AWSElasticBlockStoreVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -217,7 +217,7 @@ volumes support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7926" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7916" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -231,7 +231,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-partition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7933" >}}">property <b>partition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7923" >}}">property <b>partition</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>partition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -244,7 +244,7 @@ the volume partition for /dev/sda is "0" (or you can leave the property empty).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7940" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7930" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -257,7 +257,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-volumeID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7946" >}}">property <b>volumeID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7936" >}}">property <b>volumeID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -270,7 +270,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Affinity">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7953" >}}">interface <b>Affinity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7943" >}}">interface <b>Affinity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -279,7 +279,7 @@ Affinity is a group of affinity scheduling rules.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Affinity-nodeAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7957" >}}">property <b>nodeAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7947" >}}">property <b>nodeAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeAffinity: <a href='#NodeAffinity'>NodeAffinity</a>;</pre>
@@ -290,7 +290,7 @@ Describes node affinity scheduling rules for the pod.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Affinity-podAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7963" >}}">property <b>podAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7953" >}}">property <b>podAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podAffinity: <a href='#PodAffinity'>PodAffinity</a>;</pre>
@@ -302,7 +302,7 @@ etc. as some other pod(s)).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Affinity-podAntiAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7969" >}}">property <b>podAntiAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7959" >}}">property <b>podAntiAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podAntiAffinity: <a href='#PodAntiAffinity'>PodAntiAffinity</a>;</pre>
@@ -315,7 +315,7 @@ zone, etc. as some other pod(s)).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AttachedVolume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7976" >}}">interface <b>AttachedVolume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7966" >}}">interface <b>AttachedVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -324,7 +324,7 @@ AttachedVolume describes a volume attached to a node
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AttachedVolume-devicePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7980" >}}">property <b>devicePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7970" >}}">property <b>devicePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>devicePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -335,7 +335,7 @@ DevicePath represents the device path where the volume should be available
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AttachedVolume-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7985" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7975" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -347,7 +347,7 @@ Name of the attached volume
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AzureDiskVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7992" >}}">interface <b>AzureDiskVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7982" >}}">interface <b>AzureDiskVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -356,7 +356,7 @@ AzureDisk represents an Azure Data Disk mount on the host and bind mount to the 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AzureDiskVolumeSource-cachingMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7996" >}}">property <b>cachingMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7986" >}}">property <b>cachingMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cachingMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -367,7 +367,7 @@ Host Caching mode: None, Read Only, Read Write.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureDiskVolumeSource-diskName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8001" >}}">property <b>diskName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7991" >}}">property <b>diskName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -378,7 +378,7 @@ The Name of the data disk in the blob storage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureDiskVolumeSource-diskURI">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8006" >}}">property <b>diskURI</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L7996" >}}">property <b>diskURI</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskURI: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -389,7 +389,7 @@ The URI the data disk in the blob storage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8012" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8002" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -401,7 +401,7 @@ Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureDiskVolumeSource-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8019" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8009" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -414,7 +414,7 @@ set). defaults to shared
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureDiskVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8025" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8015" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -427,7 +427,7 @@ VolumeMounts.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AzureFilePersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8032" >}}">interface <b>AzureFilePersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8022" >}}">interface <b>AzureFilePersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -436,7 +436,7 @@ AzureFile represents an Azure File Service mount on the host and bind mount to t
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8037" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8027" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -448,7 +448,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-secretName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8042" >}}">property <b>secretName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8032" >}}">property <b>secretName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -459,7 +459,7 @@ the name of secret that contains Azure Storage Account Name and Key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-secretNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8048" >}}">property <b>secretNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8038" >}}">property <b>secretNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -471,7 +471,7 @@ same as the Pod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-shareName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8053" >}}">property <b>shareName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8043" >}}">property <b>shareName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shareName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -483,7 +483,7 @@ Share Name
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AzureFileVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8060" >}}">interface <b>AzureFileVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8050" >}}">interface <b>AzureFileVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -492,7 +492,7 @@ AzureFile represents an Azure File Service mount on the host and bind mount to t
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AzureFileVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8065" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8055" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -504,7 +504,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureFileVolumeSource-secretName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8070" >}}">property <b>secretName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8060" >}}">property <b>secretName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -515,7 +515,7 @@ the name of secret that contains Azure Storage Account Name and Key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AzureFileVolumeSource-shareName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8075" >}}">property <b>shareName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8065" >}}">property <b>shareName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shareName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -527,7 +527,7 @@ Share Name
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Binding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8083" >}}">interface <b>Binding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8073" >}}">interface <b>Binding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -537,7 +537,7 @@ Deprecated in 1.7, please use the bindings subresource of pods instead.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Binding-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8090" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8080" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -551,7 +551,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8098" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8088" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Binding"</span>;</pre>
@@ -565,7 +565,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8104" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8094" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -577,7 +577,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Binding-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8109" >}}">property <b>target</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8099" >}}">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -589,7 +589,7 @@ The target object that you want to bind to the standard object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSIPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8116" >}}">interface <b>CSIPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8106" >}}">interface <b>CSIPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -598,7 +598,7 @@ Represents storage that is managed by an external CSI volume driver (Beta featur
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-controllerExpandSecretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8124" >}}">property <b>controllerExpandSecretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8114" >}}">property <b>controllerExpandSecretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>controllerExpandSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -613,7 +613,7 @@ than one secret, all secrets are passed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-controllerPublishSecretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8132" >}}">property <b>controllerPublishSecretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8122" >}}">property <b>controllerPublishSecretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>controllerPublishSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -627,7 +627,7 @@ required. If the secret object contains more than one secret, all secrets are pa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-driver">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8137" >}}">property <b>driver</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8127" >}}">property <b>driver</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -638,7 +638,7 @@ Driver is the name of the driver to use for this volume. Required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8143" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8133" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -650,7 +650,7 @@ Ex. "ext4", "xfs", "ntfs".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-nodePublishSecretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8151" >}}">property <b>nodePublishSecretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8141" >}}">property <b>nodePublishSecretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodePublishSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -664,7 +664,7 @@ object contains more than one secret, all secrets are passed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-nodeStageSecretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8159" >}}">property <b>nodeStageSecretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8149" >}}">property <b>nodeStageSecretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeStageSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -678,7 +678,7 @@ If the secret object contains more than one secret, all secrets are passed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8165" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8155" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -690,7 +690,7 @@ Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-volumeAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8170" >}}">property <b>volumeAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8160" >}}">property <b>volumeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeAttributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -701,7 +701,7 @@ Attributes of the volume to publish.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-volumeHandle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8176" >}}">property <b>volumeHandle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8166" >}}">property <b>volumeHandle</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeHandle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -714,7 +714,7 @@ to refer to the volume on all subsequent calls. Required.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CSIVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8183" >}}">interface <b>CSIVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8173" >}}">interface <b>CSIVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -723,7 +723,7 @@ Represents a source location of a volume to mount, managed by an external CSI dr
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSIVolumeSource-driver">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8188" >}}">property <b>driver</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8178" >}}">property <b>driver</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -735,7 +735,7 @@ the correct name as registered in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8194" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8184" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -747,7 +747,7 @@ passed to the associated CSI driver which will determine the default filesystem 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIVolumeSource-nodePublishSecretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8202" >}}">property <b>nodePublishSecretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8192" >}}">property <b>nodePublishSecretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodePublishSecretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -761,7 +761,7 @@ object contains more than one secret, all secret references are passed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8207" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8197" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -772,7 +772,7 @@ Specifies a read-only configuration for the volume. Defaults to false (read/writ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIVolumeSource-volumeAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8213" >}}">property <b>volumeAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8203" >}}">property <b>volumeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeAttributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -785,7 +785,7 @@ Consult your driver's documentation for supported values.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Capabilities">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8220" >}}">interface <b>Capabilities</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8210" >}}">interface <b>Capabilities</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -794,7 +794,7 @@ Adds and removes POSIX capabilities from running containers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Capabilities-add">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8224" >}}">property <b>add</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8214" >}}">property <b>add</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>add: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -805,7 +805,7 @@ Added capabilities
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Capabilities-drop">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8229" >}}">property <b>drop</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8219" >}}">property <b>drop</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>drop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -817,7 +817,7 @@ Removed capabilities
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CephFSPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8237" >}}">interface <b>CephFSPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8227" >}}">interface <b>CephFSPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -827,7 +827,7 @@ support ownership management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8242" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8232" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -839,7 +839,7 @@ https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8247" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8237" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -850,7 +850,7 @@ Optional: Used as the mounted root, rather than the full Ceph tree, default is /
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8254" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8244" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -863,7 +863,7 @@ https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-secretFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8260" >}}">property <b>secretFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8250" >}}">property <b>secretFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -875,7 +875,7 @@ More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8266" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8256" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -887,7 +887,7 @@ More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8272" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8262" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -900,7 +900,7 @@ https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CephFSVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8280" >}}">interface <b>CephFSVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8270" >}}">interface <b>CephFSVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -910,7 +910,7 @@ support ownership management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CephFSVolumeSource-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8285" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8275" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -922,7 +922,7 @@ https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8290" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8280" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -933,7 +933,7 @@ Optional: Used as the mounted root, rather than the full Ceph tree, default is /
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8297" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8287" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -946,7 +946,7 @@ https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSVolumeSource-secretFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8303" >}}">property <b>secretFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8293" >}}">property <b>secretFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -958,7 +958,7 @@ More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8309" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8299" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -970,7 +970,7 @@ More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CephFSVolumeSource-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8315" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8305" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -983,7 +983,7 @@ https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CinderPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8324" >}}">interface <b>CinderPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8314" >}}">interface <b>CinderPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -994,7 +994,7 @@ support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8330" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8320" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1007,7 +1007,7 @@ info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8336" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8326" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1019,7 +1019,7 @@ VolumeMounts. More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/R
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8341" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8331" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -1030,7 +1030,7 @@ Optional: points to a secret object containing parameters used to connect to Ope
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-volumeID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8347" >}}">property <b>volumeID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8337" >}}">property <b>volumeID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1043,7 +1043,7 @@ https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CinderVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8356" >}}">interface <b>CinderVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8346" >}}">interface <b>CinderVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1054,7 +1054,7 @@ support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CinderVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8362" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8352" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1067,7 +1067,7 @@ info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CinderVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8368" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8358" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1079,7 +1079,7 @@ VolumeMounts. More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/R
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CinderVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8373" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8363" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -1090,7 +1090,7 @@ Optional: points to a secret object containing parameters used to connect to Ope
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CinderVolumeSource-volumeID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8379" >}}">property <b>volumeID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8369" >}}">property <b>volumeID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1103,7 +1103,7 @@ https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClientIPConfig">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8386" >}}">interface <b>ClientIPConfig</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8376" >}}">interface <b>ClientIPConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1112,7 +1112,7 @@ ClientIPConfig represents the configurations of Client IP based session affinity
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClientIPConfig-timeoutSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8392" >}}">property <b>timeoutSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8382" >}}">property <b>timeoutSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1126,7 +1126,7 @@ hours).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8399" >}}">interface <b>ComponentCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8389" >}}">interface <b>ComponentCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1135,7 +1135,7 @@ Information about the condition of a component.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentCondition-error">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8403" >}}">property <b>error</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8393" >}}">property <b>error</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>error: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1146,7 +1146,7 @@ Condition error code for a component. For example, a health check error code.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8408" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8398" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1157,7 +1157,7 @@ Message about the condition for a component. For example, information about a he
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8414" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8404" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1169,7 +1169,7 @@ Status of the condition for a component. Valid values for "Healthy": "True", "Fa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8419" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8409" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1181,7 +1181,7 @@ Type of condition for a component. Valid value: "Healthy"
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8426" >}}">interface <b>ComponentStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8416" >}}">interface <b>ComponentStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1190,7 +1190,7 @@ ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentStatus-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8433" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8423" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -1204,7 +1204,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8438" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8428" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions: <a href='#ComponentCondition'>ComponentCondition</a>[];</pre>
@@ -1215,7 +1215,7 @@ List of component conditions observed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8446" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8436" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ComponentStatus"</span>;</pre>
@@ -1229,7 +1229,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8452" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8442" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -1242,7 +1242,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentStatusList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8459" >}}">interface <b>ComponentStatusList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8449" >}}">interface <b>ComponentStatusList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1251,7 +1251,7 @@ Status of all the conditions for the component as a list of ComponentStatus obje
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentStatusList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8466" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8456" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -1265,7 +1265,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8471" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8461" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#ComponentStatus'>ComponentStatus</a>[];</pre>
@@ -1276,7 +1276,7 @@ List of ComponentStatus objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8479" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8469" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ComponentStatusList"</span>;</pre>
@@ -1290,7 +1290,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8485" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8475" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -1303,7 +1303,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMap">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8492" >}}">interface <b>ConfigMap</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8482" >}}">interface <b>ConfigMap</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1312,7 +1312,7 @@ ConfigMap holds configuration data for pods to consume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMap-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8499" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8489" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -1326,7 +1326,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-binaryData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8507" >}}">property <b>binaryData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8497" >}}">property <b>binaryData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>binaryData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -1340,7 +1340,7 @@ during validation process. Using this field will require 1.10+ apiserver and kub
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8515" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8505" >}}">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>data: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -1354,7 +1354,7 @@ enforced during validation process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8523" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8513" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ConfigMap"</span>;</pre>
@@ -1368,7 +1368,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8529" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8519" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -1381,7 +1381,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapEnvSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8539" >}}">interface <b>ConfigMapEnvSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8529" >}}">interface <b>ConfigMapEnvSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1393,7 +1393,7 @@ environment variables.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapEnvSource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8544" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8534" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1405,7 +1405,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapEnvSource-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8549" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8539" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1417,7 +1417,7 @@ Specify whether the ConfigMap must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapKeySelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8556" >}}">interface <b>ConfigMapKeySelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8546" >}}">interface <b>ConfigMapKeySelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1426,7 +1426,7 @@ Selects a key from a ConfigMap.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapKeySelector-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8560" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8550" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1437,7 +1437,7 @@ The key to select.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapKeySelector-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8566" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8556" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1449,7 +1449,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapKeySelector-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8571" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8561" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1461,7 +1461,7 @@ Specify whether the ConfigMap or its key must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8578" >}}">interface <b>ConfigMapList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8568" >}}">interface <b>ConfigMapList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1470,7 +1470,7 @@ ConfigMapList is a resource containing a list of ConfigMap objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8585" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8575" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -1484,7 +1484,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8590" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8580" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#ConfigMap'>ConfigMap</a>[];</pre>
@@ -1495,7 +1495,7 @@ Items is the list of ConfigMaps.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8598" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8588" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ConfigMapList"</span>;</pre>
@@ -1509,7 +1509,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8603" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8593" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -1521,7 +1521,7 @@ More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#me
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapNodeConfigSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8611" >}}">interface <b>ConfigMapNodeConfigSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8601" >}}">interface <b>ConfigMapNodeConfigSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1531,7 +1531,7 @@ source for the Node.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-kubeletConfigKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8616" >}}">property <b>kubeletConfigKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8606" >}}">property <b>kubeletConfigKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubeletConfigKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1543,7 +1543,7 @@ KubeletConfiguration structure This field is required in all cases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8621" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8611" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1554,7 +1554,7 @@ Name is the metadata.name of the referenced ConfigMap. This field is required in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8627" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8617" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1566,7 +1566,7 @@ all cases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-resourceVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8633" >}}">property <b>resourceVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8623" >}}">property <b>resourceVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1578,7 +1578,7 @@ forbidden in Node.Spec, and required in Node.Status.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8639" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8629" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1591,7 +1591,7 @@ and required in Node.Status.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapProjection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8651" >}}">interface <b>ConfigMapProjection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8641" >}}">interface <b>ConfigMapProjection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1605,7 +1605,7 @@ volume source without the default mode.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapProjection-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8660" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8650" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
@@ -1621,7 +1621,7 @@ contain the '..' path or start with '..'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapProjection-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8666" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8656" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1633,7 +1633,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapProjection-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8671" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8661" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1645,7 +1645,7 @@ Specify whether the ConfigMap or its keys must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8683" >}}">interface <b>ConfigMapVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8673" >}}">interface <b>ConfigMapVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1659,7 +1659,7 @@ SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8690" >}}">property <b>defaultMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8680" >}}">property <b>defaultMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1673,7 +1673,7 @@ can be other mode bits set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapVolumeSource-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8700" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8690" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
@@ -1689,7 +1689,7 @@ contain the '..' path or start with '..'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapVolumeSource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8706" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8696" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1701,7 +1701,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapVolumeSource-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8711" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8701" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1713,7 +1713,7 @@ Specify whether the ConfigMap or its keys must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Container">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8718" >}}">interface <b>Container</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8708" >}}">interface <b>Container</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1722,7 +1722,7 @@ A single application container that you want to run within a pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Container-args">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8728" >}}">property <b>args</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8718" >}}">property <b>args</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>args: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1739,7 +1739,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-command">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8739" >}}">property <b>command</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8729" >}}">property <b>command</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>command: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1756,7 +1756,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-env">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8744" >}}">property <b>env</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8734" >}}">property <b>env</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>env: <a href='#EnvVar'>EnvVar</a>[];</pre>
@@ -1767,7 +1767,7 @@ List of environment variables to set in the container. Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-envFrom">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8753" >}}">property <b>envFrom</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8743" >}}">property <b>envFrom</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>envFrom: <a href='#EnvFromSource'>EnvFromSource</a>[];</pre>
@@ -1782,7 +1782,7 @@ precedence. Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8760" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8750" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1795,7 +1795,7 @@ images in workload controllers like Deployments and StatefulSets.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-imagePullPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8767" >}}">property <b>imagePullPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8757" >}}">property <b>imagePullPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>imagePullPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1808,7 +1808,7 @@ https://kubernetes.io/docs/concepts/containers/images#updating-images
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-lifecycle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8773" >}}">property <b>lifecycle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8763" >}}">property <b>lifecycle</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lifecycle: <a href='#Lifecycle'>Lifecycle</a>;</pre>
@@ -1820,7 +1820,7 @@ Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-livenessProbe">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8780" >}}">property <b>livenessProbe</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8770" >}}">property <b>livenessProbe</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>livenessProbe: <a href='#Probe'>Probe</a>;</pre>
@@ -1833,7 +1833,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8786" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8776" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1845,7 +1845,7 @@ name (DNS_LABEL). Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8795" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8785" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports: <a href='#ContainerPort'>ContainerPort</a>[];</pre>
@@ -1860,7 +1860,7 @@ accessible from the network. Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-readinessProbe">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8802" >}}">property <b>readinessProbe</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8792" >}}">property <b>readinessProbe</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readinessProbe: <a href='#Probe'>Probe</a>;</pre>
@@ -1873,7 +1873,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8808" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8798" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resources: <a href='#ResourceRequirements'>ResourceRequirements</a>;</pre>
@@ -1885,7 +1885,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-securityContext">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8815" >}}">property <b>securityContext</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8805" >}}">property <b>securityContext</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityContext: <a href='#SecurityContext'>SecurityContext</a>;</pre>
@@ -1898,7 +1898,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-stdin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8821" >}}">property <b>stdin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8811" >}}">property <b>stdin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>stdin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1910,7 +1910,7 @@ is not set, reads from stdin in the container will always result in EOF. Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-stdinOnce">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8832" >}}">property <b>stdinOnce</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8822" >}}">property <b>stdinOnce</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>stdinOnce: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1927,7 +1927,7 @@ receive an EOF. Default is false
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-terminationMessagePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8841" >}}">property <b>terminationMessagePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8831" >}}">property <b>terminationMessagePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>terminationMessagePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1942,7 +1942,7 @@ greater than 4096 bytes. The total message length across all containers will be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-terminationMessagePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8851" >}}">property <b>terminationMessagePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8841" >}}">property <b>terminationMessagePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>terminationMessagePolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1958,7 +1958,7 @@ updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-tty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8857" >}}">property <b>tty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8847" >}}">property <b>tty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tty: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1970,7 +1970,7 @@ Default is false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-volumeDevices">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8863" >}}">property <b>volumeDevices</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8853" >}}">property <b>volumeDevices</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeDevices: <a href='#VolumeDevice'>VolumeDevice</a>[];</pre>
@@ -1982,7 +1982,7 @@ feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-volumeMounts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8868" >}}">property <b>volumeMounts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8858" >}}">property <b>volumeMounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeMounts: <a href='#VolumeMount'>VolumeMount</a>[];</pre>
@@ -1993,7 +1993,7 @@ Pod volumes to mount into the container's filesystem. Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-workingDir">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8874" >}}">property <b>workingDir</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8864" >}}">property <b>workingDir</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>workingDir: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2006,7 +2006,7 @@ used, which might be configured in the container image. Cannot be updated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerImage">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8881" >}}">interface <b>ContainerImage</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8871" >}}">interface <b>ContainerImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2015,7 +2015,7 @@ Describe a container image
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerImage-names">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8886" >}}">property <b>names</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8876" >}}">property <b>names</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2027,7 +2027,7 @@ Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7",
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerImage-sizeBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8891" >}}">property <b>sizeBytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8881" >}}">property <b>sizeBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2039,7 +2039,7 @@ The size of the image in bytes.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerPort">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8898" >}}">interface <b>ContainerPort</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8888" >}}">interface <b>ContainerPort</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2048,7 +2048,7 @@ ContainerPort represents a network port in a single container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerPort-containerPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8903" >}}">property <b>containerPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8893" >}}">property <b>containerPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2060,7 +2060,7 @@ Number of port to expose on the pod's IP address. This must be a valid port numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerPort-hostIP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8908" >}}">property <b>hostIP</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8898" >}}">property <b>hostIP</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2071,7 +2071,7 @@ What host IP to bind the external port to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerPort-hostPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8915" >}}">property <b>hostPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8905" >}}">property <b>hostPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2084,7 +2084,7 @@ need this.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerPort-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8921" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8911" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2096,7 +2096,7 @@ pod must have a unique name. Name for the port that can be referred to by servic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerPort-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8926" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8916" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2108,7 +2108,7 @@ Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8934" >}}">interface <b>ContainerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8924" >}}">interface <b>ContainerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2118,7 +2118,7 @@ If none of them is specified, the default one is ContainerStateWaiting.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerState-running">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8938" >}}">property <b>running</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8928" >}}">property <b>running</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>running: <a href='#ContainerStateRunning'>ContainerStateRunning</a>;</pre>
@@ -2129,7 +2129,7 @@ Details about a running container
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerState-terminated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8943" >}}">property <b>terminated</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8933" >}}">property <b>terminated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>terminated: <a href='#ContainerStateTerminated'>ContainerStateTerminated</a>;</pre>
@@ -2140,7 +2140,7 @@ Details about a terminated container
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerState-waiting">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8948" >}}">property <b>waiting</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8938" >}}">property <b>waiting</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>waiting: <a href='#ContainerStateWaiting'>ContainerStateWaiting</a>;</pre>
@@ -2152,7 +2152,7 @@ Details about a waiting container
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerStateRunning">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8955" >}}">interface <b>ContainerStateRunning</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8945" >}}">interface <b>ContainerStateRunning</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2161,7 +2161,7 @@ ContainerStateRunning is a running state of a container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerStateRunning-startedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8959" >}}">property <b>startedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8949" >}}">property <b>startedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2173,7 +2173,7 @@ Time at which the container was last (re-)started
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerStateTerminated">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8966" >}}">interface <b>ContainerStateTerminated</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8956" >}}">interface <b>ContainerStateTerminated</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2182,7 +2182,7 @@ ContainerStateTerminated is a terminated state of a container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-containerID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8970" >}}">property <b>containerID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8960" >}}">property <b>containerID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2193,7 +2193,7 @@ Container's ID in the format 'docker://<container_id>'
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-exitCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8975" >}}">property <b>exitCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8965" >}}">property <b>exitCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>exitCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2204,7 +2204,7 @@ Exit status from the last termination of the container
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-finishedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8980" >}}">property <b>finishedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8970" >}}">property <b>finishedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>finishedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2215,7 +2215,7 @@ Time at which the container last terminated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8985" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8975" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2226,7 +2226,7 @@ Message regarding the last termination of the container
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8990" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8980" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2237,7 +2237,7 @@ Message regarding the last termination of the container
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-signal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8995" >}}">property <b>signal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8985" >}}">property <b>signal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>signal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2248,7 +2248,7 @@ Signal from the last termination of the container
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateTerminated-startedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9000" >}}">property <b>startedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8990" >}}">property <b>startedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2260,7 +2260,7 @@ Time at which previous execution of the container started
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerStateWaiting">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9007" >}}">interface <b>ContainerStateWaiting</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L8997" >}}">interface <b>ContainerStateWaiting</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2269,7 +2269,7 @@ ContainerStateWaiting is a waiting state of a container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerStateWaiting-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9011" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9001" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2280,7 +2280,7 @@ Message regarding why the container is not yet running.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStateWaiting-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9016" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9006" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2292,7 +2292,7 @@ Message regarding why the container is not yet running.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9023" >}}">interface <b>ContainerStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9013" >}}">interface <b>ContainerStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2301,7 +2301,7 @@ ContainerStatus contains details for the current status of this container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerStatus-containerID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9027" >}}">property <b>containerID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9017" >}}">property <b>containerID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2312,7 +2312,7 @@ Container's ID in the format 'docker://<container_id>'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9033" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9023" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2324,7 +2324,7 @@ https://kubernetes.io/docs/concepts/containers/images
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-imageID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9038" >}}">property <b>imageID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9028" >}}">property <b>imageID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>imageID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2335,7 +2335,7 @@ ImageID of the container's image.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-lastState">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9043" >}}">property <b>lastState</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9033" >}}">property <b>lastState</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastState: <a href='#ContainerState'>ContainerState</a>;</pre>
@@ -2346,7 +2346,7 @@ Details about the container's last termination condition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9049" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9039" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2358,7 +2358,7 @@ updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-ready">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9054" >}}">property <b>ready</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9044" >}}">property <b>ready</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ready: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2369,7 +2369,7 @@ Specifies whether the container has passed its readiness probe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-restartCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9062" >}}">property <b>restartCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9052" >}}">property <b>restartCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>restartCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2383,7 +2383,7 @@ capped at 5 by GC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerStatus-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9067" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9057" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <a href='#ContainerState'>ContainerState</a>;</pre>
@@ -2395,7 +2395,7 @@ Details about the container's current condition.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DaemonEndpoint">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9074" >}}">interface <b>DaemonEndpoint</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9064" >}}">interface <b>DaemonEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2404,7 +2404,7 @@ DaemonEndpoint contains information about a single Daemon endpoint.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonEndpoint-Port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9078" >}}">property <b>Port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9068" >}}">property <b>Port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2416,7 +2416,7 @@ Port number of the given endpoint.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DownwardAPIProjection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9086" >}}">interface <b>DownwardAPIProjection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9076" >}}">interface <b>DownwardAPIProjection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2426,7 +2426,7 @@ identical to a downwardAPI volume source without the default mode.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DownwardAPIProjection-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9090" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9080" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#DownwardAPIVolumeFile'>DownwardAPIVolumeFile</a>[];</pre>
@@ -2438,7 +2438,7 @@ Items is a list of DownwardAPIVolume file
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DownwardAPIVolumeFile">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9097" >}}">interface <b>DownwardAPIVolumeFile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9087" >}}">interface <b>DownwardAPIVolumeFile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2447,7 +2447,7 @@ DownwardAPIVolumeFile represents information to create the file containing the p
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-fieldRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9102" >}}">property <b>fieldRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9092" >}}">property <b>fieldRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fieldRef: <a href='#ObjectFieldSelector'>ObjectFieldSelector</a>;</pre>
@@ -2459,7 +2459,7 @@ supported.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-mode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9109" >}}">property <b>mode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9099" >}}">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2472,7 +2472,7 @@ options that affect the file mode, like fsGroup, and the result can be other mod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9116" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9106" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2485,7 +2485,7 @@ not start with '..'
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-resourceFieldRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9122" >}}">property <b>resourceFieldRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9112" >}}">property <b>resourceFieldRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceFieldRef: <a href='#ResourceFieldSelector'>ResourceFieldSelector</a>;</pre>
@@ -2498,7 +2498,7 @@ limits.memory, requests.cpu and requests.memory) are currently supported.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DownwardAPIVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9130" >}}">interface <b>DownwardAPIVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9120" >}}">interface <b>DownwardAPIVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2508,7 +2508,7 @@ volumes support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DownwardAPIVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9137" >}}">property <b>defaultMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9127" >}}">property <b>defaultMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2522,7 +2522,7 @@ can be other mode bits set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DownwardAPIVolumeSource-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9142" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9132" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#DownwardAPIVolumeFile'>DownwardAPIVolumeFile</a>[];</pre>
@@ -2534,7 +2534,7 @@ Items is a list of downward API volume file
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EmptyDirVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9150" >}}">interface <b>EmptyDirVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9140" >}}">interface <b>EmptyDirVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2544,7 +2544,7 @@ and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EmptyDirVolumeSource-medium">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9156" >}}">property <b>medium</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9146" >}}">property <b>medium</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>medium: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2557,7 +2557,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#emptydir
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EmptyDirVolumeSource-sizeLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9165" >}}">property <b>sizeLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9155" >}}">property <b>sizeLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sizeLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2573,7 +2573,7 @@ http://kubernetes.io/docs/user-guide/volumes#emptydir
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointAddress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9172" >}}">interface <b>EndpointAddress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9162" >}}">interface <b>EndpointAddress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2582,7 +2582,7 @@ EndpointAddress is a tuple that describes single IP address.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointAddress-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9176" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9166" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2593,7 +2593,7 @@ The Hostname of this endpoint
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointAddress-ip">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9183" >}}">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9173" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2606,7 +2606,7 @@ platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointAddress-nodeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9189" >}}">property <b>nodeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9179" >}}">property <b>nodeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2618,7 +2618,7 @@ node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointAddress-targetRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9194" >}}">property <b>targetRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9184" >}}">property <b>targetRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetRef: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -2630,7 +2630,7 @@ Reference to object providing the endpoint.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointPort">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9201" >}}">interface <b>EndpointPort</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9191" >}}">interface <b>EndpointPort</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2639,7 +2639,7 @@ EndpointPort is a tuple that describes a single port.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointPort-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9206" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9196" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2651,7 +2651,7 @@ if one port is defined.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointPort-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9211" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9201" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2662,7 +2662,7 @@ The port number of the endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointPort-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9216" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9206" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2674,7 +2674,7 @@ The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointSubset">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9231" >}}">interface <b>EndpointSubset</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9221" >}}">interface <b>EndpointSubset</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2691,7 +2691,7 @@ The resulting set of endpoints can be viewed as:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointSubset-addresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9236" >}}">property <b>addresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9226" >}}">property <b>addresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>addresses: <a href='#EndpointAddress'>EndpointAddress</a>[];</pre>
@@ -2703,7 +2703,7 @@ be considered safe for load balancers and clients to utilize.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointSubset-notReadyAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9243" >}}">property <b>notReadyAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9233" >}}">property <b>notReadyAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notReadyAddresses: <a href='#EndpointAddress'>EndpointAddress</a>[];</pre>
@@ -2716,7 +2716,7 @@ recently failed a liveness check.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointSubset-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9248" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9238" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports: <a href='#EndpointPort'>EndpointPort</a>[];</pre>
@@ -2728,7 +2728,7 @@ Port numbers available on the related IP addresses.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Endpoints">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9266" >}}">interface <b>Endpoints</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9256" >}}">interface <b>Endpoints</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2748,7 +2748,7 @@ Endpoints is a collection of endpoints that implement the actual service. Exampl
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoints-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9273" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9263" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -2762,7 +2762,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9281" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9271" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Endpoints"</span>;</pre>
@@ -2776,7 +2776,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9287" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9277" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -2788,7 +2788,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-subsets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9297" >}}">property <b>subsets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9287" >}}">property <b>subsets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subsets: <a href='#EndpointSubset'>EndpointSubset</a>[];</pre>
@@ -2805,7 +2805,7 @@ and ports that comprise a service.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointsList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9304" >}}">interface <b>EndpointsList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9294" >}}">interface <b>EndpointsList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2814,7 +2814,7 @@ EndpointsList is a list of endpoints.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointsList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9311" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9301" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -2828,7 +2828,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9316" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9306" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Endpoints'>Endpoints</a>[];</pre>
@@ -2839,7 +2839,7 @@ List of endpoints.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9324" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9314" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"EndpointsList"</span>;</pre>
@@ -2853,7 +2853,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9330" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9320" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -2866,7 +2866,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvFromSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9337" >}}">interface <b>EnvFromSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9327" >}}">interface <b>EnvFromSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2875,7 +2875,7 @@ EnvFromSource represents the source of a set of ConfigMaps
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvFromSource-configMapRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9341" >}}">property <b>configMapRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9331" >}}">property <b>configMapRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configMapRef: <a href='#ConfigMapEnvSource'>ConfigMapEnvSource</a>;</pre>
@@ -2886,7 +2886,7 @@ The ConfigMap to select from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvFromSource-prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9346" >}}">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9336" >}}">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2897,7 +2897,7 @@ An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDEN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvFromSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9351" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9341" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretEnvSource'>SecretEnvSource</a>;</pre>
@@ -2909,7 +2909,7 @@ The Secret to select from
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvVar">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9358" >}}">interface <b>EnvVar</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9348" >}}">interface <b>EnvVar</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2918,7 +2918,7 @@ EnvVar represents an environment variable present in a Container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvVar-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9362" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9352" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2929,7 +2929,7 @@ Name of the environment variable. Must be a C_IDENTIFIER.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvVar-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9371" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9361" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2944,7 +2944,7 @@ regardless of whether the variable exists or not. Defaults to "".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvVar-valueFrom">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9376" >}}">property <b>valueFrom</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9366" >}}">property <b>valueFrom</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueFrom: <a href='#EnvVarSource'>EnvVarSource</a>;</pre>
@@ -2956,7 +2956,7 @@ Source for the environment variable's value. Cannot be used if value is not empt
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvVarSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9383" >}}">interface <b>EnvVarSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9373" >}}">interface <b>EnvVarSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2965,7 +2965,7 @@ EnvVarSource represents a source for the value of an EnvVar.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvVarSource-configMapKeyRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9387" >}}">property <b>configMapKeyRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9377" >}}">property <b>configMapKeyRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configMapKeyRef: <a href='#ConfigMapKeySelector'>ConfigMapKeySelector</a>;</pre>
@@ -2976,7 +2976,7 @@ Selects a key of a ConfigMap.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvVarSource-fieldRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9393" >}}">property <b>fieldRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9383" >}}">property <b>fieldRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fieldRef: <a href='#ObjectFieldSelector'>ObjectFieldSelector</a>;</pre>
@@ -2988,7 +2988,7 @@ metadata.annotations, spec.nodeName, spec.serviceAccountName, status.hostIP, sta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvVarSource-resourceFieldRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9400" >}}">property <b>resourceFieldRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9390" >}}">property <b>resourceFieldRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceFieldRef: <a href='#ResourceFieldSelector'>ResourceFieldSelector</a>;</pre>
@@ -3001,7 +3001,7 @@ requests.ephemeral-storage) are currently supported.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvVarSource-secretKeyRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9405" >}}">property <b>secretKeyRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9395" >}}">property <b>secretKeyRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretKeyRef: <a href='#SecretKeySelector'>SecretKeySelector</a>;</pre>
@@ -3013,7 +3013,7 @@ Selects a key of a secret in the pod's namespace
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Event">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9412" >}}">interface <b>Event</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9402" >}}">interface <b>Event</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3022,7 +3022,7 @@ Event is a report of an event somewhere in the cluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Event-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9416" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9406" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3033,7 +3033,7 @@ What action was taken/failed regarding to the Regarding object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9424" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9414" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -3047,7 +3047,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-count">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9429" >}}">property <b>count</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9419" >}}">property <b>count</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -3058,7 +3058,7 @@ The number of times this event has occurred.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-eventTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9434" >}}">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9424" >}}">property <b>eventTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3069,7 +3069,7 @@ Time when this Event was first observed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-firstTimestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9439" >}}">property <b>firstTimestamp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9429" >}}">property <b>firstTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>firstTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3080,7 +3080,7 @@ The time at which the event was first recorded. (Time of server receipt is in Ty
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-involvedObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9444" >}}">property <b>involvedObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9434" >}}">property <b>involvedObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>involvedObject: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -3091,7 +3091,7 @@ The object that this event is about.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9452" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9442" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Event"</span>;</pre>
@@ -3105,7 +3105,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-lastTimestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9457" >}}">property <b>lastTimestamp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9447" >}}">property <b>lastTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3116,7 +3116,7 @@ The time at which the most recent occurrence of this event was recorded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9462" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9452" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3127,7 +3127,7 @@ A human-readable description of the status of this operation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9468" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9458" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -3139,7 +3139,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9474" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9464" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3151,7 +3151,7 @@ transition into the object's current status.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-related">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9479" >}}">property <b>related</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9469" >}}">property <b>related</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>related: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -3162,7 +3162,7 @@ Optional secondary object for more complex actions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingComponent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9484" >}}">property <b>reportingComponent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9474" >}}">property <b>reportingComponent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reportingComponent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3173,7 +3173,7 @@ Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9489" >}}">property <b>reportingInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9479" >}}">property <b>reportingInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reportingInstance: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3184,7 +3184,7 @@ ID of the controller instance, e.g. `kubelet-xyzf`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-series">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9494" >}}">property <b>series</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9484" >}}">property <b>series</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>series: <a href='#EventSeries'>EventSeries</a>;</pre>
@@ -3195,7 +3195,7 @@ Data about the Event series this event represents or nil if it's a singleton Eve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9499" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9489" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source: <a href='#EventSource'>EventSource</a>;</pre>
@@ -3206,7 +3206,7 @@ The component reporting this event. Should be a short machine understandable str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Event-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9504" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9494" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3218,7 +3218,7 @@ Type of this event (Normal, Warning), new types could be added in the future
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9511" >}}">interface <b>EventList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9501" >}}">interface <b>EventList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3227,7 +3227,7 @@ EventList is a list of events.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9518" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9508" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -3241,7 +3241,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9523" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9513" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Event'>Event</a>[];</pre>
@@ -3252,7 +3252,7 @@ List of events
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9531" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9521" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"EventList"</span>;</pre>
@@ -3266,7 +3266,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9537" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9527" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -3279,7 +3279,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventSeries">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9545" >}}">interface <b>EventSeries</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9535" >}}">interface <b>EventSeries</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3289,7 +3289,7 @@ continuously for some time.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventSeries-count">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9549" >}}">property <b>count</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9539" >}}">property <b>count</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -3300,7 +3300,7 @@ Number of occurrences in this series up to the last heartbeat time
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSeries-lastObservedTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9554" >}}">property <b>lastObservedTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9544" >}}">property <b>lastObservedTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastObservedTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3311,7 +3311,7 @@ Time of the last occurrence observed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSeries-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9559" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9549" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3323,7 +3323,7 @@ State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9566" >}}">interface <b>EventSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9556" >}}">interface <b>EventSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3332,7 +3332,7 @@ EventSource contains information for an event.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventSource-component">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9570" >}}">property <b>component</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9560" >}}">property <b>component</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>component: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3343,7 +3343,7 @@ Component from which the event is generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSource-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9575" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9565" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3355,7 +3355,7 @@ Node name on which the event is generated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExecAction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9582" >}}">interface <b>ExecAction</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9572" >}}">interface <b>ExecAction</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3364,7 +3364,7 @@ ExecAction describes a "run in container" action.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ExecAction-command">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9590" >}}">property <b>command</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9580" >}}">property <b>command</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>command: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -3380,7 +3380,7 @@ live/healthy and non-zero is unhealthy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FCVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9598" >}}">interface <b>FCVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9588" >}}">interface <b>FCVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3390,7 +3390,7 @@ once. Fibre Channel volumes support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FCVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9603" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9593" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3402,7 +3402,7 @@ Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FCVolumeSource-lun">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9608" >}}">property <b>lun</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9598" >}}">property <b>lun</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -3413,7 +3413,7 @@ Optional: FC target lun number
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FCVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9614" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9604" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3425,7 +3425,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FCVolumeSource-targetWWNs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9619" >}}">property <b>targetWWNs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9609" >}}">property <b>targetWWNs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetWWNs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -3436,7 +3436,7 @@ Optional: FC target worldwide names (WWNs)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FCVolumeSource-wwids">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9625" >}}">property <b>wwids</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9615" >}}">property <b>wwids</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>wwids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -3449,7 +3449,7 @@ targetWWNs and lun must be set, but not both simultaneously.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FlexPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9633" >}}">interface <b>FlexPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9623" >}}">interface <b>FlexPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3459,7 +3459,7 @@ provisioned/attached using an exec based plugin.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-driver">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9637" >}}">property <b>driver</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9627" >}}">property <b>driver</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3470,7 +3470,7 @@ Driver is the name of the driver to use for this volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9643" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9633" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3482,7 +3482,7 @@ Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-options">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9648" >}}">property <b>options</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9638" >}}">property <b>options</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>options: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -3493,7 +3493,7 @@ Optional: Extra command options if any.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9654" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9644" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3505,7 +3505,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9661" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9651" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -3519,7 +3519,7 @@ secret object contains more than one secret, all secrets are passed to the plugi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FlexVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9669" >}}">interface <b>FlexVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9659" >}}">interface <b>FlexVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3529,7 +3529,7 @@ based plugin.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FlexVolumeSource-driver">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9673" >}}">property <b>driver</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9663" >}}">property <b>driver</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3540,7 +3540,7 @@ Driver is the name of the driver to use for this volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9679" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9669" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3552,7 +3552,7 @@ Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexVolumeSource-options">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9684" >}}">property <b>options</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9674" >}}">property <b>options</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>options: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -3563,7 +3563,7 @@ Optional: Extra command options if any.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9690" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9680" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3575,7 +3575,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlexVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9697" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9687" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -3589,7 +3589,7 @@ secret object contains more than one secret, all secrets are passed to the plugi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FlockerVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9706" >}}">interface <b>FlockerVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9696" >}}">interface <b>FlockerVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3600,7 +3600,7 @@ relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FlockerVolumeSource-datasetName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9711" >}}">property <b>datasetName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9701" >}}">property <b>datasetName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>datasetName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3612,7 +3612,7 @@ considered as deprecated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlockerVolumeSource-datasetUUID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9716" >}}">property <b>datasetUUID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9706" >}}">property <b>datasetUUID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>datasetUUID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3624,7 +3624,7 @@ UUID of the dataset. This is unique identifier of a Flocker dataset
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GCEPersistentDiskVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9727" >}}">interface <b>GCEPersistentDiskVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9717" >}}">interface <b>GCEPersistentDiskVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3637,7 +3637,7 @@ many times. GCE PDs support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9734" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9724" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3651,7 +3651,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-partition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9742" >}}">property <b>partition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9732" >}}">property <b>partition</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>partition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -3665,7 +3665,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-pdName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9748" >}}">property <b>pdName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9738" >}}">property <b>pdName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pdName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3677,7 +3677,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9754" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9744" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3690,7 +3690,7 @@ info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GitRepoVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9766" >}}">interface <b>GitRepoVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9756" >}}">interface <b>GitRepoVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3704,7 +3704,7 @@ the Pod's container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GitRepoVolumeSource-directory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9772" >}}">property <b>directory</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9762" >}}">property <b>directory</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>directory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3717,7 +3717,7 @@ git repository in the subdirectory with the given name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GitRepoVolumeSource-repository">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9777" >}}">property <b>repository</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9767" >}}">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repository: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3728,7 +3728,7 @@ Repository URL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GitRepoVolumeSource-revision">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9782" >}}">property <b>revision</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9772" >}}">property <b>revision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>revision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3740,7 +3740,7 @@ Commit hash for the specified revision.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GlusterfsPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9790" >}}">interface <b>GlusterfsPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9780" >}}">interface <b>GlusterfsPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3750,7 +3750,7 @@ support ownership management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9795" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9785" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3762,7 +3762,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-endpointsNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9802" >}}">property <b>endpointsNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9792" >}}">property <b>endpointsNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpointsNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3775,7 +3775,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9808" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9798" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3787,7 +3787,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9815" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9805" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3801,7 +3801,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GlusterfsVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9823" >}}">interface <b>GlusterfsVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9813" >}}">interface <b>GlusterfsVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3811,7 +3811,7 @@ support ownership management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GlusterfsVolumeSource-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9828" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9818" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3823,7 +3823,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GlusterfsVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9834" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9824" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3835,7 +3835,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GlusterfsVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9841" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9831" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3849,7 +3849,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HTTPGetAction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9848" >}}">interface <b>HTTPGetAction</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9838" >}}">interface <b>HTTPGetAction</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3858,7 +3858,7 @@ HTTPGetAction describes an action based on HTTP Get requests.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HTTPGetAction-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9853" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9843" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3870,7 +3870,7 @@ httpHeaders instead.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPGetAction-httpHeaders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9858" >}}">property <b>httpHeaders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9848" >}}">property <b>httpHeaders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpHeaders: <a href='#HTTPHeader'>HTTPHeader</a>[];</pre>
@@ -3881,7 +3881,7 @@ Custom headers to set in the request. HTTP allows repeated headers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPGetAction-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9863" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9853" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3892,7 +3892,7 @@ Path to access on the HTTP server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPGetAction-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9869" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9859" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3904,7 +3904,7 @@ Name or number of the port to access on the container. Number must be in the ran
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPGetAction-scheme">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9874" >}}">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9864" >}}">property <b>scheme</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scheme: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3916,7 +3916,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HTTPHeader">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9881" >}}">interface <b>HTTPHeader</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9871" >}}">interface <b>HTTPHeader</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3925,7 +3925,7 @@ HTTPHeader describes a custom header to be used in HTTP probes
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HTTPHeader-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9885" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9875" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3936,7 +3936,7 @@ The header field name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HTTPHeader-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9890" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9880" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3948,7 +3948,7 @@ The header field value
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Handler">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9897" >}}">interface <b>Handler</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9887" >}}">interface <b>Handler</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3957,7 +3957,7 @@ Handler defines a specific action that should be taken
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Handler-exec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9901" >}}">property <b>exec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9891" >}}">property <b>exec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>exec: <a href='#ExecAction'>ExecAction</a>;</pre>
@@ -3968,7 +3968,7 @@ One and only one of the following should be specified. Exec specifies the action
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Handler-httpGet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9906" >}}">property <b>httpGet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9896" >}}">property <b>httpGet</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpGet: <a href='#HTTPGetAction'>HTTPGetAction</a>;</pre>
@@ -3979,7 +3979,7 @@ HTTPGet specifies the http request to perform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Handler-tcpSocket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9911" >}}">property <b>tcpSocket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9901" >}}">property <b>tcpSocket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tcpSocket: <a href='#TCPSocketAction'>TCPSocketAction</a>;</pre>
@@ -3991,7 +3991,7 @@ TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostAlias">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9919" >}}">interface <b>HostAlias</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9909" >}}">interface <b>HostAlias</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4001,7 +4001,7 @@ pod's hosts file.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HostAlias-hostnames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9923" >}}">property <b>hostnames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9913" >}}">property <b>hostnames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostnames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -4012,7 +4012,7 @@ Hostnames for the above IP address.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostAlias-ip">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9928" >}}">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9918" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4024,7 +4024,7 @@ IP address of the host file entry.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostPathVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9936" >}}">interface <b>HostPathVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9926" >}}">interface <b>HostPathVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4034,7 +4034,7 @@ management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HostPathVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9941" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9931" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4046,7 +4046,7 @@ real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPathVolumeSource-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9947" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9937" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4059,7 +4059,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#hostpath
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ISCSIPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9955" >}}">interface <b>ISCSIPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9945" >}}">interface <b>ISCSIPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4069,7 +4069,7 @@ read/write once. ISCSI volumes support ownership management and SELinux relabeli
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-chapAuthDiscovery">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9959" >}}">property <b>chapAuthDiscovery</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9949" >}}">property <b>chapAuthDiscovery</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>chapAuthDiscovery: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4080,7 +4080,7 @@ whether support iSCSI Discovery CHAP authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-chapAuthSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9964" >}}">property <b>chapAuthSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9954" >}}">property <b>chapAuthSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>chapAuthSession: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4091,7 +4091,7 @@ whether support iSCSI Session CHAP authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9972" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9962" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4105,7 +4105,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#iscsi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-initiatorName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9979" >}}">property <b>initiatorName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9969" >}}">property <b>initiatorName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initiatorName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4118,7 +4118,7 @@ connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-iqn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9984" >}}">property <b>iqn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9974" >}}">property <b>iqn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iqn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4129,7 +4129,7 @@ Target iSCSI Qualified Name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-iscsiInterface">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9989" >}}">property <b>iscsiInterface</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9979" >}}">property <b>iscsiInterface</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iscsiInterface: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4140,7 +4140,7 @@ iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-lun">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9994" >}}">property <b>lun</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9984" >}}">property <b>lun</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4151,7 +4151,7 @@ iSCSI Target Lun number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-portals">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10000" >}}">property <b>portals</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9990" >}}">property <b>portals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portals: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -4163,7 +4163,7 @@ than default (typically TCP ports 860 and 3260).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10005" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L9995" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4174,7 +4174,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10010" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10000" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -4185,7 +4185,7 @@ CHAP Secret for iSCSI target and initiator authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-targetPortal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10016" >}}">property <b>targetPortal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10006" >}}">property <b>targetPortal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetPortal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4198,7 +4198,7 @@ default (typically TCP ports 860 and 3260).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ISCSIVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10024" >}}">interface <b>ISCSIVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10014" >}}">interface <b>ISCSIVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4208,7 +4208,7 @@ support ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-chapAuthDiscovery">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10028" >}}">property <b>chapAuthDiscovery</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10018" >}}">property <b>chapAuthDiscovery</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>chapAuthDiscovery: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4219,7 +4219,7 @@ whether support iSCSI Discovery CHAP authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-chapAuthSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10033" >}}">property <b>chapAuthSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10023" >}}">property <b>chapAuthSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>chapAuthSession: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4230,7 +4230,7 @@ whether support iSCSI Session CHAP authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10041" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10031" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4244,7 +4244,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#iscsi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-initiatorName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10048" >}}">property <b>initiatorName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10038" >}}">property <b>initiatorName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initiatorName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4257,7 +4257,7 @@ connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-iqn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10053" >}}">property <b>iqn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10043" >}}">property <b>iqn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iqn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4268,7 +4268,7 @@ Target iSCSI Qualified Name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-iscsiInterface">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10058" >}}">property <b>iscsiInterface</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10048" >}}">property <b>iscsiInterface</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iscsiInterface: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4279,7 +4279,7 @@ iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-lun">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10063" >}}">property <b>lun</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10053" >}}">property <b>lun</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4290,7 +4290,7 @@ iSCSI Target Lun number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-portals">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10069" >}}">property <b>portals</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10059" >}}">property <b>portals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portals: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -4302,7 +4302,7 @@ than default (typically TCP ports 860 and 3260).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10074" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10064" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4313,7 +4313,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10079" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10069" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -4324,7 +4324,7 @@ CHAP Secret for iSCSI target and initiator authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ISCSIVolumeSource-targetPortal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10085" >}}">property <b>targetPortal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10075" >}}">property <b>targetPortal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetPortal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4337,7 +4337,7 @@ default (typically TCP ports 860 and 3260).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KeyToPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10092" >}}">interface <b>KeyToPath</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10082" >}}">interface <b>KeyToPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4346,7 +4346,7 @@ Maps a string key to a path within a volume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KeyToPath-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10096" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10086" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4357,7 +4357,7 @@ The key to project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KeyToPath-mode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10103" >}}">property <b>mode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10093" >}}">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4370,7 +4370,7 @@ options that affect the file mode, like fsGroup, and the result can be other mod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KeyToPath-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10109" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10099" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4383,7 +4383,7 @@ contain the path element '..'. May not start with the string '..'.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Lifecycle">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10119" >}}">interface <b>Lifecycle</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10109" >}}">interface <b>Lifecycle</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4395,7 +4395,7 @@ case the handler is aborted.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Lifecycle-postStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10126" >}}">property <b>postStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10116" >}}">property <b>postStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>postStart: <a href='#Handler'>Handler</a>;</pre>
@@ -4409,7 +4409,7 @@ https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#contai
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lifecycle-preStop">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10139" >}}">property <b>preStop</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10129" >}}">property <b>preStop</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preStop: <a href='#Handler'>Handler</a>;</pre>
@@ -4429,7 +4429,7 @@ https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#contai
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRange">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10146" >}}">interface <b>LimitRange</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10136" >}}">interface <b>LimitRange</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4438,7 +4438,7 @@ LimitRange sets resource usage limits for each kind of resource in a Namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRange-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10153" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10143" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -4452,7 +4452,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10161" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10151" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"LimitRange"</span>;</pre>
@@ -4466,7 +4466,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10167" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10157" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -4478,7 +4478,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10173" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10163" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#LimitRangeSpec'>LimitRangeSpec</a>;</pre>
@@ -4491,7 +4491,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRangeItem">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10180" >}}">interface <b>LimitRangeItem</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10170" >}}">interface <b>LimitRangeItem</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4500,7 +4500,7 @@ LimitRangeItem defines a min/max usage limit for any resource that matches on ki
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRangeItem-default">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10184" >}}">property <b>default</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10174" >}}">property <b>default</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -4511,7 +4511,7 @@ Default resource requirement limit value by resource name if resource limit is o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeItem-defaultRequest">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10190" >}}">property <b>defaultRequest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10180" >}}">property <b>defaultRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRequest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -4523,7 +4523,7 @@ resource request is omitted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeItem-max">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10195" >}}">property <b>max</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10185" >}}">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>max: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -4534,7 +4534,7 @@ Max usage constraints on this kind by resource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeItem-maxLimitRequestRatio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10202" >}}">property <b>maxLimitRequestRatio</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10192" >}}">property <b>maxLimitRequestRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxLimitRequestRatio: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -4547,7 +4547,7 @@ value; this represents the max burst for the named resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeItem-min">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10207" >}}">property <b>min</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10197" >}}">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>min: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -4558,7 +4558,7 @@ Min usage constraints on this kind by resource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeItem-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10212" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10202" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4570,7 +4570,7 @@ Type of resource that this limit applies to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRangeList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10219" >}}">interface <b>LimitRangeList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10209" >}}">interface <b>LimitRangeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4579,7 +4579,7 @@ LimitRangeList is a list of LimitRange items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRangeList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10226" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10216" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -4593,7 +4593,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10232" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10222" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#LimitRange'>LimitRange</a>[];</pre>
@@ -4605,7 +4605,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10240" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10230" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"LimitRangeList"</span>;</pre>
@@ -4619,7 +4619,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10246" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10236" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -4632,7 +4632,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRangeSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10253" >}}">interface <b>LimitRangeSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10243" >}}">interface <b>LimitRangeSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4641,7 +4641,7 @@ LimitRangeSpec defines a min/max usage limit for resources that match on kind.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRangeSpec-limits">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10257" >}}">property <b>limits</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10247" >}}">property <b>limits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>limits: <a href='#LimitRangeItem'>LimitRangeItem</a>[];</pre>
@@ -4653,7 +4653,7 @@ Limits is the list of LimitRangeItem objects that are enforced.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerIngress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10265" >}}">interface <b>LoadBalancerIngress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10255" >}}">interface <b>LoadBalancerIngress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4663,7 +4663,7 @@ for the service should be sent to an ingress point.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerIngress-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10270" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10260" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4675,7 +4675,7 @@ load-balancers)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerIngress-ip">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10276" >}}">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10266" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4688,7 +4688,7 @@ load-balancers)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10283" >}}">interface <b>LoadBalancerStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10273" >}}">interface <b>LoadBalancerStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4697,7 +4697,7 @@ LoadBalancerStatus represents the status of a load-balancer.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerStatus-ingress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10288" >}}">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10278" >}}">property <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ingress: <a href='#LoadBalancerIngress'>LoadBalancerIngress</a>[];</pre>
@@ -4710,7 +4710,7 @@ service should be sent to these ingress points.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocalObjectReference">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10296" >}}">interface <b>LocalObjectReference</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10286" >}}">interface <b>LocalObjectReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4720,7 +4720,7 @@ inside the same namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LocalObjectReference-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10301" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10291" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4733,7 +4733,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocalVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10308" >}}">interface <b>LocalVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10298" >}}">interface <b>LocalVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4742,7 +4742,7 @@ Local represents directly-attached storage with node affinity (Beta feature)
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LocalVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10314" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10304" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4755,7 +4755,7 @@ default value is to auto-select a fileystem if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10320" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10310" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4768,7 +4768,7 @@ The full path to the volume on the node. It can be either a directory or block d
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NFSVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10328" >}}">interface <b>NFSVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10318" >}}">interface <b>NFSVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4778,7 +4778,7 @@ ownership management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NFSVolumeSource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10333" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10323" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4790,7 +4790,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#nfs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NFSVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10339" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10329" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4802,7 +4802,7 @@ to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NFSVolumeSource-server">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10345" >}}">property <b>server</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10335" >}}">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>server: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4815,7 +4815,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#nfs
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Namespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10352" >}}">interface <b>Namespace</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10342" >}}">interface <b>Namespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4824,7 +4824,7 @@ Namespace provides a scope for Names. Use of multiple namespaces is optional.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10359" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10349" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -4838,7 +4838,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10367" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10357" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Namespace"</span>;</pre>
@@ -4852,7 +4852,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10373" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10363" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -4864,7 +4864,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10379" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10369" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#NamespaceSpec'>NamespaceSpec</a>;</pre>
@@ -4876,7 +4876,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10385" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10375" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#NamespaceStatus'>NamespaceStatus</a>;</pre>
@@ -4889,7 +4889,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10392" >}}">interface <b>NamespaceList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10382" >}}">interface <b>NamespaceList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4898,7 +4898,7 @@ NamespaceList is a list of Namespaces.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10399" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10389" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -4912,7 +4912,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10405" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10395" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Namespace'>Namespace</a>[];</pre>
@@ -4924,7 +4924,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10413" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10403" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"NamespaceList"</span>;</pre>
@@ -4938,7 +4938,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10419" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10409" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -4951,7 +4951,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10426" >}}">interface <b>NamespaceSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10416" >}}">interface <b>NamespaceSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4960,7 +4960,7 @@ NamespaceSpec describes the attributes on a Namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceSpec-finalizers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10431" >}}">property <b>finalizers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10421" >}}">property <b>finalizers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>finalizers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -4973,7 +4973,7 @@ storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespac
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10438" >}}">interface <b>NamespaceStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10428" >}}">interface <b>NamespaceStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4982,7 +4982,7 @@ NamespaceStatus is information about the current status of a Namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceStatus-phase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10443" >}}">property <b>phase</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10433" >}}">property <b>phase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4995,7 +4995,7 @@ https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Node">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10451" >}}">interface <b>Node</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10441" >}}">interface <b>Node</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5005,7 +5005,7 @@ Node is a worker node in Kubernetes. Each node will have a unique identifier in 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Node-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10458" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10448" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -5019,7 +5019,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10466" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10456" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Node"</span>;</pre>
@@ -5033,7 +5033,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10472" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10462" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -5045,7 +5045,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10478" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10468" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#NodeSpec'>NodeSpec</a>;</pre>
@@ -5057,7 +5057,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10484" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10474" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#NodeStatus'>NodeStatus</a>;</pre>
@@ -5070,7 +5070,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeAddress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10491" >}}">interface <b>NodeAddress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10481" >}}">interface <b>NodeAddress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5079,7 +5079,7 @@ NodeAddress contains information for the node's address.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeAddress-address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10495" >}}">property <b>address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10485" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5090,7 +5090,7 @@ The node address.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeAddress-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10500" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10490" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5102,7 +5102,7 @@ Node address type, one of Hostname, ExternalIP or InternalIP.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeAffinity">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10507" >}}">interface <b>NodeAffinity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10497" >}}">interface <b>NodeAffinity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5111,7 +5111,7 @@ Node affinity is a group of node affinity scheduling rules.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeAffinity-preferredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10517" >}}">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10507" >}}">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preferredDuringSchedulingIgnoredDuringExecution: <a href='#PreferredSchedulingTerm'>PreferredSchedulingTerm</a>[];</pre>
@@ -5128,7 +5128,7 @@ corresponding matchExpressions; the node(s) with the highest sum are the most pr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeAffinity-requiredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10525" >}}">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10515" >}}">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requiredDuringSchedulingIgnoredDuringExecution: <a href='#NodeSelector'>NodeSelector</a>;</pre>
@@ -5143,7 +5143,7 @@ system may or may not try to eventually evict the pod from its node.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10532" >}}">interface <b>NodeCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10522" >}}">interface <b>NodeCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5152,7 +5152,7 @@ NodeCondition contains condition information for a node.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeCondition-lastHeartbeatTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10536" >}}">property <b>lastHeartbeatTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10526" >}}">property <b>lastHeartbeatTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastHeartbeatTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5163,7 +5163,7 @@ Last time we got an update on a given condition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10541" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10531" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5174,7 +5174,7 @@ Last time the condition transit from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10546" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10536" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5185,7 +5185,7 @@ Human readable message indicating details about last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10551" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10541" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5196,7 +5196,7 @@ Human readable message indicating details about last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10556" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10546" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5207,7 +5207,7 @@ Status of the condition, one of True, False, Unknown.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10561" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10551" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5219,7 +5219,7 @@ Type of node condition.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeConfigSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10569" >}}">interface <b>NodeConfigSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10559" >}}">interface <b>NodeConfigSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5229,7 +5229,7 @@ metadata) must be non-nil.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeConfigSource-configMap">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10573" >}}">property <b>configMap</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10563" >}}">property <b>configMap</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configMap: <a href='#ConfigMapNodeConfigSource'>ConfigMapNodeConfigSource</a>;</pre>
@@ -5241,7 +5241,7 @@ ConfigMap is a reference to a Node's ConfigMap
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeConfigStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10580" >}}">interface <b>NodeConfigStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10570" >}}">interface <b>NodeConfigStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5250,7 +5250,7 @@ NodeConfigStatus describes the status of the config assigned by Node.Spec.Config
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeConfigStatus-active">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10586" >}}">property <b>active</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10576" >}}">property <b>active</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>active: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
@@ -5263,7 +5263,7 @@ depending on whether attempting to use the Assigned config results in an error.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeConfigStatus-assigned">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10597" >}}">property <b>assigned</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10587" >}}">property <b>assigned</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assigned: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
@@ -5280,7 +5280,7 @@ the checkpointed payload identified by Assigned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeConfigStatus-error">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10613" >}}">property <b>error</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10603" >}}">property <b>error</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>error: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5302,7 +5302,7 @@ the Error text across Kubelet versions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeConfigStatus-lastKnownGood">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10627" >}}">property <b>lastKnownGood</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10617" >}}">property <b>lastKnownGood</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastKnownGood: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
@@ -5323,7 +5323,7 @@ configurable in the future.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeDaemonEndpoints">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10634" >}}">interface <b>NodeDaemonEndpoints</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10624" >}}">interface <b>NodeDaemonEndpoints</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5332,7 +5332,7 @@ NodeDaemonEndpoints lists ports opened by daemons running on the Node.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeDaemonEndpoints-kubeletEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10638" >}}">property <b>kubeletEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10628" >}}">property <b>kubeletEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubeletEndpoint: <a href='#DaemonEndpoint'>DaemonEndpoint</a>;</pre>
@@ -5344,7 +5344,7 @@ Endpoint on which Kubelet is listening.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10645" >}}">interface <b>NodeList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10635" >}}">interface <b>NodeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5353,7 +5353,7 @@ NodeList is the whole list of all Nodes which have been registered with master.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10652" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10642" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -5367,7 +5367,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10657" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10647" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Node'>Node</a>[];</pre>
@@ -5378,7 +5378,7 @@ List of nodes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10665" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10655" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"NodeList"</span>;</pre>
@@ -5392,7 +5392,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10671" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10661" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -5405,7 +5405,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeSelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10680" >}}">interface <b>NodeSelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10670" >}}">interface <b>NodeSelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5416,7 +5416,7 @@ terms.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeSelector-nodeSelectorTerms">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10684" >}}">property <b>nodeSelectorTerms</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10674" >}}">property <b>nodeSelectorTerms</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeSelectorTerms: <a href='#NodeSelectorTerm'>NodeSelectorTerm</a>[];</pre>
@@ -5428,7 +5428,7 @@ Required. A list of node selector terms. The terms are ORed.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeSelectorRequirement">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10692" >}}">interface <b>NodeSelectorRequirement</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10682" >}}">interface <b>NodeSelectorRequirement</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5438,7 +5438,7 @@ relates the key and values.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeSelectorRequirement-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10696" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10686" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5449,7 +5449,7 @@ The label key that the selector applies to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSelectorRequirement-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10702" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10692" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5461,7 +5461,7 @@ DoesNotExist. Gt, and Lt.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSelectorRequirement-values">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10710" >}}">property <b>values</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10700" >}}">property <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -5476,7 +5476,7 @@ interpreted as an integer. This array is replaced during a strategic merge patch
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeSelectorTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10718" >}}">interface <b>NodeSelectorTerm</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10708" >}}">interface <b>NodeSelectorTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5486,7 +5486,7 @@ The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeSelectorTerm-matchExpressions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10722" >}}">property <b>matchExpressions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10712" >}}">property <b>matchExpressions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchExpressions: <a href='#NodeSelectorRequirement'>NodeSelectorRequirement</a>[];</pre>
@@ -5497,7 +5497,7 @@ A list of node selector requirements by node's labels.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSelectorTerm-matchFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10727" >}}">property <b>matchFields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10717" >}}">property <b>matchFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchFields: <a href='#NodeSelectorRequirement'>NodeSelectorRequirement</a>[];</pre>
@@ -5509,7 +5509,7 @@ A list of node selector requirements by node's fields.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10734" >}}">interface <b>NodeSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10724" >}}">interface <b>NodeSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5518,7 +5518,7 @@ NodeSpec describes the attributes that a node is created with.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeSpec-configSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10739" >}}">property <b>configSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10729" >}}">property <b>configSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configSource: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
@@ -5530,7 +5530,7 @@ gate must be enabled for the Kubelet to use this field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSpec-externalID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10745" >}}">property <b>externalID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10735" >}}">property <b>externalID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externalID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5542,7 +5542,7 @@ https://issues.k8s.io/61966
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSpec-podCIDR">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10750" >}}">property <b>podCIDR</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10740" >}}">property <b>podCIDR</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podCIDR: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5553,7 +5553,7 @@ PodCIDR represents the pod IP range assigned to the node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSpec-providerID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10756" >}}">property <b>providerID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10746" >}}">property <b>providerID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5565,7 +5565,7 @@ ID of the node assigned by the cloud provider in the format:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSpec-taints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10761" >}}">property <b>taints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10751" >}}">property <b>taints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>taints: <a href='#Taint'>Taint</a>[];</pre>
@@ -5576,7 +5576,7 @@ If specified, the node's taints.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSpec-unschedulable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10767" >}}">property <b>unschedulable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10757" >}}">property <b>unschedulable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>unschedulable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5589,7 +5589,7 @@ More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10774" >}}">interface <b>NodeStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10764" >}}">interface <b>NodeStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5598,7 +5598,7 @@ NodeStatus is information about the current status of a node.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeStatus-addresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10779" >}}">property <b>addresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10769" >}}">property <b>addresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>addresses: <a href='#NodeAddress'>NodeAddress</a>[];</pre>
@@ -5610,7 +5610,7 @@ info: https://kubernetes.io/docs/concepts/nodes/node/#addresses
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-allocatable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10785" >}}">property <b>allocatable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10775" >}}">property <b>allocatable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allocatable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -5622,7 +5622,7 @@ to Capacity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10791" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10781" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -5634,7 +5634,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10797" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10787" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions: <a href='#NodeCondition'>NodeCondition</a>[];</pre>
@@ -5646,7 +5646,7 @@ https://kubernetes.io/docs/concepts/nodes/node/#condition
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-config">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10802" >}}">property <b>config</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10792" >}}">property <b>config</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>config: <a href='#NodeConfigStatus'>NodeConfigStatus</a>;</pre>
@@ -5657,7 +5657,7 @@ Status of the config assigned to the node via the dynamic Kubelet config feature
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-daemonEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10807" >}}">property <b>daemonEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10797" >}}">property <b>daemonEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>daemonEndpoints: <a href='#NodeDaemonEndpoints'>NodeDaemonEndpoints</a>;</pre>
@@ -5668,7 +5668,7 @@ Endpoints of daemons running on the Node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-images">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10812" >}}">property <b>images</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10802" >}}">property <b>images</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>images: <a href='#ContainerImage'>ContainerImage</a>[];</pre>
@@ -5679,7 +5679,7 @@ List of container images on this node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-nodeInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10818" >}}">property <b>nodeInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10808" >}}">property <b>nodeInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeInfo: <a href='#NodeSystemInfo'>NodeSystemInfo</a>;</pre>
@@ -5691,7 +5691,7 @@ https://kubernetes.io/docs/concepts/nodes/node/#info
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-phase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10825" >}}">property <b>phase</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10815" >}}">property <b>phase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5704,7 +5704,7 @@ is deprecated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-volumesAttached">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10830" >}}">property <b>volumesAttached</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10820" >}}">property <b>volumesAttached</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumesAttached: <a href='#AttachedVolume'>AttachedVolume</a>[];</pre>
@@ -5715,7 +5715,7 @@ List of volumes that are attached to the node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeStatus-volumesInUse">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10835" >}}">property <b>volumesInUse</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10825" >}}">property <b>volumesInUse</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumesInUse: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -5727,7 +5727,7 @@ List of attachable volumes in use (mounted) by the node.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeSystemInfo">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10842" >}}">interface <b>NodeSystemInfo</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10832" >}}">interface <b>NodeSystemInfo</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5736,7 +5736,7 @@ NodeSystemInfo is a set of ids/uuids to uniquely identify the node.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeSystemInfo-architecture">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10846" >}}">property <b>architecture</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10836" >}}">property <b>architecture</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>architecture: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5747,7 +5747,7 @@ The Architecture reported by the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-bootID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10851" >}}">property <b>bootID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10841" >}}">property <b>bootID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bootID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5758,7 +5758,7 @@ Boot ID reported by the node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-containerRuntimeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10857" >}}">property <b>containerRuntimeVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10847" >}}">property <b>containerRuntimeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerRuntimeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5770,7 +5770,7 @@ docker://1.5.0).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-kernelVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10862" >}}">property <b>kernelVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10852" >}}">property <b>kernelVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kernelVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5781,7 +5781,7 @@ Kernel Version reported by the node from 'uname -r' (e.g. 3.16.0-0.bpo.4-amd64).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-kubeProxyVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10867" >}}">property <b>kubeProxyVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10857" >}}">property <b>kubeProxyVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubeProxyVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5792,7 +5792,7 @@ KubeProxy Version reported by the node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-kubeletVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10872" >}}">property <b>kubeletVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10862" >}}">property <b>kubeletVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubeletVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5803,7 +5803,7 @@ Kubelet Version reported by the node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-machineID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10879" >}}">property <b>machineID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10869" >}}">property <b>machineID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>machineID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5816,7 +5816,7 @@ http://man7.org/linux/man-pages/man5/machine-id.5.html
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10884" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10874" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operatingSystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5827,7 +5827,7 @@ The Operating System reported by the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-osImage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10889" >}}">property <b>osImage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10879" >}}">property <b>osImage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>osImage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5838,7 +5838,7 @@ OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (whe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeSystemInfo-systemUUID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10896" >}}">property <b>systemUUID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10886" >}}">property <b>systemUUID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>systemUUID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5852,7 +5852,7 @@ https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ObjectFieldSelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10903" >}}">interface <b>ObjectFieldSelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10893" >}}">interface <b>ObjectFieldSelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5861,7 +5861,7 @@ ObjectFieldSelector selects an APIVersioned field of an object.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ObjectFieldSelector-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10907" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10897" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5872,7 +5872,7 @@ Version of the schema the FieldPath is written in terms of, defaults to "v1".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectFieldSelector-fieldPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10912" >}}">property <b>fieldPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10902" >}}">property <b>fieldPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fieldPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5884,7 +5884,7 @@ Path of the field to select in the specified API version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ObjectReference">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10919" >}}">interface <b>ObjectReference</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10909" >}}">interface <b>ObjectReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5893,7 +5893,7 @@ ObjectReference contains enough information to let you inspect or modify the ref
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ObjectReference-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10923" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10913" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5904,7 +5904,7 @@ API version of the referent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectReference-fieldPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10934" >}}">property <b>fieldPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10924" >}}">property <b>fieldPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fieldPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5921,7 +5921,7 @@ have some well-defined way of referencing a part of an object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectReference-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10940" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10930" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5933,7 +5933,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectReference-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10946" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10936" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5945,7 +5945,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectReference-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10952" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10942" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5957,7 +5957,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectReference-resourceVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10958" >}}">property <b>resourceVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10948" >}}">property <b>resourceVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5969,7 +5969,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ObjectReference-uid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10964" >}}">property <b>uid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10954" >}}">property <b>uid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5982,7 +5982,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10972" >}}">interface <b>PersistentVolume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10962" >}}">interface <b>PersistentVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5992,7 +5992,7 @@ to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-vol
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolume-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10979" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10969" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -6006,7 +6006,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10987" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10977" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PersistentVolume"</span>;</pre>
@@ -6020,7 +6020,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10993" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10983" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -6032,7 +6032,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11000" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10990" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PersistentVolumeSpec'>PersistentVolumeSpec</a>;</pre>
@@ -6045,7 +6045,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11007" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L10997" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#PersistentVolumeStatus'>PersistentVolumeStatus</a>;</pre>
@@ -6059,7 +6059,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volume
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaim">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11014" >}}">interface <b>PersistentVolumeClaim</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11004" >}}">interface <b>PersistentVolumeClaim</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6068,7 +6068,7 @@ PersistentVolumeClaim is a user's request for and claim to a persistent volume
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11021" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11011" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -6082,7 +6082,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11029" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11019" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PersistentVolumeClaim"</span>;</pre>
@@ -6096,7 +6096,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11035" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11025" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -6108,7 +6108,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11041" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11031" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PersistentVolumeClaimSpec'>PersistentVolumeClaimSpec</a>;</pre>
@@ -6120,7 +6120,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11048" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11038" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#PersistentVolumeClaimStatus'>PersistentVolumeClaimStatus</a>;</pre>
@@ -6134,7 +6134,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11055" >}}">interface <b>PersistentVolumeClaimCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11045" >}}">interface <b>PersistentVolumeClaimCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6143,7 +6143,7 @@ PersistentVolumeClaimCondition contails details about state of pvc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-lastProbeTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11059" >}}">property <b>lastProbeTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11049" >}}">property <b>lastProbeTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastProbeTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6154,7 +6154,7 @@ Last time we probed the condition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11064" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11054" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6165,7 +6165,7 @@ Last time the condition transitioned from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11069" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11059" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6176,7 +6176,7 @@ Human-readable message indicating details about last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11076" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11066" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6189,7 +6189,7 @@ persistent volume is being resized.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11079" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11069" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6197,7 +6197,7 @@ persistent volume is being resized.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11082" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11072" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6206,7 +6206,7 @@ persistent volume is being resized.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11089" >}}">interface <b>PersistentVolumeClaimList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11079" >}}">interface <b>PersistentVolumeClaimList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6215,7 +6215,7 @@ PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11096" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11086" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -6229,7 +6229,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11102" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11092" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PersistentVolumeClaim'>PersistentVolumeClaim</a>[];</pre>
@@ -6241,7 +6241,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11110" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11100" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PersistentVolumeClaimList"</span>;</pre>
@@ -6255,7 +6255,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11116" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11106" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -6268,7 +6268,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11124" >}}">interface <b>PersistentVolumeClaimSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11114" >}}">interface <b>PersistentVolumeClaimSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6278,7 +6278,7 @@ Source for provider-specific attributes
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-accessModes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11129" >}}">property <b>accessModes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11119" >}}">property <b>accessModes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessModes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -6290,7 +6290,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11139" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11129" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataSource: <a href='#TypedLocalObjectReference'>TypedLocalObjectReference</a>;</pre>
@@ -6306,7 +6306,7 @@ plan to support more data source types and the behavior of the provisioner may c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11145" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11135" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resources: <a href='#ResourceRequirements'>ResourceRequirements</a>;</pre>
@@ -6318,7 +6318,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11150" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11140" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -6329,7 +6329,7 @@ A label query over volumes to consider for binding.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-storageClassName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11156" >}}">property <b>storageClassName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11146" >}}">property <b>storageClassName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6341,7 +6341,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-volumeMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11162" >}}">property <b>volumeMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11152" >}}">property <b>volumeMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6353,7 +6353,7 @@ implied when not included in claim spec. This is a beta feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-volumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11167" >}}">property <b>volumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11157" >}}">property <b>volumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6365,7 +6365,7 @@ VolumeName is the binding reference to the PersistentVolume backing this claim.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11174" >}}">interface <b>PersistentVolumeClaimStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11164" >}}">interface <b>PersistentVolumeClaimStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6374,7 +6374,7 @@ PersistentVolumeClaimStatus is the current status of a persistent volume claim.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-accessModes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11179" >}}">property <b>accessModes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11169" >}}">property <b>accessModes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessModes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -6386,7 +6386,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11184" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11174" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -6397,7 +6397,7 @@ Represents the actual resources of the underlying volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11190" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11180" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions: <a href='#PersistentVolumeClaimCondition'>PersistentVolumeClaimCondition</a>[];</pre>
@@ -6409,7 +6409,7 @@ resized then the Condition will be set to 'ResizeStarted'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-phase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11195" >}}">property <b>phase</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11185" >}}">property <b>phase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6421,7 +6421,7 @@ Phase represents the current phase of PersistentVolumeClaim.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11205" >}}">interface <b>PersistentVolumeClaimVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11195" >}}">interface <b>PersistentVolumeClaimVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6433,7 +6433,7 @@ that is owned by someone else (the system).
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimVolumeSource-claimName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11211" >}}">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11201" >}}">property <b>claimName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>claimName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6446,7 +6446,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11216" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11206" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -6458,7 +6458,7 @@ Will force the ReadOnly setting in VolumeMounts. Default false.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11223" >}}">interface <b>PersistentVolumeList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11213" >}}">interface <b>PersistentVolumeList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6467,7 +6467,7 @@ PersistentVolumeList is a list of PersistentVolume items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11230" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11220" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -6481,7 +6481,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11236" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11226" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PersistentVolume'>PersistentVolume</a>[];</pre>
@@ -6493,7 +6493,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11244" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11234" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PersistentVolumeList"</span>;</pre>
@@ -6507,7 +6507,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11250" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11240" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -6520,7 +6520,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11257" >}}">interface <b>PersistentVolumeSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11247" >}}">interface <b>PersistentVolumeSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6529,7 +6529,7 @@ PersistentVolumeSpec is the specification of a persistent volume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-accessModes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11262" >}}">property <b>accessModes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11252" >}}">property <b>accessModes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessModes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -6541,7 +6541,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-awsElasticBlockStore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11269" >}}">property <b>awsElasticBlockStore</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11259" >}}">property <b>awsElasticBlockStore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsElasticBlockStore: <a href='#AWSElasticBlockStoreVolumeSource'>AWSElasticBlockStoreVolumeSource</a>;</pre>
@@ -6554,7 +6554,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-azureDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11274" >}}">property <b>azureDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11264" >}}">property <b>azureDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>azureDisk: <a href='#AzureDiskVolumeSource'>AzureDiskVolumeSource</a>;</pre>
@@ -6565,7 +6565,7 @@ AzureDisk represents an Azure Data Disk mount on the host and bind mount to the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-azureFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11279" >}}">property <b>azureFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11269" >}}">property <b>azureFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>azureFile: <a href='#AzureFilePersistentVolumeSource'>AzureFilePersistentVolumeSource</a>;</pre>
@@ -6576,7 +6576,7 @@ AzureFile represents an Azure File Service mount on the host and bind mount to t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11285" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11275" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -6588,7 +6588,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-cephfs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11290" >}}">property <b>cephfs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11280" >}}">property <b>cephfs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cephfs: <a href='#CephFSPersistentVolumeSource'>CephFSPersistentVolumeSource</a>;</pre>
@@ -6599,7 +6599,7 @@ CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-cinder">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11296" >}}">property <b>cinder</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11286" >}}">property <b>cinder</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cinder: <a href='#CinderPersistentVolumeSource'>CinderPersistentVolumeSource</a>;</pre>
@@ -6611,7 +6611,7 @@ https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-claimRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11304" >}}">property <b>claimRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11294" >}}">property <b>claimRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>claimRef: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -6625,7 +6625,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-csi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11309" >}}">property <b>csi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11299" >}}">property <b>csi</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>csi: <a href='#CSIPersistentVolumeSource'>CSIPersistentVolumeSource</a>;</pre>
@@ -6636,7 +6636,7 @@ CSI represents storage that is handled by an external CSI driver (Beta feature).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-fc">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11315" >}}">property <b>fc</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11305" >}}">property <b>fc</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fc: <a href='#FCVolumeSource'>FCVolumeSource</a>;</pre>
@@ -6648,7 +6648,7 @@ then exposed to the pod.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-flexVolume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11321" >}}">property <b>flexVolume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11311" >}}">property <b>flexVolume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>flexVolume: <a href='#FlexPersistentVolumeSource'>FlexPersistentVolumeSource</a>;</pre>
@@ -6660,7 +6660,7 @@ based plugin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-flocker">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11327" >}}">property <b>flocker</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11317" >}}">property <b>flocker</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>flocker: <a href='#FlockerVolumeSource'>FlockerVolumeSource</a>;</pre>
@@ -6672,7 +6672,7 @@ pod for its usage. This depends on the Flocker control service being running
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-gcePersistentDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11334" >}}">property <b>gcePersistentDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11324" >}}">property <b>gcePersistentDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gcePersistentDisk: <a href='#GCEPersistentDiskVolumeSource'>GCEPersistentDiskVolumeSource</a>;</pre>
@@ -6685,7 +6685,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-glusterfs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11341" >}}">property <b>glusterfs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11331" >}}">property <b>glusterfs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>glusterfs: <a href='#GlusterfsPersistentVolumeSource'>GlusterfsPersistentVolumeSource</a>;</pre>
@@ -6698,7 +6698,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-hostPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11349" >}}">property <b>hostPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11339" >}}">property <b>hostPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPath: <a href='#HostPathVolumeSource'>HostPathVolumeSource</a>;</pre>
@@ -6712,7 +6712,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#hostpath
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-iscsi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11355" >}}">property <b>iscsi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11345" >}}">property <b>iscsi</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iscsi: <a href='#ISCSIPersistentVolumeSource'>ISCSIPersistentVolumeSource</a>;</pre>
@@ -6724,7 +6724,7 @@ then exposed to the pod. Provisioned by an admin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-local">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11360" >}}">property <b>local</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11350" >}}">property <b>local</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>local: <a href='#LocalVolumeSource'>LocalVolumeSource</a>;</pre>
@@ -6735,7 +6735,7 @@ Local represents directly-attached storage with node affinity
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-mountOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11367" >}}">property <b>mountOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11357" >}}">property <b>mountOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mountOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -6748,7 +6748,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-nfs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11373" >}}">property <b>nfs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11363" >}}">property <b>nfs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nfs: <a href='#NFSVolumeSource'>NFSVolumeSource</a>;</pre>
@@ -6760,7 +6760,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#nfs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-nodeAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11379" >}}">property <b>nodeAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11369" >}}">property <b>nodeAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeAffinity: <a href='#VolumeNodeAffinity'>VolumeNodeAffinity</a>;</pre>
@@ -6772,7 +6772,7 @@ This field influences the scheduling of pods that use this volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-persistentVolumeReclaimPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11388" >}}">property <b>persistentVolumeReclaimPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11378" >}}">property <b>persistentVolumeReclaimPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistentVolumeReclaimPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6787,7 +6787,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-photonPersistentDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11394" >}}">property <b>photonPersistentDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11384" >}}">property <b>photonPersistentDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>photonPersistentDisk: <a href='#PhotonPersistentDiskVolumeSource'>PhotonPersistentDiskVolumeSource</a>;</pre>
@@ -6799,7 +6799,7 @@ kubelets host machine
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-portworxVolume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11399" >}}">property <b>portworxVolume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11389" >}}">property <b>portworxVolume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portworxVolume: <a href='#PortworxVolumeSource'>PortworxVolumeSource</a>;</pre>
@@ -6810,7 +6810,7 @@ PortworxVolume represents a portworx volume attached and mounted on kubelets hos
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-quobyte">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11404" >}}">property <b>quobyte</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11394" >}}">property <b>quobyte</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>quobyte: <a href='#QuobyteVolumeSource'>QuobyteVolumeSource</a>;</pre>
@@ -6821,7 +6821,7 @@ Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-rbd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11410" >}}">property <b>rbd</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11400" >}}">property <b>rbd</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rbd: <a href='#RBDPersistentVolumeSource'>RBDPersistentVolumeSource</a>;</pre>
@@ -6833,7 +6833,7 @@ info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-scaleIO">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11415" >}}">property <b>scaleIO</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11405" >}}">property <b>scaleIO</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scaleIO: <a href='#ScaleIOPersistentVolumeSource'>ScaleIOPersistentVolumeSource</a>;</pre>
@@ -6844,7 +6844,7 @@ ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernete
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-storageClassName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11421" >}}">property <b>storageClassName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11411" >}}">property <b>storageClassName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6856,7 +6856,7 @@ volume does not belong to any StorageClass.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-storageos">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11428" >}}">property <b>storageos</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11418" >}}">property <b>storageos</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageos: <a href='#StorageOSPersistentVolumeSource'>StorageOSPersistentVolumeSource</a>;</pre>
@@ -6869,7 +6869,7 @@ https://releases.k8s.io/HEAD/examples/volumes/storageos/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-volumeMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11435" >}}">property <b>volumeMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11425" >}}">property <b>volumeMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6882,7 +6882,7 @@ is a beta feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeSpec-vsphereVolume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11440" >}}">property <b>vsphereVolume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11430" >}}">property <b>vsphereVolume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vsphereVolume: <a href='#VsphereVirtualDiskVolumeSource'>VsphereVirtualDiskVolumeSource</a>;</pre>
@@ -6894,7 +6894,7 @@ VsphereVolume represents a vSphere volume attached and mounted on kubelets host 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11447" >}}">interface <b>PersistentVolumeStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11437" >}}">interface <b>PersistentVolumeStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6903,7 +6903,7 @@ PersistentVolumeStatus is the current status of a persistent volume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeStatus-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11451" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11441" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6914,7 +6914,7 @@ A human-readable message indicating details about why the volume is in this stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeStatus-phase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11457" >}}">property <b>phase</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11447" >}}">property <b>phase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6926,7 +6926,7 @@ info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeStatus-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11463" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11453" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6939,7 +6939,7 @@ parsing and tidy display in the CLI.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PhotonPersistentDiskVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11470" >}}">interface <b>PhotonPersistentDiskVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11460" >}}">interface <b>PhotonPersistentDiskVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6948,7 +6948,7 @@ Represents a Photon Controller persistent disk resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PhotonPersistentDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11475" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11465" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6960,7 +6960,7 @@ Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PhotonPersistentDiskVolumeSource-pdID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11480" >}}">property <b>pdID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11470" >}}">property <b>pdID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pdID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6972,7 +6972,7 @@ ID that identifies Photon Controller persistent disk
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Pod">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11488" >}}">interface <b>Pod</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11478" >}}">interface <b>Pod</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6982,7 +6982,7 @@ and scheduled onto hosts.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Pod-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11495" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11485" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -6996,7 +6996,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11503" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11493" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Pod"</span>;</pre>
@@ -7010,7 +7010,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11509" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11499" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -7022,7 +7022,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11515" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11505" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PodSpec'>PodSpec</a>;</pre>
@@ -7034,7 +7034,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pod-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11522" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11512" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#PodStatus'>PodStatus</a>;</pre>
@@ -7048,7 +7048,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodAffinity">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11529" >}}">interface <b>PodAffinity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11519" >}}">interface <b>PodAffinity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7057,7 +7057,7 @@ Pod affinity is a group of inter pod affinity scheduling rules.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodAffinity-preferredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11540" >}}">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11530" >}}">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preferredDuringSchedulingIgnoredDuringExecution: <a href='#WeightedPodAffinityTerm'>WeightedPodAffinityTerm</a>[];</pre>
@@ -7075,7 +7075,7 @@ preferred.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodAffinity-requiredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11550" >}}">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11540" >}}">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requiredDuringSchedulingIgnoredDuringExecution: <a href='#PodAffinityTerm'>PodAffinityTerm</a>[];</pre>
@@ -7092,7 +7092,7 @@ intersected, i.e. all terms must be satisfied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodAffinityTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11560" >}}">interface <b>PodAffinityTerm</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11550" >}}">interface <b>PodAffinityTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7104,7 +7104,7 @@ with, where co-located is defined as running on a node whose value of the label 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodAffinityTerm-labelSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11564" >}}">property <b>labelSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11554" >}}">property <b>labelSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labelSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
@@ -7115,7 +7115,7 @@ A label query over a set of resources, in this case pods.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodAffinityTerm-namespaces">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11570" >}}">property <b>namespaces</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11560" >}}">property <b>namespaces</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaces: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -7127,7 +7127,7 @@ or empty list means "this pod's namespace"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodAffinityTerm-topologyKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11578" >}}">property <b>topologyKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11568" >}}">property <b>topologyKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>topologyKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7142,7 +7142,7 @@ which any of the selected pods is running. Empty topologyKey is not allowed.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodAntiAffinity">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11585" >}}">interface <b>PodAntiAffinity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11575" >}}">interface <b>PodAntiAffinity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7151,7 +7151,7 @@ Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodAntiAffinity-preferredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11596" >}}">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11586" >}}">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preferredDuringSchedulingIgnoredDuringExecution: <a href='#WeightedPodAffinityTerm'>WeightedPodAffinityTerm</a>[];</pre>
@@ -7169,7 +7169,7 @@ the most preferred.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodAntiAffinity-requiredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11606" >}}">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11596" >}}">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requiredDuringSchedulingIgnoredDuringExecution: <a href='#PodAffinityTerm'>PodAffinityTerm</a>[];</pre>
@@ -7186,7 +7186,7 @@ intersected, i.e. all terms must be satisfied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11613" >}}">interface <b>PodCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11603" >}}">interface <b>PodCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7195,7 +7195,7 @@ PodCondition contains details for the current condition of this pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodCondition-lastProbeTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11617" >}}">property <b>lastProbeTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11607" >}}">property <b>lastProbeTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastProbeTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7206,7 +7206,7 @@ Last time we probed the condition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11622" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11612" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7217,7 +7217,7 @@ Last time the condition transitioned from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11627" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11617" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7228,7 +7228,7 @@ Human-readable message indicating details about last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11632" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11622" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7239,7 +7239,7 @@ Unique, one-word, CamelCase reason for the condition's last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11638" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11628" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7251,7 +7251,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11644" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11634" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7264,7 +7264,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodDNSConfig">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11652" >}}">interface <b>PodDNSConfig</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11642" >}}">interface <b>PodDNSConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7274,7 +7274,7 @@ DNSPolicy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodDNSConfig-nameservers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11657" >}}">property <b>nameservers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11647" >}}">property <b>nameservers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameservers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -7286,7 +7286,7 @@ generated from DNSPolicy. Duplicated nameservers will be removed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDNSConfig-options">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11664" >}}">property <b>options</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11654" >}}">property <b>options</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>options: <a href='#PodDNSConfigOption'>PodDNSConfigOption</a>[];</pre>
@@ -7299,7 +7299,7 @@ override those that appear in the base DNSPolicy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDNSConfig-searches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11670" >}}">property <b>searches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11660" >}}">property <b>searches</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>searches: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -7312,7 +7312,7 @@ paths generated from DNSPolicy. Duplicated search paths will be removed.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodDNSConfigOption">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11677" >}}">interface <b>PodDNSConfigOption</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11667" >}}">interface <b>PodDNSConfigOption</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7321,7 +7321,7 @@ PodDNSConfigOption defines DNS resolver options of a pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodDNSConfigOption-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11681" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11671" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7332,7 +7332,7 @@ Required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodDNSConfigOption-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11684" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11674" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7341,7 +7341,7 @@ Required.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11691" >}}">interface <b>PodList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11681" >}}">interface <b>PodList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7350,7 +7350,7 @@ PodList is a list of Pods.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11698" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11688" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -7364,7 +7364,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11703" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11693" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Pod'>Pod</a>[];</pre>
@@ -7375,7 +7375,7 @@ List of pods. More info: https://git.k8s.io/community/contributors/devel/api-con
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11711" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11701" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodList"</span>;</pre>
@@ -7389,7 +7389,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11717" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11707" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -7402,7 +7402,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodReadinessGate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11724" >}}">interface <b>PodReadinessGate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11714" >}}">interface <b>PodReadinessGate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7411,7 +7411,7 @@ PodReadinessGate contains the reference to a pod condition
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodReadinessGate-conditionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11728" >}}">property <b>conditionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11718" >}}">property <b>conditionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditionType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7423,7 +7423,7 @@ ConditionType refers to a condition in the pod's condition list with matching ty
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11737" >}}">interface <b>PodSecurityContext</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11727" >}}">interface <b>PodSecurityContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7434,7 +7434,7 @@ container.securityContext take precedence over field values of PodSecurityContex
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityContext-fsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11747" >}}">property <b>fsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11737" >}}">property <b>fsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -7451,7 +7451,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-runAsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11754" >}}">property <b>runAsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11744" >}}">property <b>runAsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -7464,7 +7464,7 @@ value specified in SecurityContext takes precedence for that container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-runAsNonRoot">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11763" >}}">property <b>runAsNonRoot</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11753" >}}">property <b>runAsNonRoot</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsNonRoot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7479,7 +7479,7 @@ the value specified in SecurityContext takes precedence.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-runAsUser">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11771" >}}">property <b>runAsUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11761" >}}">property <b>runAsUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsUser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -7493,7 +7493,7 @@ precedence for that container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-seLinuxOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11779" >}}">property <b>seLinuxOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11769" >}}">property <b>seLinuxOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>seLinuxOptions: <a href='#SELinuxOptions'>SELinuxOptions</a>;</pre>
@@ -7507,7 +7507,7 @@ specified in SecurityContext takes precedence for that container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-supplementalGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11785" >}}">property <b>supplementalGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11775" >}}">property <b>supplementalGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supplementalGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</pre>
@@ -7519,7 +7519,7 @@ container's primary GID.  If unspecified, no groups will be added to any contain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-sysctls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11791" >}}">property <b>sysctls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11781" >}}">property <b>sysctls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sysctls: <a href='#Sysctl'>Sysctl</a>[];</pre>
@@ -7531,7 +7531,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityContext-windowsOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11796" >}}">property <b>windowsOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11786" >}}">property <b>windowsOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>windowsOptions: <a href='#WindowsSecurityContextOptions'>WindowsSecurityContextOptions</a>;</pre>
@@ -7543,7 +7543,7 @@ Windows security options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11803" >}}">interface <b>PodSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11793" >}}">interface <b>PodSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7552,7 +7552,7 @@ PodSpec is a description of a pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodSpec-activeDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11809" >}}">property <b>activeDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11799" >}}">property <b>activeDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>activeDeadlineSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -7565,7 +7565,7 @@ be a positive integer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-affinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11814" >}}">property <b>affinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11804" >}}">property <b>affinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>affinity: <a href='#Affinity'>Affinity</a>;</pre>
@@ -7576,7 +7576,7 @@ If specified, the pod's scheduling constraints
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-automountServiceAccountToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11820" >}}">property <b>automountServiceAccountToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11810" >}}">property <b>automountServiceAccountToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>automountServiceAccountToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7588,7 +7588,7 @@ automatically mounted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-containers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11826" >}}">property <b>containers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11816" >}}">property <b>containers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containers: <a href='#Container'>Container</a>[];</pre>
@@ -7600,7 +7600,7 @@ There must be at least one container in a Pod. Cannot be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-dnsConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11832" >}}">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11822" >}}">property <b>dnsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsConfig: <a href='#PodDNSConfig'>PodDNSConfig</a>;</pre>
@@ -7612,7 +7612,7 @@ generated DNS configuration based on DNSPolicy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-dnsPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11841" >}}">property <b>dnsPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11831" >}}">property <b>dnsPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7627,7 +7627,7 @@ along with hostNetwork, you have to specify DNS policy explicitly to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-enableServiceLinks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11848" >}}">property <b>enableServiceLinks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11838" >}}">property <b>enableServiceLinks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableServiceLinks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7640,7 +7640,7 @@ true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-hostAliases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11854" >}}">property <b>hostAliases</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11844" >}}">property <b>hostAliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostAliases: <a href='#HostAlias'>HostAlias</a>[];</pre>
@@ -7652,7 +7652,7 @@ file if specified. This is only valid for non-hostNetwork pods.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-hostIPC">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11859" >}}">property <b>hostIPC</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11849" >}}">property <b>hostIPC</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostIPC: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7663,7 +7663,7 @@ Use the host's ipc namespace. Optional: Default to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-hostNetwork">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11865" >}}">property <b>hostNetwork</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11855" >}}">property <b>hostNetwork</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7675,7 +7675,7 @@ set, the ports that will be used must be specified. Default to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-hostPID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11870" >}}">property <b>hostPID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11860" >}}">property <b>hostPID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7686,7 +7686,7 @@ Use the host's pid namespace. Optional: Default to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11876" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11866" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7698,7 +7698,7 @@ system-defined value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-imagePullSecrets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11885" >}}">property <b>imagePullSecrets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11875" >}}">property <b>imagePullSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>imagePullSecrets: <a href='#LocalObjectReference'>LocalObjectReference</a>[];</pre>
@@ -7713,7 +7713,7 @@ https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecret
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-initContainers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11899" >}}">property <b>initContainers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11889" >}}">property <b>initContainers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initContainers: <a href='#Container'>Container</a>[];</pre>
@@ -7733,7 +7733,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-nodeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11906" >}}">property <b>nodeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11896" >}}">property <b>nodeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7746,7 +7746,7 @@ requirements.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-nodeSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11913" >}}">property <b>nodeSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11903" >}}">property <b>nodeSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeSelector: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -7759,7 +7759,7 @@ https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-preemptionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11920" >}}">property <b>preemptionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11910" >}}">property <b>preemptionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preemptionPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7772,7 +7772,7 @@ and is only honored by servers that enable the NonPreemptingPriority feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11928" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11918" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -7786,7 +7786,7 @@ value, the higher the priority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-priorityClassName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11937" >}}">property <b>priorityClassName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11927" >}}">property <b>priorityClassName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priorityClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7801,7 +7801,7 @@ zero if there is no default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-readinessGates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11945" >}}">property <b>readinessGates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11935" >}}">property <b>readinessGates</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readinessGates: <a href='#PodReadinessGate'>PodReadinessGate</a>[];</pre>
@@ -7815,7 +7815,7 @@ https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-restartPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11952" >}}">property <b>restartPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11942" >}}">property <b>restartPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>restartPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7828,7 +7828,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-runtimeClassName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11962" >}}">property <b>runtimeClassName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11952" >}}">property <b>runtimeClassName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtimeClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7844,7 +7844,7 @@ Kubernetes v1.14.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-schedulerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11968" >}}">property <b>schedulerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11958" >}}">property <b>schedulerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedulerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7856,7 +7856,7 @@ will be dispatched by default scheduler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-securityContext">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11974" >}}">property <b>securityContext</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11964" >}}">property <b>securityContext</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityContext: <a href='#PodSecurityContext'>PodSecurityContext</a>;</pre>
@@ -7868,7 +7868,7 @@ Optional: Defaults to empty.  See type description for default values of each fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-serviceAccount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11980" >}}">property <b>serviceAccount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11970" >}}">property <b>serviceAccount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7880,7 +7880,7 @@ serviceAccountName instead.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-serviceAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11986" >}}">property <b>serviceAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11976" >}}">property <b>serviceAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7892,7 +7892,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-accou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-shareProcessNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11995" >}}">property <b>shareProcessNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11985" >}}">property <b>shareProcessNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shareProcessNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7907,7 +7907,7 @@ beta-level and may be disabled with the PodShareProcessNamespace feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-subdomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12002" >}}">property <b>subdomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L11992" >}}">property <b>subdomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subdomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7920,7 +7920,7 @@ all.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-terminationGracePeriodSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12013" >}}">property <b>terminationGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12003" >}}">property <b>terminationGracePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>terminationGracePeriodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -7937,7 +7937,7 @@ seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-tolerations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12018" >}}">property <b>tolerations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12008" >}}">property <b>tolerations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tolerations: <a href='#Toleration'>Toleration</a>[];</pre>
@@ -7948,7 +7948,7 @@ If specified, the pod's tolerations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodSpec-volumes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12024" >}}">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12014" >}}">property <b>volumes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumes: <a href='#Volume'>Volume</a>[];</pre>
@@ -7961,7 +7961,7 @@ https://kubernetes.io/docs/concepts/storage/volumes
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12032" >}}">interface <b>PodStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12022" >}}">interface <b>PodStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7971,7 +7971,7 @@ of a system, especially if the node that hosts the pod cannot contact the contro
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12037" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12027" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions: <a href='#PodCondition'>PodCondition</a>[];</pre>
@@ -7983,7 +7983,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-containerStatuses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12044" >}}">property <b>containerStatuses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12034" >}}">property <b>containerStatuses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerStatuses: <a href='#ContainerStatus'>ContainerStatus</a>[];</pre>
@@ -7996,7 +7996,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-contain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-hostIP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12049" >}}">property <b>hostIP</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12039" >}}">property <b>hostIP</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8007,7 +8007,7 @@ IP address of the host to which the pod is assigned. Empty if not yet scheduled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-initContainerStatuses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12057" >}}">property <b>initContainerStatuses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12047" >}}">property <b>initContainerStatuses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initContainerStatuses: <a href='#ContainerStatus'>ContainerStatus</a>[];</pre>
@@ -8021,7 +8021,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-contain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12062" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12052" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8032,7 +8032,7 @@ A human readable message indicating details about why the pod is in this conditi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-nominatedNodeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12073" >}}">property <b>nominatedNodeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12063" >}}">property <b>nominatedNodeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nominatedNodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8049,7 +8049,7 @@ pod is scheduled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-phase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12093" >}}">property <b>phase</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12083" >}}">property <b>phase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8075,7 +8075,7 @@ More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-podIP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12099" >}}">property <b>podIP</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12089" >}}">property <b>podIP</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8087,7 +8087,7 @@ allocated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-qosClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12106" >}}">property <b>qosClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12096" >}}">property <b>qosClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8100,7 +8100,7 @@ https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12112" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12102" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8112,7 +8112,7 @@ A brief CamelCase message indicating details about why the pod is in this state.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodStatus-startTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12118" >}}">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12108" >}}">property <b>startTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8125,7 +8125,7 @@ the Kubelet pulled the container image(s) for the pod.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12125" >}}">interface <b>PodTemplate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12115" >}}">interface <b>PodTemplate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8134,7 +8134,7 @@ PodTemplate describes a template for creating copies of a predefined pod.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplate-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12132" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12122" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -8148,7 +8148,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12140" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12130" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodTemplate"</span>;</pre>
@@ -8162,7 +8162,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12146" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12136" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -8174,7 +8174,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-template">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12152" >}}">property <b>template</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12142" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template: <a href='#PodTemplateSpec'>PodTemplateSpec</a>;</pre>
@@ -8187,7 +8187,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplateList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12159" >}}">interface <b>PodTemplateList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12149" >}}">interface <b>PodTemplateList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8196,7 +8196,7 @@ PodTemplateList is a list of PodTemplates.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplateList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12166" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12156" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -8210,7 +8210,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12171" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12161" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#PodTemplate'>PodTemplate</a>[];</pre>
@@ -8221,7 +8221,7 @@ List of pod templates
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12179" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12169" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"PodTemplateList"</span>;</pre>
@@ -8235,7 +8235,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12185" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12175" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -8248,7 +8248,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplateSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12192" >}}">interface <b>PodTemplateSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12182" >}}">interface <b>PodTemplateSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8257,7 +8257,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplateSpec-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12197" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12187" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -8269,7 +8269,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateSpec-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12203" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12193" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#PodSpec'>PodSpec</a>;</pre>
@@ -8282,7 +8282,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PortworxVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12210" >}}">interface <b>PortworxVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12200" >}}">interface <b>PortworxVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8291,7 +8291,7 @@ PortworxVolumeSource represents a Portworx volume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PortworxVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12215" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12205" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8303,7 +8303,7 @@ host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if un
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PortworxVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12221" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12211" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -8315,7 +8315,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PortworxVolumeSource-volumeID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12226" >}}">property <b>volumeID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12216" >}}">property <b>volumeID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8327,7 +8327,7 @@ VolumeID uniquely identifies a Portworx volume
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PreferredSchedulingTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12234" >}}">interface <b>PreferredSchedulingTerm</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12224" >}}">interface <b>PreferredSchedulingTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8337,7 +8337,7 @@ no-op). A null preferred scheduling term matches no objects (i.e. is also a no-o
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PreferredSchedulingTerm-preference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12238" >}}">property <b>preference</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12228" >}}">property <b>preference</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>preference: <a href='#NodeSelectorTerm'>NodeSelectorTerm</a>;</pre>
@@ -8348,7 +8348,7 @@ A node selector term, associated with the corresponding weight.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PreferredSchedulingTerm-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12243" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12233" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8360,7 +8360,7 @@ Weight associated with matching the corresponding nodeSelectorTerm, in the range
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Probe">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12251" >}}">interface <b>Probe</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12241" >}}">interface <b>Probe</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8370,7 +8370,7 @@ alive or ready to receive traffic.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Probe-exec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12255" >}}">property <b>exec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12245" >}}">property <b>exec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>exec: <a href='#ExecAction'>ExecAction</a>;</pre>
@@ -8381,7 +8381,7 @@ One and only one of the following should be specified. Exec specifies the action
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-failureThreshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12261" >}}">property <b>failureThreshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12251" >}}">property <b>failureThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failureThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8393,7 +8393,7 @@ Defaults to 3. Minimum value is 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-httpGet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12266" >}}">property <b>httpGet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12256" >}}">property <b>httpGet</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpGet: <a href='#HTTPGetAction'>HTTPGetAction</a>;</pre>
@@ -8404,7 +8404,7 @@ HTTPGet specifies the http request to perform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-initialDelaySeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12273" >}}">property <b>initialDelaySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12263" >}}">property <b>initialDelaySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initialDelaySeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8417,7 +8417,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-periodSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12278" >}}">property <b>periodSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12268" >}}">property <b>periodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>periodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8428,7 +8428,7 @@ How often (in seconds) to perform the probe. Default to 10 seconds. Minimum valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-successThreshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12284" >}}">property <b>successThreshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12274" >}}">property <b>successThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>successThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8440,7 +8440,7 @@ failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-tcpSocket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12289" >}}">property <b>tcpSocket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12279" >}}">property <b>tcpSocket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tcpSocket: <a href='#TCPSocketAction'>TCPSocketAction</a>;</pre>
@@ -8451,7 +8451,7 @@ TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-timeoutSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12296" >}}">property <b>timeoutSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12286" >}}">property <b>timeoutSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8465,7 +8465,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectedVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12303" >}}">interface <b>ProjectedVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12293" >}}">interface <b>ProjectedVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8474,7 +8474,7 @@ Represents a projected volume source
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectedVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12310" >}}">property <b>defaultMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12300" >}}">property <b>defaultMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -8488,7 +8488,7 @@ mode bits set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectedVolumeSource-sources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12315" >}}">property <b>sources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12305" >}}">property <b>sources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sources: <a href='#VolumeProjection'>VolumeProjection</a>[];</pre>
@@ -8500,7 +8500,7 @@ list of volume projections
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QuobyteVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12323" >}}">interface <b>QuobyteVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12313" >}}">interface <b>QuobyteVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8510,7 +8510,7 @@ ownership management or SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QuobyteVolumeSource-group">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12327" >}}">property <b>group</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12317" >}}">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8521,7 +8521,7 @@ Group to map volume access to Default is no group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QuobyteVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12333" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12323" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -8533,7 +8533,7 @@ Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QuobyteVolumeSource-registry">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12340" >}}">property <b>registry</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12330" >}}">property <b>registry</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>registry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8546,7 +8546,7 @@ registry for volumes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QuobyteVolumeSource-tenant">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12346" >}}">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12336" >}}">property <b>tenant</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8558,7 +8558,7 @@ Quobyte volumes, value is set by the plugin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QuobyteVolumeSource-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12351" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12341" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8569,7 +8569,7 @@ User to map volume access to Defaults to serivceaccount user
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QuobyteVolumeSource-volume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12356" >}}">property <b>volume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12346" >}}">property <b>volume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volume: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8581,7 +8581,7 @@ Volume is a string that references an already created Quobyte volume by name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RBDPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12364" >}}">interface <b>RBDPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12354" >}}">interface <b>RBDPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8591,7 +8591,7 @@ ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12371" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12361" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8605,7 +8605,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#rbd
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12377" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12367" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8617,7 +8617,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-keyring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12383" >}}">property <b>keyring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12373" >}}">property <b>keyring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyring: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8629,7 +8629,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12389" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12379" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -8641,7 +8641,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-pool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12395" >}}">property <b>pool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12385" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8653,7 +8653,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12401" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12391" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -8665,7 +8665,7 @@ info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12408" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12398" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -8678,7 +8678,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12414" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12404" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8691,7 +8691,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RBDVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12422" >}}">interface <b>RBDVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12412" >}}">interface <b>RBDVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8701,7 +8701,7 @@ ownership management and SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RBDVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12429" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12419" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8715,7 +8715,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#rbd
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12435" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12425" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8727,7 +8727,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-keyring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12441" >}}">property <b>keyring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12431" >}}">property <b>keyring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyring: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8739,7 +8739,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12447" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12437" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -8751,7 +8751,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-pool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12453" >}}">property <b>pool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12443" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8763,7 +8763,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12459" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12449" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -8775,7 +8775,7 @@ info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12466" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12456" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -8788,7 +8788,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RBDVolumeSource-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12472" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12462" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8801,7 +8801,7 @@ https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationController">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12479" >}}">interface <b>ReplicationController</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12469" >}}">interface <b>ReplicationController</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8810,7 +8810,7 @@ ReplicationController represents the configuration of a replication controller.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationController-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12486" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12476" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -8824,7 +8824,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12494" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12484" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ReplicationController"</span>;</pre>
@@ -8838,7 +8838,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12501" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12491" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -8851,7 +8851,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12507" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12497" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#ReplicationControllerSpec'>ReplicationControllerSpec</a>;</pre>
@@ -8863,7 +8863,7 @@ info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12514" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12504" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#ReplicationControllerStatus'>ReplicationControllerStatus</a>;</pre>
@@ -8877,7 +8877,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationControllerCondition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12522" >}}">interface <b>ReplicationControllerCondition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12512" >}}">interface <b>ReplicationControllerCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8887,7 +8887,7 @@ point.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationControllerCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12526" >}}">property <b>lastTransitionTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12516" >}}">property <b>lastTransitionTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8898,7 +8898,7 @@ The last time the condition transitioned from one status to another.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerCondition-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12531" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12521" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8909,7 +8909,7 @@ A human readable message indicating details about the transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerCondition-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12536" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12526" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8920,7 +8920,7 @@ The reason for the condition's last transition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerCondition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12541" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12531" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8931,7 +8931,7 @@ Status of the condition, one of True, False, Unknown.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerCondition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12546" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12536" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8943,7 +8943,7 @@ Type of replication controller condition.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationControllerList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12553" >}}">interface <b>ReplicationControllerList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12543" >}}">interface <b>ReplicationControllerList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8952,7 +8952,7 @@ ReplicationControllerList is a collection of replication controllers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationControllerList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12560" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12550" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -8966,7 +8966,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12566" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12556" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#ReplicationController'>ReplicationController</a>[];</pre>
@@ -8978,7 +8978,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12574" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12564" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ReplicationControllerList"</span>;</pre>
@@ -8992,7 +8992,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12580" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12570" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -9005,7 +9005,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationControllerSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12587" >}}">interface <b>ReplicationControllerSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12577" >}}">interface <b>ReplicationControllerSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9014,7 +9014,7 @@ ReplicationControllerSpec is the specification of a replication controller.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationControllerSpec-minReadySeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12593" >}}">property <b>minReadySeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12583" >}}">property <b>minReadySeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minReadySeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9027,7 +9027,7 @@ considered available as soon as it is ready)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerSpec-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12600" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12590" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9040,7 +9040,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12609" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12599" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -9055,7 +9055,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerSpec-template">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12616" >}}">property <b>template</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12606" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template: <a href='#PodTemplateSpec'>PodTemplateSpec</a>;</pre>
@@ -9069,7 +9069,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationControllerStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12623" >}}">interface <b>ReplicationControllerStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12613" >}}">interface <b>ReplicationControllerStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9078,7 +9078,7 @@ ReplicationControllerStatus represents the current status of a replication contr
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationControllerStatus-availableReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12628" >}}">property <b>availableReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12618" >}}">property <b>availableReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9090,7 +9090,7 @@ controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerStatus-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12633" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12623" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>conditions: <a href='#ReplicationControllerCondition'>ReplicationControllerCondition</a>[];</pre>
@@ -9101,7 +9101,7 @@ Represents the latest available observations of a replication controller's curre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerStatus-fullyLabeledReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12639" >}}">property <b>fullyLabeledReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12629" >}}">property <b>fullyLabeledReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fullyLabeledReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9113,7 +9113,7 @@ replication controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerStatus-observedGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12645" >}}">property <b>observedGeneration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12635" >}}">property <b>observedGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>observedGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9125,7 +9125,7 @@ controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerStatus-readyReplicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12650" >}}">property <b>readyReplicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12640" >}}">property <b>readyReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readyReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9136,7 +9136,7 @@ The number of ready replicas for this replication controller.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerStatus-replicas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12656" >}}">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12646" >}}">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9149,7 +9149,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceFieldSelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12663" >}}">interface <b>ResourceFieldSelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12653" >}}">interface <b>ResourceFieldSelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9158,7 +9158,7 @@ ResourceFieldSelector represents container resources (cpu, memory) and their out
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceFieldSelector-containerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12667" >}}">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12657" >}}">property <b>containerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9169,7 +9169,7 @@ Container name: required for volumes, optional for env vars
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceFieldSelector-divisor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12672" >}}">property <b>divisor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12662" >}}">property <b>divisor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>divisor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9180,7 +9180,7 @@ Specifies the output format of the exposed resources, defaults to "1"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceFieldSelector-resource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12677" >}}">property <b>resource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12667" >}}">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9192,7 +9192,7 @@ Required: resource to select
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuota">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12684" >}}">interface <b>ResourceQuota</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12674" >}}">interface <b>ResourceQuota</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9201,7 +9201,7 @@ ResourceQuota sets aggregate quota restrictions enforced per namespace
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuota-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12691" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12681" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -9215,7 +9215,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12699" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12689" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ResourceQuota"</span>;</pre>
@@ -9229,7 +9229,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12705" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12695" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -9241,7 +9241,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12711" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12701" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#ResourceQuotaSpec'>ResourceQuotaSpec</a>;</pre>
@@ -9253,7 +9253,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12717" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12707" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#ResourceQuotaStatus'>ResourceQuotaStatus</a>;</pre>
@@ -9266,7 +9266,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuotaList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12724" >}}">interface <b>ResourceQuotaList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12714" >}}">interface <b>ResourceQuotaList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9275,7 +9275,7 @@ ResourceQuotaList is a list of ResourceQuota items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuotaList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12731" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12721" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -9289,7 +9289,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12737" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12727" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#ResourceQuota'>ResourceQuota</a>[];</pre>
@@ -9301,7 +9301,7 @@ https://kubernetes.io/docs/concepts/policy/resource-quotas/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12745" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12735" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ResourceQuotaList"</span>;</pre>
@@ -9315,7 +9315,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12751" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12741" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -9328,7 +9328,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuotaSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12758" >}}">interface <b>ResourceQuotaSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12748" >}}">interface <b>ResourceQuotaSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9337,7 +9337,7 @@ ResourceQuotaSpec defines the desired hard limits to enforce for Quota.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuotaSpec-hard">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12763" >}}">property <b>hard</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12753" >}}">property <b>hard</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -9349,7 +9349,7 @@ https://kubernetes.io/docs/concepts/policy/resource-quotas/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaSpec-scopeSelector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12771" >}}">property <b>scopeSelector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12761" >}}">property <b>scopeSelector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scopeSelector: <a href='#ScopeSelector'>ScopeSelector</a>;</pre>
@@ -9363,7 +9363,7 @@ be matched.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaSpec-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12777" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12767" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9376,7 +9376,7 @@ the quota matches all objects.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuotaStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12784" >}}">interface <b>ResourceQuotaStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12774" >}}">interface <b>ResourceQuotaStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9385,7 +9385,7 @@ ResourceQuotaStatus defines the enforced hard limits and observed use.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuotaStatus-hard">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12789" >}}">property <b>hard</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12779" >}}">property <b>hard</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -9397,7 +9397,7 @@ https://kubernetes.io/docs/concepts/policy/resource-quotas/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaStatus-used">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12794" >}}">property <b>used</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12784" >}}">property <b>used</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>used: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -9409,7 +9409,7 @@ Used is the current observed total usage of the resource in the namespace.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceRequirements">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12801" >}}">interface <b>ResourceRequirements</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12791" >}}">interface <b>ResourceRequirements</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9418,7 +9418,7 @@ ResourceRequirements describes the compute resource requirements.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceRequirements-limits">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12806" >}}">property <b>limits</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12796" >}}">property <b>limits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>limits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -9430,7 +9430,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceRequirements-requests">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12814" >}}">property <b>requests</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12804" >}}">property <b>requests</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requests: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -9445,7 +9445,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SELinuxOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12821" >}}">interface <b>SELinuxOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12811" >}}">interface <b>SELinuxOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9454,7 +9454,7 @@ SELinuxOptions are the labels to be applied to the container
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SELinuxOptions-level">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12825" >}}">property <b>level</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12815" >}}">property <b>level</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>level: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9465,7 +9465,7 @@ Level is SELinux level label that applies to the container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SELinuxOptions-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12830" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12820" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9476,7 +9476,7 @@ Role is a SELinux role label that applies to the container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SELinuxOptions-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12835" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12825" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9487,7 +9487,7 @@ Type is a SELinux type label that applies to the container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SELinuxOptions-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12840" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12830" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9499,7 +9499,7 @@ User is a SELinux user label that applies to the container.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleIOPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12847" >}}">interface <b>ScaleIOPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12837" >}}">interface <b>ScaleIOPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9508,7 +9508,7 @@ ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12852" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12842" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9520,7 +9520,7 @@ Ex. "ext4", "xfs", "ntfs". Default is "xfs"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-gateway">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12857" >}}">property <b>gateway</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12847" >}}">property <b>gateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9531,7 +9531,7 @@ The host address of the ScaleIO API Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-protectionDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12862" >}}">property <b>protectionDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12852" >}}">property <b>protectionDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protectionDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9542,7 +9542,7 @@ The name of the ScaleIO Protection Domain for the configured storage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12868" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12858" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9554,7 +9554,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12874" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12864" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
@@ -9566,7 +9566,7 @@ this is not provided, Login operation will fail.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-sslEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12879" >}}">property <b>sslEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12869" >}}">property <b>sslEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9577,7 +9577,7 @@ Flag to enable/disable SSL communication with Gateway, default false
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-storageMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12885" >}}">property <b>storageMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12875" >}}">property <b>storageMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9589,7 +9589,7 @@ Default is ThinProvisioned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-storagePool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12890" >}}">property <b>storagePool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12880" >}}">property <b>storagePool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storagePool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9600,7 +9600,7 @@ The ScaleIO Storage Pool associated with the protection domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-system">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12895" >}}">property <b>system</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12885" >}}">property <b>system</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>system: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9611,7 +9611,7 @@ The name of the storage system as configured in ScaleIO.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-volumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12901" >}}">property <b>volumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12891" >}}">property <b>volumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9624,7 +9624,7 @@ volume source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleIOVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12908" >}}">interface <b>ScaleIOVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12898" >}}">interface <b>ScaleIOVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9633,7 +9633,7 @@ ScaleIOVolumeSource represents a persistent ScaleIO volume
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12913" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12903" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9645,7 +9645,7 @@ Ex. "ext4", "xfs", "ntfs". Default is "xfs".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-gateway">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12918" >}}">property <b>gateway</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12908" >}}">property <b>gateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9656,7 +9656,7 @@ The host address of the ScaleIO API Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-protectionDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12923" >}}">property <b>protectionDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12913" >}}">property <b>protectionDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protectionDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9667,7 +9667,7 @@ The name of the ScaleIO Protection Domain for the configured storage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12929" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12919" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9679,7 +9679,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12935" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12925" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -9691,7 +9691,7 @@ this is not provided, Login operation will fail.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-sslEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12940" >}}">property <b>sslEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12930" >}}">property <b>sslEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9702,7 +9702,7 @@ Flag to enable/disable SSL communication with Gateway, default false
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-storageMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12946" >}}">property <b>storageMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12936" >}}">property <b>storageMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9714,7 +9714,7 @@ Default is ThinProvisioned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-storagePool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12951" >}}">property <b>storagePool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12941" >}}">property <b>storagePool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storagePool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9725,7 +9725,7 @@ The ScaleIO Storage Pool associated with the protection domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-system">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12956" >}}">property <b>system</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12946" >}}">property <b>system</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>system: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9736,7 +9736,7 @@ The name of the storage system as configured in ScaleIO.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScaleIOVolumeSource-volumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12962" >}}">property <b>volumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12952" >}}">property <b>volumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9749,7 +9749,7 @@ volume source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScopeSelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12970" >}}">interface <b>ScopeSelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12960" >}}">interface <b>ScopeSelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9759,7 +9759,7 @@ selector requirements.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScopeSelector-matchExpressions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12974" >}}">property <b>matchExpressions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12964" >}}">property <b>matchExpressions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchExpressions: <a href='#ScopedResourceSelectorRequirement'>ScopedResourceSelectorRequirement</a>[];</pre>
@@ -9771,7 +9771,7 @@ A list of scope selector requirements by scope of the resources.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScopedResourceSelectorRequirement">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12982" >}}">interface <b>ScopedResourceSelectorRequirement</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12972" >}}">interface <b>ScopedResourceSelectorRequirement</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9781,7 +9781,7 @@ an operator that relates the scope name and values.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScopedResourceSelectorRequirement-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12987" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12977" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9793,7 +9793,7 @@ Exists, DoesNotExist.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScopedResourceSelectorRequirement-scopeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12992" >}}">property <b>scopeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12982" >}}">property <b>scopeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scopeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9804,7 +9804,7 @@ The name of the scope that the selector applies to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScopedResourceSelectorRequirement-values">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12999" >}}">property <b>values</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12989" >}}">property <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9818,7 +9818,7 @@ array is replaced during a strategic merge patch.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Secret">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13007" >}}">interface <b>Secret</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L12997" >}}">interface <b>Secret</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9828,7 +9828,7 @@ must be less than MaxSecretSize bytes.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Secret-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13014" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13004" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -9842,7 +9842,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13022" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13012" >}}">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
@@ -9856,7 +9856,7 @@ https://tools.ietf.org/html/rfc4648#section-4
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13030" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13020" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Secret"</span>;</pre>
@@ -9870,7 +9870,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13036" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13026" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -9882,7 +9882,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-stringData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13043" >}}">property <b>stringData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13033" >}}">property <b>stringData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>stringData: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -9895,7 +9895,7 @@ overwriting any existing values. It is never output when reading from the API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Secret-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13048" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13038" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9907,7 +9907,7 @@ Used to facilitate programmatic handling of secret data.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretEnvSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13058" >}}">interface <b>SecretEnvSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13048" >}}">interface <b>SecretEnvSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9919,7 +9919,7 @@ environment variables.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretEnvSource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13063" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13053" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9931,7 +9931,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretEnvSource-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13068" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13058" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9943,7 +9943,7 @@ Specify whether the Secret must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretKeySelector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13075" >}}">interface <b>SecretKeySelector</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13065" >}}">interface <b>SecretKeySelector</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9952,7 +9952,7 @@ SecretKeySelector selects a key of a Secret.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretKeySelector-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13079" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13069" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9963,7 +9963,7 @@ The key of the secret to select from.  Must be a valid secret key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretKeySelector-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13085" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13075" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9975,7 +9975,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretKeySelector-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13090" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13080" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9987,7 +9987,7 @@ Specify whether the Secret or its key must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13097" >}}">interface <b>SecretList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13087" >}}">interface <b>SecretList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9996,7 +9996,7 @@ SecretList is a list of Secret.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13104" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13094" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -10010,7 +10010,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13110" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13100" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Secret'>Secret</a>[];</pre>
@@ -10022,7 +10022,7 @@ https://kubernetes.io/docs/concepts/configuration/secret
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13118" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13108" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"SecretList"</span>;</pre>
@@ -10036,7 +10036,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13124" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13114" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -10049,7 +10049,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretProjection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13135" >}}">interface <b>SecretProjection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13125" >}}">interface <b>SecretProjection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10062,7 +10062,7 @@ secret volume source without the default mode.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretProjection-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13144" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13134" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
@@ -10078,7 +10078,7 @@ the '..' path or start with '..'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretProjection-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13150" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10090,7 +10090,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretProjection-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13155" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13145" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10102,7 +10102,7 @@ Specify whether the Secret or its key must be defined
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretReference">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13163" >}}">interface <b>SecretReference</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13153" >}}">interface <b>SecretReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10112,7 +10112,7 @@ in any namespace
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretReference-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13167" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13157" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10123,7 +10123,7 @@ Name is unique within a namespace to reference a secret resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretReference-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13172" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13162" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10135,7 +10135,7 @@ Namespace defines the space within which the secret name must be unique.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13183" >}}">interface <b>SecretVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13173" >}}">interface <b>SecretVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10148,7 +10148,7 @@ SELinux relabeling.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecretVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13190" >}}">property <b>defaultMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13180" >}}">property <b>defaultMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10162,7 +10162,7 @@ can be other mode bits set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretVolumeSource-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13200" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13190" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
@@ -10178,7 +10178,7 @@ the '..' path or start with '..'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretVolumeSource-optional">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13205" >}}">property <b>optional</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13195" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10189,7 +10189,7 @@ Specify whether the Secret or its keys must be defined
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecretVolumeSource-secretName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13211" >}}">property <b>secretName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13201" >}}">property <b>secretName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10202,7 +10202,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#secret
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13220" >}}">interface <b>SecurityContext</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13210" >}}">interface <b>SecurityContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10213,7 +10213,7 @@ SecurityContext take precedence.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecurityContext-allowPrivilegeEscalation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13227" >}}">property <b>allowPrivilegeEscalation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13217" >}}">property <b>allowPrivilegeEscalation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowPrivilegeEscalation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10227,7 +10227,7 @@ Privileged 2) has CAP_SYS_ADMIN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13233" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13223" >}}">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>capabilities: <a href='#Capabilities'>Capabilities</a>;</pre>
@@ -10239,7 +10239,7 @@ capabilities granted by the container runtime.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-privileged">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13239" >}}">property <b>privileged</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13229" >}}">property <b>privileged</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileged: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10251,7 +10251,7 @@ equivalent to root on the host. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-procMount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13246" >}}">property <b>procMount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13236" >}}">property <b>procMount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>procMount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10264,7 +10264,7 @@ paths. This requires the ProcMountType feature flag to be enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-readOnlyRootFilesystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13251" >}}">property <b>readOnlyRootFilesystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13241" >}}">property <b>readOnlyRootFilesystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnlyRootFilesystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10275,7 +10275,7 @@ Whether this container has a read-only root filesystem. Default is false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-runAsGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13258" >}}">property <b>runAsGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13248" >}}">property <b>runAsGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10288,7 +10288,7 @@ the value specified in SecurityContext takes precedence.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-runAsNonRoot">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13267" >}}">property <b>runAsNonRoot</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13257" >}}">property <b>runAsNonRoot</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsNonRoot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10303,7 +10303,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-runAsUser">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13275" >}}">property <b>runAsUser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13265" >}}">property <b>runAsUser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runAsUser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10317,7 +10317,7 @@ precedence.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-seLinuxOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13283" >}}">property <b>seLinuxOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13273" >}}">property <b>seLinuxOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>seLinuxOptions: <a href='#SELinuxOptions'>SELinuxOptions</a>;</pre>
@@ -10331,7 +10331,7 @@ specified in SecurityContext takes precedence.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityContext-windowsOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13288" >}}">property <b>windowsOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13278" >}}">property <b>windowsOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>windowsOptions: <a href='#WindowsSecurityContextOptions'>WindowsSecurityContextOptions</a>;</pre>
@@ -10343,7 +10343,7 @@ Windows security options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13297" >}}">interface <b>Service</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13287" >}}">interface <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10354,7 +10354,7 @@ pods will answer requests sent through the proxy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Service-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13304" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13294" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -10368,7 +10368,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13312" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13302" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"Service"</span>;</pre>
@@ -10382,7 +10382,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13318" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13308" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -10394,7 +10394,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13324" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13314" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spec: <a href='#ServiceSpec'>ServiceSpec</a>;</pre>
@@ -10406,7 +10406,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13330" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13320" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <a href='#ServiceStatus'>ServiceStatus</a>;</pre>
@@ -10419,7 +10419,7 @@ info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-an
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13339" >}}">interface <b>ServiceAccount</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13329" >}}">interface <b>ServiceAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10430,7 +10430,7 @@ secrets
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccount-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13346" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13336" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -10444,7 +10444,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-automountServiceAccountToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13352" >}}">property <b>automountServiceAccountToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13342" >}}">property <b>automountServiceAccountToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>automountServiceAccountToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10456,7 +10456,7 @@ have an API token automatically mounted. Can be overridden at the pod level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-imagePullSecrets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13361" >}}">property <b>imagePullSecrets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13351" >}}">property <b>imagePullSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>imagePullSecrets: <a href='#LocalObjectReference'>LocalObjectReference</a>[];</pre>
@@ -10471,7 +10471,7 @@ https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13369" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13359" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ServiceAccount"</span>;</pre>
@@ -10485,7 +10485,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13375" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13365" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
@@ -10497,7 +10497,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-secrets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13381" >}}">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13371" >}}">property <b>secrets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secrets: <a href='#ObjectReference'>ObjectReference</a>[];</pre>
@@ -10510,7 +10510,7 @@ ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/sec
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccountList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13388" >}}">interface <b>ServiceAccountList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13378" >}}">interface <b>ServiceAccountList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10519,7 +10519,7 @@ ServiceAccountList is a list of ServiceAccount objects
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccountList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13395" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13385" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -10533,7 +10533,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13401" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13391" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#ServiceAccount'>ServiceAccount</a>[];</pre>
@@ -10545,7 +10545,7 @@ https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-accou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13409" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13399" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ServiceAccountList"</span>;</pre>
@@ -10559,7 +10559,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13415" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13405" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -10572,7 +10572,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccountTokenProjection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13424" >}}">interface <b>ServiceAccountTokenProjection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13414" >}}">interface <b>ServiceAccountTokenProjection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10583,7 +10583,7 @@ use against APIs (Kubernetes API Server or otherwise).
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccountTokenProjection-audience">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13430" >}}">property <b>audience</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13420" >}}">property <b>audience</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>audience: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10596,7 +10596,7 @@ token. The audience defaults to the identifier of the apiserver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountTokenProjection-expirationSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13439" >}}">property <b>expirationSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13429" >}}">property <b>expirationSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expirationSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10611,7 +10611,7 @@ to 1 hour and must be at least 10 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountTokenProjection-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13444" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13434" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10623,7 +10623,7 @@ Path is the path relative to the mount point of the file to project the token in
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13451" >}}">interface <b>ServiceList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13441" >}}">interface <b>ServiceList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10632,7 +10632,7 @@ ServiceList holds a list of services.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13458" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13448" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiVersion: <span class='s2'>"v1"</span>;</pre>
@@ -10646,7 +10646,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13463" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13453" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>items: <a href='#Service'>Service</a>[];</pre>
@@ -10657,7 +10657,7 @@ List of services
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13471" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13461" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"ServiceList"</span>;</pre>
@@ -10671,7 +10671,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13477" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13467" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
@@ -10684,7 +10684,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePort">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13484" >}}">interface <b>ServicePort</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13474" >}}">interface <b>ServicePort</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10693,7 +10693,7 @@ ServicePort contains information on service's port.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePort-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13490" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13480" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10706,7 +10706,7 @@ Optional if only one ServicePort is defined on this service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePort-nodePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13499" >}}">property <b>nodePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13489" >}}">property <b>nodePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodePort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10721,7 +10721,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePort-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13504" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13494" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10732,7 +10732,7 @@ The port that will be exposed by this service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePort-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13509" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13499" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10743,7 +10743,7 @@ The IP protocol for this port. Supports "TCP", "UDP", and "SCTP". Default is TCP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePort-targetPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13519" >}}">property <b>targetPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13509" >}}">property <b>targetPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10760,7 +10760,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-serv
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceSpec">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13526" >}}">interface <b>ServiceSpec</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13516" >}}">interface <b>ServiceSpec</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10769,7 +10769,7 @@ ServiceSpec describes the attributes that a user creates on a service.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceSpec-clusterIP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13536" >}}">property <b>clusterIP</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13526" >}}">property <b>clusterIP</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10786,7 +10786,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-externalIPs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13544" >}}">property <b>externalIPs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13534" >}}">property <b>externalIPs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externalIPs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -10800,7 +10800,7 @@ external load-balancers that are not part of the Kubernetes system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-externalName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13551" >}}">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13541" >}}">property <b>externalName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externalName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10813,7 +10813,7 @@ record for this service. No proxying will be involved. Must be a valid RFC-1123 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-externalTrafficPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13560" >}}">property <b>externalTrafficPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13550" >}}">property <b>externalTrafficPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>externalTrafficPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10828,7 +10828,7 @@ another node, but should have good overall load-spreading.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-healthCheckNodePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13568" >}}">property <b>healthCheckNodePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13558" >}}">property <b>healthCheckNodePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckNodePort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -10842,7 +10842,7 @@ to LoadBalancer and ExternalTrafficPolicy is set to Local.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-loadBalancerIP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13576" >}}">property <b>loadBalancerIP</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13566" >}}">property <b>loadBalancerIP</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancerIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10856,7 +10856,7 @@ ignored if the cloud-provider does not support the feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-loadBalancerSourceRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13584" >}}">property <b>loadBalancerSourceRanges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13574" >}}">property <b>loadBalancerSourceRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancerSourceRanges: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -10870,7 +10870,7 @@ https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-prov
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13590" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13580" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ports: <a href='#ServicePort'>ServicePort</a>[];</pre>
@@ -10882,7 +10882,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-publishNotReadyAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13599" >}}">property <b>publishNotReadyAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13589" >}}">property <b>publishNotReadyAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publishNotReadyAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10897,7 +10897,7 @@ for purpose of peer discovery.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-selector">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13608" >}}">property <b>selector</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13598" >}}">property <b>selector</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selector: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -10912,7 +10912,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-sessionAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13615" >}}">property <b>sessionAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13605" >}}">property <b>sessionAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sessionAffinity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10925,7 +10925,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-sessionAffinityConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13620" >}}">property <b>sessionAffinityConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13610" >}}">property <b>sessionAffinityConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sessionAffinityConfig: <a href='#SessionAffinityConfig'>SessionAffinityConfig</a>;</pre>
@@ -10936,7 +10936,7 @@ sessionAffinityConfig contains the configurations of session affinity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSpec-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13634" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13624" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10957,7 +10957,7 @@ https://kubernetes.io/docs/concepts/services-networking/service/#publishing-serv
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13641" >}}">interface <b>ServiceStatus</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13631" >}}">interface <b>ServiceStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10966,7 +10966,7 @@ ServiceStatus represents the current status of a service.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceStatus-loadBalancer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13645" >}}">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13635" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancer: <a href='#LoadBalancerStatus'>LoadBalancerStatus</a>;</pre>
@@ -10978,7 +10978,7 @@ LoadBalancer contains the current status of the load-balancer, if one is present
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SessionAffinityConfig">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13652" >}}">interface <b>SessionAffinityConfig</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13642" >}}">interface <b>SessionAffinityConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10987,7 +10987,7 @@ SessionAffinityConfig represents the configurations of session affinity.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SessionAffinityConfig-clientIP">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13656" >}}">property <b>clientIP</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13646" >}}">property <b>clientIP</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientIP: <a href='#ClientIPConfig'>ClientIPConfig</a>;</pre>
@@ -10999,7 +10999,7 @@ clientIP contains the configurations of Client IP based session affinity.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageOSPersistentVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13663" >}}">interface <b>StorageOSPersistentVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13653" >}}">interface <b>StorageOSPersistentVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11008,7 +11008,7 @@ Represents a StorageOS persistent volume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13668" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13658" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11020,7 +11020,7 @@ Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13674" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13664" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -11032,7 +11032,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13680" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13670" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#ObjectReference'>ObjectReference</a>;</pre>
@@ -11044,7 +11044,7 @@ specified, default values will be attempted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-volumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13686" >}}">property <b>volumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13676" >}}">property <b>volumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11056,7 +11056,7 @@ unique within a namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-volumeNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13695" >}}">property <b>volumeNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13685" >}}">property <b>volumeNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11072,7 +11072,7 @@ StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageOSVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13702" >}}">interface <b>StorageOSVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13692" >}}">interface <b>StorageOSVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11081,7 +11081,7 @@ Represents a StorageOS persistent volume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageOSVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13707" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13697" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11093,7 +11093,7 @@ Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSVolumeSource-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13713" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13703" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -11105,7 +11105,7 @@ VolumeMounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSVolumeSource-secretRef">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13719" >}}">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13709" >}}">property <b>secretRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
@@ -11117,7 +11117,7 @@ specified, default values will be attempted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSVolumeSource-volumeName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13725" >}}">property <b>volumeName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13715" >}}">property <b>volumeName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11129,7 +11129,7 @@ unique within a namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageOSVolumeSource-volumeNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13734" >}}">property <b>volumeNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13724" >}}">property <b>volumeNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11145,7 +11145,7 @@ StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Sysctl">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13741" >}}">interface <b>Sysctl</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13731" >}}">interface <b>Sysctl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11154,7 +11154,7 @@ Sysctl defines a kernel parameter to be set
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Sysctl-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13745" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13735" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11165,7 +11165,7 @@ Name of a property to set
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Sysctl-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13750" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13740" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11177,7 +11177,7 @@ Value of a property to set
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TCPSocketAction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13757" >}}">interface <b>TCPSocketAction</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13747" >}}">interface <b>TCPSocketAction</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11186,7 +11186,7 @@ TCPSocketAction describes an action based on opening a socket
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TCPSocketAction-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13761" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13751" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11197,7 +11197,7 @@ Optional: Host name to connect to, defaults to the pod IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TCPSocketAction-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13767" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13757" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11210,7 +11210,7 @@ Number or name of the port to access on the container. Number must be in the ran
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Taint">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13775" >}}">interface <b>Taint</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13765" >}}">interface <b>Taint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11220,7 +11220,7 @@ Taint.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Taint-effect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13780" >}}">property <b>effect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13770" >}}">property <b>effect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>effect: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11232,7 +11232,7 @@ NoSchedule, PreferNoSchedule and NoExecute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Taint-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13785" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13775" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11243,7 +11243,7 @@ Required. The taint key to be applied to a node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Taint-timeAdded">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13791" >}}">property <b>timeAdded</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13781" >}}">property <b>timeAdded</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeAdded: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11255,7 +11255,7 @@ NoExecute taints.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Taint-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13796" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13786" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11267,7 +11267,7 @@ Required. The taint value corresponding to the taint key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Toleration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13804" >}}">interface <b>Toleration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13794" >}}">interface <b>Toleration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11277,7 +11277,7 @@ The pod this Toleration is attached to tolerates any taint that matches the trip
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Toleration-effect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13809" >}}">property <b>effect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13799" >}}">property <b>effect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>effect: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11289,7 +11289,7 @@ specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Toleration-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13816" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13806" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11302,7 +11302,7 @@ all keys.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Toleration-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13823" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13813" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11315,7 +11315,7 @@ tolerate all taints of a particular category.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Toleration-tolerationSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13831" >}}">property <b>tolerationSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13821" >}}">property <b>tolerationSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tolerationSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -11329,7 +11329,7 @@ treated as 0 (evict immediately) by the system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Toleration-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13837" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13827" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11342,7 +11342,7 @@ should be empty, otherwise just a regular string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopologySelectorLabelRequirement">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13845" >}}">interface <b>TopologySelectorLabelRequirement</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13835" >}}">interface <b>TopologySelectorLabelRequirement</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11352,7 +11352,7 @@ feature and may change in the future.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopologySelectorLabelRequirement-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13849" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13839" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11363,7 +11363,7 @@ The label key that the selector applies to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopologySelectorLabelRequirement-values">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13855" >}}">property <b>values</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13845" >}}">property <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -11376,7 +11376,7 @@ Values is ORed.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopologySelectorTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13864" >}}">interface <b>TopologySelectorTerm</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13854" >}}">interface <b>TopologySelectorTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11387,7 +11387,7 @@ functionality as NodeSelectorTerm. This is an alpha feature and may change in th
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopologySelectorTerm-matchLabelExpressions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13868" >}}">property <b>matchLabelExpressions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13858" >}}">property <b>matchLabelExpressions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchLabelExpressions: <a href='#TopologySelectorLabelRequirement'>TopologySelectorLabelRequirement</a>[];</pre>
@@ -11399,7 +11399,7 @@ A list of topology selector requirements by labels.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TypedLocalObjectReference">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13876" >}}">interface <b>TypedLocalObjectReference</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13866" >}}">interface <b>TypedLocalObjectReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11409,7 +11409,7 @@ object inside the same namespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TypedLocalObjectReference-apiGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13882" >}}">property <b>apiGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13872" >}}">property <b>apiGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11422,7 +11422,7 @@ required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TypedLocalObjectReference-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13887" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13877" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11433,7 +11433,7 @@ Kind is the type of resource being referenced
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TypedLocalObjectReference-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13892" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13882" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11445,7 +11445,7 @@ Name is the name of resource being referenced
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13899" >}}">interface <b>Volume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13889" >}}">interface <b>Volume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11454,7 +11454,7 @@ Volume represents a named volume in a pod that may be accessed by any container 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Volume-awsElasticBlockStore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13905" >}}">property <b>awsElasticBlockStore</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13895" >}}">property <b>awsElasticBlockStore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsElasticBlockStore: <a href='#AWSElasticBlockStoreVolumeSource'>AWSElasticBlockStoreVolumeSource</a>;</pre>
@@ -11467,7 +11467,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-azureDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13910" >}}">property <b>azureDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13900" >}}">property <b>azureDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>azureDisk: <a href='#AzureDiskVolumeSource'>AzureDiskVolumeSource</a>;</pre>
@@ -11478,7 +11478,7 @@ AzureDisk represents an Azure Data Disk mount on the host and bind mount to the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-azureFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13915" >}}">property <b>azureFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13905" >}}">property <b>azureFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>azureFile: <a href='#AzureFileVolumeSource'>AzureFileVolumeSource</a>;</pre>
@@ -11489,7 +11489,7 @@ AzureFile represents an Azure File Service mount on the host and bind mount to t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-cephfs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13920" >}}">property <b>cephfs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13910" >}}">property <b>cephfs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cephfs: <a href='#CephFSVolumeSource'>CephFSVolumeSource</a>;</pre>
@@ -11500,7 +11500,7 @@ CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-cinder">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13926" >}}">property <b>cinder</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13916" >}}">property <b>cinder</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cinder: <a href='#CinderVolumeSource'>CinderVolumeSource</a>;</pre>
@@ -11512,7 +11512,7 @@ https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-configMap">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13931" >}}">property <b>configMap</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13921" >}}">property <b>configMap</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configMap: <a href='#ConfigMapVolumeSource'>ConfigMapVolumeSource</a>;</pre>
@@ -11523,7 +11523,7 @@ ConfigMap represents a configMap that should populate this volume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-csi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13937" >}}">property <b>csi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13927" >}}">property <b>csi</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>csi: <a href='#CSIVolumeSource'>CSIVolumeSource</a>;</pre>
@@ -11535,7 +11535,7 @@ driver (Alpha feature).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-downwardAPI">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13942" >}}">property <b>downwardAPI</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13932" >}}">property <b>downwardAPI</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>downwardAPI: <a href='#DownwardAPIVolumeSource'>DownwardAPIVolumeSource</a>;</pre>
@@ -11546,7 +11546,7 @@ DownwardAPI represents downward API about the pod that should populate this volu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-emptyDir">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13948" >}}">property <b>emptyDir</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13938" >}}">property <b>emptyDir</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emptyDir: <a href='#EmptyDirVolumeSource'>EmptyDirVolumeSource</a>;</pre>
@@ -11558,7 +11558,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#emptydir
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-fc">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13954" >}}">property <b>fc</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13944" >}}">property <b>fc</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fc: <a href='#FCVolumeSource'>FCVolumeSource</a>;</pre>
@@ -11570,7 +11570,7 @@ then exposed to the pod.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-flexVolume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13960" >}}">property <b>flexVolume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13950" >}}">property <b>flexVolume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>flexVolume: <a href='#FlexVolumeSource'>FlexVolumeSource</a>;</pre>
@@ -11582,7 +11582,7 @@ based plugin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-flocker">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13966" >}}">property <b>flocker</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13956" >}}">property <b>flocker</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>flocker: <a href='#FlockerVolumeSource'>FlockerVolumeSource</a>;</pre>
@@ -11594,7 +11594,7 @@ the Flocker control service being running
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-gcePersistentDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13973" >}}">property <b>gcePersistentDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13963" >}}">property <b>gcePersistentDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gcePersistentDisk: <a href='#GCEPersistentDiskVolumeSource'>GCEPersistentDiskVolumeSource</a>;</pre>
@@ -11607,7 +11607,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-gitRepo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13981" >}}">property <b>gitRepo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13971" >}}">property <b>gitRepo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gitRepo: <a href='#GitRepoVolumeSource'>GitRepoVolumeSource</a>;</pre>
@@ -11621,7 +11621,7 @@ container.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-glusterfs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13987" >}}">property <b>glusterfs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13977" >}}">property <b>glusterfs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>glusterfs: <a href='#GlusterfsVolumeSource'>GlusterfsVolumeSource</a>;</pre>
@@ -11633,7 +11633,7 @@ https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-hostPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13995" >}}">property <b>hostPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13985" >}}">property <b>hostPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostPath: <a href='#HostPathVolumeSource'>HostPathVolumeSource</a>;</pre>
@@ -11647,7 +11647,7 @@ info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-iscsi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14002" >}}">property <b>iscsi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13992" >}}">property <b>iscsi</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iscsi: <a href='#ISCSIVolumeSource'>ISCSIVolumeSource</a>;</pre>
@@ -11660,7 +11660,7 @@ https://releases.k8s.io/HEAD/examples/volumes/iscsi/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14008" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L13998" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11672,7 +11672,7 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-nfs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14014" >}}">property <b>nfs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14004" >}}">property <b>nfs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nfs: <a href='#NFSVolumeSource'>NFSVolumeSource</a>;</pre>
@@ -11684,7 +11684,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#nfs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-persistentVolumeClaim">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14021" >}}">property <b>persistentVolumeClaim</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14011" >}}">property <b>persistentVolumeClaim</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistentVolumeClaim: <a href='#PersistentVolumeClaimVolumeSource'>PersistentVolumeClaimVolumeSource</a>;</pre>
@@ -11697,7 +11697,7 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-photonPersistentDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14027" >}}">property <b>photonPersistentDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14017" >}}">property <b>photonPersistentDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>photonPersistentDisk: <a href='#PhotonPersistentDiskVolumeSource'>PhotonPersistentDiskVolumeSource</a>;</pre>
@@ -11709,7 +11709,7 @@ kubelets host machine
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-portworxVolume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14032" >}}">property <b>portworxVolume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14022" >}}">property <b>portworxVolume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portworxVolume: <a href='#PortworxVolumeSource'>PortworxVolumeSource</a>;</pre>
@@ -11720,7 +11720,7 @@ PortworxVolume represents a portworx volume attached and mounted on kubelets hos
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-projected">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14037" >}}">property <b>projected</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14027" >}}">property <b>projected</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projected: <a href='#ProjectedVolumeSource'>ProjectedVolumeSource</a>;</pre>
@@ -11731,7 +11731,7 @@ Items for all in one resources secrets, configmaps, and downward API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-quobyte">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14042" >}}">property <b>quobyte</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14032" >}}">property <b>quobyte</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>quobyte: <a href='#QuobyteVolumeSource'>QuobyteVolumeSource</a>;</pre>
@@ -11742,7 +11742,7 @@ Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-rbd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14048" >}}">property <b>rbd</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14038" >}}">property <b>rbd</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rbd: <a href='#RBDVolumeSource'>RBDVolumeSource</a>;</pre>
@@ -11754,7 +11754,7 @@ info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-scaleIO">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14053" >}}">property <b>scaleIO</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14043" >}}">property <b>scaleIO</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scaleIO: <a href='#ScaleIOVolumeSource'>ScaleIOVolumeSource</a>;</pre>
@@ -11765,7 +11765,7 @@ ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernete
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-secret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14059" >}}">property <b>secret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14049" >}}">property <b>secret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secret: <a href='#SecretVolumeSource'>SecretVolumeSource</a>;</pre>
@@ -11777,7 +11777,7 @@ https://kubernetes.io/docs/concepts/storage/volumes#secret
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-storageos">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14064" >}}">property <b>storageos</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14054" >}}">property <b>storageos</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageos: <a href='#StorageOSVolumeSource'>StorageOSVolumeSource</a>;</pre>
@@ -11788,7 +11788,7 @@ StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-vsphereVolume">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14069" >}}">property <b>vsphereVolume</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14059" >}}">property <b>vsphereVolume</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vsphereVolume: <a href='#VsphereVirtualDiskVolumeSource'>VsphereVirtualDiskVolumeSource</a>;</pre>
@@ -11800,7 +11800,7 @@ VsphereVolume represents a vSphere volume attached and mounted on kubelets host 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeDevice">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14076" >}}">interface <b>VolumeDevice</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14066" >}}">interface <b>VolumeDevice</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11809,7 +11809,7 @@ volumeDevice describes a mapping of a raw block device within a container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeDevice-devicePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14080" >}}">property <b>devicePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14070" >}}">property <b>devicePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>devicePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11820,7 +11820,7 @@ devicePath is the path inside of the container that the device will be mapped to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeDevice-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14085" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14075" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11832,7 +11832,7 @@ name must match the name of a persistentVolumeClaim in the pod
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeMount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14092" >}}">interface <b>VolumeMount</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14082" >}}">interface <b>VolumeMount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11841,7 +11841,7 @@ VolumeMount describes a mounting of a Volume within a container.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeMount-mountPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14096" >}}">property <b>mountPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14086" >}}">property <b>mountPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mountPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11852,7 +11852,7 @@ Path within the container at which the volume should be mounted.  Must not conta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeMount-mountPropagation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14102" >}}">property <b>mountPropagation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14092" >}}">property <b>mountPropagation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mountPropagation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11864,7 +11864,7 @@ other way around. When not set, MountPropagationNone is used. This field is beta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeMount-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14107" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14097" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11875,7 +11875,7 @@ This must match the Name of a Volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeMount-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14112" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14102" >}}">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -11886,7 +11886,7 @@ Mounted read-only if true, read-write otherwise (false or unspecified). Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeMount-subPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14118" >}}">property <b>subPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14108" >}}">property <b>subPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11898,7 +11898,7 @@ Path within the volume from which the container's volume should be mounted. Defa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeMount-subPathExpr">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14126" >}}">property <b>subPathExpr</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14116" >}}">property <b>subPathExpr</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subPathExpr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -11913,7 +11913,7 @@ are mutually exclusive. This field is beta in 1.15.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeNodeAffinity">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14134" >}}">interface <b>VolumeNodeAffinity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14124" >}}">interface <b>VolumeNodeAffinity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11923,7 +11923,7 @@ from.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeNodeAffinity-required">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14138" >}}">property <b>required</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14128" >}}">property <b>required</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>required: <a href='#NodeSelector'>NodeSelector</a>;</pre>
@@ -11935,7 +11935,7 @@ Required specifies hard node constraints that must be met.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeProjection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14145" >}}">interface <b>VolumeProjection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14135" >}}">interface <b>VolumeProjection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11944,7 +11944,7 @@ Projection that may be projected along with other supported volume types
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeProjection-configMap">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14149" >}}">property <b>configMap</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14139" >}}">property <b>configMap</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configMap: <a href='#ConfigMapProjection'>ConfigMapProjection</a>;</pre>
@@ -11955,7 +11955,7 @@ information about the configMap data to project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeProjection-downwardAPI">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14154" >}}">property <b>downwardAPI</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14144" >}}">property <b>downwardAPI</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>downwardAPI: <a href='#DownwardAPIProjection'>DownwardAPIProjection</a>;</pre>
@@ -11966,7 +11966,7 @@ information about the downwardAPI data to project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeProjection-secret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14159" >}}">property <b>secret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14149" >}}">property <b>secret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secret: <a href='#SecretProjection'>SecretProjection</a>;</pre>
@@ -11977,7 +11977,7 @@ information about the secret data to project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeProjection-serviceAccountToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14164" >}}">property <b>serviceAccountToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14154" >}}">property <b>serviceAccountToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccountToken: <a href='#ServiceAccountTokenProjection'>ServiceAccountTokenProjection</a>;</pre>
@@ -11989,7 +11989,7 @@ information about the serviceAccountToken data to project
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VsphereVirtualDiskVolumeSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14171" >}}">interface <b>VsphereVirtualDiskVolumeSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14161" >}}">interface <b>VsphereVirtualDiskVolumeSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11998,7 +11998,7 @@ Represents a vSphere volume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14176" >}}">property <b>fsType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14166" >}}">property <b>fsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -12010,7 +12010,7 @@ Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-storagePolicyID">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14181" >}}">property <b>storagePolicyID</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14171" >}}">property <b>storagePolicyID</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storagePolicyID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -12021,7 +12021,7 @@ Storage Policy Based Management (SPBM) profile ID associated with the StoragePol
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-storagePolicyName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14186" >}}">property <b>storagePolicyName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14176" >}}">property <b>storagePolicyName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storagePolicyName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -12032,7 +12032,7 @@ Storage Policy Based Management (SPBM) profile name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-volumePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14191" >}}">property <b>volumePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14181" >}}">property <b>volumePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -12044,7 +12044,7 @@ Path that identifies vSphere volume vmdk
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WeightedPodAffinityTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14199" >}}">interface <b>WeightedPodAffinityTerm</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14189" >}}">interface <b>WeightedPodAffinityTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -12054,7 +12054,7 @@ the most preferred node(s)
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WeightedPodAffinityTerm-podAffinityTerm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14203" >}}">property <b>podAffinityTerm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14193" >}}">property <b>podAffinityTerm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>podAffinityTerm: <a href='#PodAffinityTerm'>PodAffinityTerm</a>;</pre>
@@ -12065,7 +12065,7 @@ Required. A pod affinity term, associated with the corresponding weight.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WeightedPodAffinityTerm-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14208" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14198" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -12077,7 +12077,7 @@ weight associated with matching the corresponding podAffinityTerm, in the range 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WindowsSecurityContextOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14215" >}}">interface <b>WindowsSecurityContextOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14205" >}}">interface <b>WindowsSecurityContextOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -12086,7 +12086,7 @@ WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WindowsSecurityContextOptions-gmsaCredentialSpec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14222" >}}">property <b>gmsaCredentialSpec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14212" >}}">property <b>gmsaCredentialSpec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gmsaCredentialSpec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -12100,7 +12100,7 @@ only honored by servers that enable the WindowsGMSA feature flag.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WindowsSecurityContextOptions-gmsaCredentialSpecName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14228" >}}">property <b>gmsaCredentialSpecName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="types/output.ts#L14218" >}}">property <b>gmsaCredentialSpecName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gmsaCredentialSpecName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
