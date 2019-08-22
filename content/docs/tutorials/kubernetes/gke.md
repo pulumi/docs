@@ -1,5 +1,7 @@
 ---
 title: "Clusters: GKE - Hello World!"
+
+aliases: ["/docs/reference/tutorials/kubernetes/gke/"]
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on GCP. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.
@@ -389,7 +391,7 @@ In this tutorial, we saw how to use Pulumi programs to create and launch a
 Managed Kubernetes cluster on GCP GKE.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "../kubernetes/tutorial-configmap-rollout.md" >}}).
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "configmap-rollout" >}}).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).

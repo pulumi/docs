@@ -162,7 +162,7 @@ k8s_cluster = Cluster('gke-cluster',
 ```
 
 Learn more about using Pulumi with Kubernetes and GKE in this
-[Hello GKE]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}) tutorial.
+[Hello GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}) tutorial.
 
 ## Super Simple Serverless with Google Cloud Functions
 
@@ -266,7 +266,7 @@ Here are a few resources to learn more about working with Pulumi and
 GCP:
 
 - [Google Cloud Platform Getting Started Guide]({{< ref "/docs/get-started/gcp" >}})
-- [GKE Tutorial]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}})
+- [GKE Tutorial]({{< ref "/docs/tutorials/kubernetes/gke" >}})
 - [GCE Tutorial]({{< ref "/docs/tutorials/gcp/gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)

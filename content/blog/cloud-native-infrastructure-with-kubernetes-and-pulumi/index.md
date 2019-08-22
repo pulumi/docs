@@ -127,14 +127,14 @@ entry for using Kubernetes with real components and reuse.
 We can't wait to hear what you think. To learn more or give it a try,
 please check out these resources:
 
-- [EKS Quickstart]({{< ref "/docs/tutorials/kubernetes/tutorial-eks" >}})
-- [GKE Quickstart]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}})
-- [AKS Quickstart]({{< ref "/docs/tutorials/kubernetes/tutorial-aks" >}})
+- [EKS Quickstart]({{< ref "/docs/tutorials/kubernetes/eks" >}})
+- [GKE Quickstart]({{< ref "/docs/tutorials/kubernetes/gke" >}})
+- [AKS Quickstart]({{< ref "/docs/tutorials/kubernetes/aks" >}})
 
 These two tutorials will walk you through your first Pulumi for Kubernetes project:
 
--   [Tutorial: Deploy a Stateless Nginx Application]({{< ref "/docs/tutorials/kubernetes/tutorial-stateless-app" >}})
--   [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< ref "/docs/tutorials/kubernetes/tutorial-guestbook" >}})
+-   [Tutorial: Deploy a Stateless Nginx Application]({{< ref "/docs/tutorials/kubernetes/stateless-app" >}})
+-   [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< ref "/docs/tutorials/kubernetes/guestbook" >}})
 
 [Program Kubernetes with 11 Pearls]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}):
 a companion blog post with 11 exciting examples.

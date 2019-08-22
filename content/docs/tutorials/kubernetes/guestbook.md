@@ -1,5 +1,7 @@
 ---
 title: "#3: Guestbook App with Redis and Nginx"
+
+aliases: ["/docs/reference/tutorials/kubernetes/guestbook/"]
 ---
 
 In this tutorial, we'll build and deploy

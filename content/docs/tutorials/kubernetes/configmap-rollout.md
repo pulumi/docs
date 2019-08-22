@@ -1,5 +1,7 @@
 ---
 title: "#4: Graceful App Rollout"
+
+aliases: ["/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/"]
 ---
 
 This tutorial shows you how to use Pulumi to write and manage a Kubernetes application through it's

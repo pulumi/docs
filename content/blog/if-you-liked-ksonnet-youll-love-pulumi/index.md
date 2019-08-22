@@ -140,10 +140,10 @@ resources to check out:
 
 - [Overview of Pulumi Kubernetes Scenarios]({{< ref "/kubernetes" >}})
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/tutorial-eks" >}}),
-  [Google GKE]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}), or
+  [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/eks" >}}),
+  [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/tutorials/kubernetes/tutorial-exposed-deployment" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/tutorials/kubernetes/exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
   [overview of the programming model]({{< ref "/docs/intro/concepts/programming-model" >}})
 - Video: In February, we were honored to have Joe Beda

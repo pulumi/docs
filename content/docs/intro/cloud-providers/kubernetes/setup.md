@@ -5,9 +5,9 @@ title: Setup
 <!-- LINKS -->
 [pulumi-kubernetes-provider]: {{< relref "./" >}}
 [client-go]: https://github.com/kubernetes/client-go
-[gke-tutorial]: {{< relref "/docs/tutorials/kubernetes/tutorial-gke.md" >}}
-[eks-tutorial]: {{< relref "/docs/tutorials/kubernetes/tutorial-eks.md" >}}
-[aks-tutorial]: {{< relref "/docs/tutorials/kubernetes/tutorial-aks.md" >}}
+[gke-tutorial]: {{< relref "/docs/tutorials/kubernetes/gke" >}}
+[eks-tutorial]: {{< relref "/docs/tutorials/kubernetes/eks" >}}
+[aks-tutorial]: {{< relref "/docs/tutorials/kubernetes/aks" >}}
 [Heptio AWS quickstart]: https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/
 [provider-args]: {{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes#ProviderArgs" >}}
 [provider-kubeconfig]: {{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes#ProviderArgs-kubeconfig" >}}

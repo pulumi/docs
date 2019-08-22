@@ -1,5 +1,7 @@
 ---
 title: "Clusters: AKS - Hello World!"
+
+aliases: ["/docs/reference/tutorials/kubernetes/tutorial-aks/"]
 ---
 
 In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Service (AKS). You can find this code on the in the [examples repo](https://github.com/pulumi/examples/tree/master/azure-py-aks).
@@ -359,7 +361,7 @@ Before moving on, let's tear down the resources that are part of our stack.
 In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using Python and pypi packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "../kubernetes/tutorial-configmap-rollout.md" >}}).
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "configmap-rollout" >}}).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).

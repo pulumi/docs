@@ -123,8 +123,8 @@ compute, and storage.
 [Kubernetes](https://kubernetes.io) is an open standard for running
 containers across a variety of public and private cloud environments.
 Most public cloud vendors now offer an EKS-like managed offering,
-including [Azure (AKS)]({{< ref "/docs/tutorials/kubernetes/tutorial-aks" >}}),
-[Google Cloud (GKE)]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}),
+including [Azure (AKS)]({{< ref "/docs/tutorials/kubernetes/aks" >}}),
+[Google Cloud (GKE)]({{< ref "/docs/tutorials/kubernetes/gke" >}}),
 and [Digital Ocean]({{< ref "/docs/reference/pkg/nodejs/pulumi/digitalocean#KubernetesCluster" >}}),
 and the availability of on-premises private cloud configurations enables
 hybrid cloud for large organizations. Kubernetes in inherently more

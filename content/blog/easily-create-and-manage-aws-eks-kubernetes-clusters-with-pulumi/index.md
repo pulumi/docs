@@ -191,7 +191,7 @@ sizes.
 We've seen how Pulumi takes care of the heavy lifting with AWS EKS so
 you don't have to. You can use Pulumi to easily deploy new clusters,
 managed AWS resources, and then deploy Kubernetes apps to it. Support is
-also available for Azure AKS, [Google GKE]({{< ref "/docs/tutorials/kubernetes/tutorial-gke" >}}),
+also available for Azure AKS, [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}),
 and custom clusters (including Minikube), using the same workflow and approach.
 
 For more information:
