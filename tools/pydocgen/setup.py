@@ -18,7 +18,7 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=[
         "sphinx>=1.8.3",
-        "Jinja2>=2.10",
+        "Jinja2>=2.10.1",
         "m2r>=0.2.1"
     ],
     entry_points={
