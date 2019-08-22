@@ -1,11 +1,9 @@
 ---
-title: Changelog
+title: Available Versions
 no_on_this_page: true
 
 aliases: ["/docs/reference/changelog/"]
 ---
-
-## Available Pulumi versions {#all-versions}
 
 The current stable version of Pulumi is **{{< latest-version >}}**.
 

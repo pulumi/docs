@@ -11,7 +11,7 @@ aliases: ["/docs/reference/install/"]
 <!--
 NOTE: To update this page with a new binary release, do the following:
 - Update `static/latest-version`
-- Update `content/docs/get-started/install/changelog.md`
+- Update `content/docs/get-started/install/versions.md`
 -->
 
 This page contains detailed instructions for [installing Pulumi](#install-pulumi) on your machine.
@@ -128,7 +128,7 @@ The installer script can be rerun to subsequently install new updates.
 
 If you do not wish to use the previous options, you can install Pulumi manually.
 
-1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/get-started/install/changelog" >}}) page.
+1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
 
 2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
@@ -154,7 +154,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 
 Alternatively, you can install Pulumi manually. We provide a prebuilt binary for Linux.
 
-1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/get-started/install/changelog" >}}) page.
+1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
 
 2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
@@ -180,7 +180,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 
 Alternatively, you can install Pulumi manually.
 
-1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Changelog]({{< relref "/docs/get-started/install/changelog" >}}) page.
+1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
 
 2. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
 
