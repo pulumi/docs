@@ -38,10 +38,6 @@
         {{ if eq $page.RelPermalink .URL }}
             {{ $toggle_state = "toggleVisible" }}
             {{ $sidenav_selected = "active" }}
-        {{ else if $page.Params.expanded_url }}
-            {{ if eq $page.Params.expanded_url .URL }}
-                {{ $toggle_state = "toggleVisible" }}
-            {{ end }}
         {{ else if hasPrefix $page.RelPermalink .URL }}
             {{ $toggle_state = "toggleVisible" }}
         {{ end }}
