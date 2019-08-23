@@ -4,6 +4,8 @@ menu:
   intro:
     parent: languages
     weight: 1
+
+aliases: ["/docs/reference/javascript/"]
 ---
 
 Pulumi supports JavaScript programs running on Node.js version 8 and later.

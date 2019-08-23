@@ -4,6 +4,8 @@ menu:
   intro:
     identifier: languages
     weight: 4
+
+aliases: ["/docs/reference/languages/"]
 ---
 
 {{< get-started-note >}}

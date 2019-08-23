@@ -4,6 +4,8 @@ menu:
   intro:
     parent: languages
     weight: 2
+
+aliases: ["/docs/reference/python/"]
 ---
 
 Pulumi supports programs written in Python 3.
