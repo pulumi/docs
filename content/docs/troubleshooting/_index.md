@@ -3,6 +3,8 @@ title: Troubleshooting
 menu:
   troubleshooting:
     weight: 1
+
+aliases: ["/docs/reference/troubleshooting/"]
 ---
 
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.

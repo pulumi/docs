@@ -3,6 +3,8 @@ title: "FAQ"
 menu:
   troubleshooting:
     weight: 2
+
+aliases: ["/docs/reference/faq/"]
 ---
 
 ## Why do resource names have random hex character suffixes?
