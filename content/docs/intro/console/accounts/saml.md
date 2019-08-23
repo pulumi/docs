@@ -100,7 +100,7 @@ Here's a sample metadata XML (note that some values were removed for brevity):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="....">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="...">
   <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <md:KeyDescriptor use="signing">
       ....
@@ -110,8 +110,8 @@ Here's a sample metadata XML (note that some values were removed for brevity):
         If the elements in your XML don't have the prefix, then you may skip that.
     -->
     <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
-    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="...."/>
-    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="...."/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="..."/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="..."/>
   </md:IDPSSODescriptor>
 </md:EntityDescriptor>
 ```
@@ -123,3 +123,15 @@ If your IdP does not support emailAddress Name ID Format identifier, but support
 ### The IdP signing certificate expired and I can't login to Pulumi anymore
 
 Please [contact us](https://www.pulumi.com/about/#contact-us) for assistance with getting the IdP metadata XML updated.
+
+### An SSO binding was not found in the XML. Please contact your SSO provider.
+
+This error occurs when the metadata XML you are trying to save does not have any `<SingleSignOnService>` elements under the `<IDPSSODescriptor>`. The `<SingleSignOnService>` is used by the Pulumi Console to determine the authentication mechanism supported by the IDP. [Learn more](https://en.wikipedia.org/wiki/SAML_2.0#SAML_2.0_Bindings) about SAML 2.0 bindings. You must contact your IdP support or your system admin to fix the metadata XML.
+
+Here's an example of an SSO binding for `HTTP-POST`:
+
+```xml
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="..."/>
+```
+
+**Note** that the `Location` attribute is unique to each tenant in your IDP.
