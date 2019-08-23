@@ -3,7 +3,6 @@ title: "AWS"
 menu:
   userguides:
     parent: tutorials
-    weight: 1
 
 aliases: ["/docs/reference/tutorials/aws/"]
 ---

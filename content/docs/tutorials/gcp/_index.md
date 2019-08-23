@@ -3,7 +3,6 @@ title: "Google Cloud"
 menu:
   userguides:
     parent: tutorials
-    weight: 3
 
 aliases: ["/docs/reference/tutorials/gcp/"]
 ---

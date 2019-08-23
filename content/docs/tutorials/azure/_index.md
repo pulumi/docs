@@ -3,7 +3,6 @@ title: "Azure"
 menu:
   userguides:
     parent: tutorials
-    weight: 2
 
 aliases: ["/docs/reference/tutorials/azure/"]
 ---

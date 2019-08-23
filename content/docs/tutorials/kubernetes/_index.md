@@ -3,7 +3,6 @@ title: "Kubernetes"
 menu:
   userguides:
     parent: tutorials
-    weight: 4
 
 aliases: ["/docs/reference/tutorials/kubernetes/"]
 ---

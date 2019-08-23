@@ -3,7 +3,6 @@ title: Tutorials
 menu:
   userguides:
     identifier: tutorials
-    weight: 2
 
 aliases: ["/docs/reference/tutorials/"]
 ---

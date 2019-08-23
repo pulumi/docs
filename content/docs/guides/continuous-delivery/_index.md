@@ -5,7 +5,6 @@ menu:
     userguides:
         parent: guides
         identifier: cont_delivery
-        weight: 1
 
 aliases:
 - /docs/reference/cd/
