@@ -53,7 +53,7 @@ To get more information about AccessLevel, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels)
 * How-to Guides
-    * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/get-started)
+    * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
 
 ## Example Usage - Access Context Manager Access Level Basic
 
@@ -239,7 +239,7 @@ To get more information about AccessPolicy, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies)
 * How-to Guides
-    * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/get-started)
+    * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
 
 ## Example Usage - Access Context Manager Access Policy Basic
 
