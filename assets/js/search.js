@@ -88,7 +88,9 @@
         {
             name: "Tutorials",
             predicate: function (url) {
-                return url.startsWith("/docs/get-started/") || url.startsWith("/docs/tutorials/");
+                return url.startsWith("/docs/get-started/") ||
+                    url.startsWith("/docs/tutorials/") ||
+                    url.startsWith("/docs/guides/");
             }
         },
         {
