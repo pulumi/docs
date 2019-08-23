@@ -5,7 +5,7 @@ menu:
     parent: tutorials
     weight: 3
 
-aliasse: ["/docs/reference/tutorials/gcp/"]
+aliases: ["/docs/reference/tutorials/gcp/"]
 ---
 
 {{< get-started-note >}}
