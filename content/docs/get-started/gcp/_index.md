@@ -6,6 +6,8 @@ menu:
   getstarted:
     identifier: gcp
     weight: 2
+
+aliases: ["/docs/quickstart/gcp/"]
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on Google Cloud with Pulumi.

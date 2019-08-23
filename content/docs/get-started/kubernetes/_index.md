@@ -6,6 +6,8 @@ menu:
   getstarted:
     identifier: kubernetes
     weight: 2
+
+aliases: ["/docs/quickstart/kubernetes/"]
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on Kubernetes with Pulumi.

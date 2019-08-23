@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-next-steps
+
+aliases: ["/docs/quickstart/gcp/next-steps/"]
 ---
 
 We've seen how to quickly get started using Google Cloud with Pulumi.

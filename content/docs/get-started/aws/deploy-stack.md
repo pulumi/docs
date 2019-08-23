@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-deploy-stack
+
+aliases: ["/docs/quickstart/aws/deploy-stack/"]
 ---
 
 Let's go ahead and deploy the stack:

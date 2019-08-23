@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-deploy-changes
+
+aliases: ["/docs/quickstart/kubernetes/deploy-changes/"]
 ---
 
 Now let's deploy our changes.

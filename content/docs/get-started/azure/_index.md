@@ -6,6 +6,8 @@ menu:
   getstarted:
     identifier: azure
     weight: 2
+
+aliases: ["/docs/quickstart/azure/"]
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on Azure with Pulumi.

@@ -6,6 +6,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-install-language-runtime
+
+aliases: ["/docs/quickstart/aws/install-language-runtime/"]
 ---
 
 ## Choose Your Language

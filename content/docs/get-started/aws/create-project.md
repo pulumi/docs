@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-create-project
+
+aliases: ["/docs/quickstart/aws/create-project/"]
 ---
 
 Let's get started with a new project in a new directory.

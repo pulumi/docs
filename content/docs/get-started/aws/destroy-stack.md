@@ -5,6 +5,8 @@ menu:
   quickstart:
     parent: aws
     identifier: aws-destroy-stack
+
+aliases: ["/docs/quickstart/aws/destroy-stack/"]
 ---
 
 Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.

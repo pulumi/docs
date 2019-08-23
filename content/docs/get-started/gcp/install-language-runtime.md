@@ -6,6 +6,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-install-language-runtime
+
+aliases: ["/docs/quickstart/gcp/install-language-runtime/"]
 ---
 
 ## Choose Your Language

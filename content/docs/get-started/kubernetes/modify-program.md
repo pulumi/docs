@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-modify-program
+
+aliases: ["/docs/quickstart/kubernetes/modify-program/"]
 ---
 
 Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.

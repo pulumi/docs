@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-configure
+
+aliases: ["/docs/quickstart/kubernetes/configure/"]
 ---
 
 <!-- TODO inline a streamlined version of configuring the cloud here. -->

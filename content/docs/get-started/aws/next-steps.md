@@ -6,6 +6,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-next-steps
+
+aliases: ["/docs/quickstart/aws/next-steps/"]
 ---
 
 We've seen how to quickly get started using AWS with Pulumi.

@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-configure
+
+aliases: ["/docs/quickstart/azure/configure/"]
 ---
 
 <!-- TODO inline a streamlined version of configuring the cloud here. -->

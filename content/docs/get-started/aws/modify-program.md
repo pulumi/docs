@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-modify-program
+
+aliases: ["/docs/quickstart/aws/modify-program/"]
 ---
 
 Now that we have an instance of our Pulumi program deployed, let's enable encryption on our S3 bucket.

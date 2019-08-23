@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-modify-program
+
+aliases: ["/docs/quickstart/azure/modify-program/"]
 ---
 
 Now that we have an instance of our Pulumi program deployed, let's enforce HTTPS-only communication for our storage account. This means, when making requests to this storage account only HTTPS traffic is allowed.

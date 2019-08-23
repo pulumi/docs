@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-deploy-changes
+
+aliases: ["/docs/quickstart/gcp/deploy-changes/"]
 ---
 
 Now let's deploy our changes.

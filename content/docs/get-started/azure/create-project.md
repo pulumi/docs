@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-create-project
+
+aliases: ["/docs/quickstart/azure/create-project/"]
 ---
 
 Let's get started with a new project in a new directory.

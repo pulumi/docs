@@ -5,6 +5,8 @@ menu:
   getstarted:
       name: Overview
       weight: 1
+
+aliases: ["/docs/quickstart/"]
 ---
 
 <div class="flex max-w-2xl">

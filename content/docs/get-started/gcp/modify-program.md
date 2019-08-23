@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-modify-program
+
+aliases: ["/docs/quickstart/gcp/modify-program/"]
 ---
 
 Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.

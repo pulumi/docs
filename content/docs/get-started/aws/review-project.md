@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-review-project
+
+aliases: ["/docs/quickstart/aws/review-project/"]
 ---
 
 Let's review some of the generated project files:

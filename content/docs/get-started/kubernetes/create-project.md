@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-create-project
+
+aliases: ["/docs/quickstart/kubernetes/create-project/"]
 ---
 
 Let's get started with a new project in a new directory.

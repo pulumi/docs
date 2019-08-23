@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-configure
+
+aliases: ["/docs/quickstart/aws/configure/"]
 ---
 
 <!-- TODO inline a streamlined version of configuring the cloud here. -->

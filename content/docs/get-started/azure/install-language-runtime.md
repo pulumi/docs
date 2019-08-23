@@ -6,6 +6,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-install-language-runtime
+
+aliases: ["/docs/quickstart/azure/install-language-runtime/"]
 ---
 
 ## Choose Your Language

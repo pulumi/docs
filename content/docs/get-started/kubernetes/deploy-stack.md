@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-deploy-stack
+
+aliases: ["/docs/quickstart/kubernetes/deploy-stack/"]
 ---
 
 Let's go ahead and deploy the stack:

@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-destroy-stack
+
+aliases: ["/docs/quickstart/azure/destroy-stack/"]
 ---
 
 Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.

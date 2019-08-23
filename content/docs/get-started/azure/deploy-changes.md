@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-deploy-changes
+
+aliases: ["/docs/quickstart/azure/deploy-changes/"]
 ---
 
 Now let's deploy our changes.

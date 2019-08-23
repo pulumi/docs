@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-next-steps
+
+aliases: ["/docs/quickstart/kubernetes/next-steps/"]
 ---
 
 We've seen how to quickly get started using Kubernetes with Pulumi.

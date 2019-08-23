@@ -6,6 +6,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-install-language-runtime
+
+aliases: ["/docs/quickstart/kubernetes/install-language-runtime/"]
 ---
 
 ## Choose Your Language

@@ -5,6 +5,8 @@ menu:
   get-started:
     parent: gcp
     identifier: gcp-deploy-stack
+
+aliases: ["/docs/quickstart/gcp/deploy-stack/"]
 ---
 
 Let's go ahead and deploy the stack:

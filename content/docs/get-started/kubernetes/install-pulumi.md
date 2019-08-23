@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: kubernetes
     identifier: kubernetes-install-pulumi
+
+aliases: ["/docs/quickstart/kubernetes/install-pulumi/"]
 ---
 
 {{< install-pulumi >}}

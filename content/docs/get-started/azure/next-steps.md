@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-next-steps
+
+aliases: ["/docs/quickstart/azure/next-steps/"]
 ---
 
 We've seen how to quickly get started using Azure with Pulumi.

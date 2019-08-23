@@ -6,6 +6,8 @@ menu:
   getstarted:
     identifier: aws
     weight: 2
+
+aliases: ["/docs/quickstart/aws/"]
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on AWS with Pulumi.

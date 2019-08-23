@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-create-project
+
+aliases: ["/docs/quickstart/gcp/create-project/"]
 ---
 
 Let's get started with a new project in a new directory.

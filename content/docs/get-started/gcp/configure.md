@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-configure
+
+aliases: ["/docs/quickstart/gcp/configure/"]
 ---
 
 <!-- TODO inline a streamlined version of configuring the cloud here. -->

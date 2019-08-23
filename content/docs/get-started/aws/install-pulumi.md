@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: aws
     identifier: aws-install-pulumi
+
+aliases: ["/docs/quickstart/aws/install-pulumi/"]
 ---
 
 {{< install-pulumi >}}

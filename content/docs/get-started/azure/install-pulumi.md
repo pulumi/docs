@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: azure
     identifier: azure-install-pulumi
+
+aliases: ["/docs/quickstart/azure/install-pulumi/"]
 ---
 
 {{< install-pulumi >}}

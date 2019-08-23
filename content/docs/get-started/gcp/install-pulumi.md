@@ -5,6 +5,8 @@ menu:
   getstarted:
     parent: gcp
     identifier: gcp-install-pulumi
+
+aliases: ["/docs/quickstart/gcp/install-pulumi/"]
 ---
 
 {{< install-pulumi >}}
