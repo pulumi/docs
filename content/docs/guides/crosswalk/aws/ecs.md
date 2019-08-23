@@ -1,5 +1,12 @@
 ---
 title: "AWS Elastic Container Service (ECS)"
+linktitle: Elastic Container Service (ECS)
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 5
+
+aliases: ["/docs/reference/crosswalk/aws/ecs/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

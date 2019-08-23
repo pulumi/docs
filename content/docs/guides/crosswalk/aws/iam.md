@@ -1,5 +1,12 @@
 ---
 title: "AWS Identity and Access Management (IAM)"
+linktitle: Identity and Access Management (IAM)
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 8
+
+aliases: ["/docs/reference/crosswalk/aws/iam/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

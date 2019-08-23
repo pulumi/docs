@@ -1,5 +1,11 @@
 ---
 title: "Other AWS Services"
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 11
+
+aliases: ["/docs/reference/crosswalk/aws/other/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

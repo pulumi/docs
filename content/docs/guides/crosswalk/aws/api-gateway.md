@@ -1,6 +1,12 @@
 ---
 title: "AWS API Gateway"
+linktitle: API Gateway
 menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 1
+
+aliases: ["/docs/reference/crosswalk/aws/api-gateway/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

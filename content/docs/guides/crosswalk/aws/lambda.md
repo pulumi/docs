@@ -1,5 +1,12 @@
 ---
 title: "AWS Lambda and Serverless Events"
+linktitle: Lambda
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 9
+
+aliases: ["/docs/reference/crosswalk/aws/lambda/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

@@ -1,5 +1,12 @@
 ---
 title: "AWS CloudWatch Logs, Metrics, Alarms, and Dashboards"
+linktitle: CloudWatch
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 3
+
+aliases: ["/docs/reference/crosswalk/aws/cloudwatch/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

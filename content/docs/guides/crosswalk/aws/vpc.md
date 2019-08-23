@@ -1,5 +1,12 @@
 ---
 title: "AWS Virtual Private Cloud (VPC)"
+linktitle: Virtual Private Cloud (VPC)
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 10
+
+aliases: ["/docs/reference/crosswalk/aws/vpc/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

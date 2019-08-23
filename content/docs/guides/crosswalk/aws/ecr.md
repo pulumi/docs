@@ -1,5 +1,12 @@
 ---
 title: "AWS Elastic Container Registry (ECR)"
+linktitle: Elastic Container Registry (ECR)
+menu:
+  userguides:
+    parent: crosswalk-aws
+    weight: 4
+
+aliases: ["/docs/reference/crosswalk/aws/ecr/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

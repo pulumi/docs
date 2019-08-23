@@ -1,5 +1,12 @@
 ---
 title: "Pulumi Crosswalk for AWS"
+linktitle: Crosswalk for AWS
+menu:
+  userguides:
+    parent: guides
+    identifier: crosswalk-aws
+
+aliases: ["/docs/reference/crosswalk/aws/"]
 ---
 
 <a href="{{< relref "_index.md" >}}">

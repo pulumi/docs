@@ -115,4 +115,4 @@ demo this post in an episode of the [Kubernetes Community Meeting](https://kuber
 [levi-blackstone]: {{< relref "/authors/levi-blackstone" >}}
 [pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
 [client-go]: https://github.com/kubernetes/client-go
-[crosswalk-aws]: {{< relref "/docs/intro/cloud-providers/aws/crosswalk" >}}
+[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}

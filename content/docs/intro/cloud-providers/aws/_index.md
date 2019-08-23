@@ -44,7 +44,7 @@ In addition to the tutorials, several interesting examples are available complet
 
 ## Introducing Pulumi Crosswalk for AWS
 
-<a href="{{< relref "/docs/intro/cloud-providers/aws/crosswalk" >}}">
+<a href="{{< relref "/docs/guides/crosswalk/aws" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" width="150" align="right" style="margin-left: 16px">
 </a>
 
@@ -52,7 +52,7 @@ Use Pulumi Crosswalk for AWS to easily use the best of what AWS has to offer, wi
 well-architected best practices, for the entire AWS cloud. Go to production
 with containers, Kubernetes, and serverless applications.
 
-<a href="{{< relref "/docs/intro/cloud-providers/aws/crosswalk" >}}">Get Started with Crosswalk for AWS Now</a>
+<a href="{{< relref "/docs/guides/crosswalk/aws" >}}">Get Started with Crosswalk for AWS Now</a>
 
 ## Example
 

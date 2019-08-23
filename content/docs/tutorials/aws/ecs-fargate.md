@@ -6,7 +6,7 @@ aliases: ["/docs/reference/tutorials/aws/tutorial-service/"]
 
 In this tutorial, we'll build and publish a Docker container image to a private Elastic Container Registry (ECR), and
 spin up a load balanced Amazon Elastic Container Service (ECS) "Fargate" service, all in a handful of lines of code,
-using [Pulumi Crosswalk for AWS]({{< relref "/docs/intro/cloud-providers/aws/crosswalk/_index.md" >}}).
+using [Pulumi Crosswalk for AWS]({{< relref "/docs/guides/crosswalk/aws" >}}).
 
 ## Prerequisites
 
@@ -148,8 +148,8 @@ To get started, we will create a project, initialize it, then run `pulumi up`:
 
 For more information about containerized applications on AWS, please read these User Guides:
 
-* [Pulumi Crosswalk for AWS Elastic Container Service (ECS)]({{< relref "/docs/intro/cloud-providers/aws/crosswalk/ecs.md" >}})
-* [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/intro/cloud-providers/aws/crosswalk/eks.md" >}})
+* [Pulumi Crosswalk for AWS Elastic Container Service (ECS)]({{< relref "/docs/guides/crosswalk/aws/ecs" >}})
+* [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}})
 
 For an end-to-end application also includes serverless functions, see the
 [Serverless plus Containers Thumbnailer tutorial]({{< relref "video-thumbnailer" >}}).
