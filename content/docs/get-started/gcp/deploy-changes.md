@@ -20,17 +20,16 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 ```
 Previewing update (dev):
 
-     Type                     Name            Plan
-     pulumi:pulumi:Stack      quickstart-dev
- +   ├─ gcp:compute:Network   network         create
- +   ├─ gcp:compute:Firewall  firewall        create
- +   ├─ gcp:compute:Instance  instance        create
- -   └─ gcp:storage:Bucket    my-bucket       delete
+     Type                   Name            Plan       Info
+     pulumi:pulumi:Stack    gcp-bucket-dev
+ +   ├─ gcp:kms:KeyRing     my-keyring      create
+ +   ├─ gcp:kms:CryptoKey   my-cryptokey    create
+ ~   └─ gcp:storage:Bucket  my-bucket       update     [diff: +encryption]
 
 Resources:
-    + 3 to create
-    - 1 to delete
-    2 changes. 1 unchanged
+    + 2 to create
+    ~ 1 to update
+    3 changes. 1 unchanged
 
 Do you want to perform this update?
   yes
@@ -38,7 +37,7 @@ Do you want to perform this update?
   details
 ```
 
-Pulumi will delete the bucket since we're no longer defining it in our program, and it will create the network, firewall, and compute instance resources since those are now defined in the program.
+Pulumi will create two new resources, and then update the previously created bucket with the new encryption settings we defined.
 
 Choosing `yes` will proceed with the update.
 
@@ -46,30 +45,21 @@ Choosing `yes` will proceed with the update.
 Do you want to perform this update? yes
 Updating (dev):
 
-     Type                     Name            Status
-     pulumi:pulumi:Stack      quickstart-dev
- +   ├─ gcp:compute:Network   network         created
- +   ├─ gcp:compute:Firewall  firewall        created
- +   ├─ gcp:compute:Instance  instance        created
- -   └─ gcp:storage:Bucket    my-bucket       deleted
+     Type                   Name            Status      Info
+     pulumi:pulumi:Stack    gcp-bucket-dev
+ +   ├─ gcp:kms:KeyRing     my-keyring      created
+ +   ├─ gcp:kms:CryptoKey   my-cryptokey    created
+ ~   └─ gcp:storage:Bucket  my-bucket       updated     [diff: +encryption]
 
 Outputs:
-  - bucketName: "gs://my-bucket-62f8bc7"
-  + ip        : "35.222.165.202"
+    bucketName: "gs://my-bucket-6cea6b4"
 
 Resources:
-    + 3 created
-    - 1 deleted
-    2 changes. 1 unchanged
+    + 2 created
+    ~ 1 updated
+    3 changes. 1 unchanged
 
-Duration: 1m48s
-```
-
-We can use `pulumi stack output` to get the value of [stack outputs]({{< relref "/docs/intro/concepts/stack.md#outputs" >}}) from the CLI. So we can `curl` the endpoint to see the HTTP server running there.
-
-```bash
-$ curl $(pulumi stack output ip)
-Hello, World!
+Duration: 4s
 ```
 
 Next, we'll destroy the stack.
