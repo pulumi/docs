@@ -5,6 +5,8 @@ menu:
   intro:
     parent: vs
     weight: 7
+
+aliases: ["/docs/reference/vs/custom/"]
 ---
 
 Many organizations start out by manually managing their infrastructure. This often begins by pointing and clicking in

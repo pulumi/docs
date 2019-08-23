@@ -5,6 +5,8 @@ menu:
   intro:
     parent: vs
     weight: 1
+
+aliases: ["/docs/reference/vs/terraform/"]
 ---
 
 Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. Unlike

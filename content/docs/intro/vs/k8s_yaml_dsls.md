@@ -5,6 +5,8 @@ menu:
   intro:
     parent: vs
     weight: 5
+
+aliases: ["/docs/reference/vs/k8s_yaml_dsls/"]
 ---
 
 Kubernetes offers YAML configuration out of the box. This is great as an "assembly language" for configuring

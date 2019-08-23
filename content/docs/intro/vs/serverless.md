@@ -5,6 +5,8 @@ menu:
   intro:
     parent: vs
     weight: 4
+
+aliases: ["/docs/reference/vs/serverless/"]
 ---
 
 The Serverless Framework is a tool that makes programming AWS Lambda, Azure Functions, and Google Cloud Functions

@@ -5,6 +5,8 @@ menu:
   intro:
     parent: vs
     weight: 3
+
+aliases: ["/docs/reference/vs/cloud_sdks/"]
 ---
 
 The cloud providers offer SDKs in multiple languages, including AWS Boto (Python), and many unnamed libraries for

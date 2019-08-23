@@ -5,6 +5,8 @@ menu:
   intro:
     identifier: vs
     weight: 5
+
+aliases: ["/docs/reference/vs/"]
 ---
 
 Pulumi is a cloud native infrastructure as code project. It lets you provision and manage resources, across many clouds
