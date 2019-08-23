@@ -55,6 +55,7 @@ title: Module route53
 <li><a href="#ZoneAssociationArgs">interface ZoneAssociationArgs</a></li>
 <li><a href="#ZoneAssociationState">interface ZoneAssociationState</a></li>
 <li><a href="#ZoneState">interface ZoneState</a></li>
+<li><a href="#RecordTypes">module RecordTypes</a></li>
 <li><a href="#RecordType">type RecordType</a></li>
 </ul>
 
@@ -63,19 +64,6 @@ title: Module route53
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="RecordTypes">route53/RecordTypes</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="DelegationSet">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/delegationSet.ts#L29" >}}">class <b>DelegationSet</b></a>
@@ -4018,6 +4006,107 @@ Configuration block(s) specifying VPC(s) to associate with a private hosted zone
 
 The Hosted Zone ID. This can be referenced by zone records.
 
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="RecordTypes">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L15" >}}">module <b>RecordTypes</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<h3 class="pdoc-member-header" id="A">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L16" >}}">const <b>A</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AAAA">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L17" >}}">const <b>AAAA</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CAA">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L19" >}}">const <b>CAA</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CNAME">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L18" >}}">const <b>CNAME</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="MX">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L20" >}}">const <b>MX</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="NAPTR">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L21" >}}">const <b>NAPTR</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> NAPTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NAPTR&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="NS">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L22" >}}">const <b>NS</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="PTR">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L23" >}}">const <b>PTR</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> PTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;PTR&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SOA">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L24" >}}">const <b>SOA</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> SOA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SOA&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SPF">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L25" >}}">const <b>SPF</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> SPF: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SPF&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SRV">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L26" >}}">const <b>SRV</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="TXT">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/recordType.ts#L27" >}}">const <b>TXT</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</pre>
+{{% md %}}
 {{% /md %}}
 </div>
 </div>

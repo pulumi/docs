@@ -44,19 +44,6 @@ title: Module sqs
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="queue">sqs/queue</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="Queue">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sqs/queue.ts#L52" >}}">class <b>Queue</b></a>
@@ -162,6 +149,20 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Queue-onEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L121" >}}">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#QueueEventHandler'>QueueEventHandler</a>, args?: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Queue to the handler provided, along
+with options to control the behavior of the subscription.
 
 {{% /md %}}
 </div>

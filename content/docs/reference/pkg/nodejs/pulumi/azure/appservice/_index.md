@@ -78,6 +78,7 @@ title: Module appservice
 <li><a href="#TimerFunctionArgs">interface TimerFunctionArgs</a></li>
 <li><a href="#TimerInfo">interface TimerInfo</a></li>
 <li><a href="#TimerSubscriptionArgs">interface TimerSubscriptionArgs</a></li>
+<li><a href="#Kinds">module Kinds</a></li>
 <li><a href="#BindingDefinition">type BindingDefinition</a></li>
 <li><a href="#Callback">type Callback</a></li>
 <li><a href="#CallbackFactory">type CallbackFactory</a></li>
@@ -98,20 +99,6 @@ title: Module appservice
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="Kinds">appservice/Kinds</a></li>
-<li><a href="functionApp">appservice/functionApp</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="ActiveSlot">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L33" >}}">class <b>ActiveSlot</b></a>
@@ -1609,6 +1596,32 @@ Create a FunctionApp resource with the given unique name, arguments, and options
 
 Get an existing FunctionApp resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="FunctionApp-getFunctionKeys">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L832" >}}">method <b>getFunctionKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getFunctionKeys(functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionKeys'>FunctionKeys</a>&gt;</pre>
+
+
+Retrieve the keys associated with the given Function.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="FunctionApp-getHostKeys">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L827" >}}">method <b>getHostKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getHostKeys(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionHostKeys'>FunctionHostKeys</a>&gt;</pre>
+
+
+Retrieve the keys associated with the Function App.
 
 {{% /md %}}
 </div>
@@ -8155,6 +8168,59 @@ A mapping of tags to assign to the resource.
 
 The runtime version associated with the Function App. Defaults to `~2`.
 
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="Kinds">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L15" >}}">module <b>Kinds</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<h3 class="pdoc-member-header" id="App">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L16" >}}">const <b>App</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> App: <a href='#Kind'>Kind</a> = <span class='s2'>&#34;App&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Elastic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L17" >}}">const <b>Elastic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> Elastic: <a href='#Kind'>Kind</a> = <span class='s2'>&#34;elastic&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="FunctionApp">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L18" >}}">const <b>FunctionApp</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> FunctionApp: <a href='#Kind'>Kind</a> = <span class='s2'>&#34;FunctionApp&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Linux">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L19" >}}">const <b>Linux</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> Linux: <a href='#Kind'>Kind</a> = <span class='s2'>&#34;Linux&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Windows">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L20" >}}">const <b>Windows</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> Windows: <a href='#Kind'>Kind</a> = <span class='s2'>&#34;Windows&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Xenon">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/kind.ts#L21" >}}">const <b>Xenon</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>const</span> Xenon: <a href='#Kind'>Kind</a> = <span class='s2'>&#34;xenon&#34;</span>;</pre>
+{{% md %}}
 {{% /md %}}
 </div>
 </div>

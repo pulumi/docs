@@ -75,19 +75,6 @@ title: Module lambda
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="function">lambda/function</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="Alias">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="lambda/alias.ts#L33" >}}">class <b>Alias</b></a>
@@ -1360,6 +1347,18 @@ The amount of reserved concurrent executions for this lambda function. A value o
 {{% md %}}
 
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Function-roleInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L381" >}}">property <b>roleInstance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>roleInstance?: iam.Role;</pre>
+{{% md %}}
+
+Actual Role instance value for this Function.  Will only be set if this function was
+created from [createFunction]
 
 {{% /md %}}
 </div>

@@ -103,6 +103,7 @@ title: Module eventhub
 <li><a href="#TopicAuthorizationRuleState">interface TopicAuthorizationRuleState</a></li>
 <li><a href="#TopicEventSubscriptionArgs">interface TopicEventSubscriptionArgs</a></li>
 <li><a href="#TopicState">interface TopicState</a></li>
+<li><a href="#events">module events</a></li>
 <li><a href="#EventHubCallback">type EventHubCallback</a></li>
 <li><a href="#ServiceBusCallback">type ServiceBusCallback</a></li>
 </ul>
@@ -112,22 +113,6 @@ title: Module eventhub
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="eventHub">eventhub/eventHub</a></li>
-<li><a href="events">eventhub/events</a></li>
-<li><a href="queue">eventhub/queue</a></li>
-<li><a href="topic">eventhub/topic</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="EventGridCallbackSubscription">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L652" >}}">class <b>EventGridCallbackSubscription</b></a>
@@ -1042,6 +1027,21 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="EventHub-getEventFunction">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L465" >}}">method <b>getEventFunction</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubCallback'>EventHubCallback</a> | <a href='#GetEventHubFunctionArgs'>GetEventHubFunctionArgs</a>): <a href='#EventHubFunction'>EventHubFunction</a></pre>
+
+
+Creates a new Function triggered by events in the given Event Hub using the callback provided.
+[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
+a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="EventHub-getProvider">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
@@ -1063,6 +1063,22 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of EventHub.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventHub-onEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L457" >}}">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubCallback'>EventHubCallback</a> | <a href='#EventHubSubscriptionArgs'>EventHubSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventHubSubscription'>EventHubSubscription</a></pre>
+
+
+Subscribes to events logged to this Event Hub to the handler provided, along
+with options to control the behavior of the subscription.
+A dedicated Function App is created behind the scenes with a single Azure Function in it.
+Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
 
 {{% /md %}}
 </div>
@@ -2816,6 +2832,21 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="Queue-getEventFunction">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L172" >}}">method <b>getEventFunction</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></pre>
+
+
+Creates a new Function triggered by messages in the given Queue using the callback provided.
+[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
+a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="Queue-getProvider">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
@@ -2837,6 +2868,22 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Queue-onEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L164" >}}">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Queue to the handler provided, along
+with options to control the behavior of the subscription.
+A dedicated Function App is created behind the scenes with a single Azure Function in it.
+Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
 
 {{% /md %}}
 </div>
@@ -4112,6 +4159,21 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="Topic-getEventFunction">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L241" >}}">method <b>getEventFunction</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>): <a href='#ServiceBusFunction'>ServiceBusFunction</a></pre>
+
+
+Creates a new Function triggered by messages in the given Topic using the callback provided.
+[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
+a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="Topic-getProvider">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
@@ -4133,6 +4195,22 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Topic-onEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L233" >}}">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TopicEventSubscription'>TopicEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Topic to the handler provided, along
+with options to control the behavior of the subscription.
+A dedicated Function App is created behind the scenes with a single Azure Function in it.
+Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
 
 {{% /md %}}
 </div>
@@ -12249,6 +12327,58 @@ The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled
 
 Boolean flag which controls whether the Topic
 supports ordering. Defaults to false.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="events">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L714" >}}">module <b>events</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Contains hooks to subscribe to different kinds of Event Grid events.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="onGridBlobCreated">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L719" >}}">function <b>onGridBlobCreated</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onGridBlobCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;eventgrid.StorageBlobCreatedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;eventgrid.StorageBlobCreatedEventData&gt;</pre>
+
+
+Creates a new subscription to events fired from Event Grid. The callback is executed whenever
+a new Blob is created in a container of the Storage Account.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="onGridBlobDeleted">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L732" >}}">function <b>onGridBlobDeleted</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onGridBlobDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;eventgrid.StorageBlobDeletedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;eventgrid.StorageBlobDeletedEventData&gt;</pre>
+
+
+Creates a new subscription to events fired from Event Grid. The callback is executed whenever
+a Blob is deleted from a container of the Storage Account.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="onResourceGroupEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L744" >}}">function <b>onResourceGroupEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onResourceGroupEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ResourceGroupEventGridCallbackSubscriptionArgs'>ResourceGroupEventGridCallbackSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;</pre>
+
+
+Creates a new subscription to events fired from Event Grid. The callback is executed whenever
+an event associated with the Resource Group fires.
 
 {{% /md %}}
 </div>

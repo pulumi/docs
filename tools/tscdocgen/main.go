@@ -527,6 +527,10 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 		// form ("types/input" instead of "types").
 		if modname == "types" {
 			modname = strings.Trim(modnode.Name, `"`)
+			// Also skip the "types/index" which will never contain anything
+			if modname == "types/index" {
+				continue
+			}
 		}
 
 		// Lazy init the module if appropriate.
@@ -547,11 +551,10 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 			name := strings.Trim(child.Name, `"`)
 
 			// If it begins with a "./", simplify it to just the parent name.
-			if isModule {
+			if isModule && strings.Index(name, "./") == 0 {
 				// If this is a module, we must explode it out into the top-level modules list.
 				// This may very well conflict, so we'll need to merge the new members in if so.
-				fullModName := path.Join(modname, name)
-				nss, err := e.gatherNamespaceModules(fullModName, child)
+				nss, err := e.gatherNamespaceModules(modname, child)
 				if err != nil {
 					return nil, err
 				}
@@ -763,6 +766,12 @@ func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
 		p, s = n, o // interface wins
 	} else if n.Kind == typeDocTypeAliasNode && o.Kind == typeDocVariableNode {
 		p, s = n, o // alias wins
+	} else if n.Kind == typeDocVariableNode && o.Kind == typeDocFunctionNode {
+		p, s = o, n // function wins
+	} else if n.Kind == typeDocFunctionNode && o.Kind == typeDocVariableNode {
+		p, s = n, o // function wins
+	} else if n.Kind == typeDocFunctionNode && o.Kind == typeDocFunctionNode {
+		p, s = n, o // either is fine
 	} else {
 		return nil, errors.Errorf(
 			"cannot merge two nodes with same name '%s'; incompatible types %s and %s", n.Name, n.Kind, o.Kind)
@@ -1000,9 +1009,9 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 			if len(elements) > 1 {
 				if elements[0] == "pulumi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
-				} else if elements[0] == "inputs" {
+				} else if elements[0] == "inputs" || elements[0] == "inputApi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
-				} else if elements[0] == "outputs" {
+				} else if elements[0] == "outputs" || elements[0] == "outputApi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/output/"
 				}
 			}

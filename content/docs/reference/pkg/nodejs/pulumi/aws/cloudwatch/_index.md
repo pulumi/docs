@@ -79,20 +79,6 @@ title: Module cloudwatch
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="eventRule">cloudwatch/eventRule</a></li>
-<li><a href="logGroup">cloudwatch/logGroup</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="Dashboard">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cloudwatch/dashboard.ts#L59" >}}">class <b>Dashboard</b></a>
@@ -538,6 +524,20 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of EventRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventRule-onEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/eventRuleMixins.ts#L124" >}}">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventRuleEventHandler'>EventRuleEventHandler</a>, args?: <a href='#EventRuleEventSubscriptionArgs'>EventRuleEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventRuleEventSubscription'>EventRuleEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this EventRule to the handler provided, along
+with options to control the behavior of the subscription.
 
 {{% /md %}}
 </div>
@@ -1579,6 +1579,40 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of LogGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="LogGroup-onDecodedEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/logGroupMixins.ts#L133" >}}">method <b>onDecodedEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onDecodedEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, callback: lambda.Callback&lt;<a href='#DecodedLogGroupEvent'>DecodedLogGroupEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;, args?: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#LogGroupEventSubscription'>LogGroupEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this LogGroup to the callback provided,
+along with options to control the behavior of the subscription.
+
+The events will be provided in their decoded form.  Because this event hookup needs to
+execute code to convert the raw messages, it can only be passed an [EntryPoint] callback,
+not a [lambda.Function] instance.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="LogGroup-onEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloudwatch/logGroupMixins.ts#L122" >}}">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#LogGroupEventHandler'>LogGroupEventHandler</a>, args?: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#LogGroupEventSubscription'>LogGroupEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this LogGroup to the handler provided,
+along with options to control the behavior of the subscription.
+
+The events will be produced in raw (gzipped + base64 encoded) form.
 
 {{% /md %}}
 </div>

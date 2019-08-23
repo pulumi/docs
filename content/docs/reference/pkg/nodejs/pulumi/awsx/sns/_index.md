@@ -7,18 +7,417 @@ title: Module sns
 
 <a href="../">@pulumi/awsx</a> &gt; sns
 
-
 <div class="toggleVisible">
 <div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+<h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
 </div>
 <div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents">
 <ul>
-<li><a href="metrics">sns/metrics</a></li>
+<li><a href="#metrics">module metrics</a></li>
 </ul>
+
+<a href="{{< pkg-url pkg="awsx" path="sns/metrics.ts" >}}">sns/metrics.ts</a> 
 </div>
 </div>
 </div>
 
+
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L20" >}}">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L90" >}}">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#SnsMetricName'>SnsMetricName</a>, change: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Creates an AWS/SNS metric with the requested [metricName]. See
+https://docs.aws.amazon.com/sns/latest/dg/sns-monitoring-using-cloudwatch.html for list of
+all metric-names.
+
+Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.
+
+Amazon SNS and CloudWatch are integrated so you can collect, view, and analyze metrics for
+every active Amazon SNS notification. Once you have configured CloudWatch for Amazon SNS, you
+can gain better insight into the performance of your Amazon SNS topics, push notifications,
+and SMS deliveries. For example, you can set an alarm to send you an email notification if a
+specified threshold is met for an Amazon SNS metric, such as NumberOfNotificationsFailed.
+
+The metrics you configure with CloudWatch for your Amazon SNS topics are automatically
+collected and pushed to CloudWatch every five minutes. These metrics are gathered on all
+topics that meet the CloudWatch guidelines for being active. A topic is considered active by
+CloudWatch for up to six hours from the last activity (i.e., any API call) on the topic.
+
+Amazon Simple Notification Service sends the following dimensions to CloudWatch:
+
+1. "Application": Filters on application objects, which represent an app and device
+   registered with one of the supported push notification services, such as APNS and FCM.
+2. "Application,Platform": Filters on application and platform objects, where the platform
+   objects are for the supported push notification services, such as APNS and FCM.
+3. "Country": Filters on the destination country or region of an SMS message. The country or
+   region is represented by its ISO 3166-1 alpha-2 code.
+4. "Platform": Filters on platform objects for the push notification services, such as APNS
+   and FCM.
+5. "TopicName": Filters on Amazon SNS topic names.
+6. "SMSType": Filters on the message type of SMS message. Can be "promotional" or
+   "transactional".
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="numberOfMessagesPublished">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L126" >}}">function <b>numberOfMessagesPublished</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>numberOfMessagesPublished(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of messages published to your Amazon SNS topics.
+
+Units: Count
+
+Valid Statistics: Sum
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="numberOfNotificationsDelivered">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L143" >}}">function <b>numberOfNotificationsDelivered</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>numberOfNotificationsDelivered(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of messages successfully delivered from your Amazon SNS topics to subscribing
+endpoints.
+
+For a delivery attempt to succeed, the endpoint's subscription must accept the message. A
+subscription accepts a message if a.) it lacks a filter policy or b.) its filter policy
+includes attributes that match those assigned to the message. If the subscription rejects the
+message, the delivery attempt isn't counted for this metric.
+
+Units: Count
+
+Valid Statistics: Sum
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="numberOfNotificationsFailed">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L162" >}}">function <b>numberOfNotificationsFailed</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>numberOfNotificationsFailed(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of messages that Amazon SNS failed to deliver.
+
+For Amazon SQS, email, SMS, or mobile push endpoints, the metric increments by 1 when Amazon
+SNS stops attempting message deliveries. For HTTP or HTTPS endpoints, the metric includes
+every failed delivery attempt, including retries that follow the initial attempt. For all
+other endpoints, the count increases by 1 when the message fails to deliver (regardless of
+the number of attempts).
+
+This metric does not include messages that were rejected by subscription filter policies.
+
+Units: Count
+
+Valid Statistics: Sum, Average
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="numberOfNotificationsFilteredOut_InvalidAttributes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L187" >}}">function <b>numberOfNotificationsFilteredOut_InvalidAttributes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>numberOfNotificationsFilteredOut_InvalidAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of messages that were rejected by subscription filter policies because the
+messages' attributes are invalid – for example, because the attribute JSON is incorrectly
+formatted.
+
+Units: Count
+
+Valid Statistics: Sum, Average
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="numberOfNotificationsFilteredOut_NoMessageAttributes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L174" >}}">function <b>numberOfNotificationsFilteredOut_NoMessageAttributes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>numberOfNotificationsFilteredOut_NoMessageAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of messages that were rejected by subscription filter policies because the
+messages have no attributes.
+
+Units: Count
+
+Valid Statistics: Sum, Average
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="publishSize">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L198" >}}">function <b>publishSize</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>publishSize(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of database connections in use.
+
+Units: Bytes
+
+Valid Statistics: Minimum, Maximum, Average and Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="smsMonthToDateSpentUSD">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L213" >}}">function <b>smsMonthToDateSpentUSD</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>smsMonthToDateSpentUSD(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The charges you have accrued since the start of the current calendar month for sending SMS
+messages.
+
+You can set an alarm for this metric to know when your month-to-date charges are close to the
+monthly SMS spend limit for your account. When Amazon SNS determines that sending an SMS
+message would incur a cost that exceeds this limit, it stops publishing SMS messages within
+minutes.
+
+Valid Statistics: Maximum
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="smsSuccessRate">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L224" >}}">function <b>smsSuccessRate</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>smsSuccessRate(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The rate of successful SMS message deliveries.
+
+Units: Count
+
+Valid Statistics: Sum, Average, Data Samples
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L28" >}}">interface <b>SnsMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+{{% /md %}}
+<h3 class="pdoc-member-header" id="SnsMetricChange-application">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L38" >}}">property <b>application</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>application?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+Filters on application objects, which represent an app and device registered with one of
+the supported push notification services, such as APNS and FCM.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-color">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The six-digit HTML hex color code to be used for this metric.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-country">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L44" >}}">property <b>country</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>country?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+Filters on the destination country or region of an SMS message. The country or region is
+represented by its ISO 3166-1 alpha-2 code.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-dimensions">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{% md %}}
+
+The new dimension for this metric.  If this object is missing this property, then no change
+will be made.  However, if the property is there by set to [undefined] then the value will be
+cleared.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-extendedStatistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new percentile statistic for the metric associated with the alarm.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-label">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The label to display for this metric in the graph legend. If this is not specified, the
+metric is given an autogenerated label that distinguishes it from the other metrics in the
+widget.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-period">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new period in seconds over which the specified `stat` is applied.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default (300s).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-platform">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L49" >}}">property <b>platform</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>platform?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+Filters on platform objects for the push notification services, such as APNS and FCM.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-smsType">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L54" >}}">property <b>smsType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>smsType?: <span class='s2'>"promotional"</span> | <span class='s2'>"transactional"</span>;</pre>
+{{% md %}}
+
+Filters on the message type of SMS message.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-statistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{% md %}}
+
+The new statistic to apply to the alarm's associated metric.  If this object is missing this
+property, then no change will be made.  However, if the property is there by set to
+[undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-topic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L32" >}}">property <b>topic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>topic?: aws.sns.Topic;</pre>
+{{% md %}}
+
+Optional topic to filter down to.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-unit">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{% md %}}
+
+The new unit for this metric.   If this object is missing this property, then no change will
+be made.  However, if the property is there by set to [undefined] then the value will be set
+to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-visible">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{% md %}}
+
+Set this to true to have the metric appear in the graph, or false to have it be hidden. The
+default is true.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricChange-yAxis">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{% md %}}
+
+Where on the graph to display the y-axis for this metric. The default is left.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+</div>
+<h3 class="pdoc-member-header" id="SnsMetricName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L21" >}}">type <b>SnsMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>type</span> SnsMetricName = <span class='s2'>"NumberOfMessagesPublished"</span> | <span class='s2'>"NumberOfNotificationsDelivered"</span> | <span class='s2'>"NumberOfNotificationsFailed"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-NoMessageAttributes"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-InvalidAttributes"</span> | <span class='s2'>"PublishSize"</span> | <span class='s2'>"SMSMonthToDateSpentUSD"</span> | <span class='s2'>"SMSSuccessRate"</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+</div>

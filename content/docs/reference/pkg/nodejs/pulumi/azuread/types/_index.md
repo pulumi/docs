@@ -16,7 +16,6 @@ title: Module types
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents">
 <ul>
-<li><a href="index">types/index</a></li>
 <li><a href="input">types/input</a></li>
 <li><a href="output">types/output</a></li>
 </ul>

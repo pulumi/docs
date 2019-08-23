@@ -83,19 +83,6 @@ title: Module storage
 </div>
 </div>
 
-<div class="toggleVisible">
-<div class="collapsed">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents">
-<ul>
-<li><a href="bucket">storage/bucket</a></li>
-</ul>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="Bucket">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="storage/bucket.ts#L41" >}}">class <b>Bucket</b></a>
@@ -190,6 +177,89 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Bucket.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectArchived">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L112" >}}">method <b>onObjectArchived</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onObjectArchived(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when a live version of an
+object is archived or deleted.
+
+This event is only sent for versioning buckets.
+
+See https://cloud.google.com/storage/docs/object-versioning for more details.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectDeleted">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L102" >}}">method <b>onObjectDeleted</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onObjectDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when an object is
+permanently deleted. Depending on the object versioning setting for a bucket this means:
+
+1. For versioning buckets, this is only sent when a version is permanently deleted (but
+   not when an object is archived).
+
+2. For non-versioning buckets, this is sent when an object is deleted or overwritten.
+
+See https://cloud.google.com/storage/docs/object-versioning for more details.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectEvent">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L125" >}}">method <b>onObjectEvent</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onObjectEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args: <a href='#BucketEventArgs'>BucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Generic helper for registering for any event.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectFinalized">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L89" >}}">method <b>onObjectFinalized</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onObjectFinalized(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when a new object is
+created (or an existing object is overwritten, and a new generation of that object is
+created) in this bucket.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectMetadataUpdated">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="storage/zMixins.ts#L120" >}}">method <b>onObjectMetadataUpdated</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>onObjectMetadataUpdated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when the metadata of an
+existing object changes.
+
+See https://cloud.google.com/storage/docs/metadata for more details.
 
 {{% /md %}}
 </div>
