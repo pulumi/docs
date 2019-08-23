@@ -1,6 +1,5 @@
 ---
 title: "pulumi history"
-expanded_url: /docs/reference/cli/
 ---
 
 

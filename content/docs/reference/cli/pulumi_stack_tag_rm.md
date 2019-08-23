@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack tag rm"
-expanded_url: /docs/reference/cli/
 ---
 
 

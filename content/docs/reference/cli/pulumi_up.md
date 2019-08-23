@@ -1,6 +1,5 @@
 ---
 title: "pulumi up"
-expanded_url: /docs/reference/cli/
 ---
 
 

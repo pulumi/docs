@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack export"
-expanded_url: /docs/reference/cli/
 ---
 
 

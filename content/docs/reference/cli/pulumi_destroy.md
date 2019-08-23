@@ -1,6 +1,5 @@
 ---
 title: "pulumi destroy"
-expanded_url: /docs/reference/cli/
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "pulumi login"
-expanded_url: /docs/reference/cli/
 ---
 
 

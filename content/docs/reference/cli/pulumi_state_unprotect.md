@@ -1,6 +1,5 @@
 ---
 title: "pulumi state unprotect"
-expanded_url: /docs/reference/cli/
 ---
 
 

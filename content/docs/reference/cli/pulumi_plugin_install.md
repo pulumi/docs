@@ -1,6 +1,5 @@
 ---
 title: "pulumi plugin install"
-expanded_url: /docs/reference/cli/
 ---
 
 

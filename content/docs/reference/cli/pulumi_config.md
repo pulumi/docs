@@ -1,6 +1,5 @@
 ---
 title: "pulumi config"
-expanded_url: /docs/reference/cli/
 ---
 
 
