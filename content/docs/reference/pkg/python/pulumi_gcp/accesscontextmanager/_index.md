@@ -188,7 +188,7 @@ project may belong to multiple Service Perimeter Bridges.</li>
 <ul class="simple">
 <li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters">API documentation</a></li>
 <li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/vpc-service-controls/docs/get-started">Service Perimeter Quickstart</a></li>
+<li><a class="reference external" href="https://cloud.google.com/vpc-service-controls/docs/quickstart">Service Perimeter Quickstart</a></li>
 </ul>
 </li>
 </ul>

@@ -398,7 +398,7 @@ To get more information about ServicePerimeter, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters)
 * How-to Guides
-    * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/get-started)
+    * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
 
 ## Example Usage - Access Context Manager Service Perimeter Basic
 
