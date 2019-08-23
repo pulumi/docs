@@ -69,7 +69,7 @@
                     </div>
                     {{ if .HasChildren }}
                         <div class="sidenav-subsection text-sm">
-                            {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" false) }}
+                            {{ template "tocsub" (dict "page" $page "menu" .) }}
                         </div>
                     {{ end }}
                 </div>
@@ -80,11 +80,10 @@
 
 {{ define "tocsub" }}
     {{ $page := .page }}
-    {{ $prefix_selection := .prefix_selection }}
 
     {{ range .menu.Children }}
         {{ $sidenav_selected := "" }}
-        {{ if or (eq $page.RelPermalink .URL) (and $prefix_selection (hasPrefix $page.RelPermalink .URL)) }}
+        {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL)) }}
             {{ $sidenav_selected = "active" }}
         {{ end }}
 
@@ -94,7 +93,7 @@
                     <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
                 </div>
                 <div class="sidenav-subsection">
-                    {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" true) }}
+                    {{ template "tocsub" (dict "page" $page "menu" .) }}
                 </div>
             </div>
         {{ else }}
