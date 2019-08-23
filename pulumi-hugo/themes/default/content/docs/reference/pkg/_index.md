@@ -3,7 +3,7 @@ title: API Reference
 menu:
   reference:
     identifier: api
-    weight: 10
+    weight: 2
 ---
 
 Pulumi offers APIs for working with a wide variety of cloud platforms, as well

@@ -13,7 +13,7 @@ how this works for infrastructure as code can be fascinating!
 <!--more-->
 
 A core part of the Pulumi [programming model]({{< ref "/docs/reference" >}}) is that we allow people to express complex
-[dependency data]({{< ref "/docs/reference/programming-model#outputs" >}}) that may _eventually_ be available.
+[dependency data]({{< ref "/docs/intro/concepts/programming-model#outputs" >}}) that may _eventually_ be available.
 Traditional JavaScript programming might expose that as a Promise<T>, but we’ve taken that one step further by introducing
     a type we call:
 

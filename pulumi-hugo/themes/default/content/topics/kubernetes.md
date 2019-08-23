@@ -69,7 +69,7 @@ examples:
               }
           });
       cta:
-          url: /docs/quickstart
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Improve expressiveness, reduce boilerplate
@@ -101,7 +101,7 @@ examples:
 
           export let frontendIp = frontend.ipAddress;
       cta:
-          url: /docs/quickstart
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Injecting sidecars using abstraction
@@ -148,7 +148,7 @@ examples:
               }
           }
       cta:
-          url: /docs/quickstart
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Use existing YAML and Helm Charts
@@ -180,7 +180,7 @@ examples:
               .getResource("v1/Service", "wpdev-wordpress")
               .status.apply(status => status.loadBalancer.ingress[0].ip);
       cta:
-          url: /docs/quickstart
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Declare managed services alongside Kubernetes
@@ -217,7 +217,7 @@ examples:
               }
           });
       cta:
-          url: /docs/quickstart
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Provision Kubernetes clusters in any cloud
@@ -249,6 +249,6 @@ examples:
           });
 
       cta:
-          url: /docs/quickstart
+          url: /docs/get-started
           label: GET STARTED
 ---

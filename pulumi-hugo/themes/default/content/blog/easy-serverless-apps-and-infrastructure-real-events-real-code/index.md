@@ -287,7 +287,7 @@ We've given the function's ID, `zipTpsReports-19d51dc`, which allows
 Pulumi to locate it in your account and reuse it. This can make it easy
 to incrementally adopt Pulumi one piece at a time, collaborate between
 teams, or stitch together resources
-[managed by different stacks]({{< ref "/docs/reference/organizing-stacks-projects" >}}).
+[managed by different stacks]({{< ref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
 ## More About Functions
 
@@ -357,12 +357,12 @@ pace.
 Lastly, it's possible to use Pulumi stacks to actually break apart your
 cloud resources and functions into independently deployable pieces. This
 allows teams to leverage features
-like [RBAC]({{< ref "/docs/console/collaboration" >}}).
+like [RBAC]({{< ref "/docs/intro/console/collaboration" >}}).
 For instance, it's common for the DevOps team to manage the physical
 cloud resources like queues, topics, and buckets, while the development
 team authors and manages the serverless functions attached to them. Read
 more about
-this [here]({{< ref "/docs/reference/organizing-stacks-projects" >}}).
+this [here]({{< ref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
 ## More About Event Sources
 
@@ -375,10 +375,10 @@ The simplest answer here is to create a new resource in your Pulumi
 program using `new`, as we saw above. Because Pulumi is an
 infrastructure as code platform, any resources in any cloud are
 available --
-[AWS]({{< ref "/docs/quickstart/aws" >}}),
-[Azure]({{< ref "/docs/quickstart/azure" >}}),
-[GCP]({{< ref "/docs/quickstart/gcp" >}}),
-[Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}}), etc. When
+[AWS]({{< ref "/docs/get-started/aws" >}}),
+[Azure]({{< ref "/docs/get-started/azure" >}}),
+[GCP]({{< ref "/docs/get-started/gcp" >}}),
+[Kubernetes]({{< ref "/docs/get-started/kubernetes" >}}), etc. When
 you `new` one up, Pulumi understands how to provision and manage it.
 
 We saw simple examples of this earlier:

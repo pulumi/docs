@@ -26,7 +26,7 @@ ready to go.
 ## Quickstart
 
 Get started quickly by creating a new [template-based project](https://app.pulumi.com/site/new-project).
-This creates a project, and a [stack]({{< ref "/docs/reference/stack" >}}) ready to be used by the Pulumi CLI.
+This creates a project, and a [stack]({{< ref "/docs/intro/concepts/stack" >}}) ready to be used by the Pulumi CLI.
 The wizard also shows you the commands you need to run in the CLI.
 
 Haven't setup your CLI for a specific cloud yet? Check out this docs page on how to do that.

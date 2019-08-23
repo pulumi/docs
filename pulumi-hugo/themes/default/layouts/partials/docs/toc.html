@@ -5,20 +5,25 @@
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
     {{ else if hasPrefix .RelPermalink "/docs/" }}
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/quickstart" }}">Get Started</a>
-        </h4>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.quickstart) }}
+        <!-- Get Started guides and installation -->
+        <h5 class="no-anchor">Getting Started</h5>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.getstarted) }}
 
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/reference" }}">Reference</a>
-        </h4>
+        <!-- Core concepts, supported clouds, comparison -->
+        <h5 class="no-anchor">Intro</h5>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.intro) }}
+
+        <!-- Guides and Tutorials -->
+        <h5 class="no-anchor">Guides and Tutorials</h5>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.userguides) }}
+
+        <!-- API, CLI, and glossary -->
+        <h5 class="no-anchor">Reference</h5>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
 
-        <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/console" }}">Pulumi Cloud Console</a>
-        </h4>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.console) }}
+        <!-- Troubleshooting and FAQ -->
+        <h5 class="no-anchor">Support</h5>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.troubleshooting) }}
     {{ end }}
 </aside>
 
@@ -33,10 +38,6 @@
         {{ if eq $page.RelPermalink .URL }}
             {{ $toggle_state = "toggleVisible" }}
             {{ $sidenav_selected = "active" }}
-        {{ else if $page.Params.expanded_url }}
-            {{ if eq $page.Params.expanded_url .URL }}
-                {{ $toggle_state = "toggleVisible" }}
-            {{ end }}
         {{ else if hasPrefix $page.RelPermalink .URL }}
             {{ $toggle_state = "toggleVisible" }}
         {{ end }}
@@ -64,7 +65,7 @@
                     </div>
                     {{ if .HasChildren }}
                         <div class="sidenav-subsection text-sm">
-                            {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" false) }}
+                            {{ template "tocsub" (dict "page" $page "menu" .) }}
                         </div>
                     {{ end }}
                 </div>
@@ -75,11 +76,10 @@
 
 {{ define "tocsub" }}
     {{ $page := .page }}
-    {{ $prefix_selection := .prefix_selection }}
 
     {{ range .menu.Children }}
         {{ $sidenav_selected := "" }}
-        {{ if or (eq $page.RelPermalink .URL) (and $prefix_selection (hasPrefix $page.RelPermalink .URL)) }}
+        {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL)) }}
             {{ $sidenav_selected = "active" }}
         {{ end }}
 
@@ -89,7 +89,7 @@
                     <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
                 </div>
                 <div class="sidenav-subsection">
-                    {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" true) }}
+                    {{ template "tocsub" (dict "page" $page "menu" .) }}
                 </div>
             </div>
         {{ else }}

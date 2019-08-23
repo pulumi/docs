@@ -75,7 +75,7 @@ let server = new aws.ec2.Instance("web-server-www", {
                         This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
@@ -121,7 +121,7 @@ exports.endpoint = endpoint.publish().url;` }}
                         This code runs Nginx with 2 load balanced replicas listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
@@ -168,7 +168,7 @@ export let url = nginx.defaultEndpoint;` }}
                         This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
@@ -212,7 +212,7 @@ export let frontendIp = frontend.ipAddress;` }}
                         This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
                     </p>
                     <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.

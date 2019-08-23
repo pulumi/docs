@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/reference/programming-model/#outputs
+redirect_to: /docs/intro/concepts/programming-model/#outputs
 ---
