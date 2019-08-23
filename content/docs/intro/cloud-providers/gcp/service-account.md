@@ -1,5 +1,7 @@
 ---
 title: Setup Service Account
+
+aliases: ["/docs/reference/clouds/gcp/service-account/"]
 ---
 
 [Google Cloud Platform Credentials]: https://console.cloud.google.com/apis/credentials

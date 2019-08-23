@@ -1,5 +1,7 @@
 ---
 title: Setup
+
+aliases: ["/docs/reference/clouds/aws/setup/"]
 ---
 
 <!-- LINKS -->

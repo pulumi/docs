@@ -5,6 +5,8 @@ menu:
     parent: cloud-providers
     identifier: clouds-azure
     weight: 2
+
+aliases: ["/docs/reference/clouds/azure/"]
 ---
 
 <img src="/logos/tech/azure.svg" align="right" class="h-16 px-8 pb-4">

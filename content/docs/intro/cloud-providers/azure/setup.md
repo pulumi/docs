@@ -1,5 +1,7 @@
 ---
 title: Setup
+
+aliases: ["/docs/reference/clouds/azure/setup/"]
 ---
 
 The [Pulumi Azure provider]({{< relref "./" >}}) uses the Azure SDK to manage and provision resources.

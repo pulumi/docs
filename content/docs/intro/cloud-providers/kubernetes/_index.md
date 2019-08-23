@@ -5,6 +5,8 @@ menu:
     parent: cloud-providers
     identifier: clouds-kubernetes
     weight: 4
+
+aliases: ["/docs/reference/clouds/kubernetes/"]
 ---
 
 <img src="/logos/tech/k8s.svg" align="right" class="h-16 px-8 pb-4">

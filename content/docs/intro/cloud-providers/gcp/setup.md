@@ -1,5 +1,7 @@
 ---
 title: Setup
+
+aliases: ["/docs/reference/clouds/gcp/setup/"]
 ---
 
 [Pulumi Google Cloud Platform Provider]: {{< relref "./" >}}

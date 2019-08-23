@@ -4,6 +4,8 @@ menu:
   intro:
     identifier: cloud-providers
     weight: 2
+
+aliases: ["/docs/reference/clouds/"]
 ---
 
 {{< get-started-note >}}

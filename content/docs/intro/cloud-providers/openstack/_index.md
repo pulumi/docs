@@ -5,6 +5,8 @@ menu:
     parent: cloud-providers
     identifier: clouds-openstack
     weight: 5
+
+aliases: ["/docs/reference/clouds/openstack/"]
 ---
 
 <img src="/logos/tech/openstack.svg" align="right" class="h-16 px-8 pb-4">

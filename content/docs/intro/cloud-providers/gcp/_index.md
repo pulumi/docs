@@ -5,6 +5,8 @@ menu:
     parent: cloud-providers
     identifier: clouds-gcp
     weight: 3
+
+aliases: ["/docs/reference/clouds/gcp/"]
 ---
 
 <img src="/logos/tech/gcp.svg" align="right" class="h-16 px-8 pb-4">

@@ -5,6 +5,8 @@ menu:
     parent: cloud-providers
     identifier: clouds-aws
     weight: 1
+
+aliases: ["/docs/reference/clouds/aws/"]
 ---
 
 <img src="/logos/tech/aws.svg" align="right" class="h-16 px-8 pb-4">

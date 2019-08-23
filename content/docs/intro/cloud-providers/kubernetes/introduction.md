@@ -1,5 +1,7 @@
 ---
 title: Introduction
+
+aliases: ["/docs/reference/clouds/kubernetes/introduction/"]
 ---
 
 ## Using Pulumi
