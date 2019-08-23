@@ -79,8 +79,8 @@ Create a CustomResource resource with the given unique name, arguments, and opti
 
 
 Get the state of an existing `CustomResource`, as identified by `id`.
-Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
-Kubernetes convention) the ID becomes default/<name>.
+Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
+Kubernetes convention) the ID becomes default/&lt;name&gt;.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -330,8 +330,8 @@ An optional additional explicit dependencies on other resources.
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;;</pre>
 {{% md %}}
 
-An ID for the Kubernetes resource to retrive. Takes the form <namespace>/<name> or
-<name>.
+An ID for the Kubernetes resource to retrive. Takes the form &lt;namespace&gt;/&lt;name&gt; or
+&lt;name&gt;.
 
 {{% /md %}}
 </div>

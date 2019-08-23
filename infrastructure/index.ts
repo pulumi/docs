@@ -1,3 +1,5 @@
+// Copyright 2016-2019, Pulumi Corporation.  All rights reserved.
+
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 
@@ -16,7 +18,12 @@ const config = {
     alias: stackConfig.get("alias") || undefined,
     // ACM certificate for the target domain. Must be in the us-east-1 region.
     certificateArn: stackConfig.require("certificateArn"),
+    // redirectDomain is the domain to use for any redirects.
+    redirectDomain: stackConfig.get("redirectDomain") || undefined,
 };
+
+// redirectDomain is the domain to use when redirecting.
+const redirectDomain = config.redirectDomain || config.targetDomain;
 
 // contentBucket stores the static content to be served via the CDN.
 const contentBucket = new aws.s3.Bucket(
@@ -30,15 +37,6 @@ const contentBucket = new aws.s3.Bucket(
         website: {
             indexDocument: "index.html",
             errorDocument: "404.html",
-            routingRules: JSON.stringify([{
-                "Condition": {
-                    "KeyPrefixEquals": "reference/pkg/nodejs/@pulumi/",
-                },
-                "Redirect": {
-                    "HostName": config.targetDomain,
-                    "ReplaceKeyPrefixWith": "reference/pkg/nodejs/pulumi/",
-                },
-            }]),
         },
     },
     {
@@ -114,8 +112,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             originId: contentBucket.arn,
             domainName: contentBucket.websiteEndpoint,
             customOriginConfig: {
-                // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify HTTP Only.
-                // > Amazon S3 doesn't support HTTPS connections in that configuration.
+                // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
+                // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
+                // tslint:disable-next-line: max-line-length
                 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginProtocolPolicy
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
@@ -232,11 +231,6 @@ const cdn = new aws.cloudfront.Distribution(
 function crawlDirectory(dir: string, f: (_: string) => void) {
     const files = fs.readdirSync(dir);
     for (const file of files) {
-        // Skip the `node_modules` and Ruby `vendor` directories.
-        if (file === "node_modules" || file === "vendor" || file === "package-lock.json") {
-            continue;
-        }
-
         const filePath = `${dir}/${file}`;
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {
@@ -250,14 +244,14 @@ function crawlDirectory(dir: string, f: (_: string) => void) {
 
 // Some files do not get the correct mime/type inferred from the mime package, and we
 // need to set our own.
-function getMimeType(filePath: string): string | null {
+function getMimeType(filePath: string): string | undefined {
     // Ensure that latest-version's mime type is always text/plain. Otherwise it
     // will end up being set to binary/octet-stream, which is not what we want.
     if (path.basename(filePath) === "latest-version") {
         return "text/plain";
     }
 
-    return mime.getType(filePath);
+    return mime.getType(filePath) || undefined;
 }
 
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
@@ -267,19 +261,85 @@ crawlDirectory(
     webContentsRootPath,
     (filePath: string) => {
         const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
-        const contentFile = new aws.s3.BucketObject(
-            relativeFilePath,
-            {
-                acl: "public-read",
-                key: relativeFilePath,
-                bucket: contentBucket,
-                source: new pulumi.asset.FileAsset(filePath),
-                contentType: getMimeType(filePath) || undefined,
-            },
-            {
-                parent: contentBucket,
-            });
+
+        const baseArgs = {
+            acl: "public-read",
+            key: relativeFilePath,
+            bucket: contentBucket,
+        };
+
+        // Create a new S3 object for most files, but HTML files that contain a redirect
+        // just create a stubbed out S3 object with the right metadata so they return a
+        // 301 redirect (instead of serving the HTML with a meta-redirect). This ensures
+        // the right HTTP code response is returned for search engines, as well as
+        // enables better support for URL anchors.
+        const redirect = getMetaRefreshRedirect(filePath);
+        if (!redirect) {
+            const contentFile = new aws.s3.BucketObject(
+                relativeFilePath,
+                {
+                    ...baseArgs,
+                    source: new pulumi.asset.FileAsset(filePath),
+                    contentType: getMimeType(filePath) || undefined,
+                },
+                {
+                    parent: contentBucket,
+                });
+        } else {
+            const s3Redirect = new aws.s3.BucketObject(
+                relativeFilePath,
+                {
+                    ...baseArgs,
+                    source: new pulumi.asset.FileAsset("/dev/null"), // Empty file.
+                    websiteRedirect: translateRedirect(filePath, redirect),
+                },
+                {
+                    parent: contentBucket,
+                });
+        }
     });
+
+// Returns the redirect URL if filePath is an HTML file that contains a meta refresh tag, otherwise undefined.
+function getMetaRefreshRedirect(filePath: string): string | undefined {
+    // Only .html files contain meta refresh redirects.
+    if (path.extname(filePath) !== ".html") {
+        return undefined;
+    }
+
+    // Extract the redirect from the content of the file.
+    const text = fs.readFileSync(filePath, "utf8");
+    const regex = /<meta\s+?http-equiv="refresh"\s+?content="0;\s+?url=(.*?)"/gmi;
+    const match = regex.exec(text);
+
+    if (match && match.length === 2) {
+        const redirect = match[1];
+        if (!redirect || redirect.length === 0) {
+            throw new Error(`Meta refresh tag found in "${filePath}" but the redirect URL was empty.`);
+        }
+        return redirect;
+    }
+
+    return match && match.length === 2 ? match[1] : undefined;
+}
+
+// translateRedirect fixes up the redirect, if needed.
+// If the redirect is already prefixed with "https://" or "http://", it is returned unmodified.
+// If the redirect starts with "/", it is translated to an `https://${redirectDomain}${redirect}`.
+// Otherwise, an Error is thrown.
+function translateRedirect(filePath: string, redirect: string): string {
+    // If the redirect already has the https or http protocol specified, return it.
+    if (redirect.startsWith("https://") || redirect.startsWith("http://")) {
+        return redirect;
+    }
+
+    // If the redirect starts with "/", prefix with the redirect domain and return it.
+    if (redirect.startsWith("/")) {
+        return `https://${redirectDomain}${redirect}`;
+    }
+
+    // Otherwise, it's not in a format that we expect so throw an error.
+    throw new Error(`The redirect "${redirect}" in "${filePath}" is not in an expected format.`);
+}
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
