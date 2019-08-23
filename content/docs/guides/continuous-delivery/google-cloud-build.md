@@ -5,7 +5,9 @@ menu:
     guides:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-google-cloud-build/]
+aliases:
+- /docs/reference/cd-google-cloud-build/
+- /docs/console/continuous-delivery/google-cloud-build/
 ---
 
 ## Prerequisites

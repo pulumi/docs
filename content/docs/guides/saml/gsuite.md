@@ -1,7 +1,9 @@
 ---
 title: G Suite (Google)
 
-aliases: [/docs/reference/service/saml-gsuite]
+aliases:
+- /docs/reference/service/saml-gsuite/
+- /docs/console/accounts/saml/gsuite/
 ---
 
 This guide explains how to configure your G Suite service as a SAML SSO identity provider

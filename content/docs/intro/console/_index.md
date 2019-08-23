@@ -5,7 +5,9 @@ menu:
     identifier: console
     weight: 1
 
-aliases: [/docs/reference/service]
+aliases:
+- /docs/reference/service
+- /docs/console/
 ---
 
 The [Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables

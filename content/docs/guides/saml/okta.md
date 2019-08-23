@@ -1,7 +1,9 @@
 ---
 title: Okta
 
-aliases: [/docs/reference/service/saml-okta]
+aliases:
+- /docs/reference/service/saml-okta/
+- /docs/console/accounts/saml/okta/
 ---
 
 This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with

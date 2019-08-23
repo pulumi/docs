@@ -1,6 +1,9 @@
 ---
 title: Stack Permissions
-aliases: [/docs/reference/service/roles-and-access-controls]
+
+aliases:
+- /docs/reference/service/roles-and-access-controls/
+- /docs/console/collaboration/stack-permissions/
 ---
 
 The Pulumi Cloud Console provides fine-grained access controls for stacks.

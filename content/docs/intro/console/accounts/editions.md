@@ -1,5 +1,7 @@
 ---
 title: Plans and Editions
+
+aliases: ["/docs/console/accounts/editions/"]
 ---
 
 There are multiple subscription plans available to Pulumi organizations, each offering an expanding set

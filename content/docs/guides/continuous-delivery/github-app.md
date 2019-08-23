@@ -5,7 +5,9 @@ menu:
     console:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-github/]
+aliases:
+- /docs/reference/cd-github/
+- /docs/console/continuous-delivery/github-app/
 ---
 
 Pulumi's GitHub app integrates the results of Pulumi stack updates with GitHub. Once installed and

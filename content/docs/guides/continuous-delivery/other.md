@@ -5,7 +5,9 @@ menu:
     guides:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-supporting-new-ci/]
+aliases:
+- /docs/reference/cd-supporting-new-ci/
+- /docs/console/continuous-delivery/other/
 ---
 
 If Pulumi doesn't already support your CI/CD system, this guide

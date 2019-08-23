@@ -5,7 +5,9 @@ menu:
     guides:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-travis/]
+aliases:
+- /docs/reference/cd-travis/
+- /docs/console/continuous-delivery/travis/
 ---
 
 This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying

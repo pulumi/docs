@@ -6,6 +6,8 @@ menu:
         parent: console
         identifier: extensions
         weight: 6
+
+aliases: ["/docs/console/extensions/"]
 ---
 
 Pulumi Cloud Console provides ways for you to access your data to power workflows

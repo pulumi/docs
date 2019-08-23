@@ -6,17 +6,19 @@ menu:
         parent: accounts
         identifier: saml
 
-aliases: [/docs/reference/service/saml-overview]
+aliases:
+- /docs/reference/service/saml-overview/
+- /docs/console/accounts/saml/
 ---
 
-This document walks-through the important aspects of configuring any SAML 2.0 identity provider to be used
+This document walks through the important aspects of configuring any SAML 2.0 identity provider to be used
 with the [Pulumi Cloud Console](https://app.pulumi.com).
 
 > For a specific example, you can refer to one of our integration guides:
 >
 > - [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
-> - [G Suite (Google)]({{< relref "gsuite" >}})
-> - [Okta]({{< relref "okta" >}})
+> - [G Suite (Google)]({{< relref "/docs/guides/saml/gsuite" >}})
+> - [Okta]({{< relref "/docs/guides/saml/okta" >}})
 
 ## Terminology
 

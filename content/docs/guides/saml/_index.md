@@ -12,8 +12,6 @@ The [Pulumi Cloud Console](https://app.pulumi.com) can be configured to work wit
 
 We have the following SAML integration guides:
 
-- [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
+- [Azure Active Directory]({{< relref "aad" >}})
 - [G Suite (Google)]({{< relref "gsuite" >}})
 - [Okta]({{< relref "okta" >}})
-
-

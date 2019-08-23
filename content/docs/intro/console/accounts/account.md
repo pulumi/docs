@@ -1,5 +1,7 @@
 ---
 title: Accounts
+
+aliases: ["/docs/console/accounts/account/"]
 ---
 
 Your Pulumi account is how you authenticate with the Pulumi Cloud Console, and

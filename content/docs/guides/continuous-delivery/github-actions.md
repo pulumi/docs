@@ -5,7 +5,9 @@ menu:
     guides:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-github-actions/]
+aliases:
+- /docs/reference/cd-github-actions/
+- /docs/console/continuous-delivery/github-actions/
 ---
 
 Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and infrastructure

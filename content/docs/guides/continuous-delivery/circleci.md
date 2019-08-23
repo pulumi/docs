@@ -5,7 +5,9 @@ menu:
     guides:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-circleci/]
+aliases:
+- /docs/reference/cd-circleci/
+- /docs/console/continuous-delivery/circleci/
 ---
 
 This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.

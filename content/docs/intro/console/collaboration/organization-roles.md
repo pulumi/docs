@@ -1,5 +1,7 @@
 ---
 title: Organization Roles
+
+aliases: ["/docs/console/collaboration/organization-roles/"]
 ---
 
 Stacks in the Pulumi Cloud Console are grouped by organizations. And in order to access the

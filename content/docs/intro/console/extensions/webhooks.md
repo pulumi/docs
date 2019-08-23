@@ -6,7 +6,9 @@ menu:
         parent: extensions
         weight: 1
 
-aliases: [/docs/reference/service/webhooks]
+aliases:
+- /docs/reference/service/webhooks/
+- /docs/console/extensions/webhooks/
 ---
 
 Webhooks allow you to build applications that will be notified when events

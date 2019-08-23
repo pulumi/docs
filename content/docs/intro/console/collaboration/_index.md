@@ -6,6 +6,8 @@ menu:
         parent: console
         identifier: collaboration
         weight: 2
+
+aliases: ["/docs/console/collaboration/"]
 ---
 
 The Pulumi Console offers ways to safely and securely work with other developers to

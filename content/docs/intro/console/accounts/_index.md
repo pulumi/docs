@@ -6,6 +6,8 @@ menu:
         parent: console
         identifier: accounts
         weight: 1
+
+aliases: ["/docs/console/accounts/"]
 ---
 
 We have the following resources to help you with managing your Pulumi account:

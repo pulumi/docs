@@ -6,7 +6,10 @@ menu:
         parent: guides
         identifier: cont_delivery
         weight: 1
-aliases: [/docs/reference/cd]
+
+aliases:
+- /docs/reference/cd/
+- /docs/console/continuous-delivery/
 ---
 
 Pulumi's approach to infrastructure as code is great for continuous delivery, because it uses source code to model

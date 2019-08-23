@@ -1,6 +1,8 @@
 ---
 title: AWS Code Services
-aliases: [/docs/reference/cd-aws-code-services/]
+aliases:
+- /docs/reference/cd-aws-code-services/
+- /docs/console/continuous-delivery/aws-code-services/
 ---
 
 [Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety

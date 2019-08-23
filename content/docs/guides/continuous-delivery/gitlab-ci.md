@@ -5,7 +5,9 @@ menu:
     guides:
         parent: cont_delivery
 
-aliases: [/docs/reference/cd-gitlab-ci/]
+aliases:
+- /docs/reference/cd-gitlab-ci/
+- /docs/console/continuous-delivery/gitlab-ci/
 ---
 
 [This](https://about.gitlab.com/features/gitlab-ci-cd/) page details how to use GitLab CI to manage deploying
