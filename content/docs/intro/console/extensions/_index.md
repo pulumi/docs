@@ -15,10 +15,10 @@ and integrations:
 
 
 * [Webhooks]({{< relref "webhooks" >}})
-* [Deploy with Pulumi]({{< relref "pulumi-button" >}})
+* ['Deploy with Pulumi' Button]({{< relref "pulumi-button" >}})
 
 > Some features are only found in the Pulumi Team and Enterprise editions. See
-> [product editions]({{< relref "editions" >}}) for more information.
+> [product editions]({{< relref "/docs/intro/console/accounts/editions" >}}) for more information.
 
 ## Webhooks
 
@@ -26,10 +26,11 @@ Pulumi [webhooks]({{< relref "webhooks" >}}) enable you to trigger custom workfl
 in response to events from your Pulumi organization or stack. For example, posting
 a notification that production has been updated successfully.
 
-## Project Templates
+## 'Deploy with Pulumi' Button
 
 If you want to share a common cloud application, you can create a reusable
-[template]({{< relref "pulumi-button" >}}) to share with other developers.
+template and share it with other developers with a
+['Deploy with Pulumi' Button]({{< relref "pulumi-button" >}}).
 
 ## Resources
 
