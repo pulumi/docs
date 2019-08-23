@@ -1,7 +1,7 @@
 ---
 title: "Clusters: EKS - Hello World!"
 
-aliases: ["/docs/reference/tutorials/kubernetes/eks/"]
+aliases: ["/docs/reference/tutorials/kubernetes/tutorial-eks/"]
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Container Service for Kubernetes (EKS) on AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-eks-hello-world) is available on GitHub.

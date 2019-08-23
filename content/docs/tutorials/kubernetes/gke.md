@@ -1,7 +1,7 @@
 ---
 title: "Clusters: GKE - Hello World!"
 
-aliases: ["/docs/reference/tutorials/kubernetes/gke/"]
+aliases: ["/docs/reference/tutorials/kubernetes/tutorial-gke/"]
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on GCP. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.

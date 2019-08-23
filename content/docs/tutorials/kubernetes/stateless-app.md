@@ -1,7 +1,7 @@
 ---
 title: "#6: Run a Stateless App Deployment"
 
-aliases: ["/docs/reference/tutorials/kubernetes/stateless-app/"]
+aliases: ["/docs/reference/tutorials/kubernetes/tutorial-stateless-app/"]
 ---
 
 In this tutorial, we'll run an application using a [Kubernetes

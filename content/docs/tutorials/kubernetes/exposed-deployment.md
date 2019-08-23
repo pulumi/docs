@@ -1,7 +1,7 @@
 ---
 title: "#1: Hello, World!"
 
-aliases: ["/docs/reference/tutorials/kubernetes/exposed-deployment/"]
+aliases: ["/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/"]
 ---
 
 In this tutorial, we'll deploy `nginx` to a Kubernetes cluster, and publicly expose it to the
