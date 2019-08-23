@@ -9,6 +9,8 @@ menu:
   intro:
     parent: concepts
     weight: 6
+
+aliases: ["/docs/reference/state/"]
 ---
 
 ## State

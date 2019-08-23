@@ -4,6 +4,8 @@ menu:
   intro:
     parent: concepts
     weight: 4
+
+aliases: ["/docs/reference/config/"]
 ---
 
 Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack.

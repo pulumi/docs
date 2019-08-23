@@ -4,6 +4,8 @@ menu:
   intro:
     parent: concepts
     weight: 1
+
+aliases: ["/docs/reference/programming-model/"]
 ---
 
 ## Overview {#overview}

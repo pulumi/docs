@@ -4,6 +4,8 @@ menu:
   intro:
     parent: concepts
     weight: 2
+
+aliases: ["/docs/reference/project/"]
 ---
 
 A Pulumi project is any folder which contains a `Pulumi.yaml` file.  When in a subfolder, the closest enclosing folder with a `Pulumi.yaml` file determines the current project.  A new project can be created with `pulumi new`.  A project specifies which runtime to use, which determines where to look for the program that should be executed during deployments.  Currently, `nodejs` and `python` are supported runtimes.

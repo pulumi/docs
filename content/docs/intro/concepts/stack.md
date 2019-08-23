@@ -4,6 +4,8 @@ menu:
   intro:
     parent: concepts
     weight: 3
+
+aliases: ["/docs/reference/stack/"]
 ---
 
 Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable

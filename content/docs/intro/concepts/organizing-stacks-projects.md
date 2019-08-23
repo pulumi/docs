@@ -4,6 +4,8 @@ menu:
   intro:
     parent: concepts
     weight: 5
+
+aliases: ["/docs/reference/organizing-stacks-projects/"]
 ---
 
 [Projects]({{< relref "project.md" >}}) and [stacks]({{< relref "stack.md" >}}) are intentionally flexible so that they can accommodate
