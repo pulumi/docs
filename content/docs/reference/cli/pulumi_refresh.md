@@ -1,6 +1,5 @@
 ---
 title: "pulumi refresh"
-expanded_url: /docs/reference/commands/
 ---
 
 

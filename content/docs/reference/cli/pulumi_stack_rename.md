@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack rename"
-expanded_url: /docs/reference/commands/
 ---
 
 

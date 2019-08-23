@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack output"
-expanded_url: /docs/reference/commands/
 ---
 
 

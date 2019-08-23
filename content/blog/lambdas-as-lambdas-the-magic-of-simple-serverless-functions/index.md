@@ -102,8 +102,8 @@ application code that runs as a function.
 First, we're just defining two simple resources: 1) an `s3.Bucket`,
 where we expect new video files to be uploaded to, and 2) a
 `cloud.Topic` that will inform interested parties when new videos are
-uploaded. (The full surface area of AWS is available in [the aws package]({{< ref "/docs/quickstart/aws" >}}), and
-[the cloud package]({{< ref "/docs/quickstart/cloudfx" >}}) offers
+uploaded. (The full surface area of AWS is available in [the aws package]({{< ref "/docs/get-started/aws" >}}), and
+[the cloud package]({{< ref "/docs/tutorials/cloudfx" >}}) offers
 multi-cloud abstractions that work at a higher level of abstraction.)
 Right after defining the resources, we start creating our first FaaS
 resources. `videoBucket` has an `onObjectCreated` event subscription
@@ -164,7 +164,7 @@ great compiler work underpinning them.
 So let's dig in -- how does this all really work?
 
 (Note that, if you want some of the more nitty gritty details, we have a
-[doc]({{< relref "/docs/reference/serializing-functions.md" >}})
+[doc]({{< relref "/docs/tutorials/aws/serializing-functions" >}})
 going in depth. For now, we'll try to stick to providing a high-level
 overview of what's going on, so that we can grok the basic approach.)
 

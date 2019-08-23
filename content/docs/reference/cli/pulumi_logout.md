@@ -1,6 +1,5 @@
 ---
 title: "pulumi logout"
-expanded_url: /docs/reference/commands/
 ---
 
 

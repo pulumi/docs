@@ -545,29 +545,29 @@ domains.
 Pulumi supports your existing CI systems. Here are a few of those
 supported:
 
-- [AWS Code Services]({{< ref "/docs/console/continuous-delivery/aws-code-services" >}})
-- [Azure DevOps]({{< ref "/docs/console/continuous-delivery/azure-devops" >}})
-- [CircleCI]({{< ref "/docs/console/continuous-delivery/circleci" >}})
-- [GitHub Actions]({{< ref "/docs/console/continuous-delivery/github-actions" >}})
-- [GitLab CI]({{< ref "/docs/console/continuous-delivery/gitlab-ci" >}})
-- [Google Cloud Build]({{< ref "/docs/console/continuous-delivery/google-cloud-build" >}})
-- [Travis]({{< ref "/docs/console/continuous-delivery/travis" >}})
+- [AWS Code Services]({{< ref "/docs/guides/continuous-delivery/aws-code-services" >}})
+- [Azure DevOps]({{< ref "/docs/guides/continuous-delivery/azure-devops" >}})
+- [CircleCI]({{< ref "/docs/guides/continuous-delivery/circleci" >}})
+- [GitHub Actions]({{< ref "/docs/guides/continuous-delivery/github-actions" >}})
+- [GitLab CI]({{< ref "/docs/guides/continuous-delivery/gitlab-ci" >}})
+- [Google Cloud Build]({{< ref "/docs/guides/continuous-delivery/google-cloud-build" >}})
+- [Travis]({{< ref "/docs/guides/continuous-delivery/travis" >}})
 
 Please refer to the
-[Continuous Delivery documentation]({{< ref "/docs/console/continuous-delivery" >}})) for a more
+[Continuous Delivery documentation]({{< ref "/docs/guides/continuous-delivery" >}})) for a more
 comprehensive guide.
 
 ## Ephemeral Environments
 
 A very powerful capability this unlocks is the ability to spin up
 ephemeral environments solely for purposes of acceptance testing.
-Pulumi's concept of [projects and stacks]({{< ref "/docs/reference/organizing-stacks-projects" >}}) is
+Pulumi's concept of [projects and stacks]({{< ref "/docs/intro/concepts/organizing-stacks-projects" >}}) is
 designed to make it very easy to stand up entirely isolated and
 independent environments, and to tear them down, all in either a few
 easy CLI gestures, or by using the integration testing framework.
 
 If you are using GitHub, Pulumi offers a
-[GitHub App]({{< ref "/docs/console/continuous-delivery/github-app" >}}) that helps to glue
+[GitHub App]({{< ref "/docs/guides/continuous-delivery/github-app" >}}) that helps to glue
 together your Pull Request workflow with this sort of acceptance testing
 run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with

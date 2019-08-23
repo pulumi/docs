@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/quickstart/
+redirect_to: /docs/get-started/
 ---

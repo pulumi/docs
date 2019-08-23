@@ -1,6 +1,5 @@
 ---
 title: "pulumi state delete"
-expanded_url: /docs/reference/commands/
 ---
 
 

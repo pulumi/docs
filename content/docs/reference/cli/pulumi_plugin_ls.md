@@ -1,6 +1,5 @@
 ---
 title: "pulumi plugin ls"
-expanded_url: /docs/reference/commands/
 ---
 
 

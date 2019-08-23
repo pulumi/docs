@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack select"
-expanded_url: /docs/reference/commands/
 ---
 
 

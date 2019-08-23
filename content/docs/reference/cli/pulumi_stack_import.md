@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack import"
-expanded_url: /docs/reference/commands/
 ---
 
 

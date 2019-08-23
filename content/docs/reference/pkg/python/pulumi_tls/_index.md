@@ -530,7 +530,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The provider type for the tls package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

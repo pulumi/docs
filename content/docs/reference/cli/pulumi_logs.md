@@ -1,6 +1,5 @@
 ---
 title: "pulumi logs"
-expanded_url: /docs/reference/commands/
 ---
 
 

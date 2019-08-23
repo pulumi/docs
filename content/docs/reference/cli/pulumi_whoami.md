@@ -1,6 +1,5 @@
 ---
 title: "pulumi whoami"
-expanded_url: /docs/reference/commands/
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "pulumi cancel"
-expanded_url: /docs/reference/commands/
 ---
 
 

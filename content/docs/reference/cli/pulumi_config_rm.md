@@ -1,6 +1,5 @@
 ---
 title: "pulumi config rm"
-expanded_url: /docs/reference/commands/
 ---
 
 

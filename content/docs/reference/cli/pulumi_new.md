@@ -1,6 +1,5 @@
 ---
 title: "pulumi new"
-expanded_url: /docs/reference/commands/
 ---
 
 

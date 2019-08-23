@@ -94,7 +94,7 @@ program.
 
 Pulumi does not offer direct access to the values contained within Outputs. Instead, you must use the `apply` function
 on the Output class in order to observe the value of an output. See
-`the documentation </docs/reference/programming-model/#outputs>`_ for more details on this part of the Pulumi programming model.
+`the documentation </docs/intro/concepts/programming-model/#outputs>`_ for more details on this part of the Pulumi programming model.
 
 .. autoclass:: pulumi.Output
     :members:

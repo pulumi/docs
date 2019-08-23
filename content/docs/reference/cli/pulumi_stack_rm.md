@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack rm"
-expanded_url: /docs/reference/commands/
 ---
 
 

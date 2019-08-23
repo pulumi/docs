@@ -41,14 +41,14 @@ build:
 test:
 	# We exclude some links:
 	#     - Our generated API docs have lots of broken links
-	#     - Our changelog includes links to private repos
+	#     - Our available versions page includes links to private repos
 	#     - GitHub Edit Links may be broken, because the page might not yet exist!
 	#     - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid)
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
 	./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
 		--exclude "/docs/reference/pkg" \
-		--exclude "/docs/reference/changelog" \
+		--exclude "/docs/get-started/install/versions" \
 		--exclude "https://api.pulumi.com/" \
 		--exclude "https://github.com/pulls?" \
 		--exclude "https://github.com/pulumi/docs/edit/master" \

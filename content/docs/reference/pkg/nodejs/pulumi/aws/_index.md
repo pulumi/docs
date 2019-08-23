@@ -14,8 +14,8 @@ Pulumi then uses to drive the AWS API.
 
 If this is your first time using this package, these two resources may be helpful:
 
-* [AWS Getting Started Guide](https://pulumi.com/docs/quickstart/aws): Get up and running quickly.
-* [AWS Pulumi Setup Documentation](https://www.pulumi.com/docs/quickstart/aws/configure/): How to configure Pulumi
+* [AWS Getting Started Guide](https://pulumi.com/docs/get-started/aws): Get up and running quickly.
+* [AWS Pulumi Setup Documentation](https://www.pulumi.com/docs/get-started/aws/configure/): How to configure Pulumi
     for use with your AWS account.
 
 Use the navigation below to see detailed documentation, including sample code, for each of the supported AWS services.
@@ -247,7 +247,7 @@ import * as aws from "@pulumi/aws";
 The provider type for the aws package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/index.html.markdown.
 
