@@ -1,28 +1,44 @@
 ---
-title: Plans and Editions
-
-aliases: ["/docs/console/accounts/editions/"]
+title: Pulumi Product Editions
 ---
 
-There are multiple subscription plans available to Pulumi organizations, each offering an expanding set
-of features and capabilities.
+Pulumi has multiple subscription plans available to organizations, each offering an
+expanding set
+of features and capabilities:
+
+* Pulumi Community Edition
+* Pulumi Team Edition
+   * Starter (includes 3 users)
+   * Pro (3-25 users)
+* Pulumi Enterprise Edition
 
 ## Pulumi Community Edition{#community-edition}
 
-When you sign into the Pulumi Cloud Console, an individual organization is created for you and
-automatically subscribed to the Pulumi Community edition. The Pulumi Community Edition is
-free forever for unlimited individual use.
+When you sign into the Pulumi Console, an individual organization is automatically
+created for your account and subscribed to the Pulumi Community edition. The Pulumi
+Community Edition is free forever for unlimited individual use.
 
-With your Community Edition organization, you can create an unlimited number of stacks, encrypt
-configuration and resource secrets, and browse stack history.
+With your Community Edition organization, you can create an unlimited number of stacks,
+encrypt configuration and resource secrets, and browse stack history.
 
-But if you want to collaborate with other developers or use advanced features such as requiring
-SAML SSO, you'll need to create a new Pulumi organization.
+But if you want to collaborate with other developers or use advanced features such as ones
+that require [SAML SSO]({{< relref "saml" >}}), you'll need to create a new Pulumi
+organization.
 
 ## Other Editions
 
-For more information about the specific differences and capabitlies offered for the Pulumi Team
-and Enterprise editions, refer to the [pricing page]({{< ref "/pricing" >}}).
+**Pulumi Team Starter** is ideal for teams just getting started deploying cloud
+applications and infrastructure.
 
-To create a new Pulumi organization with a new edition, see
-[creating a new organization]({{< relref "organizations#creating-a-new-organization" >}}).
+**Pulumi Team Pro** is ideal for medium to large teams using Pulumi for multiple projects
+or clouds.
+
+**Pulumi Enterprise Edition** is ideal for large organizations running cloud software at
+scale,
+with advanced or custom needs.
+
+For more information about the specific differences and capabilities offered for the
+Pulumi Team and Enterprise editions, refer to the [pricing page]({{< ref "/pricing" >}}).
+
+To create a new Pulumi organization with a new edition, see [creating a new
+organization]({{< relref "organizations#creating-a-new-organization" >}}).
