@@ -1011,8 +1011,22 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 					link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
 				} else if elements[0] == "inputs" || elements[0] == "inputApi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
+					// Strip out everything except first and last element.  This is necessary given
+					// the current structure of docs, but leads to losing precision on which member
+					// we are really trying to link to, as there may be multiple instances of the
+					// label on this page.  Eventually, we need to improve the doc generator to
+					// separate out these individual sub-namespaces into their own pages or to
+					// enrichen the link format to that we can link more precisely.
+					elements = append(elements[:1], elements[len(elements)-1])
 				} else if elements[0] == "outputs" || elements[0] == "outputApi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/output/"
+					// Strip out everything except first and last element.  This is necessary given
+					// the current structure of docs, but leads to losing precision on which member
+					// we are really trying to link to, as there may be multiple instances of the
+					// label on this page.  Eventually, we need to improve the doc generator to
+					// separate out these individual sub-namespaces into their own pages or to
+					// enrichen the link format to that we can link more precisely.
+					elements = append(elements[:1], elements[len(elements)-1])
 				}
 			}
 			if link != "" {
