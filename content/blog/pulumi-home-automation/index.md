@@ -7,7 +7,13 @@ date: "2019-08-26"
 meta_image: "feature.png"
 ---
 
-Let's say you have an internet gateway connected to your automatic garage door opener, and setup push notifications for when the door opens/closes. That keeps you informed about your garage door opening and closing no matter where you are. But what happens, when you forget to close it? Neither the app nor the existing recipes on the home automation website [IFTTT](https://ifttt.com) have a way to remind you that you left it open. In fact, my first attempt at solving this problem was to _not_ build something of my own, but instead try to use [Zapier](https://zapier.com), a task automation platform.
+Home automation is easier than ever with a plethora of IoT-connected devices enabling everyday appliances in your home to be internet-enabled. When you write a custom piece of integration for your IoT, often times deployment to the cloud becomes an afterthought, only become a nightmare when you actually want to update it later. With Pulumi, you don't have to worry about that anymore. You can develop your IoT integration app, as well as your deployment app.
+
+<!--more-->
+
+## The Garage Door Opener
+
+Say you have an internet hub connected to your automatic garage door opener, and setup push notifications for when the door opens/closes. Connecting your garage door will allow let you use a mobile app to remotely control your garage, as well as get notifications when it opens or closes. But what about when you forget to close it and it stays open? Neither the app nor the existing home automation recipes on the home automation website [IFTTT](https://ifttt.com) have a way to remind you that you left it open. In fact, my first attempt at solving this problem was to _not_ build something of my own, but instead try to use [Zapier](https://zapier.com), a task automation platform.
 
 **Note**: The source code for this post is available [here](https://github.com/praneetloke/GarageDoorMonitor).
 
@@ -128,3 +134,5 @@ A few things important things to note:
 - Entity functions (part of Durable Functions 2.x) are a preview feature, though, the Durable Function extensions (1.x) themselves is GA.
 - The KeyVault in the infrastructure is not necessary for a project like this, but it is very easy to create one with Pulumi. And with Azure's new Managed Identity, it is even easier to configure application access to secrets.
 - To learn more about security best practices on Azure, read [this](https://www.pulumi.com/blog/7-ways-to-deal-with-application-secrets-in-azure/) excellent post by [Mikhail Shilkov](https://www.pulumi.com/blog/author/mikhail-shilkov/).
+
+In the next post, we will take a closer look at the Pulumi app used to deploy our Azure Function App.
