@@ -66,7 +66,6 @@ import * as kubernetes from "@pulumi/kubernetes";
 <li><a href="scheduling">scheduling</a></li>
 <li><a href="settings">settings</a></li>
 <li><a href="storage">storage</a></li>
-<li><a href="types">types</a></li>
 <li><a href="yaml">yaml</a></li>
 </ul>
 </div>
