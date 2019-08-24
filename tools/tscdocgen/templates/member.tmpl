@@ -3,13 +3,19 @@
 </h2>
 <div class="pdoc-module-contents">
 {{#Extends}}
+{{=<% %>=}}{{< md-disable >}}<%={{ }}=%>
 <pre class="highlight">{{{Extends}}}</pre>
+{{=<% %>=}}{{< /md-disable >}}<%={{ }}=%>
 {{/Extends}}
 {{#Implements}}
+{{=<% %>=}}{{< md-disable >}}<%={{ }}=%>
 <pre class="highlight">{{{Implements}}}</pre>
+{{=<% %>=}}{{< /md-disable >}}<%={{ }}=%>
 {{/Implements}}
 {{#CodeDetails}}
+{{=<% %>=}}{{< md-disable >}}<%={{ }}=%>
 <pre class="highlight">{{{CodeDetails}}}</pre>
+{{=<% %>=}}{{< /md-disable >}}<%={{ }}=%>
 {{/CodeDetails}}
 {{#Comment.ShortText}}
 {{=<% %>=}}{{% md %}}<%={{ }}=%>
@@ -25,10 +31,12 @@
 {{>child}}
 {{/Children}}
 {{#Signatures}}
-{{=<% %>=}}{{% md %}}<%={{ }}=%>
 
+{{=<% %>=}}{{< md-disable >}}<%={{ }}=%>
 <pre class="highlight">{{{Label}}}</pre>
+{{=<% %>=}}{{< /md-disable >}}<%={{ }}=%>
 
+{{=<% %>=}}{{% md %}}<%={{ }}=%>
 {{#Comment.ShortText}}
 
 {{{Comment.ShortText}}}

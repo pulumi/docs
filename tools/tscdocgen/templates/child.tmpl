@@ -3,13 +3,17 @@
 </h3>
 <div class="pdoc-member-contents">
 {{#CodeDetails}}
+{{=<% %>=}}{{< md-disable >}}<%={{ }}=%>
 <pre class="highlight">{{{CodeDetails}}}</pre>
+{{=<% %>=}}{{< /md-disable >}}<%={{ }}=%>
 {{/CodeDetails}}
 {{#Signatures}}
-{{=<% %>=}}{{% md %}}<%={{ }}=%>
 
+{{=<% %>=}}{{< md-disable >}}<%={{ }}=%>
 <pre class="highlight">{{{Label}}}</pre>
+{{=<% %>=}}{{< /md-disable >}}<%={{ }}=%>
 
+{{=<% %>=}}{{% md %}}<%={{ }}=%>
 {{#Comment.ShortText}}
 
 {{{Comment.ShortText}}}
