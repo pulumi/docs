@@ -1,8 +1,8 @@
 ---
-title: "Home Automation with IFTTT, Twilio, Azure Durable Functions, and Pulumi"
+title: "Automating Home Automation Recipes"
 authors: ["praneet-loke"]
 tags: ["Azure", "Functions", "Durable Functions", "Durable Entities", "IFTTT", "Home Automation", "myQ", "Chamberlain", "Zapier", "Twilio"]
-date: "2019-08-20"
+date: "2019-08-26"
 
 meta_image: "feature.png"
 ---
