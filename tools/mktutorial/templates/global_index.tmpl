@@ -1,0 +1,68 @@
+<div class="language-prologue-javascript"></div>
+<table width=100%>
+    <thead>
+        <tr>
+            <th width=20%>Cloud</th>
+            <th width=*>Tutorial</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#JavaScriptTutorials}}
+        <tr>
+            <td>{{Cloud}}</td>
+            <td>
+                <a href="{{URL}}">{{Title}}</a>
+{{#Description}}
+                <p style="font-size: .875rem">{{.}}</p>
+{{/Description}}
+            </td>
+        </tr>
+{{/JavaScriptTutorials}}
+    </tbody>
+</table>
+
+<div class="language-prologue-typescript"></div>
+<table width=100%>
+    <thead>
+        <tr>
+            <th width=20%>Cloud</th>
+            <th width=*>Tutorial</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#TypeScriptTutorials}}
+        <tr>
+            <td>{{Cloud}}</td>
+            <td>
+                <a href="{{URL}}">{{Title}}</a></td>
+{{#Description}}
+                <p style="font-size: .875rem">{{.}}</p>
+{{/Description}}
+            </td>
+        </tr>
+{{/TypeScriptTutorials}}
+    </tbody>
+</table>
+
+<div class="language-prologue-python"></div>
+<table width=100%>
+    <thead>
+        <tr>
+            <th width=20%>Cloud</th>
+            <th width=*>Tutorial</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#PythonTutorials}}
+        <tr>
+            <td>{{Cloud}}</td>
+            <td>
+                <a href="{{URL}}">{{Title}}</a></td>
+{{#Description}}
+                <p style="font-size: .875rem">{{.}}</p>
+{{/Description}}
+            </td>
+        </tr>
+{{/PythonTutorials}}
+    </tbody>
+</table>

@@ -1,0 +1,89 @@
+<div class="language-prologue-javascript"></div>
+<table width=100%>
+    <thead>
+        <tr>
+            <th>Tutorial</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#JavaScriptTutorials}}
+        <tr>
+            <td>
+                <a href="{{URL}}">{{Title}}</a>
+{{#Description}}
+                <p style="font-size: .875rem">{{.}}</p>
+{{/Description}}
+            </td>
+        </tr>
+{{/JavaScriptTutorials}}
+{{^JavaScriptTutorials}}
+        <tr>
+            <td>
+                <p style="font-size: .875rem; color: crimson">
+                    Uh-oh! There are no JavaScript tutorials for this cloud :-(
+                </p>
+            </td>
+        </tr>
+{{/JavaScriptTutorials}}
+    </tbody>
+</table>
+
+<div class="language-prologue-typescript"></div>
+<table width=100%>
+    <thead>
+        <tr>
+            <th>Tutorial</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#TypeScriptTutorials}}
+        <tr>
+            <td>
+                <a href="{{URL}}">{{Title}}</a></td>
+{{#Description}}
+                <p style="font-size: .875rem">{{.}}</p>
+{{/Description}}
+            </td>
+        </tr>
+{{/TypeScriptTutorials}}
+{{^TypeScriptTutorials}}
+        <tr>
+            <td>
+                <p style="font-size: .875rem; color: crimson">
+                    Uh-oh! There are no TypeScript tutorials for this cloud :-(
+                </p>
+            </td>
+        </tr>
+{{/TypeScriptTutorials}}
+    </tbody>
+</table>
+
+<div class="language-prologue-python"></div>
+<table width=100%>
+    <thead>
+        <tr>
+            <th>Tutorial</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#PythonTutorials}}
+        <tr>
+            <td>
+                <a href="{{URL}}">{{Title}}</a></td>
+{{#Description}}
+                <p style="font-size: .875rem">{{.}}</p>
+{{/Description}}
+            </td>
+        </tr>
+{{/PythonTutorials}}
+{{^PythonTutorials}}
+        <tr>
+            <td>
+                <p style="font-size: .875rem; color: crimson">
+                    Uh-oh! There are no Python tutorials for this cloud :-(
+                </p>
+            </td>
+        </tr>
+{{/PythonTutorials}}
+    </tbody>
+</table>
