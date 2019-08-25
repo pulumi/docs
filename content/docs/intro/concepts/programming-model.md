@@ -769,7 +769,38 @@ url = Output.concat("http://", hostname, ":", post, "/")
 
 ## Secrets {#secrets}
 
-When constructing resources, Pulumi will record all inputs and outputs from a resource to its _state file_.  Some of these properties may contain sensitive data, which should be encrypted before being stored in the state file. For example, consider the following program which creates an AWS Parameter Store parameter.
+Pulumi records all resource inputs and outputs in a [state file]({{< relref "state.md" >}}). These may contain sensitive data, such as database passwords or service tokens. The CLI's `config set` command offers the `--secret` flag to encrypt configuration settings, which is where most sensitive data comes from; however, you might also create such data at runtime. In both cases, you can ensure that these secrets do not appear as plaintext in your state file by using programmatic functions described below. By default, these use automatic per-stack encryption keys provided by the Pulumi Service, however you can use a provider of your own choosing.
+
+> This topic concerns itself with the programming model for secrets. If you'd like a more complete overview, including
+> how and when to use the CLI commands mentioned above, configuring your own secrets provider, and more, refer to
+> [Configuration and Secrets]({{< relref "config" >}}).
+
+### Programmatically Creating Secrets
+
+There are two ways to programmatically create secret values:
+
+{{< langchoose >}}
+
+<div class="language-prologue-javascript"></div>
+
+- Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
+- Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+
+<div class="language-prologue-typescript"></div>
+
+- Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
+- Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+
+<div class="language-prologue-python"></div>
+
+- Using [`get_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}}) or [`require_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}) when reading a value from config.
+- Calling [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}} to construct a secret from an existing value.
+
+<div class="language-prologue-go"></div>
+
+Secrets are not yet available in Go. See <https://github.com/pulumi/pulumi/issues/2820>.
+
+To illustrate using these functions, this code creates an AWS Parameter Store parameter insecurely:
 
 {{< langchoose >}}
 
@@ -802,12 +833,9 @@ param = ssm.Parameter("a-secret-param",
 // See https://github.com/pulumi/pulumi/issues/2820
 ```
 
-As written, the _state file_ for this program will show the plaintext value of the "my-secret-value" configuration variable as an input to the `Parameter` resource.  Pulumi provides a way to mark a value as "secret" such that if stored in the state file, it will be encrypted in the same way secret configuration values are.  There are two ways to create secret values:
+As written, this program's state will include the plaintext value of the `my-secret-value` configuration variable in `a-secret-param`'s input properties.
 
-- By calling `requireSecret` or `getSecret` (JavaScript) or `require_secret` or `get_secret` (Python) when reading a value from config, or
-- By using `pulumi.secret` (JavaScript) or `Output.secret` (Python) to construct a secret from an existing value.
-
-We can change the previous example to look like the following:
+To fix this, we can use one of the above methods, ensuring the resulting data is encrypted in the state file the same way it was in the configuration that we read it from:
 
 {{< langchoose >}}
 
@@ -840,15 +868,25 @@ param = ssm.Parameter("a-secret-param",
 // See https://github.com/pulumi/pulumi/issues/2820
 ```
 
-With this change, the value property of the `Parameter` resource will now be encrypted in the _state file_.
+After this change, the `Parameter` resource's `value` property will be encrypted in the state file.
 
-Secrets behave just like normal Outputs in Pulumi, with `Output` as their type. The only difference is that they are marked internally as needed to be encrypted before being persisted in the _state file_. When you combine an existing Output that is marked as a secret (either via `apply` or `all`) with out values, the resulting Output is also marked as a secret.
+> Pulumi tracks the transitive usage of secrets, so that your secret won't end up accidentally leaking into
+> the state file. This includes automatically marking data generated from secret inputs itself as secret, as
+> well as fully encrypting any resource properties that include secrets in them.
 
-> __Note__: During an `apply`, you have access to the raw value of the underlying secret.  While Pulumi ensures that the value returned from an `apply` is marked as secret, it cannot enforce that any work done inside the `apply` itself will not leak the secret value.  For example, inside an apply, you could explicitly make a call to print the value to the console or save it to a file. Because of this, care must be taken inside the apply to ensure your code does not cause the value to be leaked.
+### How Secrets Relate to Outputs
 
-> Unlike regular Outputs, secret outputs cannot be captured by Pulumi closure serialization system and attempting to do so will lead to an exception. We do plan to support this once we can ensure that the values will be persisted securely. See [pulumi/pulumi#2718](https://github.com/pulumi/pulumi/issues/2718)).
+Secrets have the same type `Output` as do other unencrypted resource outputs. The difference is that they are marked internally as needing encryption before persisting in the state file. When you combine an existing output that is marked as a secret using `apply` or `all`, the resulting output is also marked as a secret.
 
-While Pulumi ensures that any outputs of a resource which have coresponding secret inputs are marked as secrets, there may be additional outputs that you wish to mark as secrets. In this case, you can pass the `additionalSecretOutputs` option for JavaScript or `additional_secret_outputs` for Python when creating a resource to ensure these extra output values are encrypted before being stored in the _state file_.
+An `apply`'s callback is given the plaintext value of the underlying secret. Although Pulumi ensures that the value returned from an `apply` on a secret is also marked as secret, Pulumi cannot enforce that the `apply` callback itself will not expose the secret value, for instance by explicitly printing the value to the console or saving it to a file. Be careful that you do not pass this plaintext value to code that might intentionally or accidentally expose it.
+
+> Unlike regular outputs, secrets cannot be captured by Pulumi closure serialization system for use in serverless code. Attempting to do so will lead to an exception. We do plan to support this once we can ensure that the values will be persisted securely. See [pulumi/pulumi#2718](https://github.com/pulumi/pulumi/issues/2718).
+
+### Explicitly Marking Resource Outputs as Secrets
+
+It is possible to mark resource outputs as containg secrets. In this case, Pulumi will automatically treat those outputs
+as secrets and encrypt them in the state file and anywhere they flow to. To do so,
+[use the "additional secret outputs" option, as described above]({{< relref "#additionalsecretoutputs" >}}).
 
 ## Stack outputs {#stack-outputs}
 
