@@ -696,10 +696,10 @@ Use this data source to access information about an existing Scheduler Job Colle
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.scheduler.getJobCollection({
+const test = azure.scheduler.getJobCollection({
     name: "tfex-job-collection",
     resourceGroupName: "tfex-job-collection-rg",
-}));
+});
 
 export const jobCollectionState = azurerm_scheduler_job_collection_jobs.state;
 ```

@@ -2438,10 +2438,10 @@ Use this data source to access information about an existing Storage Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.storage.getAccount({
+const test = azure.storage.getAccount({
     name: "packerimages",
     resourceGroupName: "packer-storage",
-}));
+});
 
 export const storageAccountTier = test.accountTier;
 ```

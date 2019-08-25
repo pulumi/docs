@@ -758,9 +758,9 @@ compute environment within AWS Batch.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const batchMongo = pulumi.output(aws.batch.getComputeEnvironment({
+const batchMongo = aws.batch.getComputeEnvironment({
     computeEnvironmentName: "batch-mongo-production",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown.
@@ -785,9 +785,9 @@ job queue within AWS Batch.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testQueue = pulumi.output(aws.batch.getJobQueue({
+const testQueue = aws.batch.getJobQueue({
     name: "tf-test-batch-job-queue",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown.

@@ -166,7 +166,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/dataGroup.ts#L38" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -190,7 +190,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/dataGroup.ts#L38" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -238,7 +238,7 @@ datagroup type (applies to the `name` field of the record), supports: `string`, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/dataGroup.ts#L38" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -296,7 +296,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/iRule.ts#L14" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -320,7 +320,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/iRule.ts#L14" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -354,7 +354,7 @@ Name of the iRule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/iRule.ts#L14" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -408,7 +408,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/monitor.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -498,7 +498,7 @@ Specifies the full path and file name of the file that the system attempts to do
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/monitor.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -652,7 +652,7 @@ Timeout in seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/monitor.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -717,7 +717,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -788,7 +788,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -845,7 +845,7 @@ Default is "user-up" you can set to "user-down" if you want to disable
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -899,7 +899,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileCookie-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileCookie.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1030,7 +1030,7 @@ To enable _ disable sending only over http
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileCookie-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileCookie.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1120,7 +1120,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileCookie-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileCookie.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1174,7 +1174,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileDstAddr-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileDstAddr.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1228,7 +1228,7 @@ Specify the hash algorithm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileDstAddr-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileDstAddr.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1330,7 +1330,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileDstAddr-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileDstAddr.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1384,7 +1384,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSrcAddr-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSrcAddr.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1438,7 +1438,7 @@ Specify the hash algorithm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSrcAddr-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSrcAddr.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1551,7 +1551,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSrcAddr-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSrcAddr.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1605,7 +1605,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSsl-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSsl.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1648,7 +1648,7 @@ Inherit defaults from parent profile
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSsl-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSsl.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1738,7 +1738,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSsl-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSsl.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1796,7 +1796,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L14" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1831,7 +1831,7 @@ Specifies the controls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L14" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2096,7 +2096,7 @@ Specifies the match strategy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L14" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2150,7 +2150,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2196,7 +2196,7 @@ Allow SNAT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2274,7 +2274,7 @@ Slow ramp time for pool members
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2328,7 +2328,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolAttachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/poolAttachment.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2352,7 +2352,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolAttachment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/poolAttachment.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2386,7 +2386,7 @@ Name of the pool in /Partition/Name format
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolAttachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/poolAttachment.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2466,7 +2466,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastHttp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastHttp.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2578,7 +2578,7 @@ Specifies whether to rewrite the HTTP version in the status line of the server t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastHttp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastHttp.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2623,7 +2623,7 @@ Name of the profile_fasthttp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastHttp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastHttp.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2702,7 +2702,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastL4-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastL4.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2770,7 +2770,7 @@ Enables or disables hardware SYN cookie support when PVA10 is present on the sys
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastL4-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastL4.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2848,7 +2848,7 @@ Displays the administrative partition within which this profile resides
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastL4-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastL4.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2926,7 +2926,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3072,7 +3072,7 @@ Specifies a quoted header string that you want to insert into an HTTP request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3206,7 +3206,7 @@ Displays the administrative partition within which this profile resides.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3327,7 +3327,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp2-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp2.ts#L33" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3406,7 +3406,7 @@ Use the parent Http2 profile
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp2-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp2.ts#L33" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3429,7 +3429,7 @@ Name of the profile_http2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp2-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp2.ts#L33" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3507,7 +3507,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttpCompress-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttpCompress.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3564,7 +3564,7 @@ Specifies the profile that you want to use as the parent profile. Your new profi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttpCompress-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttpCompress.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3609,7 +3609,7 @@ Enables compression on a specified list of HTTP Request-URI responses. Use a reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttpCompress-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttpCompress.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3687,7 +3687,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileOneConnect-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileOneConnect.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3722,7 +3722,7 @@ Specifies the profile that you want to use as the parent profile. Your new profi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileOneConnect-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileOneConnect.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3822,7 +3822,7 @@ Specifies a source IP mask. The default value is 0.0.0.0. The system applies the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileOneConnect-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileOneConnect.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3899,7 +3899,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileTcp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileTcp.ts#L33" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3989,7 +3989,7 @@ Specifies the number of seconds that a connection is in the FIN-WAIT-1 or closin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileTcp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileTcp.ts#L33" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4045,7 +4045,7 @@ Displays the administrative partition within which this profile resides
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileTcp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileTcp.ts#L33" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4121,7 +4121,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Snat-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snat.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4167,7 +4167,7 @@ Fullpath
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Snat-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snat.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4259,7 +4259,7 @@ Specifies the name of a translated IP address. Note that translated addresses ar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Snat-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snat.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4356,7 +4356,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnatPool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snatPool.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4380,7 +4380,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnatPool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snatPool.ts#L31" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4414,7 +4414,7 @@ Name of the snatpool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnatPool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snatPool.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4486,7 +4486,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualAddress-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualAddress.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4576,7 +4576,7 @@ Enable/Disable ICMP response to the virtual address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualAddress-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualAddress.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4610,7 +4610,7 @@ Specify the partition and traffic group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualAddress-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualAddress.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4664,7 +4664,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4721,7 +4721,7 @@ Specifies a fallback persistence profile for the Virtual Server to use when the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4892,7 +4892,7 @@ Enables or disables port translation. Turn port translation off for a virtual se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

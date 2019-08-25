@@ -52,7 +52,7 @@ release notes for more information. DaemonSet represents the configuration of a 
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.DaemonSet, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DaemonSet'>inputApi.extensions.v1beta1.DaemonSet</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.DaemonSet resource with the given unique name, arguments, and options.
@@ -148,7 +148,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DaemonSet.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -160,7 +160,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DaemonSet.ts#L40" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.DaemonSetSpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonSetSpec'>outputApi.extensions.v1beta1.DaemonSetSpec</a>&gt;;</pre>
 {{% md %}}
 
 The desired behavior of this daemon set. More info:
@@ -172,7 +172,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DaemonSet.ts#L47" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.DaemonSetStatus&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonSetStatus'>outputApi.extensions.v1beta1.DaemonSetStatus</a>&gt;;</pre>
 {{% md %}}
 
 The current status of this daemon set. This data may be out of date by some window of time.
@@ -210,7 +210,7 @@ DaemonSetList is a collection of daemon sets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.DaemonSetList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DaemonSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DaemonSetList'>inputApi.extensions.v1beta1.DaemonSetList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.DaemonSetList resource with the given unique name, arguments, and options.
@@ -292,7 +292,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DaemonSetList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.DaemonSet[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonSet'>outputApi.extensions.v1beta1.DaemonSet</a>[]&gt;;</pre>
 {{% md %}}
 
 A list of daemon sets.
@@ -317,7 +317,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DaemonSetList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -356,7 +356,7 @@ ReplicaSets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Deployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.Deployment, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Deployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Deployment'>inputApi.extensions.v1beta1.Deployment</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.Deployment resource with the given unique name, arguments, and options.
@@ -452,7 +452,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/Deployment.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object metadata.
@@ -463,7 +463,7 @@ Standard object metadata.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/Deployment.ts#L39" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.DeploymentSpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentSpec'>outputApi.extensions.v1beta1.DeploymentSpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the desired behavior of the Deployment.
@@ -474,7 +474,7 @@ Specification of the desired behavior of the Deployment.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/Deployment.ts#L44" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.DeploymentStatus&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentStatus'>outputApi.extensions.v1beta1.DeploymentStatus</a>&gt;;</pre>
 {{% md %}}
 
 Most recently observed status of the Deployment.
@@ -510,7 +510,7 @@ DeploymentList is a list of Deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DeploymentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.DeploymentList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DeploymentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentList'>inputApi.extensions.v1beta1.DeploymentList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.DeploymentList resource with the given unique name, arguments, and options.
@@ -592,7 +592,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DeploymentList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.Deployment[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Deployment'>outputApi.extensions.v1beta1.Deployment</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of Deployments.
@@ -617,7 +617,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/DeploymentList.ts#L37" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata.
@@ -657,7 +657,7 @@ release notes for more information.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.Ingress, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Ingress'>inputApi.extensions.v1beta1.Ingress</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.Ingress resource with the given unique name, arguments, and options.
@@ -753,7 +753,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/Ingress.ts#L37" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -765,7 +765,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/Ingress.ts#L43" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.IngressSpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressSpec'>outputApi.extensions.v1beta1.IngressSpec</a>&gt;;</pre>
 {{% md %}}
 
 Spec is the desired state of the Ingress. More info:
@@ -777,7 +777,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/Ingress.ts#L49" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.IngressStatus&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressStatus'>outputApi.extensions.v1beta1.IngressStatus</a>&gt;;</pre>
 {{% md %}}
 
 Status is the current state of the Ingress. More info:
@@ -814,7 +814,7 @@ IngressList is a collection of Ingress.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IngressList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.IngressList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IngressList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressList'>inputApi.extensions.v1beta1.IngressList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.IngressList resource with the given unique name, arguments, and options.
@@ -896,7 +896,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/IngressList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.Ingress[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Ingress'>outputApi.extensions.v1beta1.Ingress</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of Ingress.
@@ -921,7 +921,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/IngressList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -960,7 +960,7 @@ set of Pods
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.NetworkPolicy, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicy'>inputApi.extensions.v1beta1.NetworkPolicy</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.NetworkPolicy resource with the given unique name, arguments, and options.
@@ -1056,7 +1056,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/NetworkPolicy.ts#L35" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -1068,7 +1068,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/NetworkPolicy.ts#L40" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.NetworkPolicySpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicySpec'>outputApi.extensions.v1beta1.NetworkPolicySpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the desired behavior for this NetworkPolicy.
@@ -1105,7 +1105,7 @@ networking/v1/NetworkPolicyList. Network Policy List is a list of NetworkPolicy 
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.NetworkPolicyList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicyList'>inputApi.extensions.v1beta1.NetworkPolicyList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.NetworkPolicyList resource with the given unique name, arguments, and options.
@@ -1187,7 +1187,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/NetworkPolicyList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.NetworkPolicy[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicy'>outputApi.extensions.v1beta1.NetworkPolicy</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is a list of schema objects.
@@ -1212,7 +1212,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/NetworkPolicyList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -1251,7 +1251,7 @@ Group instead.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.PodSecurityPolicy, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicy'>inputApi.extensions.v1beta1.PodSecurityPolicy</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.PodSecurityPolicy resource with the given unique name, arguments, and options.
@@ -1347,7 +1347,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/PodSecurityPolicy.ts#L35" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -1359,7 +1359,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/PodSecurityPolicy.ts#L40" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.PodSecurityPolicySpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicySpec'>outputApi.extensions.v1beta1.PodSecurityPolicySpec</a>&gt;;</pre>
 {{% md %}}
 
 spec defines the policy enforced.
@@ -1396,7 +1396,7 @@ PodSecurityPolicyList from policy API Group instead.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.PodSecurityPolicyList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicyList'>inputApi.extensions.v1beta1.PodSecurityPolicyList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.PodSecurityPolicyList resource with the given unique name, arguments, and options.
@@ -1478,7 +1478,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/PodSecurityPolicyList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.PodSecurityPolicy[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicy'>outputApi.extensions.v1beta1.PodSecurityPolicy</a>[]&gt;;</pre>
 {{% md %}}
 
 items is a list of schema objects.
@@ -1503,7 +1503,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/PodSecurityPolicyList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -1542,7 +1542,7 @@ replicas are running at any given time.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.ReplicaSet, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ReplicaSet'>inputApi.extensions.v1beta1.ReplicaSet</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.ReplicaSet resource with the given unique name, arguments, and options.
@@ -1638,7 +1638,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/ReplicaSet.ts#L36" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 If the Labels of a ReplicaSet are empty, they are defaulted to be the same as the Pod(s)
@@ -1651,7 +1651,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/ReplicaSet.ts#L42" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.ReplicaSetSpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ReplicaSetSpec'>outputApi.extensions.v1beta1.ReplicaSetSpec</a>&gt;;</pre>
 {{% md %}}
 
 Spec defines the specification of the desired behavior of the ReplicaSet. More info:
@@ -1663,7 +1663,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/ReplicaSet.ts#L49" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.ReplicaSetStatus&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ReplicaSetStatus'>outputApi.extensions.v1beta1.ReplicaSetStatus</a>&gt;;</pre>
 {{% md %}}
 
 Status is the most recently observed status of the ReplicaSet. This data may be out of date
@@ -1701,7 +1701,7 @@ ReplicaSetList is a collection of ReplicaSets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.extensions.v1beta1.ReplicaSetList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicaSetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ReplicaSetList'>inputApi.extensions.v1beta1.ReplicaSetList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a extensions.v1beta1.ReplicaSetList resource with the given unique name, arguments, and options.
@@ -1783,7 +1783,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/ReplicaSetList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.extensions.v1beta1.ReplicaSet[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ReplicaSet'>outputApi.extensions.v1beta1.ReplicaSet</a>[]&gt;;</pre>
 {{% md %}}
 
 List of ReplicaSets. More info:
@@ -1809,7 +1809,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="extensions/v1beta1/ReplicaSetList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

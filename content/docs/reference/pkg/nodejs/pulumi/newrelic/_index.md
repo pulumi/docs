@@ -150,7 +150,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertChannel-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertChannel.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -185,7 +185,7 @@ A map of key / value pairs with channel type specific values.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertChannel-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertChannel.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -219,7 +219,7 @@ The type of channel.  One of: `campfire`, `email`, `hipchat`, `opsgenie`, `pager
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertChannel-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertChannel.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -244,9 +244,9 @@ deployments.
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const app = pulumi.output(newrelic.getApplication({
+const app = newrelic.getApplication({
     name: "my-app",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertCondition = new newrelic.AlertCondition("foo", {
     entities: [app.id],
@@ -309,7 +309,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertCondition.ts#L46" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -374,7 +374,7 @@ A valid Garbage Collection metric e.g. `GC/G1 Young Generation`. This is require
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertCondition.ts#L46" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -458,7 +458,7 @@ The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertCondition.ts#L46" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -554,7 +554,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertPolicy.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -589,7 +589,7 @@ The time the policy was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertPolicy.ts#L19" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -634,7 +634,7 @@ The time the policy was last updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertPolicy.ts#L19" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -708,7 +708,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyChannel-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertPolicyChannel.ts#L30" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -743,7 +743,7 @@ The ID of the channel.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyChannel-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertPolicyChannel.ts#L30" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -766,7 +766,7 @@ The ID of the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyChannel-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="alertPolicyChannel.ts#L30" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -820,7 +820,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="dashboard.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -885,7 +885,7 @@ The icon for the dashboard.  Defaults to `bar-chart`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="dashboard.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -908,7 +908,7 @@ The title of the dashboard.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="dashboard.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1023,7 +1023,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertCondition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="infraAlertCondition.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1103,7 +1103,7 @@ The metric event; for example, system metrics, process metrics, storage metrics,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertCondition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="infraAlertCondition.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1189,7 +1189,7 @@ The type of Infrastructure alert condition: "infra_process_running", "infra_metr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertCondition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="infraAlertCondition.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1312,7 +1312,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertCondition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="nrqlAlertCondition.ts#L53" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1347,7 +1347,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertCondition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="nrqlAlertCondition.ts#L53" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1423,7 +1423,7 @@ A list of terms for this condition. See Terms below for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertCondition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="nrqlAlertCondition.ts#L53" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1479,7 +1479,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="provider.ts#L15" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1503,7 +1503,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="provider.ts#L15" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1515,7 +1515,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="provider.ts#L15" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1544,9 +1544,9 @@ Use this data source to get information about an specific alert channel in New R
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const fooAlertChannel = pulumi.output(newrelic.getAlertChannel({
+const fooAlertChannel = newrelic.getAlertChannel({
     name: "foo@example.com",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
     channelId: newrelic_alert_channel_foo.id,
@@ -1575,12 +1575,12 @@ Use this data source to get information about an specific alert policy in New Re
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const fooAlertChannel = pulumi.output(newrelic.getAlertChannel({
+const fooAlertChannel = newrelic.getAlertChannel({
     name: "foo@example.com",
-}));
-const fooAlertPolicy = pulumi.output(newrelic.getAlertPolicy({
+});
+const fooAlertPolicy = newrelic.getAlertPolicy({
     name: "foo policy",
-}));
+});
 const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
     channelId: fooAlertChannel.id,
     policyId: fooAlertPolicy.id,
@@ -1608,9 +1608,9 @@ Use this data source to get information about a specific application in New Reli
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const app = pulumi.output(newrelic.getApplication({
+const app = newrelic.getApplication({
     name: "my-app",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertCondition = new newrelic.AlertCondition("foo", {
     entities: [app.id],
@@ -1679,9 +1679,9 @@ Use this data source to get information about a specific key transaction in New 
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const txn = pulumi.output(newrelic.getKeyTransaction({
+const txn = newrelic.getKeyTransaction({
     name: "txn",
-}));
+});
 const fooAlertPolicy = new newrelic.AlertPolicy("foo", {});
 const fooAlertCondition = new newrelic.AlertCondition("foo", {
     entities: [txn.id],

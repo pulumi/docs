@@ -3111,6 +3111,164 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Ec2MetricChange-color">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The six-digit HTML hex color code to be used for this metric.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-dimensions">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{% md %}}
+
+The new dimension for this metric.  If this object is missing this property, then no change
+will be made.  However, if the property is there by set to [undefined] then the value will be
+cleared.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-extendedStatistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new percentile statistic for the metric associated with the alarm.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-imageId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L39" >}}">property <b>imageId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>imageId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+This dimension filters the data you request for all instances running this Amazon EC2
+Amazon Machine Image (AMI). Available for instances with Detailed Monitoring enabled.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-instance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L33" >}}">property <b>instance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>instance?: aws.ec2.Instance;</pre>
+{{% md %}}
+
+Optional [Instance] this metric should be filtered down to.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-instanceType">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L48" >}}">property <b>instanceType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>instanceType?: aws.ec2.InstanceType;</pre>
+{{% md %}}
+
+This dimension filters the data you request for all instances running with this specified
+instance type. This helps you categorize your data by the type of instance running. For
+example, you might compare data from an m1.small instance and an m1.large instance to
+determine which has the better business value for your application. Available for
+instances with Detailed Monitoring enabled.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-label">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The label to display for this metric in the graph legend. If this is not specified, the
+metric is given an autogenerated label that distinguishes it from the other metrics in the
+widget.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-period">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new period in seconds over which the specified `stat` is applied.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default (300s).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-statistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{% md %}}
+
+The new statistic to apply to the alarm's associated metric.  If this object is missing this
+property, then no change will be made.  However, if the property is there by set to
+[undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-unit">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{% md %}}
+
+The new unit for this metric.   If this object is missing this property, then no change will
+be made.  However, if the property is there by set to [undefined] then the value will be set
+to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-visible">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{% md %}}
+
+Set this to true to have the metric appear in the graph, or false to have it be hidden. The
+default is true.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Ec2MetricChange-yAxis">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{% md %}}
+
+Where on the graph to display the y-axis for this metric. The default is left.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="Ec2MetricName">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L21" >}}">type <b>Ec2MetricName</b></a>

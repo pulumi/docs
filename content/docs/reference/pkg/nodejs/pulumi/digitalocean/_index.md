@@ -3842,9 +3842,9 @@ You can also create a volume from an existing snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const foobarVolumeSnapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+const foobarVolumeSnapshot = digitalocean.getVolumeSnapshot({
     name: "baz",
-}));
+});
 const foobarVolume = new digitalocean.Volume("foobar", {
     region: "lon1",
     size: foobarVolumeSnapshot.minDiskSize,
@@ -4389,9 +4389,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
 // Create a new database cluster
-const example = pulumi.output(digitalocean.DatabaseCluster({
+const example = digitalocean.getDatabaseCluster({
     name: "example-cluster",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown.
@@ -4445,11 +4445,11 @@ Get the Droplet snapshot:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const webSnapshot = pulumi.output(digitalocean.getDropletSnapshot({
+const webSnapshot = digitalocean.getDropletSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown.
@@ -4621,11 +4621,11 @@ Get the volume snapshot:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+const snapshot = digitalocean.getVolumeSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}));
+});
 ```
 
 Reuse the data about a volume snapshot to create a new volume based on it:
@@ -4634,11 +4634,11 @@ Reuse the data about a volume snapshot to create a new volume based on it:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+const snapshot = digitalocean.getVolumeSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-}));
+});
 const foobar = new digitalocean.Volume("foobar", {
     region: "nyc3",
     size: 100,

@@ -71,11 +71,11 @@ const cloudhsm2Vpc = new aws.ec2.Vpc("cloudhsm2Vpc", {
         Name: "example-aws_cloudhsm_v2_cluster",
     },
 });
-const available = pulumi.output(aws.getAvailabilityZones({}));
+const available = aws.getAvailabilityZones({});
 const cloudhsm2Subnets: aws.ec2.Subnet[] = [];
 for (let i = 0; i < 2; i++) {
     cloudhsm2Subnets.push(new aws.ec2.Subnet(`cloudhsm2_subnets-${i}`, {
-        availabilityZone: available.apply(available => available.names[i]),
+        availabilityZone: available.names[i],
         cidrBlock: var_subnets[i],
         mapPublicIpOnLaunch: false,
         tags: {
@@ -303,12 +303,12 @@ The following example below creates an HSM module in CloudHSM cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
+const cluster = aws.cloudhsmv2.getCluster({
     clusterId: var_cloudhsm_cluster_id,
-}));
+});
 const cloudhsmV2Hsm = new aws.cloudhsmv2.Hsm("cloudhsmV2Hsm", {
     clusterId: cluster.clusterId,
-    subnetId: cluster.apply(cluster => cluster.subnetIds[0]),
+    subnetId: cluster.subnetIds[0],
 });
 ```
 
@@ -489,9 +489,9 @@ Use this data source to get information about a CloudHSM v2 cluster
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
+const cluster = aws.cloudhsmv2.getCluster({
     clusterId: "cluster-testclusterid",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudhsm_v2_cluster.html.markdown.

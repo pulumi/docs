@@ -4379,9 +4379,9 @@ Provides information about a RDS cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const clusterName = pulumi.output(aws.rds.getCluster({
+const clusterName = aws.rds.getCluster({
     clusterIdentifier: "clusterName",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown.
@@ -4408,10 +4408,10 @@ See the [`aws.rds.Snapshot` data source](https://www.terraform.io/docs/providers
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const developmentFinalSnapshot = pulumi.output(aws.rds.getClusterSnapshot({
+const developmentFinalSnapshot = aws.rds.getClusterSnapshot({
     dbClusterIdentifier: "developmentCluster",
     mostRecent: true,
-}));
+});
 // Use the last snapshot of the dev database before it was destroyed to create
 // a new dev database.
 const auroraCluster = new aws.rds.Cluster("aurora", {
@@ -4447,7 +4447,7 @@ List the event categories of all the RDS resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({}));
+const exampleEventCategories = aws.rds.getEventCategories({});
 
 export const example = exampleEventCategories.eventCategories;
 ```
@@ -4458,9 +4458,9 @@ List the event categories specific to the RDS resource `db-snapshot`.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({
+const exampleEventCategories = aws.rds.getEventCategories({
     sourceType: "db-snapshot",
-}));
+});
 
 export const example = exampleEventCategories.eventCategories;
 ```
@@ -4486,9 +4486,9 @@ Use this data source to get information about an RDS instance
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const database = pulumi.output(aws.rds.getInstance({
+const database = aws.rds.getInstance({
     dbInstanceIdentifier: "my-test-database",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown.

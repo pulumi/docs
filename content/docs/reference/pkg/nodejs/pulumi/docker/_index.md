@@ -1252,9 +1252,9 @@ const ubuntu = new docker.RemoteImage("ubuntu", {});
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
 
-const ubuntuRegistryImage = pulumi.output(docker.RegistryImage({
+const ubuntuRegistryImage = docker.RegistryImage({
     name: "ubuntu:precise",
-}));
+});
 const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
     pullTriggers: [ubuntuRegistryImage.sha256Digest],
 });

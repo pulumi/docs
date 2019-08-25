@@ -2987,7 +2987,7 @@ The following example shows how one might use this data source to access account
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const account = pulumi.output(linode.getAccount({}));
+const account = linode.getAccount({});
 ```
 
 ## Attributes
@@ -3041,12 +3041,12 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const bar = pulumi.output(linode.getDomain({
+const bar = linode.getDomain({
     domain: "bar.example.com",
-}));
-const foo = pulumi.output(linode.getDomain({
+});
+const foo = linode.getDomain({
     id: "1234567",
-}));
+});
 ```
 
 ## Attributes
@@ -3134,9 +3134,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const k8Master = pulumi.output(linode.getImage({
+const k8Master = linode.getImage({
     id: "linode/debian8",
-}));
+});
 ```
 
 ## Attributes
@@ -3184,9 +3184,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const defaultInstanceType = pulumi.output(linode.getInstanceType({
+const defaultInstanceType = linode.getInstanceType({
     id: "g6-standard-2",
-}));
+});
 ```
 
 ## Attributes
@@ -3232,9 +3232,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const ns1LinodeCom = pulumi.output(linode.NetworkIp({
+const ns1LinodeCom = linode.NetworkIp({
     address: "162.159.27.72",
-}));
+});
 ```
 
 ## Attributes
@@ -3282,7 +3282,7 @@ The following example shows how one might use this data source to access profile
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const profile = pulumi.output(linode.getProfile({}));
+const profile = linode.getProfile({});
 ```
 
 ## Attributes
@@ -3344,9 +3344,9 @@ The following example shows how the resource might be used to obtain additional 
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const region = pulumi.output(linode.getRegion({
+const region = linode.getRegion({
     id: "us-east",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.markdown.
@@ -3372,9 +3372,9 @@ The following example shows how the resource might be used to obtain the name of
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = pulumi.output(linode.getSshKey({
+const foo = linode.getSshKey({
     label: "foo",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.markdown.
@@ -3400,9 +3400,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = pulumi.output(linode.getUser({
+const foo = linode.getUser({
     username: "foo",
-}));
+});
 ```
 
 ## Attributes

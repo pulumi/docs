@@ -44,7 +44,7 @@ collection of pods
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodDisruptionBudget, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDisruptionBudget'>inputApi.policy.v1beta1.PodDisruptionBudget</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a policy.v1beta1.PodDisruptionBudget resource with the given unique name, arguments, and options.
@@ -140,7 +140,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodDisruptionBudget.ts#L31" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -148,7 +148,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodDisruptionBudget.ts#L36" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodDisruptionBudgetSpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDisruptionBudgetSpec'>outputApi.policy.v1beta1.PodDisruptionBudgetSpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the desired behavior of the PodDisruptionBudget.
@@ -159,7 +159,7 @@ Specification of the desired behavior of the PodDisruptionBudget.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodDisruptionBudget.ts#L41" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodDisruptionBudgetStatus&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDisruptionBudgetStatus'>outputApi.policy.v1beta1.PodDisruptionBudgetStatus</a>&gt;;</pre>
 {{% md %}}
 
 Most recently observed status of the PodDisruptionBudget.
@@ -195,7 +195,7 @@ PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudgetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodDisruptionBudgetList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudgetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDisruptionBudgetList'>inputApi.policy.v1beta1.PodDisruptionBudgetList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a policy.v1beta1.PodDisruptionBudgetList resource with the given unique name, arguments, and options.
@@ -277,7 +277,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodDisruptionBudgetList.ts#L22" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodDisruptionBudget[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDisruptionBudget'>outputApi.policy.v1beta1.PodDisruptionBudget</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -299,7 +299,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodDisruptionBudgetList.ts#L33" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -333,7 +333,7 @@ will be applied to a pod and container.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodSecurityPolicy, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicy'>inputApi.policy.v1beta1.PodSecurityPolicy</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a policy.v1beta1.PodSecurityPolicy resource with the given unique name, arguments, and options.
@@ -429,7 +429,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodSecurityPolicy.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -441,7 +441,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodSecurityPolicy.ts#L39" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodSecurityPolicySpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicySpec'>outputApi.policy.v1beta1.PodSecurityPolicySpec</a>&gt;;</pre>
 {{% md %}}
 
 spec defines the policy enforced.
@@ -477,7 +477,7 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodSecurityPolicyList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicyList'>inputApi.policy.v1beta1.PodSecurityPolicyList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a policy.v1beta1.PodSecurityPolicyList resource with the given unique name, arguments, and options.
@@ -559,7 +559,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodSecurityPolicyList.ts#L24" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodSecurityPolicy[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicy'>outputApi.policy.v1beta1.PodSecurityPolicy</a>[]&gt;;</pre>
 {{% md %}}
 
 items is a list of schema objects.
@@ -584,7 +584,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="policy/v1beta1/PodSecurityPolicyList.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

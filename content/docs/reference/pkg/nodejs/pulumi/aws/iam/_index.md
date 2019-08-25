@@ -2066,7 +2066,7 @@ const testRole = new aws.iam.Role("testRole", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const instanceAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
+const instanceAssumeRolePolicy = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -2074,7 +2074,7 @@ const instanceAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-}));
+});
 const instance = new aws.iam.Role("instance", {
     assumeRolePolicy: instance_assume_role_policy.json,
     path: "/system/",
@@ -4260,7 +4260,7 @@ for the effective account in which this provider is working.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.iam.getAccountAlias({}));
+const current = aws.iam.getAccountAlias({});
 
 export const accountId = current.accountAlias;
 ```
@@ -4288,9 +4288,9 @@ properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.iam.getGroup({
+const example = aws.iam.getGroup({
     groupName: "anExampleGroupName",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_group.html.markdown.
@@ -4316,9 +4316,9 @@ instance profile properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.iam.getInstanceProfile({
+const example = aws.iam.getInstanceProfile({
     name: "anExampleInstanceProfileName",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_instance_profile.html.markdown.
@@ -4343,9 +4343,9 @@ IAM policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.iam.getPolicy({
+const example = aws.iam.getPolicy({
     arn: "arn:aws:iam::123456789012:policy/UsersManageOwnCredentials",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_policy.html.markdown.
@@ -4371,7 +4371,7 @@ such as the `aws.iam.Policy` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const examplePolicyDocument = aws.iam.getPolicyDocument({
     statements: [
         {
             actions: [
@@ -4402,7 +4402,7 @@ const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
             ],
         },
     ],
-}));
+});
 const examplePolicy = new aws.iam.Policy("example", {
     path: "/",
     policy: examplePolicyDocument.json,
@@ -4439,7 +4439,7 @@ Showing how you can use this as an assume role policy as well as showing how you
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
+const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [
@@ -4453,7 +4453,7 @@ const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDoc
             },
         ],
     }],
-}));
+});
 ```
 
 ## Example with Source and Override
@@ -4464,14 +4464,14 @@ Showing how you can use `sourceJson` and `overrideJson`
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const override = pulumi.output(aws.iam.getPolicyDocument({
+const override = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:*"],
         resources: ["*"],
         sid: "SidToOverwrite",
     }],
-}));
-const source = pulumi.output(aws.iam.getPolicyDocument({
+});
+const source = aws.iam.getPolicyDocument({
     statements: [
         {
             actions: ["ec2:*"],
@@ -4483,8 +4483,8 @@ const source = pulumi.output(aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-}));
-const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument({
+});
+const overrideJsonExample = aws.iam.getPolicyDocument({
     overrideJson: override.json,
     statements: [
         {
@@ -4500,8 +4500,8 @@ const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument
             sid: "SidToOverwrite",
         },
     ],
-}));
-const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
+});
+const sourceJsonExample = aws.iam.getPolicyDocument({
     sourceJson: source.json,
     statements: [{
         actions: ["s3:*"],
@@ -4511,7 +4511,7 @@ const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
         ],
         sid: "SidToOverwrite",
     }],
-}));
+});
 ```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
@@ -4536,24 +4536,24 @@ Use without a `statement`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const override = pulumi.output(aws.iam.getPolicyDocument({
+const override = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:GetObject"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-}));
-const source = pulumi.output(aws.iam.getPolicyDocument({
+});
+const source = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["ec2:DescribeAccountAttributes"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-}));
-const politik = pulumi.all([override, source]).apply(([override, source]) => aws.iam.getPolicyDocument({
+});
+const politik = aws.iam.getPolicyDocument({
     overrideJson: override.json,
     sourceJson: source.json,
-}));
+});
 ```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:
@@ -4585,9 +4585,9 @@ properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.iam.getRole({
+const example = aws.iam.getRole({
     name: "anExampleRoleName",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_role.html.markdown.
@@ -4611,10 +4611,10 @@ Use this data source to lookup information about IAM Server Certificates.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myDomain = pulumi.output(aws.iam.getServerCertificate({
+const myDomain = aws.iam.getServerCertificate({
     latest: true,
     namePrefix: "my-domain.org",
-}));
+});
 const elb = new aws.elb.LoadBalancer("elb", {
     listeners: [{
         instancePort: 8000,
@@ -4654,9 +4654,9 @@ properties without having to hard code ARNs or unique IDs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.iam.getUser({
+const example = aws.iam.getUser({
     userName: "anExampleUserName",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_user.html.markdown.
@@ -10673,6 +10673,14 @@ The [unique ID][1] assigned by AWS.
 Service Principal for Amazon Certificate Manager
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L21" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;acm.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ApiGatewayPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L26" >}}">const <b>ApiGatewayPrincipal</b></a>
@@ -10683,6 +10691,14 @@ Service Principal for Amazon Certificate Manager
 Service Principal for API Gateway
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L26" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;apigateway.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="AthenaPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L31" >}}">const <b>AthenaPrincipal</b></a>
@@ -10693,6 +10709,14 @@ Service Principal for API Gateway
 Service Principal for Athena
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L31" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;athena.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="AutoscalingPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L36" >}}">const <b>AutoscalingPrincipal</b></a>
@@ -10703,6 +10727,14 @@ Service Principal for Athena
 Service Principal for Autoscaling
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L36" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;autoscaling.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CloudDirectoryPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L41" >}}">const <b>CloudDirectoryPrincipal</b></a>
@@ -10713,6 +10745,14 @@ Service Principal for Autoscaling
 Service Principal for Cloud Directory
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L41" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;clouddirectory.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CloudSearchPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L56" >}}">const <b>CloudSearchPrincipal</b></a>
@@ -10723,6 +10763,14 @@ Service Principal for Cloud Directory
 Service Principal for Cloud Search
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L56" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudsearch.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CloudformationPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L46" >}}">const <b>CloudformationPrincipal</b></a>
@@ -10733,6 +10781,14 @@ Service Principal for Cloud Search
 Service Principal for Cloudformation
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L46" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudformation.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CloudfrontPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L51" >}}">const <b>CloudfrontPrincipal</b></a>
@@ -10743,6 +10799,14 @@ Service Principal for Cloudformation
 Service Principal for Cloudfront
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L51" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudfront.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CloudtrailPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L61" >}}">const <b>CloudtrailPrincipal</b></a>
@@ -10753,6 +10817,14 @@ Service Principal for Cloudfront
 Service Principal for Cloudtrail
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L61" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudtrail.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CodeCommitPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L66" >}}">const <b>CodeCommitPrincipal</b></a>
@@ -10763,6 +10835,14 @@ Service Principal for Cloudtrail
 Service Principal for CodeCommit
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L66" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;codecommit.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CodeDeployPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L71" >}}">const <b>CodeDeployPrincipal</b></a>
@@ -10773,6 +10853,14 @@ Service Principal for CodeCommit
 Service Principal for CodeDeploy
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L71" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;codedeploy.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="CodePipelinePrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L76" >}}">const <b>CodePipelinePrincipal</b></a>
@@ -10783,6 +10871,14 @@ Service Principal for CodeDeploy
 Service Principal for CodePipeline
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L76" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;codepipeline.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ConfigPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L81" >}}">const <b>ConfigPrincipal</b></a>
@@ -10793,6 +10889,14 @@ Service Principal for CodePipeline
 Service Principal for EC2 Config Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L81" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;config.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="DataPipelinePrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L86" >}}">const <b>DataPipelinePrincipal</b></a>
@@ -10803,6 +10907,14 @@ Service Principal for EC2 Config Service
 Service Principal for Data Pipeline
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L86" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;datapipeline.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="DirectConnectPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L91" >}}">const <b>DirectConnectPrincipal</b></a>
@@ -10813,6 +10925,14 @@ Service Principal for Data Pipeline
 Service Principal for DirectConnect
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L91" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;directconnect.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="DirectoryServicesPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L96" >}}">const <b>DirectoryServicesPrincipal</b></a>
@@ -10823,6 +10943,14 @@ Service Principal for DirectConnect
 Service Principal for Directory Services
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L96" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ds.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="DynamoDbPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L101" >}}">const <b>DynamoDbPrincipal</b></a>
@@ -10833,6 +10961,14 @@ Service Principal for Directory Services
 Service Principal for DynamoDB
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L101" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;dynamodb.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="Ec2Principal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L106" >}}">const <b>Ec2Principal</b></a>
@@ -10843,6 +10979,14 @@ Service Principal for DynamoDB
 Service Principal for EC2
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L106" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ec2.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="EcrPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L111" >}}">const <b>EcrPrincipal</b></a>
@@ -10853,6 +10997,14 @@ Service Principal for EC2
 Service Principal for Elastic Container Registry
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L111" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ecr.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="EcsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L116" >}}">const <b>EcsPrincipal</b></a>
@@ -10863,6 +11015,14 @@ Service Principal for Elastic Container Registry
 Service Principal for Elastic Container Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L116" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ecs.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="EdgeLambdaPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L121" >}}">const <b>EdgeLambdaPrincipal</b></a>
@@ -10873,6 +11033,14 @@ Service Principal for Elastic Container Service
 Service Principal for Edge Lambda
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L121" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;edgelambda.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ElasticBeanstalkPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L131" >}}">const <b>ElasticBeanstalkPrincipal</b></a>
@@ -10883,6 +11051,14 @@ Service Principal for Edge Lambda
 Service Principal for Elastic Beanstalk
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L131" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticbeanstalk.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ElasticFileSystemPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L136" >}}">const <b>ElasticFileSystemPrincipal</b></a>
@@ -10893,6 +11069,14 @@ Service Principal for Elastic Beanstalk
 Service Principal for Elastic File System
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L136" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticfilesystem.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ElasticLoadBalancingPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L141" >}}">const <b>ElasticLoadBalancingPrincipal</b></a>
@@ -10903,6 +11087,14 @@ Service Principal for Elastic File System
 Service Principal for Elastic Load Balancing
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L141" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticloadbalancing.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ElasticMapReducePrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L146" >}}">const <b>ElasticMapReducePrincipal</b></a>
@@ -10913,6 +11105,14 @@ Service Principal for Elastic Load Balancing
 Service Principal for Elastic MapReduce
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L146" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticmapreduce.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ElasticachePrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L126" >}}">const <b>ElasticachePrincipal</b></a>
@@ -10923,6 +11123,14 @@ Service Principal for Elastic MapReduce
 Service Principal for Elasticache
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L126" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticache.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="EventsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L151" >}}">const <b>EventsPrincipal</b></a>
@@ -10933,6 +11141,14 @@ Service Principal for Elasticache
 Service Principal for Events
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L151" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;events.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="HealthPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L156" >}}">const <b>HealthPrincipal</b></a>
@@ -10943,6 +11159,14 @@ Service Principal for Events
 Service Principal for Health
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L156" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;health.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="IamPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L161" >}}">const <b>IamPrincipal</b></a>
@@ -10953,6 +11177,14 @@ Service Principal for Health
 Service Principal for IAM
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L161" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;iam.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="InspectorPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L166" >}}">const <b>InspectorPrincipal</b></a>
@@ -10963,6 +11195,14 @@ Service Principal for IAM
 Service Principal for AWS Inspector
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L166" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;inspector.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="KinesisPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L171" >}}">const <b>KinesisPrincipal</b></a>
@@ -10973,6 +11213,14 @@ Service Principal for AWS Inspector
 Service Principal for Kinesis
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L171" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;kinesis.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="KmsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L176" >}}">const <b>KmsPrincipal</b></a>
@@ -10983,6 +11231,14 @@ Service Principal for Kinesis
 Service Principal for Key Mangaement Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L176" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;kms.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="LambdaPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L181" >}}">const <b>LambdaPrincipal</b></a>
@@ -10993,6 +11249,14 @@ Service Principal for Key Mangaement Service
 Service Principal for Lambda
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L181" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;lambda.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="LightsailPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L186" >}}">const <b>LightsailPrincipal</b></a>
@@ -11003,6 +11267,14 @@ Service Principal for Lambda
 Service Principal for Lightsail
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L186" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;lightsail.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="LogsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L191" >}}">const <b>LogsPrincipal</b></a>
@@ -11013,6 +11285,14 @@ Service Principal for Lightsail
 Service Principal for Cloudwatch Logs
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L191" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;logs.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="MonitoringPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L196" >}}">const <b>MonitoringPrincipal</b></a>
@@ -11023,6 +11303,14 @@ Service Principal for Cloudwatch Logs
 Service Principal for Cloudwatch Monitoring
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L196" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;monitoring.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="OpsworksPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L201" >}}">const <b>OpsworksPrincipal</b></a>
@@ -11033,6 +11321,14 @@ Service Principal for Cloudwatch Monitoring
 Service Principal for Opsworks
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L201" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;opsworks.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="OrganizationsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L206" >}}">const <b>OrganizationsPrincipal</b></a>
@@ -11043,6 +11339,14 @@ Service Principal for Opsworks
 Service Principal for Organizations
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L206" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;organizations.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="RdsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L211" >}}">const <b>RdsPrincipal</b></a>
@@ -11053,6 +11357,14 @@ Service Principal for Organizations
 Service Principal for Relational Database Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L211" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;rds.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="RedshiftPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L216" >}}">const <b>RedshiftPrincipal</b></a>
@@ -11063,6 +11375,14 @@ Service Principal for Relational Database Service
 Service Principal for Redshift
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L216" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;redshift.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="Route53Principal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L221" >}}">const <b>Route53Principal</b></a>
@@ -11073,6 +11393,14 @@ Service Principal for Redshift
 Service Principal for Route 53
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L221" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;route53.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="S3Principal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L226" >}}">const <b>S3Principal</b></a>
@@ -11083,6 +11411,14 @@ Service Principal for Route 53
 Service Principal for S3
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L226" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;s3.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="ServiceCatalogPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L231" >}}">const <b>ServiceCatalogPrincipal</b></a>
@@ -11093,6 +11429,14 @@ Service Principal for S3
 Service Principal for Service Catalog
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L231" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;servicecatalog.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="SesPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L236" >}}">const <b>SesPrincipal</b></a>
@@ -11103,6 +11447,14 @@ Service Principal for Service Catalog
 Service Principal for Simple Email Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L236" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ses.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="SigninPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L241" >}}">const <b>SigninPrincipal</b></a>
@@ -11113,6 +11465,14 @@ Service Principal for Simple Email Service
 Service Principal for Signin Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L241" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;signin.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="SnsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L246" >}}">const <b>SnsPrincipal</b></a>
@@ -11123,6 +11483,14 @@ Service Principal for Signin Service
 Service Principal for Simple Notification Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L246" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;sns.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="SqsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L251" >}}">const <b>SqsPrincipal</b></a>
@@ -11133,6 +11501,14 @@ Service Principal for Simple Notification Service
 Service Principal for Simple Queue Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L251" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;sqs.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="SsmPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L256" >}}">const <b>SsmPrincipal</b></a>
@@ -11143,6 +11519,14 @@ Service Principal for Simple Queue Service
 Service Principal for Systems Manager
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L256" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ssm.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="StorageGatewayPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L261" >}}">const <b>StorageGatewayPrincipal</b></a>
@@ -11153,6 +11537,14 @@ Service Principal for Systems Manager
 Service Principal for Storage Gateway
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L261" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;storagegateway.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="StsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L266" >}}">const <b>StsPrincipal</b></a>
@@ -11163,6 +11555,14 @@ Service Principal for Storage Gateway
 Service Principal for Security Token Service
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L266" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;sts.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="SupportPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L271" >}}">const <b>SupportPrincipal</b></a>
@@ -11173,6 +11573,14 @@ Service Principal for Security Token Service
 Service Principal for AWS Support
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L271" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;support.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="VmiePrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L276" >}}">const <b>VmiePrincipal</b></a>
@@ -11183,6 +11591,14 @@ Service Principal for AWS Support
 Service Principal for VM Import/Export
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L276" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;vmie.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="VpcFlowLogsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L281" >}}">const <b>VpcFlowLogsPrincipal</b></a>
@@ -11193,6 +11609,14 @@ Service Principal for VM Import/Export
 Service Principal for VPC Flow Logs
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L281" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;vpc-flow-logs.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="WafPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L286" >}}">const <b>WafPrincipal</b></a>
@@ -11203,6 +11627,14 @@ Service Principal for VPC Flow Logs
 Service Principal for Web Application Firewall
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L286" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;waf.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="WorkDocsPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L291" >}}">const <b>WorkDocsPrincipal</b></a>
@@ -11213,6 +11645,14 @@ Service Principal for Web Application Firewall
 Service Principal for WorkDocs
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L291" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;workdocs.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="WorkspacesPrincipal">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L296" >}}">const <b>WorkspacesPrincipal</b></a>
@@ -11223,6 +11663,14 @@ Service Principal for WorkDocs
 Service Principal for Workspaces
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="Service">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/principals.ts#L296" >}}">let <b>Service</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;workspaces.amazonaws.com&#34;</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Principal">

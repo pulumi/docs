@@ -1816,13 +1816,13 @@ Provides details about a specific redshift cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testCluster = pulumi.output(aws.redshift.getCluster({
+const testCluster = aws.redshift.getCluster({
     clusterIdentifier: "test-cluster",
-}));
+});
 const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
     destination: "redshift",
     redshiftConfiguration: {
-        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
+        clusterJdbcurl: `jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
         copyOptions: "delimiter '|'", // the default delimiter
         dataTableColumns: "test-col",
         dataTableName: "test-table",
@@ -1862,10 +1862,10 @@ in a given region for the purpose of allowing Redshift to store audit data in S3
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.redshift.getServiceAccount({}));
+const main = aws.redshift.getServiceAccount({});
 const bucket = new aws.s3.Bucket("bucket", {
     forceDestroy: true,
-    policy: pulumi.interpolate`{
+    policy: `{
 	"Version": "2008-10-17",
 	"Statement": [
 		{

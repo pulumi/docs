@@ -2346,7 +2346,7 @@ Use this data source to get a list of availability zones from OpenStack
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = pulumi.output(openstack.compute.getAvailabilityZones({}));
+const zones = openstack.compute.getAvailabilityZones({});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_availability_zones_v2.html.markdown.
@@ -2370,10 +2370,10 @@ Use this data source to get the ID of an available OpenStack flavor.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const small = pulumi.output(openstack.compute.getFlavor({
+const small = openstack.compute.getFlavor({
     ram: 512,
     vcpus: 1,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_flavor_v2.html.markdown.
@@ -2397,9 +2397,9 @@ Use this data source to get the ID and public key of an OpenStack keypair.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const kp = pulumi.output(openstack.compute.getKeypair({
+const kp = openstack.compute.getKeypair({
     name: "sand",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_keypair_v2.html.markdown.

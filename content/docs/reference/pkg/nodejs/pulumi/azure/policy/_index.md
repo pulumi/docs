@@ -762,9 +762,9 @@ Use this data source to access information about a Policy Definition, both custo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.policy.getPolicyDefintion({
+const test = azure.policy.getPolicyDefintion({
     displayName: "Allowed resource types",
-}));
+});
 
 export const id = test.id;
 ```

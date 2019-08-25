@@ -265,8 +265,8 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	if parent != nil && (parent.Kind == typeDocClassNode || parent.Kind == typeDocInterfaceNode) {
 		node.AnchorName = fmt.Sprintf("%s-%s", parent.Name, node.AnchorName)
 	}
-	node.Label = createLabel(node, parent)
-	node.CodeDetails = createCodeDetails(node)
+	node.Label = e.createLabel(node, parent)
+	node.CodeDetails = e.createCodeDetails(node)
 	node.URLPath = getURLPath(node, parent)
 
 	// In K8S docs, ShortText can contain placeholder references that look like HTML tags.
@@ -293,7 +293,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 			if i > 0 {
 				node.Extends += ", "
 			}
-			node.Extends += createTypeLabel(ext, 0)
+			node.Extends += e.createTypeLabel(ext, 0)
 		}
 	}
 	if len(node.ImplementedTypes) > 0 {
@@ -302,7 +302,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 			if i > 0 {
 				node.Implements += ", "
 			}
-			node.Implements += createTypeLabel(impl, 0)
+			node.Implements += e.createTypeLabel(impl, 0)
 		}
 	}
 
@@ -530,10 +530,15 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 		if k8s && modname == "tests" {
 			continue
 		}
-		// k8s provider has common types files which are imported into multiple modules.
-		// TODO(levi): Split the input/output types into the same directory structure, and remove this skip.
-		if k8s && modname == "types" {
-			continue
+
+		// For submodules of the "types" module used in many providers, keep it in fully expanded
+		// form ("types/input" instead of "types").
+		if modname == "types" {
+			modname = strings.Trim(modnode.Name, `"`)
+			// Also skip the "types/index" which will never contain anything
+			if modname == "types/index" {
+				continue
+			}
 		}
 
 		// Lazy init the module if appropriate.
@@ -769,6 +774,12 @@ func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
 		p, s = n, o // interface wins
 	} else if n.Kind == typeDocTypeAliasNode && o.Kind == typeDocVariableNode {
 		p, s = n, o // alias wins
+	} else if n.Kind == typeDocVariableNode && o.Kind == typeDocFunctionNode {
+		p, s = o, n // function wins
+	} else if n.Kind == typeDocFunctionNode && o.Kind == typeDocVariableNode {
+		p, s = n, o // function wins
+	} else if n.Kind == typeDocFunctionNode && o.Kind == typeDocFunctionNode {
+		p, s = n, o // either is fine
 	} else {
 		return nil, errors.Errorf(
 			"cannot merge two nodes with same name '%s'; incompatible types %s and %s", n.Name, n.Kind, o.Kind)
@@ -808,7 +819,7 @@ const (
 	typeDocVariableNode       typeDocNodeKind = "Variable"
 )
 
-func createLabel(node *typeDocNode, parent *typeDocNode) string {
+func (e *emitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 	switch node.Kind {
 	// Create node kinds, we simply summarize.
 	case typeDocClassNode:
@@ -844,7 +855,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 
 	// For others, we will generate a full signature.
 	case typeDocCallSigNode, typeDocConstructorSigNode:
-		return createSignature(node, parent, false)
+		return e.createSignature(node, parent, false)
 
 	// If we don't recognize this node, fail.
 	default:
@@ -853,7 +864,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 	}
 }
 
-func createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string {
+func (e *emitter) createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string {
 	var label string
 
 	// If not an arrow function (anonymous), add the name/type params/etc.
@@ -891,7 +902,7 @@ func createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string 
 		if param.Flags.IsOptional {
 			label += "?"
 		}
-		if paramType := createTypeLabel(param.Type, 0); paramType != "" {
+		if paramType := e.createTypeLabel(param.Type, 0); paramType != "" {
 			label += ": " + paramType
 		}
 	}
@@ -899,7 +910,7 @@ func createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string 
 
 	// Add a return type, if any.
 	if node.Kind != typeDocConstructorSigNode {
-		returnType := createTypeLabel(node.Type, 0)
+		returnType := e.createTypeLabel(node.Type, 0)
 		if returnType != "" {
 			if arrow {
 				label += " => " + returnType
@@ -914,18 +925,18 @@ func createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string 
 	return label
 }
 
-func createCodeDetails(node *typeDocNode) string {
+func (e *emitter) createCodeDetails(node *typeDocNode) string {
 	switch node.Kind {
 	case typeDocTypeAliasNode:
 		// For type aliases, we won't have signatures, so we will create a detailed label.
-		return fmt.Sprintf("<span class='kd'>type</span> %s = %s;", node.Name, createTypeLabel(node.Type, 0))
+		return fmt.Sprintf("<span class='kd'>type</span> %s = %s;", node.Name, e.createTypeLabel(node.Type, 0))
 	case typeDocPropertyNode:
 		label := createVisibilityLabel(node.Flags)
 		label += node.Name
 		if node.Flags.IsOptional {
 			label += "?"
 		}
-		if proptyp := createTypeLabel(node.Type, 0); proptyp != "" {
+		if proptyp := e.createTypeLabel(node.Type, 0); proptyp != "" {
 			label += ": " + proptyp
 		}
 		if node.DefaultValue != nil {
@@ -940,7 +951,7 @@ func createCodeDetails(node *typeDocNode) string {
 			label += "<span class='kd'>let</span> "
 		}
 		label += node.Name
-		if vartyp := createTypeLabel(node.Type, 0); vartyp != "" {
+		if vartyp := e.createTypeLabel(node.Type, 0); vartyp != "" {
 			label += ": " + vartyp
 		}
 		if node.DefaultValue != nil {
@@ -953,7 +964,7 @@ func createCodeDetails(node *typeDocNode) string {
 }
 
 // typeHyperlink returns the hyperlink for help text associated with a given type, if available.
-func typeHyperlink(t *typeDocType) string {
+func (e *emitter) typeHyperlink(t *typeDocType) string {
 	// Add a hyperlink for the type if possible.
 	if t.Type == typeDocIntrinsicType {
 		// If an intrinsic type, hyperlink to the standard JavaScript docs.
@@ -1002,8 +1013,31 @@ func typeHyperlink(t *typeDocType) string {
 
 			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
 			elements := strings.Split(t.Name, ".")
-			if len(elements) > 1 && elements[0] == "pulumi" {
-				link := "/docs/reference/pkg/nodejs/pulumi/pulumi/"
+			var link string
+			if len(elements) > 1 {
+				if elements[0] == "pulumi" {
+					link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
+				} else if elements[0] == "inputs" || elements[0] == "inputApi" {
+					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
+					// Strip out everything except first and last element.  This is necessary given
+					// the current structure of docs, but leads to losing precision on which member
+					// we are really trying to link to, as there may be multiple instances of the
+					// label on this page.  Eventually, we need to improve the doc generator to
+					// separate out these individual sub-namespaces into their own pages or to
+					// enrichen the link format to that we can link more precisely.
+					elements = append(elements[:1], elements[len(elements)-1])
+				} else if elements[0] == "outputs" || elements[0] == "outputApi" {
+					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/output/"
+					// Strip out everything except first and last element.  This is necessary given
+					// the current structure of docs, but leads to losing precision on which member
+					// we are really trying to link to, as there may be multiple instances of the
+					// label on this page.  Eventually, we need to improve the doc generator to
+					// separate out these individual sub-namespaces into their own pages or to
+					// enrichen the link format to that we can link more precisely.
+					elements = append(elements[:1], elements[len(elements)-1])
+				}
+			}
+			if link != "" {
 				for i := 1; i < len(elements)-1; i++ {
 					link += fmt.Sprintf("%s/", elements[i])
 				}
@@ -1015,14 +1049,14 @@ func typeHyperlink(t *typeDocType) string {
 	return ""
 }
 
-func createTypeLabel(t *typeDocType, indent int) string {
+func (e *emitter) createTypeLabel(t *typeDocType, indent int) string {
 	switch t.Type {
 	case typeDocArrayType:
-		return fmt.Sprintf("%s[]", createTypeLabel(t.ElementType, indent))
+		return fmt.Sprintf("%s[]", e.createTypeLabel(t.ElementType, indent))
 	case typeDocIntrinsicType, typeDocParameterType, typeDocReferenceType, typeDocUnknownType:
 		// Add a hyperlink for the type if possible.
 		var label string
-		if hyperlink := typeHyperlink(t); hyperlink != "" {
+		if hyperlink := e.typeHyperlink(t); hyperlink != "" {
 			label += fmt.Sprintf("<a href='%s'>%s</a>", hyperlink, t.Name)
 		} else {
 			label += t.Name
@@ -1044,7 +1078,7 @@ func createTypeLabel(t *typeDocType, indent int) string {
 				if i > 0 {
 					label += ", "
 				}
-				label += createTypeLabel(tyarg, indent)
+				label += e.createTypeLabel(tyarg, indent)
 			}
 			label += "&gt;"
 		}
@@ -1053,13 +1087,13 @@ func createTypeLabel(t *typeDocType, indent int) string {
 		// Either a type literal or a function type.
 		decl := t.Declaration
 		if len(decl.Signatures) > 0 {
-			return createSignature(decl.Signatures[0], nil, true)
+			return e.createSignature(decl.Signatures[0], nil, true)
 		} else if len(decl.Children) > 0 {
 			label := "{\n"
 			indent++
 			for _, child := range decl.Children {
 				label += fmt.Sprintf("%s%s: %s;\n",
-					strings.Repeat(" ", indent*4), child.Name, createTypeLabel(child.Type, indent))
+					strings.Repeat(" ", indent*4), child.Name, e.createTypeLabel(child.Type, indent))
 			}
 			indent--
 			return fmt.Sprintf("%s%s}", label, strings.Repeat(" ", indent*4))
@@ -1068,8 +1102,8 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			if len(index.Parameters) == 1 {
 				return fmt.Sprintf("{[%s: %s]: %s}",
 					index.Parameters[0].Name,
-					createTypeLabel(index.Parameters[0].Type, indent),
-					createTypeLabel(index.Type, indent))
+					e.createTypeLabel(index.Parameters[0].Type, indent),
+					e.createTypeLabel(index.Type, indent))
 			}
 			return "{ ... }"
 		} else {
@@ -1083,7 +1117,7 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			if i >= 0 {
 				label += ", "
 			}
-			label += createTypeLabel(elem, indent)
+			label += e.createTypeLabel(elem, indent)
 		}
 		return label + "]"
 	case typeDocUnionType:
@@ -1092,7 +1126,7 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			if i > 0 {
 				label += " | "
 			}
-			label += createTypeLabel(inner, indent)
+			label += e.createTypeLabel(inner, indent)
 		}
 		return label
 	case typeDocIntersectionType:
@@ -1101,11 +1135,11 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			if i > 0 {
 				label += " &amp; "
 			}
-			label += createTypeLabel(inner, indent)
+			label += e.createTypeLabel(inner, indent)
 		}
 		return label
 	case typeDocTypeOperatorType:
-		targetStr := createTypeLabel(t.Target, indent)
+		targetStr := e.createTypeLabel(t.Target, indent)
 		return fmt.Sprintf("%s %s", t.Operator, targetStr)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)

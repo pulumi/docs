@@ -881,10 +881,10 @@ Use this data source to access information about an existing Batch Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.batch.getAccount({
+const test = azure.batch.getAccount({
     name: "testbatchaccount",
     resourceGroupName: "test",
-}));
+});
 
 export const poolAllocationMode = test.poolAllocationMode;
 ```
@@ -910,11 +910,11 @@ Use this data source to access information about an existing certificate in a Ba
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.batch.getCertificate({
+const example = azure.batch.getCertificate({
     accountName: "examplebatchaccount",
     name: "SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
     resourceGroupName: "example",
-}));
+});
 
 export const thumbprint = example.thumbprint;
 ```
@@ -940,11 +940,11 @@ Use this data source to access information about an existing Batch pool
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.batch.getPool({
+const test = azure.batch.getPool({
     accountName: "testbatchaccount",
     name: "testbatchpool",
     resourceGroupName: "test",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/batch_pool.html.markdown.

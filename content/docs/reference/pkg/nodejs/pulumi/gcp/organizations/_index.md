@@ -801,12 +801,12 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const policy = new gcp.organizations.IAMPolicy("policy", {
     orgId: "123456789",
     policyData: admin.policyData,
@@ -1473,10 +1473,10 @@ Get an active folder within GCP by `displayName` and `parent`.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const department1 = pulumi.output(gcp.organizations.getActiveFolder({
+const department1 = gcp.organizations.getActiveFolder({
     displayName: "Department 1",
     parent: "organizations/1234567",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/active_folder.html.markdown.
@@ -1498,10 +1498,10 @@ Use this data source to get information about a Google Billing Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const acct = pulumi.output(gcp.organizations.getBillingAccount({
+const acct = gcp.organizations.getBillingAccount({
     displayName: "My Billing Account",
     open: true,
-}));
+});
 const myProject = new gcp.organizations.Project("myProject", {
     billingAccount: acct.id,
     orgId: "1234567",
@@ -1530,7 +1530,7 @@ Use this data source to access the configuration of the Google Cloud provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const current = pulumi.output(gcp.organizations.getClientConfig({}));
+const current = gcp.organizations.getClientConfig({});
 
 export const project = current.project;
 ```
@@ -1567,7 +1567,7 @@ receive an error otherwise.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const me = pulumi.output(gcp.organizations.getClientOpenIdUserInfo({}));
+const me = gcp.organizations.getClientOpenIdUserInfo({});
 
 export const myEmail = me.email;
 ```
@@ -1592,14 +1592,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 // Get folder by id
-const myFolder1 = pulumi.output(gcp.organizations.getFolder({
+const myFolder1 = gcp.organizations.getFolder({
     folder: "folders/12345",
     lookupOrganization: true,
-}));
+});
 // Search by fields
-const myFolder2 = pulumi.output(gcp.organizations.getFolder({
+const myFolder2 = gcp.organizations.getFolder({
     folder: "folders/23456",
-}));
+});
 
 export const myFolder1Organization = myFolder1.organization;
 export const myFolder2Parent = myFolder2.parent;
@@ -1625,7 +1625,7 @@ other Google Cloud Platform resources, such as the `gcp.organizations.Project` r
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     auditConfigs: [{
         auditLogConfigs: [
             {
@@ -1651,7 +1651,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
             role: "roles/storage.objectViewer",
         },
     ],
-}));
+});
 ```
 
 This data source is used to define IAM policies to apply to other resources.
@@ -1681,9 +1681,9 @@ Use this data source to get information about a Google Cloud Organization.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const org = pulumi.output(gcp.organizations.getOrganization({
+const org = gcp.organizations.getOrganization({
     domain: "example.com",
-}));
+});
 const sales = new gcp.organizations.Folder("sales", {
     displayName: "Sales",
     parent: org.name,
@@ -1713,7 +1713,7 @@ For more information see
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const project = pulumi.output(gcp.organizations.getProject({}));
+const project = gcp.organizations.getProject({});
 
 export const projectNumber = project.number;
 ```
@@ -1742,11 +1742,11 @@ For a list of services available, visit the
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const project = pulumi.output(gcp.organizations.getProjectServices({
+const project = gcp.organizations.getProjectServices({
     project: "your-project-id",
-}));
+});
 
-export const projectServices = project.apply(project => project.services.join(","));
+export const projectServices = project.services.join(",");
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_services.html.markdown.

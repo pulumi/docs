@@ -55,9 +55,9 @@ title: Module synthetics
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const fooMonitor = pulumi.output(newrelic.synthetics.getMonitor({
+const fooMonitor = newrelic.synthetics.getMonitor({
     name: "foo",
-}));
+});
 const fooAlertCondition = new newrelic.synthetics.AlertCondition("foo", {
     monitorId: fooMonitor.id,
     policyId: newrelic_alert_policy_foo.id,
@@ -100,7 +100,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -135,7 +135,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -191,7 +191,7 @@ Runbook URL to display in notifications.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -261,7 +261,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -307,7 +307,7 @@ The interval (in minutes) at which this monitor should run.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -393,7 +393,7 @@ The URI for the monitor to hit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -469,7 +469,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorScript-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -493,7 +493,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorScript-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -527,7 +527,7 @@ plaintext of the monitor script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorScript-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -556,9 +556,9 @@ Use this data source to get information about a specific synthetics monitor in N
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const bar = pulumi.output(newrelic.synthetics.getMonitor({
+const bar = newrelic.synthetics.getMonitor({
     name: "bar",
-}));
+});
 const baz = new newrelic.synthetics.AlertCondition("baz", {
     monitorId: bar.id,
     policyId: newrelic_alert_policy_foo.id,

@@ -255,12 +255,12 @@ Three different resources help you manage IAM policies on bigtable instances. Ea
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.bigtable.InstanceIamPolicy("editor", {
     instance: "your-bigtable-instance",
     policyData: admin.policyData,
@@ -455,12 +455,12 @@ Three different resources help you manage IAM policies on bigtable instances. Ea
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.bigtable.InstanceIamPolicy("editor", {
     instance: "your-bigtable-instance",
     policyData: admin.policyData,
@@ -655,12 +655,12 @@ Three different resources help you manage IAM policies on bigtable instances. Ea
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const editor = new gcp.bigtable.InstanceIamPolicy("editor", {
     instance: "your-bigtable-instance",
     policyData: admin.policyData,

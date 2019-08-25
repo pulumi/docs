@@ -842,7 +842,7 @@ const stopInstance = new aws.ssm.Document("stopInstance", {
 `,
     documentType: "Command",
 });
-const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
+const ssmLifecycleTrust = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -850,7 +850,7 @@ const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-}));
+});
 const ssmLifecycleRole = new aws.iam.Role("ssmLifecycle", {
     assumeRolePolicy: ssmLifecycleTrust.json,
 });
@@ -1982,7 +1982,7 @@ Provides a resource to manage a CloudWatch log resource policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const elasticsearch_log_publishing_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const elasticsearch_log_publishing_policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
@@ -1995,7 +1995,7 @@ const elasticsearch_log_publishing_policyPolicyDocument = pulumi.output(aws.iam.
         }],
         resources: ["arn:aws:logs:*"],
     }],
-}));
+});
 const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("elasticsearch-log-publishing-policy", {
     policyDocument: elasticsearch_log_publishing_policyPolicyDocument.json,
     policyName: "elasticsearch-log-publishing-policy",
@@ -2008,7 +2008,7 @@ const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const route53_query_logging_policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
@@ -2020,7 +2020,7 @@ const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPoli
         }],
         resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     }],
-}));
+});
 const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policy", {
     policyDocument: route53_query_logging_policyPolicyDocument.json,
     policyName: "route53-query-logging-policy",
@@ -2913,9 +2913,9 @@ Use this data source to get information about an AWS Cloudwatch Log Group
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.cloudwatch.getLogGroup({
+const example = aws.cloudwatch.getLogGroup({
     name: "MyImportantLogs",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown.

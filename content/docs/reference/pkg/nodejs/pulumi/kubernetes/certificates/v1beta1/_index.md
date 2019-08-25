@@ -41,7 +41,7 @@ Describes a certificate signing request
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CertificateSigningRequest(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.certificates.v1beta1.CertificateSigningRequest, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CertificateSigningRequest(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CertificateSigningRequest'>inputApi.certificates.v1beta1.CertificateSigningRequest</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a certificates.v1beta1.CertificateSigningRequest resource with the given unique name, arguments, and options.
@@ -137,7 +137,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="certificates/v1beta1/CertificateSigningRequest.ts#L30" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -145,7 +145,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="certificates/v1beta1/CertificateSigningRequest.ts#L35" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.certificates.v1beta1.CertificateSigningRequestSpec&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CertificateSigningRequestSpec'>outputApi.certificates.v1beta1.CertificateSigningRequestSpec</a>&gt;;</pre>
 {{% md %}}
 
 The certificate request itself and any additional information.
@@ -156,7 +156,7 @@ The certificate request itself and any additional information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="certificates/v1beta1/CertificateSigningRequest.ts#L40" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.certificates.v1beta1.CertificateSigningRequestStatus&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CertificateSigningRequestStatus'>outputApi.certificates.v1beta1.CertificateSigningRequestStatus</a>&gt;;</pre>
 {{% md %}}
 
 Derived information about the request.
@@ -187,7 +187,7 @@ deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CertificateSigningRequestList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.certificates.v1beta1.CertificateSigningRequestList, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CertificateSigningRequestList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CertificateSigningRequestList'>inputApi.certificates.v1beta1.CertificateSigningRequestList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a certificates.v1beta1.CertificateSigningRequestList resource with the given unique name, arguments, and options.
@@ -269,7 +269,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="certificates/v1beta1/CertificateSigningRequestList.ts#L20" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.certificates.v1beta1.CertificateSigningRequest[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CertificateSigningRequest'>outputApi.certificates.v1beta1.CertificateSigningRequest</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -291,7 +291,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="certificates/v1beta1/CertificateSigningRequestList.ts#L31" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

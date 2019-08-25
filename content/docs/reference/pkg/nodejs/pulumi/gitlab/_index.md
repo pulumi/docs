@@ -180,7 +180,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="branchProtection.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -215,7 +215,7 @@ Name of the branch.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="branchProtection.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -260,7 +260,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BranchProtection-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="branchProtection.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -329,7 +329,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="deployKey.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -364,7 +364,7 @@ Allow this deploy key to be used to push changes to the project.  Defaults to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="deployKey.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -409,7 +409,7 @@ A title to describe the deploy key with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeployKey-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="deployKey.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -463,7 +463,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="group.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -520,7 +520,7 @@ The full path of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="group.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -589,7 +589,7 @@ enable users to request access to the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="group.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -683,7 +683,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="groupMembership.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -740,7 +740,7 @@ The id of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="groupMembership.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -752,7 +752,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMembership-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="groupMembership.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -835,7 +835,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="groupVariable.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -870,7 +870,7 @@ The name or id of the group to add the hook to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="groupVariable.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -904,7 +904,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupVariable-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="groupVariable.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -986,7 +986,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="label.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1032,7 +1032,7 @@ The description of the label.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="label.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1066,7 +1066,7 @@ The name or id of the project to add the label to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Label-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="label.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1138,7 +1138,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="pipelineSchedule.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1206,7 +1206,7 @@ The description of the pipeline schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="pipelineSchedule.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1240,7 +1240,7 @@ The branch/tag name to be triggered.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineSchedule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="pipelineSchedule.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1308,7 +1308,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="pipelineTrigger.ts#L24" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1343,7 +1343,7 @@ The description of the pipeline trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="pipelineTrigger.ts#L24" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1374,7 +1374,7 @@ The name or id of the project to add the trigger to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PipelineTrigger-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="pipelineTrigger.ts#L24" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1428,7 +1428,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="project.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1519,7 +1519,7 @@ repository via HTTP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="project.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1693,7 +1693,7 @@ Tags (topics) of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="project.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1806,7 +1806,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectCluster.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1879,7 +1879,7 @@ The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectCluster.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1995,7 +1995,7 @@ The id of the project to add the cluster to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectCluster-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectCluster.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2066,7 +2066,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectHook.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2102,7 +2102,7 @@ the hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectHook.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2224,7 +2224,7 @@ The url of the hook to invoke.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectHook-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectHook.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2304,7 +2304,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectMembership.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2339,7 +2339,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectMembership.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2362,7 +2362,7 @@ The id of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectMembership-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectMembership.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2445,7 +2445,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectVariable.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2469,7 +2469,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectVariable.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2514,7 +2514,7 @@ If set to `true`, the variable will be passed only to pipelines running on prote
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectVariable-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="projectVariable.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2570,7 +2570,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="provider.ts#L15" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2594,7 +2594,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="provider.ts#L15" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2606,7 +2606,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="provider.ts#L15" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2680,7 +2680,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="serviceJira.ts#L30" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2720,7 +2720,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="serviceJira.ts#L30" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2803,7 +2803,7 @@ The URL to the JIRA project which is being linked to this GitLab project. For ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceJira-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="serviceJira.ts#L30" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2889,7 +2889,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="serviceSlack.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2946,7 +2946,7 @@ Enable notifications for confidential note events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="serviceSlack.ts#L31" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3131,7 +3131,7 @@ Enable notifications for tag push events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceSlack-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="serviceSlack.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3244,7 +3244,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="tagProtection.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3279,7 +3279,7 @@ One of five levels of access to the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="tagProtection.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3313,7 +3313,7 @@ Name of the tag or wildcard.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagProtection-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="tagProtection.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3367,7 +3367,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="user.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3413,7 +3413,7 @@ The e-mail address of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="user.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3492,7 +3492,7 @@ Boolean, defaults to true. Whether to skip confirmation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="user.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3564,9 +3564,9 @@ Provides details about a specific group in the gitlab provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const foo = pulumi.output(gitlab.getGroup({
+const foo = gitlab.getGroup({
     groupId: 123,
-}));
+});
 ```
 
 **By group's full path**
@@ -3575,9 +3575,9 @@ const foo = pulumi.output(gitlab.getGroup({
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const foo = pulumi.output(gitlab.getGroup({
+const foo = gitlab.getGroup({
     fullPath: "foo/bar",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/group.html.markdown.
@@ -3601,9 +3601,9 @@ Provides details about a specific project in the gitlab provider. The results in
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getProject({
+const example = gitlab.getProject({
     id: 30,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/project.html.markdown.
@@ -3627,9 +3627,9 @@ Provides details about a specific user in the gitlab provider. Especially the ab
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getUser({
+const example = gitlab.getUser({
     username: "myuser",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/user.html.markdown.
@@ -3655,11 +3655,11 @@ Provides details about a list of users in the gitlab provider. The results inclu
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getUsers({
+const example = gitlab.getUsers({
     createdBefore: "2019-01-01",
     orderBy: "name",
     sort: "desc",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/users.html.markdown.

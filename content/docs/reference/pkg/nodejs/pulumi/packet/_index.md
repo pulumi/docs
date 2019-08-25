@@ -3256,12 +3256,12 @@ Use this data source to get Packet Operating System image.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = pulumi.output(packet.getOperatingSystem({
+const example = packet.getOperatingSystem({
     distro: "coreos",
     name: "Container Linux",
     provisionableOn: "c1.small.x86",
     version: "alpha",
-}));
+});
 const server = new packet.Device("server", {
     billingCycle: "hourly",
     facilities: ["ewr1"],
@@ -3295,12 +3295,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
 const projectId = "<UUID_of_your_project>";
-const test = pulumi.output(packet.getPrecreatedIpBlock({
+const test = packet.getPrecreatedIpBlock({
     addressFamily: 6,
     facility: "ewr1",
     projectId: projectId,
     public: true,
-}));
+});
 const web1 = new packet.Device("web1", {
     billingCycle: "hourly",
     facilities: ["ewr1"],
@@ -3310,10 +3310,10 @@ const web1 = new packet.Device("web1", {
     projectId: projectId,
 });
 const fromIpv6Block = new packet.IpAttachment("fromIpv6Block", {
-    cidrNotation: test.apply(test => (() => {
+    cidrNotation: (() => {
         throw "tf2pulumi error: NYI: call to cidrsubnet";
         return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
+    })(),
     deviceId: web1.id,
 });
 ```
@@ -3339,10 +3339,10 @@ Use this data source to get Packet Spot Market Price.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = pulumi.output(packet.getSpotMarketPrice({
+const example = packet.getSpotMarketPrice({
     facility: "ewr1",
     plan: "c1.small.x86",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown.

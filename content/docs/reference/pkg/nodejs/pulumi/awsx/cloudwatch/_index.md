@@ -3217,6 +3217,282 @@ Optional min and max settings for the right Y-axis.
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
+<h3 class="pdoc-member-header" id="deadLetterInvocations">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L70" >}}">function <b>deadLetterInvocations</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>deadLetterInvocations(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Measures the number of times a rule’s target is not invoked in response to an event. This
+includes invocations that would result in triggering the same rule again, causing an
+infinite loop.
+
+Valid Dimensions: RuleName
+Units: Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="failedInvocations">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L96" >}}">function <b>failedInvocations</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>failedInvocations(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Measures the number of invocations that failed permanently. This does not include invocations
+that are retried, or that succeeded after a retry attempt. It also does not count failed
+invocations that are counted in DeadLetterInvocations.
+
+Valid Dimensions: RuleName
+Units: Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="invocations">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L84" >}}">function <b>invocations</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>invocations(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Measures the number of times a target is invoked for a rule in response to an event. This
+includes successful and failed invocations, but does not include throttled or retried attempts
+until they fail permanently. It does not include DeadLetterInvocations.
+
+Note: CloudWatch Events only sends this metric to CloudWatch if it has a non-zero value.
+
+Valid Dimensions: RuleName
+Units: Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="matchedEvents">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L116" >}}">function <b>matchedEvents</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>matchedEvents(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Measures the number of events that matched with any rule.
+
+Valid Dimensions: None
+Units: Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L49" >}}">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#CloudWatchEventMetricName'>CloudWatchEventMetricName</a>, change: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+CloudWatch Events sends metrics to Amazon CloudWatch every minute.
+
+Creates an AWS/Events metric with the requested [metricName]. See
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatch-Events-Monitoring-CloudWatch-Metrics.html
+for list of all metric-names.
+
+Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.
+
+All of these metrics use Count as the unit, so Sum and SampleCount are the most useful
+statistics.
+
+CloudWatch Events metrics have one dimension:
+1. "RuleName": Filters the available metrics by rule name.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="throttledRules">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L126" >}}">function <b>throttledRules</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>throttledRules(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Measures the number of triggered rules that are being throttled.
+
+Valid Dimensions: RuleName
+Units: Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="triggeredRules">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L106" >}}">function <b>triggeredRules</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>triggeredRules(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Measures the number of triggered rules that matched with any event.
+
+Valid Dimensions: RuleName
+Units: Count
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L26" >}}">interface <b>CloudWatchMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+{{% /md %}}
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-color">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The six-digit HTML hex color code to be used for this metric.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-dimensions">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{% md %}}
+
+The new dimension for this metric.  If this object is missing this property, then no change
+will be made.  However, if the property is there by set to [undefined] then the value will be
+cleared.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-eventRule">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L30" >}}">property <b>eventRule</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>eventRule?: aws.cloudwatch.EventRule;</pre>
+{{% md %}}
+
+Filters down events to those from the specified [EventRule].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-extendedStatistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new percentile statistic for the metric associated with the alarm.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-label">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The label to display for this metric in the graph legend. If this is not specified, the
+metric is given an autogenerated label that distinguishes it from the other metrics in the
+widget.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-period">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new period in seconds over which the specified `stat` is applied.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default (300s).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-statistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{% md %}}
+
+The new statistic to apply to the alarm's associated metric.  If this object is missing this
+property, then no change will be made.  However, if the property is there by set to
+[undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-unit">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{% md %}}
+
+The new unit for this metric.   If this object is missing this property, then no change will
+be made.  However, if the property is there by set to [undefined] then the value will be set
+to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-visible">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{% md %}}
+
+Set this to true to have the metric appear in the graph, or false to have it be hidden. The
+default is true.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-yAxis">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{% md %}}
+
+Where on the graph to display the y-axis for this metric. The default is left.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchEventMetricName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L22" >}}">type <b>CloudWatchEventMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>type</span> CloudWatchEventMetricName = <span class='s2'>"DeadLetterInvocations"</span> | <span class='s2'>"Invocations"</span> | <span class='s2'>"FailedInvocations"</span> | <span class='s2'>"TriggeredRules"</span> | <span class='s2'>"MatchedEvents"</span> | <span class='s2'>"ThrottledRules"</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="logs">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L131" >}}">module <b>logs</b></a>
@@ -3224,6 +3500,312 @@ Optional min and max settings for the right Y-axis.
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
+<h3 class="pdoc-member-header" id="deliveryErrors">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L248" >}}">function <b>deliveryErrors</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>deliveryErrors(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of log events for which CloudWatch Logs received an error when forwarding data to the
+subscription destination.
+
+Valid Dimensions: LogGroupName, DestinationType, FilterName
+Valid Statistic: Sum
+Units: None
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="deliveryThrottling">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L260" >}}">function <b>deliveryThrottling</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>deliveryThrottling(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of log events for which CloudWatch Logs was throttled when forwarding data to the
+subscription destination.
+
+Valid Dimensions: LogGroupName, DestinationType, FilterName
+Valid Statistic: Sum
+Units: None
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="forwardedBytes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L225" >}}">function <b>forwardedBytes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>forwardedBytes(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The volume of log events in compressed bytes forwarded to the subscription destination.
+
+Valid Dimensions: LogGroupName, DestinationType, FilterName
+Valid Statistic: Sum
+Units: Bytes
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="forwardedLogEvents">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L236" >}}">function <b>forwardedLogEvents</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>forwardedLogEvents(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of log events forwarded to the subscription destination.
+
+Valid Dimensions: LogGroupName, DestinationType, FilterName
+Valid Statistic: Sum
+Units: None
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="incomingBytes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L202" >}}">function <b>incomingBytes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>incomingBytes(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The volume of log events in uncompressed bytes uploaded to CloudWatch Logs. When used
+with the LogGroupName dimension, this is the volume of log events in uncompressed bytes
+uploaded to the log group.
+
+Valid Dimensions: LogGroupName
+Valid Statistic: Sum
+Units: Bytes
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="incomingLogEvents">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L214" >}}">function <b>incomingLogEvents</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>incomingLogEvents(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of log events uploaded to CloudWatch Logs. When used with the LogGroupName dimension,
+this is the number of log events uploaded to the log group.
+
+Valid Dimensions: LogGroupName
+Valid Statistic: Sum
+Units: None
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L174" >}}">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#CloudWatchLogMetricName'>CloudWatchLogMetricName</a>, change: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+CloudWatch Logs sends metrics to Amazon CloudWatch every minute.
+
+Creates an AWS/Logs metric with the requested [metricName]. See
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Monitoring-CloudWatch-Metrics.html
+for list of all metric-names.
+
+Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.
+
+The dimensions that you can use with CloudWatch Logs metrics are:
+1. "LogGroupName": The name of the CloudWatch Logs log group for which to display metrics.
+2. "DestinationType": The subscription destination for the CloudWatch Logs data, which can be AWS
+   Lambda, Amazon Kinesis Data Streams, or Amazon Kinesis Data Firehose.
+3. "FilterName": The name of the subscription filter that is forwarding data from the log group
+   to the destination. The subscription filter name is automatically converted by CloudWatch to
+   ASCII and any unsupported characters get replaced with a question mark (?).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L136" >}}">interface <b>CloudWatchMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+{{% /md %}}
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-color">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The six-digit HTML hex color code to be used for this metric.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-destinationType">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L146" >}}">property <b>destinationType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>destinationType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+The subscription destination for the CloudWatch Logs data, which can be AWS Lambda,
+Amazon Kinesis Data Streams, or Amazon Kinesis Data Firehose.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-dimensions">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{% md %}}
+
+The new dimension for this metric.  If this object is missing this property, then no change
+will be made.  However, if the property is there by set to [undefined] then the value will be
+cleared.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-extendedStatistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new percentile statistic for the metric associated with the alarm.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-filterName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L153" >}}">property <b>filterName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>filterName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+The name of the subscription filter that is forwarding data from the log group to the
+destination. The subscription filter name is automatically converted by CloudWatch to
+ASCII and any unsupported characters get replaced with a question mark (?).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-label">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The label to display for this metric in the graph legend. If this is not specified, the
+metric is given an autogenerated label that distinguishes it from the other metrics in the
+widget.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-logGroup">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L140" >}}">property <b>logGroup</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>logGroup?: aws.cloudwatch.LogGroup;</pre>
+{{% md %}}
+
+Filters down events to those from the specified [LogGroup].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-period">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new period in seconds over which the specified `stat` is applied.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default (300s).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-statistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{% md %}}
+
+The new statistic to apply to the alarm's associated metric.  If this object is missing this
+property, then no change will be made.  However, if the property is there by set to
+[undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-unit">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{% md %}}
+
+The new unit for this metric.   If this object is missing this property, then no change will
+be made.  However, if the property is there by set to [undefined] then the value will be set
+to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-visible">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{% md %}}
+
+Set this to true to have the metric appear in the graph, or false to have it be hidden. The
+default is true.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchMetricChange-yAxis">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{% md %}}
+
+Where on the graph to display the y-axis for this metric. The default is left.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+</div>
+<h3 class="pdoc-member-header" id="CloudWatchLogMetricName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L132" >}}">type <b>CloudWatchLogMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>type</span> CloudWatchLogMetricName = <span class='s2'>"IncomingBytes"</span> | <span class='s2'>"IncomingLogEvents"</span> | <span class='s2'>"ForwardedBytes"</span> | <span class='s2'>"ForwardedLogEvents"</span> | <span class='s2'>"DeliveryErrors"</span> | <span class='s2'>"DeliveryThrottling"</span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlarmComparisonOperator">

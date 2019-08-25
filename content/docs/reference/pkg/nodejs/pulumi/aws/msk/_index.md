@@ -63,24 +63,24 @@ const kms = new aws.kms.Key("kms", {
 const vpc = new aws.ec2.Vpc("vpc", {
     cidrBlock: "192.168.0.0/22",
 });
-const azs = pulumi.output(aws.getAvailabilityZones({
+const azs = aws.getAvailabilityZones({
     state: "available",
-}));
+});
 const sg = new aws.ec2.SecurityGroup("sg", {
     vpcId: vpc.id,
 });
 const subnetAz1 = new aws.ec2.Subnet("subnetAz1", {
-    availabilityZone: azs.apply(azs => azs.names[0]),
+    availabilityZone: azs.names[0],
     cidrBlock: "192.168.0.0/24",
     vpcId: vpc.id,
 });
 const subnetAz2 = new aws.ec2.Subnet("subnetAz2", {
-    availabilityZone: azs.apply(azs => azs.names[1]),
+    availabilityZone: azs.names[1],
     cidrBlock: "192.168.1.0/24",
     vpcId: vpc.id,
 });
 const subnetAz3 = new aws.ec2.Subnet("subnetAz3", {
-    availabilityZone: azs.apply(azs => azs.names[2]),
+    availabilityZone: azs.names[2],
     cidrBlock: "192.168.2.0/24",
     vpcId: vpc.id,
 });
@@ -559,9 +559,9 @@ Get information on an Amazon MSK Cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.msk.getCluster({
+const example = aws.msk.getCluster({
     clusterName: "example",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown.
@@ -585,9 +585,9 @@ Get information on an Amazon MSK Configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.msk.getConfiguration({
+const example = aws.msk.getConfiguration({
     name: "example",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown.

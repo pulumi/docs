@@ -396,12 +396,12 @@ Platform folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const department1 = new gcp.organizations.Folder("department1", {
     displayName: "Department 1",
     parent: "organizations/1234567",
@@ -817,10 +817,10 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const policy = pulumi.output(gcp.folder.getOrganizationPolicy({
+const policy = gcp.folder.getOrganizationPolicy({
     constraint: "constraints/compute.trustedImageProjects",
     folder: "folders/folderid",
-}));
+});
 
 export const version = policy.version;
 ```

@@ -2319,11 +2319,11 @@ Use this data source to access information about an existing Automation Bool Var
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.automation.getBoolVariable({
+const example = azure.automation.getBoolVariable({
     automationAccountName: "tfex-example-account",
     name: "tfex-example-var",
     resourceGroupName: "tfex-example-rg",
-}));
+});
 
 export const variableId = example.id;
 ```
@@ -2349,11 +2349,11 @@ Use this data source to access information about an existing Automation Datetime
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.automation.getDateTimeVariable({
+const example = azure.automation.getDateTimeVariable({
     automationAccountName: "tfex-example-account",
     name: "tfex-example-var",
     resourceGroupName: "tfex-example-rg",
-}));
+});
 
 export const variableId = example.id;
 ```
@@ -2379,11 +2379,11 @@ Use this data source to access information about an existing Automation Int Vari
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.automation.getIntVariable({
+const example = azure.automation.getIntVariable({
     automationAccountName: "tfex-example-account",
     name: "tfex-example-var",
     resourceGroupName: "tfex-example-rg",
-}));
+});
 
 export const variableId = example.id;
 ```
@@ -2409,11 +2409,11 @@ Use this data source to access information about an existing Automation String V
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.automation.getStringVariable({
+const example = azure.automation.getStringVariable({
     automationAccountName: "tfex-example-account",
     name: "tfex-example-var",
     resourceGroupName: "tfex-example-rg",
-}));
+});
 
 export const variableId = example.id;
 ```

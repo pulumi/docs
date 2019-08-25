@@ -58,11 +58,11 @@ To get more information about Node, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = pulumi.output(gcp.tpu.getTensorflowVersions({}));
+const available = gcp.tpu.getTensorflowVersions({});
 const tpu = new gcp.tpu.Node("tpu", {
     acceleratorType: "v3-8",
     cidrBlock: "10.2.0.0/29",
-    tensorflowVersion: available.apply(available => available.versions[0]),
+    tensorflowVersion: available.versions[0],
     zone: "us-central1-b",
 });
 ```
@@ -73,7 +73,7 @@ const tpu = new gcp.tpu.Node("tpu", {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = pulumi.output(gcp.tpu.getTensorflowVersions({}));
+const available = gcp.tpu.getTensorflowVersions({});
 const tpu = new gcp.tpu.Node("tpu", {
     acceleratorType: "v3-8",
     cidrBlock: "10.3.0.0/29",
@@ -85,7 +85,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     schedulingConfig: {
         preemptible: true,
     },
-    tensorflowVersion: available.apply(available => available.versions[0]),
+    tensorflowVersion: available.versions[0],
     zone: "us-central1-b",
 });
 ```

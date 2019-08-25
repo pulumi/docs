@@ -70,7 +70,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West US",
     name: "acceptanceTestResourceGroup1",
 });
-const current = pulumi.output(azure.core.getClientConfig({}));
+const current = azure.core.getClientConfig({});
 const testSqlServer = new azure.sql.SqlServer("test", {
     administratorLogin: "4dm1n157r470r",
     administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
@@ -1425,10 +1425,10 @@ Use this data source to access information about an existing SQL Azure Database 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.sql.getServer({
+const example = azure.sql.getServer({
     name: "examplesqlservername",
     resourceGroupName: "example-resources",
-}));
+});
 
 export const sqlServerId = azurerm_sql_server_test.id;
 ```

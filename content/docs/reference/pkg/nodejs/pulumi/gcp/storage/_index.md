@@ -722,12 +722,12 @@ If this happens only an entity with `roles/storage.admin` privileges can repair 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const fooPolicy = pulumi.output(gcp.organizations.getIAMPolicy({
+const fooPolicy = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["group:yourgroup@example.com"],
         role: "roles/your-role",
     }],
-}));
+});
 const member = new gcp.storage.BucketIAMPolicy("member", {
     bucket: "your-bucket-name",
     policyData: foo_policy.policyData,
@@ -913,12 +913,12 @@ If this happens only an entity with `roles/storage.admin` privileges can repair 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const fooPolicy = pulumi.output(gcp.organizations.getIAMPolicy({
+const fooPolicy = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["group:yourgroup@example.com"],
         role: "roles/your-role",
     }],
-}));
+});
 const member = new gcp.storage.BucketIAMPolicy("member", {
     bucket: "your-bucket-name",
     policyData: foo_policy.policyData,
@@ -1104,12 +1104,12 @@ If this happens only an entity with `roles/storage.admin` privileges can repair 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const fooPolicy = pulumi.output(gcp.organizations.getIAMPolicy({
+const fooPolicy = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["group:yourgroup@example.com"],
         role: "roles/your-role",
     }],
-}));
+});
 const member = new gcp.storage.BucketIAMPolicy("member", {
     bucket: "your-bucket-name",
     policyData: foo_policy.policyData,
@@ -1881,11 +1881,11 @@ for an example of enabling notifications by granting the correct IAM permission.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const gcsAccount = pulumi.output(gcp.storage.getProjectServiceAccount({}));
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
 const topic = new gcp.pubsub.Topic("topic", {});
 const bucket = new gcp.storage.Bucket("bucket", {});
 const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    members: [pulumi.interpolate`serviceAccount:${gcsAccount.emailAddress}`],
+    members: [`serviceAccount:${gcsAccount.emailAddress}`],
     role: "roles/pubsub.publisher",
     topic: topic.name,
 });
@@ -2466,16 +2466,16 @@ Example creating a nightly Transfer Job from an AWS S3 Bucket to a GCS bucket.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultTransferProjectServieAccount = pulumi.output(gcp.storage.getTransferProjectServieAccount({
+const defaultTransferProjectServieAccount = gcp.storage.getTransferProjectServieAccount({
     project: var_project,
-}));
+});
 const s3_backup_bucketBucket = new gcp.storage.Bucket("s3-backup-bucket", {
     project: var_project,
     storageClass: "NEARLINE",
 });
 const s3_backup_bucketBucketIAMMember = new gcp.storage.BucketIAMMember("s3-backup-bucket", {
     bucket: s3_backup_bucketBucket.name,
-    member: pulumi.interpolate`serviceAccount:${defaultTransferProjectServieAccount.email}`,
+    member: `serviceAccount:${defaultTransferProjectServieAccount.email}`,
     role: "roles/storage.admin",
 }, {dependsOn: [s3_backup_bucketBucket]});
 const s3BucketNightlyBackup = new gcp.storage.TransferJob("s3-bucket-nightly-backup", {
@@ -2771,10 +2771,10 @@ Example picture stored within a folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const picture = pulumi.output(gcp.storage.getBucketObject({
+const picture = gcp.storage.getBucketObject({
     bucket: "image-store",
     name: "folder/butterfly01.jpg",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_bucket_object.html.markdown.
@@ -2801,7 +2801,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as gcp from "@pulumi/gcp";
 
-const getUrl = pulumi.output(gcp.storage.getObjectSignedUrl({
+const getUrl = gcp.storage.getObjectSignedUrl({
     bucket: "friedChicken",
     contentMd5: "pRviqwS4c4OTJRTe03FD1w==",
     contentType: "text/plain",
@@ -2811,7 +2811,7 @@ const getUrl = pulumi.output(gcp.storage.getObjectSignedUrl({
         "x-goog-if-generation-match": 1,
     },
     path: "path/to/file",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/storage_object_signed_url.html.markdown.
@@ -2841,9 +2841,9 @@ For more information see
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const gcsAccount = pulumi.output(gcp.storage.getProjectServiceAccount({}));
+const gcsAccount = gcp.storage.getProjectServiceAccount({});
 const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    members: [pulumi.interpolate`serviceAccount:${gcsAccount.emailAddress}`],
+    members: [`serviceAccount:${gcsAccount.emailAddress}`],
     role: "roles/pubsub.publisher",
     topic: google_pubsub_topic_topic.name,
 });
@@ -2870,7 +2870,7 @@ Use this data source to retrieve Storage Transfer service account for this proje
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultTransferProjectServieAccount = pulumi.output(gcp.storage.getTransferProjectServieAccount({}));
+const defaultTransferProjectServieAccount = gcp.storage.getTransferProjectServieAccount({});
 
 export const defaultAccount = defaultTransferProjectServieAccount.email;
 ```

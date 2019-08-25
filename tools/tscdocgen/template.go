@@ -23,6 +23,14 @@ import (
 
 var indexTemplate = parseNodeJSTemplate()
 
+type boxPartialProvider struct {
+	box packr.Box
+}
+
+func (p boxPartialProvider) Get(name string) (string, error) {
+	return p.box.FindString(name + ".tmpl")
+}
+
 func parseNodeJSTemplate() *mustache.Template {
 	templates := packr.NewBox("./templates")
 
@@ -31,7 +39,8 @@ func parseNodeJSTemplate() *mustache.Template {
 		panic(fmt.Sprintf("missing templates/nodejs.tmpl template: %v", err))
 	}
 
-	t, err := mustache.ParseString(tstr)
+	partialProvider := boxPartialProvider{box: templates}
+	t, err := mustache.ParseStringPartials(tstr, partialProvider)
 	if err != nil {
 		panic(fmt.Sprintf("error parsing templates/nodejs.tmpl template: %v", err))
 	}

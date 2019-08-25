@@ -2364,10 +2364,10 @@ Use this data source to access the properties of an Action Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.monitoring.getActionGroup({
+const example = azure.monitoring.getActionGroup({
     name: "tfex-actiongroup",
     resourceGroupName: "example-rg",
-}));
+});
 
 export const actionGroupId = example.id;
 ```
@@ -2423,9 +2423,9 @@ Use this data source to access the properties of a Log Profile.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.monitoring.getLogProfile({
+const test = azure.monitoring.getLogProfile({
     name: "test-logprofile",
-}));
+});
 
 export const logProfileStorageAccountId = test.storageAccountId;
 ```

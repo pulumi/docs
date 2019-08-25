@@ -1739,7 +1739,7 @@ in a given region for the purpose of using in an AWS Route53 Alias.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.elb.getHostedZoneId({}));
+const main = aws.elb.getHostedZoneId({});
 const www = new aws.route53.Record("www", {
     aliases: [{
         evaluateTargetHealth: true,
@@ -1781,9 +1781,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const lbName = config.get("lbName") || "";
 
-const test = pulumi.output(aws.elb.getLoadBalancer({
+const test = aws.elb.getLoadBalancer({
     name: lbName,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb.html.markdown.
@@ -1808,10 +1808,10 @@ in a given region for the purpose of whitelisting in S3 bucket policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.elb.getServiceAccount({}));
+const main = aws.elb.getServiceAccount({});
 const elbLogs = new aws.s3.Bucket("elbLogs", {
     acl: "private",
-    policy: pulumi.interpolate`{
+    policy: `{
   "Id": "Policy",
   "Version": "2012-10-17",
   "Statement": [

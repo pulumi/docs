@@ -2567,15 +2567,15 @@ Manages a Version of a Shared Image within a Shared Image Gallery.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const existingImage = pulumi.output(azure.compute.getImage({
+const existingImage = azure.compute.getImage({
     name: "search-api",
     resourceGroupName: "packerimages",
-}));
-const existingSharedImage = pulumi.output(azure.compute.getSharedImage({
+});
+const existingSharedImage = azure.compute.getSharedImage({
     galleryName: "existingGallery",
     name: "existing-image",
     resourceGroupName: "existing-resources",
-}));
+});
 const test = new azure.compute.SharedImageVersion("test", {
     galleryName: existingSharedImage.galleryName,
     imageName: existingSharedImage.name,
@@ -3429,10 +3429,10 @@ Use this data source to access information about an existing Availability Set.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getAvailabilitySet({
+const test = azure.compute.getAvailabilitySet({
     name: "tf-appsecuritygroup",
     resourceGroupName: "my-resource-group",
-}));
+});
 
 export const availabilitySetId = test.id;
 ```
@@ -3458,10 +3458,10 @@ Use this data source to access information about an existing Image.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const search = pulumi.output(azure.compute.getImage({
+const search = azure.compute.getImage({
     name: "search-api",
     resourceGroupName: "packerimages",
-}));
+});
 
 export const imageId = search.id;
 ```
@@ -3493,10 +3493,10 @@ const testVirtualNetwork = new azure.network.VirtualNetwork("test", {
     name: "acctvn",
     resourceGroupName: "acctestRG",
 });
-const datasourcemd = pulumi.output(azure.compute.getManagedDisk({
+const datasourcemd = azure.compute.getManagedDisk({
     name: "testManagedDisk",
     resourceGroupName: "acctestRG",
-}));
+});
 const testSubnet = new azure.network.Subnet("test", {
     addressPrefix: "10.0.2.0/24",
     name: "acctsub",
@@ -3582,12 +3582,12 @@ Use this data source to access information about a Platform Image.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getPlatformImage({
+const test = azure.compute.getPlatformImage({
     location: "West Europe",
     offer: "UbuntuServer",
     publisher: "Canonical",
     sku: "16.04-LTS",
-}));
+});
 
 export const version = test.version;
 ```
@@ -3615,11 +3615,11 @@ Use this data source to access information about an existing Shared Image within
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getSharedImage({
+const test = azure.compute.getSharedImage({
     galleryName: "my-image-gallery",
     name: "my-image",
     resourceGroupName: "example-resources",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image.html.markdown.
@@ -3645,10 +3645,10 @@ Use this data source to access information about an existing Shared Image Galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getSharedImageGallery({
+const test = azure.compute.getSharedImageGallery({
     name: "my-image-gallery",
     resourceGroupName: "example-resources",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_gallery.html.markdown.
@@ -3674,12 +3674,12 @@ Use this data source to access information about an existing Version of a Shared
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getSharedImageVersion({
+const test = azure.compute.getSharedImageVersion({
     galleryName: "my-image-gallery",
     imageName: "my-image",
     name: "1.0.0",
     resourceGroupName: "example-resources",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/shared_image_version.html.markdown.
@@ -3703,10 +3703,10 @@ Use this data source to access information about an existing Snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getSnapshot({
+const test = azure.compute.getSnapshot({
     name: "my-snapshot",
     resourceGroupName: "my-resource-group",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/snapshot.html.markdown.
@@ -3730,10 +3730,10 @@ Use this data source to access information about an existing Virtual Machine.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.compute.getVirtualMachine({
+const test = azure.compute.getVirtualMachine({
     name: "production",
     resourceGroupName: "networking",
-}));
+});
 
 export const virtualMachineId = test.id;
 ```

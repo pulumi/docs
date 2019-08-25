@@ -505,10 +505,10 @@ Manages a Cassandra KeySpace within a Cosmos DB Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAccount = pulumi.output(azure.cosmosdb.getAccount({
+const exampleAccount = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
-}));
+});
 const exampleCassandraKeyspace = new azure.cosmosdb.CassandraKeyspace("example", {
     accountName: exampleAccount.name,
     name: "tfex-cosmos-cassandra-keyspace",
@@ -790,10 +790,10 @@ Manages a Mongo Collection within a Cosmos DB Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAccount = pulumi.output(azure.cosmosdb.getAccount({
+const exampleAccount = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
-}));
+});
 const exampleMongoCollection = new azure.cosmosdb.MongoCollection("example", {
     accountName: exampleAccount.name,
     databaseName: exampleAccount.name,
@@ -994,10 +994,10 @@ Manages a Mongo Database within a Cosmos DB Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAccount = pulumi.output(azure.cosmosdb.getAccount({
+const exampleAccount = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
-}));
+});
 const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("example", {
     accountName: exampleAccount.name,
     name: "tfex-cosmos-mongo-db",
@@ -1136,10 +1136,10 @@ Manages a SQL Database within a Cosmos DB Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAccount = pulumi.output(azure.cosmosdb.getAccount({
+const exampleAccount = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
-}));
+});
 const exampleSqlDatabase = new azure.cosmosdb.SqlDatabase("example", {
     accountName: exampleAccount.name,
     name: "tfex-cosmos-mongo-db",
@@ -1278,10 +1278,10 @@ Manages a Table within a Cosmos DB Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAccount = pulumi.output(azure.cosmosdb.getAccount({
+const exampleAccount = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
-}));
+});
 const exampleTable = new azure.cosmosdb.Table("example", {
     accountName: exampleAccount.name,
     name: "tfex-cosmos-table",
@@ -1422,10 +1422,10 @@ Use this data source to access information about an existing CosmosDB (formally 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.cosmosdb.getAccount({
+const test = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
-}));
+});
 
 export const cosmosdbAccountEndpoint = azurerm_cosmosdb_account_jobs.endpoint;
 ```

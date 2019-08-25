@@ -1108,9 +1108,9 @@ the username or project name currently in use.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const scope = pulumi.output(openstack.identity.getAuthScope({
+const scope = openstack.identity.getAuthScope({
     name: "myScope",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_auth_scope_v3.html.markdown.
@@ -1136,9 +1136,9 @@ Use this data source to get the ID of an OpenStack endpoint.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const endpoint1 = pulumi.output(openstack.identity.getEndpoint({
+const endpoint1 = openstack.identity.getEndpoint({
     serviceName: "demo",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_endpoint_v3.html.markdown.
@@ -1164,9 +1164,9 @@ Note: This usually requires admin privileges.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const admins = pulumi.output(openstack.identity.getGroup({
+const admins = openstack.identity.getGroup({
     name: "admins",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_group_v3.html.markdown.
@@ -1190,9 +1190,9 @@ Use this data source to get the ID of an OpenStack project.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const project1 = pulumi.output(openstack.identity.getProject({
+const project1 = openstack.identity.getProject({
     name: "demo",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_project_v3.html.markdown.
@@ -1216,9 +1216,9 @@ Use this data source to get the ID of an OpenStack role.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const admin = pulumi.output(openstack.identity.getRole({
+const admin = openstack.identity.getRole({
     name: "admin",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_role_v3.html.markdown.
@@ -1242,9 +1242,9 @@ Use this data source to get the ID of an OpenStack user.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const user1 = pulumi.output(openstack.identity.getUser({
+const user1 = openstack.identity.getUser({
     name: "user1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_user_v3.html.markdown.

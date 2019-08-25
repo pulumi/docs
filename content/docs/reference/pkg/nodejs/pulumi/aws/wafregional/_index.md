@@ -1835,14 +1835,14 @@ const ipset = new aws.wafregional.IpSet("ipset", {
         value: "192.0.7.0/24",
     }],
 });
-const available = pulumi.output(aws.getAvailabilityZones({}));
+const available = aws.getAvailabilityZones({});
 const bar = new aws.ec2.Subnet("bar", {
-    availabilityZone: available.apply(available => available.names[1]),
+    availabilityZone: available.names[1],
     cidrBlock: "10.1.2.0/24",
     vpcId: fooVpc.id,
 });
 const fooSubnet = new aws.ec2.Subnet("foo", {
-    availabilityZone: available.apply(available => available.names[0]),
+    availabilityZone: available.names[0],
     cidrBlock: "10.1.1.0/24",
     vpcId: fooVpc.id,
 });
@@ -2146,9 +2146,9 @@ The parts of web requests that you want to inspect for cross-site scripting atta
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.wafregional.getIpset({
+const example = aws.wafregional.getIpset({
     name: "tfWAFRegionalIPSet",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown.
@@ -2172,9 +2172,9 @@ const example = pulumi.output(aws.wafregional.getIpset({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.wafregional.getRule({
+const example = aws.wafregional.getRule({
     name: "tfWAFRule",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown.
@@ -2198,9 +2198,9 @@ const example = pulumi.output(aws.wafregional.getRule({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.wafregional.getWebAcl({
+const example = aws.wafregional.getWebAcl({
     name: "tfWAFRule",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown.

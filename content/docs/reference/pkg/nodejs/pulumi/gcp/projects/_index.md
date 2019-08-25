@@ -213,12 +213,12 @@ Three different resources help you manage your IAM policy for a project. Each of
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const project = new gcp.projects.IAMPolicy("project", {
     policyData: admin.policyData,
     project: "your-project-id",
@@ -614,12 +614,12 @@ Three different resources help you manage your IAM policy for a project. Each of
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const project = new gcp.projects.IAMPolicy("project", {
     policyData: admin.policyData,
     project: "your-project-id",
@@ -813,12 +813,12 @@ Three different resources help you manage your IAM policy for a project. Each of
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
-}));
+});
 const project = new gcp.projects.IAMPolicy("project", {
     policyData: admin.policyData,
     project: "your-project-id",
@@ -1739,10 +1739,10 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const policy = pulumi.output(gcp.projects.getOrganizationPolicy({
+const policy = gcp.projects.getOrganizationPolicy({
     constraint: "constraints/serviceuser.services",
     project: "project-id",
-}));
+});
 
 export const version = policy.version;
 ```
@@ -1770,12 +1770,12 @@ for more details.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myOrgProjects = pulumi.output(gcp.projects.getProject({
+const myOrgProjects = gcp.projects.getProject({
     filter: "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
-}));
-const deletionCandidate = my_org_projects.apply(my_org_projects => gcp.organizations.getProject({
+});
+const deletionCandidate = gcp.organizations.getProject({
     projectId: my_org_projects.projects[0].projectId,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/projects.html.markdown.

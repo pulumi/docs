@@ -633,9 +633,9 @@ and [API](https://cloud.google.com/functions/docs/apis).
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myFunction = pulumi.output(gcp.cloudfunctions.getFunction({
+const myFunction = gcp.cloudfunctions.getFunction({
     name: "function",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown.

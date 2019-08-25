@@ -78,7 +78,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -113,7 +113,7 @@ Your PagerDuty API token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -172,7 +172,7 @@ Your PagerDuty account’s personalized subdomain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/integration.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -208,11 +208,11 @@ const pd = new datadog.pagerduty.Integration("pd", {
     ],
     subdomain: "ddog",
 });
-const testingBar = new datadog.IntegrationPagerdutyServiceObject("testingBar", {
+const testingBar = new datadog.pagerduty.ServiceObject("testingBar", {
     serviceKey: "54321098765432109876",
     serviceName: "testingBar",
 }, {dependsOn: [pd]});
-const testingFoo = new datadog.IntegrationPagerdutyServiceObject("testingFoo", {
+const testingFoo = new datadog.pagerduty.ServiceObject("testingFoo", {
     serviceKey: "9876543210123456789",
     serviceName: "testingFoo",
 }, {dependsOn: [pd]});
@@ -253,7 +253,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L37" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -277,7 +277,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L37" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -308,7 +308,7 @@ Your Service name in PagerDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceObject-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="pagerduty/serviceObject.ts#L37" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

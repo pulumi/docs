@@ -572,10 +572,10 @@ Use this data source to access information about an existing Redis Cache
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.redis.getCache({
+const example = azure.redis.getCache({
     name: "myrediscache",
     resourceGroupName: "redis-cache",
-}));
+});
 
 export const hostname = example.hostname;
 export const primaryAccessKey = example.primaryAccessKey;

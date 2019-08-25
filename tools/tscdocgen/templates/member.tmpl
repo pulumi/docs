@@ -1,0 +1,47 @@
+<h2 class="pdoc-module-header" id="{{AnchorName}}">
+<a class="pdoc-member-name" href="{{=<% %>=}}{{< pkg-url pkg="<%PackageName%>" path="<%URLPath%>" >}}<%={{ }}=%>">{{{Label}}} <b>{{{Name}}}</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{#Extends}}
+<pre class="highlight">{{{Extends}}}</pre>
+{{/Extends}}
+{{#Implements}}
+<pre class="highlight">{{{Implements}}}</pre>
+{{/Implements}}
+{{#CodeDetails}}
+<pre class="highlight">{{{CodeDetails}}}</pre>
+{{/CodeDetails}}
+{{#Comment.ShortText}}
+{{=<% %>=}}{{% md %}}<%={{ }}=%>
+
+{{{Comment.ShortText}}}
+
+{{#Comment.Text}}
+{{{Comment.Text}}}
+{{/Comment.Text}}
+{{=<% %>=}}{{% /md %}}<%={{ }}=%>
+{{/Comment.ShortText}}
+{{#Children}}
+{{>child}}
+{{/Children}}
+{{#Signatures}}
+{{=<% %>=}}{{% md %}}<%={{ }}=%>
+
+<pre class="highlight">{{{Label}}}</pre>
+
+{{#Comment.ShortText}}
+
+{{{Comment.ShortText}}}
+
+{{#Comment.Text}}
+{{{Comment.Text}}}
+{{/Comment.Text}}
+{{/Comment.ShortText}}
+{{#Parameters}}
+{{#Comment.ShortText}}
+* `{{Name}}` {{Comment.ShortText}}
+{{/Comment.ShortText}}
+{{/Parameters}}
+{{=<% %>=}}{{% /md %}}<%={{ }}=%>
+{{/Signatures}}
+</div>

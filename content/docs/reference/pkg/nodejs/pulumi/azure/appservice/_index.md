@@ -3228,10 +3228,10 @@ Use this data source to access information about an existing App Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.appservice.getAppService({
+const test = azure.appservice.getAppService({
     name: "search-app-service",
     resourceGroupName: "search-service",
-}));
+});
 
 export const appServiceId = test.id;
 ```
@@ -3257,10 +3257,10 @@ Use this data source to access information about an existing App Service Plan (f
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.appservice.getAppServicePlan({
+const test = azure.appservice.getAppServicePlan({
     name: "search-app-service-plan",
     resourceGroupName: "search-service",
-}));
+});
 
 export const appServicePlanId = test.id;
 ```

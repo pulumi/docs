@@ -4411,7 +4411,7 @@ and deleted. Instances also support [provisioning](https://www.terraform.io/docs
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -4424,7 +4424,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const web = new aws.ec2.Instance("web", {
     ami: ubuntu.id,
     instanceType: "t2.micro",
@@ -5304,7 +5304,7 @@ Provides a resource to create a new launch configuration, used for autoscaling g
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -5317,7 +5317,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -5338,7 +5338,7 @@ with `namePrefix`.  Example:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -5351,7 +5351,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -5381,7 +5381,7 @@ for more information or how to launch [Spot Instances][3] with this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -5394,7 +5394,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}));
+});
 const asConf = new aws.ec2.LaunchConfiguration("asConf", {
     imageId: ubuntu.id,
     instanceType: "m4.large",
@@ -7480,14 +7480,14 @@ const sg = new aws.ec2.SecurityGroup("sg", {
         type: "test-security-group",
     },
 });
-const ami = pulumi.output(aws.getAmi({
+const ami = aws.getAmi({
     filters: [{
         name: "name",
         values: ["amzn-ami-hvm-*"],
     }],
     mostRecent: true,
     owners: ["amazon"],
-}));
+});
 const instance = new aws.ec2.Instance("instance", {
     ami: ami.id,
     instanceType: "t2.micro",
@@ -7514,9 +7514,9 @@ const sg = new aws.ec2.SecurityGroup("sg", {
         type: "test-security-group",
     },
 });
-const instance = pulumi.output(aws.ec2.getInstance({
+const instance = aws.ec2.getInstance({
     instanceId: "i-1234567890abcdef0",
-}));
+});
 const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment", {
     networkInterfaceId: instance.networkInterfaceId,
     securityGroupId: sg.id,
@@ -11804,11 +11804,11 @@ const ptfeServiceVpcEndpoint = new aws.ec2.VpcEndpoint("ptfeService", {
     vpcEndpointType: "Interface",
     vpcId: var_vpc_id,
 });
-const internal = pulumi.output(aws.route53.getZone({
+const internal = aws.route53.getZone({
     name: "vpc.internal.",
     privateZone: true,
     vpcId: var_vpc_id,
-}));
+});
 const ptfeServiceRecord = new aws.route53.Record("ptfeService", {
     records: [ptfeServiceVpcEndpoint.dnsEntries.apply(dnsEntries => (<any>dnsEntries[0])["dnsName"])],
     ttl: 300,
@@ -12684,7 +12684,7 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = pulumi.output(aws.getCallerIdentity({}));
+const current = aws.getCallerIdentity({});
 const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allowMeToFoo", {
     principalArn: current.arn,
     vpcEndpointServiceId: aws_vpc_endpoint_service_foo.id,
@@ -14527,12 +14527,12 @@ const main = new aws.ec2.VpnGateway("main", {
     amazonSideAsn: "7224",
     vpcId: aws_vpc_main.id,
 });
-const foo = pulumi.output(aws.ec2.getCustomerGateway({
+const foo = aws.ec2.getCustomerGateway({
     filters: [{
         name: "tag:Name",
         values: ["foo-prod"],
     }],
-}));
+});
 const transit = new aws.ec2.VpnConnection("transit", {
     customerGatewayId: foo.id,
     staticRoutesOnly: false,
@@ -14563,7 +14563,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.ec2.getInstance({
+const foo = aws.ec2.getInstance({
     filters: [
         {
             name: "image-id",
@@ -14575,7 +14575,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
         },
     ],
     instanceId: "i-instanceid",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown.
@@ -14615,12 +14615,12 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const vpcId = config.require("vpcId");
 
-const defaultInternetGateway = pulumi.output(aws.ec2.getInternetGateway({
+const defaultInternetGateway = aws.ec2.getInternetGateway({
     filters: [{
         name: "attachment.vpc-id",
         values: [vpcId],
     }],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown.
@@ -14644,9 +14644,9 @@ Provides information about a Launch Configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
+const ubuntu = aws.ec2.getLaunchConfiguration({
     name: "test-launch-config",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown.
@@ -14670,9 +14670,9 @@ Provides information about a Launch Template.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
+const defaultLaunchTemplate = aws.ec2.getLaunchTemplate({
     name: "my-launch-template",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown.
@@ -14739,9 +14739,9 @@ The following shows outputing all network ACL ids in a vpc.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkAcls = pulumi.output(aws.ec2.getNetworkAcls({
+const exampleNetworkAcls = aws.ec2.getNetworkAcls({
     vpcId: var_vpc_id,
-}));
+});
 
 export const example = exampleNetworkAcls.ids;
 ```
@@ -14753,12 +14753,12 @@ tag of `Tier` set to a value of "Private".
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getNetworkAcls({
+const example = aws.ec2.getNetworkAcls({
     tags: {
         Tier: "Private",
     },
     vpcId: var_vpc_id,
-}));
+});
 ```
 
 The following example retrieves a network ACL id in a VPC which associated
@@ -14798,9 +14798,9 @@ Use this data source to get information about a Network Interface.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bar = pulumi.output(aws.ec2.getNetworkInterface({
+const bar = aws.ec2.getNetworkInterface({
     id: "eni-01234567",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown.
@@ -14824,7 +14824,7 @@ The following shows outputing all network interface ids in a region.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkInterfaces = pulumi.output(aws.ec2.getNetworkInterfaces({}));
+const exampleNetworkInterfaces = aws.ec2.getNetworkInterfaces({});
 
 export const example = exampleNetworkInterfaces.ids;
 ```
@@ -14835,11 +14835,11 @@ The following example retrieves a list of all network interface ids with a custo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getNetworkInterfaces({
+const example = aws.ec2.getNetworkInterfaces({
     tags: {
         Name: "test",
     },
-}));
+});
 
 export const example1 = example.ids;
 ```
@@ -14899,9 +14899,9 @@ const route = aws_route_table_selected.id.apply(id => aws.ec2.getRoute({
 const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterface({
     networkInterfaceId: route.networkInterfaceId,
 }));
-const selected = pulumi.output(aws.ec2.getRouteTable({
+const selected = aws.ec2.getRouteTable({
     subnetId: subnetId,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown.
@@ -14935,9 +14935,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const subnetId = config.require("subnetId");
 
-const selected = pulumi.output(aws.ec2.getRouteTable({
+const selected = aws.ec2.getRouteTable({
     subnetId: subnetId,
-}));
+});
 const route = new aws.ec2.Route("route", {
     destinationCidrBlock: "10.0.1.0/22",
     routeTableId: selected.id,
@@ -14970,18 +14970,18 @@ connection.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const rts = pulumi.output(aws.ec2.getRouteTables({
+const rts = aws.ec2.getRouteTables({
     filters: [{
         name: "tag:kubernetes.io/kops/role",
         values: ["private*"],
     }],
     vpcId: var_vpc_id,
-}));
+});
 const route: aws.ec2.Route[] = [];
-for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
+for (let i = 0; i < rts.ids.length; i++) {
     route.push(new aws.ec2.Route(`r-${i}`, {
         destinationCidrBlock: "10.0.1.0/22",
-        routeTableId: rts.apply(rts => rts.ids[i]),
+        routeTableId: rts.ids[i],
         vpcPeeringConnectionId: "pcx-0e9a7a9ecd137dc54",
     }));
 }
@@ -15018,9 +15018,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const securityGroupId = config.require("securityGroupId");
 
-const selected = pulumi.output(aws.ec2.getSecurityGroup({
+const selected = aws.ec2.getSecurityGroup({
     id: securityGroupId,
-}));
+});
 const subnet = new aws.ec2.Subnet("subnet", {
     cidrBlock: "10.0.1.0/24",
     vpcId: selected.vpcId,
@@ -15049,19 +15049,19 @@ outside of this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = pulumi.output(aws.ec2.getSecurityGroups({
+const test = aws.ec2.getSecurityGroups({
     tags: {
         Application: "k8s",
         Environment: "dev",
     },
-}));
+});
 ```
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = pulumi.output(aws.ec2.getSecurityGroups({
+const test = aws.ec2.getSecurityGroups({
     filters: [
         {
             name: "group-name",
@@ -15072,7 +15072,7 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
             values: [varVpcId],
         },
     ],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown.
@@ -15107,9 +15107,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const subnetId = config.require("subnetId");
 
-const selected = pulumi.output(aws.ec2.getSubnet({
+const selected = aws.ec2.getSubnet({
     id: subnetId,
-}));
+});
 const subnet = new aws.ec2.SecurityGroup("subnet", {
     ingress: [{
         cidrBlocks: [selected.cidrBlock],
@@ -15146,15 +15146,15 @@ The following shows outputing all cidr blocks for every subnet id in a vpc.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleSubnetIds = pulumi.output(aws.ec2.getSubnetIds({
+const exampleSubnetIds = aws.ec2.getSubnetIds({
     vpcId: var_vpc_id,
-}));
-const exampleSubnet: Output<aws.ec2.GETSUBNETResult>[] = [];
-for (let i = 0; i < exampleSubnetIds.apply(exampleSubnetIds => exampleSubnetIds.ids.length); i++) {
-    exampleSubnet.push(aws.ec2.getSubnet);
-%!(EXTRA string=exampleSubnetIds.apply(exampleSubnetIds => aws.ec2.getSubnet({
+});
+const exampleSubnet: aws.ec2.GetSubnetResult[] = [];
+for (let i = 0; i < exampleSubnetIds.ids.length; i++) {
+    exampleSubnet.push(aws.ec2.getSubnet({
         id: exampleSubnetIds.ids[i],
-    })))}
+    }));
+}
 
 export const subnetCidrBlocks = exampleSubnet.map(v => v.cidrBlock);
 ```
@@ -15167,18 +15167,18 @@ can loop through the subnets, putting instances across availability zones.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const privateSubnetIds = pulumi.output(aws.ec2.getSubnetIds({
+const privateSubnetIds = aws.ec2.getSubnetIds({
     tags: {
         Tier: "Private",
     },
     vpcId: var_vpc_id,
-}));
+});
 const app: aws.ec2.Instance[] = [];
 for (let i = 0; i < 3; i++) {
     app.push(new aws.ec2.Instance(`app-${i}`, {
         ami: var_ami,
         instanceType: "t2.micro",
-        subnetId: privateSubnetIds.apply(privateSubnetIds => privateSubnetIds.ids[i]),
+        subnetId: privateSubnetIds.ids[i],
     }));
 }
 ```
@@ -15215,15 +15215,15 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const vpcId = config.require("vpcId");
 
-const selected = pulumi.output(aws.ec2.getVpc({
+const selected = aws.ec2.getVpc({
     id: vpcId,
-}));
+});
 const example = new aws.ec2.Subnet("example", {
     availabilityZone: "us-west-2a",
-    cidrBlock: selected.apply(selected => (() => {
+    cidrBlock: (() => {
         throw "tf2pulumi error: NYI: call to cidrsubnet";
         return (() => { throw "NYI: call to cidrsubnet"; })();
-    })()),
+    })(),
     vpcId: selected.id,
 });
 ```
@@ -15251,9 +15251,9 @@ Retrieve information about an EC2 DHCP Options configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
+const example = aws.ec2.getVpcDhcpOptions({
     dhcpOptionsId: "dopts-12345678",
-}));
+});
 ```
 
 ### Lookup by Filter
@@ -15262,7 +15262,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
+const example = aws.ec2.getVpcDhcpOptions({
     filters: [
         {
             name: "key",
@@ -15273,7 +15273,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
             values: ["example.com"],
         },
     ],
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown.
@@ -15338,9 +15338,9 @@ const foo = new aws.ec2.Vpc("foo", {
     cidrBlock: "10.0.0.0/16",
 });
 // Declare the data source
-const s3 = pulumi.output(aws.ec2.getVpcEndpointService({
+const s3 = aws.ec2.getVpcEndpointService({
     service: "s3",
-}));
+});
 // Create a VPC endpoint
 const ep = new aws.ec2.VpcEndpoint("ep", {
     serviceName: s3.serviceName,
@@ -15354,9 +15354,9 @@ Non-AWS service usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const custome = pulumi.output(aws.ec2.getVpcEndpointService({
+const custome = aws.ec2.getVpcEndpointService({
     serviceName: "com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown.
@@ -15403,7 +15403,7 @@ const route = new aws.ec2.Route("r", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVpcs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L48" >}}">function <b>getVpcs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L49" >}}">function <b>getVpcs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -15423,11 +15423,11 @@ The following shows outputing all VPC Ids.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpcs = pulumi.output(aws.ec2.getVpcs({
+const fooVpcs = aws.ec2.getVpcs({
     tags: {
         service: "production",
     },
-}));
+});
 
 export const foo = fooVpcs.ids;
 ```
@@ -15438,11 +15438,12 @@ An example use case would be interpolate the `aws.ec2.getVpcs` output into `coun
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpcs = pulumi.output(aws.ec2.getVpcs({}));
+const fooVpcs = aws.ec2.getVpcs({});
 const testFlowLog: aws.ec2.FlowLog[] = [];
-for (let i = 0; i < fooVpcs.apply(fooVpcs => fooVpcs.ids.length); i++) {
+for (let i = 0; i < fooVpcs.ids.length; i++) {
     testFlowLog.push(new aws.ec2.FlowLog(`test_flow_log-${i}`, {
-        vpcId: fooVpcs.apply(fooVpcs => fooVpcs.ids[i]),
+        // ...
+        vpcId: fooVpcs.ids[i],
     }));
 }
 
@@ -15471,12 +15472,12 @@ a specific VPN gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.ec2.getVpnGateway({
+const selected = aws.ec2.getVpnGateway({
     filters: [{
         name: "tag:Name",
         values: ["vpn-gw"],
     }],
-}));
+});
 
 export const vpnGatewayId = selected.id;
 ```
@@ -23391,7 +23392,7 @@ The State of the association.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L68" >}}">interface <b>GetVpcsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L69" >}}">interface <b>GetVpcsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -23400,7 +23401,7 @@ A collection of arguments for invoking getVpcs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcsArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L72" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L73" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters?: {
@@ -23414,7 +23415,7 @@ Custom filter block as described below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L77" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L78" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -23427,7 +23428,7 @@ a pair on the desired vpcs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcsResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L83" >}}">interface <b>GetVpcsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L84" >}}">interface <b>GetVpcsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -23436,7 +23437,7 @@ A collection of values returned by getVpcs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcsResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L84" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L85" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters?: {
@@ -23447,7 +23448,7 @@ A collection of values returned by getVpcs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L93" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L94" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -23458,7 +23459,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsResult-ids">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L88" >}}">property <b>ids</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L89" >}}">property <b>ids</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -23469,7 +23470,7 @@ A list of all the VPC Ids found. This data source will fail if none are found.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcsResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L89" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2/getVpcs.ts#L90" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>

@@ -1142,6 +1142,200 @@ Units: Bytes/Second
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
+<h3 class="pdoc-member-header" id="RdsMetricChange-cluster">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L102" >}}">property <b>cluster</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>cluster?: aws.rds.Cluster;</pre>
+{{% md %}}
+
+Optional [Cluster] to filter down events to.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-color">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The six-digit HTML hex color code to be used for this metric.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-databaseClass">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L118" >}}">property <b>databaseClass</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>databaseClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+This dimension filters the data you request for all instances in a database class. For
+example, you can aggregate metrics for all instances that belong to the database class
+[db.m1.small].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-dimensions">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{% md %}}
+
+The new dimension for this metric.  If this object is missing this property, then no change
+will be made.  However, if the property is there by set to [undefined] then the value will be
+cleared.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-engineName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L124" >}}">property <b>engineName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>engineName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+This dimension filters the data you request for the identified engine name only. For
+example, you can aggregate metrics for all instances that have the engine name [mysql].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-extendedStatistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new percentile statistic for the metric associated with the alarm.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-instance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L97" >}}">property <b>instance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>instance?: aws.rds.Instance;</pre>
+{{% md %}}
+
+Optional [Instance] to filter down events to.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-label">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+The label to display for this metric in the graph legend. If this is not specified, the
+metric is given an autogenerated label that distinguishes it from the other metrics in the
+widget.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-period">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{% md %}}
+
+The new period in seconds over which the specified `stat` is applied.  If this object is
+missing this property, then no change will be made.  However, if the property is there by set
+to [undefined] then the value will be set to the default (300s).
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-role">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L111" >}}">property <b>role</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>role?: <span class='s2'>"WRITER"</span> | <span class='s2'>"READER"</span>;</pre>
+{{% md %}}
+
+This dimension filters the data you request for a specific Aurora DB cluster, aggregating
+the metric by instance role (WRITER/READER). For example, you can aggregate metrics for
+all READER instances that belong to a cluster.
+
+If this is provided then [cluster] must be provided as well.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-sourceRegion">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L130" >}}">property <b>sourceRegion</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>sourceRegion?: aws.Region;</pre>
+{{% md %}}
+
+This dimension filters the data you request for the specified region only. For example,
+you can aggregate metrics for all instances in the region [us-east-1].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-statistic">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{% md %}}
+
+The new statistic to apply to the alarm's associated metric.  If this object is missing this
+property, then no change will be made.  However, if the property is there by set to
+[undefined] then the value will be set to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-unit">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{% md %}}
+
+The new unit for this metric.   If this object is missing this property, then no change will
+be made.  However, if the property is there by set to [undefined] then the value will be set
+to the default.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-visible">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{% md %}}
+
+Set this to true to have the metric appear in the graph, or false to have it be hidden. The
+default is true.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange-yAxis">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{% md %}}
+
+Where on the graph to display the y-axis for this metric. The default is left.
+
+Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
+
+{{% /md %}}
+</div>
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricName">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L21" >}}">type <b>RdsMetricName</b></a>

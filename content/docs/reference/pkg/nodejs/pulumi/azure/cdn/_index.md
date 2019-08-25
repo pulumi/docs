@@ -547,10 +547,10 @@ Use this data source to access information about an existing CDN Profile.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.cdn.getProfile({
+const test = azure.cdn.getProfile({
     name: "myfirstcdnprofile",
     resourceGroupName: "example-resources",
-}));
+});
 
 export const cdnProfileId = test.id;
 ```

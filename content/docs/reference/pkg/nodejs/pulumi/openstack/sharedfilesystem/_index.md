@@ -1010,7 +1010,7 @@ from OpenStack
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({}));
+const zones = openstack.sharedfilesystem.getAvailbilityZones({});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown.
@@ -1034,9 +1034,9 @@ Use this data source to get the ID of an available Shared File System share.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
+const share1 = openstack.sharedfilesystem.getShare({
     name: "share1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown.
@@ -1060,9 +1060,9 @@ Use this data source to get the ID of an available Shared File System share netw
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const sharenetwork1 = pulumi.output(openstack.sharedfilesystem.getShareNetwork({
+const sharenetwork1 = openstack.sharedfilesystem.getShareNetwork({
     name: "sharenetwork1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown.
@@ -1086,9 +1086,9 @@ Use this data source to get the ID of an available Shared File System snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const snapshot1 = pulumi.output(openstack.sharedfilesystem.getSnapshot({
+const snapshot1 = openstack.sharedfilesystem.getSnapshot({
     name: "snapshot1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown.

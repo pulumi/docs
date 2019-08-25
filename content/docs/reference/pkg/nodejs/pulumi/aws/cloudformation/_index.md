@@ -349,7 +349,7 @@ Manages a CloudFormation Stack Set. Stack Sets allow CloudFormation templates to
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
+const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         effect: "Allow",
@@ -358,7 +358,7 @@ const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = pulumi.outpu
             type: "Service",
         }],
     }],
-}));
+});
 const aWSCloudFormationStackSetAdministrationRole = new aws.iam.Role("AWSCloudFormationStackSetAdministrationRole", {
     assumeRolePolicy: aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.json,
 });
@@ -640,7 +640,7 @@ import * as aws from "@pulumi/aws";
 
 // Documentation: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html
 // Additional IAM permissions necessary depend on the resources defined in the Stack Set template
-const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "cloudformation:*",
@@ -650,7 +650,7 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument
         effect: "Allow",
         resources: ["*"],
     }],
-}));
+});
 const aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = aws_iam_role_AWSCloudFormationStackSetAdministrationRole.arn.apply(arn => aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
@@ -839,9 +839,9 @@ exports specified in the [Output](http://docs.aws.amazon.com/AWSCloudFormation/l
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const subnetId = pulumi.output(aws.cloudformation.getExport({
+const subnetId = aws.cloudformation.getExport({
     name: "mySubnetIdExportName",
-}));
+});
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t1.micro",
@@ -871,13 +871,13 @@ outputs and other useful data including the template body.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const network = pulumi.output(aws.cloudformation.getStack({
+const network = aws.cloudformation.getStack({
     name: "my-network-stack",
-}));
+});
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t1.micro",
-    subnetId: network.apply(network => network.outputs["SubnetId"]),
+    subnetId: network.outputs["SubnetId"],
     tags: {
         Name: "HelloWorld",
     },

@@ -1301,10 +1301,10 @@ Get info about a GKE cluster from its name and location.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myCluster = pulumi.output(gcp.container.getCluster({
+const myCluster = gcp.container.getCluster({
     location: "us-east1-a",
     name: "my-cluster",
-}));
+});
 
 export const clusterPassword = myCluster.masterAuths[0].password;
 export const clusterUsername = myCluster.masterAuths[0].username;
@@ -1341,10 +1341,10 @@ support the same version.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1b = pulumi.output(gcp.container.getEngineVersions({
+const central1b = gcp.container.getEngineVersions({
     location: "us-central1-b",
     versionPrefix: "1.12.",
-}));
+});
 const foo = new gcp.container.Cluster("foo", {
     initialNodeCount: 1,
     location: "us-central1-b",
@@ -1379,9 +1379,9 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const debian = pulumi.output(gcp.container.getRegistryImage({
+const debian = gcp.container.getRegistryImage({
     name: "debian",
-}));
+});
 
 export const gcrLocation = debian.imageUrl;
 ```
@@ -1409,7 +1409,7 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const foo = pulumi.output(gcp.container.getRegistryRepository({}));
+const foo = gcp.container.getRegistryRepository({});
 
 export const gcrLocation = foo.repositoryUrl;
 ```

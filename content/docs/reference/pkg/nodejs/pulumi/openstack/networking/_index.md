@@ -1726,7 +1726,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosBandwidthLimitRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L32" >}}">class <b>QosBandwidthLimitRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L31" >}}">class <b>QosBandwidthLimitRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1742,11 +1742,10 @@ Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosPolicy1 = new openstack.NetworkingQosPolicyV2("qosPolicy1", {
+const qosPolicy1 = new openstack.networking.QosPolicy("qosPolicy1", {
     description: "bwLimit",
-    name: "qosPolicy1",
 });
-const bwLimitRule1 = new openstack.NetworkingQosBandwidthLimitRuleV2("bwLimitRule1", {
+const bwLimitRule1 = new openstack.networking.QosBandwidthLimitRule("bwLimitRule1", {
     direction: "egress",
     maxBurstKbps: 300,
     maxKbps: 3000,
@@ -1758,7 +1757,7 @@ const bwLimitRule1 = new openstack.NetworkingQosBandwidthLimitRuleV2("bwLimitRul
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L83" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1775,7 +1774,7 @@ Create a QosBandwidthLimitRule resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L41" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1799,7 +1798,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L52" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1813,7 +1812,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L63" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L62" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1837,7 +1836,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-maxBurstKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L68" >}}">property <b>maxBurstKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L67" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxBurstKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1849,7 +1848,7 @@ maximum burst size in kilobits of the existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-maxKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L73" >}}">property <b>maxKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L72" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1861,7 +1860,7 @@ maximum kilobits per second of the existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L77" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L76" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1872,7 +1871,7 @@ The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L83" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L82" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1898,7 +1897,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosDscpMarkingRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L30" >}}">class <b>QosDscpMarkingRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L29" >}}">class <b>QosDscpMarkingRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1914,11 +1913,10 @@ Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosPolicy1 = new openstack.NetworkingQosPolicyV2("qosPolicy1", {
+const qosPolicy1 = new openstack.networking.QosPolicy("qosPolicy1", {
     description: "dscpMark",
-    name: "qosPolicy1",
 });
-const dscpMarkingRule1 = new openstack.NetworkingQosDscpMarkingRuleV2("dscpMarkingRule1", {
+const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscpMarkingRule1", {
     dscpMark: 26,
     qosPolicyId: qosPolicy1.id,
 });
@@ -1928,7 +1926,7 @@ const dscpMarkingRule1 = new openstack.NetworkingQosDscpMarkingRuleV2("dscpMarki
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1945,7 +1943,7 @@ Create a QosDscpMarkingRule resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1969,7 +1967,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1983,7 +1981,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-dscpMark">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L61" >}}">property <b>dscpMark</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L60" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dscpMark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2007,7 +2005,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L65" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L64" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2018,7 +2016,7 @@ The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L71" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L70" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2044,7 +2042,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosMinimumBandwidthRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L30" >}}">class <b>QosMinimumBandwidthRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L29" >}}">class <b>QosMinimumBandwidthRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2060,11 +2058,10 @@ Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosPolicy1 = new openstack.NetworkingQosPolicyV2("qosPolicy1", {
+const qosPolicy1 = new openstack.networking.QosPolicy("qosPolicy1", {
     description: "minKbps",
-    name: "qosPolicy1",
 });
-const minimumBandwidthRule1 = new openstack.NetworkingQosMinimumBandwidthRuleV2("minimumBandwidthRule1", {
+const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("minimumBandwidthRule1", {
     minKbps: 200,
     qosPolicyId: qosPolicy1.id,
 });
@@ -2074,7 +2071,7 @@ const minimumBandwidthRule1 = new openstack.NetworkingQosMinimumBandwidthRuleV2(
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L76" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2091,7 +2088,7 @@ Create a QosMinimumBandwidthRule resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2115,7 +2112,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2129,7 +2126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L61" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L60" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2153,7 +2150,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-minKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L66" >}}">property <b>minKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L65" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>minKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2165,7 +2162,7 @@ QoS minimum bandwidth rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L70" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L69" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2176,7 +2173,7 @@ The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L76" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L75" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2202,7 +2199,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L26" >}}">class <b>QosPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L25" >}}">class <b>QosPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2218,9 +2215,8 @@ Manages a V2 Neutron QoS policy resource within OpenStack.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosPolicy1 = new openstack.NetworkingQosPolicyV2("qosPolicy1", {
+const qosPolicy1 = new openstack.networking.QosPolicy("qosPolicy1", {
     description: "bwLimit",
-    name: "qosPolicy1",
 });
 ```
 
@@ -2228,7 +2224,7 @@ const qosPolicy1 = new openstack.NetworkingQosPolicyV2("qosPolicy1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L110" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2245,7 +2241,7 @@ Create a QosPolicy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L35" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2269,7 +2265,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L46" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2283,7 +2279,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-allTags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L57" >}}">property <b>allTags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L56" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2295,7 +2291,7 @@ explicitly and implicitly added.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L61" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L60" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2306,7 +2302,7 @@ The time at which QoS policy was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L66" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L65" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2330,7 +2326,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-isDefault">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L72" >}}">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L71" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2343,7 +2339,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L77" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2355,7 +2351,7 @@ the existing QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-projectId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L82" >}}">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L81" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2367,7 +2363,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L89" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L88" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2381,7 +2377,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-revisionNumber">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L93" >}}">property <b>revisionNumber</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L92" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>revisionNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2392,7 +2388,7 @@ The revision number of the QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-shared">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L99" >}}">property <b>shared</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L98" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2405,7 +2401,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L103" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L102" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2416,7 +2412,7 @@ A set of string tags for the QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L107" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L106" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2439,7 +2435,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-valueSpecs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L111" >}}">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L110" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4714,11 +4710,11 @@ Use this data source to get the ID of an available OpenStack address-scope.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const publicAddressscope = pulumi.output(openstack.NetworkingAddressscopeV2({
+const publicAddressscope = openstack.networking.getAddressScope({
     ipVersion: 4,
     name: "publicAddressscope",
     shared: true,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown.
@@ -4742,9 +4738,9 @@ Use this data source to get the ID of an available OpenStack floating IP.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const floatingip1 = pulumi.output(openstack.networking.getFloatingIp({
+const floatingip1 = openstack.networking.getFloatingIp({
     address: "192.168.0.4",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown.
@@ -4768,9 +4764,9 @@ Use this data source to get the ID of an available OpenStack network.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const network = pulumi.output(openstack.networking.getNetwork({
+const network = openstack.networking.getNetwork({
     name: "tfTestNetwork",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown.
@@ -4794,9 +4790,9 @@ Use this data source to get the ID of an available OpenStack port.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const port1 = pulumi.output(openstack.networking.getPort({
+const port1 = openstack.networking.getPort({
     name: "port1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown.
@@ -4821,9 +4817,9 @@ specified criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const ports = pulumi.output(openstack.networking.getPortIds({
+const ports = openstack.networking.getPortIds({
     name: "port",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown.
@@ -4847,9 +4843,9 @@ Use this data source to get the ID of an available OpenStack QoS bandwidth limit
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosBandwidthLimitRule1 = pulumi.output(openstack.NetworkingQosBandwidthLimitRuleV2({
+const qosBandwidthLimitRule1 = openstack.networking.getQosBandwidthLimitRule({
     maxKbps: 300,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown.
@@ -4873,9 +4869,9 @@ Use this data source to get the ID of an available OpenStack QoS DSCP marking ru
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosDscpMarkingRule1 = pulumi.output(openstack.NetworkingQosDscpMarkingRuleV2({
+const qosDscpMarkingRule1 = openstack.networking.getQosDscpMarkingRule({
     dscpMark: 26,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown.
@@ -4899,9 +4895,9 @@ Use this data source to get the ID of an available OpenStack QoS minimum bandwid
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosMinBwRule1 = pulumi.output(openstack.NetworkingQosMinimumBandwidthRuleV2({
+const qosMinBwRule1 = openstack.networking.getQosMinimumBandwidthRule({
     minKbps: 2000,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown.
@@ -4925,9 +4921,9 @@ Use this data source to get the ID of an available OpenStack QoS policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosPolicy1 = pulumi.output(openstack.NetworkingQosPolicyV2({
+const qosPolicy1 = openstack.networking.getQosPolicy({
     name: "qosPolicy1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown.
@@ -4951,9 +4947,9 @@ Use this data source to get the ID of an available OpenStack router.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const router = pulumi.output(openstack.networking.getRouter({
+const router = openstack.networking.getRouter({
     name: "router1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown.
@@ -4977,9 +4973,9 @@ Use this data source to get the ID of an available OpenStack security group.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const secgroup = pulumi.output(openstack.networking.getSecGroup({
+const secgroup = openstack.networking.getSecGroup({
     name: "tfTestSecgroup",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown.
@@ -5003,9 +4999,9 @@ Use this data source to get the ID of an available OpenStack subnet.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const subnet1 = pulumi.output(openstack.networking.getSubnet({
+const subnet1 = openstack.networking.getSubnet({
     name: "subnet1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown.
@@ -5029,9 +5025,9 @@ Use this data source to get the ID of an available OpenStack subnetpool.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
+const subnetpool1 = openstack.networking.getSubnetPool({
     name: "subnetpool1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown.
@@ -5055,9 +5051,9 @@ Use this data source to get the ID of an available OpenStack trunk.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const trunk1 = pulumi.output(openstack.networking.getTrunk({
+const trunk1 = openstack.networking.getTrunk({
     name: "trunk1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown.
@@ -10382,7 +10378,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosBandwidthLimitRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L161" >}}">interface <b>QosBandwidthLimitRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L160" >}}">interface <b>QosBandwidthLimitRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10391,7 +10387,7 @@ The set of arguments for constructing a QosBandwidthLimitRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleArgs-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L166" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L165" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10403,7 +10399,7 @@ existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleArgs-maxBurstKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L171" >}}">property <b>maxBurstKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L170" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxBurstKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10415,7 +10411,7 @@ maximum burst size in kilobits of the existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleArgs-maxKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L176" >}}">property <b>maxKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L175" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10427,7 +10423,7 @@ maximum kilobits per second of the existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleArgs-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L180" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L179" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10438,7 +10434,7 @@ The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L186" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L185" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10452,7 +10448,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosBandwidthLimitRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L130" >}}">interface <b>QosBandwidthLimitRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L129" >}}">interface <b>QosBandwidthLimitRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10461,7 +10457,7 @@ Input properties used for looking up and filtering QosBandwidthLimitRule resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleState-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L135" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L134" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10473,7 +10469,7 @@ existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleState-maxBurstKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L140" >}}">property <b>maxBurstKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L139" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxBurstKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10485,7 +10481,7 @@ maximum burst size in kilobits of the existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleState-maxKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L145" >}}">property <b>maxKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L144" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10497,7 +10493,7 @@ maximum kilobits per second of the existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleState-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L149" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L148" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10508,7 +10504,7 @@ The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRuleState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L155" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L154" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10522,7 +10518,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosDscpMarkingRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L135" >}}">interface <b>QosDscpMarkingRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L134" >}}">interface <b>QosDscpMarkingRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10531,7 +10527,7 @@ The set of arguments for constructing a QosDscpMarkingRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosDscpMarkingRuleArgs-dscpMark">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L140" >}}">property <b>dscpMark</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L139" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dscpMark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10543,7 +10539,7 @@ QoS DSCP marking rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRuleArgs-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L144" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L143" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10554,7 +10550,7 @@ The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRuleArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L150" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L149" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10568,7 +10564,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosDscpMarkingRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L114" >}}">interface <b>QosDscpMarkingRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L113" >}}">interface <b>QosDscpMarkingRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10577,7 +10573,7 @@ Input properties used for looking up and filtering QosDscpMarkingRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosDscpMarkingRuleState-dscpMark">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L119" >}}">property <b>dscpMark</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L118" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dscpMark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10589,7 +10585,7 @@ QoS DSCP marking rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRuleState-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L123" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L122" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10600,7 +10596,7 @@ The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRuleState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L129" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L128" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10614,7 +10610,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosMinimumBandwidthRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L147" >}}">interface <b>QosMinimumBandwidthRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L146" >}}">interface <b>QosMinimumBandwidthRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10623,7 +10619,7 @@ The set of arguments for constructing a QosMinimumBandwidthRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleArgs-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L152" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L151" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10635,7 +10631,7 @@ existing QoS minimum bandwidth rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleArgs-minKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L157" >}}">property <b>minKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L156" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10647,7 +10643,7 @@ QoS minimum bandwidth rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleArgs-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L161" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L160" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10658,7 +10654,7 @@ The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L167" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L166" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10672,7 +10668,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosMinimumBandwidthRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L121" >}}">interface <b>QosMinimumBandwidthRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L120" >}}">interface <b>QosMinimumBandwidthRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10681,7 +10677,7 @@ Input properties used for looking up and filtering QosMinimumBandwidthRule resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleState-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L126" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L125" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10693,7 +10689,7 @@ existing QoS minimum bandwidth rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleState-minKbps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L131" >}}">property <b>minKbps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L130" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10705,7 +10701,7 @@ QoS minimum bandwidth rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleState-qosPolicyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L135" >}}">property <b>qosPolicyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L134" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10716,7 +10712,7 @@ The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRuleState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L141" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L140" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10730,7 +10726,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L231" >}}">interface <b>QosPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L230" >}}">interface <b>QosPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10739,7 +10735,7 @@ The set of arguments for constructing a QosPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosPolicyArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L236" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L235" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10751,7 +10747,7 @@ Changing this updates the description of the existing QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-isDefault">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L242" >}}">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L241" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10764,7 +10760,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L247" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L246" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10776,7 +10772,7 @@ the existing QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-projectId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L252" >}}">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L251" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10788,7 +10784,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L259" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L258" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10802,7 +10798,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-shared">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L265" >}}">property <b>shared</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L264" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10815,7 +10811,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L269" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L268" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10826,7 +10822,7 @@ A set of string tags for the QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyArgs-valueSpecs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L273" >}}">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L272" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -10838,7 +10834,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QosPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L166" >}}">interface <b>QosPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L165" >}}">interface <b>QosPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10847,7 +10843,7 @@ Input properties used for looking up and filtering QosPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QosPolicyState-allTags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L171" >}}">property <b>allTags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L170" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10859,7 +10855,7 @@ explicitly and implicitly added.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L175" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L174" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10870,7 +10866,7 @@ The time at which QoS policy was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L180" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L179" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10882,7 +10878,7 @@ Changing this updates the description of the existing QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-isDefault">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L186" >}}">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L185" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10895,7 +10891,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L191" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10907,7 +10903,7 @@ the existing QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-projectId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L196" >}}">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L195" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10919,7 +10915,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L203" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L202" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10933,7 +10929,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-revisionNumber">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L207" >}}">property <b>revisionNumber</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L206" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>revisionNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10944,7 +10940,7 @@ The revision number of the QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-shared">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L213" >}}">property <b>shared</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L212" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10957,7 +10953,7 @@ QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L217" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L216" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10968,7 +10964,7 @@ A set of string tags for the QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L221" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L220" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10979,7 +10975,7 @@ The time at which QoS policy was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicyState-valueSpecs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L225" >}}">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L224" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

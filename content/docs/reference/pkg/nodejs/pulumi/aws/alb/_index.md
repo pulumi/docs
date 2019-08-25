@@ -1742,16 +1742,16 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const listenerArn = config.require("listenerArn");
 
-const selected = pulumi.output(aws.lb.getLoadBalancer({
+const selected = aws.lb.getLoadBalancer({
     name: "default-public",
-}));
-const listener = pulumi.output(aws.lb.getListener({
+});
+const listener = aws.lb.getListener({
     arn: listenerArn,
-}));
-const selected443 = selected.apply(selected => aws.lb.getListener({
+});
+const selected443 = aws.lb.getListener({
     loadBalancerArn: selected.arn,
     port: 443,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_listener.html.markdown.
@@ -1785,10 +1785,10 @@ const config = new pulumi.Config();
 const lbArn = config.get("lbArn") || "";
 const lbName = config.get("lbName") || "";
 
-const test = pulumi.output(aws.lb.getLoadBalancer({
+const test = aws.lb.getLoadBalancer({
     arn: lbArn,
     name: lbName,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb.html.markdown.
@@ -1822,10 +1822,10 @@ const config = new pulumi.Config();
 const lbTgArn = config.get("lbTgArn") || "";
 const lbTgName = config.get("lbTgName") || "";
 
-const test = pulumi.output(aws.lb.getTargetGroup({
+const test = aws.lb.getTargetGroup({
     arn: lbTgArn,
     name: lbTgName,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_target_group.html.markdown.

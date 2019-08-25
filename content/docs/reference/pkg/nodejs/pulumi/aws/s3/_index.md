@@ -2509,12 +2509,12 @@ Distribution.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testZone = pulumi.output(aws.route53.getZone({
+const testZone = aws.route53.getZone({
     name: "test.com.",
-}));
-const selected = pulumi.output(aws.s3.getBucket({
+});
+const selected = aws.s3.getBucket({
     bucket: "bucket.test.com",
-}));
+});
 const example = new aws.route53.Record("example", {
     aliases: [{
         name: selected.websiteDomain,
@@ -2531,9 +2531,9 @@ const example = new aws.route53.Record("example", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.s3.getBucket({
+const selected = aws.s3.getBucket({
     bucket: "a-test-bucket",
-}));
+});
 const test = new aws.cloudfront.Distribution("test", {
     origins: [{
         domainName: selected.bucketDomainName,
@@ -2569,10 +2569,10 @@ value starting with `text/`) and uses it as the `userData` for an EC2 instance:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bootstrapScript = pulumi.output(aws.s3.getBucketObject({
+const bootstrapScript = aws.s3.getBucketObject({
     bucket: "ourcorp-deploy-config",
     key: "ec2-bootstrap-script.sh",
-}));
+});
 const example = new aws.ec2.Instance("example", {
     ami: "ami-2757f631",
     instanceType: "t2.micro",
@@ -2590,10 +2590,10 @@ Lambda functions is available in the documentation for
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const lambda = pulumi.output(aws.s3.getBucketObject({
+const lambda = aws.s3.getBucketObject({
     bucket: "ourcorp-lambda-functions",
     key: "hello-world.zip",
-}));
+});
 const testLambda = new aws.lambda.Function("testLambda", {
     handler: "exports.test",
     role: aws_iam_role_iam_for_lambda.arn, // (not shown)

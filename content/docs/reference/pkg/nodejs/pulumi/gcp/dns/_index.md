@@ -766,9 +766,9 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const envDnsZone = pulumi.output(gcp.dns.getManagedZone({
+const envDnsZone = gcp.dns.getManagedZone({
     name: "qa-zone",
-}));
+});
 const dns = new gcp.dns.RecordSet("dns", {
     managedZone: envDnsZone.name,
     rrdatas: ["test"],

@@ -2658,9 +2658,9 @@ const config = new pulumi.Config();
 const cognitoUserPoolName = config.require("cognitoUserPoolName");
 
 const thisRestApi = new aws.apigateway.RestApi("this", {});
-const thisUserPools = pulumi.output(aws.cognito.getUserPools({
+const thisUserPools = aws.cognito.getUserPools({
     name: cognitoUserPoolName,
-}));
+});
 const thisAuthorizer = new aws.apigateway.Authorizer("this", {
     providerArns: thisUserPools.arns,
     restApi: thisRestApi.id,
@@ -5009,9 +5009,9 @@ example to supply credentials for a dependency microservice.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myApiKey = pulumi.output(aws.apigateway.getKey({
+const myApiKey = aws.apigateway.getKey({
     id: "ru3mpjgse6",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_api_key.html.markdown.
@@ -5036,13 +5036,13 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myRestApi = pulumi.output(aws.apigateway.getRestApi({
+const myRestApi = aws.apigateway.getRestApi({
     name: "my-rest-api",
-}));
-const myResource = myRestApi.apply(myRestApi => aws.apigateway.getResource({
+});
+const myResource = aws.apigateway.getResource({
     path: "/endpoint/path",
     restApiId: myRestApi.id,
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_resource.html.markdown.
@@ -5069,9 +5069,9 @@ error if there is more than one match.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myRestApi = pulumi.output(aws.apigateway.getRestApi({
+const myRestApi = aws.apigateway.getRestApi({
     name: "my-rest-api",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_rest_api.html.markdown.
@@ -5098,9 +5098,9 @@ error if there is more than one match.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
+const myApiGatewayVpcLink = aws.apigateway.getVpcLink({
     name: "my-vpc-link",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_vpc_link.html.markdown.

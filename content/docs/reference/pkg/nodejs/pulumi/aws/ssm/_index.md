@@ -2537,10 +2537,10 @@ To get the contents of the document owned by AWS.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.ssm.getDocument({
+const foo = aws.ssm.getDocument({
     documentFormat: "YAML",
     name: "AWS-GatherSoftwareInventory",
-}));
+});
 
 export const content = foo.content;
 ```
@@ -2577,9 +2577,9 @@ Provides an SSM Parameter data source.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.ssm.getParameter({
+const foo = aws.ssm.getParameter({
     name: "foo",
-}));
+});
 ```
 
 > **Note:** The unencrypted value of a SecureString will be stored in the raw state as plain-text.

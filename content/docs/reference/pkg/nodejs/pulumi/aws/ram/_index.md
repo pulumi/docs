@@ -483,10 +483,10 @@ deployments.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ram.getResourceShare({
+const example = aws.ram.getResourceShare({
     name: "example",
     resourceOwner: "SELF",
-}));
+});
 ```
 
 ## Search by filters
@@ -495,14 +495,14 @@ const example = pulumi.output(aws.ram.getResourceShare({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tagFilter = pulumi.output(aws.ram.getResourceShare({
+const tagFilter = aws.ram.getResourceShare({
     filters: [{
         name: "NameOfTag",
         values: ["exampleNameTagValue"],
     }],
     name: "MyResourceName",
     resourceOwner: "SELF",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ram_resource_share.html.markdown.

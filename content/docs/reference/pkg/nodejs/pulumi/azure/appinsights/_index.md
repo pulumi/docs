@@ -736,10 +736,10 @@ Use this data source to access information about an existing Application Insight
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.appinsights.getInsights({
+const test = azure.appinsights.getInsights({
     name: "production",
     resourceGroupName: "networking",
-}));
+});
 
 export const applicationInsightsInstrumentationKey = test.instrumentationKey;
 ```

@@ -351,10 +351,10 @@ const internalWithSubnetAndAddress = new gcp.compute.Address("internalWithSubnet
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const debianImage = pulumi.output(gcp.compute.getImage({
+const debianImage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const static = new gcp.compute.Address("static", {});
 const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
     bootDisk: {
@@ -735,10 +735,10 @@ To get more information about Autoscaler, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const debian9 = pulumi.output(gcp.compute.getImage({
+const debian9 = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const foobarTargetPool = new gcp.compute.TargetPool("foobar", {});
 const foobarInstanceTemplate = new gcp.compute.InstanceTemplate("foobar", {
     canIpForward: false,
@@ -5533,10 +5533,10 @@ as shown in this example to avoid this type of error.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const debianImage = pulumi.output(gcp.compute.getImage({
+const debianImage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const stagingHealth = new gcp.compute.HttpsHealthCheck("stagingHealth", {
     requestPath: "/health_check",
 });
@@ -6134,12 +6134,12 @@ Three different resources help you manage your IAM policy for GCE instance. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/compute.osLogin",
     }],
-}));
+});
 const instance = new gcp.compute.InstanceIAMPolicy("instance", {
     instanceName: "your-instance-name",
     policyData: admin.policyData,
@@ -6345,12 +6345,12 @@ Three different resources help you manage your IAM policy for GCE instance. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/compute.osLogin",
     }],
-}));
+});
 const instance = new gcp.compute.InstanceIAMPolicy("instance", {
     instanceName: "your-instance-name",
     policyData: admin.policyData,
@@ -6556,12 +6556,12 @@ Three different resources help you manage your IAM policy for GCE instance. Each
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/compute.osLogin",
     }],
-}));
+});
 const instance = new gcp.compute.InstanceIAMPolicy("instance", {
     instanceName: "your-instance-name",
     policyData: admin.policyData,
@@ -6753,10 +6753,10 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myImage = pulumi.output(gcp.compute.getImage({
+const myImage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const foobar = new gcp.compute.Disk("foobar", {
     image: myImage.selfLink,
     size: 10,
@@ -6866,10 +6866,10 @@ the template to use that specific image:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myImage = pulumi.output(gcp.compute.getImage({
+const myImage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
     // boot disk
     disks: [{
@@ -8560,11 +8560,11 @@ this provider to delete and recreate the node group.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1a = pulumi.output(gcp.compute.getNodeTypes({
+const central1a = gcp.compute.getNodeTypes({
     zone: "us-central1-a",
-}));
+});
 const soletenantTmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
-    nodeType: central1a.apply(central1a => central1a.names[0]),
+    nodeType: central1a.names[0],
     region: "us-central1",
 });
 const nodes = new gcp.compute.NodeGroup("nodes", {
@@ -8753,11 +8753,11 @@ To get more information about NodeTemplate, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1a = pulumi.output(gcp.compute.getNodeTypes({
+const central1a = gcp.compute.getNodeTypes({
     zone: "us-central1-a",
-}));
+});
 const template = new gcp.compute.NodeTemplate("template", {
-    nodeType: central1a.apply(central1a => central1a.names[0]),
+    nodeType: central1a.names[0],
     region: "us-central1",
 });
 ```
@@ -9376,10 +9376,10 @@ To get more information about RegionAutoscaler, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const debian9 = pulumi.output(gcp.compute.getImage({
+const debian9 = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const foobarTargetPool = new gcp.compute.TargetPool("foobar", {});
 const foobarInstanceTemplate = new gcp.compute.InstanceTemplate("foobar", {
     canIpForward: false,
@@ -13011,10 +13011,10 @@ To get more information about Snapshot, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const debian = pulumi.output(gcp.compute.getImage({
+const debian = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const persistent = new gcp.compute.Disk("persistent", {
     image: debian.selfLink,
     size: 10,
@@ -14441,10 +14441,10 @@ To get more information about TargetInstance, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const vmimage = pulumi.output(gcp.compute.getImage({
+const vmimage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const targetVm = new gcp.compute.Instance("target-vm", {
     bootDisk: {
         initializeParams: {
@@ -16082,9 +16082,9 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/addres
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myAddress = pulumi.output(gcp.compute.getAddress({
+const myAddress = gcp.compute.getAddress({
     name: "foobar",
-}));
+});
 const prod = new gcp.dns.ManagedZone("prod", {
     dnsName: "prod.mydomain.com.",
 });
@@ -16134,10 +16134,10 @@ Get info about a Google Compute SSL Certificate from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myCert = pulumi.output(gcp.compute.getCertificate({
+const myCert = gcp.compute.getCertificate({
     location: "us-east1-a",
     name: "my-cert",
-}));
+});
 
 export const certificate = myCert.certificate;
 export const certificateId = myCert.certificateId;
@@ -16165,7 +16165,7 @@ Use this data source to retrieve default service account for this project
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultDefaultServiceAccount = pulumi.output(gcp.compute.getDefaultServiceAccount({}));
+const defaultDefaultServiceAccount = gcp.compute.getDefaultServiceAccount({});
 
 export const defaultAccount = defaultDefaultServiceAccount.email;
 ```
@@ -16191,9 +16191,9 @@ Get a forwarding rule within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myForwardingRule = pulumi.output(gcp.compute.getForwardingRule({
+const myForwardingRule = gcp.compute.getForwardingRule({
     name: "forwarding-rule-us-east1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_forwarding_rule.html.markdown.
@@ -16218,9 +16218,9 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/global
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myAddress = pulumi.output(gcp.compute.getGlobalAddress({
+const myAddress = gcp.compute.getGlobalAddress({
     name: "foobar",
-}));
+});
 const prod = new gcp.dns.ManagedZone("prod", {
     dnsName: "prod.mydomain.com.",
 });
@@ -16254,10 +16254,10 @@ Get information about a Google Compute Image. Check that your service account ha
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myImage = pulumi.output(gcp.compute.getImage({
+const myImage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
-}));
+});
 const defaultInstance = new gcp.compute.Instance("default", {
     bootDisk: {
         initializeParams: {
@@ -16291,10 +16291,10 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const appserver = pulumi.output(gcp.compute.getInstance({
+const appserver = gcp.compute.getInstance({
     name: "primary-application-server",
     zone: "us-central1-a",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_instance.html.markdown.
@@ -16318,10 +16318,10 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const all = pulumi.output(gcp.compute.getInstanceGroup({
+const all = gcp.compute.getInstanceGroup({
     name: "instance-group-name",
     zone: "us-central1-a",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_instance_group.html.markdown.
@@ -16347,7 +16347,7 @@ https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const ranges = pulumi.output(gcp.compute.getLBIPRanges({}));
+const ranges = gcp.compute.getLBIPRanges({});
 const lb = new gcp.compute.Firewall("lb", {
     allows: [{
         ports: ["80"],
@@ -16382,7 +16382,7 @@ https://cloud.google.com/compute/docs/faq#where_can_i_find_product_name_short_ip
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const netblock = pulumi.output(gcp.compute.getNetblockIPRanges({}));
+const netblock = gcp.compute.getNetblockIPRanges({});
 
 export const cidrBlocks = netblock.cidrBlocks;
 export const cidrBlocksIpv4 = netblock.cidrBlocksIpv4s;
@@ -16410,9 +16410,9 @@ Get a network within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myNetwork = pulumi.output(gcp.compute.getNetwork({
+const myNetwork = gcp.compute.getNetwork({
     name: "default-us-east1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_network.html.markdown.
@@ -16437,9 +16437,9 @@ for a given project. For more information, see [the official documentation](http
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1b = pulumi.output(gcp.compute.getNodeTypes({
+const central1b = gcp.compute.getNodeTypes({
     zone: "us-central1-b",
-}));
+});
 const tmpl = new gcp.compute.NodeTemplate("tmpl", {
     nodeType: google_compute_node_types_types.names.apply(names => names[0]),
     region: "us-central1",
@@ -16466,9 +16466,9 @@ For more information, see [the official documentation](https://cloud.google.com/
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const group = pulumi.output(gcp.compute.getRegionInstanceGroup({
+const group = gcp.compute.getRegionInstanceGroup({
     name: "instance-group-name",
-}));
+});
 ```
 
 The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
@@ -16493,13 +16493,13 @@ See more about [regions and regions](https://cloud.google.com/compute/docs/regio
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = pulumi.output(gcp.compute.getRegions({}));
+const available = gcp.compute.getRegions({});
 const cluster: gcp.compute.Subnetwork[] = [];
-for (let i = 0; i < available.apply(available => available.names.length); i++) {
+for (let i = 0; i < available.names.length; i++) {
     cluster.push(new gcp.compute.Subnetwork(`cluster-${i}`, {
         ipCidrRange: `10.36.${i}.0/24`,
         network: "my-network",
-        region: available.apply(available => available.names[i]),
+        region: available.names[i],
     }));
 }
 ```
@@ -16526,9 +16526,9 @@ Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Targe
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const mySslPolicy = pulumi.output(gcp.compute.getSSLPolicy({
+const mySslPolicy = gcp.compute.getSSLPolicy({
     name: "production-ssl-policy",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_ssl_policy.html.markdown.
@@ -16552,10 +16552,10 @@ Get a subnetwork within GCE from its name and region.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const mySubnetwork = pulumi.output(gcp.compute.getSubnetwork({
+const mySubnetwork = gcp.compute.getSubnetwork({
     name: "default-us-east1",
     region: "us-east1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_subnetwork.html.markdown.
@@ -16579,9 +16579,9 @@ Get a VPN gateway within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myVpnGateway = pulumi.output(gcp.compute.getVPNGateway({
+const myVpnGateway = gcp.compute.getVPNGateway({
     name: "vpn-gateway-us-east1",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_vpn_gateway.html.markdown.
@@ -16604,14 +16604,14 @@ See more about [regions and zones](https://cloud.google.com/compute/docs/regions
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = pulumi.output(gcp.compute.getZones({}));
+const available = gcp.compute.getZones({});
 const foo: gcp.compute.InstanceGroupManager[] = [];
-for (let i = 0; i < available.apply(available => available.names.length); i++) {
+for (let i = 0; i < available.names.length; i++) {
     foo.push(new gcp.compute.InstanceGroupManager(`foo-${i}`, {
         baseInstanceName: `foobar-${i}`,
         instanceTemplate: google_compute_instance_template_foobar.selfLink,
         targetSize: 1,
-        zone: available.apply(available => available.names[i]),
+        zone: available.names[i],
     }));
 }
 ```

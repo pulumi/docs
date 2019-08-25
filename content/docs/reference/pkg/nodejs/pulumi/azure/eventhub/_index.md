@@ -4775,10 +4775,10 @@ Use this data source to access information about an existing EventHub Namespace.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.eventhub.getEventhubNamespace({
+const test = azure.eventhub.getEventhubNamespace({
     name: "search-eventhubns",
     resourceGroupName: "search-service",
-}));
+});
 
 export const eventhubNamespaceId = test.id;
 ```
@@ -4804,10 +4804,10 @@ Use this data source to access information about an existing ServiceBus Namespac
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.eventhub.getServiceBusNamespace({
+const test = azure.eventhub.getServiceBusNamespace({
     name: "examplenamespace",
     resourceGroupName: "example-resources",
-}));
+});
 
 export const location = test.location;
 ```

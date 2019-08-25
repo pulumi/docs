@@ -603,10 +603,10 @@ The ECR Image data source allows the details of an image with a particular tag o
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const serviceImage = pulumi.output(aws.ecr.getImage({
+const serviceImage = aws.ecr.getImage({
     imageTag: "latest",
     repositoryName: "my/service",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown.
@@ -630,9 +630,9 @@ The ECR Repository data source allows the ARN, Repository URI and Registry ID to
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const service = pulumi.output(aws.ecr.getRepository({
+const service = aws.ecr.getRepository({
     name: "ecr-repository",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown.

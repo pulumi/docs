@@ -2062,9 +2062,9 @@ The following example shows how to get a delegation set from its id.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const dset = pulumi.output(aws.route53.getDelegationSet({
+const dset = aws.route53.getDelegationSet({
     id: "MQWGHCBFAKEID",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown.
@@ -2093,10 +2093,10 @@ The following example shows how to get a Hosted Zone from its name and from this
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.route53.getZone({
+const selected = aws.route53.getZone({
     name: "test.com.",
     privateZone: true,
-}));
+});
 const www = new aws.route53.Record("www", {
     records: ["10.0.0.1"],
     ttl: 300,

@@ -2000,10 +2000,10 @@ Use this data source to access information about an existing DNS Zone.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.dns.getZone({
+const test = azure.dns.getZone({
     name: "search-eventhubns",
     resourceGroupName: "search-service",
-}));
+});
 
 export const dnsZoneId = test.id;
 ```
