@@ -374,52 +374,24 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// First a title and some additional package header info, for the root module.
 	var title string
+	var linktitle string
 	var pkg string
 	var pkgvar string
 	var readme string
-	var breadcrumbs []string
 
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
+		linktitle = e.pkgname
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
 		readme = filepath.Join(e.srcdir, "README.md")
 	} else {
 		title = fmt.Sprintf("Module %s", name)
 		readme = filepath.Join(e.srcdir, name, "README.md")
-
-		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
-		var simplename string
-		if slix := strings.IndexRune(name, '/'); slix != -1 {
-			simplename = name[slix+1:]
-		} else {
-			simplename = name
+		linktitle = name
+		if slix := strings.IndexRune(linktitle, '/'); slix != -1 {
+			linktitle = linktitle[slix+1:]
 		}
-		breadcrumbs = append(breadcrumbs, simplename)
-
-		// Now split the parent and walk it in reverse, prepending all of the parent links.
-		parts := strings.Split(getModuleParentName(name), "/")
-		crumbs := ".."
-		for i := len(parts) - 1; i >= 0; i-- {
-			name := parts[i]
-			if i == 0 && name == rootModule {
-				// we will add the root after this loop, no need to be redundant.
-				break
-			}
-
-			breadcrumbs = append(
-				[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, name)},
-				breadcrumbs...)
-			if crumbs != "" {
-				crumbs += string(filepath.Separator)
-			}
-			crumbs += ".."
-		}
-
-		// Finally, add the link to the root module.
-		breadcrumbs = append(
-			[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, e.pkg)},
-			breadcrumbs...)
 	}
 
 	// See if there is a README.md file and, if so, include it as the package's comment.
@@ -477,7 +449,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
 		"Title":          title,
-		"Breadcrumbs":    breadcrumbs,
+		"LinkTitle":      linktitle,
 		"RepoURL":        e.repoURL,
 		"Package":        pkg,
 		"PackageName":    e.pkgname,
