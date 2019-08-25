@@ -773,7 +773,7 @@ Pulumi records all resource inputs and outputs in a [state file]({{< relref "sta
 
 > This topic concerns itself with the programming model for secrets. If you'd like a more complete overview, including
 > how and when to use the CLI commands mentioned above, configuring your own secrets provider, and more, refer to
-> [Configuration and Secrets]({{< relref "config" >}}).
+> [Configuration and Secrets]({{< relref "config#secrets" >}}).
 
 ### Programmatically Creating Secrets
 
