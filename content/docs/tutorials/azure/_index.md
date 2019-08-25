@@ -1,14 +1,22 @@
 ---
-title: "Azure"
+title: "Azure Tutorials"
 menu:
   userguides:
+    name: "Azure"
     parent: tutorials
+    identifier: tutorials-azure
 
 aliases: ["/docs/reference/tutorials/azure/"]
 ---
 
-{{< get-started-note >}}
+The following tutorials highlight the Azure platform using complete end-to-end scenarios.
 
-Additionally, a tutorial is available to follow:
+> If this is your first time getting started with Pulumi for Azure, try the
+> easy <a href="{{< relref "/docs/get-started/azure" >}}">Get Started guide</a> first.
 
-* [Azure Container Instances Web Server]({{< relref "/docs/tutorials/azure/container-webserver" >}}): Create an NGINX web server Azure Container Instance
+{{< langchoose nogo >}}
+{{< tutorials-index-azure >}}
+
+If you'd like to see a new tutorial, please [request one](
+https://github.com/pulumi/docs/issues/new?title=New%20Azure%20Tutorial%20Request). If you'd like
+to contribute your own, great! Please see the tutorial contribution guidelines.
