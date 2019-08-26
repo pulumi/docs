@@ -52,7 +52,7 @@ Resources:
 Duration: 14s
 ```
 
-The name of the bucket that we exported is shown as a [stack output]({{< relref "/docs/reference/stack.md#outputs" >}}).
+The name of the bucket that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
 
 Next, we'll make some modifications to the program.
 

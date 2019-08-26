@@ -34,7 +34,7 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new aws-python
 ```
 
-> If this is your first time running `pulumi new` or most other `pulumi` commands, you will be prompted to log in to the [Pulumi service](https://app.pulumi.com). The [Pulumi CLI]({{< relref "/docs/reference/commands" >}}) works in tandem with the Pulumi service in order to deliver a reliable experience. It is free for individual use, with [additional features available for teams](https://www.pulumi.com/pricing/). Hitting `ENTER` at the prompt opens up a web browser allowing you to either sign in or sign up.
+> If this is your first time running `pulumi new` or most other `pulumi` commands, you will be prompted to log in to the [Pulumi service](https://app.pulumi.com). The [Pulumi CLI]({{< relref "/docs/reference/cli" >}}) works in tandem with the Pulumi service in order to deliver a reliable experience. It is free for individual use, with [additional features available for teams](https://www.pulumi.com/pricing/). Hitting `ENTER` at the prompt opens up a web browser allowing you to either sign in or sign up.
 
 After logging in, the CLI will proceed with walking you through creating a new project.
 
@@ -59,7 +59,7 @@ First, you will be asked for a project name and description. Hit `ENTER` to acce
 
 Next, you will be asked for the name of a stack. You can hit `ENTER` to accept the default value of `dev`.
 
-> What are [projects]({{< relref "/docs/reference/project.md" >}}) and [stacks]({{< relref "/docs/reference/stack.md" >}})? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks]({{< relref "/docs/reference/organizing-stacks-projects.md" >}}) for some best practices on organizing your Pulumi projects and stacks.
+> What are [projects]({{< relref "/docs/intro/concepts/project" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack" >}})? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) for some best practices on organizing your Pulumi projects and stacks.
 
 Next, you will be prompted for some configuration values for the stack.
 

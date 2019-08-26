@@ -45,7 +45,7 @@ Duration: 26s
 ```
 
 <<<<<<< HEAD:content/docs/get-started/aws/destroy-stack.md
-To delete the stack itself, run [`pulumi stack rm`]({{< relref "/docs/reference/cli/pulum_stack_rm" >}}).
+To delete the stack itself, run [`pulumi stack rm`]({{< relref "/docs/reference/cli/pulumi_stack_rm" >}}).
 Note that this removes the stack entirely from `pulumi.com`, along with all of its update history.
 =======
 To delete the stack itself, run [`pulumi stack rm`]({{< relref
