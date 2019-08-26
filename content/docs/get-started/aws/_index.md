@@ -10,10 +10,8 @@ menu:
 aliases: ["/docs/quickstart/aws/"]
 ---
 
-This guide is intended to help you quickly get started provisioning infrastructure on AWS with Pulumi.
 
-<!-- TODO embellish the summary/overview of the guide. -->
-
+{{< cloud-intro "AWS" >}}
 Let's start with installing Pulumi.
 
 {{< get-started-stepper >}}

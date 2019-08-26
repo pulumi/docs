@@ -17,7 +17,7 @@
     }
 
     &.note-warning {
-        @apply bg-orange-100 text-orange-800 my-4 px-4 rounded text-sm border border-orange-200;
+        @apply bg-orange-100 text-orange-800 my-4 px-4 rounded text-sm border border-l-4 border-orange-200;
 
 
         a {

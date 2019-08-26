@@ -20,14 +20,12 @@
     </div>
 </div>
 
-<blockquote>
-    <p>
-        For manual installation instructions, other platforms, or troubleshooting, see the
-        <a href="{{ relref . "/docs/get-started/install" }}" target="_blank">detailed installation documentation</a>.
-    </p>
-</blockquote>
+<p>
+    <i>For manual installation instructions, other platforms, or troubleshooting, see
+    <a href="{{ relref . "/docs/get-started/install" }}" target="_blank">Download and Install</a>.</i>
+</p>
 
-<p>Verify your install:</p>
+<p class="pt-4">Verify your installation:</p>
 <div class="highlight">
     <pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi version
 v{{- readFile "/static/latest-version" -}}</code></pre>

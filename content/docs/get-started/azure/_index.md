@@ -10,9 +10,7 @@ menu:
 aliases: ["/docs/quickstart/azure/"]
 ---
 
-This guide is intended to help you quickly get started provisioning infrastructure on Azure with Pulumi.
-
-<!-- TODO embellish the summary/overview of the guide. -->
+{{< cloud-intro "Azure" >}}
 
 Let's start with installing Pulumi.
 
