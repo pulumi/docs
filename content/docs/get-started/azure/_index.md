@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/quickstart/azure/"]
 ---
 
-{{< cloud-intro "Azure" "https://github.com/pulumi/pulumi-azure" >}}
+{{< cloud-intro "Azure" >}}
 
 Let's start with installing Pulumi.
 

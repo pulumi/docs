@@ -10,9 +10,19 @@ menu:
 aliases: ["/docs/quickstart/kubernetes/"]
 ---
 
-This guide is intended to help you quickly get started provisioning infrastructure on Kubernetes with Pulumi.
+Pulumi's Cloud Native SDK makes it easy to target any Kubernetes environment to
+provision a cluster, configure and deploy applications, and update them as
+required.
 
-<!-- TODO embellish the summary/overview of the guide. -->
+Pulumi supports programming against Kubernetes---Minikube, on-premises and
+cloud-hosted custom Kubernetes clusters, and the managed services from Google
+(GKE), Azure (AKS), and Amazon (EKS). The Pulumi Kubernetes provider
+packages and [CLI]({{< relref "/docs/reference/cli" >}})
+help you accomplish all these within minutes.
+
+This guide will have you quickly provisioning infrastructure on Kubernetes with
+Pulumi in your favorite language.
+
 
 Let's start with installing Pulumi.
 

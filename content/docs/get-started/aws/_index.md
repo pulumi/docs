@@ -11,7 +11,7 @@ aliases: ["/docs/quickstart/aws/"]
 ---
 
 
-{{< cloud-intro "AWS" "https://github.com/pulumi/pulumi-aws" >}}
+{{< cloud-intro "AWS" >}}
 Let's start with installing Pulumi.
 
 {{< get-started-stepper >}}

@@ -57,11 +57,4 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 -   Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
 -   Go: Planned
 
-## Menu
-
-- [Introduction]({{< relref "introduction.md" >}})
-- [Setup]({{< relref "setup.md" >}})
-- [FAQ]({{< relref "faq.md" >}})
-- [Tutorials]({{< relref "/docs/tutorials/kubernetes/_index.md" >}})
-
 [k8s]: https://kubernetes.io

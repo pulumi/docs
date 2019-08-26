@@ -226,11 +226,7 @@ warning: A new version of Pulumi is available. To upgrade from version '0.17.26'
 or visit https://pulumi.com/docs/install/ for manual instructions and release notes.
 ```
 
-<div class="note note-warning" role="alert">
-    <p>
-        <span>Skip version check.</span> If you're in an environment with no internet access, you may skip the Pulumi version update check by setting the environment variable <code>PULUMI_SKIP_UPDATE_CHECK</code> to <code>1</code> or <code>true</code>.
-    </p>
-</div>
+{{< skip-version-check >}}
 
 ## Uninstall Pulumi
 

@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/quickstart/gcp/"]
 ---
 
-{{< cloud-intro "Google Cloud" "https://github.com/pulumi/pulumi-gcp" >}}
+{{< cloud-intro "Google Cloud" >}}
 
 Let's start with installing Pulumi.
 
