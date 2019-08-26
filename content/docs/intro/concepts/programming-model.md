@@ -769,9 +769,9 @@ url = Output.concat("http://", hostname, ":", post, "/")
 
 ## Secrets {#secrets}
 
-Pulumi records all resource inputs and outputs in a [state file]({{< relref "state.md" >}}). These may contain sensitive data, such as database passwords or service tokens. The CLI's `config set` command offers the `--secret` flag to encrypt configuration settings, which is where most sensitive data comes from; however, you might also create such data at runtime. In both cases, you can ensure that these secrets do not appear as plaintext in your state file by using programmatic functions described below. By default, these use automatic per-stack encryption keys provided by the Pulumi Service, however you can use a provider of your own choosing.
+Pulumi records all resource inputs and outputs in a [state file]({{< relref "state.md" >}}). This may contain sensitive data, such as database passwords or service tokens. The CLI's `config set` command offers a `--secret` flag to encrypt configuration settings, which is where most sensitive data comes from. However, you may create such data at runtime. In both cases, you can prevent these secrets from appearing as plaintext in your state file by using programmatic functions described below. These use automatic per-stack encryption keys provided by the Pulumi Service by default, but you can use a provider of your own choosing.
 
-> This topic concerns itself with the programming model for secrets. If you'd like a more complete overview, including
+> This topic concerns itself with the programming model for secrets. For a more complete overview, including
 > how and when to use the CLI commands mentioned above, configuring your own secrets provider, and more, refer to
 > [Configuration and Secrets]({{< relref "config#secrets" >}}).
 

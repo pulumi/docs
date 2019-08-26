@@ -18,28 +18,28 @@ The key-value pairs for any given stack are stored in [your project's stack sett
 
 You can use both the CLI and the programming model for your Pulumi configuration.
 
-* The CLI offers `config` commands `set` and `get` for managing key/value pairs.
+* The CLI offers a `config` command with `set` and `get` subcommands for managing key-value pairs.
 * The programming model offers a `Config` object with various getters and setters for retrieving values.
 
 > All shell environment variables are passed to the running program and can be accessed using standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python, which can also be used for dynamic behavior. Configuration is preferable, however, because it is designed for multi-stack collaborative scenarios.
 
 ### Configuration Keys
 
-Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In the event that a simple name without a colon is used, Pulumi automatically uses the current [project name]({{< relref "project.md#project-name" >}}) from `Pulumi.yaml` as the namespace.
+Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name]({{< relref "project.md#project-name" >}}) from `Pulumi.yaml` as the namespace.
 
-This capability allows, for example, the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region.` It also allows [custom components]({{< relref "./programming-model.md#components" >}}) to define their own key spaces without risk of conflicting with other components, packages, or projects.
+As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components]({{< relref "./programming-model.md#components" >}}) to define their own key spaces without risk of conflicting with other components, packages, or projects.
 
 ### Setting and Getting Configuration Values
 
-The CLI can get, set, or list configuration key/value pairs in your current project stack:
+The `pulumi config` CLI command can get, set, or list configuration key-value pairs in your current project stack:
 
 * `pulumi config set <key> [value]` sets a configuration entry `<key>` to `[value]`.
 * `pulumi config get <key>` gets an existing configuration value with the key `<key>`.
-* `pulumi config` gets all configuration key/value pairs in the current stack (as JSON if `--json` is passed).
+* `pulumi config` gets all configuration key-value pairs in the current stack (as JSON if `--json` is passed).
 
 > **Note:** When using the `config set` command, any existing values for `<key>` will be overridden without warning.
 
-For example, to set and then get the current AWS region in the `aws` package, we would run this CLI command:
+For example, to set and then get the current AWS region in the `aws` package, you would run the following:
 
 ```bash
 $ pulumi config set aws:region us-west-2
@@ -47,7 +47,7 @@ $ pulumi config get aws:region
 us-west-2
 ```
 
-To set and get configuration in the current project (named, say, `broome-proj`), we can use the simplified key name:
+To set and get configuration in the current project (named `broome-proj` for example), we can use the simplified key name:
 
 ```bash
 $ pulumi config set name BroomeLLC
@@ -55,7 +55,7 @@ $ pulumi config get name
 BroomeLLC
 ```
 
-If `[value]` is not specified when setting a configuration value, the CLI will prompt for it interactively. Alternatively, the value can be set from standard input, which is useful for multiline values or any value that must be escaped on the command line:
+If `[value]` is not specified when setting a configuration key, the CLI will prompt for it interactively. Alternatively, the value can be set from standard input, which is useful for multiline values or any value that must be escaped on the command line:
 
 ```bash
 $ cat my_key.pub | pulumi config set publicKey
@@ -65,7 +65,7 @@ $ cat my_key.pub | pulumi config set publicKey
 
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plaintext.
 
-> By default, the CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, please refer below to [Configuring Secrets Encryption](#secrets-encryption).
+> By default, the CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#secrets-encryption).
 
 For example, this command sets a configuration variable named `dbPassword` to the plaintext value `S3cr37`:
 
@@ -73,7 +73,7 @@ For example, this command sets a configuration variable named `dbPassword` to th
 $ pulumi config set --secret dbPassword S3cr37
 ```
 
-If we list the configuration for our stack, `dbPassword`'s plaintext value won't be printed:
+If we list the configuration for our stack, the plaintext value for `dbPassword` will not be printed:
 
 ```bash
 $ pulumi config
@@ -116,13 +116,13 @@ $ pulumi up
 Password: [secret]
 ```
 
-> By default, configuration values are saved in plaintext. To explicitly denote a plaintext configuration value, use the `--plaintext` flag. This can be used to signal that you explicitly didn't want an encrypted secret: `$ pulumi config set --plaintext aws:region us-west-2`.
+> By default, configuration values are saved in plaintext. To explicitly denote a plaintext or unencrypted configuration value, pass the `--plaintext` flag: `$ pulumi config set --plaintext aws:region us-west-2`. This can be used to indicate that you did not want an encrypted secret.
 
 ## Using Configuration and Secrets in Code
 
 To access configuration or secret values for your package, project, or component, use the `pulumi.Config` type. This type offers a collection of getters and setters for retrieving configuration values of various types by their key.
 
-An instance of the `pulumi.Config` object must first be allocated. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules apply here to the CLI usage, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
+To begin, allocate an instance of the `pulumi.Config` object. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules to the CLI usage apply here, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
 
 For example, assume the following configuration values have been set:
 
@@ -178,15 +178,15 @@ For more advanced details of interacting with configuration and secrets, refer t
 
 ### A Warning: Using Secrets in Code
 
-On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters shown above. It is possible to read a secret using the ordinary non-secret getters, however this is almost certainly not what you want. Be sure to use the secret variants of the configuration APIs instead, which ensures that all transitive uses of that secret are themselves marked as secret also.
+On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters shown above. While it is possible to read a secret using the ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead, since this ensures that all transitive uses of that secret are themselves also marked as secrets.
 
 ## Configuring Secrets Encryption
 
-The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. More details about the concept of state files and backends can be [found here]({{< relref "state.md" >}}).
+The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State]({{< relref "state.md" >}}).
 
-There are two reasons that the default encryption mechanism may be insufficient:
+The default encryption mechanism may be insufficient in the following scenarios:
 
-1. If you are using the Pulumi CLI independent of the Pulumi Service, either in local mode, or using one of the
+1. If you are using the Pulumi CLI independent of the Pulumi Service---either in local mode, or by using one of the
    available backend plugins (such as those that store state in AWS S3, Azure Blob Store, or Google Object Storage).
 
 2. If your team already has a preferred cloud encryption provider that you would like to use.
@@ -207,7 +207,7 @@ After doing so, all encryption operations for your stack will use the custom pro
 
 ### Available Encryption Providers
 
-The following encryption `<provider>`s are supported:
+Pulumi supports the following encryption providers:
 
 * `awskms`: [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
 * `azurekeyvault`: [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
@@ -218,7 +218,7 @@ Each provider has its own unique `<provider-settings>` and authentication mechan
 
 #### AWS Key Management Service (KMS)
 
-The `awskms` provider uses existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
+The `awskms` provider uses the existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
 
 1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1`.
 2. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
@@ -231,7 +231,7 @@ $ pulumi stack init my-stack \
     --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
 ```
 
-If you already have a configured AWS CLI, the credentials from that will be used. These can also be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, please [see the standard AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+If you have previously configured the AWS CLI, the same credentials will be used. These can also be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
 
 #### Azure Key Vault
 
@@ -244,7 +244,7 @@ $ pulumi stack init my-stack \
     --secrets-provider="azurekeyvault://acmecorpvault.vault.azure.net/keys/payroll"
 ```
 
-By default, this provider will use [Azure Environment Authentication](https://docs.microsoft.com/en-us/azure/go/azure-sdk-go-authorization#use-environment-based-authentication). If you wish instead to login using the `az` command for authentication, set `AZURE_KEYVAULT_AUTH_VIA_CLI` to `true`.
+By default, this provider will use [Azure Environment Authentication](https://docs.microsoft.com/en-us/azure/go/azure-sdk-go-authorization#use-environment-based-authentication). If you wish to login using the `az` command for authentication instead, set `AZURE_KEYVAULT_AUTH_VIA_CLI` to `true`.
 
 #### Google Cloud Key Management Service (KMS)
 
@@ -257,11 +257,12 @@ $ pulumi stack init my-stack \
     --secrets-provider="gcpkms://projects//locations/us-west1/keyRings/acmecorpsec/cryptoKeys/payroll"
 ```
 
-This provider will use your GCP Application Default Credentials. If you've already configured the `gcloud` CLI, then it will automatically use that for authentication. For alternative configuration mechanisms, [refer to this document](https://cloud.google.com/docs/authentication/production).
+This provider will use your GCP Application Default Credentials. If you've previously configured the `gcloud` CLI, the same credentials will be used for authentication. For alternative configuration mechanisms, refer to [Setting Up Authentication for Server to Server Production Applications
+](https://cloud.google.com/docs/authentication/production).
 
 #### HashiCorp Vault Transit Secrets Engine
 
-The `hashivault` provider uses Vault's Transit Secrets Engine to encrypt and decrypt information. The provider settings only includes the key name: `hashivault://mykey`. The Vault server endpoint and authentication token to use are provided with the `VAULT_SERVER_URL` and `VAULT_SERVER_TOKEN`, respectively.
+The `hashivault` provider uses Vault's Transit Secrets Engine to encrypt and decrypt information. You only need to pass a key name for the provider setting: `hashivault://mykey`. The Vault server endpoint and authentication token to use are provided with the `VAULT_SERVER_URL` and `VAULT_SERVER_TOKEN`, respectively.
 
 For example, this configures a stack to use a HashiCorp Vault transit key named `payroll`:
 
