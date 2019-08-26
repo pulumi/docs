@@ -232,7 +232,6 @@ or visit https://pulumi.com/docs/install/ for manual instructions and release no
     </p>
 </div>
 
-
 ## Uninstall Pulumi
 
 To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should

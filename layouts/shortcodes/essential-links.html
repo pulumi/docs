@@ -1,0 +1,13 @@
+<div class="flex flex-col mt-8 mb-12 mb-4 p-4 bg-yellow-100 text-yellow-900">
+    <h4 class="text-yellow-700 no-anchor">Pulumi Essentials</h4>
+    <p>
+        If you're new to Pulumi, see the following introductory resources:
+    </p>
+    <ul>
+        <li><a class="text-yellow-900 underline" href="/docs/reference/concepts">Architecture & Concepts</a></li>
+        <li><a class="text-yellow-900 underline" href="/docs/reference/commands">The Pulumi CLI</a></li>
+        {{ if $.Page.Params.cloudlink }}
+        <li><a class="text-yellow-900 underline" href="{{ $.Page.Params.cloudlink }}">Use cases for {{ .Get 0 }} with Pulumi</a></li>
+        {{ end }}
+    </ul>
+</div>
