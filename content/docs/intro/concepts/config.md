@@ -173,7 +173,7 @@ In this example, we have read back the `name` and `dbPassword` configuration var
 
 > Notice the keys used above have no namespaces, both in the CLI gestures and in the `pulumi.Config` constructor. This means they have taken our project name as the default namespace. We could have specified this explicitly, as in `pulumi config set broome-proj:name BroomeLLC` and `new pulumi.Config("BroomeLLC")`.
 
-For more advanced details of interacting with configuration and secrets, please refer to the
+For more advanced details of interacting with configuration and secrets, refer to the
 [Programming Model documentation]({{< relref "programming-model.md" >}}).
 
 ### A Warning: Using Secrets in Code
