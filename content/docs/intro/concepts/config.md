@@ -16,7 +16,7 @@ The key-value pairs for any given stack are stored in [your project's stack sett
 
 ## Configuration {#config-stack}
 
-To use Pulumi configuration, you will use both the CLI and the programming model:
+You can use both the CLI and the programming model for your Pulumi configuration.
 
 * The CLI offers `config` commands `set` and `get` for managing key/value pairs.
 * The programming model offers a `Config` object with various getters and setters for retrieving values.
