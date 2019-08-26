@@ -73,6 +73,12 @@ myTask = Task('myTask',
 )
 ```
 
-## Stack settings files {#stack-settings-file}
+## Stack Settings Files {#stack-settings-file}
 
-Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack. To learn more, see [Adding and configuring stack settings]({{< relref "config.md#config-stack" >}}).
+Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack.
+
+For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
+
+For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked into source control.
+
+For more information about configuration and how this file is managed using the CLI and programming model, refer to [Configuration and Secrets]({{< relref "config.md" >}}).
