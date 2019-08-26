@@ -161,7 +161,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			Cloud:     parts[0],
 			Language:  parts[1],
 			Body:      cleanMarkdownBody(string(body)),
-			URL:       fmt.Sprintf("/docs/reference/tutorials/%s/%s", parts[0], name),
+			URL:       fmt.Sprintf("/docs/tutorials/%s/%s", parts[0], name),
 			GitHubURL: fmt.Sprintf("https://github.com/pulumi/examples/tree/master/%s", name),
 		})
 	}
