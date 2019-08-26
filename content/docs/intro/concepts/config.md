@@ -8,7 +8,7 @@ menu:
 aliases: ["/docs/reference/config/"]
 ---
 
-In many cases, different stacks for a single project will need differing values. For instance, you may want to use a different size for your AWS EC2 instance, a different number of servers for your Kubernetes cluster, etc., between your development and production stacks.
+In many cases, different stacks for a single project will need differing values. For instance, you may want to use a different size for your AWS EC2 instance, or a different number of servers for your Kubernetes cluster between your development and production stacks.
 
 Pulumi offers a configuration system for managing such differences. Instead of hard-coding these differences you can store and retrieve configuration values using a combination of the CLI and programming model.
 
