@@ -77,7 +77,7 @@ myTask = Task('myTask',
 
 Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack.
 
-For stacks that are actively developed by multiple members of a team, the recommended practice is to check them in to source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
+For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
 
 For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked in to source control.
 
