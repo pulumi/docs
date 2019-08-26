@@ -81,4 +81,4 @@ For stacks that are actively developed by multiple members of a team, the recomm
 
 For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked in to source control.
 
-For more information about configuration and how this file is managed using the CLI and programming model, [read more about Configuration and Secrets]({{< relref "config.md" >}}).
+For more information about configuration and how this file is managed using the CLI and programming model, refer to [Configuration and Secrets]({{< relref "config.md" >}}).
