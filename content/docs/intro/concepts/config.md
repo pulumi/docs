@@ -218,7 +218,7 @@ Each provider has its own unique `<provider-settings>` and authentication mechan
 
 #### AWS Key Management Service (KMS)
 
-The `awskms` provider uses the existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
+The `awskms` provider uses an existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
 
 1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1`.
 2. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
