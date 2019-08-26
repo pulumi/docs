@@ -20,7 +20,9 @@ provider IaaS offerings, and their catalog of services - managed Kubernetes incl
 
 <center><img src="/images/docs/quickstart/kubernetes/cake.svg" width="670"></center>
 
-The various SDK's allow Kubernetes users to leverage Pulumi for novel forms of cluster
+## Use Cases
+
+The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster
 management, and deployment of app workloads to clusters. Users of
 Kubernetes and Pulumi can:
 
@@ -54,12 +56,5 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 -   JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
 -   Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
 -   Go: Planned
-
-## Menu
-
-- [Introduction]({{< relref "introduction.md" >}})
-- [Setup]({{< relref "setup.md" >}})
-- [FAQ]({{< relref "faq.md" >}})
-- [Tutorials]({{< relref "/docs/tutorials/kubernetes/_index.md" >}})
 
 [k8s]: https://kubernetes.io

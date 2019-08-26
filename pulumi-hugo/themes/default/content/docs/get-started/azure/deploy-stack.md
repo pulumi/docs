@@ -54,7 +54,7 @@ Resources:
 Duration: 26s
 ```
 
-The storage account's connection string, that we exported, is shown as a [stack output]({{< relref "/docs/intro/concepts/stack.md#outputs" >}}).
+The storage account's connection string that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
 
 Next, we'll make some modifications to the program.
 
