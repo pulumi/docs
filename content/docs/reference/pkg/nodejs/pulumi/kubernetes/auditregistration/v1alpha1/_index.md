@@ -26,7 +26,7 @@ title: Module auditregistration/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="AuditSink">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L12" >}}">class <b>AuditSink</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L13" >}}">class <b>AuditSink</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,12 +36,12 @@ AuditSink represents a cluster level audit sink
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuditSink-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L67" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AuditSink(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AuditSink'>inputApi.auditregistration.v1alpha1.AuditSink</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AuditSink(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AuditSink'>inputs.auditregistration.v1alpha1.AuditSink</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a auditregistration.v1alpha1.AuditSink resource with the given unique name, arguments, and options.
@@ -53,7 +53,7 @@ Create a auditregistration.v1alpha1.AuditSink resource with the given unique nam
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -62,8 +62,8 @@ Create a auditregistration.v1alpha1.AuditSink resource with the given unique nam
 
 
 Get the state of an existing `AuditSink` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -80,7 +80,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"auditregistration.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -120,7 +120,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L27" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L28" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"AuditSink"</span>&gt;;</pre>
@@ -134,18 +134,18 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L30" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L31" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L35" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L36" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AuditSinkSpec'>outputApi.auditregistration.v1alpha1.AuditSinkSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AuditSinkSpec'>AuditSinkSpec</a>&gt;;</pre>
 {{% md %}}
 
 Spec defines the audit configuration spec
@@ -166,7 +166,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AuditSinkList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L12" >}}">class <b>AuditSinkList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L13" >}}">class <b>AuditSinkList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -176,12 +176,12 @@ AuditSinkList is a list of AuditSink items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuditSinkList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L67" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AuditSinkList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AuditSinkList'>inputApi.auditregistration.v1alpha1.AuditSinkList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AuditSinkList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AuditSinkList'>inputs.auditregistration.v1alpha1.AuditSinkList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique name, arguments, and options.
@@ -193,7 +193,7 @@ Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -202,8 +202,8 @@ Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique
 
 
 Get the state of an existing `AuditSinkList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -220,7 +220,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -234,7 +234,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"auditregistration.k8s.io/v1alpha1"</span>&gt;;</pre>
@@ -260,10 +260,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AuditSink'>outputApi.auditregistration.v1alpha1.AuditSink</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AuditSink'>AuditSink</a>[]&gt;;</pre>
 {{% md %}}
 
 List of audit configurations.
@@ -271,7 +271,7 @@ List of audit configurations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"AuditSinkList"</span>&gt;;</pre>
@@ -285,10 +285,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L35" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L36" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

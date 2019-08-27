@@ -26,7 +26,7 @@ title: Module networking/v1beta1
 
 
 <h2 class="pdoc-module-header" id="Ingress">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L14" >}}">class <b>Ingress</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L30" >}}">class <b>Ingress</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,14 +36,29 @@ Ingress is a collection of rules that allow inbound connections to reach the end
 defined by a backend. An Ingress can be configured to give services externally-reachable
 urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 
+This resource waits until it is ready before registering success for
+create/update and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:
+1.  Ingress object exists.
+2.  Endpoint objects exist with matching names for each Ingress path (except when Service
+    type is ExternalName).
+3.  Ingress entry exists for '.status.loadBalancer.ingress'.
+
+If the Ingress has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.
+Note that the timeout value for Delete is not yet supported. See
+https://github.com/pulumi/pulumi-kubernetes/issues/746 for details.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Ingress-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L94" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Ingress'>inputApi.networking.v1beta1.Ingress</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Ingress'>inputs.networking.v1beta1.Ingress</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a networking.v1beta1.Ingress resource with the given unique name, arguments, and options.
@@ -55,7 +70,7 @@ Create a networking.v1beta1.Ingress resource with the given unique name, argumen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L61" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L77" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -64,8 +79,8 @@ Create a networking.v1beta1.Ingress resource with the given unique name, argumen
 
 
 Get the state of an existing `Ingress` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -82,7 +97,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L72" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L88" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -96,7 +111,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L21" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L37" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -122,7 +137,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L29" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L45" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Ingress"</span>&gt;;</pre>
@@ -136,10 +151,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L35" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L51" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -148,10 +163,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L41" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L57" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressSpec'>outputApi.networking.v1beta1.IngressSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IngressSpec'>IngressSpec</a>&gt;;</pre>
 {{% md %}}
 
 Spec is the desired state of the Ingress. More info:
@@ -160,10 +175,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Ingress-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L47" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/Ingress.ts#L63" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressStatus'>outputApi.networking.v1beta1.IngressStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IngressStatus'>IngressStatus</a>&gt;;</pre>
 {{% md %}}
 
 Status is the current state of the Ingress. More info:
@@ -185,7 +200,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L12" >}}">class <b>IngressList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L13" >}}">class <b>IngressList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -195,12 +210,12 @@ IngressList is a collection of Ingress.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IngressList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IngressList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressList'>inputApi.networking.v1beta1.IngressList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IngressList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressList'>inputs.networking.v1beta1.IngressList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a networking.v1beta1.IngressList resource with the given unique name, arguments, and options.
@@ -212,7 +227,7 @@ Create a networking.v1beta1.IngressList resource with the given unique name, arg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -221,8 +236,8 @@ Create a networking.v1beta1.IngressList resource with the given unique name, arg
 
 
 Get the state of an existing `IngressList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -239,7 +254,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -253,7 +268,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -279,10 +294,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Ingress'>outputApi.networking.v1beta1.Ingress</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Ingress'>Ingress</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of Ingress.
@@ -290,7 +305,7 @@ Items is the list of Ingress.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"IngressList"</span>&gt;;</pre>
@@ -304,10 +319,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1beta1/IngressList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:

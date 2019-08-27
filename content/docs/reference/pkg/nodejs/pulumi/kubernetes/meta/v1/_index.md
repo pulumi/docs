@@ -25,7 +25,7 @@ title: Module meta/v1
 
 
 <h2 class="pdoc-module-header" id="Status">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L12" >}}">class <b>Status</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L13" >}}">class <b>Status</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -35,12 +35,12 @@ Status is a return value for calls that don't return other objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Status-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L94" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L95" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Status(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Status'>inputApi.meta.v1.Status</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Status(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Status'>inputs.meta.v1.Status</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a meta.v1.Status resource with the given unique name, arguments, and options.
@@ -52,7 +52,7 @@ Create a meta.v1.Status resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L77" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L78" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -61,8 +61,8 @@ Create a meta.v1.Status resource with the given unique name, arguments, and opti
 
 
 Get the state of an existing `Status` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -79,7 +79,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L89" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -93,7 +93,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
@@ -107,7 +107,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-code">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L24" >}}">property <b>code</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L25" >}}">property <b>code</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -118,10 +118,10 @@ Suggested HTTP return code for this status, 0 if not set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-details">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L31" >}}">property <b>details</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L32" >}}">property <b>details</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>details: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StatusDetails'>outputApi.meta.v1.StatusDetails</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>details: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#StatusDetails'>StatusDetails</a>&gt;;</pre>
 {{% md %}}
 
 Extended data associated with the reason.  Each reason may define its own extended details.
@@ -143,7 +143,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L39" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L40" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Status"</span>&gt;;</pre>
@@ -157,7 +157,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-message">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L44" >}}">property <b>message</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L45" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -168,10 +168,10 @@ A human-readable description of the status of this operation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L50" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L51" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:
@@ -180,7 +180,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-reason">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L57" >}}">property <b>reason</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L58" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -193,7 +193,7 @@ but does not override it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Status-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L63" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="meta/v1/Status.ts#L64" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

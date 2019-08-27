@@ -6,6 +6,23 @@ title: Package @pulumi/kubernetes
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 
+
+The Kubernetes provider package offers support for all Kubernetes resources and their properties.
+Resources are exposed as types from modules based on Kubernetes API groups such as `apps`, `core`,
+`rbac`, and `storage`, among many others. Additionally, support for deploying Helm charts (`helm`)
+and YAML files (`yaml`) is available in this package. Using this package allows you to
+programmatically declare instances of any Kubernetes resources and any supported resource version
+using infrastructure as code, which Pulumi then uses to drive the Kubernetes API.
+
+If this is your first time using this package, these two resources may be helpful:
+
+* [Kubernetes Getting Started Guide](https://www.pulumi.com/docs/quickstart/kubernetes/): Get up and running quickly.
+* [Kubernetes Pulumi Setup Documentation](https://www.pulumi.com/docs/quickstart/kubernetes/configure/): How to configure Pulumi
+    for use with your Kubernetes cluster.
+
+Use the navigation below to see detailed documentation for each of the supported Kubernetes resources.
+
+
 {{< langchoose nodeonly >}}
 
 ```javascript
@@ -164,7 +181,7 @@ of this package.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L28" >}}">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L29" >}}">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -173,7 +190,7 @@ The set of arguments for constructing a Provider.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-cluster">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L32" >}}">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L33" >}}">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -184,7 +201,7 @@ If present, the name of the kubeconfig cluster to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-context">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L36" >}}">property <b>context</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L37" >}}">property <b>context</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>context?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,8 +211,20 @@ If present, the name of the kubeconfig context to use.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="ProviderArgs-enableDryRun">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L51" >}}">property <b>enableDryRun</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>enableDryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{% md %}}
+
+BETA FEATURE - If present and set to true, enable server-side diff calculations.
+This feature is in developer preview, and is disabled by default.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="ProviderArgs-kubeconfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L40" >}}">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L41" >}}">property <b>kubeconfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kubeconfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -206,7 +235,7 @@ The contents of a kubeconfig file. If this is set, this config will be used inst
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-namespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L45" >}}">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="provider.ts#L46" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -26,7 +26,7 @@ title: Module node/v1beta1
 
 
 <h2 class="pdoc-module-header" id="RuntimeClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L17" >}}">class <b>RuntimeClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L18" >}}">class <b>RuntimeClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -41,12 +41,12 @@ https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClass-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L80" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RuntimeClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClass'>inputApi.node.v1beta1.RuntimeClass</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RuntimeClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClass'>inputs.node.v1beta1.RuntimeClass</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a node.v1beta1.RuntimeClass resource with the given unique name, arguments, and options.
@@ -58,7 +58,7 @@ Create a node.v1beta1.RuntimeClass resource with the given unique name, argument
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L62" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L63" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -67,8 +67,8 @@ Create a node.v1beta1.RuntimeClass resource with the given unique name, argument
 
 
 Get the state of an existing `RuntimeClass` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -85,7 +85,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L73" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L74" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -99,7 +99,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L24" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L25" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"node.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -113,7 +113,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-handler">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L35" >}}">property <b>handler</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L36" >}}">property <b>handler</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>handler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -142,7 +142,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L43" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L44" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RuntimeClass"</span>&gt;;</pre>
@@ -156,10 +156,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClass-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L48" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClass.ts#L49" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
@@ -180,7 +180,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuntimeClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L12" >}}">class <b>RuntimeClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L13" >}}">class <b>RuntimeClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -190,12 +190,12 @@ RuntimeClassList is a list of RuntimeClass objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RuntimeClassList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClassList'>inputApi.node.v1beta1.RuntimeClassList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RuntimeClassList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClassList'>inputs.node.v1beta1.RuntimeClassList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a node.v1beta1.RuntimeClassList resource with the given unique name, arguments, and options.
@@ -207,7 +207,7 @@ Create a node.v1beta1.RuntimeClassList resource with the given unique name, argu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -216,8 +216,8 @@ Create a node.v1beta1.RuntimeClassList resource with the given unique name, argu
 
 
 Get the state of an existing `RuntimeClassList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -234,7 +234,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -248,7 +248,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"node.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -274,10 +274,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RuntimeClass'>outputApi.node.v1beta1.RuntimeClass</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RuntimeClass'>RuntimeClass</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is a list of schema objects.
@@ -285,7 +285,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RuntimeClassList"</span>&gt;;</pre>
@@ -299,10 +299,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuntimeClassList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node/v1beta1/RuntimeClassList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

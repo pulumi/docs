@@ -25,7 +25,7 @@ title: Module authentication/v1
 
 
 <h2 class="pdoc-module-header" id="TokenReview">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L13" >}}">class <b>TokenReview</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L14" >}}">class <b>TokenReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,12 +36,12 @@ be cached by the webhook token authenticator plugin in the kube-apiserver.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TokenReview-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TokenReview(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TokenReview'>inputApi.authentication.v1.TokenReview</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TokenReview(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TokenReview'>inputs.authentication.v1.TokenReview</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a authentication.v1.TokenReview resource with the given unique name, arguments, and options.
@@ -53,7 +53,7 @@ Create a authentication.v1.TokenReview resource with the given unique name, argu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -62,8 +62,8 @@ Create a authentication.v1.TokenReview resource with the given unique name, argu
 
 
 Get the state of an existing `TokenReview` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -80,7 +80,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L20" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L21" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"authentication.k8s.io/v1"</span>&gt;;</pre>
@@ -120,7 +120,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L28" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L29" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"TokenReview"</span>&gt;;</pre>
@@ -134,18 +134,18 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L31" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L32" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L36" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L37" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TokenReviewSpec'>outputApi.authentication.v1.TokenReviewSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TokenReviewSpec'>TokenReviewSpec</a>&gt;;</pre>
 {{% md %}}
 
 Spec holds information about the request being evaluated
@@ -153,10 +153,10 @@ Spec holds information about the request being evaluated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L41" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1/TokenReview.ts#L42" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TokenReviewStatus'>outputApi.authentication.v1.TokenReviewStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TokenReviewStatus'>TokenReviewStatus</a>&gt;;</pre>
 {{% md %}}
 
 Status is filled in by the server and indicates whether the request can be authenticated.
