@@ -1092,8 +1092,13 @@ func (e *emitter) createTypeLabel(t *typeDocType, indent int) string {
 			label := "{\n"
 			indent++
 			for _, child := range decl.Children {
-				label += fmt.Sprintf("%s%s: %s;\n",
-					strings.Repeat(" ", indent*4), child.Name, e.createTypeLabel(child.Type, indent))
+				if child.Kind == typeDocFunctionNode && len(child.Signatures) > 0 {
+					label += fmt.Sprintf("%s%s;\n",
+						strings.Repeat(" ", indent*4), e.createSignature(child.Signatures[0], decl, false))
+				} else {
+					label += fmt.Sprintf("%s%s: %s;\n",
+						strings.Repeat(" ", indent*4), child.Name, e.createTypeLabel(child.Type, indent))
+				}
 			}
 			indent--
 			return fmt.Sprintf("%s%s}", label, strings.Repeat(" ", indent*4))
