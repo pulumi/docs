@@ -76,5 +76,5 @@ The following tutorials highlight the Azure platform using complete end-to-end s
 {{< tutorials-index-azure >}}
 
 If you'd like to see a new tutorial, please [request one](
-https://github.com/pulumi/docs/issues/new?title=New%20Azure%20Tutorial%20Request). If you'd like
-to contribute your own, great! Please see the tutorial contribution guidelines.
+https://github.com/pulumi/docs/issues/new?title=New%20Azure%20Tutorial%20Request).
+Pull requests are also welcome!
