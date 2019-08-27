@@ -13,8 +13,6 @@ The following tutorials highlight the Google Cloud platform using complete end-t
 
 > If this is your first time getting started with Pulumi for GCP, try the
 > easy <a href="{{< relref "/docs/get-started/gcp" >}}">Get Started guide</a> first.
->
-> If you are looking to use Kubernetes on Azure, see [the AKS tutorial]({{< relref "../kubernetes/aks" >}}).
 
 # Featured Tutorials
 
