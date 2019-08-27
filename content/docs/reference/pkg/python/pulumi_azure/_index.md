@@ -5,16 +5,18 @@ title: Package pulumi_azure
 <div class="section" id="pulumi-azure">
 <h1>Pulumi Azure<a class="headerlink" href="#pulumi-azure" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm">Terraform Provider</a> distributed under
+<div><p>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
-anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</div></blockquote>
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
+</div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ad/">ad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appinsights/">appinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appservice/">appservice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authorization/">authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autoscale/">autoscale</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
@@ -31,6 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="devspace/">devspace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devtest/">devtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventgrid/">eventgrid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eventhub/">eventhub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hdinsight/">hdinsight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
@@ -38,6 +41,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loganalytics/">loganalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicapps/">logicapps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management/">management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementgroups/">managementgroups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementresource/">managementresource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb/">mariadb</a></li>
@@ -59,6 +63,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="scheduler/">scheduler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="search/">search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicebus/">servicebus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicefabric/">servicefabric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signalr/">signalr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>
