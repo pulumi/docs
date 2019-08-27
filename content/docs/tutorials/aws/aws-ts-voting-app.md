@@ -6,6 +6,8 @@ title: "Voting app with two containers"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-voting-app).
+
 
 A simple voting app that uses Redis for a data store and a Python Flask app for the frontend. The example has been ported from https://github.com/Azure-Samples/azure-voting-app-redis.
 

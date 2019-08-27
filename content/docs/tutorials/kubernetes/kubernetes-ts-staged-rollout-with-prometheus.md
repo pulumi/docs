@@ -6,6 +6,8 @@ title: "Kubernetes: Staged application rollout gated by Prometheus checks"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus).
+
 
 Demonstrates how to create a staged rollout (from 3-replica canary -> 10-replica staging), gated by
 checking that the P90 response time reported by Prometheus is less than some amount. We first deploy

@@ -6,6 +6,8 @@ title: "Kubernetes Sock Shop"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-sock-shop).
+
 
 A version of the standard [Sock Shop microservices reference app](https://github.com/microservices-demo/microservices-demo) app using
 Pulumi and `@pulumi/kubernetes`.

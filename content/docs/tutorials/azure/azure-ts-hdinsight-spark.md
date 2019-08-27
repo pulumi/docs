@@ -6,6 +6,8 @@ title: "Spark on Azure HDInsight example"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-hdinsight-spark).
+
 
 An example Pulumi component that deploys a Spark cluster on Azure HDInsight.
 

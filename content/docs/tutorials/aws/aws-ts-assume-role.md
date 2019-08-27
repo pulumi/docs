@@ -6,6 +6,8 @@ title: "AWS AssumeRole Example"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-assume-role).
+
 
 This example demonstrates how to use the AssumeRole functionality of the AWS provider in order to create resources in
 the security context of an IAM Role assumed by the IAM User running the Pulumi program.

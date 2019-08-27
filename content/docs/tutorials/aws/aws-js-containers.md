@@ -6,6 +6,8 @@ title: "Easy container example"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-js-containers).
+
 
 Companion to the tutorial [Provision containers on AWS](https://www.pulumi.com/docs/reference/tutorials/aws/tutorial-service/).
 

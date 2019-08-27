@@ -6,6 +6,8 @@ title: "Post AWS SQS Messages to Slack using Serverless Lambdas"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack).
+
 
 This example wires up a serverless AWS Lambda to an AWS SQS queue and demonstrates posting a
 message to Slack.  This program provisions resources using Pulumi's deployment system, but lets

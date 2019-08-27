@@ -6,6 +6,8 @@ title: "Get Started with Docker on AWS Fargate"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate).
+
 
 This example, inspired by the [Docker Getting Started Tutorial](https://docs.docker.com/get-started/), builds, deploys,
 and runs a simple containerized application to a private container registry, and scales out five load balanced replicas,

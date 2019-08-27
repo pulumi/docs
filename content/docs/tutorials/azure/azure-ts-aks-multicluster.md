@@ -6,6 +6,8 @@ title: "Multiple Azure Kubernetes Service (AKS) Clusters"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-aks-multicluster).
+
 
 This example demonstrates creating multiple Azure Kubernetes Service (AKS) clusters in different regions and with
 different node counts. Please see https://docs.microsoft.com/en-us/azure/aks/ for more information about AKS.

@@ -6,6 +6,8 @@ title: "Static Website Hosted on AWS S3"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component).
+
 
 The component version of [aws-js-s3-folder](../aws-js-s3-folder). For a detailed walkthrough of this example, see [Tutorial: Pulumi Components](https://www.pulumi.com/docs/reference/component-tutorial/).
 

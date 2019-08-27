@@ -6,6 +6,8 @@ title: "Google Kubernetes Engine (GKE) with a Canary Deployment"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/gcp-ts-gke).
+
 
 This example provisions a [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) cluster, using
 infrastructure-as-code, and then deploys a Kubernetes Deployment into it, to test that the cluster is working. This

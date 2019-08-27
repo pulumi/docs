@@ -6,6 +6,8 @@ title: "Kubernetes: Exposing a Deployment with a public IP address"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment).
+
 
 Deploys `nginx` to a Kubernetes cluster, and publicly exposes it to the Internet with an IP address,
 using a Kubernetes `Service`.

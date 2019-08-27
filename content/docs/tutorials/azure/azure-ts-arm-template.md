@@ -6,6 +6,8 @@ title: "Deploy an Azure Resource Manager (ARM) Template in Pulumi"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-arm-template).
+
 
 This example simply deploys an existing Azure Resource Manager (ARM) template using Pulumi. This accepts
 any existing valid ARM template, enabling easy migration from existing JSON templates and towards infrastructure

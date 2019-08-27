@@ -6,6 +6,8 @@ title: "Globally distributed serverless URL-shortener"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-serverless-url-shortener-global).
+
 
 Multi-region deployment of Azure Functions and Cosmos DB with Traffic Manager
 

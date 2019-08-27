@@ -6,6 +6,8 @@ title: "Azure Web Server Virtual Machine Component"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-webserver-component).
+
 
 This example provisions a configurable number of Linux web servers in an Azure Virtual Machine, and returns the
 resulting public IP addresses. This example uses a reusable [Pulumi component](

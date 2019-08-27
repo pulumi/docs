@@ -6,6 +6,8 @@ title: "StackReference Example"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference).
+
 
 This example creates a "team" EC2 Instance with tags set from _upstream_ "company" and "department" 
 stacks via [StackReference](https://www.pulumi.com/docs/reference/organizing-stacks-projects/#inter-stack-dependencies).

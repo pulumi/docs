@@ -6,6 +6,8 @@ title: "Kubernetes Jenkins"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins).
+
 
 This example deploys a container running the Jenkins continuous integration system onto a running
 Kubernetes cluster using Pulumi and `@pulumi/kubernetes`.

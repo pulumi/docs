@@ -6,6 +6,8 @@ title: "Pulumi Nginx Server in a instance (GCP)"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/gcp-py-instance-nginx).
+
 
 Starting point for building the Pulumi nginx server sample in Google Cloud Platform.
 

@@ -6,6 +6,8 @@ title: "AWS Step Functions"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-stepfunctions).
+
 
 A basic example that demonstrates using AWS Step Functions with a Lambda function.
 

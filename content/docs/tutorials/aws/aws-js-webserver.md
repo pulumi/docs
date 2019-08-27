@@ -6,6 +6,8 @@ title: "AWS EC2 Web Server"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-js-webserver).
+
 
 This example deploys a simple AWS EC2 virtual machine running a Python web server.
 

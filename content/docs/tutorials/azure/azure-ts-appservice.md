@@ -6,6 +6,8 @@ title: "Azure App Service with SQL Database and Application Insights"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-appservice).
+
 
 Starting point for building web application hosted in Azure App Service.
 

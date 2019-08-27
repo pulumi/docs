@@ -6,6 +6,8 @@ title: "Azure Kubernetes Service (AKS) Cluster and Helm Chart"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm).
+
 
 This example demonstrates creating an Azure Kubernetes Service (AKS) Cluster, and deploying a Helm Chart into it,
 all in one Pulumi program. Please see https://docs.microsoft.com/en-us/azure/aks/ for more information about AKS.

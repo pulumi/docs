@@ -6,6 +6,8 @@ title: "Pulumi Webhook Handler"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-webhooks).
+
 
 This example creates a Pulumi `cloud.HttpEndpoint` that will receive webhook events delivered
 by the Pulumi Service. It then echos the event to Slack.

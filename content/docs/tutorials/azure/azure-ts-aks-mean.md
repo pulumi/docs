@@ -6,6 +6,8 @@ title: "A Node.js demo app deployed on AKS, using CosmosDB"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean).
+
 
 Stands up an [Azure Kubernetes Service][aks] (AKS) cluster and a MongoDB-flavored instance of
 [CosmosDB][cosmos]. On top of the AKS cluster, we also deploy [Helm][helm] Chart with a simple

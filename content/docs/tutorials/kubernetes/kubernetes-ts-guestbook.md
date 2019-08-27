@@ -6,6 +6,8 @@ title: "Kubernetes Guestbook (Two Ways)"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook).
+
 
 A port of the standard [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
 to Pulumi. This example shows you how to build and deploy a simple, multi-tier web application using Kubernetes and

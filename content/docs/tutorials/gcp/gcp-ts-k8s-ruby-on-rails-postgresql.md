@@ -6,6 +6,8 @@ title: "Containerized Ruby on Rails App Delivery on GCP"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/gcp-ts-k8s-ruby-on-rails-postgresql).
+
 
 This example is a full end to end example of delivering a containerized Ruby on Rails application. It
 

@@ -6,6 +6,8 @@ title: "AWS Resources"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-resources).
+
 
 A Pulumi program that demonstrates creating various AWS resources.
 

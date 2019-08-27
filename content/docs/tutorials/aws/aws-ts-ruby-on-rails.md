@@ -6,6 +6,8 @@ title: "AWS EC2 Ruby on Rails"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-ruby-on-rails).
+
 
 This is a conversion of the AWS CloudFormation Application Framework template for a basic Ruby on Rails server.
 It creates a single EC2 virtual machine instance and uses a local MySQL database for storage. Sourced from

@@ -6,6 +6,8 @@ title: "Auth0 Protected Serverless REST API on AWS"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway-auth0).
+
 
 A simple REST API that is protected by a custom AWS Lambda Authorizer. The Authorizer uses [Auth0](https://auth0.com/) to authorize requests.
 

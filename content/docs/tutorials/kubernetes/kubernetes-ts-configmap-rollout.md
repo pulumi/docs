@@ -6,6 +6,8 @@ title: "Kubernetes: Triggering a rollout of an app by changing ConfigMap data"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout).
+
 
 Uses nginx to reverse-proxy traffic to `pulumi.github.io`. The nginx configuration is contained in
 the file `default.conf` in this directory; this program reads that file and puts it in a

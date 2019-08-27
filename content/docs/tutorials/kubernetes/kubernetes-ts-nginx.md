@@ -6,6 +6,8 @@ title: "Run a Stateless Application Using a Deployment"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx).
+
 
 A version of the [Kubernetes Stateless Application Deployment](
 https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/) example that uses Pulumi.

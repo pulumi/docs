@@ -6,6 +6,8 @@ title: "Kubernetes: Deploying the Wordpress Helm chart"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress).
+
 
 Uses the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress Helm Chart to a
 Kubernetes cluster. **The Tiller server is not required to be installed.** Pulumi will expand the

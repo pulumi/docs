@@ -6,6 +6,8 @@ title: "Azure Web Server Virtual Machine"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
 </a>
 
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-webserver).
+
 
 This example provisions a Linux web server in an Azure Virtual Machine and gives it a public IP address.
 
