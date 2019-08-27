@@ -1,5 +1,8 @@
 ---
 title: Accounts
+aliases:
+  - /docs/intro/console/accounts/
+  - /docs/intro/console/account/
 ---
 
 If you haven't created your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign
@@ -11,7 +14,7 @@ up. You may use any of the following identities to sign up:
 * [Email](https://app.pulumi.com/signin/email)
 * [Single Sign-on](https://app.pulumi.com/signin/sso)
 
-Your account lets you authenticate to the Pulumi Console, where you can do the
+Your account lets you authenticate into the Pulumi Console, where you can do the
 following:
 
 * Manage your profile settings, including your account password, access tokens, and subscriptions
@@ -32,6 +35,7 @@ on your avatar and selecting **Settings**. The **Profile** tab is displayed by d
 <img class="shadow-2xl lg:max-w-xl" src="/images/docs/reference/service/user-profile-page.png" alt="Pulumi GitHub App">
 
 From this tab, you can:
+
 * Update your display name and Avatar URL
 * Update the email address associated with your Pulumi account
 * Add third party identities for [collaborating with other developers]({{< relref "../collaboration/organization-roles" >}})
@@ -41,7 +45,6 @@ From this tab, you can:
 You can associate your Pulumi account with multiple identities. In addition to the one you have originally configured, you can add your identities with the following third party providers:
 
 {{< identities >}}
-
 
 Connecting these additional identities will enable
 you to join Pulumi organizations that are backed by those systems. Note that only
@@ -58,7 +61,7 @@ This tab lets you change your password. Note that your password must be at least
 
 ## Access Tokens
 
-This tab lets you manage the [access tokens](https://en.wikipedia.org/wiki/Access_token) used for logging into the Pulumi service. It gives you a list of all the access tokens associated with your account, including a description and last used information for each token.
+This tab lets you manage the [access tokens](https://en.wikipedia.org/wiki/Access_token) used for logging into the Pulumi service. It provides a list of all the access tokens associated with your account, including a description and last used information for each token.
 
 When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into `app.pulumi.com` and lets you interact with the Pulumi service and manage your stacks.
 
@@ -68,11 +71,11 @@ You can create additional access tokens on this tab by clicking **New Access Tok
 
 ## Subscription
 
-This tab gives you details on your subscription information, which is the Pulumi Community Edition by default. It also gives you ways to contact Pulumi for additional support.
+This tab  details on your subscription information, which is the Pulumi Community Edition by default. It also provides ways to contact Pulumi for additional support.
 
 ## Integrations
 
-This tab gives you a list of Pulumi's Continuous Delivery guides. Click on your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
+This tab provides a list of Pulumi's Continuous Delivery guides. Click on your favorite CI/CD platform to learn more about how to integrate it with Pulumi.
 
 ## Next Steps
 

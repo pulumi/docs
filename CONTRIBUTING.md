@@ -29,7 +29,7 @@ Which, on a page inside the `./content/reference` directory, will generate:
 
 ### Hugo tips
 
-- **Redirects.** If you rename a file or directory, add a 301 redirect in the front-matter via an [alias](https://gohugo.io/content-management/urls/#aliases) `aliases: ["/previous-dir/previousfile.html"]`.
+- **Redirects.** If you rename a file or directory, add a 301 redirect in the front-matter via an [alias](https://gohugo.io/content-management/urls/#aliases) `aliases: [/previous-dir/previousfile.html]`.
 
 - **Includes.**
 
@@ -48,6 +48,8 @@ Which, on a page inside the `./content/reference` directory, will generate:
     ```
 
 - **Front-matter variables.** You can define a front-matter variable in the YAML section at the top of a file. For instance, the you could add the following front matter `foo: "bar"`, and then reference the variable in markdown with the syntax `{{< param foo >}}`.
+
+  - **no_on_this_page** Specify this variable to prevent displaying an "On This Page" TOC on the right nav for the page.
 
 ## Style guide
 

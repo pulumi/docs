@@ -13,6 +13,15 @@ created for you and subscribed to the Pulumi Community edition.
 You can however be a member of multiple Pulumi organizations, and collaborate
 with other developers.
 
+If you're an admin of a Pulumi organization, you have the
+ability to:
+
+* [Add users]({{< relref "../collaboration/organization-roles/#organization-membership" >}})
+* Manage default stack permissions for the organization
+* Create [teams]({{< relref "../collaboration/teams" >}}) and manage their permissions
+* Assign [organization roles]({{< relref "../collaboration/organization-roles" >}}) for role-based access control (RBAC)
+to your organization's stacks
+
 ## Creating a New Organization
 
 You can create a new Pulumi organization directly from the Pulumi Console.
@@ -42,7 +51,7 @@ longer have access to the Pulumi organization it is backing.
 
 {{% notes %}}
 See <a href="{{< relref "organization-roles" >}}">Organization Roles</a> or
-<a href="{{< relref "account#adding-new-identities" >}}">Adding New Identities</a>
+<a href="{{< relref "accounts#adding-new-identities" >}}">Adding New Identities</a>
 for more information.
 {{% /notes %}}
 
