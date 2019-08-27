@@ -1,8 +1,8 @@
 ---
 title: "Google Cloud Tutorials"
+linktitle: "Google Cloud"
 menu:
   userguides:
-    name: "Google Cloud"
     parent: tutorials
     identifier: tutorials-gcp
 

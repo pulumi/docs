@@ -1,8 +1,8 @@
 ---
 title: "Azure Tutorials"
+linktitle: "Azure"
 menu:
   userguides:
-    name: "Azure"
     parent: tutorials
     identifier: tutorials-azure
 

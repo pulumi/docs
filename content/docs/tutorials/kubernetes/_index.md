@@ -1,8 +1,8 @@
 ---
 title: "Kubernetes Tutorials"
+linktitle: "Kubernetes"
 menu:
   userguides:
-    name: "Kubernetes"
     parent: tutorials
     identifier: tutorials-kubernetes
 

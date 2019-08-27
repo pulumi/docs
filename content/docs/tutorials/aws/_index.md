@@ -1,8 +1,8 @@
 ---
 title: "AWS Tutorials"
+linktitle: "AWS"
 menu:
   userguides:
-    name: "AWS"
     parent: tutorials
     identifier: tutorials-aws
 
