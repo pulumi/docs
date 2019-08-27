@@ -3,10 +3,12 @@ title: "Azure Web Server Virtual Machine Component"
 ---
 
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-webserver-component" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-webserver-component).
+> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/azure-ts-webserver-component" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-webserver-component). Ensure you have
+> a copy locally and have changed into its directory before starting the tutorial's steps.
 
 
 This example provisions a configurable number of Linux web servers in an Azure Virtual Machine, and returns the

@@ -3,10 +3,12 @@ title: "Kubernetes: Triggering a rollout of an app by changing ConfigMap data"
 ---
 
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout).
+> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout). Ensure you have
+> a copy locally and have changed into its directory before starting the tutorial's steps.
 
 
 Uses nginx to reverse-proxy traffic to `pulumi.github.io`. The nginx configuration is contained in

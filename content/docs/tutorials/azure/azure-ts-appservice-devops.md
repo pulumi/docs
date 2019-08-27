@@ -3,10 +3,12 @@ title: "A Todo App on Azure App Service with SQL Database and Application Insigh
 ---
 
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops).
+> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops). Ensure you have
+> a copy locally and have changed into its directory before starting the tutorial's steps.
 
 
 A Todo List application from Azure Samples GitHub: [.NET Core MVC sample for Azure App Service](https://github.com/azure-samples/dotnetcore-sqldb-tutorial), a web app built with ASP.NET Core, Entity Framework Core and a SQL database. 

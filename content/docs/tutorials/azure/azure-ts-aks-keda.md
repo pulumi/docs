@@ -3,10 +3,12 @@ title: "Azure Kubernetes Service (AKS) cluster and Azure Functions with KEDA"
 ---
 
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda).
+> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda). Ensure you have
+> a copy locally and have changed into its directory before starting the tutorial's steps.
 
 
 This example demonstrates creating an Azure Kubernetes Service (AKS) Cluster, and deploying an Azure Function App with Kubernetes-based Event Driven Autoscaling (KEDA) into it, all in one Pulumi program. Please see https://docs.microsoft.com/en-us/azure/aks/ for more information about AKS and https://docs.microsoft.com/en-us/azure/azure-functions/functions-kubernetes-keda for more information about KEDA.

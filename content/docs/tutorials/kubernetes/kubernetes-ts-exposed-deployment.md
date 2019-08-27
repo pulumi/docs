@@ -3,10 +3,12 @@ title: "Kubernetes: Exposing a Deployment with a public IP address"
 ---
 
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment).
+> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment). Ensure you have
+> a copy locally and have changed into its directory before starting the tutorial's steps.
 
 
 Deploys `nginx` to a Kubernetes cluster, and publicly exposes it to the Internet with an IP address,

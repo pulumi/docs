@@ -3,10 +3,12 @@ title: "Managing Secrets and Secure Access in Azure Applications"
 ---
 
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac).
+> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac). Ensure you have
+> a copy locally and have changed into its directory before starting the tutorial's steps.
 
 
 [Managed identities](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/) for Azure resources provides Azure services with an automatically managed identity in Azure Active Directory (Azure AD).
