@@ -112,8 +112,7 @@ main {
         @apply border-l-4 rounded border-orange-300 px-4 py-1 text-sm;
 
         p {
-            margin-top: 0.25rem;
-            margin-bottom: 0.25rem;
+            @apply my-1;
         }
     }
 }
