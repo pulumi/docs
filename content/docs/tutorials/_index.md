@@ -23,8 +23,3 @@ Please select your cloud to see the available tutorials:
         <img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes">
     </a>
 </div>
-
-## All Tutorials
-
-{{< langchoose nogo >}}
-{{< tutorials-index >}}
