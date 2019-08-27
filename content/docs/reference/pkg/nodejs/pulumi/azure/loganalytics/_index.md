@@ -34,7 +34,7 @@ title: Module loganalytics
 
 
 <h2 class="pdoc-module-header" id="LinkedService">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L47" >}}">class <b>LinkedService</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L49" >}}">class <b>LinkedService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -81,7 +81,7 @@ const testLinkedService = new azure.loganalytics.LinkedService("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedService-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L101" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L103" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -98,7 +98,7 @@ Create a LinkedService resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -122,7 +122,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -148,7 +148,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-linkedServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L77" >}}">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L79" >}}">property <b>linkedServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -159,12 +159,10 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-linkedServiceProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L81" >}}">property <b>linkedServiceProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L83" >}}">property <b>linkedServiceProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LinkedServiceLinkedServiceProperty'>LinkedServiceLinkedServiceProperty</a>[]&gt;;</pre>
 {{% md %}}
 
 A `linkedServiceProperties` block as defined below.
@@ -172,7 +170,7 @@ A `linkedServiceProperties` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L85" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L87" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -183,7 +181,7 @@ The automatically generated name of the Linked Service. This cannot be specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L89" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L91" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +192,7 @@ The name of the resource group in which the Log Analytics Linked Service is crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L93" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L95" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -205,7 +203,7 @@ The resource id of the resource that will be linked to the workspace. This field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L97" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L99" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -228,7 +226,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedService-workspaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L101" >}}">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L103" >}}">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>workspaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -240,7 +238,7 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LinkedServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L186" >}}">interface <b>LinkedServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L188" >}}">interface <b>LinkedServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -249,7 +247,7 @@ The set of arguments for constructing a LinkedService resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-linkedServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L190" >}}">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L192" >}}">property <b>linkedServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -260,12 +258,10 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-linkedServiceProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L194" >}}">property <b>linkedServiceProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L196" >}}">property <b>linkedServiceProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LinkedServiceLinkedServiceProperty'>LinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A `linkedServiceProperties` block as defined below.
@@ -273,7 +269,7 @@ A `linkedServiceProperties` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L198" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L200" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -284,7 +280,7 @@ The name of the resource group in which the Log Analytics Linked Service is crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L202" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L204" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -295,7 +291,7 @@ The resource id of the resource that will be linked to the workspace. This field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L206" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L208" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -306,7 +302,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-workspaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L210" >}}">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L212" >}}">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>workspaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -318,7 +314,7 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LinkedServiceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L152" >}}">interface <b>LinkedServiceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L154" >}}">interface <b>LinkedServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -327,7 +323,7 @@ Input properties used for looking up and filtering LinkedService resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceState-linkedServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L156" >}}">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L158" >}}">property <b>linkedServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -338,12 +334,10 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceState-linkedServiceProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L160" >}}">property <b>linkedServiceProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L162" >}}">property <b>linkedServiceProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LinkedServiceLinkedServiceProperty'>LinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A `linkedServiceProperties` block as defined below.
@@ -351,7 +345,7 @@ A `linkedServiceProperties` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L164" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L166" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -362,7 +356,7 @@ The automatically generated name of the Linked Service. This cannot be specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L168" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L170" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -373,7 +367,7 @@ The name of the resource group in which the Log Analytics Linked Service is crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L172" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L174" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -384,7 +378,7 @@ The resource id of the resource that will be linked to the workspace. This field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L176" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L178" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -395,7 +389,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkedServiceState-workspaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L180" >}}">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="loganalytics/linkedService.ts#L182" >}}">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>workspaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

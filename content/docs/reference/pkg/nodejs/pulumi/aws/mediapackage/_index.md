@@ -34,7 +34,7 @@ title: Module mediapackage
 
 
 <h2 class="pdoc-module-header" id="Channel">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L24" >}}">class <b>Channel</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L26" >}}">class <b>Channel</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -58,7 +58,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Channel-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -75,7 +75,7 @@ Create a Channel resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L33" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L35" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -99,7 +99,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L44" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L46" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -113,7 +113,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L54" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L56" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -124,7 +124,7 @@ The ARN of the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-channelId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L58" >}}">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L60" >}}">property <b>channelId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>channelId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -135,7 +135,7 @@ A unique identifier describing the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L62" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L64" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -146,16 +146,10 @@ A description of the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-hlsIngests">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L66" >}}">property <b>hlsIngests</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L68" >}}">property <b>hlsIngests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>hlsIngests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    ingestEndpoints: {
-        password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>hlsIngests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ChannelHlsIngest'>ChannelHlsIngest</a>[]&gt;;</pre>
 {{% md %}}
 
 A single item list of HLS ingest information
@@ -175,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Channel-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L70" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L72" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -199,7 +193,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ChannelArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L140" >}}">interface <b>ChannelArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L142" >}}">interface <b>ChannelArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -208,7 +202,7 @@ The set of arguments for constructing a Channel resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ChannelArgs-channelId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L144" >}}">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L146" >}}">property <b>channelId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>channelId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -219,7 +213,7 @@ A unique identifier describing the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChannelArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L148" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L150" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -230,7 +224,7 @@ A description of the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChannelArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L152" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L154" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -242,7 +236,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ChannelState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L114" >}}">interface <b>ChannelState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L116" >}}">interface <b>ChannelState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -251,7 +245,7 @@ Input properties used for looking up and filtering Channel resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ChannelState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L118" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L120" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -262,7 +256,7 @@ The ARN of the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChannelState-channelId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L122" >}}">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L124" >}}">property <b>channelId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>channelId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -273,7 +267,7 @@ A unique identifier describing the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChannelState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L126" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L128" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -284,16 +278,10 @@ A description of the channel
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChannelState-hlsIngests">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L130" >}}">property <b>hlsIngests</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L132" >}}">property <b>hlsIngests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hlsIngests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ingestEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>hlsIngests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ChannelHlsIngest'>ChannelHlsIngest</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A single item list of HLS ingest information
@@ -301,7 +289,7 @@ A single item list of HLS ingest information
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChannelState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L134" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="mediapackage/channel.ts#L136" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

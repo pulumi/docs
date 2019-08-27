@@ -34,7 +34,7 @@ title: Module dlm
 
 
 <h2 class="pdoc-module-header" id="LifecyclePolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L88" >}}">class <b>LifecyclePolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L90" >}}">class <b>LifecyclePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -122,7 +122,7 @@ const dlmLifecycle = new aws.iam.RolePolicy("dlmLifecycle", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LifecyclePolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L130" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L132" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +139,7 @@ Create a LifecyclePolicy resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L97" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L99" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -163,7 +163,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L108" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L110" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -177,7 +177,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L118" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L120" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -188,7 +188,7 @@ A description for the DLM lifecycle policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-executionRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L122" >}}">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L124" >}}">property <b>executionRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -211,26 +211,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-policyDetails">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L126" >}}">property <b>policyDetails</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L128" >}}">property <b>policyDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    resourceTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    schedules: {
-        copyTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-        createRule: {
-            interval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            intervalUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            times: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        retainRule: {
-            count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-        tagsToAdd: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-    }[];
-    targetTags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LifecyclePolicyPolicyDetails'>LifecyclePolicyPolicyDetails</a>&gt;;</pre>
 {{% md %}}
 
 See the `policyDetails` configuration block. Max of 1.
@@ -238,7 +222,7 @@ See the `policyDetails` configuration block. Max of 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L130" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L132" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -262,7 +246,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LifecyclePolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L200" >}}">interface <b>LifecyclePolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L202" >}}">interface <b>LifecyclePolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -271,7 +255,7 @@ The set of arguments for constructing a LifecyclePolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LifecyclePolicyArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L204" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L206" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -282,7 +266,7 @@ A description for the DLM lifecycle policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyArgs-executionRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L208" >}}">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L210" >}}">property <b>executionRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -293,26 +277,10 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyArgs-policyDetails">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L212" >}}">property <b>policyDetails</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L214" >}}">property <b>policyDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    schedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        copyTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        createRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            intervalUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            times: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        retainRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-        tagsToAdd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    }&gt;[]&gt;;
-    targetTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LifecyclePolicyPolicyDetails'>LifecyclePolicyPolicyDetails</a>&gt;;</pre>
 {{% md %}}
 
 See the `policyDetails` configuration block. Max of 1.
@@ -320,7 +288,7 @@ See the `policyDetails` configuration block. Max of 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyArgs-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L216" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L218" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -332,7 +300,7 @@ Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABL
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LifecyclePolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L178" >}}">interface <b>LifecyclePolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L180" >}}">interface <b>LifecyclePolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -341,7 +309,7 @@ Input properties used for looking up and filtering LifecyclePolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LifecyclePolicyState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L182" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L184" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -352,7 +320,7 @@ A description for the DLM lifecycle policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyState-executionRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L186" >}}">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L188" >}}">property <b>executionRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>executionRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -363,26 +331,10 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyState-policyDetails">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L190" >}}">property <b>policyDetails</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L192" >}}">property <b>policyDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>policyDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    schedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        copyTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        createRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            intervalUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            times: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        retainRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-        tagsToAdd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    }&gt;[]&gt;;
-    targetTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>policyDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LifecyclePolicyPolicyDetails'>LifecyclePolicyPolicyDetails</a>&gt;;</pre>
 {{% md %}}
 
 See the `policyDetails` configuration block. Max of 1.
@@ -390,7 +342,7 @@ See the `policyDetails` configuration block. Max of 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyState-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L194" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="dlm/lifecyclePolicy.ts#L196" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -37,7 +37,7 @@ title: Module acmpca
 
 
 <h2 class="pdoc-module-header" id="CertificateAuthority">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L82" >}}">class <b>CertificateAuthority</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L84" >}}">class <b>CertificateAuthority</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -119,7 +119,7 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateAuthority-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L164" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L166" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -136,7 +136,7 @@ Create a CertificateAuthority resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L91" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L93" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -160,7 +160,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L102" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L104" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -174,7 +174,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L112" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L114" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -185,7 +185,7 @@ Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L116" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L118" >}}">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -196,28 +196,10 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-certificateAuthorityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L120" >}}">property <b>certificateAuthorityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L122" >}}">property <b>certificateAuthorityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    keyAlgorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    signingAlgorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subject: {
-        commonName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        country: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        distinguishedNameQualifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        generationQualifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        givenName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        initials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        locality: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        organization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        organizationalUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        pseudonym: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        surname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing algorithms and certificate subject information. Defined below.
@@ -225,7 +207,7 @@ Nested argument containing algorithms and certificate subject information. Defin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L124" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L126" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -236,7 +218,7 @@ Base64-encoded certificate chain that includes any intermediate certificates and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-certificateSigningRequest">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L128" >}}">property <b>certificateSigningRequest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L130" >}}">property <b>certificateSigningRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificateSigningRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -247,7 +229,7 @@ The base64 PEM-encoded certificate signing request (CSR) for your private CA cer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L132" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L134" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -270,7 +252,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-notAfter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L136" >}}">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L138" >}}">property <b>notAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -281,7 +263,7 @@ Date and time after which the certificate authority is not valid. Only available
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-notBefore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L140" >}}">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L142" >}}">property <b>notBefore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notBefore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -292,7 +274,7 @@ Date and time before which the certificate authority is not valid. Only availabl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-permanentDeletionTimeInDays">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L144" >}}">property <b>permanentDeletionTimeInDays</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L146" >}}">property <b>permanentDeletionTimeInDays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>permanentDeletionTimeInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -303,17 +285,10 @@ The number of days to make a CA restorable after it has been deleted, must be be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-revocationConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L148" >}}">property <b>revocationConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L150" >}}">property <b>revocationConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>revocationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    crlConfiguration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        customCname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        expirationInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        s3BucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>revocationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing revocation configuration. Defined below.
@@ -321,7 +296,7 @@ Nested argument containing revocation configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-serial">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L152" >}}">property <b>serial</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L154" >}}">property <b>serial</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -332,7 +307,7 @@ Serial number of the certificate authority. Only available after the certificate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L156" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L158" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +318,7 @@ Status of the certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L160" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L162" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -354,7 +329,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthority-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L164" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L166" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -378,7 +353,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getCertificateAuthority">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L23" >}}">function <b>getCertificateAuthority</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L25" >}}">function <b>getCertificateAuthority</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -404,7 +379,7 @@ const example = aws.acmpca.getCertificateAuthority({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CertificateAuthorityArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L288" >}}">interface <b>CertificateAuthorityArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L290" >}}">interface <b>CertificateAuthorityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -413,28 +388,10 @@ The set of arguments for constructing a CertificateAuthority resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateAuthorityArgs-certificateAuthorityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L292" >}}">property <b>certificateAuthorityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L294" >}}">property <b>certificateAuthorityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    signingAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        distinguishedNameQualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        generationQualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        givenName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        initials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        locality: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        organizationalUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        pseudonym: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        surname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing algorithms and certificate subject information. Defined below.
@@ -442,7 +399,7 @@ Nested argument containing algorithms and certificate subject information. Defin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L296" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L298" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -453,7 +410,7 @@ Boolean value that specifies whether certificate revocation lists (CRLs) are ena
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityArgs-permanentDeletionTimeInDays">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L300" >}}">property <b>permanentDeletionTimeInDays</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L302" >}}">property <b>permanentDeletionTimeInDays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permanentDeletionTimeInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -464,17 +421,10 @@ The number of days to make a CA restorable after it has been deleted, must be be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityArgs-revocationConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L304" >}}">property <b>revocationConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L306" >}}">property <b>revocationConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    crlConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        customCname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        expirationInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing revocation configuration. Defined below.
@@ -482,7 +432,7 @@ Nested argument containing revocation configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L308" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L310" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -493,7 +443,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L312" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L314" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -505,7 +455,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateAuthorityState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L226" >}}">interface <b>CertificateAuthorityState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L228" >}}">interface <b>CertificateAuthorityState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -514,7 +464,7 @@ Input properties used for looking up and filtering CertificateAuthority resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L230" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L232" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -525,7 +475,7 @@ Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L234" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L236" >}}">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -536,28 +486,10 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-certificateAuthorityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L238" >}}">property <b>certificateAuthorityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L240" >}}">property <b>certificateAuthorityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>certificateAuthorityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    signingAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        distinguishedNameQualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        generationQualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        givenName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        initials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        locality: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        organizationalUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        pseudonym: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        surname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificateAuthorityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing algorithms and certificate subject information. Defined below.
@@ -565,7 +497,7 @@ Nested argument containing algorithms and certificate subject information. Defin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L242" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L244" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -576,7 +508,7 @@ Base64-encoded certificate chain that includes any intermediate certificates and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-certificateSigningRequest">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L246" >}}">property <b>certificateSigningRequest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L248" >}}">property <b>certificateSigningRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateSigningRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -587,7 +519,7 @@ The base64 PEM-encoded certificate signing request (CSR) for your private CA cer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L250" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L252" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -598,7 +530,7 @@ Boolean value that specifies whether certificate revocation lists (CRLs) are ena
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-notAfter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L254" >}}">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L256" >}}">property <b>notAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -609,7 +541,7 @@ Date and time after which the certificate authority is not valid. Only available
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-notBefore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L258" >}}">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L260" >}}">property <b>notBefore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notBefore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -620,7 +552,7 @@ Date and time before which the certificate authority is not valid. Only availabl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-permanentDeletionTimeInDays">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L262" >}}">property <b>permanentDeletionTimeInDays</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L264" >}}">property <b>permanentDeletionTimeInDays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permanentDeletionTimeInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -631,17 +563,10 @@ The number of days to make a CA restorable after it has been deleted, must be be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-revocationConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L266" >}}">property <b>revocationConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L268" >}}">property <b>revocationConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    crlConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        customCname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        expirationInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing revocation configuration. Defined below.
@@ -649,7 +574,7 @@ Nested argument containing revocation configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-serial">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L270" >}}">property <b>serial</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L272" >}}">property <b>serial</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -660,7 +585,7 @@ Serial number of the certificate authority. Only available after the certificate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L274" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L276" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -671,7 +596,7 @@ Status of the certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L278" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L280" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -682,7 +607,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateAuthorityState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L282" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/certificateAuthority.ts#L284" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -694,7 +619,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCertificateAuthorityArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L43" >}}">interface <b>GetCertificateAuthorityArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L45" >}}">interface <b>GetCertificateAuthorityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -703,7 +628,7 @@ A collection of arguments for invoking getCertificateAuthority.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityArgs-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L47" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L49" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -714,22 +639,15 @@ Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityArgs-revocationConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L48" >}}">property <b>revocationConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L50" >}}">property <b>revocationConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>revocationConfigurations?: {
-    crlConfigurations: {
-        customCname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        expirationInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        s3BucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>revocationConfigurations?: <a href='#GetCertificateAuthorityRevocationConfiguration'>GetCertificateAuthorityRevocationConfiguration</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L49" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L51" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -738,7 +656,7 @@ Amazon Resource Name (ARN) of the certificate authority.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCertificateAuthorityResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L55" >}}">interface <b>GetCertificateAuthorityResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L57" >}}">interface <b>GetCertificateAuthorityResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -747,7 +665,7 @@ A collection of values returned by getCertificateAuthority.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L56" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L58" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -755,7 +673,7 @@ A collection of values returned by getCertificateAuthority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L60" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L62" >}}">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -766,7 +684,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L64" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L66" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateChain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -777,7 +695,7 @@ Base64-encoded certificate chain that includes any intermediate certificates and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-certificateSigningRequest">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L68" >}}">property <b>certificateSigningRequest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L70" >}}">property <b>certificateSigningRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateSigningRequest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -788,7 +706,7 @@ The base64 PEM-encoded certificate signing request (CSR) for your private CA cer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L105" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L107" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -799,7 +717,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-notAfter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L72" >}}">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L74" >}}">property <b>notAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -810,7 +728,7 @@ Date and time after which the certificate authority is not valid. Only available
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-notBefore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L76" >}}">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L78" >}}">property <b>notBefore</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notBefore: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -821,17 +739,10 @@ Date and time before which the certificate authority is not valid. Only availabl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-revocationConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L85" >}}">property <b>revocationConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L87" >}}">property <b>revocationConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>revocationConfigurations: {
-    crlConfigurations: {
-        customCname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-        expirationInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        s3BucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>revocationConfigurations: <a href='#GetCertificateAuthorityRevocationConfiguration'>GetCertificateAuthorityRevocationConfiguration</a>[];</pre>
 {{% md %}}
 
 Nested attribute containing revocation configuration.
@@ -844,7 +755,7 @@ Nested attribute containing revocation configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-serial">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L89" >}}">property <b>serial</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L91" >}}">property <b>serial</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -855,7 +766,7 @@ Serial number of the certificate authority. Only available after the certificate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L93" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L95" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -866,7 +777,7 @@ Status of the certificate authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L97" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L99" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -877,7 +788,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateAuthorityResult-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L101" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="acmpca/getCertificateAuthority.ts#L103" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

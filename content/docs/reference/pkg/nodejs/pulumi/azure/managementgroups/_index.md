@@ -52,18 +52,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getSubscription({});
-const exampleParent = new azure.managementgroups.ManagementGroup("exampleParent", {
+const exampleParent = new azure.management.Group("exampleParent", {
     displayName: "ParentGroup",
     subscriptionIds: [current.subscriptionId],
 });
-const exampleChild = new azure.managementgroups.ManagementGroup("exampleChild", {
+const exampleChild = new azure.management.Group("exampleChild", {
     displayName: "ChildGroup",
     parentManagementGroupId: exampleParent.id,
     subscriptionIds: [current.subscriptionId],
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroup-constructor">
@@ -207,14 +207,14 @@ Use this data source to access information about an existing Management Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = azure.managementgroups.getManagementGroup({
+const test = azure.management.getGroup({
     groupId: "00000000-0000-0000-0000-000000000000",
 });
 
 export const displayName = test.displayName;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/management_group.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/management_group_legacy.html.markdown.
 
 {{% /md %}}
 </div>

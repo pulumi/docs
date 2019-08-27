@@ -81,7 +81,7 @@ title: Module storage
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L77" >}}">class <b>Account</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L79" >}}">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -158,7 +158,7 @@ const testsa = new azure.storage.Account("testsa", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L301" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L303" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -175,7 +175,7 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L86" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L88" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -199,7 +199,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L97" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L99" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -213,7 +213,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accessTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L107" >}}">property <b>accessTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L109" >}}">property <b>accessTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accessTier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -224,7 +224,7 @@ Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accountEncryptionSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L111" >}}">property <b>accountEncryptionSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L113" >}}">property <b>accountEncryptionSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountEncryptionSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -235,7 +235,7 @@ The Encryption Source for this Storage Account. Possible values are `Microsoft.K
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accountKind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L117" >}}">property <b>accountKind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L119" >}}">property <b>accountKind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountKind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -248,7 +248,7 @@ Defaults to `Storage`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accountReplicationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L121" >}}">property <b>accountReplicationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L123" >}}">property <b>accountReplicationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountReplicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -259,7 +259,7 @@ Defines the type of replication to use for this storage account. Valid options a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accountTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L125" >}}">property <b>accountTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L127" >}}">property <b>accountTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountTier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -270,7 +270,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accountType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L126" >}}">property <b>accountType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L128" >}}">property <b>accountType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -278,13 +278,10 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-customDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L130" >}}">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L132" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    useSubdomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountCustomDomain'>AccountCustomDomain</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A `customDomain` block as documented below.
@@ -292,7 +289,7 @@ A `customDomain` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableBlobEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L134" >}}">property <b>enableBlobEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L136" >}}">property <b>enableBlobEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableBlobEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -303,7 +300,7 @@ Boolean flag which controls if Encryption Services are enabled for Blob storage,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableFileEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L138" >}}">property <b>enableFileEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L140" >}}">property <b>enableFileEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableFileEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -314,7 +311,7 @@ Boolean flag which controls if Encryption Services are enabled for File storage,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableHttpsTrafficOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L143" >}}">property <b>enableHttpsTrafficOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L145" >}}">property <b>enableHttpsTrafficOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableHttpsTrafficOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -338,14 +335,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L147" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L149" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountIdentity'>AccountIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -353,7 +346,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isHnsEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L151" >}}">property <b>isHnsEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L153" >}}">property <b>isHnsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isHnsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -364,7 +357,7 @@ Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L156" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L158" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -376,7 +369,7 @@ resource exists. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L160" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L162" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -387,15 +380,10 @@ The Custom Domain Name to use for the Storage Account, which will be validated b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-networkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L164" >}}">property <b>networkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L166" >}}">property <b>networkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    bypasses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    defaultAction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ipRules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    virtualNetworkSubnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountNetworkRules'>AccountNetworkRules</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A `networkRules` block as documented below.
@@ -403,7 +391,7 @@ A `networkRules` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L168" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L170" >}}">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -414,7 +402,7 @@ The primary access key for the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryBlobConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L172" >}}">property <b>primaryBlobConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L174" >}}">property <b>primaryBlobConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryBlobConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -425,7 +413,7 @@ The connection string associated with the primary blob location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryBlobEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L176" >}}">property <b>primaryBlobEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L178" >}}">property <b>primaryBlobEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryBlobEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -436,7 +424,7 @@ The endpoint URL for blob storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryBlobHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L180" >}}">property <b>primaryBlobHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L182" >}}">property <b>primaryBlobHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryBlobHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -447,7 +435,7 @@ The hostname with port if applicable for blob storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L184" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L186" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -458,7 +446,7 @@ The connection string associated with the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryDfsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L188" >}}">property <b>primaryDfsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L190" >}}">property <b>primaryDfsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryDfsEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -469,7 +457,7 @@ The endpoint URL for DFS storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryDfsHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L192" >}}">property <b>primaryDfsHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L194" >}}">property <b>primaryDfsHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryDfsHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -480,7 +468,7 @@ The hostname with port if applicable for DFS storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryFileEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L196" >}}">property <b>primaryFileEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L198" >}}">property <b>primaryFileEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryFileEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -491,7 +479,7 @@ The endpoint URL for file storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryFileHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L200" >}}">property <b>primaryFileHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L202" >}}">property <b>primaryFileHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryFileHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -502,7 +490,7 @@ The hostname with port if applicable for file storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L204" >}}">property <b>primaryLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L206" >}}">property <b>primaryLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -513,7 +501,7 @@ The primary location of the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L208" >}}">property <b>primaryQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L210" >}}">property <b>primaryQueueEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -524,7 +512,7 @@ The endpoint URL for queue storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryQueueHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L212" >}}">property <b>primaryQueueHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L214" >}}">property <b>primaryQueueHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryQueueHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -535,7 +523,7 @@ The hostname with port if applicable for queue storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryTableEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L216" >}}">property <b>primaryTableEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L218" >}}">property <b>primaryTableEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryTableEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -546,7 +534,7 @@ The endpoint URL for table storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryTableHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L220" >}}">property <b>primaryTableHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L222" >}}">property <b>primaryTableHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryTableHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -557,7 +545,7 @@ The hostname with port if applicable for table storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryWebEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L224" >}}">property <b>primaryWebEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L226" >}}">property <b>primaryWebEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryWebEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -568,7 +556,7 @@ The endpoint URL for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryWebHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L228" >}}">property <b>primaryWebHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L230" >}}">property <b>primaryWebHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryWebHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -579,7 +567,7 @@ The hostname with port if applicable for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L233" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L235" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -591,7 +579,7 @@ create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L237" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L239" >}}">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -602,7 +590,7 @@ The secondary access key for the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryBlobConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L241" >}}">property <b>secondaryBlobConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L243" >}}">property <b>secondaryBlobConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryBlobConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -613,7 +601,7 @@ The connection string associated with the secondary blob location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryBlobEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L245" >}}">property <b>secondaryBlobEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L247" >}}">property <b>secondaryBlobEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryBlobEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -624,7 +612,7 @@ The endpoint URL for blob storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryBlobHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L249" >}}">property <b>secondaryBlobHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L251" >}}">property <b>secondaryBlobHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryBlobHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -635,7 +623,7 @@ The hostname with port if applicable for blob storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L253" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L255" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -646,7 +634,7 @@ The connection string associated with the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryDfsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L257" >}}">property <b>secondaryDfsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L259" >}}">property <b>secondaryDfsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryDfsEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -657,7 +645,7 @@ The endpoint URL for DFS storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryDfsHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L261" >}}">property <b>secondaryDfsHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L263" >}}">property <b>secondaryDfsHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryDfsHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -668,7 +656,7 @@ The hostname with port if applicable for DFS storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryFileEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L265" >}}">property <b>secondaryFileEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L267" >}}">property <b>secondaryFileEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryFileEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -679,7 +667,7 @@ The endpoint URL for file storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryFileHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L269" >}}">property <b>secondaryFileHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L271" >}}">property <b>secondaryFileHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryFileHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -690,7 +678,7 @@ The hostname with port if applicable for file storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L273" >}}">property <b>secondaryLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L275" >}}">property <b>secondaryLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -701,7 +689,7 @@ The secondary location of the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L277" >}}">property <b>secondaryQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L279" >}}">property <b>secondaryQueueEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -712,7 +700,7 @@ The endpoint URL for queue storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryQueueHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L281" >}}">property <b>secondaryQueueHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L283" >}}">property <b>secondaryQueueHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryQueueHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -723,7 +711,7 @@ The hostname with port if applicable for queue storage in the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryTableEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L285" >}}">property <b>secondaryTableEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L287" >}}">property <b>secondaryTableEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryTableEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -734,7 +722,7 @@ The endpoint URL for table storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryTableHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L289" >}}">property <b>secondaryTableHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L291" >}}">property <b>secondaryTableHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryTableHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -745,7 +733,7 @@ The hostname with port if applicable for table storage in the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryWebEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L293" >}}">property <b>secondaryWebEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L295" >}}">property <b>secondaryWebEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryWebEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -756,7 +744,7 @@ The endpoint URL for web storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryWebHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L297" >}}">property <b>secondaryWebHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L299" >}}">property <b>secondaryWebHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryWebHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -767,7 +755,7 @@ The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L301" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L303" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -791,7 +779,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Blob">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L45" >}}">class <b>Blob</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L47" >}}">class <b>Blob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -836,7 +824,7 @@ const testsb = new azure.storage.Blob("testsb", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Blob-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L127" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L129" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -853,7 +841,7 @@ Create a Blob resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -877,7 +865,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -891,7 +879,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-attempts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L75" >}}">property <b>attempts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L77" >}}">property <b>attempts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>attempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -902,7 +890,7 @@ The number of attempts to make per page or block when uploading. Defaults to `1`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L79" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L81" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -925,7 +913,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L83" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L85" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -936,7 +924,7 @@ A map of custom blob metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L87" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L89" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -947,7 +935,7 @@ The name of the storage blob. Must be unique within the storage container the bl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-parallelism">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L91" >}}">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L93" >}}">property <b>parallelism</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parallelism: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -958,7 +946,7 @@ The number of workers per CPU core to run for concurrent uploads. Defaults to `8
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L96" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L98" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -970,7 +958,7 @@ create the storage container. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L100" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L102" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -981,7 +969,7 @@ Used only for `page` blobs to specify the size in bytes of the blob to be create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L104" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L106" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -992,7 +980,7 @@ An absolute path to a file on the local system. Cannot be defined if `sourceUri`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-sourceUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L109" >}}">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L111" >}}">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1004,7 +992,7 @@ for the blob to be created. Changing this forces a new resource to be created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L114" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L116" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1016,7 +1004,7 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-storageContainerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L118" >}}">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L120" >}}">property <b>storageContainerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1027,7 +1015,7 @@ The name of the storage container in which this blob should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L123" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L125" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1039,7 +1027,7 @@ this becomes required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Blob-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L127" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L129" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1073,7 +1061,7 @@ deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BlobEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, container: storage.Container, args: <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BlobEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, container: Container, args: <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -1230,7 +1218,7 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Container">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L40" >}}">class <b>Container</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L42" >}}">class <b>Container</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1270,7 +1258,7 @@ const testContainer = new azure.storage.Container("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Container-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L88" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1287,7 +1275,7 @@ Create a Container resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1339,7 +1327,7 @@ Creates an input binding linked to the given Blob Container to be used for an Az
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1369,7 +1357,7 @@ Use [getEventFunction] if you want to compose multiple Functions into the same A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-containerAccessType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L70" >}}">property <b>containerAccessType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L72" >}}">property <b>containerAccessType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>containerAccessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1392,7 +1380,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1403,7 +1391,7 @@ The name of the storage container. Must be unique within the storage service the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L78" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L80" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1414,7 +1402,7 @@ Key-value definition of additional properties associated to the storage containe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L83" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L85" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1426,7 +1414,7 @@ create the storage container. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Container-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L88" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L90" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1451,7 +1439,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Queue">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L36" >}}">class <b>Queue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L38" >}}">class <b>Queue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1487,7 +1475,7 @@ const testQueue = new azure.storage.Queue("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L76" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L78" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1504,7 +1492,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1523,7 +1511,7 @@ properties used to qualify the lookup.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></pre>
+<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></pre>
 
 
 Creates a new Function triggered by messages in the given queue using the callback provided.
@@ -1543,7 +1531,7 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1598,7 +1586,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1609,7 +1597,7 @@ The name of the storage queue. Must be unique within the storage account the que
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L71" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L73" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1621,7 +1609,7 @@ create the storage queue. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L76" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L78" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1656,7 +1644,7 @@ deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -1818,7 +1806,7 @@ Azure Function's output binding that sends messages to a Storage Queue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Share">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L37" >}}">class <b>Share</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L39" >}}">class <b>Share</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1855,7 +1843,7 @@ const testshare = new azure.storage.Share("testshare", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Share-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L85" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L87" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1872,7 +1860,7 @@ Create a Share resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L46" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1896,7 +1884,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L57" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1922,7 +1910,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L67" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L69" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1933,7 +1921,7 @@ The name of the share. Must be unique within the storage account where the share
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-quota">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L71" >}}">property <b>quota</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L73" >}}">property <b>quota</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>quota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1944,7 +1932,7 @@ The maximum size of the share, in gigabytes. Must be greater than 0, and less th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L76" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L78" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1956,7 +1944,7 @@ create the share. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L81" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L83" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1968,7 +1956,7 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L85" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L87" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1992,7 +1980,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Table">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L36" >}}">class <b>Table</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L38" >}}">class <b>Table</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2028,7 +2016,7 @@ const testTable = new azure.storage.Table("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L76" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L78" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2045,7 +2033,7 @@ Create a Table resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2082,7 +2070,7 @@ Creates an input binding linked to the given table to be used for an Azure Funct
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2121,7 +2109,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2132,7 +2120,7 @@ The name of the storage table. Must be unique within the storage account the tab
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L71" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L73" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2144,7 +2132,7 @@ create the storage table. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L76" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L78" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2233,12 +2221,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZipBlob">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L7" >}}">class <b>ZipBlob</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L9" >}}">class <b>ZipBlob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 <h3 class="pdoc-member-header" id="ZipBlob-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L46" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L48" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2255,7 +2243,7 @@ Create a ZipBlob resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L16" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L18" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2279,7 +2267,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L27" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L29" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2293,7 +2281,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-attempts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L34" >}}">property <b>attempts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L36" >}}">property <b>attempts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>attempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2301,15 +2289,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L41" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L43" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L35" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L37" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2329,7 +2317,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L36" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L38" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2337,7 +2325,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L37" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L39" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2345,7 +2333,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-parallelism">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L38" >}}">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L40" >}}">property <b>parallelism</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parallelism: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2353,7 +2341,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L39" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L41" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2361,7 +2349,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L40" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L42" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2369,7 +2357,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-sourceUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L42" >}}">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L44" >}}">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2377,7 +2365,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L43" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L45" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2385,7 +2373,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-storageContainerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L44" >}}">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L46" >}}">property <b>storageContainerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2393,7 +2381,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L45" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L47" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2401,7 +2389,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlob-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L46" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L48" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2422,7 +2410,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAccount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L26" >}}">function <b>getAccount</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L28" >}}">function <b>getAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2451,7 +2439,7 @@ export const storageAccountTier = test.accountTier;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getAccountSAS">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L68" >}}">function <b>getAccountSAS</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L70" >}}">function <b>getAccountSAS</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2535,7 +2523,7 @@ Produce a URL with read-only access to a Storage Blob with a Shared Access Signa
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L643" >}}">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L645" >}}">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2544,7 +2532,7 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-accessTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L647" >}}">property <b>accessTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L649" >}}">property <b>accessTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2555,7 +2543,7 @@ Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-accountEncryptionSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L651" >}}">property <b>accountEncryptionSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L653" >}}">property <b>accountEncryptionSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountEncryptionSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2566,7 +2554,7 @@ The Encryption Source for this Storage Account. Possible values are `Microsoft.K
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-accountKind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L657" >}}">property <b>accountKind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L659" >}}">property <b>accountKind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountKind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2579,7 +2567,7 @@ Defaults to `Storage`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-accountReplicationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L661" >}}">property <b>accountReplicationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L663" >}}">property <b>accountReplicationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountReplicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2590,7 +2578,7 @@ Defines the type of replication to use for this storage account. Valid options a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-accountTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L665" >}}">property <b>accountTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L667" >}}">property <b>accountTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountTier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2601,7 +2589,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-accountType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L666" >}}">property <b>accountType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L668" >}}">property <b>accountType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2609,13 +2597,10 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-customDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L670" >}}">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L672" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    useSubdomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCustomDomain'>AccountCustomDomain</a>&gt;;</pre>
 {{% md %}}
 
 A `customDomain` block as documented below.
@@ -2623,7 +2608,7 @@ A `customDomain` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableBlobEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L674" >}}">property <b>enableBlobEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L676" >}}">property <b>enableBlobEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBlobEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2634,7 +2619,7 @@ Boolean flag which controls if Encryption Services are enabled for Blob storage,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableFileEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L678" >}}">property <b>enableFileEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L680" >}}">property <b>enableFileEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFileEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2645,7 +2630,7 @@ Boolean flag which controls if Encryption Services are enabled for File storage,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableHttpsTrafficOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L683" >}}">property <b>enableHttpsTrafficOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L685" >}}">property <b>enableHttpsTrafficOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableHttpsTrafficOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2657,14 +2642,10 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L687" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L689" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountIdentity'>AccountIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -2672,7 +2653,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-isHnsEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L691" >}}">property <b>isHnsEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L693" >}}">property <b>isHnsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isHnsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2683,7 +2664,7 @@ Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L696" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L698" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2695,7 +2676,7 @@ resource exists. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L700" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L702" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2706,15 +2687,10 @@ The Custom Domain Name to use for the Storage Account, which will be validated b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-networkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L704" >}}">property <b>networkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L706" >}}">property <b>networkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bypasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    virtualNetworkSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</pre>
 {{% md %}}
 
 A `networkRules` block as documented below.
@@ -2722,7 +2698,7 @@ A `networkRules` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L709" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L711" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2734,7 +2710,7 @@ create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L713" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L715" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2746,7 +2722,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L439" >}}">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L441" >}}">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2755,7 +2731,7 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-accessTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L443" >}}">property <b>accessTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L445" >}}">property <b>accessTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2766,7 +2742,7 @@ Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-accountEncryptionSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L447" >}}">property <b>accountEncryptionSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L449" >}}">property <b>accountEncryptionSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountEncryptionSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2777,7 +2753,7 @@ The Encryption Source for this Storage Account. Possible values are `Microsoft.K
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-accountKind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L453" >}}">property <b>accountKind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L455" >}}">property <b>accountKind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountKind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2790,7 +2766,7 @@ Defaults to `Storage`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-accountReplicationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L457" >}}">property <b>accountReplicationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L459" >}}">property <b>accountReplicationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountReplicationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2801,7 +2777,7 @@ Defines the type of replication to use for this storage account. Valid options a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-accountTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L461" >}}">property <b>accountTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L463" >}}">property <b>accountTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2812,7 +2788,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-accountType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L462" >}}">property <b>accountType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L464" >}}">property <b>accountType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2820,13 +2796,10 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-customDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L466" >}}">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L468" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    useSubdomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCustomDomain'>AccountCustomDomain</a>&gt;;</pre>
 {{% md %}}
 
 A `customDomain` block as documented below.
@@ -2834,7 +2807,7 @@ A `customDomain` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableBlobEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L470" >}}">property <b>enableBlobEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L472" >}}">property <b>enableBlobEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBlobEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2845,7 +2818,7 @@ Boolean flag which controls if Encryption Services are enabled for Blob storage,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableFileEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L474" >}}">property <b>enableFileEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L476" >}}">property <b>enableFileEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFileEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2856,7 +2829,7 @@ Boolean flag which controls if Encryption Services are enabled for File storage,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableHttpsTrafficOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L479" >}}">property <b>enableHttpsTrafficOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L481" >}}">property <b>enableHttpsTrafficOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableHttpsTrafficOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2868,14 +2841,10 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L483" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L485" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountIdentity'>AccountIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -2883,7 +2852,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-isHnsEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L487" >}}">property <b>isHnsEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L489" >}}">property <b>isHnsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isHnsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2894,7 +2863,7 @@ Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L492" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L494" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2906,7 +2875,7 @@ resource exists. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L496" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L498" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2917,15 +2886,10 @@ The Custom Domain Name to use for the Storage Account, which will be validated b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-networkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L500" >}}">property <b>networkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L502" >}}">property <b>networkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bypasses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    virtualNetworkSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</pre>
 {{% md %}}
 
 A `networkRules` block as documented below.
@@ -2933,7 +2897,7 @@ A `networkRules` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L504" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L506" >}}">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2944,7 +2908,7 @@ The primary access key for the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryBlobConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L508" >}}">property <b>primaryBlobConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L510" >}}">property <b>primaryBlobConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryBlobConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2955,7 +2919,7 @@ The connection string associated with the primary blob location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryBlobEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L512" >}}">property <b>primaryBlobEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L514" >}}">property <b>primaryBlobEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryBlobEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2966,7 +2930,7 @@ The endpoint URL for blob storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryBlobHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L516" >}}">property <b>primaryBlobHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L518" >}}">property <b>primaryBlobHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryBlobHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2977,7 +2941,7 @@ The hostname with port if applicable for blob storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L520" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L522" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2988,7 +2952,7 @@ The connection string associated with the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryDfsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L524" >}}">property <b>primaryDfsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L526" >}}">property <b>primaryDfsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryDfsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2999,7 +2963,7 @@ The endpoint URL for DFS storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryDfsHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L528" >}}">property <b>primaryDfsHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L530" >}}">property <b>primaryDfsHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryDfsHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3010,7 +2974,7 @@ The hostname with port if applicable for DFS storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryFileEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L532" >}}">property <b>primaryFileEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L534" >}}">property <b>primaryFileEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryFileEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3021,7 +2985,7 @@ The endpoint URL for file storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryFileHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L536" >}}">property <b>primaryFileHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L538" >}}">property <b>primaryFileHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryFileHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3032,7 +2996,7 @@ The hostname with port if applicable for file storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L540" >}}">property <b>primaryLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L542" >}}">property <b>primaryLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3043,7 +3007,7 @@ The primary location of the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L544" >}}">property <b>primaryQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L546" >}}">property <b>primaryQueueEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3054,7 +3018,7 @@ The endpoint URL for queue storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryQueueHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L548" >}}">property <b>primaryQueueHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L550" >}}">property <b>primaryQueueHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryQueueHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3065,7 +3029,7 @@ The hostname with port if applicable for queue storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryTableEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L552" >}}">property <b>primaryTableEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L554" >}}">property <b>primaryTableEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryTableEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3076,7 +3040,7 @@ The endpoint URL for table storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryTableHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L556" >}}">property <b>primaryTableHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L558" >}}">property <b>primaryTableHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryTableHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3087,7 +3051,7 @@ The hostname with port if applicable for table storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryWebEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L560" >}}">property <b>primaryWebEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L562" >}}">property <b>primaryWebEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryWebEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3098,7 +3062,7 @@ The endpoint URL for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryWebHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L564" >}}">property <b>primaryWebHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L566" >}}">property <b>primaryWebHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryWebHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3109,7 +3073,7 @@ The hostname with port if applicable for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L569" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L571" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3121,7 +3085,7 @@ create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L573" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L575" >}}">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3132,7 +3096,7 @@ The secondary access key for the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryBlobConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L577" >}}">property <b>secondaryBlobConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L579" >}}">property <b>secondaryBlobConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryBlobConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3143,7 +3107,7 @@ The connection string associated with the secondary blob location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryBlobEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L581" >}}">property <b>secondaryBlobEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L583" >}}">property <b>secondaryBlobEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryBlobEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3154,7 +3118,7 @@ The endpoint URL for blob storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryBlobHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L585" >}}">property <b>secondaryBlobHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L587" >}}">property <b>secondaryBlobHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryBlobHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3165,7 +3129,7 @@ The hostname with port if applicable for blob storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L589" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L591" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3176,7 +3140,7 @@ The connection string associated with the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryDfsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L593" >}}">property <b>secondaryDfsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L595" >}}">property <b>secondaryDfsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryDfsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3187,7 +3151,7 @@ The endpoint URL for DFS storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryDfsHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L597" >}}">property <b>secondaryDfsHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L599" >}}">property <b>secondaryDfsHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryDfsHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3198,7 +3162,7 @@ The hostname with port if applicable for DFS storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryFileEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L601" >}}">property <b>secondaryFileEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L603" >}}">property <b>secondaryFileEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryFileEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3209,7 +3173,7 @@ The endpoint URL for file storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryFileHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L605" >}}">property <b>secondaryFileHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L607" >}}">property <b>secondaryFileHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryFileHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3220,7 +3184,7 @@ The hostname with port if applicable for file storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L609" >}}">property <b>secondaryLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L611" >}}">property <b>secondaryLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3231,7 +3195,7 @@ The secondary location of the storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L613" >}}">property <b>secondaryQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L615" >}}">property <b>secondaryQueueEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3242,7 +3206,7 @@ The endpoint URL for queue storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryQueueHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L617" >}}">property <b>secondaryQueueHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L619" >}}">property <b>secondaryQueueHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryQueueHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3253,7 +3217,7 @@ The hostname with port if applicable for queue storage in the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryTableEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L621" >}}">property <b>secondaryTableEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L623" >}}">property <b>secondaryTableEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryTableEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3264,7 +3228,7 @@ The endpoint URL for table storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryTableHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L625" >}}">property <b>secondaryTableHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L627" >}}">property <b>secondaryTableHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryTableHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3275,7 +3239,7 @@ The hostname with port if applicable for table storage in the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryWebEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L629" >}}">property <b>secondaryWebEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L631" >}}">property <b>secondaryWebEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryWebEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3286,7 +3250,7 @@ The endpoint URL for web storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryWebHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L633" >}}">property <b>secondaryWebHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L635" >}}">property <b>secondaryWebHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryWebHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3297,7 +3261,7 @@ The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L637" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/account.ts#L639" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3309,7 +3273,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BlobArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L255" >}}">interface <b>BlobArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L257" >}}">interface <b>BlobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3318,7 +3282,7 @@ The set of arguments for constructing a Blob resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BlobArgs-attempts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L259" >}}">property <b>attempts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L261" >}}">property <b>attempts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3329,7 +3293,7 @@ The number of attempts to make per page or block when uploading. Defaults to `1`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L263" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L265" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3340,7 +3304,7 @@ The content type of the storage blob. Cannot be defined if `sourceUri` is define
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L267" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L269" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3351,7 +3315,7 @@ A map of custom blob metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L271" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L273" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3362,7 +3326,7 @@ The name of the storage blob. Must be unique within the storage container the bl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-parallelism">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L275" >}}">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L277" >}}">property <b>parallelism</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3373,7 +3337,7 @@ The number of workers per CPU core to run for concurrent uploads. Defaults to `8
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L280" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L282" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3385,7 +3349,7 @@ create the storage container. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L284" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L286" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3396,7 +3360,7 @@ Used only for `page` blobs to specify the size in bytes of the blob to be create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L288" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L290" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3407,7 +3371,7 @@ An absolute path to a file on the local system. Cannot be defined if `sourceUri`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-sourceUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L293" >}}">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L295" >}}">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3419,7 +3383,7 @@ for the blob to be created. Changing this forces a new resource to be created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L298" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L300" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3431,7 +3395,7 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-storageContainerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L302" >}}">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L304" >}}">property <b>storageContainerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3442,7 +3406,7 @@ The name of the storage container in which this blob should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L307" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L309" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4102,7 +4066,7 @@ The type of a blob binding. Must be 'blob'.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BlobState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L193" >}}">interface <b>BlobState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L195" >}}">interface <b>BlobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4111,7 +4075,7 @@ Input properties used for looking up and filtering Blob resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BlobState-attempts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L197" >}}">property <b>attempts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L199" >}}">property <b>attempts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4122,7 +4086,7 @@ The number of attempts to make per page or block when uploading. Defaults to `1`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L201" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L203" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4133,7 +4097,7 @@ The content type of the storage blob. Cannot be defined if `sourceUri` is define
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L205" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L207" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -4144,7 +4108,7 @@ A map of custom blob metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L209" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L211" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4155,7 +4119,7 @@ The name of the storage blob. Must be unique within the storage container the bl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-parallelism">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L213" >}}">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L215" >}}">property <b>parallelism</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4166,7 +4130,7 @@ The number of workers per CPU core to run for concurrent uploads. Defaults to `8
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L218" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L220" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4178,7 +4142,7 @@ create the storage container. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L222" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L224" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4189,7 +4153,7 @@ Used only for `page` blobs to specify the size in bytes of the blob to be create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L226" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L228" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4200,7 +4164,7 @@ An absolute path to a file on the local system. Cannot be defined if `sourceUri`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-sourceUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L231" >}}">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L233" >}}">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4212,7 +4176,7 @@ for the blob to be created. Changing this forces a new resource to be created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L236" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L238" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4224,7 +4188,7 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-storageContainerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L240" >}}">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L242" >}}">property <b>storageContainerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4235,7 +4199,7 @@ The name of the storage container in which this blob should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L245" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L247" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4247,7 +4211,7 @@ this becomes required.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BlobState-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L249" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/blob.ts#L251" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4259,7 +4223,7 @@ The URL of the blob
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L163" >}}">interface <b>ContainerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L165" >}}">interface <b>ContainerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4268,7 +4232,7 @@ The set of arguments for constructing a Container resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerArgs-containerAccessType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L167" >}}">property <b>containerAccessType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L169" >}}">property <b>containerAccessType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerAccessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4279,7 +4243,7 @@ The 'interface' for access the container provides. Can be either `blob`, `contai
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L171" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L173" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4290,7 +4254,7 @@ The name of the storage container. Must be unique within the storage service the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L176" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L178" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4302,7 +4266,7 @@ create the storage container. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerArgs-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L181" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L183" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4315,7 +4279,7 @@ Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContainerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L135" >}}">interface <b>ContainerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L137" >}}">interface <b>ContainerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4324,7 +4288,7 @@ Input properties used for looking up and filtering Container resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerState-containerAccessType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L139" >}}">property <b>containerAccessType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L141" >}}">property <b>containerAccessType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerAccessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4335,7 +4299,7 @@ The 'interface' for access the container provides. Can be either `blob`, `contai
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L143" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L145" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4346,7 +4310,7 @@ The name of the storage container. Must be unique within the storage service the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerState-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L147" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L149" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4357,7 +4321,7 @@ Key-value definition of additional properties associated to the storage containe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L152" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L154" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4369,7 +4333,7 @@ create the storage container. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContainerState-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L157" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/container.ts#L159" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4382,7 +4346,7 @@ Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L45" >}}">interface <b>GetAccountArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L47" >}}">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4391,7 +4355,7 @@ A collection of arguments for invoking getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4402,7 +4366,7 @@ Specifies the name of the Storage Account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4414,7 +4378,7 @@ Specifies the name of the resource group the Storage Account is located in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L59" >}}">interface <b>GetAccountResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L61" >}}">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4423,7 +4387,7 @@ A collection of values returned by getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-accessTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L63" >}}">property <b>accessTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L65" >}}">property <b>accessTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessTier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4434,7 +4398,7 @@ The access tier for `BlobStorage` accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-accountEncryptionSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L67" >}}">property <b>accountEncryptionSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L69" >}}">property <b>accountEncryptionSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountEncryptionSource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4445,7 +4409,7 @@ The Encryption Source for this Storage Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-accountKind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L71" >}}">property <b>accountKind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L73" >}}">property <b>accountKind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountKind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4456,7 +4420,7 @@ The Kind of account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-accountReplicationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L75" >}}">property <b>accountReplicationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L77" >}}">property <b>accountReplicationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountReplicationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4467,7 +4431,7 @@ The type of replication used for this storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-accountTier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L79" >}}">property <b>accountTier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L81" >}}">property <b>accountTier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountTier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4478,12 +4442,10 @@ The Tier of this storage account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-customDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L83" >}}">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L85" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>customDomain: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>customDomain: <a href='#GetAccountCustomDomain'>GetAccountCustomDomain</a>;</pre>
 {{% md %}}
 
 A `customDomain` block as documented below.
@@ -4491,7 +4453,7 @@ A `customDomain` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableBlobEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L88" >}}">property <b>enableBlobEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L90" >}}">property <b>enableBlobEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBlobEncryption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4503,7 +4465,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableFileEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L93" >}}">property <b>enableFileEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L95" >}}">property <b>enableFileEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFileEncryption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4515,7 +4477,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableHttpsTrafficOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L98" >}}">property <b>enableHttpsTrafficOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L100" >}}">property <b>enableHttpsTrafficOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableHttpsTrafficOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4527,7 +4489,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L247" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L249" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4538,7 +4500,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-isHnsEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L102" >}}">property <b>isHnsEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L104" >}}">property <b>isHnsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isHnsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4549,7 +4511,7 @@ Is Hierarchical Namespace enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L106" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L108" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4560,7 +4522,7 @@ The Azure location where the Storage Account exists
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L110" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4571,7 +4533,7 @@ The Custom Domain Name used for the Storage Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L114" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L116" >}}">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4582,7 +4544,7 @@ The primary access key for the Storage Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryBlobConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L118" >}}">property <b>primaryBlobConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L120" >}}">property <b>primaryBlobConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryBlobConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4593,7 +4555,7 @@ The connection string associated with the primary blob location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryBlobEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L122" >}}">property <b>primaryBlobEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L124" >}}">property <b>primaryBlobEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryBlobEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4604,7 +4566,7 @@ The endpoint URL for blob storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryBlobHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L126" >}}">property <b>primaryBlobHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L128" >}}">property <b>primaryBlobHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryBlobHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4615,7 +4577,7 @@ The hostname with port if applicable for blob storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L130" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L132" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4626,7 +4588,7 @@ The connection string associated with the primary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryDfsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L134" >}}">property <b>primaryDfsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L136" >}}">property <b>primaryDfsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryDfsEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4637,7 +4599,7 @@ The endpoint URL for DFS storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryDfsHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L138" >}}">property <b>primaryDfsHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L140" >}}">property <b>primaryDfsHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryDfsHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4648,7 +4610,7 @@ The hostname with port if applicable for DFS storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryFileEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L142" >}}">property <b>primaryFileEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L144" >}}">property <b>primaryFileEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryFileEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4659,7 +4621,7 @@ The endpoint URL for file storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryFileHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L146" >}}">property <b>primaryFileHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L148" >}}">property <b>primaryFileHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryFileHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4670,7 +4632,7 @@ The hostname with port if applicable for file storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L150" >}}">property <b>primaryLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L152" >}}">property <b>primaryLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4681,7 +4643,7 @@ The primary location of the Storage Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L154" >}}">property <b>primaryQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L156" >}}">property <b>primaryQueueEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryQueueEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4692,7 +4654,7 @@ The endpoint URL for queue storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryQueueHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L158" >}}">property <b>primaryQueueHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L160" >}}">property <b>primaryQueueHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryQueueHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4703,7 +4665,7 @@ The hostname with port if applicable for queue storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryTableEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L162" >}}">property <b>primaryTableEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L164" >}}">property <b>primaryTableEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryTableEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4714,7 +4676,7 @@ The endpoint URL for table storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryTableHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L166" >}}">property <b>primaryTableHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L168" >}}">property <b>primaryTableHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryTableHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4725,7 +4687,7 @@ The hostname with port if applicable for table storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryWebEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L170" >}}">property <b>primaryWebEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L172" >}}">property <b>primaryWebEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryWebEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4736,7 +4698,7 @@ The endpoint URL for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryWebHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L174" >}}">property <b>primaryWebHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L176" >}}">property <b>primaryWebHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryWebHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4747,7 +4709,7 @@ The hostname with port if applicable for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L175" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L177" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4755,7 +4717,7 @@ The hostname with port if applicable for web storage in the primary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L179" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L181" >}}">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4766,7 +4728,7 @@ The secondary access key for the Storage Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryBlobConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L183" >}}">property <b>secondaryBlobConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L185" >}}">property <b>secondaryBlobConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryBlobConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4777,7 +4739,7 @@ The connection string associated with the secondary blob location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryBlobEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L187" >}}">property <b>secondaryBlobEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L189" >}}">property <b>secondaryBlobEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryBlobEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4788,7 +4750,7 @@ The endpoint URL for blob storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryBlobHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L191" >}}">property <b>secondaryBlobHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L193" >}}">property <b>secondaryBlobHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryBlobHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4799,7 +4761,7 @@ The hostname with port if applicable for blob storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L195" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L197" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4810,7 +4772,7 @@ The connection string associated with the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryDfsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L199" >}}">property <b>secondaryDfsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L201" >}}">property <b>secondaryDfsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryDfsEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4821,7 +4783,7 @@ The endpoint URL for DFS storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryDfsHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L203" >}}">property <b>secondaryDfsHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L205" >}}">property <b>secondaryDfsHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryDfsHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4832,7 +4794,7 @@ The hostname with port if applicable for DFS storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryFileEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L207" >}}">property <b>secondaryFileEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L209" >}}">property <b>secondaryFileEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryFileEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4843,7 +4805,7 @@ The endpoint URL for file storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryFileHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L211" >}}">property <b>secondaryFileHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L213" >}}">property <b>secondaryFileHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryFileHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4854,7 +4816,7 @@ The hostname with port if applicable for file storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L215" >}}">property <b>secondaryLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L217" >}}">property <b>secondaryLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4865,7 +4827,7 @@ The secondary location of the Storage Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L219" >}}">property <b>secondaryQueueEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L221" >}}">property <b>secondaryQueueEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryQueueEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4876,7 +4838,7 @@ The endpoint URL for queue storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryQueueHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L223" >}}">property <b>secondaryQueueHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L225" >}}">property <b>secondaryQueueHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryQueueHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4887,7 +4849,7 @@ The hostname with port if applicable for queue storage in the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryTableEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L227" >}}">property <b>secondaryTableEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L229" >}}">property <b>secondaryTableEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryTableEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4898,7 +4860,7 @@ The endpoint URL for table storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryTableHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L231" >}}">property <b>secondaryTableHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L233" >}}">property <b>secondaryTableHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryTableHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4909,7 +4871,7 @@ The hostname with port if applicable for table storage in the secondary location
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryWebEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L235" >}}">property <b>secondaryWebEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L237" >}}">property <b>secondaryWebEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryWebEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4920,7 +4882,7 @@ The endpoint URL for web storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryWebHost">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L239" >}}">property <b>secondaryWebHost</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L241" >}}">property <b>secondaryWebHost</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryWebHost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4931,7 +4893,7 @@ The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L243" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccount.ts#L245" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4943,7 +4905,7 @@ A mapping of tags to assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountSASArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L92" >}}">interface <b>GetAccountSASArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L94" >}}">interface <b>GetAccountSASArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4952,7 +4914,7 @@ A collection of arguments for invoking getAccountSAS.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-connectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L96" >}}">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L98" >}}">property <b>connectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4963,7 +4925,7 @@ The connection string for the storage account to which this SAS applies. Typical
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-expiry">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L100" >}}">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L102" >}}">property <b>expiry</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expiry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4974,7 +4936,7 @@ The expiration time and date of this SAS. Must be a valid ISO-8601 format time/d
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L104" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L106" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -4985,19 +4947,10 @@ Only permit `https` access. If `false`, both `http` and `https` are permitted. D
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-permissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L108" >}}">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L110" >}}">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>permissions: {
-    add: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    create: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    delete: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    list: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    process: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    read: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    update: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    write: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='#GetAccountSASPermissions'>GetAccountSASPermissions</a>;</pre>
 {{% md %}}
 
 A `permissions` block as defined below.
@@ -5005,14 +4958,10 @@ A `permissions` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-resourceTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L112" >}}">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L114" >}}">property <b>resourceTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceTypes: {
-    container: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    object: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>resourceTypes: <a href='#GetAccountSASResourceTypes'>GetAccountSASResourceTypes</a>;</pre>
 {{% md %}}
 
 A `resourceTypes` block as defined below.
@@ -5020,15 +4969,10 @@ A `resourceTypes` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-services">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L116" >}}">property <b>services</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L118" >}}">property <b>services</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>services: {
-    blob: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    queue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    table: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>services: <a href='#GetAccountSASServices'>GetAccountSASServices</a>;</pre>
 {{% md %}}
 
 A `services` block as defined below.
@@ -5036,7 +4980,7 @@ A `services` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-start">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L120" >}}">property <b>start</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L122" >}}">property <b>start</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5048,7 +4992,7 @@ The starting time and date of validity of this SAS. Must be a valid ISO-8601 for
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountSASResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L126" >}}">interface <b>GetAccountSASResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L128" >}}">interface <b>GetAccountSASResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5057,7 +5001,7 @@ A collection of values returned by getAccountSAS.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountSASResult-connectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L127" >}}">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L129" >}}">property <b>connectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5065,7 +5009,7 @@ A collection of values returned by getAccountSAS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-expiry">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L128" >}}">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L130" >}}">property <b>expiry</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expiry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5073,7 +5017,7 @@ A collection of values returned by getAccountSAS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L129" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L131" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -5081,7 +5025,7 @@ A collection of values returned by getAccountSAS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L141" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L143" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5092,36 +5036,23 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-permissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L130" >}}">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L132" >}}">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>permissions: {
-    add: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    create: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    delete: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    list: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    process: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    read: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    update: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    write: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='#GetAccountSASPermissions'>GetAccountSASPermissions</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-resourceTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L131" >}}">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L133" >}}">property <b>resourceTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceTypes: {
-    container: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    object: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>resourceTypes: <a href='#GetAccountSASResourceTypes'>GetAccountSASResourceTypes</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-sas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L135" >}}">property <b>sas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L137" >}}">property <b>sas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5132,20 +5063,15 @@ The computed Account Shared Access Signature (SAS).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-services">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L136" >}}">property <b>services</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L138" >}}">property <b>services</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>services: {
-    blob: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    queue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    table: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>services: <a href='#GetAccountSASServices'>GetAccountSASServices</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountSASResult-start">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L137" >}}">property <b>start</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/getAccountSAS.ts#L139" >}}">property <b>start</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5233,7 +5159,7 @@ Output bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L139" >}}">interface <b>QueueArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L141" >}}">interface <b>QueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5242,7 +5168,7 @@ The set of arguments for constructing a Queue resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L143" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L145" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5253,7 +5179,7 @@ The name of the storage queue. Must be unique within the storage account the que
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L148" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L150" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5265,7 +5191,7 @@ create the storage queue. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L153" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L155" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5979,7 +5905,7 @@ support.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L119" >}}">interface <b>QueueState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L121" >}}">interface <b>QueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5988,7 +5914,7 @@ Input properties used for looking up and filtering Queue resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5999,7 +5925,7 @@ The name of the storage queue. Must be unique within the storage account the que
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L128" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L130" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6011,7 +5937,7 @@ create the storage queue. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L133" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/queue.ts#L135" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6024,7 +5950,7 @@ Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L160" >}}">interface <b>ShareArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L162" >}}">interface <b>ShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6033,7 +5959,7 @@ The set of arguments for constructing a Share resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ShareArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L164" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L166" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6044,7 +5970,7 @@ The name of the share. Must be unique within the storage account where the share
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-quota">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L168" >}}">property <b>quota</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L170" >}}">property <b>quota</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6055,7 +5981,7 @@ The maximum size of the share, in gigabytes. Must be greater than 0, and less th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L173" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L175" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6067,7 +5993,7 @@ create the share. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L178" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L180" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6080,7 +6006,7 @@ Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L132" >}}">interface <b>ShareState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L134" >}}">interface <b>ShareState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6089,7 +6015,7 @@ Input properties used for looking up and filtering Share resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ShareState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6100,7 +6026,7 @@ The name of the share. Must be unique within the storage account where the share
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareState-quota">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L140" >}}">property <b>quota</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L142" >}}">property <b>quota</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6111,7 +6037,7 @@ The maximum size of the share, in gigabytes. Must be greater than 0, and less th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L145" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L147" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6123,7 +6049,7 @@ create the share. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareState-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L150" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L152" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6135,7 +6061,7 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareState-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L154" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/share.ts#L156" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6147,7 +6073,7 @@ The URL of the share
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L139" >}}">interface <b>TableArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L141" >}}">interface <b>TableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6156,7 +6082,7 @@ The set of arguments for constructing a Table resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L143" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L145" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6167,7 +6093,7 @@ The name of the storage table. Must be unique within the storage account the tab
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L148" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L150" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6179,7 +6105,7 @@ create the storage table. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L153" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L155" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6241,7 +6167,7 @@ The maximum number of entities to read.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L119" >}}">interface <b>TableState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L121" >}}">interface <b>TableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6250,7 +6176,7 @@ Input properties used for looking up and filtering Table resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6261,7 +6187,7 @@ The name of the storage table. Must be unique within the storage account the tab
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L128" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L130" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6273,7 +6199,7 @@ create the storage table. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L133" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/table.ts#L135" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6286,7 +6212,7 @@ Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZipBlobArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L131" >}}">interface <b>ZipBlobArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L133" >}}">interface <b>ZipBlobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6295,7 +6221,7 @@ The set of arguments for constructing a ZipBlob resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZipBlobArgs-attempts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L132" >}}">property <b>attempts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L134" >}}">property <b>attempts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6303,15 +6229,15 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L139" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L141" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L133" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L135" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6319,7 +6245,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L134" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L136" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -6327,7 +6253,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L135" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L137" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6335,7 +6261,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-parallelism">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L136" >}}">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L138" >}}">property <b>parallelism</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6343,7 +6269,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L137" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L139" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6351,7 +6277,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L138" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L140" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6359,7 +6285,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-sourceUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L140" >}}">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L142" >}}">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6367,7 +6293,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L141" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L143" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6375,7 +6301,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-storageContainerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L142" >}}">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L144" >}}">property <b>storageContainerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6383,7 +6309,7 @@ The set of arguments for constructing a ZipBlob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L143" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L145" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6392,7 +6318,7 @@ The set of arguments for constructing a ZipBlob resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZipBlobState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L112" >}}">interface <b>ZipBlobState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L114" >}}">interface <b>ZipBlobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6401,7 +6327,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZipBlobState-attempts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L113" >}}">property <b>attempts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L115" >}}">property <b>attempts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6409,15 +6335,15 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L120" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L122" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L114" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L116" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6425,7 +6351,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L115" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L117" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -6433,7 +6359,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L116" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6441,7 +6367,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-parallelism">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L117" >}}">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L119" >}}">property <b>parallelism</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6449,7 +6375,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L118" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L120" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6457,7 +6383,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L119" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L121" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6465,7 +6391,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-sourceUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L121" >}}">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L123" >}}">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6473,7 +6399,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-storageAccountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L122" >}}">property <b>storageAccountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L124" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6481,7 +6407,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-storageContainerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L123" >}}">property <b>storageContainerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L125" >}}">property <b>storageContainerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6489,7 +6415,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L124" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L126" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6497,7 +6423,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZipBlobState-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L125" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="storage/zipBlob.ts#L127" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

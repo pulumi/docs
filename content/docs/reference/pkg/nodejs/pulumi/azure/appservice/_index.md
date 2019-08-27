@@ -101,7 +101,7 @@ title: Module appservice
 
 
 <h2 class="pdoc-module-header" id="ActiveSlot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L33" >}}">class <b>ActiveSlot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L35" >}}">class <b>ActiveSlot</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -134,7 +134,7 @@ const testActiveSlot = new azure.appservice.ActiveSlot("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveSlot-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -151,7 +151,7 @@ Create a ActiveSlot resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -175,7 +175,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -189,7 +189,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L63" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L65" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -200,7 +200,7 @@ The name of the App Service within which the Slot exists.  Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-appServiceSlotName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L67" >}}">property <b>appServiceSlotName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L69" >}}">property <b>appServiceSlotName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceSlotName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -223,7 +223,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L71" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L73" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -247,7 +247,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AppService">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L10" >}}">class <b>AppService</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L12" >}}">class <b>AppService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -257,7 +257,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AppService-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L116" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L118" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -274,7 +274,7 @@ Create a AppService resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -298,7 +298,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -312,7 +312,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L40" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L42" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -323,7 +323,7 @@ The ID of the App Service Plan within which to create this App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L44" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L46" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -334,44 +334,10 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-authSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L48" >}}">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L50" >}}">property <b>authSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    activeDirectory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        allowedAudiences: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    additionalLoginParams: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-    allowedExternalRedirectUrls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    defaultProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    facebook: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        appId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        appSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        oauthScopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    };
-    google: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        oauthScopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    };
-    issuer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    microsoft: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        oauthScopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    };
-    runtimeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tokenRefreshExtensionHours: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    tokenStoreEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    twitter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        consumerKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        consumerSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    unauthenticatedClientAction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceAuthSettings'>AppServiceAuthSettings</a>&gt;;</pre>
 {{% md %}}
 
 A `authSettings` block as defined below.
@@ -379,7 +345,7 @@ A `authSettings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L52" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L54" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -390,7 +356,7 @@ Should the App Service send session affinity cookies, which route client request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-clientCertEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L56" >}}">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L58" >}}">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientCertEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -401,14 +367,10 @@ Does the App Service require client certificates for incoming requests? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L60" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L62" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceConnectionString'>AppServiceConnectionString</a>[]&gt;;</pre>
 {{% md %}}
 
 One or more `connectionString` blocks as defined below.
@@ -416,7 +378,7 @@ One or more `connectionString` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-defaultSiteHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L64" >}}">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L66" >}}">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultSiteHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -427,7 +389,7 @@ The Default Hostname associated with the App Service - such as `mysite.azurewebs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L68" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L70" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -438,7 +400,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L72" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L74" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -461,14 +423,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L76" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L78" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceIdentity'>AppServiceIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -476,7 +434,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L80" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L82" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -487,18 +445,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L84" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L86" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    applicationLogs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        azureBlobStorage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            level: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            retentionInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            sasUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceLogs'>AppServiceLogs</a>&gt;;</pre>
 {{% md %}}
 
 A `logs` block as defined below.
@@ -506,7 +456,7 @@ A `logs` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L88" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -517,7 +467,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-outboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L92" >}}">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L94" >}}">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -528,7 +478,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L96" >}}">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L98" >}}">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>possibleOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -539,7 +489,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L100" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L102" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -550,41 +500,10 @@ The name of the resource group in which to create the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L104" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L106" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    alwaysOn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    appCommandLine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    cors: {
-        allowedOrigins: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        supportCredentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    };
-    defaultDocuments: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    dotnetFrameworkVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ftpsState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    http2Enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    ipRestrictions: {
-        ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        subnetMask: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    javaContainer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    javaContainerVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    javaVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    linuxFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    localMysqlEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    managedPipelineMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    minTlsVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    phpVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    pythonVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    remoteDebuggingEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    remoteDebuggingVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    scmType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    use32BitWorkerProcess: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    virtualNetworkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    websocketsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    windowsFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceSiteConfig'>AppServiceSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` block as defined below.
@@ -592,13 +511,10 @@ A `siteConfig` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L108" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L110" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceSiteCredential'>AppServiceSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -606,13 +522,10 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-sourceControl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L112" >}}">property <b>sourceControl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L114" >}}">property <b>sourceControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sourceControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    branch: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    repoUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sourceControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceSourceControl'>AppServiceSourceControl</a>&gt;;</pre>
 {{% md %}}
 
 A `sourceControl` block as defined below, which contains the Source Control information when `scmType` is set to `LocalGit`.
@@ -620,7 +533,7 @@ A `sourceControl` block as defined below, which contains the Source Control info
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L116" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L118" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -661,7 +574,7 @@ into the Function App.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ArchiveFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ArchiveFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -703,7 +616,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L647" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
 {{% md %}}
 
 Storage account where the FunctionApp's zipbBlob is uploaded to.
@@ -714,7 +627,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L651" >}}">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
 {{% md %}}
 
 Storage container where the FunctionApp's zipbBlob is uploaded to.
@@ -736,7 +649,7 @@ Root HTTP endpoint of the Function App.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L663" >}}">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: FunctionApp;</pre>
 {{% md %}}
 
 The Function App which contains the functions from the archive.
@@ -747,7 +660,7 @@ The Function App which contains the functions from the archive.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L659" >}}">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
 {{% md %}}
 
 The plan this Function App runs under.
@@ -770,7 +683,7 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L655" >}}">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
 {{% md %}}
 
 The blob containing all the code for this FunctionApp.
@@ -798,12 +711,12 @@ details on this process.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L91" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L93" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -817,7 +730,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-getFunctionKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L832" >}}">method <b>getFunctionKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L833" >}}">method <b>getFunctionKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -830,7 +743,7 @@ Retrieve the keys associated with the given Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-getHostKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L827" >}}">method <b>getHostKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L828" >}}">method <b>getHostKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -853,7 +766,7 @@ Retrieve the keys associated with the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L102" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L104" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -870,7 +783,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L596" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
 {{% md %}}
 
 Storage account where the FunctionApp's zipBlob is uploaded to.
@@ -878,7 +791,7 @@ Storage account where the FunctionApp's zipBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L112" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L114" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -889,7 +802,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L116" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L118" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -900,7 +813,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L120" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L122" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -911,14 +824,10 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L124" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L126" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -929,7 +838,7 @@ An `connectionString` block as defined below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L600" >}}">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
 {{% md %}}
 
 Storage container where the FunctionApp's zipBlob is uploaded to.
@@ -937,7 +846,7 @@ Storage container where the FunctionApp's zipBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-defaultHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L128" >}}">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L130" >}}">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -948,7 +857,7 @@ The default hostname associated with the Function App - such as `mysite.azureweb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L132" >}}">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L134" >}}">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableBuiltinLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -959,7 +868,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L136" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L138" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -981,7 +890,7 @@ Root HTTP endpoint of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L140" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L142" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1004,14 +913,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L144" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L146" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
 {{% md %}}
 
 An `identity` block as defined below.
@@ -1019,7 +924,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L148" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L150" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1030,7 +935,7 @@ The Function App kind - such as `functionapp,linux,container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L152" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L154" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1041,7 +946,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1052,7 +957,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-outboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L160" >}}">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L162" >}}">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1066,7 +971,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L608" >}}">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
 {{% md %}}
 
 The plan this Function App runs under.
@@ -1074,7 +979,7 @@ The plan this Function App runs under.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L164" >}}">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L166" >}}">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>possibleOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1085,7 +990,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L168" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L170" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1096,15 +1001,10 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L172" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L174" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    alwaysOn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    linuxFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    use32BitWorkerProcess: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    websocketsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -1112,13 +1012,10 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L176" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L178" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteCredential'>FunctionAppSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -1126,7 +1023,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-storageConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L180" >}}">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L182" >}}">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1137,7 +1034,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L184" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L186" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1160,7 +1057,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L188" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L190" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1174,7 +1071,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L604" >}}">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
 {{% md %}}
 
 The blob containing all the code for this FunctionApp.
@@ -1183,7 +1080,7 @@ The blob containing all the code for this FunctionApp.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomHostnameBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L51" >}}">class <b>CustomHostnameBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L53" >}}">class <b>CustomHostnameBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1234,7 +1131,7 @@ const testCustomHostnameBinding = new azure.appservice.CustomHostnameBinding("te
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L89" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L91" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1251,7 +1148,7 @@ Create a CustomHostnameBinding resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L60" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1275,7 +1172,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L71" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1289,7 +1186,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L81" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L83" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1300,7 +1197,7 @@ The name of the App Service in which to add the Custom Hostname Binding. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L85" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L87" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1323,7 +1220,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L89" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L91" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1363,7 +1260,7 @@ azure resource an an FunctionApp that will be triggered when something happens t
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventSubscription(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventSubscription(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -1487,7 +1384,7 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionApp">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L82" >}}">class <b>FunctionApp</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L84" >}}">class <b>FunctionApp</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1569,7 +1466,7 @@ const testFunctionApp = new azure.appservice.FunctionApp("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionApp-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L188" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L190" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1586,7 +1483,7 @@ Create a FunctionApp resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L91" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L93" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1600,7 +1497,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-getFunctionKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L832" >}}">method <b>getFunctionKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L833" >}}">method <b>getFunctionKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1613,7 +1510,7 @@ Retrieve the keys associated with the given Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-getHostKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L827" >}}">method <b>getHostKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L828" >}}">method <b>getHostKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1636,7 +1533,7 @@ Retrieve the keys associated with the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L102" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L104" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1650,7 +1547,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L112" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L114" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1661,7 +1558,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L116" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L118" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1672,7 +1569,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L120" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L122" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1683,14 +1580,10 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L124" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L126" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -1698,7 +1591,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-defaultHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L128" >}}">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L130" >}}">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1709,7 +1602,7 @@ The default hostname associated with the Function App - such as `mysite.azureweb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L132" >}}">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L134" >}}">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableBuiltinLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1720,7 +1613,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L136" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L138" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1731,7 +1624,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L140" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L142" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1754,14 +1647,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L144" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L146" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
 {{% md %}}
 
 An `identity` block as defined below.
@@ -1769,7 +1658,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L148" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L150" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1780,7 +1669,7 @@ The Function App kind - such as `functionapp,linux,container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L152" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L154" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1791,7 +1680,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1802,7 +1691,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-outboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L160" >}}">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L162" >}}">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1813,7 +1702,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L164" >}}">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L166" >}}">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>possibleOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1824,7 +1713,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L168" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L170" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1835,15 +1724,10 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L172" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L174" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    alwaysOn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    linuxFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    use32BitWorkerProcess: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    websocketsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -1851,13 +1735,10 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L176" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L178" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteCredential'>FunctionAppSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -1865,7 +1746,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-storageConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L180" >}}">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L182" >}}">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1876,7 +1757,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L184" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L186" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1899,7 +1780,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L188" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L190" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1914,7 +1795,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins_http.ts#L101" >}}">class <b>HttpEventSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{% md %}}
 
 An Azure Function exposed via an HTTP endpoint that is implemented on top of a
@@ -1927,7 +1808,7 @@ JavaScript/TypeScript callback function.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HttpEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HttpEventSubscriptionArgs'>HttpEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HttpEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HttpEventSubscriptionArgs'>HttpEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -1969,7 +1850,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L739" >}}">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2001,7 +1882,7 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins_http.ts#L120" >}}">class <b>HttpFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{% md %}}
 
 Azure Function triggered by HTTP requests.
@@ -2043,7 +1924,7 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L471" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 Function callback.
@@ -2082,7 +1963,7 @@ details on this process.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MultiCallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MultiCallbackFunctionAppArgs'>MultiCallbackFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MultiCallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MultiCallbackFunctionAppArgs'>MultiCallbackFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -2124,7 +2005,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L647" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
 {{% md %}}
 
 Storage account where the FunctionApp's zipbBlob is uploaded to.
@@ -2135,7 +2016,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L651" >}}">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
 {{% md %}}
 
 Storage container where the FunctionApp's zipbBlob is uploaded to.
@@ -2157,7 +2038,7 @@ Root HTTP endpoint of the Function App.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L663" >}}">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: FunctionApp;</pre>
 {{% md %}}
 
 The Function App which contains the functions from the archive.
@@ -2168,7 +2049,7 @@ The Function App which contains the functions from the archive.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L659" >}}">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
 {{% md %}}
 
 The plan this Function App runs under.
@@ -2191,7 +2072,7 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L655" >}}">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
 {{% md %}}
 
 The blob containing all the code for this FunctionApp.
@@ -2217,7 +2098,7 @@ tree.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PackagedFunctionApp(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PackagedFunctionApp(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -2259,7 +2140,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L647" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
 {{% md %}}
 
 Storage account where the FunctionApp's zipbBlob is uploaded to.
@@ -2270,7 +2151,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L651" >}}">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
 {{% md %}}
 
 Storage container where the FunctionApp's zipbBlob is uploaded to.
@@ -2292,7 +2173,7 @@ Root HTTP endpoint of the Function App.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L663" >}}">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: FunctionApp;</pre>
 {{% md %}}
 
 The Function App which contains the functions from the archive.
@@ -2303,7 +2184,7 @@ The Function App which contains the functions from the archive.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L659" >}}">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
 {{% md %}}
 
 The plan this Function App runs under.
@@ -2326,7 +2207,7 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L655" >}}">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
 {{% md %}}
 
 The blob containing all the code for this FunctionApp.
@@ -2335,7 +2216,7 @@ The blob containing all the code for this FunctionApp.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Plan">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L103" >}}">class <b>Plan</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L105" >}}">class <b>Plan</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2436,7 +2317,7 @@ const testPlan = new azure.appservice.Plan("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Plan-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L175" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L177" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2453,7 +2334,7 @@ Create a Plan resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L112" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L114" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2477,7 +2358,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L123" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L125" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2491,7 +2372,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-appServiceEnvironmentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L133" >}}">property <b>appServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L135" >}}">property <b>appServiceEnvironmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceEnvironmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2514,7 +2395,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-isXenon">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L134" >}}">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L136" >}}">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isXenon: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2522,7 +2403,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L138" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L140" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2533,7 +2414,7 @@ The kind of the App Service Plan to create. Possible values are `Windows` (also 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L142" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L144" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2544,7 +2425,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L146" >}}">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L148" >}}">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maximumElasticWorkerCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2555,7 +2436,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-maximumNumberOfWorkers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L150" >}}">property <b>maximumNumberOfWorkers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L152" >}}">property <b>maximumNumberOfWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maximumNumberOfWorkers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2566,7 +2447,7 @@ The maximum number of workers supported with the App Service Plan's sku.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L154" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L156" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2577,7 +2458,7 @@ Specifies the name of the App Service Plan component. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-perSiteScaling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L158" >}}">property <b>perSiteScaling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L160" >}}">property <b>perSiteScaling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>perSiteScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2588,19 +2469,15 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L159" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L161" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    appServiceEnvironmentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    perSiteScaling: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    reserved: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PlanProperties'>PlanProperties</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-reserved">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L163" >}}">property <b>reserved</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L165" >}}">property <b>reserved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reserved: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2611,7 +2488,7 @@ Is this App Service Plan `Reserved`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L167" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L169" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2622,14 +2499,10 @@ The name of the resource group in which to create the App Service Plan component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L171" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L173" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PlanSku'>PlanSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as documented below.
@@ -2637,7 +2510,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L175" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L177" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2661,7 +2534,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Slot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L129" >}}">class <b>Slot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L131" >}}">class <b>Slot</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2790,7 +2663,7 @@ const testSlot = new azure.appservice.Slot("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Slot-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L215" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L217" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2807,7 +2680,7 @@ Create a Slot resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L138" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L140" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2831,7 +2704,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L149" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L151" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2845,7 +2718,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L159" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L161" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2856,7 +2729,7 @@ The name of the App Service within which to create the App Service Slot.  Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L163" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L165" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2867,7 +2740,7 @@ The ID of the App Service Plan within which to create this App Service Slot. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L167" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L169" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2878,7 +2751,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L171" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L173" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2889,14 +2762,10 @@ Should the App Service Slot send session affinity cookies, which route client re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L175" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L177" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotConnectionString'>SlotConnectionString</a>[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -2904,7 +2773,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-defaultSiteHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L179" >}}">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L181" >}}">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultSiteHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2915,7 +2784,7 @@ The Default Hostname associated with the App Service Slot - such as `mysite.azur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L183" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L185" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2926,7 +2795,7 @@ Is the App Service Slot Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L187" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L189" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2949,14 +2818,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L191" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L193" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotIdentity'>SlotIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -2964,7 +2829,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L195" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L197" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2975,7 +2840,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L199" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L201" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2986,7 +2851,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L203" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L205" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2997,41 +2862,10 @@ The name of the resource group in which to create the App Service Slot component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L207" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L209" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    alwaysOn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    appCommandLine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    cors: {
-        allowedOrigins: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        supportCredentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    };
-    defaultDocuments: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    dotnetFrameworkVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ftpsState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    http2Enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    ipRestrictions: {
-        ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        subnetMask: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    javaContainer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    javaContainerVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    javaVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    linuxFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    localMysqlEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    managedPipelineMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    minTlsVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    phpVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    pythonVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    remoteDebuggingEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    remoteDebuggingVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    scmType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    use32BitWorkerProcess: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    virtualNetworkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    websocketsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    windowsFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotSiteConfig'>SlotSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -3039,13 +2873,10 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L211" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L213" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotSiteCredential'>SlotSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -3053,7 +2884,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L215" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L217" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3152,7 +2983,7 @@ Function name.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TimerSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TimerSubscriptionArgs'>TimerSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TimerSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TimerSubscriptionArgs'>TimerSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -3212,7 +3043,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAppService">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L26" >}}">function <b>getAppService</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L28" >}}">function <b>getAppService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3241,7 +3072,7 @@ export const appServiceId = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getAppServicePlan">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L26" >}}">function <b>getAppServicePlan</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L28" >}}">function <b>getAppServicePlan</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3270,7 +3101,7 @@ export const appServicePlanId = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ActiveSlotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L135" >}}">interface <b>ActiveSlotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L137" >}}">interface <b>ActiveSlotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3279,7 +3110,7 @@ The set of arguments for constructing a ActiveSlot resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveSlotArgs-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L139" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L141" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3290,7 +3121,7 @@ The name of the App Service within which the Slot exists.  Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotArgs-appServiceSlotName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L143" >}}">property <b>appServiceSlotName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L145" >}}">property <b>appServiceSlotName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceSlotName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3301,7 +3132,7 @@ The name of the App Service Slot which should be promoted to the Production Slot
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L147" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L149" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3313,7 +3144,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ActiveSlotState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L117" >}}">interface <b>ActiveSlotState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L119" >}}">interface <b>ActiveSlotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3322,7 +3153,7 @@ Input properties used for looking up and filtering ActiveSlot resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveSlotState-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L121" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L123" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3333,7 +3164,7 @@ The name of the App Service within which the Slot exists.  Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotState-appServiceSlotName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L125" >}}">property <b>appServiceSlotName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L127" >}}">property <b>appServiceSlotName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceSlotName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3344,7 +3175,7 @@ The name of the App Service Slot which should be promoted to the Production Slot
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L129" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/activeSlot.ts#L131" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3356,7 +3187,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AppServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L279" >}}">interface <b>AppServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L281" >}}">interface <b>AppServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3365,7 +3196,7 @@ The set of arguments for constructing a AppService resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AppServiceArgs-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L283" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L285" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3376,7 +3207,7 @@ The ID of the App Service Plan within which to create this App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L287" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L289" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3387,44 +3218,10 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-authSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L291" >}}">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L293" >}}">property <b>authSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    activeDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        allowedAudiences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    additionalLoginParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    allowedExternalRedirectUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    defaultProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    facebook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        appSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        oauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    google: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        oauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    microsoft: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        oauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    runtimeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tokenRefreshExtensionHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    tokenStoreEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    twitter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        consumerKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        consumerSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    unauthenticatedClientAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceAuthSettings'>AppServiceAuthSettings</a>&gt;;</pre>
 {{% md %}}
 
 A `authSettings` block as defined below.
@@ -3432,7 +3229,7 @@ A `authSettings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L295" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L297" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3443,7 +3240,7 @@ Should the App Service send session affinity cookies, which route client request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-clientCertEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L299" >}}">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L301" >}}">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3454,14 +3251,10 @@ Does the App Service require client certificates for incoming requests? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L303" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L305" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceConnectionString'>AppServiceConnectionString</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `connectionString` blocks as defined below.
@@ -3469,7 +3262,7 @@ One or more `connectionString` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L307" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L309" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3480,7 +3273,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L311" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L313" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3491,14 +3284,10 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L315" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L317" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceIdentity'>AppServiceIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -3506,7 +3295,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L319" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L321" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3517,18 +3306,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L323" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L325" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    applicationLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        azureBlobStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            level: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            retentionInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            sasUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceLogs'>AppServiceLogs</a>&gt;;</pre>
 {{% md %}}
 
 A `logs` block as defined below.
@@ -3536,7 +3317,7 @@ A `logs` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L327" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L329" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3547,7 +3328,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L331" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L333" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3558,41 +3339,10 @@ The name of the resource group in which to create the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L335" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L337" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    appCommandLine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        supportCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    defaultDocuments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    dotnetFrameworkVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ftpsState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    http2Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        subnetMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    javaContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaContainerVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    localMysqlEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    managedPipelineMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    minTlsVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    phpVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    pythonVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    remoteDebuggingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    remoteDebuggingVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scmType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    virtualNetworkName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    windowsFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSiteConfig'>AppServiceSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` block as defined below.
@@ -3600,7 +3350,7 @@ A `siteConfig` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L339" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L341" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3612,7 +3362,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AppServiceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L193" >}}">interface <b>AppServiceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L195" >}}">interface <b>AppServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3621,7 +3371,7 @@ Input properties used for looking up and filtering AppService resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AppServiceState-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L197" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L199" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3632,7 +3382,7 @@ The ID of the App Service Plan within which to create this App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L201" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L203" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3643,44 +3393,10 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-authSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L205" >}}">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L207" >}}">property <b>authSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    activeDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        allowedAudiences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    additionalLoginParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    allowedExternalRedirectUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    defaultProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    facebook: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        appSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        oauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    google: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        oauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    microsoft: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        oauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    runtimeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tokenRefreshExtensionHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    tokenStoreEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    twitter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        consumerKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        consumerSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    unauthenticatedClientAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceAuthSettings'>AppServiceAuthSettings</a>&gt;;</pre>
 {{% md %}}
 
 A `authSettings` block as defined below.
@@ -3688,7 +3404,7 @@ A `authSettings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L209" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L211" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3699,7 +3415,7 @@ Should the App Service send session affinity cookies, which route client request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-clientCertEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L213" >}}">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L215" >}}">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3710,14 +3426,10 @@ Does the App Service require client certificates for incoming requests? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L217" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L219" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceConnectionString'>AppServiceConnectionString</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `connectionString` blocks as defined below.
@@ -3725,7 +3437,7 @@ One or more `connectionString` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-defaultSiteHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L221" >}}">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L223" >}}">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultSiteHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3736,7 +3448,7 @@ The Default Hostname associated with the App Service - such as `mysite.azurewebs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L225" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L227" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3747,7 +3459,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L229" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L231" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3758,14 +3470,10 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L233" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L235" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceIdentity'>AppServiceIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -3773,7 +3481,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L237" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L239" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3784,18 +3492,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L241" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L243" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    applicationLogs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        azureBlobStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            level: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            retentionInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            sasUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceLogs'>AppServiceLogs</a>&gt;;</pre>
 {{% md %}}
 
 A `logs` block as defined below.
@@ -3803,7 +3503,7 @@ A `logs` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L245" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L247" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3814,7 +3514,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-outboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L249" >}}">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L251" >}}">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3825,7 +3525,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L253" >}}">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L255" >}}">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>possibleOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3836,7 +3536,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L257" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L259" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3847,41 +3547,10 @@ The name of the resource group in which to create the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L261" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L263" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    appCommandLine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        supportCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    defaultDocuments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    dotnetFrameworkVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ftpsState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    http2Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        subnetMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    javaContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaContainerVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    localMysqlEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    managedPipelineMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    minTlsVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    phpVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    pythonVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    remoteDebuggingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    remoteDebuggingVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scmType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    virtualNetworkName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    windowsFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSiteConfig'>AppServiceSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` block as defined below.
@@ -3889,13 +3558,10 @@ A `siteConfig` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L265" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L267" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSiteCredential'>AppServiceSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -3903,13 +3569,10 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-sourceControl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L269" >}}">property <b>sourceControl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L271" >}}">property <b>sourceControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sourceControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    branch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    repoUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sourceControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSourceControl'>AppServiceSourceControl</a>&gt;;</pre>
 {{% md %}}
 
 A `sourceControl` block as defined below, which contains the Source Control information when `scmType` is set to `LocalGit`.
@@ -3917,7 +3580,7 @@ A `sourceControl` block as defined below, which contains the Source Control info
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L273" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/appService.ts#L275" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3966,7 +3629,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L508" >}}">property <b>archive</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>archive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>archive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</pre>
 {{% md %}}
 
 The deployment package of a Function App to deploy as-is.
@@ -4746,7 +4409,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomHostnameBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L153" >}}">interface <b>CustomHostnameBindingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L155" >}}">interface <b>CustomHostnameBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4755,7 +4418,7 @@ The set of arguments for constructing a CustomHostnameBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomHostnameBindingArgs-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L157" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L159" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4766,7 +4429,7 @@ The name of the App Service in which to add the Custom Hostname Binding. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingArgs-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L161" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L163" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4777,7 +4440,7 @@ Specifies the Custom Hostname to use for the App Service, example `www.example.c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L165" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L167" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4789,7 +4452,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomHostnameBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L135" >}}">interface <b>CustomHostnameBindingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L137" >}}">interface <b>CustomHostnameBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4798,7 +4461,7 @@ Input properties used for looking up and filtering CustomHostnameBinding resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomHostnameBindingState-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L139" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L141" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4809,7 +4472,7 @@ The name of the App Service in which to add the Custom Hostname Binding. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingState-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L143" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L145" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4820,7 +4483,7 @@ Specifies the Custom Hostname to use for the App Service, example `www.example.c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L147" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/customHostnameBinding.ts#L149" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4832,7 +4495,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionAppArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L354" >}}">interface <b>FunctionAppArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L356" >}}">interface <b>FunctionAppArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4841,7 +4504,7 @@ The set of arguments for constructing a FunctionApp resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionAppArgs-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L358" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L360" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4852,7 +4515,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L362" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L364" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4863,7 +4526,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L366" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L368" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4874,14 +4537,10 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L370" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L372" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -4889,7 +4548,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L374" >}}">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L376" >}}">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4900,7 +4559,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L378" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L380" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4911,7 +4570,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L382" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L384" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4922,14 +4581,10 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L386" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L388" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
 {{% md %}}
 
 An `identity` block as defined below.
@@ -4937,7 +4592,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L390" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L392" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4948,7 +4603,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L394" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L396" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4959,7 +4614,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L398" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L400" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4970,15 +4625,10 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L402" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L404" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -4986,7 +4636,7 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-storageConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L406" >}}">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L408" >}}">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4997,7 +4647,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L410" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L412" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5008,7 +4658,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L414" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L416" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5020,7 +4670,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionAppState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L268" >}}">interface <b>FunctionAppState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L270" >}}">interface <b>FunctionAppState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5029,7 +4679,7 @@ Input properties used for looking up and filtering FunctionApp resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionAppState-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L272" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L274" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5040,7 +4690,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L276" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L278" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5051,7 +4701,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L280" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L282" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5062,14 +4712,10 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L284" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L286" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -5077,7 +4723,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-defaultHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L288" >}}">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L290" >}}">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5088,7 +4734,7 @@ The default hostname associated with the Function App - such as `mysite.azureweb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L292" >}}">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L294" >}}">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5099,7 +4745,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L296" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L298" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5110,7 +4756,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L300" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L302" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5121,14 +4767,10 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L304" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L306" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
 {{% md %}}
 
 An `identity` block as defined below.
@@ -5136,7 +4778,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L308" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L310" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5147,7 +4789,7 @@ The Function App kind - such as `functionapp,linux,container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L312" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L314" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5158,7 +4800,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L316" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L318" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5169,7 +4811,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-outboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L320" >}}">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L322" >}}">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5180,7 +4822,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L324" >}}">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L326" >}}">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>possibleOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5191,7 +4833,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L328" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L330" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5202,15 +4844,10 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L332" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L334" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -5218,13 +4855,10 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L336" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L338" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppSiteCredential'>FunctionAppSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -5232,7 +4866,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-storageConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L340" >}}">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L342" >}}">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5243,7 +4877,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L344" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L346" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5254,7 +4888,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L348" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/functionApp.ts#L350" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5266,7 +4900,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionHostKeys">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L805" >}}">interface <b>FunctionHostKeys</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L806" >}}">interface <b>FunctionHostKeys</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5275,7 +4909,7 @@ Keys associated with a Function App.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionHostKeys-functionKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L811" >}}">property <b>functionKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L812" >}}">property <b>functionKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functionKeys: <a href='#FunctionKeys'>FunctionKeys</a>;</pre>
@@ -5286,7 +4920,7 @@ Default function keys.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionHostKeys-masterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L807" >}}">property <b>masterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L808" >}}">property <b>masterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>masterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5297,7 +4931,7 @@ Master key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionHostKeys-systemKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L809" >}}">property <b>systemKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L810" >}}">property <b>systemKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>systemKeys: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
@@ -5309,7 +4943,7 @@ A dictionary of system keys, e.g. for Durable Functions or Event Grid.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionKeys">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L817" >}}">interface <b>FunctionKeys</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L818" >}}">interface <b>FunctionKeys</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5318,7 +4952,7 @@ Keys associated with a single Function.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionKeys-default">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L818" >}}">property <b>default</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L819" >}}">property <b>default</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5327,7 +4961,7 @@ Keys associated with a single Function.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L45" >}}">interface <b>GetAppServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L47" >}}">interface <b>GetAppServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5336,7 +4970,7 @@ A collection of arguments for invoking getAppService.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServiceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5347,7 +4981,7 @@ The name of the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5359,7 +4993,7 @@ The Name of the Resource Group where the App Service exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServicePlanArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L45" >}}">interface <b>GetAppServicePlanArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L47" >}}">interface <b>GetAppServicePlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5368,7 +5002,7 @@ A collection of arguments for invoking getAppServicePlan.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServicePlanArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5379,7 +5013,7 @@ The name of the App Service Plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5391,7 +5025,7 @@ The Name of the Resource Group where the App Service Plan exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServicePlanResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L59" >}}">interface <b>GetAppServicePlanResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L61" >}}">interface <b>GetAppServicePlanResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5400,7 +5034,7 @@ A collection of values returned by getAppServicePlan.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L97" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L99" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5411,7 +5045,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-isXenon">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L63" >}}">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L65" >}}">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isXenon: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5422,7 +5056,7 @@ A flag that indicates if it's a xenon plan (support for Windows Container)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L67" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L69" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5433,7 +5067,7 @@ The Operating System type of the App Service Plan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L71" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L73" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5444,7 +5078,7 @@ The Azure location where the App Service Plan exists
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L75" >}}">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L77" >}}">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumElasticWorkerCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -5455,7 +5089,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-maximumNumberOfWorkers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L79" >}}">property <b>maximumNumberOfWorkers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L81" >}}">property <b>maximumNumberOfWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumNumberOfWorkers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -5466,7 +5100,7 @@ Maximum number of instances that can be assigned to this App Service plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L80" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L82" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5474,14 +5108,10 @@ Maximum number of instances that can be assigned to this App Service plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L84" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L86" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>properties: {
-    appServiceEnvironmentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    perSiteScaling: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    reserved: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>properties: <a href='#GetAppServicePlanProperty'>GetAppServicePlanProperty</a>[];</pre>
 {{% md %}}
 
 A `properties` block as documented below.
@@ -5489,7 +5119,7 @@ A `properties` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L85" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L87" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5497,14 +5127,10 @@ A `properties` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L89" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L91" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: {
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='#GetAppServicePlanSku'>GetAppServicePlanSku</a>;</pre>
 {{% md %}}
 
 A `sku` block as documented below.
@@ -5512,7 +5138,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L93" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppServicePlan.ts#L95" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -5524,7 +5150,7 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServiceResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L59" >}}">interface <b>GetAppServiceResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L61" >}}">interface <b>GetAppServiceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5533,7 +5159,7 @@ A collection of values returned by getAppService.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServiceResult-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L63" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L65" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5544,7 +5170,7 @@ The ID of the App Service Plan within which the App Service exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L67" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L69" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -5555,7 +5181,7 @@ A key-value pair of App Settings for the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L71" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L73" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5566,7 +5192,7 @@ Does the App Service send session affinity cookies, which route client requests 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-clientCertEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L75" >}}">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L77" >}}">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5577,14 +5203,10 @@ Does the App Service require client certificates for incoming requests?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L79" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L81" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings: <a href='#GetAppServiceConnectionString'>GetAppServiceConnectionString</a>[];</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -5592,7 +5214,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-defaultSiteHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L80" >}}">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L82" >}}">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultSiteHostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5600,7 +5222,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L84" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L86" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5611,7 +5233,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L88" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L90" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5622,7 +5244,7 @@ Can the App Service only be accessed via HTTPS?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L119" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L121" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5633,7 +5255,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L92" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L94" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5644,7 +5266,7 @@ The Azure location where the App Service exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L96" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L98" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5655,7 +5277,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-outboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L100" >}}">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L102" >}}">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outboundIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5666,7 +5288,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L104" >}}">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L106" >}}">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>possibleOutboundIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5677,7 +5299,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L105" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L107" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5685,41 +5307,10 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-siteConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L109" >}}">property <b>siteConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L111" >}}">property <b>siteConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfigs: {
-    alwaysOn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    appCommandLine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    cors: {
-        allowedOrigins: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        supportCredentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    };
-    defaultDocuments: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    dotnetFrameworkVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ftpsState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    http2Enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    ipRestrictions: {
-        ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        subnetMask: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    javaContainer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    javaContainerVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    javaVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    linuxFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    localMysqlEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    managedPipelineMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    minTlsVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    phpVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    pythonVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    remoteDebuggingEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    remoteDebuggingVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    scmType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    use32BitWorkerProcess: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    virtualNetworkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    websocketsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    windowsFxVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>siteConfigs: <a href='#GetAppServiceSiteConfig'>GetAppServiceSiteConfig</a>[];</pre>
 {{% md %}}
 
 A `siteConfig` block as defined below.
@@ -5727,29 +5318,23 @@ A `siteConfig` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-siteCredentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L110" >}}">property <b>siteCredentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L112" >}}">property <b>siteCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteCredentials: {
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>siteCredentials: <a href='#GetAppServiceSiteCredential'>GetAppServiceSiteCredential</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-sourceControls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L111" >}}">property <b>sourceControls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L113" >}}">property <b>sourceControls</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sourceControls: {
-    branch: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    repoUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>sourceControls: <a href='#GetAppServiceSourceControl'>GetAppServiceSourceControl</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L115" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/getAppService.ts#L117" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -5883,7 +5468,7 @@ support.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins_http.ts#L83" >}}">interface <b>HttpEventSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#HttpFunctionArgs'>HttpFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#HttpFunctionArgs'>HttpFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-account">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
 </h3>
@@ -5912,7 +5497,7 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -5924,7 +5509,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -6209,12 +5794,12 @@ The runtime version associated with the Function App. Defaults to `~2`.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins_http.ts#L69" >}}">interface <b>HttpFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 <h3 class="pdoc-member-header" id="HttpFunctionArgs-callback">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -6226,7 +5811,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -6834,7 +6419,7 @@ The type of your binding, as defined in function.json.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L290" >}}">interface <b>PlanArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L292" >}}">interface <b>PlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6843,7 +6428,7 @@ The set of arguments for constructing a Plan resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanArgs-appServiceEnvironmentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L294" >}}">property <b>appServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L296" >}}">property <b>appServiceEnvironmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceEnvironmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6854,7 +6439,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-isXenon">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L295" >}}">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L297" >}}">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isXenon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6862,7 +6447,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L299" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L301" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Kind'>Kind</a>&gt;;</pre>
@@ -6873,7 +6458,7 @@ The kind of the App Service Plan to create. Possible values are `Windows` (also 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L303" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L305" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6884,7 +6469,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L307" >}}">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L309" >}}">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumElasticWorkerCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6895,7 +6480,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L311" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L313" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6906,7 +6491,7 @@ Specifies the name of the App Service Plan component. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-perSiteScaling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L315" >}}">property <b>perSiteScaling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L317" >}}">property <b>perSiteScaling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>perSiteScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6917,19 +6502,15 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L316" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L318" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    appServiceEnvironmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    perSiteScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    reserved: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanProperties'>PlanProperties</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-reserved">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L320" >}}">property <b>reserved</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L322" >}}">property <b>reserved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reserved?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6940,7 +6521,7 @@ Is this App Service Plan `Reserved`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L324" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L326" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6951,14 +6532,10 @@ The name of the resource group in which to create the App Service Plan component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L328" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L330" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanSku'>PlanSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as documented below.
@@ -6966,7 +6543,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L332" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L334" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6978,7 +6555,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L238" >}}">interface <b>PlanState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L240" >}}">interface <b>PlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6987,7 +6564,7 @@ Input properties used for looking up and filtering Plan resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanState-appServiceEnvironmentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L242" >}}">property <b>appServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L244" >}}">property <b>appServiceEnvironmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceEnvironmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6998,7 +6575,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-isXenon">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L243" >}}">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L245" >}}">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isXenon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7006,7 +6583,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L247" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L249" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#Kind'>Kind</a>&gt;;</pre>
@@ -7017,7 +6594,7 @@ The kind of the App Service Plan to create. Possible values are `Windows` (also 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L251" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L253" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7028,7 +6605,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L255" >}}">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L257" >}}">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumElasticWorkerCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7039,7 +6616,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-maximumNumberOfWorkers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L259" >}}">property <b>maximumNumberOfWorkers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L261" >}}">property <b>maximumNumberOfWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumNumberOfWorkers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7050,7 +6627,7 @@ The maximum number of workers supported with the App Service Plan's sku.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L263" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L265" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7061,7 +6638,7 @@ Specifies the name of the App Service Plan component. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-perSiteScaling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L267" >}}">property <b>perSiteScaling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L269" >}}">property <b>perSiteScaling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>perSiteScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7072,19 +6649,15 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L268" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L270" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    appServiceEnvironmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    perSiteScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    reserved: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanProperties'>PlanProperties</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-reserved">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L272" >}}">property <b>reserved</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L274" >}}">property <b>reserved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reserved?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7095,7 +6668,7 @@ Is this App Service Plan `Reserved`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L276" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L278" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7106,14 +6679,10 @@ The name of the resource group in which to create the App Service Plan component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L280" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L282" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanSku'>PlanSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as documented below.
@@ -7121,7 +6690,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L284" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/plan.ts#L286" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7204,7 +6773,7 @@ Month of the year to perform the scheduled action on.  Leave undefined to indica
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SlotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L351" >}}">interface <b>SlotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L353" >}}">interface <b>SlotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7213,7 +6782,7 @@ The set of arguments for constructing a Slot resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SlotArgs-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L355" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L357" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7224,7 +6793,7 @@ The name of the App Service within which to create the App Service Slot.  Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L359" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L361" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7235,7 +6804,7 @@ The ID of the App Service Plan within which to create this App Service Slot. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L363" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L365" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7246,7 +6815,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L367" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L369" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7257,14 +6826,10 @@ Should the App Service Slot send session affinity cookies, which route client re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L371" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L373" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotConnectionString'>SlotConnectionString</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -7272,7 +6837,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L375" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L377" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7283,7 +6848,7 @@ Is the App Service Slot Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L379" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L381" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7294,14 +6859,10 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L383" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L385" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotIdentity'>SlotIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -7309,7 +6870,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L387" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L389" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7320,7 +6881,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L391" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L393" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7331,7 +6892,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L395" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L397" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7342,41 +6903,10 @@ The name of the resource group in which to create the App Service Slot component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L399" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L401" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    appCommandLine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        supportCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    defaultDocuments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    dotnetFrameworkVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ftpsState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    http2Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        subnetMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    javaContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaContainerVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    localMysqlEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    managedPipelineMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    minTlsVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    phpVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    pythonVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    remoteDebuggingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    remoteDebuggingVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scmType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    virtualNetworkName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    windowsFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotSiteConfig'>SlotSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -7384,7 +6914,7 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L403" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L405" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7396,7 +6926,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SlotState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L285" >}}">interface <b>SlotState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L287" >}}">interface <b>SlotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7405,7 +6935,7 @@ Input properties used for looking up and filtering Slot resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SlotState-appServiceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L289" >}}">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L291" >}}">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7416,7 +6946,7 @@ The name of the App Service within which to create the App Service Slot.  Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-appServicePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L293" >}}">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L295" >}}">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7427,7 +6957,7 @@ The ID of the App Service Plan within which to create this App Service Slot. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L297" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L299" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7438,7 +6968,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L301" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L303" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7449,14 +6979,10 @@ Should the App Service Slot send session affinity cookies, which route client re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L305" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L307" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotConnectionString'>SlotConnectionString</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An `connectionString` block as defined below.
@@ -7464,7 +6990,7 @@ An `connectionString` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-defaultSiteHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L309" >}}">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L311" >}}">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultSiteHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7475,7 +7001,7 @@ The Default Hostname associated with the App Service Slot - such as `mysite.azur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L313" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L315" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7486,7 +7012,7 @@ Is the App Service Slot Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L317" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L319" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7497,14 +7023,10 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L321" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L323" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotIdentity'>SlotIdentity</a>&gt;;</pre>
 {{% md %}}
 
 A Managed Service Identity block as defined below.
@@ -7512,7 +7034,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L325" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L327" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7523,7 +7045,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L329" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L331" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7534,7 +7056,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L333" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L335" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7545,41 +7067,10 @@ The name of the resource group in which to create the App Service Slot component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L337" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L339" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    appCommandLine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    cors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        supportCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    defaultDocuments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    dotnetFrameworkVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ftpsState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    http2Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    ipRestrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        subnetMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    javaContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaContainerVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    javaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    localMysqlEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    managedPipelineMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    minTlsVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    phpVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    pythonVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    remoteDebuggingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    remoteDebuggingVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scmType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    virtualNetworkName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    windowsFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotSiteConfig'>SlotSiteConfig</a>&gt;;</pre>
 {{% md %}}
 
 A `siteConfig` object as defined below.
@@ -7587,13 +7078,10 @@ A `siteConfig` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-siteCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L341" >}}">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L343" >}}">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotSiteCredential'>SlotSiteCredential</a>&gt;;</pre>
 {{% md %}}
 
 A `siteCredential` block as defined below, which contains the site-level credentials used to publish to this App Service.
@@ -7601,7 +7089,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L345" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/slot.ts#L347" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -8228,7 +7716,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L318" >}}">type <b>BindingDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> BindingDefinition = azurefunctions.BindingDefinition;</pre>
+<pre class="highlight"><span class='kd'>type</span> BindingDefinition = BindingDefinition;</pre>
 {{% md %}}
 
 Represents a Binding that will be emitted into the function.json config file for the FunctionApp.
@@ -8320,7 +7808,7 @@ be '{ myoutput: "My Value" }'.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins_http.ts#L25" >}}">type <b>HttpRequest</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> HttpRequest = azurefunctions.HttpRequest;</pre>
+<pre class="highlight"><span class='kd'>type</span> HttpRequest = HttpRequest;</pre>
 {{% md %}}
 
 HTTP request object. Provided to your function when using HttpEventSubscription.
@@ -8331,7 +7819,7 @@ HTTP request object. Provided to your function when using HttpEventSubscription.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins_http.ts#L30" >}}">type <b>HttpResponse</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> HttpResponse = azureessentials.HttpResponse;</pre>
+<pre class="highlight"><span class='kd'>type</span> HttpResponse = HttpResponse;</pre>
 {{% md %}}
 
 Represents an HTTP response including the status code and data.

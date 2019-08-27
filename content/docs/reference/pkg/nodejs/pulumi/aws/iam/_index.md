@@ -4228,7 +4228,7 @@ The user the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="assumeRolePolicyForPrincipal">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L180" >}}">function <b>assumeRolePolicyForPrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L185" >}}">function <b>assumeRolePolicyForPrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4353,7 +4353,7 @@ const example = aws.iam.getPolicy({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getPolicyDocument">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L211" >}}">function <b>getPolicyDocument</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L213" >}}">function <b>getPolicyDocument</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4567,7 +4567,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRole">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L25" >}}">function <b>getRole</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L27" >}}">function <b>getRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4595,7 +4595,7 @@ const example = aws.iam.getRole({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getServerCertificate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L38" >}}">function <b>getServerCertificate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L40" >}}">function <b>getServerCertificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4636,7 +4636,7 @@ It will not retrieve the private key which is not available through the AWS API.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUser">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L25" >}}">function <b>getUser</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L27" >}}">function <b>getUser</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4664,7 +4664,7 @@ const example = aws.iam.getUser({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AWSPrincipal">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L151" >}}">interface <b>AWSPrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L156" >}}">interface <b>AWSPrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4676,7 +4676,7 @@ consists of the AWS: prefix followed by the account ID.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AWSPrincipal-AWS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L152" >}}">property <b>AWS</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L157" >}}">property <b>AWS</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>AWS: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5101,12 +5101,12 @@ Whether to require uppercase characters for user passwords.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConditionArguments">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L113" >}}">interface <b>ConditionArguments</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L117" >}}">interface <b>ConditionArguments</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="Conditions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L94" >}}">interface <b>Conditions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L98" >}}">interface <b>Conditions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5121,11 +5121,11 @@ lets you write a condition using the s3:VersionId key, which is unique to that s
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="FederatedPrincipal">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L168" >}}">interface <b>FederatedPrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L173" >}}">interface <b>FederatedPrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="FederatedPrincipal-Federated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L169" >}}">property <b>Federated</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L174" >}}">property <b>Federated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Federated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5387,7 +5387,7 @@ ARN of the IAM policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyDocumentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L234" >}}">interface <b>GetPolicyDocumentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L236" >}}">interface <b>GetPolicyDocumentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5396,7 +5396,7 @@ A collection of arguments for invoking getPolicyDocument.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-overrideJson">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L241" >}}">property <b>overrideJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L243" >}}">property <b>overrideJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>overrideJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5410,7 +5410,7 @@ Statements without an `sid` cannot be overwritten.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-policyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L245" >}}">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L247" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5421,7 +5421,7 @@ An ID for the policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-sourceJson">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L252" >}}">property <b>sourceJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L254" >}}">property <b>sourceJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5435,30 +5435,10 @@ json.  Statements without an `sid` cannot be overwritten.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-statements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L257" >}}">property <b>statements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L259" >}}">property <b>statements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>statements?: {
-    actions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    conditions: {
-        test: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        variable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    effect: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    notActions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    notPrincipals: {
-        identifiers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    notResources: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    principals: {
-        identifiers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    resources: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    sid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>statements?: <a href='#GetPolicyDocumentStatement'>GetPolicyDocumentStatement</a>[];</pre>
 {{% md %}}
 
 A nested configuration block (described below)
@@ -5467,7 +5447,7 @@ configuring one *statement* to be included in the policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L261" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L263" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5479,7 +5459,7 @@ IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyDocumentResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L267" >}}">interface <b>GetPolicyDocumentResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L269" >}}">interface <b>GetPolicyDocumentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5488,7 +5468,7 @@ A collection of values returned by getPolicyDocument.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L280" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L282" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5499,7 +5479,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-json">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L271" >}}">property <b>json</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L273" >}}">property <b>json</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>json: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5510,7 +5490,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-overrideJson">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L272" >}}">property <b>overrideJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L274" >}}">property <b>overrideJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>overrideJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5518,7 +5498,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-policyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L273" >}}">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L275" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5526,7 +5506,7 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-sourceJson">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L274" >}}">property <b>sourceJson</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L276" >}}">property <b>sourceJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5534,35 +5514,15 @@ The above arguments serialized as a standard JSON policy document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-statements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L275" >}}">property <b>statements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L277" >}}">property <b>statements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>statements?: {
-    actions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    conditions: {
-        test: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        variable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    effect: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    notActions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    notPrincipals: {
-        identifiers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    notResources: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    principals: {
-        identifiers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    resources: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    sid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>statements?: <a href='#GetPolicyDocumentStatement'>GetPolicyDocumentStatement</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDocumentResult-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L276" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getPolicyDocument.ts#L278" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5647,7 +5607,7 @@ The policy document of the policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRoleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L43" >}}">interface <b>GetRoleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L45" >}}">interface <b>GetRoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5656,7 +5616,7 @@ A collection of arguments for invoking getRole.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L47" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L49" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5668,7 +5628,7 @@ The friendly IAM role name to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRoleResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L53" >}}">interface <b>GetRoleResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L55" >}}">interface <b>GetRoleResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5677,7 +5637,7 @@ A collection of values returned by getRole.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L57" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L59" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5688,7 +5648,7 @@ The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-assumeRolePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L61" >}}">property <b>assumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L63" >}}">property <b>assumeRolePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assumeRolePolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5699,7 +5659,7 @@ The policy document associated with the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-createDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L65" >}}">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L67" >}}">property <b>createDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5710,7 +5670,7 @@ Creation date of the role in RFC 3339 format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L69" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L71" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5721,7 +5681,7 @@ Description for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L90" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L92" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5732,7 +5692,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-maxSessionDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L73" >}}">property <b>maxSessionDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L75" >}}">property <b>maxSessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSessionDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -5743,7 +5703,7 @@ Maximum session duration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5751,7 +5711,7 @@ Maximum session duration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L78" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L80" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5762,7 +5722,7 @@ The path to the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-permissionsBoundary">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L82" >}}">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L84" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5773,7 +5733,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleResult-uniqueId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L86" >}}">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getRole.ts#L88" >}}">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5785,7 +5745,7 @@ The stable and unique string identifying the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServerCertificateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L60" >}}">interface <b>GetServerCertificateArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L62" >}}">interface <b>GetServerCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5794,7 +5754,7 @@ A collection of arguments for invoking getServerCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-latest">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L64" >}}">property <b>latest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L66" >}}">property <b>latest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -5805,7 +5765,7 @@ sort results by expiration date. returns the certificate with expiration date in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5816,7 +5776,7 @@ exact name of the cert to lookup
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L72" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L74" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5827,7 +5787,7 @@ prefix of cert to filter by
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateArgs-pathPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L76" >}}">property <b>pathPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L78" >}}">property <b>pathPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pathPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5839,7 +5799,7 @@ prefix of path to filter by
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServerCertificateResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L82" >}}">interface <b>GetServerCertificateResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L84" >}}">interface <b>GetServerCertificateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5848,7 +5808,7 @@ A collection of values returned by getServerCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L83" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L85" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5856,7 +5816,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-certificateBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L84" >}}">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L86" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateBody: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5864,7 +5824,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L85" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L87" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateChain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5872,7 +5832,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-expirationDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L86" >}}">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L88" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expirationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5880,7 +5840,7 @@ A collection of values returned by getServerCertificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L96" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L98" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5891,7 +5851,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-latest">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L87" >}}">property <b>latest</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L89" >}}">property <b>latest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -5899,7 +5859,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L88" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5907,7 +5867,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L89" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L91" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5915,7 +5875,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L90" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L92" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5923,7 +5883,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-pathPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L91" >}}">property <b>pathPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L93" >}}">property <b>pathPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pathPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5931,7 +5891,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServerCertificateResult-uploadDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L92" >}}">property <b>uploadDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getServerCertificate.ts#L94" >}}">property <b>uploadDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uploadDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5940,7 +5900,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L43" >}}">interface <b>GetUserArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L45" >}}">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5949,7 +5909,7 @@ A collection of arguments for invoking getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-userName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L47" >}}">property <b>userName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L49" >}}">property <b>userName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5961,7 +5921,7 @@ The friendly IAM user name to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L53" >}}">interface <b>GetUserResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L55" >}}">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5970,7 +5930,7 @@ A collection of values returned by getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L57" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L59" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5981,7 +5941,7 @@ The Amazon Resource Name (ARN) assigned by AWS for this user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L77" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L79" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5992,7 +5952,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L61" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L63" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6003,7 +5963,7 @@ Path in which this user was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-permissionsBoundary">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L65" >}}">property <b>permissionsBoundary</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L67" >}}">property <b>permissionsBoundary</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissionsBoundary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6014,7 +5974,7 @@ The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L69" >}}">property <b>userId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L71" >}}">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6025,7 +5985,7 @@ The unique ID assigned by AWS for this user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L73" >}}">property <b>userName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/getUser.ts#L75" >}}">property <b>userName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6841,7 +6801,7 @@ The user(s) the policy should be applied to
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyDocument">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L47" >}}">interface <b>PolicyDocument</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L51" >}}">interface <b>PolicyDocument</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6877,7 +6837,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyDocument-Id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L51" >}}">property <b>Id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L55" >}}">property <b>Id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6885,7 +6845,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyDocument-Statement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L53" >}}">property <b>Statement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L57" >}}">property <b>Statement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Statement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#PolicyStatement'>PolicyStatement</a>&gt;[]&gt;;</pre>
@@ -6893,7 +6853,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyDocument-Version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L49" >}}">property <b>Version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L53" >}}">property <b>Version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='s2'>"2008-10-17"</span> | <span class='s2'>"2012-10-17"</span>&gt;;</pre>
@@ -6979,7 +6939,7 @@ The policy document. This is a JSON formatted string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyStatement">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L60" >}}">interface <b>PolicyStatement</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L64" >}}">interface <b>PolicyStatement</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6989,7 +6949,7 @@ The Statement element is the main element for a policy. This element is required
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyStatement-Action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L73" >}}">property <b>Action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L77" >}}">property <b>Action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6997,7 +6957,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Condition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L83" >}}">property <b>Condition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L87" >}}">property <b>Condition</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#Conditions'>Conditions</a>&gt;;</pre>
@@ -7005,7 +6965,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Effect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L64" >}}">property <b>Effect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L68" >}}">property <b>Effect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Effect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='s2'>"Allow"</span> | <span class='s2'>"Deny"</span>&gt;;</pre>
@@ -7013,7 +6973,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-NotAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L75" >}}">property <b>NotAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L79" >}}">property <b>NotAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>NotAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7021,7 +6981,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-NotPrincipal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L70" >}}">property <b>NotPrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L74" >}}">property <b>NotPrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>NotPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#Principal'>Principal</a>&gt;;</pre>
@@ -7029,7 +6989,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-NotResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L80" >}}">property <b>NotResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L84" >}}">property <b>NotResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>NotResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7037,7 +6997,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Principal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L68" >}}">property <b>Principal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L72" >}}">property <b>Principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='#Principal'>Principal</a>&gt;;</pre>
@@ -7045,7 +7005,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Resource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L78" >}}">property <b>Resource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L82" >}}">property <b>Resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Resource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7053,7 +7013,7 @@ The Statement element is the main element for a policy. This element is required
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyStatement-Sid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L62" >}}">property <b>Sid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L66" >}}">property <b>Sid</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Sid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7908,7 +7868,7 @@ The stable and unique string identifying the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipal">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L164" >}}">interface <b>ServicePrincipal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L169" >}}">interface <b>ServicePrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7923,7 +7883,7 @@ service.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipal-Service">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L165" >}}">property <b>Service</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L170" >}}">property <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11674,7 +11634,7 @@ Service Principal for Workspaces
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Principal">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L143" >}}">type <b>Principal</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iam/documents.ts#L148" >}}">type <b>Principal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Principal = <span class='s2'>"*"</span> | <a href='#AWSPrincipal'>AWSPrincipal</a> | <a href='#ServicePrincipal'>ServicePrincipal</a> | <a href='#FederatedPrincipal'>FederatedPrincipal</a>;</pre>

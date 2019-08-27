@@ -556,7 +556,7 @@ export const currentSubscriptionDisplayName = current.displayName;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSubscriptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L24" >}}">function <b>getSubscriptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L25" >}}">function <b>getSubscriptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -583,7 +583,7 @@ export const firstAvailableSubscriptionDisplayName = available.subscriptions[0].
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUserAssignedIdentity">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L27" >}}">function <b>getUserAssignedIdentity</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L28" >}}">function <b>getUserAssignedIdentity</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -599,7 +599,7 @@ Use this data source to access information about an existing User Assigned Ident
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.core.getUserAssignedIdentity({
+const example = azure.authorization.getUserAssignedIdentity({
     name: "nameOfUserAssignedIdentity",
     resourceGroupName: "nameOfResourceGroup",
 });
@@ -608,7 +608,7 @@ export const uaiClientId = example.clientId;
 export const uaiPrincipalId = example.principalId;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity_legacy.html.markdown.
 
 {{% /md %}}
 </div>
@@ -854,7 +854,7 @@ The subscription GUID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubscriptionsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L44" >}}">interface <b>GetSubscriptionsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L45" >}}">interface <b>GetSubscriptionsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -863,7 +863,7 @@ A collection of arguments for invoking getSubscriptions.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNameContains">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L48" >}}">property <b>displayNameContains</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L49" >}}">property <b>displayNameContains</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNameContains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -874,7 +874,7 @@ A case-insensitive value which must be contained within the `displayName` field,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNamePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L52" >}}">property <b>displayNamePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L53" >}}">property <b>displayNamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNamePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -886,7 +886,7 @@ A case-insensitive prefix which can be used to filter on the `displayName` field
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubscriptionsResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L58" >}}">interface <b>GetSubscriptionsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L59" >}}">interface <b>GetSubscriptionsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -895,7 +895,7 @@ A collection of values returned by getSubscriptions.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-displayNameContains">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L59" >}}">property <b>displayNameContains</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L60" >}}">property <b>displayNameContains</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNameContains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -903,7 +903,7 @@ A collection of values returned by getSubscriptions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-displayNamePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L60" >}}">property <b>displayNamePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L61" >}}">property <b>displayNamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayNamePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -911,7 +911,7 @@ A collection of values returned by getSubscriptions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L69" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -922,17 +922,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-subscriptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L64" >}}">property <b>subscriptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getSubscriptions.ts#L65" >}}">property <b>subscriptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subscriptions: {
-    displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    locationPlacementId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    quotaId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    spendingLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>subscriptions: <a href='#GetSubscriptionsSubscription'>GetSubscriptionsSubscription</a>[];</pre>
 {{% md %}}
 
 One or more `subscription` blocks as defined below.
@@ -941,7 +934,7 @@ One or more `subscription` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserAssignedIdentityArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L46" >}}">interface <b>GetUserAssignedIdentityArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L47" >}}">interface <b>GetUserAssignedIdentityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -950,7 +943,7 @@ A collection of arguments for invoking getUserAssignedIdentity.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L50" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -961,7 +954,7 @@ The name of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L54" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -973,7 +966,7 @@ The name of the Resource Group in which the User Assigned Identity exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserAssignedIdentityResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L60" >}}">interface <b>GetUserAssignedIdentityResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L61" >}}">interface <b>GetUserAssignedIdentityResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -982,7 +975,7 @@ A collection of values returned by getUserAssignedIdentity.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-clientId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L64" >}}">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L65" >}}">property <b>clientId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -993,7 +986,7 @@ The Client ID of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L82" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L83" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1004,7 +997,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L68" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L69" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1015,7 +1008,7 @@ The Azure location where the User Assigned Identity exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L69" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1023,7 +1016,7 @@ The Azure location where the User Assigned Identity exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-principalId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L73" >}}">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L74" >}}">property <b>principalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1034,7 +1027,7 @@ The Service Principal ID of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L74" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L75" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1042,7 +1035,7 @@ The Service Principal ID of the User Assigned Identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L78" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="core/getUserAssignedIdentity.ts#L79" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>

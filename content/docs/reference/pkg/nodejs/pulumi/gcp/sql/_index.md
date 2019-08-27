@@ -236,7 +236,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseInstance">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L58" >}}">class <b>DatabaseInstance</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L60" >}}">class <b>DatabaseInstance</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -294,7 +294,7 @@ const master = new gcp.sql.DatabaseInstance("master", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseInstance-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L157" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L159" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -311,7 +311,7 @@ Create a DatabaseInstance resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L67" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L69" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -335,7 +335,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L78" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L80" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -349,7 +349,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-connectionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L89" >}}">property <b>connectionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L91" >}}">property <b>connectionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -361,7 +361,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-databaseVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L97" >}}">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L99" >}}">property <b>databaseVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>databaseVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -376,7 +376,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-firstIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L98" >}}">property <b>firstIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L100" >}}">property <b>firstIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>firstIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -396,19 +396,15 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-ipAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L99" >}}">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L101" >}}">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    timeToRetire: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseInstanceIpAddress'>DatabaseInstanceIpAddress</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-masterInstanceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L105" >}}">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L107" >}}">property <b>masterInstanceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>masterInstanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -421,7 +417,7 @@ the master in the replication setup. Note, this requires the master to have
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L112" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -435,7 +431,7 @@ up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-privateIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L117" >}}">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L119" >}}">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -447,7 +443,7 @@ performing filtering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L122" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L124" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -459,7 +455,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-publicIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L127" >}}">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L129" >}}">property <b>publicIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -471,7 +467,7 @@ performing filtering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L137" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L139" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -488,22 +484,10 @@ If you choose not to provide the `region` argument for this resource, make sure 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-replicaConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L142" >}}">property <b>replicaConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L144" >}}">property <b>replicaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>replicaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    caCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clientCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clientKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    connectRetryInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    dumpFilePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    failoverTarget: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    masterHeartbeatPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sslCipher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    verifyServerCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>replicaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 The configuration for replication. The
@@ -512,7 +496,7 @@ configuration is detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L146" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L148" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -523,21 +507,15 @@ The URI of the created resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-serverCaCert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L147" >}}">property <b>serverCaCert</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L149" >}}">property <b>serverCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>serverCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    cert: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    commonName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    createTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    expirationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sha1Fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serverCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseInstanceServerCaCert'>DatabaseInstanceServerCaCert</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-serviceAccountEmailAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L152" >}}">property <b>serviceAccountEmailAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L154" >}}">property <b>serviceAccountEmailAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceAccountEmailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -549,51 +527,10 @@ instance. This property is applicable only to Second Generation instances.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstance-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L157" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L159" >}}">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    activationPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    authorizedGaeApplications: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    availabilityType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    backupConfiguration: {
-        binaryLogEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        startTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    crashSafeReplication: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    databaseFlags: {
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    diskAutoresize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    diskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    diskType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ipConfiguration: {
-        authorizedNetworks: {
-            expirationTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-        ipv4Enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-        privateNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        requireSsl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    };
-    locationPreference: {
-        followGaeApplication: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    maintenanceWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        day: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        hour: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        updateTrack: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    pricingPlan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    replicationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    userLabels: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</pre>
 {{% md %}}
 
 The settings to use for the database. The
@@ -615,7 +552,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SslCert">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L38" >}}">class <b>SslCert</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L40" >}}">class <b>SslCert</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -653,7 +590,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SslCert-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L111" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -670,7 +607,7 @@ Create a SslCert resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -694,7 +631,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -708,7 +645,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-cert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L68" >}}">property <b>cert</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L70" >}}">property <b>cert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -719,7 +656,7 @@ The actual certificate data for this client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-certSerialNumber">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L72" >}}">property <b>certSerialNumber</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L74" >}}">property <b>certSerialNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certSerialNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -730,7 +667,7 @@ The serial number extracted from the certificate data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-commonName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L77" >}}">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L79" >}}">property <b>commonName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -742,7 +679,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-createTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L82" >}}">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L84" >}}">property <b>createTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -754,7 +691,7 @@ for example 2012-11-15T16:19:00.094Z.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-expirationTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L87" >}}">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L89" >}}">property <b>expirationTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -778,7 +715,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L92" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L94" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -790,7 +727,7 @@ forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-privateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L96" >}}">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L98" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -801,7 +738,7 @@ The private key associated with the client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L101" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L103" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -813,7 +750,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-serverCaCert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L105" >}}">property <b>serverCaCert</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L107" >}}">property <b>serverCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -824,7 +761,7 @@ The CA cert of the server this client cert was generated from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCert-sha1Fingerprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L109" >}}">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L111" >}}">property <b>sha1Fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sha1Fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -848,7 +785,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L39" >}}">class <b>User</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L41" >}}">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -887,7 +824,7 @@ const users = new gcp.sql.User("users", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L90" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L92" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -904,7 +841,7 @@ Create a User resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L48" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -928,7 +865,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L59" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -942,7 +879,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L71" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L73" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -967,7 +904,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L76" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L78" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -979,7 +916,7 @@ forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L83" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -991,7 +928,7 @@ to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L85" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L87" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1002,7 +939,7 @@ The password for the user. Can be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L90" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L92" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1101,7 +1038,7 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseInstanceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L300" >}}">interface <b>DatabaseInstanceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L302" >}}">interface <b>DatabaseInstanceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1110,7 +1047,7 @@ The set of arguments for constructing a DatabaseInstance resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-databaseVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L308" >}}">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L310" >}}">property <b>databaseVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1125,7 +1062,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-masterInstanceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L314" >}}">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L316" >}}">property <b>masterInstanceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>masterInstanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1138,7 +1075,7 @@ the master in the replication setup. Note, this requires the master to have
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L321" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L323" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1152,7 +1089,7 @@ up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L326" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L328" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1164,7 +1101,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L336" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L338" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1181,22 +1118,10 @@ If you choose not to provide the `region` argument for this resource, make sure 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-replicaConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L341" >}}">property <b>replicaConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L343" >}}">property <b>replicaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    connectRetryInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    dumpFilePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    failoverTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    masterHeartbeatPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sslCipher: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    verifyServerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 The configuration for replication. The
@@ -1205,51 +1130,10 @@ configuration is detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceArgs-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L346" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L348" >}}">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    activationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    authorizedGaeApplications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    availabilityType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    backupConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        binaryLogEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    crashSafeReplication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    databaseFlags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    diskAutoresize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authorizedNetworks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        ipv4Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        privateNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        requireSsl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    locationPreference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        followGaeApplication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    maintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        day: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        hour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        updateTrack: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    pricingPlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    userLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</pre>
 {{% md %}}
 
 The settings to use for the database. The
@@ -1259,7 +1143,7 @@ configuration is detailed below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseInstanceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L221" >}}">interface <b>DatabaseInstanceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L223" >}}">interface <b>DatabaseInstanceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1268,7 +1152,7 @@ Input properties used for looking up and filtering DatabaseInstance resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-connectionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L226" >}}">property <b>connectionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L228" >}}">property <b>connectionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1280,7 +1164,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-databaseVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L234" >}}">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L236" >}}">property <b>databaseVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1295,7 +1179,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-firstIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L235" >}}">property <b>firstIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L237" >}}">property <b>firstIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>firstIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1303,19 +1187,15 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-ipAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L236" >}}">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L238" >}}">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    timeToRetire: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseInstanceIpAddress'>DatabaseInstanceIpAddress</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-masterInstanceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L242" >}}">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L244" >}}">property <b>masterInstanceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>masterInstanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1328,7 +1208,7 @@ the master in the replication setup. Note, this requires the master to have
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L249" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L251" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1342,7 +1222,7 @@ up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-privateIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L254" >}}">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L256" >}}">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1354,7 +1234,7 @@ performing filtering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L259" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L261" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1366,7 +1246,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-publicIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L264" >}}">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L266" >}}">property <b>publicIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1378,7 +1258,7 @@ performing filtering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L274" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L276" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1395,22 +1275,10 @@ If you choose not to provide the `region` argument for this resource, make sure 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-replicaConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L279" >}}">property <b>replicaConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L281" >}}">property <b>replicaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    connectRetryInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    dumpFilePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    failoverTarget: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    masterHeartbeatPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sslCipher: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    verifyServerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 The configuration for replication. The
@@ -1419,7 +1287,7 @@ configuration is detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L283" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L285" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1430,21 +1298,15 @@ The URI of the created resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-serverCaCert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L284" >}}">property <b>serverCaCert</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L286" >}}">property <b>serverCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>serverCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sha1Fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serverCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseInstanceServerCaCert'>DatabaseInstanceServerCaCert</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-serviceAccountEmailAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L289" >}}">property <b>serviceAccountEmailAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L291" >}}">property <b>serviceAccountEmailAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccountEmailAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1456,51 +1318,10 @@ instance. This property is applicable only to Second Generation instances.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseInstanceState-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L294" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/databaseInstance.ts#L296" >}}">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    activationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    authorizedGaeApplications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    availabilityType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    backupConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        binaryLogEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    crashSafeReplication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    databaseFlags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    diskAutoresize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authorizedNetworks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        ipv4Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        privateNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        requireSsl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    locationPreference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        followGaeApplication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    maintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        day: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        hour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        updateTrack: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    pricingPlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    userLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</pre>
 {{% md %}}
 
 The settings to use for the database. The
@@ -1595,7 +1416,7 @@ The URI of the created resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SslCertArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L217" >}}">interface <b>SslCertArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L219" >}}">interface <b>SslCertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1604,7 +1425,7 @@ The set of arguments for constructing a SslCert resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SslCertArgs-commonName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L222" >}}">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L224" >}}">property <b>commonName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1616,7 +1437,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertArgs-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L227" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L229" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1628,7 +1449,7 @@ forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L232" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L234" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1641,7 +1462,7 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SslCertState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L166" >}}">interface <b>SslCertState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L168" >}}">interface <b>SslCertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1650,7 +1471,7 @@ Input properties used for looking up and filtering SslCert resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SslCertState-cert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L170" >}}">property <b>cert</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L172" >}}">property <b>cert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1661,7 +1482,7 @@ The actual certificate data for this client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-certSerialNumber">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L174" >}}">property <b>certSerialNumber</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L176" >}}">property <b>certSerialNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certSerialNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1672,7 +1493,7 @@ The serial number extracted from the certificate data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-commonName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L179" >}}">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L181" >}}">property <b>commonName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1684,7 +1505,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-createTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L184" >}}">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L186" >}}">property <b>createTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1696,7 +1517,7 @@ for example 2012-11-15T16:19:00.094Z.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-expirationTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L189" >}}">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L191" >}}">property <b>expirationTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1708,7 +1529,7 @@ for example 2012-11-15T16:19:00.094Z.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L194" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L196" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1720,7 +1541,7 @@ forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-privateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L198" >}}">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L200" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1731,7 +1552,7 @@ The private key associated with the client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L203" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L205" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1743,7 +1564,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-serverCaCert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L207" >}}">property <b>serverCaCert</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L209" >}}">property <b>serverCaCert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1754,7 +1575,7 @@ The CA cert of the server this client cert was generated from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SslCertState-sha1Fingerprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L211" >}}">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/sslCert.ts#L213" >}}">property <b>sha1Fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sha1Fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1766,7 +1587,7 @@ The SHA1 Fingerprint of the certificate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L165" >}}">interface <b>UserArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L167" >}}">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1775,7 +1596,7 @@ The set of arguments for constructing a User resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L171" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L173" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1788,7 +1609,7 @@ Can be an IP address. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L176" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L178" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1800,7 +1621,7 @@ forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L183" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1812,7 +1633,7 @@ to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L185" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L187" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1823,7 +1644,7 @@ The password for the user. Can be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L190" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L192" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1836,7 +1657,7 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L134" >}}">interface <b>UserState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L136" >}}">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1845,7 +1666,7 @@ Input properties used for looking up and filtering User resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L140" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L142" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1858,7 +1679,7 @@ Can be an IP address. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L145" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L147" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1870,7 +1691,7 @@ forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L150" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L152" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1882,7 +1703,7 @@ to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L154" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L156" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1893,7 +1714,7 @@ The password for the user. Can be updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L159" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="sql/user.ts#L161" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

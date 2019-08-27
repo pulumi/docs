@@ -1339,7 +1339,7 @@ Identifier of the AWS account that owns the EC2 VPC.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getDirectConnectGatewayAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L26" >}}">function <b>getDirectConnectGatewayAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L28" >}}">function <b>getDirectConnectGatewayAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1368,7 +1368,7 @@ const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_e
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRouteTable">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L45" >}}">function <b>getRouteTable</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L47" >}}">function <b>getRouteTable</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1416,7 +1416,7 @@ const example = aws.ec2transitgateway.getRouteTable({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getTransitGateway">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L39" >}}">function <b>getTransitGateway</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L41" >}}">function <b>getTransitGateway</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1458,7 +1458,7 @@ const example = aws.ec2transitgateway.getTransitGateway({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVpcAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L39" >}}">function <b>getVpcAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L41" >}}">function <b>getVpcAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1500,7 +1500,7 @@ const example = aws.ec2transitgateway.getVpcAttachment({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVpnAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L26" >}}">function <b>getVpnAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L28" >}}">function <b>getVpnAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1529,7 +1529,7 @@ const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connecti
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetDirectConnectGatewayAttachmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L46" >}}">interface <b>GetDirectConnectGatewayAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L48" >}}">interface <b>GetDirectConnectGatewayAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1538,7 +1538,7 @@ A collection of arguments for invoking getDirectConnectGatewayAttachment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-dxGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L50" >}}">property <b>dxGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L52" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dxGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1549,7 +1549,7 @@ Identifier of the Direct Connect Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L51" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L53" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1557,7 +1557,7 @@ Identifier of the Direct Connect Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentArgs-transitGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L55" >}}">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L57" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1569,7 +1569,7 @@ Identifier of the EC2 Transit Gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDirectConnectGatewayAttachmentResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L61" >}}">interface <b>GetDirectConnectGatewayAttachmentResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L63" >}}">interface <b>GetDirectConnectGatewayAttachmentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1578,7 +1578,7 @@ A collection of values returned by getDirectConnectGatewayAttachment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-dxGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L62" >}}">property <b>dxGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L64" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dxGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1586,7 +1586,7 @@ A collection of values returned by getDirectConnectGatewayAttachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L71" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L73" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1597,7 +1597,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L66" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L68" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1608,7 +1608,7 @@ Key-value tags for the EC2 Transit Gateway Attachment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDirectConnectGatewayAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L67" >}}">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getDirectConnectGatewayAttachment.ts#L69" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1617,7 +1617,7 @@ Key-value tags for the EC2 Transit Gateway Attachment
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRouteTableArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L66" >}}">interface <b>GetRouteTableArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L68" >}}">interface <b>GetRouteTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1626,13 +1626,10 @@ A collection of arguments for invoking getRouteTable.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRouteTableArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L70" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L72" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetRouteTableFilter'>GetRouteTableFilter</a>[];</pre>
 {{% md %}}
 
 One or more configuration blocks containing name-values filters. Detailed below.
@@ -1640,7 +1637,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableArgs-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L74" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L76" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1651,7 +1648,7 @@ Identifier of the EC2 Transit Gateway Route Table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L75" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L77" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1660,7 +1657,7 @@ Identifier of the EC2 Transit Gateway Route Table.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRouteTableResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L81" >}}">interface <b>GetRouteTableResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L83" >}}">interface <b>GetRouteTableResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1669,7 +1666,7 @@ A collection of values returned by getRouteTable.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRouteTableResult-defaultAssociationRouteTable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L85" >}}">property <b>defaultAssociationRouteTable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L87" >}}">property <b>defaultAssociationRouteTable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultAssociationRouteTable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1680,7 +1677,7 @@ Boolean whether this is the default association route table for the EC2 Transit 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-defaultPropagationRouteTable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L89" >}}">property <b>defaultPropagationRouteTable</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L91" >}}">property <b>defaultPropagationRouteTable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultPropagationRouteTable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1691,18 +1688,15 @@ Boolean whether this is the default propagation route table for the EC2 Transit 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L90" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L92" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetRouteTableFilter'>GetRouteTableFilter</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L94" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L96" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1713,7 +1707,7 @@ EC2 Transit Gateway Route Table identifier
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L98" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L100" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1724,7 +1718,7 @@ Key-value tags for the EC2 Transit Gateway Route Table
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-transitGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L102" >}}">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getRouteTable.ts#L104" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1736,7 +1730,7 @@ EC2 Transit Gateway identifier
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetTransitGatewayArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L60" >}}">interface <b>GetTransitGatewayArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L62" >}}">interface <b>GetTransitGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1745,13 +1739,10 @@ A collection of arguments for invoking getTransitGateway.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetTransitGatewayArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L64" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L66" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetTransitGatewayFilter'>GetTransitGatewayFilter</a>[];</pre>
 {{% md %}}
 
 One or more configuration blocks containing name-values filters. Detailed below.
@@ -1759,7 +1750,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayArgs-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L70" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1770,7 +1761,7 @@ Identifier of the EC2 Transit Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L69" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L71" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1779,7 +1770,7 @@ Identifier of the EC2 Transit Gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetTransitGatewayResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L75" >}}">interface <b>GetTransitGatewayResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L77" >}}">interface <b>GetTransitGatewayResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1788,7 +1779,7 @@ A collection of values returned by getTransitGateway.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-amazonSideAsn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L79" >}}">property <b>amazonSideAsn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L81" >}}">property <b>amazonSideAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>amazonSideAsn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1799,7 +1790,7 @@ Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L83" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L85" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1810,7 +1801,7 @@ EC2 Transit Gateway Amazon Resource Name (ARN)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-associationDefaultRouteTableId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L87" >}}">property <b>associationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L89" >}}">property <b>associationDefaultRouteTableId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>associationDefaultRouteTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1821,7 +1812,7 @@ Identifier of the default association route table
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-autoAcceptSharedAttachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L91" >}}">property <b>autoAcceptSharedAttachments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L93" >}}">property <b>autoAcceptSharedAttachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoAcceptSharedAttachments: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1832,7 +1823,7 @@ Whether resource attachment requests are automatically accepted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-defaultRouteTableAssociation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L95" >}}">property <b>defaultRouteTableAssociation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L97" >}}">property <b>defaultRouteTableAssociation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRouteTableAssociation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1843,7 +1834,7 @@ Whether resource attachments are automatically associated with the default assoc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-defaultRouteTablePropagation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L99" >}}">property <b>defaultRouteTablePropagation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L101" >}}">property <b>defaultRouteTablePropagation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRouteTablePropagation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1854,7 +1845,7 @@ Whether resource attachments automatically propagate routes to the default propa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L103" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L105" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1865,7 +1856,7 @@ Description of the EC2 Transit Gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-dnsSupport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L107" >}}">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L109" >}}">property <b>dnsSupport</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1876,18 +1867,15 @@ Whether DNS support is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L108" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L110" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetTransitGatewayFilter'>GetTransitGatewayFilter</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L112" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L114" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1898,7 +1886,7 @@ EC2 Transit Gateway identifier
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-ownerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L116" >}}">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L118" >}}">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1909,7 +1897,7 @@ Identifier of the AWS account that owns the EC2 Transit Gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-propagationDefaultRouteTableId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L120" >}}">property <b>propagationDefaultRouteTableId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L122" >}}">property <b>propagationDefaultRouteTableId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>propagationDefaultRouteTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1920,7 +1908,7 @@ Identifier of the default propagation route table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L124" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L126" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1931,7 +1919,7 @@ Key-value tags for the EC2 Transit Gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTransitGatewayResult-vpnEcmpSupport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L128" >}}">property <b>vpnEcmpSupport</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getTransitGateway.ts#L130" >}}">property <b>vpnEcmpSupport</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpnEcmpSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1943,7 +1931,7 @@ Whether VPN Equal Cost Multipath Protocol support is enabled.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcAttachmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L60" >}}">interface <b>GetVpcAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L62" >}}">interface <b>GetVpcAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1952,13 +1940,10 @@ A collection of arguments for invoking getVpcAttachment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcAttachmentArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L64" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L66" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetVpcAttachmentFilter'>GetVpcAttachmentFilter</a>[];</pre>
 {{% md %}}
 
 One or more configuration blocks containing name-values filters. Detailed below.
@@ -1966,7 +1951,7 @@ One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentArgs-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L70" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1977,7 +1962,7 @@ Identifier of the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L69" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L71" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1986,7 +1971,7 @@ Identifier of the EC2 Transit Gateway VPC Attachment.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcAttachmentResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L75" >}}">interface <b>GetVpcAttachmentResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L77" >}}">interface <b>GetVpcAttachmentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1995,7 +1980,7 @@ A collection of values returned by getVpcAttachment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-dnsSupport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L79" >}}">property <b>dnsSupport</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L81" >}}">property <b>dnsSupport</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2006,18 +1991,15 @@ Whether DNS support is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L80" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L82" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetVpcAttachmentFilter'>GetVpcAttachmentFilter</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L84" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L86" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2028,7 +2010,7 @@ EC2 Transit Gateway VPC Attachment identifier
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-ipv6Support">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L88" >}}">property <b>ipv6Support</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L90" >}}">property <b>ipv6Support</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipv6Support: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2039,7 +2021,7 @@ Whether IPv6 support is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-subnetIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L92" >}}">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L94" >}}">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2050,7 +2032,7 @@ Identifiers of EC2 Subnets.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L96" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L98" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2061,7 +2043,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L100" >}}">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L102" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2072,7 +2054,7 @@ EC2 Transit Gateway identifier
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L104" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L106" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2083,7 +2065,7 @@ Identifier of EC2 VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcAttachmentResult-vpcOwnerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L108" >}}">property <b>vpcOwnerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpcAttachment.ts#L110" >}}">property <b>vpcOwnerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcOwnerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2095,7 +2077,7 @@ Identifier of the AWS account that owns the EC2 VPC.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpnAttachmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L46" >}}">interface <b>GetVpnAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L48" >}}">interface <b>GetVpnAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2104,7 +2086,7 @@ A collection of arguments for invoking getVpnAttachment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpnAttachmentArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L47" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L49" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2112,7 +2094,7 @@ A collection of arguments for invoking getVpnAttachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpnAttachmentArgs-transitGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L51" >}}">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L53" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2123,7 +2105,7 @@ Identifier of the EC2 Transit Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpnAttachmentArgs-vpnConnectionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L55" >}}">property <b>vpnConnectionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L57" >}}">property <b>vpnConnectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpnConnectionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2135,7 +2117,7 @@ Identifier of the EC2 VPN Connection.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpnAttachmentResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L61" >}}">interface <b>GetVpnAttachmentResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L63" >}}">interface <b>GetVpnAttachmentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2144,7 +2126,7 @@ A collection of values returned by getVpnAttachment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpnAttachmentResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L71" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L73" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2155,7 +2137,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpnAttachmentResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L65" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L67" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2166,7 +2148,7 @@ Key-value tags for the EC2 Transit Gateway VPN Attachment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpnAttachmentResult-transitGatewayId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L66" >}}">property <b>transitGatewayId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L68" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2174,7 +2156,7 @@ Key-value tags for the EC2 Transit Gateway VPN Attachment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpnAttachmentResult-vpnConnectionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L67" >}}">property <b>vpnConnectionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ec2transitgateway/getVpnAttachment.ts#L69" >}}">property <b>vpnConnectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpnConnectionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

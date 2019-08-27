@@ -207,7 +207,7 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/output.ts#L73" >}}">property <b>resourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccessResourceAccess'>outputs.ApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='#ApplicationRequiredResourceAccessResourceAccess'>ApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
 {{% md %}}
 
 A collection of `resourceAccess` blocks as documented below.
@@ -425,7 +425,7 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/output.ts#L157" >}}">property <b>resourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccessResourceAccess'>outputs.GetApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='#GetApplicationRequiredResourceAccessResourceAccess'>GetApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
 {{% md %}}
 
 A collection of `resourceAccess` blocks as documented below

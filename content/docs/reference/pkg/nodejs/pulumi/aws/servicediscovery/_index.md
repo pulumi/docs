@@ -486,7 +486,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L65" >}}">class <b>Service</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L67" >}}">class <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -551,7 +551,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L119" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L121" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -568,7 +568,7 @@ Create a Service resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L74" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L76" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -592,7 +592,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L85" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L87" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -606,7 +606,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L95" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L97" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -617,7 +617,7 @@ The ARN of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L99" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L101" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -628,17 +628,10 @@ The description of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-dnsConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L103" >}}">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L105" >}}">property <b>dnsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>dnsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    dnsRecords: {
-        ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    namespaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    routingPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>dnsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceDnsConfig'>ServiceDnsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
@@ -646,14 +639,10 @@ A complex type that contains information about the resource record sets that you
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-healthCheckConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L107" >}}">property <b>healthCheckConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L109" >}}">property <b>healthCheckConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>healthCheckConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    failureThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    resourcePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>healthCheckConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceHealthCheckConfig'>ServiceHealthCheckConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
@@ -661,12 +650,10 @@ A complex type that contains settings for an optional health check. Only for Pub
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-healthCheckCustomConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L111" >}}">property <b>healthCheckCustomConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L113" >}}">property <b>healthCheckCustomConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>healthCheckCustomConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    failureThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>healthCheckCustomConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceHealthCheckCustomConfig'>ServiceHealthCheckCustomConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains settings for ECS managed health checks.
@@ -686,7 +673,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L115" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L117" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -697,7 +684,7 @@ The name of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-namespaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L119" >}}">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L121" >}}">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -990,7 +977,7 @@ The name of the namespace.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L198" >}}">interface <b>ServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L200" >}}">interface <b>ServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -999,7 +986,7 @@ The set of arguments for constructing a Service resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L202" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L204" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1010,17 +997,10 @@ The description of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-dnsConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L206" >}}">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L208" >}}">property <b>dnsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dnsRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    routingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceDnsConfig'>ServiceDnsConfig</a>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
@@ -1028,14 +1008,10 @@ A complex type that contains information about the resource record sets that you
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-healthCheckConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L210" >}}">property <b>healthCheckConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L212" >}}">property <b>healthCheckConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    failureThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    resourcePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceHealthCheckConfig'>ServiceHealthCheckConfig</a>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
@@ -1043,12 +1019,10 @@ A complex type that contains settings for an optional health check. Only for Pub
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-healthCheckCustomConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L214" >}}">property <b>healthCheckCustomConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L216" >}}">property <b>healthCheckCustomConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    failureThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceHealthCheckCustomConfig'>ServiceHealthCheckCustomConfig</a>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains settings for ECS managed health checks.
@@ -1056,7 +1030,7 @@ A complex type that contains settings for ECS managed health checks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L218" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L220" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1067,7 +1041,7 @@ The name of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-namespaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L222" >}}">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L224" >}}">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1079,7 +1053,7 @@ The ID of the namespace to use for DNS configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L164" >}}">interface <b>ServiceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L166" >}}">interface <b>ServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1088,7 +1062,7 @@ Input properties used for looking up and filtering Service resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L168" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L170" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1099,7 +1073,7 @@ The ARN of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L172" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L174" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1110,17 +1084,10 @@ The description of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-dnsConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L176" >}}">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L178" >}}">property <b>dnsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dnsRecords: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    routingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceDnsConfig'>ServiceDnsConfig</a>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
@@ -1128,14 +1095,10 @@ A complex type that contains information about the resource record sets that you
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-healthCheckConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L180" >}}">property <b>healthCheckConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L182" >}}">property <b>healthCheckConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    failureThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    resourcePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceHealthCheckConfig'>ServiceHealthCheckConfig</a>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
@@ -1143,12 +1106,10 @@ A complex type that contains settings for an optional health check. Only for Pub
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-healthCheckCustomConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L184" >}}">property <b>healthCheckCustomConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L186" >}}">property <b>healthCheckCustomConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    failureThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceHealthCheckCustomConfig'>ServiceHealthCheckCustomConfig</a>&gt;;</pre>
 {{% md %}}
 
 A complex type that contains settings for ECS managed health checks.
@@ -1156,7 +1117,7 @@ A complex type that contains settings for ECS managed health checks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L188" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1167,7 +1128,7 @@ The name of the service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-namespaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L192" >}}">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="servicediscovery/service.ts#L194" >}}">property <b>namespaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

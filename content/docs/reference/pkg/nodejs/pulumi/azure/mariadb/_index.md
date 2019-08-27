@@ -404,7 +404,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Server">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L46" >}}">class <b>Server</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L48" >}}">class <b>Server</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -450,7 +450,7 @@ const testServer = new azure.mariadb.Server("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L116" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L118" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -467,7 +467,7 @@ Create a Server resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -491,7 +491,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -505,7 +505,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-administratorLogin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L76" >}}">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L78" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -516,7 +516,7 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-administratorLoginPassword">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L80" >}}">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L82" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -527,7 +527,7 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L84" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L86" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -550,7 +550,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L88" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L90" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -561,7 +561,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -572,7 +572,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L96" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L98" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -583,15 +583,10 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L100" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L102" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -599,7 +594,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-sslEnforcement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L104" >}}">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L106" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -610,14 +605,10 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-storageProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L108" >}}">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L110" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    backupRetentionDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    geoRedundantBackup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    storageMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
 {{% md %}}
 
 A `storageProfile` block as defined below.
@@ -625,7 +616,7 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L112" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L114" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -648,7 +639,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L116" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L118" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -922,7 +913,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L240" >}}">interface <b>ServerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L242" >}}">interface <b>ServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -931,7 +922,7 @@ The set of arguments for constructing a Server resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLogin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L244" >}}">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L246" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -942,7 +933,7 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLoginPassword">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L248" >}}">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L250" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -953,7 +944,7 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L252" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L254" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -964,7 +955,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L256" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L258" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -975,7 +966,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L260" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L262" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -986,15 +977,10 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L264" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L266" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1002,7 +988,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-sslEnforcement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L268" >}}">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L270" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1013,14 +999,10 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-storageProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L272" >}}">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L274" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    backupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    geoRedundantBackup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
 {{% md %}}
 
 A `storageProfile` block as defined below.
@@ -1028,7 +1010,7 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L276" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L278" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1039,7 +1021,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L280" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L282" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1051,7 +1033,7 @@ Specifies the version of MariaDB to use. The valid value is `10.2`. Changing thi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L190" >}}">interface <b>ServerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L192" >}}">interface <b>ServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1060,7 +1042,7 @@ Input properties used for looking up and filtering Server resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerState-administratorLogin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L194" >}}">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L196" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1071,7 +1053,7 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-administratorLoginPassword">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L198" >}}">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L200" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1082,7 +1064,7 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L202" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L204" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1093,7 +1075,7 @@ The FQDN of the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L206" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L208" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1104,7 +1086,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L210" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L212" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1115,7 +1097,7 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L214" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L216" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1126,15 +1108,10 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L218" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L220" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1142,7 +1119,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-sslEnforcement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L222" >}}">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L224" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1153,14 +1130,10 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-storageProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L226" >}}">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L228" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    backupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    geoRedundantBackup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
 {{% md %}}
 
 A `storageProfile` block as defined below.
@@ -1168,7 +1141,7 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L230" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L232" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1179,7 +1152,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L234" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L236" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -34,7 +34,7 @@ title: Module mediaservices
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L40" >}}">class <b>Account</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L42" >}}">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -74,7 +74,7 @@ const testAccount = new azure.mediaservices.Account("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L82" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L84" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -91,7 +91,7 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -115,7 +115,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -141,7 +141,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L70" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L72" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -152,7 +152,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -163,7 +163,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L78" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L80" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -174,13 +174,10 @@ The name of the resource group in which to create the Media Services Account. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-storageAccounts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L82" >}}">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L84" >}}">property <b>storageAccounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    isPrimary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountStorageAccount'>AccountStorageAccount</a>[]&gt;;</pre>
 {{% md %}}
 
 One or more `storageAccount` blocks as defined below.
@@ -201,7 +198,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L149" >}}">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L151" >}}">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -210,7 +207,7 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L153" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L155" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -221,7 +218,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L157" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L159" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -232,7 +229,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L161" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L163" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -243,13 +240,10 @@ The name of the resource group in which to create the Media Services Account. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-storageAccounts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L165" >}}">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L167" >}}">property <b>storageAccounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    isPrimary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountStorageAccount'>AccountStorageAccount</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `storageAccount` blocks as defined below.
@@ -258,7 +252,7 @@ One or more `storageAccount` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L127" >}}">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L129" >}}">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -267,7 +261,7 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L131" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L133" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -278,7 +272,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L135" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L137" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -289,7 +283,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L139" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L141" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -300,13 +294,10 @@ The name of the resource group in which to create the Media Services Account. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-storageAccounts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L143" >}}">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mediaservices/account.ts#L145" >}}">property <b>storageAccounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    isPrimary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountStorageAccount'>AccountStorageAccount</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `storageAccount` blocks as defined below.

@@ -34,7 +34,7 @@ title: Module devspace
 
 
 <h2 class="pdoc-module-header" id="Controller">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L54" >}}">class <b>Controller</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L56" >}}">class <b>Controller</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -88,7 +88,7 @@ const testController = new azure.devspace.Controller("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Controller-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L116" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L118" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -105,7 +105,7 @@ Create a Controller resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L63" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L65" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -129,7 +129,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L74" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L76" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -143,7 +143,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-dataPlaneFqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L84" >}}">property <b>dataPlaneFqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L86" >}}">property <b>dataPlaneFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dataPlaneFqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -154,7 +154,7 @@ DNS name for accessing DataPlane services.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-hostSuffix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L88" >}}">property <b>hostSuffix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L90" >}}">property <b>hostSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -177,7 +177,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L92" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L94" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -188,7 +188,7 @@ Specifies the supported location where the DevSpace Controller should exist. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L96" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L98" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -199,7 +199,7 @@ Specifies the name of the DevSpace Controller. Changing this forces a new resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L100" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L102" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -210,13 +210,10 @@ The name of the resource group under which the DevSpace Controller resource has 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L104" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L106" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ControllerSku'>ControllerSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as documented below. Changing this forces a new resource to be created.
@@ -224,7 +221,7 @@ A `sku` block as documented below. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L108" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L110" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -235,7 +232,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-targetContainerHostCredentialsBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L112" >}}">property <b>targetContainerHostCredentialsBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L114" >}}">property <b>targetContainerHostCredentialsBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetContainerHostCredentialsBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -246,7 +243,7 @@ Base64 encoding of `kubeConfigRaw` of Azure Kubernetes Service cluster. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Controller-targetContainerHostResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L116" >}}">property <b>targetContainerHostResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L118" >}}">property <b>targetContainerHostResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetContainerHostResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -270,7 +267,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ControllerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L222" >}}">interface <b>ControllerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L224" >}}">interface <b>ControllerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -279,7 +276,7 @@ The set of arguments for constructing a Controller resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerArgs-hostSuffix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L226" >}}">property <b>hostSuffix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L228" >}}">property <b>hostSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -290,7 +287,7 @@ The host suffix for the DevSpace Controller. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L230" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L232" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -301,7 +298,7 @@ Specifies the supported location where the DevSpace Controller should exist. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L234" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L236" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -312,7 +309,7 @@ Specifies the name of the DevSpace Controller. Changing this forces a new resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L238" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L240" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -323,13 +320,10 @@ The name of the resource group under which the DevSpace Controller resource has 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L242" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L244" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ControllerSku'>ControllerSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as documented below. Changing this forces a new resource to be created.
@@ -337,7 +331,7 @@ A `sku` block as documented below. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L246" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L248" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -348,7 +342,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-targetContainerHostCredentialsBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L250" >}}">property <b>targetContainerHostCredentialsBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L252" >}}">property <b>targetContainerHostCredentialsBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetContainerHostCredentialsBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -359,7 +353,7 @@ Base64 encoding of `kubeConfigRaw` of Azure Kubernetes Service cluster. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerArgs-targetContainerHostResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L254" >}}">property <b>targetContainerHostResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L256" >}}">property <b>targetContainerHostResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetContainerHostResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -371,7 +365,7 @@ The resource id of Azure Kubernetes Service cluster. Changing this forces a new 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ControllerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L180" >}}">interface <b>ControllerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L182" >}}">interface <b>ControllerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -380,7 +374,7 @@ Input properties used for looking up and filtering Controller resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerState-dataPlaneFqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L184" >}}">property <b>dataPlaneFqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L186" >}}">property <b>dataPlaneFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataPlaneFqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -391,7 +385,7 @@ DNS name for accessing DataPlane services.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-hostSuffix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L188" >}}">property <b>hostSuffix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L190" >}}">property <b>hostSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -402,7 +396,7 @@ The host suffix for the DevSpace Controller. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L192" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L194" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -413,7 +407,7 @@ Specifies the supported location where the DevSpace Controller should exist. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L196" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L198" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -424,7 +418,7 @@ Specifies the name of the DevSpace Controller. Changing this forces a new resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L200" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L202" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -435,13 +429,10 @@ The name of the resource group under which the DevSpace Controller resource has 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L204" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L206" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ControllerSku'>ControllerSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as documented below. Changing this forces a new resource to be created.
@@ -449,7 +440,7 @@ A `sku` block as documented below. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L208" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L210" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -460,7 +451,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-targetContainerHostCredentialsBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L212" >}}">property <b>targetContainerHostCredentialsBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L214" >}}">property <b>targetContainerHostCredentialsBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetContainerHostCredentialsBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -471,7 +462,7 @@ Base64 encoding of `kubeConfigRaw` of Azure Kubernetes Service cluster. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ControllerState-targetContainerHostResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L216" >}}">property <b>targetContainerHostResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="devspace/controller.ts#L218" >}}">property <b>targetContainerHostResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetContainerHostResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

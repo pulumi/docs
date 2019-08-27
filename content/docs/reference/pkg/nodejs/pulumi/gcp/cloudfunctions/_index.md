@@ -73,7 +73,7 @@ for more details.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CallbackFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CallbackFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -115,7 +115,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L114" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>bucket: storage.Bucket;</pre>
+<pre class="highlight"><span class='kd'>public </span>bucket: Bucket;</pre>
 {{% md %}}
 
 Bucket and BucketObject storing all the files that comprise the Function.  The contents of
@@ -128,7 +128,7 @@ as well as the package.json file for your pulumi app.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L115" >}}">property <b>bucketObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>bucketObject: storage.BucketObject;</pre>
+<pre class="highlight"><span class='kd'>public </span>bucketObject: <a href='#BucketObject'>BucketObject</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -136,7 +136,7 @@ as well as the package.json file for your pulumi app.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L118" >}}">property <b>function</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>function: cloudfunctions.Function;</pre>
+<pre class="highlight"><span class='kd'>public </span>function: <a href='#Function'>Function</a>;</pre>
 {{% md %}}
 
 Underlying raw resource for the Function that is created.
@@ -157,7 +157,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Function">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L44" >}}">class <b>Function</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L46" >}}">class <b>Function</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -201,7 +201,7 @@ const functionFunction = new gcp.cloudfunctions.Function("function", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L146" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L148" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -218,7 +218,7 @@ Create a Function resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -242,7 +242,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -256,7 +256,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-availableMemoryMb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L74" >}}">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L76" >}}">property <b>availableMemoryMb</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>availableMemoryMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -267,7 +267,7 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L78" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L80" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -278,7 +278,7 @@ Description of the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-entryPoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L82" >}}">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L84" >}}">property <b>entryPoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>entryPoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -289,7 +289,7 @@ Name of the function that will be executed when the Google Cloud Function is tri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-environmentVariables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L86" >}}">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L88" >}}">property <b>environmentVariables</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>environmentVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -300,16 +300,10 @@ A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-eventTrigger">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L90" >}}">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L92" >}}">property <b>eventTrigger</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>eventTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    failurePolicy: {
-        retry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    };
-    resource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>eventTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionEventTrigger'>FunctionEventTrigger</a>&gt;;</pre>
 {{% md %}}
 
 A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `triggerHttp`.
@@ -317,7 +311,7 @@ A source that fires events in response to a condition in another service. Struct
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-httpsTriggerUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L94" >}}">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L96" >}}">property <b>httpsTriggerUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsTriggerUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -340,7 +334,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L98" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L100" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -351,7 +345,7 @@ A set of key/value label pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-maxInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L102" >}}">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L104" >}}">property <b>maxInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -362,7 +356,7 @@ The limit on the maximum number of function instances that may coexist at a give
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L106" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L108" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -373,7 +367,7 @@ A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L110" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L112" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -384,7 +378,7 @@ Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L114" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L116" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -395,7 +389,7 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-runtime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L121" >}}">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L123" >}}">property <b>runtime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -409,7 +403,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-serviceAccountEmail">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L125" >}}">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L127" >}}">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceAccountEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -420,7 +414,7 @@ If provided, the self-provided service account to run the function with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-sourceArchiveBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L129" >}}">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L131" >}}">property <b>sourceArchiveBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceArchiveBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -431,7 +425,7 @@ The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-sourceArchiveObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L133" >}}">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L135" >}}">property <b>sourceArchiveObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceArchiveObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -442,13 +436,10 @@ The source archive object (file) in archive bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-sourceRepository">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L138" >}}">property <b>sourceRepository</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L140" >}}">property <b>sourceRepository</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sourceRepository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    deployedUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sourceRepository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionSourceRepository'>FunctionSourceRepository</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Represents parameters related to source repository where a function is hosted.
@@ -457,7 +448,7 @@ Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L142" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L144" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -468,7 +459,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-triggerHttp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L146" >}}">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L148" >}}">property <b>triggerHttp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>triggerHttp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -562,7 +553,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L114" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>bucket: storage.Bucket;</pre>
+<pre class="highlight"><span class='kd'>public </span>bucket: Bucket;</pre>
 {{% md %}}
 
 Bucket and BucketObject storing all the files that comprise the Function.  The contents of
@@ -575,7 +566,7 @@ as well as the package.json file for your pulumi app.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L115" >}}">property <b>bucketObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>bucketObject: storage.BucketObject;</pre>
+<pre class="highlight"><span class='kd'>public </span>bucketObject: <a href='#BucketObject'>BucketObject</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -583,7 +574,7 @@ as well as the package.json file for your pulumi app.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L118" >}}">property <b>function</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>function: cloudfunctions.Function;</pre>
+<pre class="highlight"><span class='kd'>public </span>function: <a href='#Function'>Function</a>;</pre>
 {{% md %}}
 
 Underlying raw resource for the Function that is created.
@@ -615,7 +606,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getFunction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L25" >}}">function <b>getFunction</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L27" >}}">function <b>getFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -917,7 +908,7 @@ charged as any other execution.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L295" >}}">interface <b>FunctionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L297" >}}">interface <b>FunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -926,7 +917,7 @@ The set of arguments for constructing a Function resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionArgs-availableMemoryMb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L299" >}}">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L301" >}}">property <b>availableMemoryMb</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -937,7 +928,7 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L303" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L305" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -948,7 +939,7 @@ Description of the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-entryPoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L307" >}}">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L309" >}}">property <b>entryPoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>entryPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -959,7 +950,7 @@ Name of the function that will be executed when the Google Cloud Function is tri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-environmentVariables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L311" >}}">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L313" >}}">property <b>environmentVariables</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -970,16 +961,10 @@ A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-eventTrigger">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L315" >}}">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L317" >}}">property <b>eventTrigger</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    failurePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionEventTrigger'>FunctionEventTrigger</a>&gt;;</pre>
 {{% md %}}
 
 A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `triggerHttp`.
@@ -987,7 +972,7 @@ A source that fires events in response to a condition in another service. Struct
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-httpsTriggerUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L319" >}}">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L321" >}}">property <b>httpsTriggerUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsTriggerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -998,7 +983,7 @@ URL which triggers function execution. Returned only if `triggerHttp` is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L323" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L325" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1009,7 +994,7 @@ A set of key/value label pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-maxInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L327" >}}">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L329" >}}">property <b>maxInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1020,7 +1005,7 @@ The limit on the maximum number of function instances that may coexist at a give
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L331" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L333" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1031,7 +1016,7 @@ A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L335" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L337" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1042,7 +1027,7 @@ Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L339" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L341" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1053,7 +1038,7 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-runtime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L346" >}}">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L348" >}}">property <b>runtime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1067,7 +1052,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L350" >}}">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L352" >}}">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1078,7 +1063,7 @@ If provided, the self-provided service account to run the function with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-sourceArchiveBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L354" >}}">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L356" >}}">property <b>sourceArchiveBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceArchiveBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1089,7 +1074,7 @@ The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-sourceArchiveObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L358" >}}">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L360" >}}">property <b>sourceArchiveObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceArchiveObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1100,13 +1085,10 @@ The source archive object (file) in archive bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-sourceRepository">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L363" >}}">property <b>sourceRepository</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L365" >}}">property <b>sourceRepository</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sourceRepository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    deployedUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sourceRepository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionSourceRepository'>FunctionSourceRepository</a>&gt;;</pre>
 {{% md %}}
 
 Represents parameters related to source repository where a function is hosted.
@@ -1115,7 +1097,7 @@ Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L367" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L369" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1126,7 +1108,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-triggerHttp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L371" >}}">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L373" >}}">property <b>triggerHttp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerHttp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1138,7 +1120,7 @@ Boolean variable. Any HTTP request (of a supported type) to the endpoint will tr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L213" >}}">interface <b>FunctionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L215" >}}">interface <b>FunctionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1147,7 +1129,7 @@ Input properties used for looking up and filtering Function resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionState-availableMemoryMb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L217" >}}">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L219" >}}">property <b>availableMemoryMb</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1158,7 +1140,7 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L221" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L223" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1169,7 +1151,7 @@ Description of the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-entryPoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L225" >}}">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L227" >}}">property <b>entryPoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>entryPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1180,7 +1162,7 @@ Name of the function that will be executed when the Google Cloud Function is tri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-environmentVariables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L229" >}}">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L231" >}}">property <b>environmentVariables</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1191,16 +1173,10 @@ A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-eventTrigger">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L233" >}}">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L235" >}}">property <b>eventTrigger</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    failurePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionEventTrigger'>FunctionEventTrigger</a>&gt;;</pre>
 {{% md %}}
 
 A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `triggerHttp`.
@@ -1208,7 +1184,7 @@ A source that fires events in response to a condition in another service. Struct
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-httpsTriggerUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L237" >}}">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L239" >}}">property <b>httpsTriggerUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsTriggerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1219,7 +1195,7 @@ URL which triggers function execution. Returned only if `triggerHttp` is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L241" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L243" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1230,7 +1206,7 @@ A set of key/value label pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-maxInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L245" >}}">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L247" >}}">property <b>maxInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1241,7 +1217,7 @@ The limit on the maximum number of function instances that may coexist at a give
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L249" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L251" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1252,7 +1228,7 @@ A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L253" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L255" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1263,7 +1239,7 @@ Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L257" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L259" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1274,7 +1250,7 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-runtime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L264" >}}">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L266" >}}">property <b>runtime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1288,7 +1264,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-serviceAccountEmail">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L268" >}}">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L270" >}}">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1299,7 +1275,7 @@ If provided, the self-provided service account to run the function with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-sourceArchiveBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L272" >}}">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L274" >}}">property <b>sourceArchiveBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceArchiveBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1310,7 +1286,7 @@ The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-sourceArchiveObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L276" >}}">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L278" >}}">property <b>sourceArchiveObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceArchiveObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1321,13 +1297,10 @@ The source archive object (file) in archive bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-sourceRepository">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L281" >}}">property <b>sourceRepository</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L283" >}}">property <b>sourceRepository</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sourceRepository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    deployedUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sourceRepository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionSourceRepository'>FunctionSourceRepository</a>&gt;;</pre>
 {{% md %}}
 
 Represents parameters related to source repository where a function is hosted.
@@ -1336,7 +1309,7 @@ Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L285" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L287" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1347,7 +1320,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-triggerHttp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L289" >}}">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/function.ts#L291" >}}">property <b>triggerHttp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerHttp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1359,7 +1332,7 @@ Boolean variable. Any HTTP request (of a supported type) to the endpoint will tr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L45" >}}">interface <b>GetFunctionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L47" >}}">interface <b>GetFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1368,7 +1341,7 @@ A collection of arguments for invoking getFunction.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetFunctionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1379,7 +1352,7 @@ The name of a Cloud Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L54" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L56" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1391,7 +1364,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L59" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L61" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1404,7 +1377,7 @@ is not provided, the provider region is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFunctionResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L65" >}}">interface <b>GetFunctionResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L67" >}}">interface <b>GetFunctionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1413,7 +1386,7 @@ A collection of values returned by getFunction.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetFunctionResult-availableMemoryMb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L69" >}}">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L71" >}}">property <b>availableMemoryMb</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableMemoryMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1424,7 +1397,7 @@ Available memory (in MB) to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L73" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L75" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1435,7 +1408,7 @@ Description of the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-entryPoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L77" >}}">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L79" >}}">property <b>entryPoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>entryPoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1446,7 +1419,7 @@ Name of a JavaScript function that will be executed when the Google Cloud Functi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-environmentVariables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L78" >}}">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L80" >}}">property <b>environmentVariables</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environmentVariables: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1454,16 +1427,10 @@ Name of a JavaScript function that will be executed when the Google Cloud Functi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-eventTriggers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L82" >}}">property <b>eventTriggers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L84" >}}">property <b>eventTriggers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventTriggers: {
-    eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    failurePolicies: {
-        retry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    }[];
-    resource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>eventTriggers: <a href='#GetFunctionEventTrigger'>GetFunctionEventTrigger</a>[];</pre>
 {{% md %}}
 
 A source that fires events in response to a condition in another service. Structure is documented below.
@@ -1471,7 +1438,7 @@ A source that fires events in response to a condition in another service. Struct
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-httpsTriggerUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L86" >}}">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L88" >}}">property <b>httpsTriggerUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsTriggerUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1482,7 +1449,7 @@ If function is triggered by HTTP, trigger URL is set here.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L125" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L127" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1493,7 +1460,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L90" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L92" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1504,7 +1471,7 @@ A map of labels applied to this function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-maxInstances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L91" >}}">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L93" >}}">property <b>maxInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxInstances: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1512,7 +1479,7 @@ A map of labels applied to this function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L95" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L97" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1523,7 +1490,7 @@ The name of the Cloud Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L96" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L98" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1531,7 +1498,7 @@ The name of the Cloud Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L97" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L99" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1539,7 +1506,7 @@ The name of the Cloud Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-runtime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L101" >}}">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L103" >}}">property <b>runtime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runtime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1550,7 +1517,7 @@ The runtime in which the function is running.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-serviceAccountEmail">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L102" >}}">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L104" >}}">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceAccountEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1558,7 +1525,7 @@ The runtime in which the function is running.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-sourceArchiveBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L106" >}}">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L108" >}}">property <b>sourceArchiveBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceArchiveBucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1569,7 +1536,7 @@ The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-sourceArchiveObject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L110" >}}">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L112" >}}">property <b>sourceArchiveObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceArchiveObject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1580,18 +1547,15 @@ The source archive object (file) in archive bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-sourceRepositories">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L111" >}}">property <b>sourceRepositories</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L113" >}}">property <b>sourceRepositories</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sourceRepositories: {
-    deployedUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>sourceRepositories: <a href='#GetFunctionSourceRepository'>GetFunctionSourceRepository</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L115" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L117" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1602,7 +1566,7 @@ Function execution timeout (in seconds).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-triggerBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L116" >}}">property <b>triggerBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L118" >}}">property <b>triggerBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerBucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1610,7 +1574,7 @@ Function execution timeout (in seconds).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-triggerHttp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L120" >}}">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L122" >}}">property <b>triggerHttp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerHttp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1621,7 +1585,7 @@ If function is triggered by HTTP, this boolean is set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFunctionResult-triggerTopic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L121" >}}">property <b>triggerTopic</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/getFunction.ts#L123" >}}">property <b>triggerTopic</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerTopic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

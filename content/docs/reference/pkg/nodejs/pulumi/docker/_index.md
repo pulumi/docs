@@ -101,7 +101,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Container(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ContainerArgs'>ContainerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Container(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ContainerArgs'>ContainerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 
 Create a Container resource with the given unique name, arguments, and options.
@@ -118,7 +118,7 @@ Create a Container resource with the given unique name, arguments, and options.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ContainerState'>ContainerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Container'>Container</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ContainerState'>ContainerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#Container'>Container</a></pre>
 
 
 Get an existing Container resource's state with the given name, ID, and optional extra
@@ -814,7 +814,7 @@ Azure Container Instances.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Image(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ImageArgs'>ImageArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Image(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ImageArgs'>ImageArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -927,7 +927,7 @@ const privateNetwork = new docker.Network("private_network", {});
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Network(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#NetworkArgs'>NetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Network(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#NetworkArgs'>NetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 
 Create a Network resource with the given unique name, arguments, and options.
@@ -944,7 +944,7 @@ Create a Network resource with the given unique name, arguments, and options.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NetworkState'>NetworkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Network'>Network</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NetworkState'>NetworkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#Network'>Network</a></pre>
 
 
 Get an existing Network resource's state with the given name, ID, and optional extra
@@ -1163,7 +1163,7 @@ construction to achieve fine-grained programmatic control over provider settings
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>ResourceOptions</a>)</pre>
 
 
 Create a Provider resource with the given unique name, arguments, and options.
@@ -1267,7 +1267,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RemoteImage(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RemoteImageArgs'>RemoteImageArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RemoteImage(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RemoteImageArgs'>RemoteImageArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 
 Create a RemoteImage resource with the given unique name, arguments, and options.
@@ -1284,7 +1284,7 @@ Create a RemoteImage resource with the given unique name, arguments, and options
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RemoteImageState'>RemoteImageState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RemoteImage'>RemoteImage</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RemoteImageState'>RemoteImageState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#RemoteImage'>RemoteImage</a></pre>
 
 
 Get an existing RemoteImage resource's state with the given name, ID, and optional extra
@@ -1426,7 +1426,7 @@ const sharedVolume = new docker.Volume("shared_volume", {});
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Volume(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#VolumeArgs'>VolumeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Volume(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#VolumeArgs'>VolumeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
 
 
 Create a Volume resource with the given unique name, arguments, and options.
@@ -1443,7 +1443,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeState'>VolumeState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Volume'>Volume</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeState'>VolumeState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>): <a href='#Volume'>Volume</a></pre>
 
 
 Get an existing Volume resource's state with the given name, ID, and optional extra
@@ -1554,12 +1554,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="buildAndPushImage">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="docker.ts#L139" >}}">function <b>buildAndPushImage</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="docker.ts#L153" >}}">function <b>buildAndPushImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>buildAndPushImage(imageName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#DockerBuild'>DockerBuild</a>&gt;, repositoryUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, logResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>, connectToRegistry?: () => <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Registry'>Registry</a>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>buildAndPushImage(imageName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#DockerBuild'>DockerBuild</a>&gt;, repositoryUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, logResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>, connectToRegistry?: () => <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Registry'>Registry</a>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
 
 
 buildAndPushImage will build and push the Dockerfile and context from [pathOrBuild] into the
@@ -2815,7 +2815,7 @@ DockerBuild may be used to specify detailed instructions about how to build a co
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DockerBuild-args">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L64" >}}">property <b>args</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L66" >}}">property <b>args</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>args?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;&gt;&gt;;</pre>
@@ -2828,7 +2828,7 @@ inside the `RUN` instruction.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DockerBuild-cacheFrom">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L72" >}}">property <b>cacheFrom</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L74" >}}">property <b>cacheFrom</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cacheFrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <a href='#CacheFrom'>CacheFrom</a>&gt;;</pre>
@@ -2857,7 +2857,7 @@ Pulumi is evaluating.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DockerBuild-dockerfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L58" >}}">property <b>dockerfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L59" >}}">property <b>dockerfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dockerfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2865,6 +2865,30 @@ Pulumi is evaluating.
 
 dockerfile may be used to override the default Dockerfile name and/or location.  By default,
 it is assumed to be a file named Dockerfile in the root of the build context.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="DockerBuild-env">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L86" >}}">property <b>env</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>env?: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Environment variables to set on the invocation of `docker build`, for example to support
+`DOCKER_BUILDKIT=1 docker build`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="DockerBuild-extraOptions">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="docker.ts#L80" >}}">property <b>extraOptions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>extraOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{% md %}}
+
+An optional catch-all string to provide extra CLI options to the docker build command.  For
+example, use to specify `--network host`.
 
 {{% /md %}}
 </div>
@@ -2882,7 +2906,7 @@ Arguments for constructing an Image resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="docker" path="image.ts#L35" >}}">property <b>build</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>build: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | docker.DockerBuild&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>build: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#DockerBuild'>DockerBuild</a>&gt;;</pre>
 {{% md %}}
 
 The Docker build context, as a folder path or a detailed DockerBuild object.

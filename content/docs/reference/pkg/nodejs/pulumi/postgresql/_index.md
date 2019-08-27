@@ -138,7 +138,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -198,7 +198,7 @@ Character set encoding to use in the new database
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -297,7 +297,7 @@ The name of the template from which to create the new database
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -371,7 +371,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -406,7 +406,7 @@ The database to grant default privileges for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -473,7 +473,7 @@ The database schema to set default privileges for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -539,7 +539,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -574,7 +574,7 @@ Which database to create the extension on. Defaults to provider database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -608,7 +608,7 @@ Sets the schema of an extension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -692,7 +692,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -727,7 +727,7 @@ The database to grant privileges on for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -783,7 +783,7 @@ The database schema to grant privileges on for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -805,7 +805,7 @@ deployments.
 The provider type for the postgresql package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown.
 
@@ -828,7 +828,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -852,7 +852,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -864,7 +864,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -952,7 +952,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1049,7 +1049,7 @@ behavior of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1182,7 +1182,7 @@ value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1287,7 +1287,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1311,7 +1311,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1375,7 +1375,7 @@ policy block supports fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

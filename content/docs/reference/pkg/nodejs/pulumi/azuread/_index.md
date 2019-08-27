@@ -242,7 +242,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L98" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationAppRole'>outputs.ApplicationAppRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationAppRole'>ApplicationAppRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -342,7 +342,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L130" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOauth2Permission'>outputs.ApplicationOauth2Permission</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -386,7 +386,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L146" >}}">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccess'>outputs.ApplicationRequiredResourceAccess</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -878,7 +878,7 @@ deployments.
 The provider type for the azuread package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown.
 
@@ -1091,7 +1091,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="servicePrincipal.ts#L82" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ServicePrincipalOauth2Permission'>outputs.ServicePrincipalOauth2Permission</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -1789,7 +1789,7 @@ The set of arguments for constructing a Application resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L275" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>inputs.ApplicationAppRole</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationAppRole'>ApplicationAppRole</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -1866,7 +1866,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L303" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>inputs.ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -1899,7 +1899,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L315" >}}">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>inputs.ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -2099,7 +2099,7 @@ Input properties used for looking up and filtering Application resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L213" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>inputs.ApplicationAppRole</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationAppRole'>ApplicationAppRole</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -2187,7 +2187,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L245" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>inputs.ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -2231,7 +2231,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="application.ts#L261" >}}">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>inputs.ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -2263,7 +2263,7 @@ A collection of arguments for invoking getApplication.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getApplication.ts#L52" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationAppRole'>inputs.GetApplicationAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='#GetApplicationAppRole'>GetApplicationAppRole</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2282,7 +2282,7 @@ Specifies the name of the Application within Azure Active Directory.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getApplication.ts#L57" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOauth2Permission'>inputs.GetApplicationOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='#GetApplicationOauth2Permission'>GetApplicationOauth2Permission</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2311,7 +2311,7 @@ A collection of values returned by getApplication.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getApplication.ts#L71" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationAppRole'>outputs.GetApplicationAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles: <a href='#GetApplicationAppRole'>GetApplicationAppRole</a>[];</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -2404,7 +2404,7 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getApplication.ts#L97" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOauth2Permission'>outputs.GetApplicationOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='#GetApplicationOauth2Permission'>GetApplicationOauth2Permission</a>[];</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -2437,7 +2437,7 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getApplication.ts#L109" >}}">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccess'>outputs.GetApplicationRequiredResourceAccess</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>requiredResourceAccesses: <a href='#GetApplicationRequiredResourceAccess'>GetApplicationRequiredResourceAccess</a>[];</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -2512,7 +2512,7 @@ A collection of values returned by getDomains.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getDomains.ts#L70" >}}">property <b>domains</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetDomainsDomain'>outputs.GetDomainsDomain</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>domains: <a href='#GetDomainsDomain'>GetDomainsDomain</a>[];</pre>
 {{% md %}}
 
 One or more `domain` blocks as defined below.
@@ -2728,7 +2728,7 @@ A collection of arguments for invoking getServicePrincipal.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getServicePrincipal.ts#L76" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalAppRole'>inputs.GetServicePrincipalAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='#GetServicePrincipalAppRole'>GetServicePrincipalAppRole</a>[];</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -2761,7 +2761,7 @@ The Display Name of the Azure AD Application associated with this Service Princi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getServicePrincipal.ts#L88" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission'>inputs.GetServicePrincipalOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='#GetServicePrincipalOauth2Permission'>GetServicePrincipalOauth2Permission</a>[];</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -2793,7 +2793,7 @@ A collection of values returned by getServicePrincipal.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getServicePrincipal.ts#L99" >}}">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole'>outputs.GetServicePrincipalAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles: <a href='#GetServicePrincipalAppRole'>GetServicePrincipalAppRole</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2831,7 +2831,7 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="getServicePrincipal.ts#L105" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission'>outputs.GetServicePrincipalOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='#GetServicePrincipalOauth2Permission'>GetServicePrincipalOauth2Permission</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3310,7 +3310,7 @@ The ID of the Azure AD Application for which to create a Service Principal.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="servicePrincipal.ts#L178" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>inputs.ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -3527,7 +3527,7 @@ The Display Name of the Azure Active Directory Application associated with this 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="servicePrincipal.ts#L152" >}}">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>inputs.ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.

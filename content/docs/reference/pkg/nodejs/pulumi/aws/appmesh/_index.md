@@ -46,7 +46,7 @@ title: Module appmesh
 
 
 <h2 class="pdoc-module-header" id="Mesh">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L38" >}}">class <b>Mesh</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L40" >}}">class <b>Mesh</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -84,7 +84,7 @@ const simple = new aws.appmesh.Mesh("simple", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Mesh-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L88" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -101,7 +101,7 @@ Create a Mesh resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -125,7 +125,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L68" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L70" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -150,7 +150,7 @@ The ARN of the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L72" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L74" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -173,7 +173,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L76" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L78" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -184,7 +184,7 @@ The last update date of the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L80" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L82" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -195,14 +195,10 @@ The name to use for the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L84" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L86" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    egressFilter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MeshSpec'>MeshSpec</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The service mesh specification to apply.
@@ -210,7 +206,7 @@ The service mesh specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Mesh-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L88" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L90" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -234,7 +230,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Route">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L67" >}}">class <b>Route</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L69" >}}">class <b>Route</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -301,7 +297,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L125" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -318,7 +314,7 @@ Create a Route resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L76" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L78" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -342,7 +338,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L87" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L89" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -356,7 +352,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L97" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L99" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -367,7 +363,7 @@ The ARN of the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L101" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L103" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -390,7 +386,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L105" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L107" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -401,7 +397,7 @@ The last update date of the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L109" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L111" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -412,7 +408,7 @@ The name of the service mesh in which to create the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L115" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -423,30 +419,10 @@ The name to use for the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L117" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L119" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    httpRoute: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        action: {
-            weightedTargets: {
-                virtualNode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-                weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            }[];
-        };
-        match: {
-            prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-    tcpRoute: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        action: {
-            weightedTargets: {
-                virtualNode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-                weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            }[];
-        };
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RouteSpec'>RouteSpec</a>&gt;;</pre>
 {{% md %}}
 
 The route specification to apply.
@@ -454,7 +430,7 @@ The route specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L121" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L123" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -477,7 +453,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Route-virtualRouterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L125" >}}">property <b>virtualRouterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L127" >}}">property <b>virtualRouterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>virtualRouterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -489,7 +465,7 @@ The name of the virtual router in which to create the route.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNode">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L161" >}}">class <b>VirtualNode</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L163" >}}">class <b>VirtualNode</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -650,7 +626,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNode-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L215" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L217" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -667,7 +643,7 @@ Create a VirtualNode resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L170" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L172" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -691,7 +667,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L181" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L183" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -705,7 +681,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L191" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L193" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -716,7 +692,7 @@ The ARN of the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L195" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L197" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -739,7 +715,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L199" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L201" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -750,7 +726,7 @@ The last update date of the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L203" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L205" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -761,7 +737,7 @@ The name of the service mesh in which to create the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L207" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L209" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -772,48 +748,10 @@ The name to use for the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L211" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L213" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    backends: {
-        virtualService: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            virtualServiceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    }[];
-    listener: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        healthCheck: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            healthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            intervalMillis: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            timeoutMillis: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            unhealthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-        portMapping: {
-            port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-    logging: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        accessLog: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-                path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            };
-        };
-    };
-    serviceDiscovery: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        awsCloudMap: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            attributes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-            namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        dns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VirtualNodeSpec'>VirtualNodeSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual node specification to apply.
@@ -821,7 +759,7 @@ The virtual node specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNode-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L215" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L217" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -845,7 +783,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualRouter">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L43" >}}">class <b>VirtualRouter</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L45" >}}">class <b>VirtualRouter</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -888,7 +826,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualRouter-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -905,7 +843,7 @@ Create a VirtualRouter resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L54" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -929,7 +867,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L65" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -943,7 +881,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L73" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L75" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -954,7 +892,7 @@ The ARN of the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L77" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L79" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -977,7 +915,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L81" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L83" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -988,7 +926,7 @@ The last update date of the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L85" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L87" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -999,7 +937,7 @@ The name of the service mesh in which to create the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1010,17 +948,10 @@ The name to use for the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L93" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L95" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    listener: {
-        portMapping: {
-            port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VirtualRouterSpec'>VirtualRouterSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual router specification to apply.
@@ -1028,7 +959,7 @@ The virtual router specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouter-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L97" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L99" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1052,7 +983,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualService">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L50" >}}">class <b>VirtualService</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L52" >}}">class <b>VirtualService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1102,7 +1033,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualService-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L104" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L106" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1119,7 +1050,7 @@ Create a VirtualService resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1143,7 +1074,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1157,7 +1088,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L80" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L82" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1168,7 +1099,7 @@ The ARN of the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L84" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L86" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1191,7 +1122,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L88" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L90" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1202,7 +1133,7 @@ The last update date of the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L92" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L94" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1213,7 +1144,7 @@ The name of the service mesh in which to create the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L96" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L98" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1224,19 +1155,10 @@ The name to use for the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L100" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L102" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    provider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        virtualNode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            virtualNodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        virtualRouter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            virtualRouterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VirtualServiceSpec'>VirtualServiceSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual service specification to apply.
@@ -1244,7 +1166,7 @@ The virtual service specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualService-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L104" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L106" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1268,7 +1190,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MeshArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L161" >}}">interface <b>MeshArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L163" >}}">interface <b>MeshArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1277,7 +1199,7 @@ The set of arguments for constructing a Mesh resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MeshArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L165" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L167" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1288,14 +1210,10 @@ The name to use for the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshArgs-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L169" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L171" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    egressFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MeshSpec'>MeshSpec</a>&gt;;</pre>
 {{% md %}}
 
 The service mesh specification to apply.
@@ -1303,7 +1221,7 @@ The service mesh specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L173" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L175" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1315,7 +1233,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MeshState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L131" >}}">interface <b>MeshState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L133" >}}">interface <b>MeshState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1324,7 +1242,7 @@ Input properties used for looking up and filtering Mesh resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MeshState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L135" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L137" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1335,7 +1253,7 @@ The ARN of the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L139" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L141" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1346,7 +1264,7 @@ The creation date of the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshState-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L143" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L145" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1357,7 +1275,7 @@ The last update date of the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L147" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1368,14 +1286,10 @@ The name to use for the service mesh.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshState-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L151" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L153" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    egressFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MeshSpec'>MeshSpec</a>&gt;;</pre>
 {{% md %}}
 
 The service mesh specification to apply.
@@ -1383,7 +1297,7 @@ The service mesh specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MeshState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L155" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/mesh.ts#L157" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1395,7 +1309,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L219" >}}">interface <b>RouteArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L221" >}}">interface <b>RouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1404,7 +1318,7 @@ The set of arguments for constructing a Route resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RouteArgs-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L223" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L225" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1415,7 +1329,7 @@ The name of the service mesh in which to create the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L227" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L229" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1426,30 +1340,10 @@ The name to use for the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L231" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L233" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    httpRoute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            weightedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                virtualNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-                weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            }&gt;[]&gt;;
-        }&gt;;
-        match: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    tcpRoute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            weightedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                virtualNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-                weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            }&gt;[]&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RouteSpec'>RouteSpec</a>&gt;;</pre>
 {{% md %}}
 
 The route specification to apply.
@@ -1457,7 +1351,7 @@ The route specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L235" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L237" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1468,7 +1362,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-virtualRouterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L239" >}}">property <b>virtualRouterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L241" >}}">property <b>virtualRouterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>virtualRouterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1480,7 +1374,7 @@ The name of the virtual router in which to create the route.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L181" >}}">interface <b>RouteState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L183" >}}">interface <b>RouteState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1489,7 +1383,7 @@ Input properties used for looking up and filtering Route resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RouteState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L185" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L187" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1500,7 +1394,7 @@ The ARN of the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L189" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L191" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1511,7 +1405,7 @@ The creation date of the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L193" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L195" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1522,7 +1416,7 @@ The last update date of the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L197" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L199" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1533,7 +1427,7 @@ The name of the service mesh in which to create the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L201" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L203" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1544,30 +1438,10 @@ The name to use for the route.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L205" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L207" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    httpRoute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            weightedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                virtualNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-                weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            }&gt;[]&gt;;
-        }&gt;;
-        match: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    tcpRoute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            weightedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                virtualNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-                weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            }&gt;[]&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RouteSpec'>RouteSpec</a>&gt;;</pre>
 {{% md %}}
 
 The route specification to apply.
@@ -1575,7 +1449,7 @@ The route specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L209" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L211" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1586,7 +1460,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouteState-virtualRouterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L213" >}}">property <b>virtualRouterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/route.ts#L215" >}}">property <b>virtualRouterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>virtualRouterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1598,7 +1472,7 @@ The name of the virtual router in which to create the route.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNodeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L300" >}}">interface <b>VirtualNodeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L302" >}}">interface <b>VirtualNodeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1607,7 +1481,7 @@ The set of arguments for constructing a VirtualNode resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNodeArgs-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L304" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L306" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1618,7 +1492,7 @@ The name of the service mesh in which to create the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L308" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L310" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1629,48 +1503,10 @@ The name to use for the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeArgs-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L312" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L314" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        virtualService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            virtualServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;[]&gt;;
-    listener: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            healthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            intervalMillis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            timeoutMillis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            unhealthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-        portMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        accessLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            file: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            }&gt;;
-        }&gt;;
-    }&gt;;
-    serviceDiscovery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        awsCloudMap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-            namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        dns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualNodeSpec'>VirtualNodeSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual node specification to apply.
@@ -1678,7 +1514,7 @@ The virtual node specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L316" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L318" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1690,7 +1526,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNodeState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L266" >}}">interface <b>VirtualNodeState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L268" >}}">interface <b>VirtualNodeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1699,7 +1535,7 @@ Input properties used for looking up and filtering VirtualNode resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNodeState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L270" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L272" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1710,7 +1546,7 @@ The ARN of the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L274" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L276" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1721,7 +1557,7 @@ The creation date of the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeState-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L278" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L280" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1732,7 +1568,7 @@ The last update date of the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeState-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L282" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L284" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1743,7 +1579,7 @@ The name of the service mesh in which to create the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L286" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L288" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1754,48 +1590,10 @@ The name to use for the virtual node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeState-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L290" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L292" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        virtualService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            virtualServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;[]&gt;;
-    listener: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            healthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            intervalMillis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            timeoutMillis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            unhealthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-        portMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        accessLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            file: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            }&gt;;
-        }&gt;;
-    }&gt;;
-    serviceDiscovery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        awsCloudMap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-            namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        dns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualNodeSpec'>VirtualNodeSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual node specification to apply.
@@ -1803,7 +1601,7 @@ The virtual node specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualNodeState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L294" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualNode.ts#L296" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1815,7 +1613,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualRouterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L182" >}}">interface <b>VirtualRouterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L184" >}}">interface <b>VirtualRouterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1824,7 +1622,7 @@ The set of arguments for constructing a VirtualRouter resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualRouterArgs-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L186" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L188" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1835,7 +1633,7 @@ The name of the service mesh in which to create the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L190" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L192" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1846,17 +1644,10 @@ The name to use for the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterArgs-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L194" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L196" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    listener: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        portMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualRouterSpec'>VirtualRouterSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual router specification to apply.
@@ -1864,7 +1655,7 @@ The virtual router specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L198" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L200" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1876,7 +1667,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualRouterState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L148" >}}">interface <b>VirtualRouterState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L150" >}}">interface <b>VirtualRouterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1885,7 +1676,7 @@ Input properties used for looking up and filtering VirtualRouter resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualRouterState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L152" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L154" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1896,7 +1687,7 @@ The ARN of the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L156" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L158" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1907,7 +1698,7 @@ The creation date of the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterState-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L160" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L162" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1918,7 +1709,7 @@ The last update date of the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterState-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L164" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L166" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1929,7 +1720,7 @@ The name of the service mesh in which to create the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L168" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L170" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1940,17 +1731,10 @@ The name to use for the virtual router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterState-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L172" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L174" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    listener: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        portMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualRouterSpec'>VirtualRouterSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual router specification to apply.
@@ -1958,7 +1742,7 @@ The virtual router specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualRouterState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L176" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualRouter.ts#L178" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1970,7 +1754,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L189" >}}">interface <b>VirtualServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L191" >}}">interface <b>VirtualServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1979,7 +1763,7 @@ The set of arguments for constructing a VirtualService resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualServiceArgs-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L193" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L195" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1990,7 +1774,7 @@ The name of the service mesh in which to create the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L197" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L199" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2001,19 +1785,10 @@ The name to use for the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceArgs-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L201" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L203" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        virtualNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            virtualNodeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        virtualRouter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            virtualRouterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualServiceSpec'>VirtualServiceSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual service specification to apply.
@@ -2021,7 +1796,7 @@ The virtual service specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L205" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L207" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2033,7 +1808,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualServiceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L155" >}}">interface <b>VirtualServiceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L157" >}}">interface <b>VirtualServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2042,7 +1817,7 @@ Input properties used for looking up and filtering VirtualService resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualServiceState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L159" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L161" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2053,7 +1828,7 @@ The ARN of the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L163" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L165" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2064,7 +1839,7 @@ The creation date of the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceState-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L167" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L169" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2075,7 +1850,7 @@ The last update date of the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceState-meshName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L171" >}}">property <b>meshName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L173" >}}">property <b>meshName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meshName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2086,7 +1861,7 @@ The name of the service mesh in which to create the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L175" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L177" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2097,19 +1872,10 @@ The name to use for the virtual service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceState-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L179" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L181" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        virtualNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            virtualNodeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        virtualRouter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            virtualRouterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#VirtualServiceSpec'>VirtualServiceSpec</a>&gt;;</pre>
 {{% md %}}
 
 The virtual service specification to apply.
@@ -2117,7 +1883,7 @@ The virtual service specification to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServiceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L183" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appmesh/virtualService.ts#L185" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

@@ -43,7 +43,7 @@ title: Module monitoring
 
 
 <h2 class="pdoc-module-header" id="AlertPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L49" >}}">class <b>AlertPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L51" >}}">class <b>AlertPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -91,7 +91,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AlertPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L86" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L88" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +108,7 @@ Create a AlertPolicy resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L58" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -132,7 +132,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L69" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -146,7 +146,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-combiner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L76" >}}">property <b>combiner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L78" >}}">property <b>combiner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>combiner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -154,66 +154,23 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L77" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L79" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    conditionAbsent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        aggregations: {
-            alignmentPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            crossSeriesReducer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            groupByFields: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-            perSeriesAligner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-        duration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        trigger: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            percent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-    };
-    conditionThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        aggregations: {
-            alignmentPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            crossSeriesReducer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            groupByFields: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-            perSeriesAligner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-        comparison: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        denominatorAggregations: {
-            alignmentPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            crossSeriesReducer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            groupByFields: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-            perSeriesAligner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-        denominatorFilter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        duration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        thresholdValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        trigger: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            percent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-    };
-    displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertPolicyCondition'>AlertPolicyCondition</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-creationRecord">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L78" >}}">property <b>creationRecord</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L80" >}}">property <b>creationRecord</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>creationRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    mutateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    mutatedBy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>creationRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertPolicyCreationRecord'>AlertPolicyCreationRecord</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L79" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L81" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -221,18 +178,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-documentation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L80" >}}">property <b>documentation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L82" >}}">property <b>documentation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>documentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    mimeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>documentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertPolicyDocumentation'>AlertPolicyDocumentation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L81" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L83" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -252,7 +206,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L82" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L84" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -260,7 +214,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L83" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L85" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -268,7 +222,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-notificationChannels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L84" >}}">property <b>notificationChannels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L86" >}}">property <b>notificationChannels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notificationChannels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -276,7 +230,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L85" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L87" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -296,7 +250,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicy-userLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L86" >}}">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L88" >}}">property <b>userLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -305,7 +259,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L52" >}}">class <b>Group</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L54" >}}">class <b>Group</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -356,7 +310,7 @@ const subgroup = new gcp.monitoring.Group("subgroup", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L88" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -373,7 +327,7 @@ Create a Group resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L61" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L63" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -397,7 +351,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L72" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L74" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -411,7 +365,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L79" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L81" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -419,7 +373,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L80" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L82" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -439,7 +393,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isCluster">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L81" >}}">property <b>isCluster</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L83" >}}">property <b>isCluster</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -447,7 +401,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L82" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L84" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -455,7 +409,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-parentName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L83" >}}">property <b>parentName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L85" >}}">property <b>parentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parentName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -463,7 +417,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L88" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L90" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -488,7 +442,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotificationChannel">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L51" >}}">class <b>NotificationChannel</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L53" >}}">class <b>NotificationChannel</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -539,7 +493,7 @@ const basic = new gcp.monitoring.NotificationChannel("basic", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotificationChannel-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L90" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L92" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -556,7 +510,7 @@ Create a NotificationChannel resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L60" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -580,7 +534,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L71" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -594,7 +548,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L78" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L80" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -602,7 +556,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L79" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L81" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -610,7 +564,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L80" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L82" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -630,7 +584,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L81" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L83" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -638,7 +592,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L82" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L84" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -646,7 +600,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L87" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L89" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -658,7 +612,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L88" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L90" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -678,7 +632,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-userLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L89" >}}">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L91" >}}">property <b>userLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -686,7 +640,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannel-verificationStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L90" >}}">property <b>verificationStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L92" >}}">property <b>verificationStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>verificationStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -695,7 +649,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UptimeCheckConfig">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L69" >}}">class <b>UptimeCheckConfig</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L71" >}}">class <b>UptimeCheckConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -763,7 +717,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L113" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L115" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -780,7 +734,7 @@ Create a UptimeCheckConfig resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L78" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L80" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -804,7 +758,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L89" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L91" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -818,17 +772,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-contentMatchers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L96" >}}">property <b>contentMatchers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L98" >}}">property <b>contentMatchers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>contentMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>contentMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#UptimeCheckConfigContentMatcher'>UptimeCheckConfigContentMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L97" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L99" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -836,20 +788,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-httpCheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L98" >}}">property <b>httpCheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L100" >}}">property <b>httpCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>httpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    authInfo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    headers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    maskHeaders: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    useSsl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>httpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#UptimeCheckConfigHttpCheck'>UptimeCheckConfigHttpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -866,21 +808,15 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-internalCheckers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L99" >}}">property <b>internalCheckers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L101" >}}">property <b>internalCheckers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>internalCheckers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    gcpZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    network: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    peerProjectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>internalCheckers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#UptimeCheckConfigInternalChecker'>UptimeCheckConfigInternalChecker</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-isInternal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L100" >}}">property <b>isInternal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L102" >}}">property <b>isInternal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isInternal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -888,18 +824,15 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-monitoredResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L101" >}}">property <b>monitoredResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L103" >}}">property <b>monitoredResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>monitoredResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>monitoredResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#UptimeCheckConfigMonitoredResource'>UptimeCheckConfigMonitoredResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L102" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L104" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -907,7 +840,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L103" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L105" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -915,7 +848,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L108" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L110" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -927,18 +860,15 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L109" >}}">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L111" >}}">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    resourceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#UptimeCheckConfigResourceGroup'>UptimeCheckConfigResourceGroup</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-selectedRegions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L110" >}}">property <b>selectedRegions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L112" >}}">property <b>selectedRegions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>selectedRegions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -946,17 +876,15 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-tcpCheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L111" >}}">property <b>tcpCheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L113" >}}">property <b>tcpCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>tcpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>tcpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#UptimeCheckConfigTcpCheck'>UptimeCheckConfigTcpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L112" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L114" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -964,7 +892,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfig-uptimeCheckId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L113" >}}">property <b>uptimeCheckId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L115" >}}">property <b>uptimeCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uptimeCheckId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -985,7 +913,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlertPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L165" >}}">interface <b>AlertPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L167" >}}">interface <b>AlertPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -994,7 +922,7 @@ The set of arguments for constructing a AlertPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-combiner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L166" >}}">property <b>combiner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L168" >}}">property <b>combiner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>combiner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1002,55 +930,15 @@ The set of arguments for constructing a AlertPolicy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L167" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L169" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    conditionAbsent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        aggregations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            alignmentPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            crossSeriesReducer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            groupByFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            perSeriesAligner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            percent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    conditionThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        aggregations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            alignmentPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            crossSeriesReducer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            groupByFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            perSeriesAligner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        comparison: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        denominatorAggregations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            alignmentPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            crossSeriesReducer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            groupByFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            perSeriesAligner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        denominatorFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        thresholdValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            percent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertPolicyCondition'>AlertPolicyCondition</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L168" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L170" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1058,18 +946,15 @@ The set of arguments for constructing a AlertPolicy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-documentation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L169" >}}">property <b>documentation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L171" >}}">property <b>documentation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    mimeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertPolicyDocumentation'>AlertPolicyDocumentation</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L170" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L172" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1077,7 +962,7 @@ The set of arguments for constructing a AlertPolicy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L171" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L173" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1085,7 +970,7 @@ The set of arguments for constructing a AlertPolicy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-notificationChannels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L172" >}}">property <b>notificationChannels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L174" >}}">property <b>notificationChannels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notificationChannels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1093,7 +978,7 @@ The set of arguments for constructing a AlertPolicy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L173" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L175" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1101,7 +986,7 @@ The set of arguments for constructing a AlertPolicy resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyArgs-userLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L174" >}}">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L176" >}}">property <b>userLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1110,7 +995,7 @@ The set of arguments for constructing a AlertPolicy resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlertPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L148" >}}">interface <b>AlertPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L150" >}}">interface <b>AlertPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1119,7 +1004,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AlertPolicyState-combiner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L149" >}}">property <b>combiner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L151" >}}">property <b>combiner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>combiner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1127,66 +1012,23 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-conditions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L150" >}}">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L152" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    conditionAbsent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        aggregations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            alignmentPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            crossSeriesReducer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            groupByFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            perSeriesAligner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            percent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    conditionThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        aggregations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            alignmentPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            crossSeriesReducer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            groupByFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            perSeriesAligner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        comparison: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        denominatorAggregations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            alignmentPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            crossSeriesReducer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            groupByFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            perSeriesAligner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        denominatorFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        thresholdValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            percent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-    displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertPolicyCondition'>AlertPolicyCondition</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-creationRecord">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L151" >}}">property <b>creationRecord</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L153" >}}">property <b>creationRecord</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>creationRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    mutateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    mutatedBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>creationRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertPolicyCreationRecord'>AlertPolicyCreationRecord</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L152" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L154" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1194,18 +1036,15 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-documentation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L153" >}}">property <b>documentation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L155" >}}">property <b>documentation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    mimeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertPolicyDocumentation'>AlertPolicyDocumentation</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L154" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L156" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1213,7 +1052,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L155" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L157" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1221,7 +1060,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1229,7 +1068,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-notificationChannels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L157" >}}">property <b>notificationChannels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L159" >}}">property <b>notificationChannels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notificationChannels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1237,7 +1076,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L158" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L160" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1245,7 +1084,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertPolicyState-userLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L159" >}}">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/alertPolicy.ts#L161" >}}">property <b>userLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1254,7 +1093,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L153" >}}">interface <b>GroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L155" >}}">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1263,7 +1102,7 @@ The set of arguments for constructing a Group resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L154" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L156" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1271,7 +1110,7 @@ The set of arguments for constructing a Group resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L155" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L157" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1279,7 +1118,7 @@ The set of arguments for constructing a Group resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-isCluster">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L156" >}}">property <b>isCluster</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L158" >}}">property <b>isCluster</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1287,7 +1126,7 @@ The set of arguments for constructing a Group resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-parentName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L157" >}}">property <b>parentName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L159" >}}">property <b>parentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1295,7 +1134,7 @@ The set of arguments for constructing a Group resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L162" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L164" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1308,7 +1147,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L137" >}}">interface <b>GroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L139" >}}">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1317,7 +1156,7 @@ Input properties used for looking up and filtering Group resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L138" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L140" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1325,7 +1164,7 @@ Input properties used for looking up and filtering Group resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L139" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L141" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1333,7 +1172,7 @@ Input properties used for looking up and filtering Group resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-isCluster">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L140" >}}">property <b>isCluster</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L142" >}}">property <b>isCluster</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1341,7 +1180,7 @@ Input properties used for looking up and filtering Group resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L141" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L143" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1349,7 +1188,7 @@ Input properties used for looking up and filtering Group resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-parentName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L142" >}}">property <b>parentName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L144" >}}">property <b>parentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1357,7 +1196,7 @@ Input properties used for looking up and filtering Group resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L147" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/group.ts#L149" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1370,7 +1209,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotificationChannelArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L164" >}}">interface <b>NotificationChannelArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L166" >}}">interface <b>NotificationChannelArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1379,7 +1218,7 @@ The set of arguments for constructing a NotificationChannel resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L165" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L167" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1387,7 +1226,7 @@ The set of arguments for constructing a NotificationChannel resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L166" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L168" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1395,7 +1234,7 @@ The set of arguments for constructing a NotificationChannel resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L167" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L169" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1403,7 +1242,7 @@ The set of arguments for constructing a NotificationChannel resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L168" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L170" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1411,7 +1250,7 @@ The set of arguments for constructing a NotificationChannel resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L173" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L175" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1423,7 +1262,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L174" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L176" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1431,7 +1270,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelArgs-userLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L175" >}}">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L177" >}}">property <b>userLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1440,7 +1279,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotificationChannelState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L145" >}}">interface <b>NotificationChannelState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L147" >}}">interface <b>NotificationChannelState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1449,7 +1288,7 @@ Input properties used for looking up and filtering NotificationChannel resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotificationChannelState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L146" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L148" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1457,7 +1296,7 @@ Input properties used for looking up and filtering NotificationChannel resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L147" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L149" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1465,7 +1304,7 @@ Input properties used for looking up and filtering NotificationChannel resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L148" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L150" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1473,7 +1312,7 @@ Input properties used for looking up and filtering NotificationChannel resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L149" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L151" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1481,7 +1320,7 @@ Input properties used for looking up and filtering NotificationChannel resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L150" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L152" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1489,7 +1328,7 @@ Input properties used for looking up and filtering NotificationChannel resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L155" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L157" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1501,7 +1340,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L156" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L158" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1348,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-userLabels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L157" >}}">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L159" >}}">property <b>userLabels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1517,7 +1356,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationChannelState-verificationStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L158" >}}">property <b>verificationStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/notificationChannel.ts#L160" >}}">property <b>verificationStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>verificationStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1526,7 +1365,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UptimeCheckConfigArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L202" >}}">interface <b>UptimeCheckConfigArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L204" >}}">interface <b>UptimeCheckConfigArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1535,17 +1374,15 @@ The set of arguments for constructing a UptimeCheckConfig resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-contentMatchers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L203" >}}">property <b>contentMatchers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L205" >}}">property <b>contentMatchers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigContentMatcher'>UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L204" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L206" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1553,39 +1390,23 @@ The set of arguments for constructing a UptimeCheckConfig resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-httpCheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L205" >}}">property <b>httpCheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L207" >}}">property <b>httpCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    authInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    headers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    maskHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    useSsl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigHttpCheck'>UptimeCheckConfigHttpCheck</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-internalCheckers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L206" >}}">property <b>internalCheckers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L208" >}}">property <b>internalCheckers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    gcpZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    peerProjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigInternalChecker'>UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-isInternal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L207" >}}">property <b>isInternal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L209" >}}">property <b>isInternal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isInternal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1593,18 +1414,15 @@ The set of arguments for constructing a UptimeCheckConfig resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-monitoredResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L208" >}}">property <b>monitoredResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L210" >}}">property <b>monitoredResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigMonitoredResource'>UptimeCheckConfigMonitoredResource</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L209" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L211" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1612,7 +1430,7 @@ The set of arguments for constructing a UptimeCheckConfig resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L214" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L216" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1624,18 +1442,15 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L215" >}}">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L217" >}}">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigResourceGroup'>UptimeCheckConfigResourceGroup</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-selectedRegions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L216" >}}">property <b>selectedRegions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L218" >}}">property <b>selectedRegions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selectedRegions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1643,17 +1458,15 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-tcpCheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L217" >}}">property <b>tcpCheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L219" >}}">property <b>tcpCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigTcpCheck'>UptimeCheckConfigTcpCheck</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigArgs-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L218" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L220" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1662,7 +1475,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UptimeCheckConfigState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L178" >}}">interface <b>UptimeCheckConfigState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L180" >}}">interface <b>UptimeCheckConfigState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1671,17 +1484,15 @@ Input properties used for looking up and filtering UptimeCheckConfig resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-contentMatchers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L179" >}}">property <b>contentMatchers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L181" >}}">property <b>contentMatchers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigContentMatcher'>UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L180" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L182" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1689,39 +1500,23 @@ Input properties used for looking up and filtering UptimeCheckConfig resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-httpCheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L181" >}}">property <b>httpCheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L183" >}}">property <b>httpCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    authInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    headers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    maskHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    useSsl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigHttpCheck'>UptimeCheckConfigHttpCheck</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-internalCheckers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L182" >}}">property <b>internalCheckers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L184" >}}">property <b>internalCheckers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    gcpZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    peerProjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigInternalChecker'>UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-isInternal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L183" >}}">property <b>isInternal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L185" >}}">property <b>isInternal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isInternal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1729,18 +1524,15 @@ Input properties used for looking up and filtering UptimeCheckConfig resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-monitoredResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L184" >}}">property <b>monitoredResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L186" >}}">property <b>monitoredResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigMonitoredResource'>UptimeCheckConfigMonitoredResource</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L185" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L187" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1748,7 +1540,7 @@ Input properties used for looking up and filtering UptimeCheckConfig resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L186" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L188" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1756,7 +1548,7 @@ Input properties used for looking up and filtering UptimeCheckConfig resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L191" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L193" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1768,18 +1560,15 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L192" >}}">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L194" >}}">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigResourceGroup'>UptimeCheckConfigResourceGroup</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-selectedRegions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L193" >}}">property <b>selectedRegions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L195" >}}">property <b>selectedRegions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selectedRegions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1787,17 +1576,15 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-tcpCheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L194" >}}">property <b>tcpCheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L196" >}}">property <b>tcpCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UptimeCheckConfigTcpCheck'>UptimeCheckConfigTcpCheck</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L195" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L197" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1805,7 +1592,7 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UptimeCheckConfigState-uptimeCheckId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L196" >}}">property <b>uptimeCheckId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="monitoring/uptimeCheckConfig.ts#L198" >}}">property <b>uptimeCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uptimeCheckId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

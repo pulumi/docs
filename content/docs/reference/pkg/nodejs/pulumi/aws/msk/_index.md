@@ -43,7 +43,7 @@ title: Module msk
 
 
 <h2 class="pdoc-module-header" id="Cluster">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L72" >}}">class <b>Cluster</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L74" >}}">class <b>Cluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -115,7 +115,7 @@ export const zookeeperConnectString = example.zookeeperConnectString;
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L155" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L157" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -132,7 +132,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L81" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L83" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -156,7 +156,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L92" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L94" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -170,7 +170,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L102" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L104" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -181,7 +181,7 @@ Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-bootstrapBrokers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L106" >}}">property <b>bootstrapBrokers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L108" >}}">property <b>bootstrapBrokers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bootstrapBrokers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -192,7 +192,7 @@ A comma separated list of one or more hostname:port pairs of kafka brokers suita
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-bootstrapBrokersTls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L110" >}}">property <b>bootstrapBrokersTls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L112" >}}">property <b>bootstrapBrokersTls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bootstrapBrokersTls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -203,16 +203,10 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-brokerNodeGroupInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L114" >}}">property <b>brokerNodeGroupInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L116" >}}">property <b>brokerNodeGroupInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    azDistribution: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clientSubnets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    ebsVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    instanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    securityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClusterBrokerNodeGroupInfo'>ClusterBrokerNodeGroupInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for the broker nodes of the Kafka cluster.
@@ -220,14 +214,10 @@ Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-clientAuthentication">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L118" >}}">property <b>clientAuthentication</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L120" >}}">property <b>clientAuthentication</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>clientAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    tls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        certificateAuthorityArns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>clientAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClusterClientAuthentication'>ClusterClientAuthentication</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying a client authentication. See below.
@@ -235,7 +225,7 @@ Configuration block for specifying a client authentication. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-clusterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L122" >}}">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L124" >}}">property <b>clusterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -246,13 +236,10 @@ Name of the MSK cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-configurationInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L126" >}}">property <b>configurationInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L128" >}}">property <b>configurationInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>configurationInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    revision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>configurationInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClusterConfigurationInfo'>ClusterConfigurationInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
@@ -260,7 +247,7 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-currentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L131" >}}">property <b>currentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L133" >}}">property <b>currentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>currentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -272,16 +259,10 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-encryptionInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L135" >}}">property <b>encryptionInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L137" >}}">property <b>encryptionInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>encryptionInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    encryptionAtRestKmsKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    encryptionInTransit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        clientBroker: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        inCluster: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>encryptionInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClusterEncryptionInfo'>ClusterEncryptionInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying encryption. See below.
@@ -289,7 +270,7 @@ Configuration block for specifying encryption. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-enhancedMonitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L139" >}}">property <b>enhancedMonitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L141" >}}">property <b>enhancedMonitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enhancedMonitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -312,7 +293,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-kafkaVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L143" >}}">property <b>kafkaVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L145" >}}">property <b>kafkaVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kafkaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -323,7 +304,7 @@ Specify the desired Kafka software version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-numberOfBrokerNodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L147" >}}">property <b>numberOfBrokerNodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L149" >}}">property <b>numberOfBrokerNodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>numberOfBrokerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -334,7 +315,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L151" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L153" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -357,7 +338,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cluster-zookeeperConnectString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L155" >}}">property <b>zookeeperConnectString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L157" >}}">property <b>zookeeperConnectString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zookeeperConnectString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +350,7 @@ A comma separated list of one or more IP:port pairs to use to connect to the Apa
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Configuration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L28" >}}">class <b>Configuration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L30" >}}">class <b>Configuration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -397,7 +378,7 @@ delete.topic.enable = true
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Configuration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L80" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -414,7 +395,7 @@ Create a Configuration resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L37" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L39" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -438,7 +419,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L48" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L50" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -452,7 +433,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L58" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L60" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -463,7 +444,7 @@ Amazon Resource Name (ARN) of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L62" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L64" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -486,7 +467,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-kafkaVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L66" >}}">property <b>kafkaVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L68" >}}">property <b>kafkaVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kafkaVersions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -497,7 +478,7 @@ List of Apache Kafka versions which can use this configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-latestRevision">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L70" >}}">property <b>latestRevision</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L72" >}}">property <b>latestRevision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>latestRevision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -508,7 +489,7 @@ Latest revision of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -519,7 +500,7 @@ Name of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-serverProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L78" >}}">property <b>serverProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L80" >}}">property <b>serverProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -543,7 +524,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getCluster">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L23" >}}">function <b>getCluster</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L25" >}}">function <b>getCluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -569,7 +550,7 @@ const example = aws.msk.getCluster({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getConfiguration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L23" >}}">function <b>getConfiguration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L25" >}}">function <b>getConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -595,7 +576,7 @@ const example = aws.msk.getConfiguration({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L289" >}}">interface <b>ClusterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L291" >}}">interface <b>ClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -604,16 +585,10 @@ The set of arguments for constructing a Cluster resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterArgs-brokerNodeGroupInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L293" >}}">property <b>brokerNodeGroupInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L295" >}}">property <b>brokerNodeGroupInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    azDistribution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    ebsVolumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>brokerNodeGroupInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterBrokerNodeGroupInfo'>ClusterBrokerNodeGroupInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for the broker nodes of the Kafka cluster.
@@ -621,14 +596,10 @@ Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-clientAuthentication">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L297" >}}">property <b>clientAuthentication</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L299" >}}">property <b>clientAuthentication</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        certificateAuthorityArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterClientAuthentication'>ClusterClientAuthentication</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying a client authentication. See below.
@@ -636,7 +607,7 @@ Configuration block for specifying a client authentication. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-clusterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L301" >}}">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L303" >}}">property <b>clusterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -647,13 +618,10 @@ Name of the MSK cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-configurationInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L305" >}}">property <b>configurationInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L307" >}}">property <b>configurationInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterConfigurationInfo'>ClusterConfigurationInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
@@ -661,16 +629,10 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-encryptionInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L309" >}}">property <b>encryptionInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L311" >}}">property <b>encryptionInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    encryptionAtRestKmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    encryptionInTransit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientBroker: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        inCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterEncryptionInfo'>ClusterEncryptionInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying encryption. See below.
@@ -678,7 +640,7 @@ Configuration block for specifying encryption. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-enhancedMonitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L313" >}}">property <b>enhancedMonitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L315" >}}">property <b>enhancedMonitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enhancedMonitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -689,7 +651,7 @@ Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-kafkaVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L317" >}}">property <b>kafkaVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L319" >}}">property <b>kafkaVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kafkaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -700,7 +662,7 @@ Specify the desired Kafka software version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-numberOfBrokerNodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L321" >}}">property <b>numberOfBrokerNodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L323" >}}">property <b>numberOfBrokerNodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberOfBrokerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -711,7 +673,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L325" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L327" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -723,7 +685,7 @@ A mapping of tags to assign to the resource
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L226" >}}">interface <b>ClusterState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L228" >}}">interface <b>ClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -732,7 +694,7 @@ Input properties used for looking up and filtering Cluster resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L230" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L232" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -743,7 +705,7 @@ Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-bootstrapBrokers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L234" >}}">property <b>bootstrapBrokers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L236" >}}">property <b>bootstrapBrokers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bootstrapBrokers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -754,7 +716,7 @@ A comma separated list of one or more hostname:port pairs of kafka brokers suita
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-bootstrapBrokersTls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L238" >}}">property <b>bootstrapBrokersTls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L240" >}}">property <b>bootstrapBrokersTls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bootstrapBrokersTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -765,16 +727,10 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-brokerNodeGroupInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L242" >}}">property <b>brokerNodeGroupInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L244" >}}">property <b>brokerNodeGroupInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>brokerNodeGroupInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    azDistribution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientSubnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    ebsVolumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>brokerNodeGroupInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterBrokerNodeGroupInfo'>ClusterBrokerNodeGroupInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for the broker nodes of the Kafka cluster.
@@ -782,14 +738,10 @@ Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-clientAuthentication">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L246" >}}">property <b>clientAuthentication</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L248" >}}">property <b>clientAuthentication</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        certificateAuthorityArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>clientAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterClientAuthentication'>ClusterClientAuthentication</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying a client authentication. See below.
@@ -797,7 +749,7 @@ Configuration block for specifying a client authentication. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-clusterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L250" >}}">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L252" >}}">property <b>clusterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -808,13 +760,10 @@ Name of the MSK cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-configurationInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L254" >}}">property <b>configurationInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L256" >}}">property <b>configurationInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>configurationInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterConfigurationInfo'>ClusterConfigurationInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
@@ -822,7 +771,7 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-currentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L259" >}}">property <b>currentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L261" >}}">property <b>currentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>currentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -834,16 +783,10 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-encryptionInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L263" >}}">property <b>encryptionInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L265" >}}">property <b>encryptionInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    encryptionAtRestKmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    encryptionInTransit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientBroker: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        inCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>encryptionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClusterEncryptionInfo'>ClusterEncryptionInfo</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block for specifying encryption. See below.
@@ -851,7 +794,7 @@ Configuration block for specifying encryption. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-enhancedMonitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L267" >}}">property <b>enhancedMonitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L269" >}}">property <b>enhancedMonitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enhancedMonitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -862,7 +805,7 @@ Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-kafkaVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L271" >}}">property <b>kafkaVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L273" >}}">property <b>kafkaVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kafkaVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -873,7 +816,7 @@ Specify the desired Kafka software version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-numberOfBrokerNodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L275" >}}">property <b>numberOfBrokerNodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L277" >}}">property <b>numberOfBrokerNodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberOfBrokerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -884,7 +827,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L279" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L281" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -895,7 +838,7 @@ A mapping of tags to assign to the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClusterState-zookeeperConnectString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L283" >}}">property <b>zookeeperConnectString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/cluster.ts#L285" >}}">property <b>zookeeperConnectString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zookeeperConnectString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -907,7 +850,7 @@ A comma separated list of one or more IP:port pairs to use to connect to the Apa
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L157" >}}">interface <b>ConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L159" >}}">interface <b>ConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -916,7 +859,7 @@ The set of arguments for constructing a Configuration resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L161" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L163" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -927,7 +870,7 @@ Description of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-kafkaVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L165" >}}">property <b>kafkaVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L167" >}}">property <b>kafkaVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kafkaVersions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -938,7 +881,7 @@ List of Apache Kafka versions which can use this configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L169" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L171" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -949,7 +892,7 @@ Name of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-serverProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L173" >}}">property <b>serverProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L175" >}}">property <b>serverProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -961,7 +904,7 @@ Contents of the server.properties file. Supported properties are documented in t
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L127" >}}">interface <b>ConfigurationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L129" >}}">interface <b>ConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -970,7 +913,7 @@ Input properties used for looking up and filtering Configuration resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L131" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L133" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -981,7 +924,7 @@ Amazon Resource Name (ARN) of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L135" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L137" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -992,7 +935,7 @@ Description of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-kafkaVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L139" >}}">property <b>kafkaVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L141" >}}">property <b>kafkaVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kafkaVersions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1003,7 +946,7 @@ List of Apache Kafka versions which can use this configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-latestRevision">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L143" >}}">property <b>latestRevision</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L145" >}}">property <b>latestRevision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latestRevision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1014,7 +957,7 @@ Latest revision of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L147" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1025,7 +968,7 @@ Name of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-serverProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L151" >}}">property <b>serverProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/configuration.ts#L153" >}}">property <b>serverProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1037,7 +980,7 @@ Contents of the server.properties file. Supported properties are documented in t
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetClusterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L42" >}}">interface <b>GetClusterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L44" >}}">interface <b>GetClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1046,7 +989,7 @@ A collection of arguments for invoking getCluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetClusterArgs-clusterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L46" >}}">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L48" >}}">property <b>clusterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1057,7 +1000,7 @@ Name of the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L47" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L49" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1066,7 +1009,7 @@ Name of the cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetClusterResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L53" >}}">interface <b>GetClusterResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L55" >}}">interface <b>GetClusterResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1075,7 +1018,7 @@ A collection of values returned by getCluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetClusterResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L57" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L59" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1086,7 +1029,7 @@ Amazon Resource Name (ARN) of the MSK cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-bootstrapBrokers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L61" >}}">property <b>bootstrapBrokers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L63" >}}">property <b>bootstrapBrokers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bootstrapBrokers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1097,7 +1040,7 @@ A comma separated list of one or more hostname:port pairs of Kafka brokers suita
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-bootstrapBrokersTls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L65" >}}">property <b>bootstrapBrokersTls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L67" >}}">property <b>bootstrapBrokersTls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bootstrapBrokersTls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1108,7 +1051,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-clusterName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L66" >}}">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L68" >}}">property <b>clusterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1116,7 +1059,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L86" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L88" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1127,7 +1070,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-kafkaVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L70" >}}">property <b>kafkaVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L72" >}}">property <b>kafkaVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kafkaVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1138,7 +1081,7 @@ Apache Kafka version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-numberOfBrokerNodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L74" >}}">property <b>numberOfBrokerNodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L76" >}}">property <b>numberOfBrokerNodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberOfBrokerNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1149,7 +1092,7 @@ Number of broker nodes in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L78" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L80" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1160,7 +1103,7 @@ Map of key-value pairs assigned to the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetClusterResult-zookeeperConnectString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L82" >}}">property <b>zookeeperConnectString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getCluster.ts#L84" >}}">property <b>zookeeperConnectString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zookeeperConnectString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1172,7 +1115,7 @@ A comma separated list of one or more IP:port pairs to use to connect to the Apa
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetConfigurationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L41" >}}">interface <b>GetConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L43" >}}">interface <b>GetConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1181,7 +1124,7 @@ A collection of arguments for invoking getConfiguration.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetConfigurationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L45" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1193,7 +1136,7 @@ Name of the configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetConfigurationResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L51" >}}">interface <b>GetConfigurationResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L53" >}}">interface <b>GetConfigurationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1202,7 +1145,7 @@ A collection of values returned by getConfiguration.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetConfigurationResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L55" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1213,7 +1156,7 @@ Amazon Resource Name (ARN) of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetConfigurationResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L59" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L61" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1224,7 +1167,7 @@ Description of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetConfigurationResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L76" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L78" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1235,7 +1178,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetConfigurationResult-kafkaVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L63" >}}">property <b>kafkaVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L65" >}}">property <b>kafkaVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kafkaVersions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1246,7 +1189,7 @@ List of Apache Kafka versions which can use this configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetConfigurationResult-latestRevision">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L67" >}}">property <b>latestRevision</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L69" >}}">property <b>latestRevision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latestRevision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1257,7 +1200,7 @@ Latest revision of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetConfigurationResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1265,7 +1208,7 @@ Latest revision of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetConfigurationResult-serverProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L72" >}}">property <b>serverProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="msk/getConfiguration.ts#L74" >}}">property <b>serverProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverProperties: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

@@ -34,7 +34,7 @@ title: Module endpoints
 
 
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L34" >}}">class <b>Service</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L36" >}}">class <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -68,7 +68,7 @@ The example in `examples/endpoints_on_compute_engine` shows the API from the qui
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -85,7 +85,7 @@ Create a Service resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -109,7 +109,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -123,25 +123,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-apis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L61" >}}">property <b>apis</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L63" >}}">property <b>apis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>apis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    methods: {
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        requestType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        responseType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        syntax: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    syntax: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>apis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceApi'>ServiceApi</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-configId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L62" >}}">property <b>configId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L64" >}}">property <b>configId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>configId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -149,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-dnsAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L63" >}}">property <b>dnsAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L65" >}}">property <b>dnsAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dnsAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -157,18 +147,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L64" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L66" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceEndpoint'>ServiceEndpoint</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-grpcConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L65" >}}">property <b>grpcConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L67" >}}">property <b>grpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>grpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -188,7 +175,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-openapiConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L66" >}}">property <b>openapiConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L68" >}}">property <b>openapiConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>openapiConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -196,7 +183,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L67" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L69" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -204,7 +191,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-protocOutputBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L68" >}}">property <b>protocOutputBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L70" >}}">property <b>protocOutputBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocOutputBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -212,7 +199,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Service-serviceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L69" >}}">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L71" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -233,7 +220,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L136" >}}">interface <b>ServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L138" >}}">interface <b>ServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -242,7 +229,7 @@ The set of arguments for constructing a Service resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArgs-grpcConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L137" >}}">property <b>grpcConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L139" >}}">property <b>grpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>grpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -250,7 +237,7 @@ The set of arguments for constructing a Service resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-openapiConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L138" >}}">property <b>openapiConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L140" >}}">property <b>openapiConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>openapiConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -258,7 +245,7 @@ The set of arguments for constructing a Service resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L139" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L141" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -266,7 +253,7 @@ The set of arguments for constructing a Service resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-protocOutputBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L140" >}}">property <b>protocOutputBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L142" >}}">property <b>protocOutputBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocOutputBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -274,7 +261,7 @@ The set of arguments for constructing a Service resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceArgs-serviceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L141" >}}">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L143" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -283,7 +270,7 @@ The set of arguments for constructing a Service resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L121" >}}">interface <b>ServiceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L123" >}}">interface <b>ServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -292,25 +279,15 @@ Input properties used for looking up and filtering Service resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceState-apis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L122" >}}">property <b>apis</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L124" >}}">property <b>apis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>apis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    methods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        requestType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        responseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        syntax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    syntax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>apis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceApi'>ServiceApi</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-configId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L123" >}}">property <b>configId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L125" >}}">property <b>configId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -318,7 +295,7 @@ Input properties used for looking up and filtering Service resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-dnsAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L124" >}}">property <b>dnsAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L126" >}}">property <b>dnsAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dnsAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -326,18 +303,15 @@ Input properties used for looking up and filtering Service resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L125" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L127" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceEndpoint'>ServiceEndpoint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-grpcConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L126" >}}">property <b>grpcConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L128" >}}">property <b>grpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>grpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -345,7 +319,7 @@ Input properties used for looking up and filtering Service resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-openapiConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L127" >}}">property <b>openapiConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L129" >}}">property <b>openapiConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>openapiConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -353,7 +327,7 @@ Input properties used for looking up and filtering Service resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L128" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L130" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -361,7 +335,7 @@ Input properties used for looking up and filtering Service resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-protocOutputBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L129" >}}">property <b>protocOutputBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L131" >}}">property <b>protocOutputBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocOutputBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +343,7 @@ Input properties used for looking up and filtering Service resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServiceState-serviceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L130" >}}">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="endpoints/service.ts#L132" >}}">property <b>serviceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

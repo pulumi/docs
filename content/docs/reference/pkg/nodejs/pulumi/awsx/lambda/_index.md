@@ -34,7 +34,7 @@ title: Module lambda
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>concurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>concurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Emitted as an aggregate metric for all functions in the account, and for functions that have
@@ -52,7 +52,7 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>deadLetterErrors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>deadLetterErrors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Incremented when Lambda is unable to write the failed event payload to your configured Dead
@@ -73,7 +73,7 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>duration(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>duration(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Measures the elapsed wall clock time from when the function code starts executing as a result
@@ -92,7 +92,7 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>errors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>errors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Measures the number of invocations that failed due to errors in the function (response code
@@ -119,7 +119,7 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>invocations(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>invocations(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Measures the number of times a function is invoked in response to an event or invocation API
@@ -138,7 +138,7 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>iteratorAge(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>iteratorAge(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Emitted for stream-based invocations only (functions triggered by an Amazon DynamoDB stream
@@ -183,7 +183,7 @@ functions:
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>throttles(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>throttles(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Measures the number of Lambda function invocation attempts that were throttled due to
@@ -200,7 +200,7 @@ Units: Count
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>unreservedConcurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+<pre class="highlight"><span class='kd'></span>unreservedConcurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Emitted as an aggregate metric for all functions in the account only. Not applicable for

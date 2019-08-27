@@ -76,7 +76,7 @@ title: Module waf
 
 
 <h2 class="pdoc-module-header" id="ByteMatchSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L31" >}}">class <b>ByteMatchSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L33" >}}">class <b>ByteMatchSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -107,7 +107,7 @@ const byteSet = new aws.waf.ByteMatchSet("byteSet", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ByteMatchSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -124,7 +124,7 @@ Create a ByteMatchSet resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ByteMatchSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L40" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L42" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -148,7 +148,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ByteMatchSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L51" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L53" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -162,18 +162,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ByteMatchSet-byteMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L63" >}}">property <b>byteMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L65" >}}">property <b>byteMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>byteMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fieldToMatch: {
-        data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    positionalConstraint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    textTransformation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>byteMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ByteMatchSetByteMatchTuple'>ByteMatchSetByteMatchTuple</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Specifies the bytes (typically a string that corresponds
@@ -195,7 +187,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ByteMatchSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L67" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L69" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -219,7 +211,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GeoMatchSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L32" >}}">class <b>GeoMatchSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L34" >}}">class <b>GeoMatchSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -251,7 +243,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geoMatchSet", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GeoMatchSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -268,7 +260,7 @@ Create a GeoMatchSet resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GeoMatchSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L41" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -292,7 +284,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GeoMatchSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L52" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -306,13 +298,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GeoMatchSet-geoMatchConstraints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L62" >}}">property <b>geoMatchConstraints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L64" >}}">property <b>geoMatchConstraints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>geoMatchConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>geoMatchConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GeoMatchSetGeoMatchConstraint'>GeoMatchSetGeoMatchConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
@@ -332,7 +321,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GeoMatchSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -356,7 +345,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IpSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L32" >}}">class <b>IpSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L34" >}}">class <b>IpSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -388,7 +377,7 @@ const ipset = new aws.waf.IpSet("ipset", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IpSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -405,7 +394,7 @@ Create a IpSet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L41" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -429,7 +418,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L52" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -443,7 +432,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSet-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L62" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L64" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -466,13 +455,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSet-ipSetDescriptors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L66" >}}">property <b>ipSetDescriptors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L68" >}}">property <b>ipSetDescriptors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ipSetDescriptors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ipSetDescriptors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IpSetIpSetDescriptor'>IpSetIpSetDescriptor</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
@@ -480,7 +466,7 @@ One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP addre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L70" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L72" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -504,7 +490,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RateBasedRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L36" >}}">class <b>RateBasedRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L38" >}}">class <b>RateBasedRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -540,7 +526,7 @@ const wafrule = new aws.waf.RateBasedRule("wafrule", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RateBasedRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L82" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L84" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -557,7 +543,7 @@ Create a RateBasedRule resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -581,7 +567,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -607,7 +593,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L66" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L68" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -618,7 +604,7 @@ The name or description for the Amazon CloudWatch metric of this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L70" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L72" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -629,14 +615,10 @@ The name or description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-predicates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L74" >}}">property <b>predicates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L76" >}}">property <b>predicates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>predicates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    dataId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    negated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>predicates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RateBasedRulePredicate'>RateBasedRulePredicate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The objects to include in a rule (documented below).
@@ -644,7 +626,7 @@ The objects to include in a rule (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-rateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L78" >}}">property <b>rateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L80" >}}">property <b>rateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>rateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -655,7 +637,7 @@ Valid value is IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRule-rateLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L82" >}}">property <b>rateLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L84" >}}">property <b>rateLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>rateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -679,7 +661,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RegexMatchSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L36" >}}">class <b>RegexMatchSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L38" >}}">class <b>RegexMatchSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -715,7 +697,7 @@ const exampleRegexMatchSet = new aws.waf.RegexMatchSet("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RegexMatchSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -732,7 +714,7 @@ Create a RegexMatchSet resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexMatchSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -756,7 +738,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexMatchSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -782,7 +764,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexMatchSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -793,17 +775,10 @@ The name or description of the Regex Match Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexMatchSet-regexMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L71" >}}">property <b>regexMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L73" >}}">property <b>regexMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>regexMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fieldToMatch: {
-        data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    regexPatternSetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    textTransformation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>regexMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RegexMatchSetRegexMatchTuple'>RegexMatchSetRegexMatchTuple</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The regular expression pattern that you want AWS WAF to search for in web requests,
@@ -825,7 +800,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RegexPatternSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L26" >}}">class <b>RegexPatternSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L28" >}}">class <b>RegexPatternSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -851,7 +826,7 @@ const example = new aws.waf.RegexPatternSet("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RegexPatternSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L60" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L62" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -868,7 +843,7 @@ Create a RegexPatternSet resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexPatternSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L35" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -892,7 +867,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexPatternSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L46" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -918,7 +893,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexPatternSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L58" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -929,7 +904,7 @@ The name or description of the Regex Pattern Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexPatternSet-regexPatternStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L60" >}}">property <b>regexPatternStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L62" >}}">property <b>regexPatternStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>regexPatternStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -953,7 +928,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L34" >}}">class <b>Rule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L36" >}}">class <b>Rule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -987,7 +962,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Rule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L74" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1004,7 +979,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1028,7 +1003,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1054,7 +1029,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L64" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L66" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1065,7 +1040,7 @@ The name or description for the Amazon CloudWatch metric of this rule. The name 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1076,14 +1051,10 @@ The name or description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-predicates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L72" >}}">property <b>predicates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L74" >}}">property <b>predicates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>predicates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    dataId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    negated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>predicates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RulePredicate'>RulePredicate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The objects to include in a rule (documented below).
@@ -1104,7 +1075,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L33" >}}">class <b>RuleGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L35" >}}">class <b>RuleGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1137,7 +1108,7 @@ const exampleRuleGroup = new aws.waf.RuleGroup("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1154,7 +1125,7 @@ Create a RuleGroup resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1178,7 +1149,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1192,17 +1163,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroup-activatedRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L63" >}}">property <b>activatedRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L65" >}}">property <b>activatedRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>activatedRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    action: {
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    ruleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>activatedRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RuleGroupActivatedRule'>RuleGroupActivatedRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A list of activated rules, see below
@@ -1222,7 +1186,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroup-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L67" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L69" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1233,7 +1197,7 @@ A friendly name for the metrics from the rule group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroup-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1257,7 +1221,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SizeConstraintSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L30" >}}">class <b>SizeConstraintSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L32" >}}">class <b>SizeConstraintSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1287,7 +1251,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("sizeConstraintSet", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SizeConstraintSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L64" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1304,7 +1268,7 @@ Create a SizeConstraintSet resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SizeConstraintSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1328,7 +1292,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SizeConstraintSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1354,7 +1318,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SizeConstraintSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L60" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1365,18 +1329,10 @@ The name or description of the Size Constraint Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SizeConstraintSet-sizeConstraints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L64" >}}">property <b>sizeConstraints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L66" >}}">property <b>sizeConstraints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sizeConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    comparisonOperator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    fieldToMatch: {
-        data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    textTransformation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sizeConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SizeConstraintSetSizeConstraint'>SizeConstraintSetSizeConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Specifies the parts of web requests that you want to inspect the size of.
@@ -1397,7 +1353,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlInjectionMatchSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L28" >}}">class <b>SqlInjectionMatchSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L30" >}}">class <b>SqlInjectionMatchSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1425,7 +1381,7 @@ const sqlInjectionMatchSet = new aws.waf.SqlInjectionMatchSet("sqlInjectionMatch
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L62" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L64" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1442,7 +1398,7 @@ Create a SqlInjectionMatchSet resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L37" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L39" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1466,7 +1422,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L48" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L50" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1492,7 +1448,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L58" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L60" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1503,16 +1459,10 @@ The name or description of the SQL Injection Match Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSet-sqlInjectionMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L62" >}}">property <b>sqlInjectionMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L64" >}}">property <b>sqlInjectionMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sqlInjectionMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fieldToMatch: {
-        data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    textTransformation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sqlInjectionMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SqlInjectionMatchSetSqlInjectionMatchTuple'>SqlInjectionMatchSetSqlInjectionMatchTuple</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
@@ -1533,7 +1483,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebAcl">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L75" >}}">class <b>WebAcl</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L77" >}}">class <b>WebAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1608,7 +1558,7 @@ const example = new aws.waf.WebAcl("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WebAcl-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L122" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L124" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1625,7 +1575,7 @@ Create a WebAcl resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L84" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L86" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1649,7 +1599,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L95" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L97" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1663,7 +1613,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L102" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L104" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1671,12 +1621,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-defaultAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L106" >}}">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L108" >}}">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#WebAclDefaultAction'>WebAclDefaultAction</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
@@ -1696,18 +1644,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-loggingConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L110" >}}">property <b>loggingConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L112" >}}">property <b>loggingConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>loggingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    logDestination: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    redactedFields: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        fieldToMatches: {
-            data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>loggingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#WebAclLoggingConfiguration'>WebAclLoggingConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration block to enable WAF logging. Detailed below.
@@ -1715,7 +1655,7 @@ Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L114" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L116" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1726,7 +1666,7 @@ The name or description for the Amazon CloudWatch metric of this web ACL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L118" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1737,20 +1677,10 @@ The name or description of the web ACL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAcl-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L122" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L124" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    overrideAction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    ruleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#WebAclRule'>WebAclRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
@@ -1771,7 +1701,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="XssMatchSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L36" >}}">class <b>XssMatchSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L38" >}}">class <b>XssMatchSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1807,7 +1737,7 @@ const xssMatchSet = new aws.waf.XssMatchSet("xssMatchSet", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="XssMatchSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1824,7 +1754,7 @@ Create a XssMatchSet resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="XssMatchSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1848,7 +1778,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="XssMatchSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1874,7 +1804,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="XssMatchSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1897,16 +1827,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="XssMatchSet-xssMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L70" >}}">property <b>xssMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L72" >}}">property <b>xssMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>xssMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fieldToMatch: {
-        data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    textTransformation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>xssMatchTuples: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#XssMatchSetXssMatchTuple'>XssMatchSetXssMatchTuple</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The parts of web requests that you want to inspect for cross-site scripting attacks.
@@ -1915,7 +1839,7 @@ The parts of web requests that you want to inspect for cross-site scripting atta
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getIpset">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L23" >}}">function <b>getIpset</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L25" >}}">function <b>getIpset</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1941,7 +1865,7 @@ const example = aws.waf.getIpset({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L23" >}}">function <b>getRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L25" >}}">function <b>getRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1967,7 +1891,7 @@ const example = aws.waf.getRule({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getWebAcl">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L23" >}}">function <b>getWebAcl</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L25" >}}">function <b>getWebAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1993,7 +1917,7 @@ const example = aws.waf.getWebAcl({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ByteMatchSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L118" >}}">interface <b>ByteMatchSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L120" >}}">interface <b>ByteMatchSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2002,18 +1926,10 @@ The set of arguments for constructing a ByteMatchSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ByteMatchSetArgs-byteMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L124" >}}">property <b>byteMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L126" >}}">property <b>byteMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>byteMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    positionalConstraint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>byteMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ByteMatchSetByteMatchTuple'>ByteMatchSetByteMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies the bytes (typically a string that corresponds
@@ -2023,7 +1939,7 @@ the location in requests that you want to search, and other settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ByteMatchSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L128" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L130" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2035,7 +1951,7 @@ The name or description of the Byte Match Set.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ByteMatchSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L102" >}}">interface <b>ByteMatchSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L104" >}}">interface <b>ByteMatchSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2044,18 +1960,10 @@ Input properties used for looking up and filtering ByteMatchSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ByteMatchSetState-byteMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L108" >}}">property <b>byteMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L110" >}}">property <b>byteMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>byteMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    positionalConstraint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>byteMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ByteMatchSetByteMatchTuple'>ByteMatchSetByteMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies the bytes (typically a string that corresponds
@@ -2065,7 +1973,7 @@ the location in requests that you want to search, and other settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ByteMatchSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L112" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/byteMatchSet.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2077,7 +1985,7 @@ The name or description of the Byte Match Set.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GeoMatchSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L115" >}}">interface <b>GeoMatchSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L117" >}}">interface <b>GeoMatchSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2086,13 +1994,10 @@ The set of arguments for constructing a GeoMatchSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GeoMatchSetArgs-geoMatchConstraints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L119" >}}">property <b>geoMatchConstraints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L121" >}}">property <b>geoMatchConstraints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geoMatchConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geoMatchConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GeoMatchSetGeoMatchConstraint'>GeoMatchSetGeoMatchConstraint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
@@ -2100,7 +2005,7 @@ The GeoMatchConstraint objects which contain the country that you want AWS WAF t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GeoMatchSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2112,7 +2017,7 @@ The name or description of the GeoMatchSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GeoMatchSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L101" >}}">interface <b>GeoMatchSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L103" >}}">interface <b>GeoMatchSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2121,13 +2026,10 @@ Input properties used for looking up and filtering GeoMatchSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GeoMatchSetState-geoMatchConstraints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L105" >}}">property <b>geoMatchConstraints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L107" >}}">property <b>geoMatchConstraints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geoMatchConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geoMatchConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GeoMatchSetGeoMatchConstraint'>GeoMatchSetGeoMatchConstraint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
@@ -2135,7 +2037,7 @@ The GeoMatchConstraint objects which contain the country that you want AWS WAF t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GeoMatchSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L109" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/geoMatchSet.ts#L111" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2147,7 +2049,7 @@ The name or description of the GeoMatchSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetIpsetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L41" >}}">interface <b>GetIpsetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L43" >}}">interface <b>GetIpsetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2156,7 +2058,7 @@ A collection of arguments for invoking getIpset.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetIpsetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L45" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2168,7 +2070,7 @@ The name of the WAF IP set.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetIpsetResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L51" >}}">interface <b>GetIpsetResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L53" >}}">interface <b>GetIpsetResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2177,7 +2079,7 @@ A collection of values returned by getIpset.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetIpsetResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L56" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2188,7 +2090,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetIpsetResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getIpset.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2197,7 +2099,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L41" >}}">interface <b>GetRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L43" >}}">interface <b>GetRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2206,7 +2108,7 @@ A collection of arguments for invoking getRule.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L45" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2218,7 +2120,7 @@ The name of the WAF rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRuleResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L51" >}}">interface <b>GetRuleResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L53" >}}">interface <b>GetRuleResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2227,7 +2129,7 @@ A collection of values returned by getRule.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRuleResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L56" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2238,7 +2140,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRuleResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getRule.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2247,7 +2149,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetWebAclArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L41" >}}">interface <b>GetWebAclArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L43" >}}">interface <b>GetWebAclArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2256,7 +2158,7 @@ A collection of arguments for invoking getWebAcl.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetWebAclArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L45" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2268,7 +2170,7 @@ The name of the WAF Web ACL.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetWebAclResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L51" >}}">interface <b>GetWebAclResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L53" >}}">interface <b>GetWebAclResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2277,7 +2179,7 @@ A collection of values returned by getWebAcl.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetWebAclResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L56" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2288,7 +2190,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetWebAclResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/getWebAcl.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2297,7 +2199,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IpSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L125" >}}">interface <b>IpSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L127" >}}">interface <b>IpSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2306,13 +2208,10 @@ The set of arguments for constructing a IpSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IpSetArgs-ipSetDescriptors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L129" >}}">property <b>ipSetDescriptors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L131" >}}">property <b>ipSetDescriptors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipSetDescriptors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipSetDescriptors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IpSetIpSetDescriptor'>IpSetIpSetDescriptor</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
@@ -2320,7 +2219,7 @@ One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP addre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L133" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L135" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2332,7 +2231,7 @@ The name or description of the IPSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IpSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L107" >}}">interface <b>IpSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L109" >}}">interface <b>IpSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2341,7 +2240,7 @@ Input properties used for looking up and filtering IpSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IpSetState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L111" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L113" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2352,13 +2251,10 @@ The ARN of the WAF IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSetState-ipSetDescriptors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L115" >}}">property <b>ipSetDescriptors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L117" >}}">property <b>ipSetDescriptors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipSetDescriptors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipSetDescriptors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IpSetIpSetDescriptor'>IpSetIpSetDescriptor</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
@@ -2366,7 +2262,7 @@ One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP addre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IpSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L119" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ipSet.ts#L121" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2378,7 +2274,7 @@ The name or description of the IPSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RateBasedRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L158" >}}">interface <b>RateBasedRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L160" >}}">interface <b>RateBasedRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2387,7 +2283,7 @@ The set of arguments for constructing a RateBasedRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RateBasedRuleArgs-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L162" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L164" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2398,7 +2294,7 @@ The name or description for the Amazon CloudWatch metric of this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L166" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L168" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2409,14 +2305,10 @@ The name or description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleArgs-predicates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L170" >}}">property <b>predicates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L172" >}}">property <b>predicates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    negated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RateBasedRulePredicate'>RateBasedRulePredicate</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The objects to include in a rule (documented below).
@@ -2424,7 +2316,7 @@ The objects to include in a rule (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleArgs-rateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L174" >}}">property <b>rateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L176" >}}">property <b>rateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2435,7 +2327,7 @@ Valid value is IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleArgs-rateLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L178" >}}">property <b>rateLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L180" >}}">property <b>rateLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2447,7 +2339,7 @@ The maximum number of requests, which have an identical value in the field speci
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RateBasedRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L132" >}}">interface <b>RateBasedRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L134" >}}">interface <b>RateBasedRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2456,7 +2348,7 @@ Input properties used for looking up and filtering RateBasedRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RateBasedRuleState-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L136" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L138" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2467,7 +2359,7 @@ The name or description for the Amazon CloudWatch metric of this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L140" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L142" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2478,14 +2370,10 @@ The name or description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleState-predicates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L144" >}}">property <b>predicates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L146" >}}">property <b>predicates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    negated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RateBasedRulePredicate'>RateBasedRulePredicate</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The objects to include in a rule (documented below).
@@ -2493,7 +2381,7 @@ The objects to include in a rule (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleState-rateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L148" >}}">property <b>rateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L150" >}}">property <b>rateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2504,7 +2392,7 @@ Valid value is IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateBasedRuleState-rateLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L152" >}}">property <b>rateLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rateBasedRule.ts#L154" >}}">property <b>rateLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rateLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2516,7 +2404,7 @@ The maximum number of requests, which have an identical value in the field speci
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RegexMatchSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L121" >}}">interface <b>RegexMatchSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L123" >}}">interface <b>RegexMatchSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2525,7 +2413,7 @@ The set of arguments for constructing a RegexMatchSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RegexMatchSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L125" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L127" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2536,17 +2424,10 @@ The name or description of the Regex Match Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexMatchSetArgs-regexMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L130" >}}">property <b>regexMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L132" >}}">property <b>regexMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>regexMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    regexPatternSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>regexMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RegexMatchSetRegexMatchTuple'>RegexMatchSetRegexMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The regular expression pattern that you want AWS WAF to search for in web requests,
@@ -2556,7 +2437,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RegexMatchSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L106" >}}">interface <b>RegexMatchSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L108" >}}">interface <b>RegexMatchSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2565,7 +2446,7 @@ Input properties used for looking up and filtering RegexMatchSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RegexMatchSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L110" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2576,17 +2457,10 @@ The name or description of the Regex Match Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexMatchSetState-regexMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L115" >}}">property <b>regexMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexMatchSet.ts#L117" >}}">property <b>regexMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>regexMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    regexPatternSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>regexMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RegexMatchSetRegexMatchTuple'>RegexMatchSetRegexMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The regular expression pattern that you want AWS WAF to search for in web requests,
@@ -2596,7 +2470,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RegexPatternSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L109" >}}">interface <b>RegexPatternSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L111" >}}">interface <b>RegexPatternSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2605,7 +2479,7 @@ The set of arguments for constructing a RegexPatternSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RegexPatternSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L115" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2616,7 +2490,7 @@ The name or description of the Regex Pattern Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexPatternSetArgs-regexPatternStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L117" >}}">property <b>regexPatternStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L119" >}}">property <b>regexPatternStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regexPatternStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2628,7 +2502,7 @@ A list of regular expression (regex) patterns that you want AWS WAF to search fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RegexPatternSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L95" >}}">interface <b>RegexPatternSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L97" >}}">interface <b>RegexPatternSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2637,7 +2511,7 @@ Input properties used for looking up and filtering RegexPatternSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RegexPatternSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L99" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L101" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2648,7 +2522,7 @@ The name or description of the Regex Pattern Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RegexPatternSetState-regexPatternStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L103" >}}">property <b>regexPatternStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/regexPatternSet.ts#L105" >}}">property <b>regexPatternStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regexPatternStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2660,7 +2534,7 @@ A list of regular expression (regex) patterns that you want AWS WAF to search fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L130" >}}">interface <b>RuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L132" >}}">interface <b>RuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2669,7 +2543,7 @@ The set of arguments for constructing a Rule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleArgs-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L134" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L136" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2680,7 +2554,7 @@ The name or description for the Amazon CloudWatch metric of this rule. The name 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2691,14 +2565,10 @@ The name or description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-predicates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L142" >}}">property <b>predicates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L144" >}}">property <b>predicates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    negated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RulePredicate'>RulePredicate</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The objects to include in a rule (documented below).
@@ -2707,7 +2577,7 @@ The objects to include in a rule (documented below).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L129" >}}">interface <b>RuleGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L131" >}}">interface <b>RuleGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2716,17 +2586,10 @@ The set of arguments for constructing a RuleGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleGroupArgs-activatedRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L133" >}}">property <b>activatedRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L135" >}}">property <b>activatedRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>activatedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>activatedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RuleGroupActivatedRule'>RuleGroupActivatedRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A list of activated rules, see below
@@ -2734,7 +2597,7 @@ A list of activated rules, see below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroupArgs-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L137" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L139" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2745,7 +2608,7 @@ A friendly name for the metrics from the rule group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L141" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L143" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2757,7 +2620,7 @@ A friendly name of the rule group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L111" >}}">interface <b>RuleGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L113" >}}">interface <b>RuleGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2766,17 +2629,10 @@ Input properties used for looking up and filtering RuleGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleGroupState-activatedRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L115" >}}">property <b>activatedRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L117" >}}">property <b>activatedRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>activatedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>activatedRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RuleGroupActivatedRule'>RuleGroupActivatedRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A list of activated rules, see below
@@ -2784,7 +2640,7 @@ A list of activated rules, see below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroupState-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L119" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L121" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2795,7 +2651,7 @@ A friendly name for the metrics from the rule group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleGroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/ruleGroup.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2807,7 +2663,7 @@ A friendly name of the rule group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L112" >}}">interface <b>RuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L114" >}}">interface <b>RuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2816,7 +2672,7 @@ Input properties used for looking up and filtering Rule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleState-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L116" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L118" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2827,7 +2683,7 @@ The name or description for the Amazon CloudWatch metric of this rule. The name 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L122" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2838,14 +2694,10 @@ The name or description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-predicates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L124" >}}">property <b>predicates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/rule.ts#L126" >}}">property <b>predicates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    negated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>predicates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RulePredicate'>RulePredicate</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The objects to include in a rule (documented below).
@@ -2854,7 +2706,7 @@ The objects to include in a rule (documented below).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SizeConstraintSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L113" >}}">interface <b>SizeConstraintSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L115" >}}">interface <b>SizeConstraintSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2863,7 +2715,7 @@ The set of arguments for constructing a SizeConstraintSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SizeConstraintSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L117" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L119" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2874,18 +2726,10 @@ The name or description of the Size Constraint Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SizeConstraintSetArgs-sizeConstraints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L121" >}}">property <b>sizeConstraints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L123" >}}">property <b>sizeConstraints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sizeConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    comparisonOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sizeConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SizeConstraintSetSizeConstraint'>SizeConstraintSetSizeConstraint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies the parts of web requests that you want to inspect the size of.
@@ -2894,7 +2738,7 @@ Specifies the parts of web requests that you want to inspect the size of.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SizeConstraintSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L99" >}}">interface <b>SizeConstraintSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L101" >}}">interface <b>SizeConstraintSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2903,7 +2747,7 @@ Input properties used for looking up and filtering SizeConstraintSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SizeConstraintSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L103" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L105" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2914,18 +2758,10 @@ The name or description of the Size Constraint Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SizeConstraintSetState-sizeConstraints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L107" >}}">property <b>sizeConstraints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sizeConstraintSet.ts#L109" >}}">property <b>sizeConstraints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sizeConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    comparisonOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sizeConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SizeConstraintSetSizeConstraint'>SizeConstraintSetSizeConstraint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies the parts of web requests that you want to inspect the size of.
@@ -2934,7 +2770,7 @@ Specifies the parts of web requests that you want to inspect the size of.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlInjectionMatchSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L111" >}}">interface <b>SqlInjectionMatchSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L113" >}}">interface <b>SqlInjectionMatchSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2943,7 +2779,7 @@ The set of arguments for constructing a SqlInjectionMatchSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L115" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L117" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2954,16 +2790,10 @@ The name or description of the SQL Injection Match Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSetArgs-sqlInjectionMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L119" >}}">property <b>sqlInjectionMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L121" >}}">property <b>sqlInjectionMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sqlInjectionMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sqlInjectionMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SqlInjectionMatchSetSqlInjectionMatchTuple'>SqlInjectionMatchSetSqlInjectionMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
@@ -2972,7 +2802,7 @@ The parts of web requests that you want AWS WAF to inspect for malicious SQL cod
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlInjectionMatchSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L97" >}}">interface <b>SqlInjectionMatchSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L99" >}}">interface <b>SqlInjectionMatchSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2981,7 +2811,7 @@ Input properties used for looking up and filtering SqlInjectionMatchSet resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L101" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2992,16 +2822,10 @@ The name or description of the SQL Injection Match Set.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlInjectionMatchSetState-sqlInjectionMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L105" >}}">property <b>sqlInjectionMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/sqlInjectionMatchSet.ts#L107" >}}">property <b>sqlInjectionMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sqlInjectionMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sqlInjectionMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SqlInjectionMatchSetSqlInjectionMatchTuple'>SqlInjectionMatchSetSqlInjectionMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
@@ -3010,7 +2834,7 @@ The parts of web requests that you want AWS WAF to inspect for malicious SQL cod
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebAclArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L198" >}}">interface <b>WebAclArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L200" >}}">interface <b>WebAclArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3019,12 +2843,10 @@ The set of arguments for constructing a WebAcl resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WebAclArgs-defaultAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L202" >}}">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L204" >}}">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#WebAclDefaultAction'>WebAclDefaultAction</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
@@ -3032,18 +2854,10 @@ Configuration block with action that you want AWS WAF to take when a request doe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclArgs-loggingConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L206" >}}">property <b>loggingConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L208" >}}">property <b>loggingConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loggingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    logDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    redactedFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        fieldToMatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>loggingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#WebAclLoggingConfiguration'>WebAclLoggingConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block to enable WAF logging. Detailed below.
@@ -3051,7 +2865,7 @@ Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclArgs-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L210" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L212" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3062,7 +2876,7 @@ The name or description for the Amazon CloudWatch metric of this web ACL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L214" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L216" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3073,20 +2887,10 @@ The name or description of the web ACL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclArgs-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L218" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L220" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    overrideAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#WebAclRule'>WebAclRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
@@ -3095,7 +2899,7 @@ Configuration blocks containing rules to associate with the web ACL and the sett
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebAclState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L171" >}}">interface <b>WebAclState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L173" >}}">interface <b>WebAclState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3104,7 +2908,7 @@ Input properties used for looking up and filtering WebAcl resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WebAclState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L172" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L174" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3112,12 +2916,10 @@ Input properties used for looking up and filtering WebAcl resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclState-defaultAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L176" >}}">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L178" >}}">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#WebAclDefaultAction'>WebAclDefaultAction</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
@@ -3125,18 +2927,10 @@ Configuration block with action that you want AWS WAF to take when a request doe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclState-loggingConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L180" >}}">property <b>loggingConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L182" >}}">property <b>loggingConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loggingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    logDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    redactedFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        fieldToMatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>loggingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#WebAclLoggingConfiguration'>WebAclLoggingConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block to enable WAF logging. Detailed below.
@@ -3144,7 +2938,7 @@ Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclState-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L184" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L186" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3155,7 +2949,7 @@ The name or description for the Amazon CloudWatch metric of this web ACL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L188" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3166,20 +2960,10 @@ The name or description of the web ACL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebAclState-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L192" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/webAcl.ts#L194" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    overrideAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#WebAclRule'>WebAclRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
@@ -3188,7 +2972,7 @@ Configuration blocks containing rules to associate with the web ACL and the sett
 </div>
 </div>
 <h2 class="pdoc-module-header" id="XssMatchSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L119" >}}">interface <b>XssMatchSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L121" >}}">interface <b>XssMatchSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3197,7 +2981,7 @@ The set of arguments for constructing a XssMatchSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="XssMatchSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3208,16 +2992,10 @@ The name or description of the SizeConstraintSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="XssMatchSetArgs-xssMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L127" >}}">property <b>xssMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L129" >}}">property <b>xssMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>xssMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>xssMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#XssMatchSetXssMatchTuple'>XssMatchSetXssMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The parts of web requests that you want to inspect for cross-site scripting attacks.
@@ -3226,7 +3004,7 @@ The parts of web requests that you want to inspect for cross-site scripting atta
 </div>
 </div>
 <h2 class="pdoc-module-header" id="XssMatchSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L105" >}}">interface <b>XssMatchSetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L107" >}}">interface <b>XssMatchSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3235,7 +3013,7 @@ Input properties used for looking up and filtering XssMatchSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="XssMatchSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L109" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L111" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3246,16 +3024,10 @@ The name or description of the SizeConstraintSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="XssMatchSetState-xssMatchTuples">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L113" >}}">property <b>xssMatchTuples</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="waf/xssMatchSet.ts#L115" >}}">property <b>xssMatchTuples</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>xssMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fieldToMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    textTransformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>xssMatchTuples?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#XssMatchSetXssMatchTuple'>XssMatchSetXssMatchTuple</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The parts of web requests that you want to inspect for cross-site scripting attacks.

@@ -367,7 +367,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public </span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: queue.Queue, handler: <a href='#QueueEventHandler'>QueueEventHandler</a>, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'>public </span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, handler: <a href='#QueueEventHandler'>QueueEventHandler</a>, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -409,7 +409,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L65" >}}">property <b>eventSourceMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>eventSourceMapping: lambda.EventSourceMapping;</pre>
+<pre class="highlight"><span class='kd'>public </span>eventSourceMapping: <a href='#EventSourceMapping'>EventSourceMapping</a>;</pre>
 {{% md %}}
 
 The underlying sns object created for the subscription.
@@ -428,7 +428,7 @@ The underlying sns object created for the subscription.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L226" >}}">property <b>permission</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>permission: permission.Permission;</pre>
+<pre class="highlight"><span class='kd'>public </span>permission: <a href='#Permission'>Permission</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -436,7 +436,7 @@ The underlying sns object created for the subscription.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sqs/sqsMixins.ts#L60" >}}">property <b>queue</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>queue: queue.Queue;</pre>
+<pre class="highlight"><span class='kd'>public </span>queue: Queue;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

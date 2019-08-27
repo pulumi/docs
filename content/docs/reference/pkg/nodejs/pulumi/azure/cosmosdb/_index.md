@@ -59,7 +59,7 @@ title: Module cosmosdb
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L53" >}}">class <b>Account</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L55" >}}">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -112,7 +112,7 @@ const db = new azure.cosmosdb.Account("db", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L168" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L170" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -129,7 +129,7 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L62" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L64" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -169,7 +169,7 @@ Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L73" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L75" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -199,12 +199,10 @@ want to compose multiple Functions into the same App manually.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L83" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L85" >}}">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountCapability'>AccountCapability</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
@@ -212,7 +210,7 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L87" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L89" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -223,14 +221,10 @@ A list of connection strings available for this CosmosDB account. If the kind is
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-consistencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L91" >}}">property <b>consistencyPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L93" >}}">property <b>consistencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    consistencyLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    maxIntervalInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    maxStalenessPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</pre>
 {{% md %}}
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
@@ -238,7 +232,7 @@ Specifies a `consistencyPolicy` resource, used to define the consistency policy 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L95" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L97" >}}">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableAutomaticFailover: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -249,7 +243,7 @@ Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L99" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L101" >}}">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableMultipleWriteLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -260,7 +254,7 @@ Enable multi-master support for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L103" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L105" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -271,27 +265,18 @@ The endpoint used to connect to the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-failoverPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L104" >}}">property <b>failoverPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L106" >}}">property <b>failoverPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountFailoverPolicy'>AccountFailoverPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L108" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L110" >}}">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    failoverPriority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountGeoLocation'>AccountGeoLocation</a>[]&gt;;</pre>
 {{% md %}}
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
@@ -311,7 +296,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L112" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L114" >}}">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipRangeFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -322,7 +307,7 @@ CosmosDB Firewall Support: This value specifies the set of IP addresses or IP ad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L116" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L118" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isVirtualNetworkFilterEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -333,7 +318,7 @@ Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L120" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L122" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -344,7 +329,7 @@ Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L124" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L126" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -355,7 +340,7 @@ The name of the Azure region to host replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L128" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L130" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -366,7 +351,7 @@ The capability to enable - Possible values are `EnableTable`, `EnableCassandra`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L132" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L134" >}}">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>offerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -377,7 +362,7 @@ Specifies the Offer Type to use for this CosmosDB Account - currently this can o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L136" >}}">property <b>primaryMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L138" >}}">property <b>primaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -388,7 +373,7 @@ The Primary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L140" >}}">property <b>primaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L142" >}}">property <b>primaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryReadonlyMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -399,7 +384,7 @@ The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-readEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L144" >}}">property <b>readEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L146" >}}">property <b>readEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>readEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -410,7 +395,7 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L148" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L150" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -421,7 +406,7 @@ The name of the resource group in which the CosmosDB Account is created. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L152" >}}">property <b>secondaryMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L154" >}}">property <b>secondaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -432,7 +417,7 @@ The Secondary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L156" >}}">property <b>secondaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L158" >}}">property <b>secondaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryReadonlyMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -443,7 +428,7 @@ The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L160" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L162" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -466,12 +451,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L164" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L166" >}}">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
@@ -479,7 +462,7 @@ Specifies a `virtualNetworkRules` resource, used to define which subnets are all
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-writeEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L168" >}}">property <b>writeEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L170" >}}">property <b>writeEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>writeEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -491,7 +474,7 @@ A list of write endpoints available for this CosmosDB account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CassandraKeyspace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L29" >}}">class <b>CassandraKeyspace</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L31" >}}">class <b>CassandraKeyspace</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -520,7 +503,7 @@ const exampleCassandraKeyspace = new azure.cosmosdb.CassandraKeyspace("example",
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspace-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -537,7 +520,7 @@ Create a CassandraKeyspace resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L38" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -561,7 +544,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L49" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -575,7 +558,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L59" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L61" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -598,7 +581,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L63" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -609,7 +592,7 @@ Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L67" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L69" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -643,7 +626,7 @@ deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -776,7 +759,7 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoCollection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L47" >}}">class <b>MongoCollection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L49" >}}">class <b>MongoCollection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -823,7 +806,7 @@ const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollection-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L98" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L100" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -840,7 +823,7 @@ Create a MongoCollection resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -864,7 +847,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -878,7 +861,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L74" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L76" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -886,7 +869,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L78" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L80" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -897,7 +880,7 @@ The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-defaultTtlSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L82" >}}">property <b>defaultTtlSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L84" >}}">property <b>defaultTtlSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -920,13 +903,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-indexes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L86" >}}">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L88" >}}">property <b>indexes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    unique: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MongoCollectionIndex'>MongoCollectionIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 One or more `indexes` blocks as defined below.
@@ -934,7 +914,7 @@ One or more `indexes` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L90" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L92" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -945,7 +925,7 @@ Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L94" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L96" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -956,7 +936,7 @@ The name of the resource group in which the Cosmos DB Mongo Collection is create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-shardKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L98" >}}">property <b>shardKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L100" >}}">property <b>shardKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>shardKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -980,7 +960,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoDatabase">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L29" >}}">class <b>MongoDatabase</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L31" >}}">class <b>MongoDatabase</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1009,7 +989,7 @@ const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabase-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1026,7 +1006,7 @@ Create a MongoDatabase resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L38" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1050,7 +1030,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L49" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1064,7 +1044,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L59" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L61" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1087,7 +1067,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L63" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1098,7 +1078,7 @@ Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L67" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L69" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1122,7 +1102,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlDatabase">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L29" >}}">class <b>SqlDatabase</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L31" >}}">class <b>SqlDatabase</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1151,7 +1131,7 @@ const exampleSqlDatabase = new azure.cosmosdb.SqlDatabase("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabase-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1168,7 +1148,7 @@ Create a SqlDatabase resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L38" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1192,7 +1172,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L49" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1206,7 +1186,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L59" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L61" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1229,7 +1209,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L63" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1240,7 +1220,7 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L67" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L69" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1264,7 +1244,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Table">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L29" >}}">class <b>Table</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L31" >}}">class <b>Table</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1293,7 +1273,7 @@ const exampleTable = new azure.cosmosdb.Table("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1310,7 +1290,7 @@ Create a Table resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L38" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1334,7 +1314,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L49" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1348,7 +1328,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L59" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L61" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1371,7 +1351,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L63" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1382,7 +1362,7 @@ Specifies the name of the Cosmos DB Table. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L67" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L69" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1406,7 +1386,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAccount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L26" >}}">function <b>getAccount</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L28" >}}">function <b>getAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1435,7 +1415,7 @@ export const cosmosdbAccountEndpoint = azurerm_cosmosdb_account_jobs.endpoint;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L349" >}}">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L351" >}}">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1444,12 +1424,10 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L353" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L355" >}}">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCapability'>AccountCapability</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
@@ -1457,14 +1435,10 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-consistencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L357" >}}">property <b>consistencyPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L359" >}}">property <b>consistencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    consistencyLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    maxIntervalInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxStalenessPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</pre>
 {{% md %}}
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
@@ -1472,7 +1446,7 @@ Specifies a `consistencyPolicy` resource, used to define the consistency policy 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L361" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L363" >}}">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableAutomaticFailover?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1483,7 +1457,7 @@ Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L365" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L367" >}}">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableMultipleWriteLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1494,27 +1468,18 @@ Enable multi-master support for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-failoverPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L366" >}}">property <b>failoverPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L368" >}}">property <b>failoverPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountFailoverPolicy'>AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L370" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L372" >}}">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    failoverPriority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountGeoLocation'>AccountGeoLocation</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
@@ -1522,7 +1487,7 @@ Specifies a `geoLocation` resource, used to define where data should be replicat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L374" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L376" >}}">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipRangeFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1533,7 +1498,7 @@ CosmosDB Firewall Support: This value specifies the set of IP addresses or IP ad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L378" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L380" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isVirtualNetworkFilterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1544,7 +1509,7 @@ Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L382" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L384" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1555,7 +1520,7 @@ Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L386" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L388" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1566,7 +1531,7 @@ The name of the Azure region to host replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L390" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L392" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1577,7 +1542,7 @@ The capability to enable - Possible values are `EnableTable`, `EnableCassandra`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L394" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L396" >}}">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>offerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1588,7 +1553,7 @@ Specifies the Offer Type to use for this CosmosDB Account - currently this can o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L398" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L400" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1599,7 +1564,7 @@ The name of the resource group in which the CosmosDB Account is created. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L402" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L404" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1610,12 +1575,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L406" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L408" >}}">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
@@ -1624,7 +1587,7 @@ Specifies a `virtualNetworkRules` resource, used to define which subnets are all
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L254" >}}">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L256" >}}">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1633,12 +1596,10 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L258" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L260" >}}">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCapability'>AccountCapability</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
@@ -1646,7 +1607,7 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L262" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L264" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1657,14 +1618,10 @@ A list of connection strings available for this CosmosDB account. If the kind is
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-consistencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L266" >}}">property <b>consistencyPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L268" >}}">property <b>consistencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    consistencyLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    maxIntervalInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxStalenessPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</pre>
 {{% md %}}
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
@@ -1672,7 +1629,7 @@ Specifies a `consistencyPolicy` resource, used to define the consistency policy 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L270" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L272" >}}">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableAutomaticFailover?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1683,7 +1640,7 @@ Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L274" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L276" >}}">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableMultipleWriteLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1694,7 +1651,7 @@ Enable multi-master support for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L278" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L280" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1705,27 +1662,18 @@ The endpoint used to connect to the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-failoverPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L279" >}}">property <b>failoverPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L281" >}}">property <b>failoverPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountFailoverPolicy'>AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L283" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L285" >}}">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    failoverPriority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountGeoLocation'>AccountGeoLocation</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
@@ -1733,7 +1681,7 @@ Specifies a `geoLocation` resource, used to define where data should be replicat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L287" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L289" >}}">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipRangeFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1744,7 +1692,7 @@ CosmosDB Firewall Support: This value specifies the set of IP addresses or IP ad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L291" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L293" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isVirtualNetworkFilterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1755,7 +1703,7 @@ Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L295" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L297" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1766,7 +1714,7 @@ Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L299" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L301" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1777,7 +1725,7 @@ The name of the Azure region to host replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L303" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L305" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1788,7 +1736,7 @@ The capability to enable - Possible values are `EnableTable`, `EnableCassandra`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L307" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L309" >}}">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>offerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1799,7 +1747,7 @@ Specifies the Offer Type to use for this CosmosDB Account - currently this can o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L311" >}}">property <b>primaryMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L313" >}}">property <b>primaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1810,7 +1758,7 @@ The Primary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L315" >}}">property <b>primaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L317" >}}">property <b>primaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryReadonlyMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1821,7 +1769,7 @@ The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-readEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L319" >}}">property <b>readEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L321" >}}">property <b>readEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1832,7 +1780,7 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L323" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L325" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1843,7 +1791,7 @@ The name of the resource group in which the CosmosDB Account is created. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L327" >}}">property <b>secondaryMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L329" >}}">property <b>secondaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1854,7 +1802,7 @@ The Secondary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L331" >}}">property <b>secondaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L333" >}}">property <b>secondaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryReadonlyMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1865,7 +1813,7 @@ The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L335" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L337" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1876,12 +1824,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L339" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L341" >}}">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
@@ -1889,7 +1835,7 @@ Specifies a `virtualNetworkRules` resource, used to define which subnets are all
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-writeEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L343" >}}">property <b>writeEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L345" >}}">property <b>writeEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>writeEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1901,7 +1847,7 @@ A list of write endpoints available for this CosmosDB account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CassandraKeyspaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L128" >}}">interface <b>CassandraKeyspaceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L130" >}}">interface <b>CassandraKeyspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1910,7 +1856,7 @@ The set of arguments for constructing a CassandraKeyspace resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L132" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L134" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1921,7 +1867,7 @@ The name of the Cosmos DB Cassandra KeySpace to create the table within. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1932,7 +1878,7 @@ Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L140" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L142" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1944,7 +1890,7 @@ The name of the resource group in which the Cosmos DB Cassandra KeySpace is crea
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CassandraKeyspaceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L110" >}}">interface <b>CassandraKeyspaceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L112" >}}">interface <b>CassandraKeyspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1953,7 +1899,7 @@ Input properties used for looking up and filtering CassandraKeyspace resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L114" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L116" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1964,7 +1910,7 @@ The name of the Cosmos DB Cassandra KeySpace to create the table within. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L118" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1975,7 +1921,7 @@ Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L122" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L124" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2564,7 +2510,7 @@ there are leases already created has no effect.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L45" >}}">interface <b>GetAccountArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L47" >}}">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2573,7 +2519,7 @@ A collection of arguments for invoking getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2584,7 +2530,7 @@ Specifies the name of the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2596,7 +2542,7 @@ Specifies the name of the resource group in which the CosmosDB Account resides.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L59" >}}">interface <b>GetAccountResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L61" >}}">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2605,12 +2551,10 @@ A collection of values returned by getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L63" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L65" >}}">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>capabilities: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>capabilities: <a href='#GetAccountCapability'>GetAccountCapability</a>[];</pre>
 {{% md %}}
 
 Capabilities enabled on this Cosmos DB account.
@@ -2618,19 +2562,15 @@ Capabilities enabled on this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-consistencyPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L64" >}}">property <b>consistencyPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L66" >}}">property <b>consistencyPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>consistencyPolicies: {
-    consistencyLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    maxIntervalInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    maxStalenessPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>consistencyPolicies: <a href='#GetAccountConsistencyPolicy'>GetAccountConsistencyPolicy</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L68" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L70" >}}">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableAutomaticFailover: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2641,7 +2581,7 @@ If automatic failover is enabled for this CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L72" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L74" >}}">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableMultipleWriteLocations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2652,7 +2592,7 @@ If multi-master is enabled for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L76" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L78" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2663,19 +2603,15 @@ The endpoint used to connect to the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L77" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L79" >}}">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geoLocations: {
-    failoverPriority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>geoLocations: <a href='#GetAccountGeoLocation'>GetAccountGeoLocation</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L135" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L137" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2686,7 +2622,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L81" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L83" >}}">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipRangeFilter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2697,7 +2633,7 @@ The current IP Filter for this CosmosDB account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L85" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L87" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isVirtualNetworkFilterEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2708,7 +2644,7 @@ If virtual network filtering is enabled for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L89" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L91" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2719,7 +2655,7 @@ The Kind of the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L93" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L95" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2730,7 +2666,7 @@ The name of the Azure region hosting replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L94" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L96" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2738,7 +2674,7 @@ The name of the Azure region hosting replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L98" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L100" >}}">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>offerType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2749,7 +2685,7 @@ The Offer Type to used by this CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L102" >}}">property <b>primaryMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L104" >}}">property <b>primaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2760,7 +2696,7 @@ The Primary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L106" >}}">property <b>primaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L108" >}}">property <b>primaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryReadonlyMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2771,7 +2707,7 @@ The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-readEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L110" >}}">property <b>readEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L112" >}}">property <b>readEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readEndpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2782,7 +2718,7 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L111" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L113" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2790,7 +2726,7 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L115" >}}">property <b>secondaryMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L117" >}}">property <b>secondaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2801,7 +2737,7 @@ The Secondary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L119" >}}">property <b>secondaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L121" >}}">property <b>secondaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryReadonlyMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2812,7 +2748,7 @@ The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L123" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L125" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2823,12 +2759,10 @@ A mapping of tags assigned to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L127" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L129" >}}">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>virtualNetworkRules: {
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>virtualNetworkRules: <a href='#GetAccountVirtualNetworkRule'>GetAccountVirtualNetworkRule</a>[];</pre>
 {{% md %}}
 
 Subnets that are allowed to access this CosmosDB account.
@@ -2836,7 +2770,7 @@ Subnets that are allowed to access this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-writeEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L131" >}}">property <b>writeEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L133" >}}">property <b>writeEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>writeEndpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2952,7 +2886,7 @@ there are leases already created has no effect.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoCollectionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L183" >}}">interface <b>MongoCollectionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L185" >}}">interface <b>MongoCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2961,7 +2895,7 @@ The set of arguments for constructing a MongoCollection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L184" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L186" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2969,7 +2903,7 @@ The set of arguments for constructing a MongoCollection resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L188" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L190" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2980,7 +2914,7 @@ The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-defaultTtlSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L192" >}}">property <b>defaultTtlSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L194" >}}">property <b>defaultTtlSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2991,13 +2925,10 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-indexes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L196" >}}">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L198" >}}">property <b>indexes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    unique: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MongoCollectionIndex'>MongoCollectionIndex</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `indexes` blocks as defined below.
@@ -3005,7 +2936,7 @@ One or more `indexes` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L200" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L202" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3016,7 +2947,7 @@ Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L204" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L206" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3027,7 +2958,7 @@ The name of the resource group in which the Cosmos DB Mongo Collection is create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-shardKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L208" >}}">property <b>shardKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L210" >}}">property <b>shardKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shardKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3039,7 +2970,7 @@ The name of the key to partition on for sharding. There must not be any other un
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoCollectionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L152" >}}">interface <b>MongoCollectionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L154" >}}">interface <b>MongoCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3048,7 +2979,7 @@ Input properties used for looking up and filtering MongoCollection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollectionState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L153" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L155" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3056,7 +2987,7 @@ Input properties used for looking up and filtering MongoCollection resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L157" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L159" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3067,7 +2998,7 @@ The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-defaultTtlSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L161" >}}">property <b>defaultTtlSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L163" >}}">property <b>defaultTtlSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3078,13 +3009,10 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-indexes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L165" >}}">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L167" >}}">property <b>indexes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    unique: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MongoCollectionIndex'>MongoCollectionIndex</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `indexes` blocks as defined below.
@@ -3092,7 +3020,7 @@ One or more `indexes` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L169" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L171" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3103,7 +3031,7 @@ Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L173" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L175" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3114,7 +3042,7 @@ The name of the resource group in which the Cosmos DB Mongo Collection is create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-shardKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L177" >}}">property <b>shardKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L179" >}}">property <b>shardKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shardKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3126,7 +3054,7 @@ The name of the key to partition on for sharding. There must not be any other un
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoDatabaseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L128" >}}">interface <b>MongoDatabaseArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L130" >}}">interface <b>MongoDatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3135,7 +3063,7 @@ The set of arguments for constructing a MongoDatabase resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L132" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L134" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3146,7 +3074,7 @@ The name of the Cosmos DB Mongo Database to create the table within. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3157,7 +3085,7 @@ Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L140" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L142" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3169,7 +3097,7 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoDatabaseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L110" >}}">interface <b>MongoDatabaseState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L112" >}}">interface <b>MongoDatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3178,7 +3106,7 @@ Input properties used for looking up and filtering MongoDatabase resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabaseState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L114" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L116" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3189,7 +3117,7 @@ The name of the Cosmos DB Mongo Database to create the table within. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L118" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3200,7 +3128,7 @@ Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L122" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L124" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3212,7 +3140,7 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlDatabaseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L128" >}}">interface <b>SqlDatabaseArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L130" >}}">interface <b>SqlDatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3221,7 +3149,7 @@ The set of arguments for constructing a SqlDatabase resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L132" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L134" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3232,7 +3160,7 @@ The name of the Cosmos DB SQL Database to create the table within. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3243,7 +3171,7 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L140" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L142" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3255,7 +3183,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlDatabaseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L110" >}}">interface <b>SqlDatabaseState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L112" >}}">interface <b>SqlDatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3264,7 +3192,7 @@ Input properties used for looking up and filtering SqlDatabase resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabaseState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L114" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L116" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3275,7 +3203,7 @@ The name of the Cosmos DB SQL Database to create the table within. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L118" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3286,7 +3214,7 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L122" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L124" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3298,7 +3226,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L128" >}}">interface <b>TableArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L130" >}}">interface <b>TableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3307,7 +3235,7 @@ The set of arguments for constructing a Table resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L132" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L134" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3318,7 +3246,7 @@ The name of the Cosmos DB Table to create the table within. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3329,7 +3257,7 @@ Specifies the name of the Cosmos DB Table. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L140" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L142" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3341,7 +3269,7 @@ The name of the resource group in which the Cosmos DB Table is created. Changing
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L110" >}}">interface <b>TableState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L112" >}}">interface <b>TableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3350,7 +3278,7 @@ Input properties used for looking up and filtering Table resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L114" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L116" >}}">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3361,7 +3289,7 @@ The name of the Cosmos DB Table to create the table within. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L118" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3372,7 +3300,7 @@ Specifies the name of the Cosmos DB Table. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L122" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L124" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

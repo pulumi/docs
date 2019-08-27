@@ -699,7 +699,7 @@ Route53 hosted zone ID to enable query logs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Record">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L113" >}}">class <b>Record</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L115" >}}">class <b>Record</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -810,7 +810,7 @@ const exampleRecord = new aws.route53.Record("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Record-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L200" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L202" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -827,7 +827,7 @@ Create a Record resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L122" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L124" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -851,7 +851,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L133" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L135" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -865,14 +865,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-aliases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L144" >}}">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L146" >}}">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>aliases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    evaluateTargetHealth: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>aliases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordAlias'>RecordAlias</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 An alias block. Conflicts with `ttl` & `records`.
@@ -881,7 +877,7 @@ Alias record documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-allowOverwrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L148" >}}">property <b>allowOverwrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L150" >}}">property <b>allowOverwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowOverwrite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -892,12 +888,10 @@ Allow creation of this record to overwrite an existing record, if any. This does
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-failoverRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L152" >}}">property <b>failoverRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L154" >}}">property <b>failoverRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>failoverRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>failoverRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordFailoverRoutingPolicy'>RecordFailoverRoutingPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
@@ -905,7 +899,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L156" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L158" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -916,14 +910,10 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-geolocationRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L160" >}}">property <b>geolocationRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L162" >}}">property <b>geolocationRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>geolocationRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    continent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    country: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subdivision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>geolocationRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordGeolocationRoutingPolicy'>RecordGeolocationRoutingPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
@@ -931,7 +921,7 @@ A block indicating a routing policy based on the geolocation of the requestor. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-healthCheckId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L164" >}}">property <b>healthCheckId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L166" >}}">property <b>healthCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>healthCheckId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -954,12 +944,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-latencyRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L168" >}}">property <b>latencyRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L170" >}}">property <b>latencyRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>latencyRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>latencyRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordLatencyRoutingPolicy'>RecordLatencyRoutingPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
@@ -967,7 +955,7 @@ A block indicating a routing policy based on the latency between the requestor a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-multivalueAnswerRoutingPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L172" >}}">property <b>multivalueAnswerRoutingPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L174" >}}">property <b>multivalueAnswerRoutingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>multivalueAnswerRoutingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -978,7 +966,7 @@ Set to `true` to indicate a multivalue answer routing policy. Conflicts with any
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L176" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L178" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -989,7 +977,7 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L180" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L182" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1000,7 +988,7 @@ A string list of records. To specify a single record value longer than 255 chara
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-setIdentifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L184" >}}">property <b>setIdentifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L186" >}}">property <b>setIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>setIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1011,7 +999,7 @@ Unique identifier to differentiate records with routing policies from one anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L188" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L190" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1022,7 +1010,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L192" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L194" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1045,12 +1033,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-weightedRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L196" >}}">property <b>weightedRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L198" >}}">property <b>weightedRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>weightedRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>weightedRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordWeightedRoutingPolicy'>RecordWeightedRoutingPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
@@ -1058,7 +1044,7 @@ A block indicating a weighted routing policy. Conflicts with any other routing p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L200" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L202" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1070,7 +1056,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverEndpoint">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L39" >}}">class <b>ResolverEndpoint</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L41" >}}">class <b>ResolverEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1109,7 +1095,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverEndpoint-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L96" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L98" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1126,7 +1112,7 @@ Create a ResolverEndpoint resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L48" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1150,7 +1136,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L59" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1164,7 +1150,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L69" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L71" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1175,7 +1161,7 @@ The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L75" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L77" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1188,7 +1174,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-hostVpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L79" >}}">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L81" >}}">property <b>hostVpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostVpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1211,14 +1197,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-ipAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L84" >}}">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L86" >}}">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ipId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ResolverEndpointIpAddress'>ResolverEndpointIpAddress</a>[]&gt;;</pre>
 {{% md %}}
 
 The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
@@ -1227,7 +1209,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L88" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1238,7 +1220,7 @@ The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-securityGroupIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L92" >}}">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L94" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1249,7 +1231,7 @@ The ID of one or more security groups that you want to use to control access to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L96" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L98" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1273,7 +1255,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L45" >}}">class <b>ResolverRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L47" >}}">class <b>ResolverRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1318,7 +1300,7 @@ const fwd = new aws.route53.ResolverRule("fwd", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L110" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L112" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1335,7 +1317,7 @@ Create a ResolverRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1359,7 +1341,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1373,7 +1355,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L75" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L77" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1384,7 +1366,7 @@ The ARN (Amazon Resource Name) for the resolver rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L79" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L81" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1407,7 +1389,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L83" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L85" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1418,7 +1400,7 @@ A friendly name that lets you easily find a rule in the Resolver dashboard in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-ownerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L87" >}}">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L89" >}}">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1429,7 +1411,7 @@ When a rule is shared with another AWS account, the account ID of the account th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-resolverEndpointId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L92" >}}">property <b>resolverEndpointId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L94" >}}">property <b>resolverEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resolverEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1441,7 +1423,7 @@ This argument should only be specified for `FORWARD` type rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-ruleType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L96" >}}">property <b>ruleType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L98" >}}">property <b>ruleType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ruleType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1452,7 +1434,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-shareStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L101" >}}">property <b>shareStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L103" >}}">property <b>shareStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>shareStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1464,7 +1446,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L105" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L107" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1475,13 +1457,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-targetIps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L110" >}}">property <b>targetIps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L112" >}}">property <b>targetIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>targetIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>targetIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ResolverRuleTargetIp'>ResolverRuleTargetIp</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
@@ -1503,7 +1482,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleAssociation">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L24" >}}">class <b>ResolverRuleAssociation</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L26" >}}">class <b>ResolverRuleAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1527,7 +1506,7 @@ const example = new aws.route53.ResolverRuleAssociation("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L62" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L64" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1544,7 +1523,7 @@ Create a ResolverRuleAssociation resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L33" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L35" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1568,7 +1547,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L44" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L46" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1594,7 +1573,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L54" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L56" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1605,7 +1584,7 @@ A name for the association that you're creating between a resolver rule and a VP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-resolverRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L58" >}}">property <b>resolverRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L60" >}}">property <b>resolverRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resolverRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1628,7 +1607,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L62" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L64" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1640,7 +1619,7 @@ The ID of the VPC that you want to associate the resolver rule with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Zone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L69" >}}">class <b>Zone</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L71" >}}">class <b>Zone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1709,7 +1688,7 @@ const privateZone = new aws.route53.Zone("private", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L128" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L130" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1726,7 +1705,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L78" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L80" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1750,7 +1729,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L89" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L91" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1764,7 +1743,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-comment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L99" >}}">property <b>comment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L101" >}}">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1775,7 +1754,7 @@ A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-delegationSetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L103" >}}">property <b>delegationSetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L105" >}}">property <b>delegationSetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>delegationSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1786,7 +1765,7 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L107" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L109" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1809,7 +1788,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L111" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L113" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1820,7 +1799,7 @@ This is the name of the hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L116" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L118" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1832,7 +1811,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L120" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L122" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1855,13 +1834,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-vpcs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L124" >}}">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L126" >}}">property <b>vpcs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>vpcs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    vpcRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>vpcs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ZoneVpc'>ZoneVpc</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegationSetId` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
@@ -1869,7 +1845,7 @@ Configuration block(s) specifying VPC(s) to associate with a private hosted zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L128" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L130" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1881,7 +1857,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneAssociation">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L48" >}}">class <b>ZoneAssociation</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L50" >}}">class <b>ZoneAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1929,7 +1905,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneAssociation-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L86" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L88" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1946,7 +1922,7 @@ Create a ZoneAssociation resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1970,7 +1946,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2008,7 +1984,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L78" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L80" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2019,7 +1995,7 @@ The VPC to associate with the private hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-vpcRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L82" >}}">property <b>vpcRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L84" >}}">property <b>vpcRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2030,7 +2006,7 @@ The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L86" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L88" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2042,7 +2018,7 @@ The private hosted zone to associate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getDelegationSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L27" >}}">function <b>getDelegationSet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L29" >}}">function <b>getDelegationSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2072,7 +2048,7 @@ const dset = aws.route53.getDelegationSet({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getZone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L35" >}}">function <b>getZone</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L37" >}}">function <b>getZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2166,7 +2142,7 @@ This is a reference name used in Caller Reference
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDelegationSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L45" >}}">interface <b>GetDelegationSetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L47" >}}">interface <b>GetDelegationSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2175,7 +2151,7 @@ A collection of arguments for invoking getDelegationSet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDelegationSetArgs-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L49" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L51" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2187,7 +2163,7 @@ The Hosted Zone id of the desired delegation set.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDelegationSetResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L55" >}}">interface <b>GetDelegationSetResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L57" >}}">interface <b>GetDelegationSetResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2196,7 +2172,7 @@ A collection of values returned by getDelegationSet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDelegationSetResult-callerReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L56" >}}">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L58" >}}">property <b>callerReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callerReference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2204,7 +2180,7 @@ A collection of values returned by getDelegationSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDelegationSetResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L57" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L59" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2212,7 +2188,7 @@ A collection of values returned by getDelegationSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDelegationSetResult-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L58" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getDelegationSet.ts#L60" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2221,7 +2197,7 @@ A collection of values returned by getDelegationSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L59" >}}">interface <b>GetZoneArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L61" >}}">interface <b>GetZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2230,7 +2206,7 @@ A collection of arguments for invoking getZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L63" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2241,7 +2217,7 @@ The Hosted Zone name of the desired Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-privateZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L67" >}}">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L69" >}}">property <b>privateZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2252,7 +2228,7 @@ Used with `name` field to get a private Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-resourceRecordSetCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L68" >}}">property <b>resourceRecordSetCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L70" >}}">property <b>resourceRecordSetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceRecordSetCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2260,7 +2236,7 @@ Used with `name` field to get a private Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L73" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L75" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2272,7 +2248,7 @@ a pair on the desired Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L77" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L79" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2283,7 +2259,7 @@ Used with `name` field to get a private Hosted Zone associated with the vpcId (i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L81" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L83" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2295,7 +2271,7 @@ The Hosted Zone id of the desired Hosted Zone.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZoneResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L87" >}}">interface <b>GetZoneResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L89" >}}">interface <b>GetZoneResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2304,7 +2280,7 @@ A collection of values returned by getZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneResult-callerReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L91" >}}">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L93" >}}">property <b>callerReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callerReference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2315,7 +2291,7 @@ Caller Reference of the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-comment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L95" >}}">property <b>comment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L97" >}}">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>comment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2326,7 +2302,7 @@ The comment field of the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L120" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L122" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2337,7 +2313,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-linkedServiceDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L99" >}}">property <b>linkedServiceDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L101" >}}">property <b>linkedServiceDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedServiceDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2348,7 +2324,7 @@ The description provided by the service that created the Hosted Zone (e.g. `arn:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-linkedServicePrincipal">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L103" >}}">property <b>linkedServicePrincipal</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L105" >}}">property <b>linkedServicePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedServicePrincipal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2359,7 +2335,7 @@ The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L104" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L106" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2367,7 +2343,7 @@ The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L108" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L110" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2378,7 +2354,7 @@ The list of DNS name servers for the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-privateZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L109" >}}">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L111" >}}">property <b>privateZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2386,7 +2362,7 @@ The list of DNS name servers for the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-resourceRecordSetCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L113" >}}">property <b>resourceRecordSetCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L115" >}}">property <b>resourceRecordSetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceRecordSetCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2397,7 +2373,7 @@ The number of Record Set in the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L114" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L116" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2405,7 +2381,7 @@ The number of Record Set in the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L115" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L117" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2413,7 +2389,7 @@ The number of Record Set in the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L116" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/getZone.ts#L118" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2926,7 +2902,7 @@ Route53 hosted zone ID to enable query logs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L334" >}}">interface <b>RecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L336" >}}">interface <b>RecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2935,14 +2911,10 @@ The set of arguments for constructing a Record resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordArgs-aliases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L339" >}}">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L341" >}}">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    evaluateTargetHealth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordAlias'>RecordAlias</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An alias block. Conflicts with `ttl` & `records`.
@@ -2951,7 +2923,7 @@ Alias record documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-allowOverwrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L343" >}}">property <b>allowOverwrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L345" >}}">property <b>allowOverwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowOverwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2962,12 +2934,10 @@ Allow creation of this record to overwrite an existing record, if any. This does
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-failoverRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L347" >}}">property <b>failoverRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L349" >}}">property <b>failoverRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>failoverRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>failoverRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordFailoverRoutingPolicy'>RecordFailoverRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
@@ -2975,14 +2945,10 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-geolocationRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L351" >}}">property <b>geolocationRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L353" >}}">property <b>geolocationRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geolocationRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    continent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subdivision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geolocationRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordGeolocationRoutingPolicy'>RecordGeolocationRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
@@ -2990,7 +2956,7 @@ A block indicating a routing policy based on the geolocation of the requestor. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-healthCheckId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L355" >}}">property <b>healthCheckId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L357" >}}">property <b>healthCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3001,12 +2967,10 @@ The health check the record should be associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-latencyRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L359" >}}">property <b>latencyRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L361" >}}">property <b>latencyRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>latencyRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>latencyRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordLatencyRoutingPolicy'>RecordLatencyRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
@@ -3014,7 +2978,7 @@ A block indicating a routing policy based on the latency between the requestor a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-multivalueAnswerRoutingPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L363" >}}">property <b>multivalueAnswerRoutingPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L365" >}}">property <b>multivalueAnswerRoutingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>multivalueAnswerRoutingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3025,7 +2989,7 @@ Set to `true` to indicate a multivalue answer routing policy. Conflicts with any
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L367" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L369" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3036,7 +3000,7 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L371" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L373" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3047,7 +3011,7 @@ A string list of records. To specify a single record value longer than 255 chara
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-setIdentifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L375" >}}">property <b>setIdentifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L377" >}}">property <b>setIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>setIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3058,7 +3022,7 @@ Unique identifier to differentiate records with routing policies from one anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L379" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L381" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3069,7 +3033,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L383" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L385" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#RecordType'>RecordType</a>&gt;;</pre>
@@ -3080,12 +3044,10 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-weightedRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L387" >}}">property <b>weightedRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L389" >}}">property <b>weightedRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>weightedRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>weightedRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordWeightedRoutingPolicy'>RecordWeightedRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
@@ -3093,7 +3055,7 @@ A block indicating a weighted routing policy. Conflicts with any other routing p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L391" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L393" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3105,7 +3067,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L267" >}}">interface <b>RecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L269" >}}">interface <b>RecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3114,14 +3076,10 @@ Input properties used for looking up and filtering Record resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordState-aliases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L272" >}}">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L274" >}}">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    evaluateTargetHealth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordAlias'>RecordAlias</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An alias block. Conflicts with `ttl` & `records`.
@@ -3130,7 +3088,7 @@ Alias record documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-allowOverwrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L276" >}}">property <b>allowOverwrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L278" >}}">property <b>allowOverwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowOverwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3141,12 +3099,10 @@ Allow creation of this record to overwrite an existing record, if any. This does
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-failoverRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L280" >}}">property <b>failoverRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L282" >}}">property <b>failoverRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>failoverRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>failoverRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordFailoverRoutingPolicy'>RecordFailoverRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
@@ -3154,7 +3110,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L284" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L286" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3165,14 +3121,10 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-geolocationRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L288" >}}">property <b>geolocationRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L290" >}}">property <b>geolocationRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>geolocationRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    continent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subdivision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geolocationRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordGeolocationRoutingPolicy'>RecordGeolocationRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
@@ -3180,7 +3132,7 @@ A block indicating a routing policy based on the geolocation of the requestor. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-healthCheckId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L292" >}}">property <b>healthCheckId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L294" >}}">property <b>healthCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3191,12 +3143,10 @@ The health check the record should be associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-latencyRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L296" >}}">property <b>latencyRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L298" >}}">property <b>latencyRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>latencyRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>latencyRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordLatencyRoutingPolicy'>RecordLatencyRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
@@ -3204,7 +3154,7 @@ A block indicating a routing policy based on the latency between the requestor a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-multivalueAnswerRoutingPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L300" >}}">property <b>multivalueAnswerRoutingPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L302" >}}">property <b>multivalueAnswerRoutingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>multivalueAnswerRoutingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3215,7 +3165,7 @@ Set to `true` to indicate a multivalue answer routing policy. Conflicts with any
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L304" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L306" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3226,7 +3176,7 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L308" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L310" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3237,7 +3187,7 @@ A string list of records. To specify a single record value longer than 255 chara
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-setIdentifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L312" >}}">property <b>setIdentifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L314" >}}">property <b>setIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>setIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3248,7 +3198,7 @@ Unique identifier to differentiate records with routing policies from one anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L316" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L318" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3259,7 +3209,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L320" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L322" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#RecordType'>RecordType</a>&gt;;</pre>
@@ -3270,12 +3220,10 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-weightedRoutingPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L324" >}}">property <b>weightedRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L326" >}}">property <b>weightedRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>weightedRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>weightedRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordWeightedRoutingPolicy'>RecordWeightedRoutingPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
@@ -3283,7 +3231,7 @@ A block indicating a weighted routing policy. Conflicts with any other routing p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L328" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/record.ts#L330" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3295,7 +3243,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverEndpointArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L187" >}}">interface <b>ResolverEndpointArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L189" >}}">interface <b>ResolverEndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3304,7 +3252,7 @@ The set of arguments for constructing a ResolverEndpoint resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L193" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L195" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3317,14 +3265,10 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-ipAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L198" >}}">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L200" >}}">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResolverEndpointIpAddress'>ResolverEndpointIpAddress</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
@@ -3333,7 +3277,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L202" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L204" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3344,7 +3288,7 @@ The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-securityGroupIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L206" >}}">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L208" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3355,7 +3299,7 @@ The ID of one or more security groups that you want to use to control access to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L210" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L212" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3367,7 +3311,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverEndpointState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L150" >}}">interface <b>ResolverEndpointState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L152" >}}">interface <b>ResolverEndpointState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3376,7 +3320,7 @@ Input properties used for looking up and filtering ResolverEndpoint resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverEndpointState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L154" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L156" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3387,7 +3331,7 @@ The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L160" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L162" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3400,7 +3344,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-hostVpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L164" >}}">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L166" >}}">property <b>hostVpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostVpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3411,14 +3355,10 @@ The ID of the VPC that you want to create the resolver endpoint in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-ipAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L169" >}}">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L171" >}}">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResolverEndpointIpAddress'>ResolverEndpointIpAddress</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
@@ -3427,7 +3367,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L173" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L175" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3438,7 +3378,7 @@ The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-securityGroupIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L177" >}}">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L179" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3449,7 +3389,7 @@ The ID of one or more security groups that you want to use to control access to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L181" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverEndpoint.ts#L183" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3461,7 +3401,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L210" >}}">interface <b>ResolverRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L212" >}}">interface <b>ResolverRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3470,7 +3410,7 @@ The set of arguments for constructing a ResolverRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L214" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L216" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3481,7 +3421,7 @@ DNS queries for this domain name are forwarded to the IP addresses that are spec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L218" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L220" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3492,7 +3432,7 @@ A friendly name that lets you easily find a rule in the Resolver dashboard in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-resolverEndpointId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L223" >}}">property <b>resolverEndpointId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L225" >}}">property <b>resolverEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3504,7 +3444,7 @@ This argument should only be specified for `FORWARD` type rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-ruleType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L227" >}}">property <b>ruleType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L229" >}}">property <b>ruleType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ruleType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3515,7 +3455,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L231" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L233" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3526,13 +3466,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-targetIps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L236" >}}">property <b>targetIps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L238" >}}">property <b>targetIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targetIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>targetIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResolverRuleTargetIp'>ResolverRuleTargetIp</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
@@ -3542,7 +3479,7 @@ This argument should only be specified for `FORWARD` type rules.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleAssociationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L123" >}}">interface <b>ResolverRuleAssociationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L125" >}}">interface <b>ResolverRuleAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3551,7 +3488,7 @@ The set of arguments for constructing a ResolverRuleAssociation resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L127" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L129" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3562,7 +3499,7 @@ A name for the association that you're creating between a resolver rule and a VP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationArgs-resolverRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L131" >}}">property <b>resolverRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L133" >}}">property <b>resolverRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3573,7 +3510,7 @@ The ID of the resolver rule that you want to associate with the VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationArgs-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L135" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L137" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3585,7 +3522,7 @@ The ID of the VPC that you want to associate the resolver rule with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleAssociationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L105" >}}">interface <b>ResolverRuleAssociationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L107" >}}">interface <b>ResolverRuleAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3594,7 +3531,7 @@ Input properties used for looking up and filtering ResolverRuleAssociation resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L109" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L111" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3605,7 +3542,7 @@ A name for the association that you're creating between a resolver rule and a VP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationState-resolverRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L113" >}}">property <b>resolverRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L115" >}}">property <b>resolverRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3616,7 +3553,7 @@ The ID of the resolver rule that you want to associate with the VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationState-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L117" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRuleAssociation.ts#L119" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3628,7 +3565,7 @@ The ID of the VPC that you want to associate the resolver rule with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L165" >}}">interface <b>ResolverRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L167" >}}">interface <b>ResolverRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3637,7 +3574,7 @@ Input properties used for looking up and filtering ResolverRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L169" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L171" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3648,7 +3585,7 @@ The ARN (Amazon Resource Name) for the resolver rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L173" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L175" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3659,7 +3596,7 @@ DNS queries for this domain name are forwarded to the IP addresses that are spec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L177" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L179" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3670,7 +3607,7 @@ A friendly name that lets you easily find a rule in the Resolver dashboard in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-ownerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L181" >}}">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L183" >}}">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3681,7 +3618,7 @@ When a rule is shared with another AWS account, the account ID of the account th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-resolverEndpointId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L186" >}}">property <b>resolverEndpointId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L188" >}}">property <b>resolverEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3693,7 +3630,7 @@ This argument should only be specified for `FORWARD` type rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-ruleType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L190" >}}">property <b>ruleType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L192" >}}">property <b>ruleType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ruleType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3704,7 +3641,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-shareStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L195" >}}">property <b>shareStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L197" >}}">property <b>shareStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shareStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3716,7 +3653,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L199" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L201" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3727,13 +3664,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-targetIps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L204" >}}">property <b>targetIps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/resolverRule.ts#L206" >}}">property <b>targetIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targetIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>targetIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResolverRuleTargetIp'>ResolverRuleTargetIp</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
@@ -3743,7 +3677,7 @@ This argument should only be specified for `FORWARD` type rules.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L214" >}}">interface <b>ZoneArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L216" >}}">interface <b>ZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3752,7 +3686,7 @@ The set of arguments for constructing a Zone resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneArgs-comment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L218" >}}">property <b>comment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L220" >}}">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3763,7 +3697,7 @@ A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-delegationSetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L222" >}}">property <b>delegationSetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L224" >}}">property <b>delegationSetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delegationSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3774,7 +3708,7 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L226" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L228" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3785,7 +3719,7 @@ Whether to destroy all records (possibly managed outside of this provider) in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L230" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L232" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3796,7 +3730,7 @@ This is the name of the hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L234" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L236" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3807,13 +3741,10 @@ A mapping of tags to assign to the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-vpcs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L238" >}}">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L240" >}}">property <b>vpcs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    vpcRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ZoneVpc'>ZoneVpc</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegationSetId` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
@@ -3822,7 +3753,7 @@ Configuration block(s) specifying VPC(s) to associate with a private hosted zone
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneAssociationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L147" >}}">interface <b>ZoneAssociationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L149" >}}">interface <b>ZoneAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3831,7 +3762,7 @@ The set of arguments for constructing a ZoneAssociation resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneAssociationArgs-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L151" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L153" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3842,7 +3773,7 @@ The VPC to associate with the private hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationArgs-vpcRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L155" >}}">property <b>vpcRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L157" >}}">property <b>vpcRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3853,7 +3784,7 @@ The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationArgs-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L159" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L161" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3865,7 +3796,7 @@ The private hosted zone to associate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneAssociationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L129" >}}">interface <b>ZoneAssociationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L131" >}}">interface <b>ZoneAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3874,7 +3805,7 @@ Input properties used for looking up and filtering ZoneAssociation resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneAssociationState-vpcId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L133" >}}">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L135" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3885,7 +3816,7 @@ The VPC to associate with the private hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationState-vpcRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L137" >}}">property <b>vpcRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L139" >}}">property <b>vpcRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3896,7 +3827,7 @@ The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationState-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L141" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zoneAssociation.ts#L143" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3908,7 +3839,7 @@ The private hosted zone to associate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L175" >}}">interface <b>ZoneState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L177" >}}">interface <b>ZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3917,7 +3848,7 @@ Input properties used for looking up and filtering Zone resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneState-comment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L179" >}}">property <b>comment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L181" >}}">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3928,7 +3859,7 @@ A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-delegationSetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L183" >}}">property <b>delegationSetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L185" >}}">property <b>delegationSetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delegationSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3939,7 +3870,7 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L187" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L189" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3950,7 +3881,7 @@ Whether to destroy all records (possibly managed outside of this provider) in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L191" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3961,7 +3892,7 @@ This is the name of the hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L196" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L198" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3973,7 +3904,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L200" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L202" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3984,13 +3915,10 @@ A mapping of tags to assign to the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-vpcs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L204" >}}">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L206" >}}">property <b>vpcs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    vpcRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ZoneVpc'>ZoneVpc</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegationSetId` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
@@ -3998,7 +3926,7 @@ Configuration block(s) specifying VPC(s) to associate with a private hosted zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-zoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L208" >}}">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="route53/zone.ts#L210" >}}">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

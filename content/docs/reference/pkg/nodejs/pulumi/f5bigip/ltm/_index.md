@@ -166,7 +166,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/dataGroup.ts#L38" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -190,7 +190,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/dataGroup.ts#L38" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -238,7 +238,7 @@ datagroup type (applies to the `name` field of the record), supports: `string`, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/dataGroup.ts#L38" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -296,7 +296,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/iRule.ts#L14" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -320,7 +320,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/iRule.ts#L14" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -354,7 +354,7 @@ Name of the iRule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/iRule.ts#L14" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -408,7 +408,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/monitor.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -498,7 +498,7 @@ Specifies the full path and file name of the file that the system attempts to do
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/monitor.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -652,7 +652,7 @@ Timeout in seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/monitor.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -686,7 +686,7 @@ Specifies the user name if the monitored target requires authentication
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Node-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -717,7 +717,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -762,8 +762,19 @@ Specifies the maximum number of connections allowed for the node or node address
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="Node-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L48" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{% md %}}
+
+User-defined description give ltm_node
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="Node-dynamicRatio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L48" >}}">property <b>dynamicRatio</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L52" >}}">property <b>dynamicRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dynamicRatio: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -774,7 +785,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L49" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L53" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -788,7 +799,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -800,10 +811,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-monitor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L53" >}}">property <b>monitor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L57" >}}">property <b>monitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>monitor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>monitor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 specifies the name of the monitor or monitor rule that you want to associate with the node.
@@ -811,7 +822,7 @@ specifies the name of the monitor or monitor rule that you want to associate wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L57" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L61" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -822,7 +833,7 @@ Name of the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-rateLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L62" >}}">property <b>rateLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L66" >}}">property <b>rateLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>rateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -834,10 +845,10 @@ Specifies the maximum number of connections per second allowed for a node or nod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L66" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L70" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Default is "user-up" you can set to "user-down" if you want to disable
@@ -845,7 +856,7 @@ Default is "user-up" you can set to "user-down" if you want to disable
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Node-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -899,7 +910,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileCookie-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileCookie.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1030,7 +1041,7 @@ To enable _ disable sending only over http
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileCookie-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileCookie.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1120,7 +1131,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileCookie-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileCookie.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1174,7 +1185,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileDstAddr-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileDstAddr.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1228,7 +1239,7 @@ Specify the hash algorithm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileDstAddr-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileDstAddr.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1330,7 +1341,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileDstAddr-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileDstAddr.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1384,7 +1395,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSrcAddr-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSrcAddr.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1438,7 +1449,7 @@ Specify the hash algorithm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSrcAddr-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSrcAddr.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1551,7 +1562,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSrcAddr-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSrcAddr.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1605,7 +1616,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSsl-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSsl.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1648,7 +1659,7 @@ Inherit defaults from parent profile
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSsl-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSsl.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1738,7 +1749,7 @@ Timeout for persistence of the session
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PersistenceProfileSsl-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/persistenceProfileSsl.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1796,7 +1807,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L14" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1823,7 +1834,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L44" >}}">property <b>controls</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>controls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>controls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Specifies the controls
@@ -1831,7 +1842,7 @@ Specifies the controls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L14" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1868,7 +1879,7 @@ If you want to publish the policy else it will be deployed in Drafts mode.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L56" >}}">property <b>requires</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>requires: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>requires: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Specifies the protocol
@@ -2077,7 +2088,7 @@ Specifies the protocol
         vlanId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     }[];
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Rules can be applied using the policy
@@ -2096,7 +2107,7 @@ Specifies the match strategy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L14" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2119,7 +2130,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Pool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L68" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2150,7 +2161,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2195,8 +2206,19 @@ Allow SNAT
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="Pool-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L48" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{% md %}}
+
+Userdefined value to describe the pool
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="Pool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2208,7 +2230,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-loadBalancingMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L48" >}}">property <b>loadBalancingMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L52" >}}">property <b>loadBalancingMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadBalancingMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2219,7 +2241,7 @@ Possible values: round-robin, ...
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L52" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L56" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>monitors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2230,7 +2252,7 @@ List of monitor names to associate with the pool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L60" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2241,7 +2263,7 @@ Name of the pool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-reselectTries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L60" >}}">property <b>reselectTries</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L64" >}}">property <b>reselectTries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reselectTries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2252,7 +2274,7 @@ Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-serviceDownAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L64" >}}">property <b>serviceDownAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L68" >}}">property <b>serviceDownAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceDownAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2263,7 +2285,7 @@ Possible values: none, reset, reselect, drop
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-slowRampTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L68" >}}">property <b>slowRampTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L72" >}}">property <b>slowRampTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>slowRampTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2274,7 +2296,7 @@ Slow ramp time for pool members
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2328,7 +2350,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolAttachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/poolAttachment.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2352,7 +2374,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolAttachment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/poolAttachment.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2386,7 +2408,7 @@ Name of the pool in /Partition/Name format
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolAttachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/poolAttachment.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2466,7 +2488,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastHttp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastHttp.ts#L36" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2578,7 +2600,7 @@ Specifies whether to rewrite the HTTP version in the status line of the server t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastHttp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastHttp.ts#L36" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2623,7 +2645,7 @@ Name of the profile_fasthttp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastHttp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastHttp.ts#L36" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2702,7 +2724,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastL4-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastL4.ts#L35" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2770,7 +2792,7 @@ Enables or disables hardware SYN cookie support when PVA10 is present on the sys
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastL4-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastL4.ts#L35" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2848,7 +2870,7 @@ Displays the administrative partition within which this profile resides
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileFastL4-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileFastL4.ts#L35" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2926,7 +2948,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp.ts#L34" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3072,7 +3094,7 @@ Specifies a quoted header string that you want to insert into an HTTP request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp.ts#L34" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3206,7 +3228,7 @@ Displays the administrative partition within which this profile resides.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp.ts#L34" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3327,7 +3349,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp2-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp2.ts#L33" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3406,7 +3428,7 @@ Use the parent Http2 profile
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp2-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp2.ts#L33" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3429,7 +3451,7 @@ Name of the profile_http2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttp2-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttp2.ts#L33" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3507,7 +3529,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttpCompress-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttpCompress.ts#L35" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3564,7 +3586,7 @@ Specifies the profile that you want to use as the parent profile. Your new profi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttpCompress-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttpCompress.ts#L35" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3609,7 +3631,7 @@ Enables compression on a specified list of HTTP Request-URI responses. Use a reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileHttpCompress-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileHttpCompress.ts#L35" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3687,7 +3709,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileOneConnect-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileOneConnect.ts#L34" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3722,7 +3744,7 @@ Specifies the profile that you want to use as the parent profile. Your new profi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileOneConnect-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileOneConnect.ts#L34" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3822,7 +3844,7 @@ Specifies a source IP mask. The default value is 0.0.0.0. The system applies the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileOneConnect-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileOneConnect.ts#L34" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3899,7 +3921,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileTcp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileTcp.ts#L33" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3989,7 +4011,7 @@ Specifies the number of seconds that a connection is in the FIN-WAIT-1 or closin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileTcp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileTcp.ts#L33" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4045,7 +4067,7 @@ Displays the administrative partition within which this profile resides
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileTcp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/profileTcp.ts#L33" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4121,7 +4143,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Snat-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snat.ts#L32" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4167,7 +4189,7 @@ Fullpath
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Snat-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snat.ts#L32" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4259,7 +4281,7 @@ Specifies the name of a translated IP address. Note that translated addresses ar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Snat-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snat.ts#L32" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4356,7 +4378,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnatPool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snatPool.ts#L31" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4380,7 +4402,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnatPool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snatPool.ts#L31" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4414,7 +4436,7 @@ Name of the snatpool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SnatPool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/snatPool.ts#L31" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4486,7 +4508,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualAddress-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualAddress.ts#L28" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4576,7 +4598,7 @@ Enable/Disable ICMP response to the virtual address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualAddress-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualAddress.ts#L28" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4610,7 +4632,7 @@ Specify the partition and traffic group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualAddress-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualAddress.ts#L28" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4633,7 +4655,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualServer-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L110" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L114" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4664,7 +4686,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4698,8 +4720,19 @@ List of client context profiles associated on the virtual server. Not mutually e
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="VirtualServer-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L44" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{% md %}}
+
+Description of Virtual server
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="VirtualServer-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L44" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L48" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4710,7 +4743,7 @@ Destination IP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-fallbackPersistenceProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L48" >}}">property <b>fallbackPersistenceProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L52" >}}">property <b>fallbackPersistenceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fallbackPersistenceProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4721,7 +4754,7 @@ Specifies a fallback persistence profile for the Virtual Server to use when the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4733,7 +4766,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-ipProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L52" >}}">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L56" >}}">property <b>ipProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4744,7 +4777,7 @@ all, tcp, udp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-irules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L53" >}}">property <b>irules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L57" >}}">property <b>irules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>irules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4752,7 +4785,7 @@ all, tcp, udp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-mask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L57" >}}">property <b>mask</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L61" >}}">property <b>mask</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4763,7 +4796,7 @@ Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L61" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4774,7 +4807,7 @@ Name of the virtual server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-persistenceProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L65" >}}">property <b>persistenceProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L69" >}}">property <b>persistenceProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>persistenceProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4785,7 +4818,7 @@ List of persistence profiles associated with the Virtual Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-policies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L66" >}}">property <b>policies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L70" >}}">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4793,7 +4826,7 @@ List of persistence profiles associated with the Virtual Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-pool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L70" >}}">property <b>pool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L74" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4804,7 +4837,7 @@ Default pool name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L74" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L78" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4815,7 +4848,7 @@ Listen port for the virtual server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-profiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L78" >}}">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L82" >}}">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4826,7 +4859,7 @@ List of profiles associated both client and server contexts on the virtual serve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-serverProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L82" >}}">property <b>serverProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L86" >}}">property <b>serverProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serverProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4837,7 +4870,7 @@ List of server context profiles associated on the virtual server. Not mutually e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-snatpool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L86" >}}">property <b>snatpool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L90" >}}">property <b>snatpool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>snatpool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4848,7 +4881,7 @@ Specifies the name of an existing SNAT pool that you want the virtual server to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L90" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L94" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4859,7 +4892,7 @@ Specifies an IP address or network from which the virtual server will accept tra
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-sourceAddressTranslation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L94" >}}">property <b>sourceAddressTranslation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L98" >}}">property <b>sourceAddressTranslation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceAddressTranslation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4870,7 +4903,7 @@ Can be either omitted for none or the values automap or snat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-translateAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L98" >}}">property <b>translateAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L102" >}}">property <b>translateAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>translateAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4881,7 +4914,7 @@ Enables or disables address translation for the virtual server. Turn address tra
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-translatePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L102" >}}">property <b>translatePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L106" >}}">property <b>translatePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>translatePort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4892,7 +4925,7 @@ Enables or disables port translation. Turn port translation off for a virtual se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4904,7 +4937,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-vlans">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L106" >}}">property <b>vlans</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L110" >}}">property <b>vlans</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vlans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4915,7 +4948,7 @@ The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServer-vlansEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L110" >}}">property <b>vlansEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L114" >}}">property <b>vlansEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vlansEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5541,7 +5574,7 @@ Specifies the user name if the monitored target requires authentication
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L155" >}}">interface <b>NodeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L165" >}}">interface <b>NodeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5550,7 +5583,7 @@ The set of arguments for constructing a Node resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeArgs-address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L159" >}}">property <b>address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L169" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5561,7 +5594,7 @@ IP or hostname of the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeArgs-connectionLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L163" >}}">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L173" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5571,8 +5604,19 @@ Specifies the maximum number of connections allowed for the node or node address
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="NodeArgs-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L177" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+User-defined description give ltm_node
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="NodeArgs-dynamicRatio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L167" >}}">property <b>dynamicRatio</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L181" >}}">property <b>dynamicRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dynamicRatio?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5583,7 +5627,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeArgs-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L168" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L182" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5597,7 +5641,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeArgs-monitor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L172" >}}">property <b>monitor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L186" >}}">property <b>monitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5608,7 +5652,7 @@ specifies the name of the monitor or monitor rule that you want to associate wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L176" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5619,7 +5663,7 @@ Name of the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeArgs-rateLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L181" >}}">property <b>rateLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L195" >}}">property <b>rateLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rateLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5631,7 +5675,7 @@ Specifies the maximum number of connections per second allowed for a node or nod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeArgs-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L185" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L199" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5643,7 +5687,7 @@ Default is "user-up" you can set to "user-down" if you want to disable
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L119" >}}">interface <b>NodeState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L125" >}}">interface <b>NodeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5652,7 +5696,7 @@ Input properties used for looking up and filtering Node resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NodeState-address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L123" >}}">property <b>address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L129" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5663,7 +5707,7 @@ IP or hostname of the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeState-connectionLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L127" >}}">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L133" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5673,8 +5717,19 @@ Specifies the maximum number of connections allowed for the node or node address
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="NodeState-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L137" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+User-defined description give ltm_node
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="NodeState-dynamicRatio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L131" >}}">property <b>dynamicRatio</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L141" >}}">property <b>dynamicRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dynamicRatio?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5685,7 +5740,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeState-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L132" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L142" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5699,7 +5754,7 @@ Specifies the fixed ratio value used for a node during ratio load balancing.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeState-monitor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L136" >}}">property <b>monitor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L146" >}}">property <b>monitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5710,7 +5765,7 @@ specifies the name of the monitor or monitor rule that you want to associate wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L140" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L150" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5721,7 +5776,7 @@ Name of the node
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeState-rateLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L145" >}}">property <b>rateLimit</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L155" >}}">property <b>rateLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rateLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5733,7 +5788,7 @@ Specifies the maximum number of connections per second allowed for a node or nod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeState-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L149" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/node.ts#L159" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6891,7 +6946,7 @@ Timeout for persistence of the session
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L149" >}}">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L140" >}}">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6900,10 +6955,10 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-controls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L153" >}}">property <b>controls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L144" >}}">property <b>controls</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>controls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>controls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies the controls
@@ -6911,7 +6966,7 @@ Specifies the controls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L157" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L148" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6922,7 +6977,7 @@ Name of the Policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-publishedCopy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L161" >}}">property <b>publishedCopy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L152" >}}">property <b>publishedCopy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publishedCopy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6933,10 +6988,10 @@ If you want to publish the policy else it will be deployed in Drafts mode.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-requires">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L165" >}}">property <b>requires</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L156" >}}">property <b>requires</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requires: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>requires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Specifies the protocol
@@ -6944,10 +6999,10 @@ Specifies the protocol
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L169" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L160" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
+<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
         appService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
         application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -7153,7 +7208,7 @@ Rules can be applied using the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-strategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L173" >}}">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L164" >}}">property <b>strategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7165,7 +7220,7 @@ Specifies the match strategy
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L119" >}}">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L110" >}}">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7174,7 +7229,7 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-controls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L123" >}}">property <b>controls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L114" >}}">property <b>controls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>controls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7185,7 +7240,7 @@ Specifies the controls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L127" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7196,7 +7251,7 @@ Name of the Policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-publishedCopy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L131" >}}">property <b>publishedCopy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L122" >}}">property <b>publishedCopy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publishedCopy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7207,7 +7262,7 @@ If you want to publish the policy else it will be deployed in Drafts mode.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-requires">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L135" >}}">property <b>requires</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L126" >}}">property <b>requires</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7218,7 +7273,7 @@ Specifies the protocol
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L139" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L130" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7427,7 +7482,7 @@ Rules can be applied using the policy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-strategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L143" >}}">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/policy.ts#L134" >}}">property <b>strategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7439,7 +7494,7 @@ Specifies the match strategy
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L156" >}}">interface <b>PoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L166" >}}">interface <b>PoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7448,7 +7503,7 @@ The set of arguments for constructing a Pool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolArgs-allowNat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L160" >}}">property <b>allowNat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L170" >}}">property <b>allowNat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowNat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7459,7 +7514,7 @@ Allow NAT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-allowSnat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L164" >}}">property <b>allowSnat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L174" >}}">property <b>allowSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowSnat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7469,8 +7524,19 @@ Allow SNAT
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="PoolArgs-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L178" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Userdefined value to describe the pool
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="PoolArgs-loadBalancingMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L168" >}}">property <b>loadBalancingMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L182" >}}">property <b>loadBalancingMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancingMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7481,7 +7547,7 @@ Possible values: round-robin, ...
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L172" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L186" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7492,7 +7558,7 @@ List of monitor names to associate with the pool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L176" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7503,7 +7569,7 @@ Name of the pool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-reselectTries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L180" >}}">property <b>reselectTries</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L194" >}}">property <b>reselectTries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reselectTries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7514,7 +7580,7 @@ Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-serviceDownAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L184" >}}">property <b>serviceDownAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L198" >}}">property <b>serviceDownAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceDownAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7525,7 +7591,7 @@ Possible values: none, reset, reselect, drop
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-slowRampTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L188" >}}">property <b>slowRampTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L202" >}}">property <b>slowRampTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>slowRampTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7601,7 +7667,7 @@ Name of the pool in /Partition/Name format
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L118" >}}">interface <b>PoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L124" >}}">interface <b>PoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7610,7 +7676,7 @@ Input properties used for looking up and filtering Pool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolState-allowNat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L122" >}}">property <b>allowNat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L128" >}}">property <b>allowNat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowNat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7621,7 +7687,7 @@ Allow NAT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-allowSnat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L126" >}}">property <b>allowSnat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L132" >}}">property <b>allowSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowSnat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7631,8 +7697,19 @@ Allow SNAT
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="PoolState-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L136" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Userdefined value to describe the pool
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="PoolState-loadBalancingMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L130" >}}">property <b>loadBalancingMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L140" >}}">property <b>loadBalancingMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancingMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7643,7 +7720,7 @@ Possible values: round-robin, ...
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-monitors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L134" >}}">property <b>monitors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L144" >}}">property <b>monitors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7654,7 +7731,7 @@ List of monitor names to associate with the pool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L148" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7665,7 +7742,7 @@ Name of the pool
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-reselectTries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L142" >}}">property <b>reselectTries</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L152" >}}">property <b>reselectTries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reselectTries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7676,7 +7753,7 @@ Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-serviceDownAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L146" >}}">property <b>serviceDownAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L156" >}}">property <b>serviceDownAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceDownAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7687,7 +7764,7 @@ Possible values: none, reset, reselect, drop
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-slowRampTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L150" >}}">property <b>slowRampTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/pool.ts#L160" >}}">property <b>slowRampTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>slowRampTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10087,7 +10164,7 @@ Specify the partition and traffic group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualServerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L270" >}}">interface <b>VirtualServerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L280" >}}">interface <b>VirtualServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10096,7 +10173,7 @@ The set of arguments for constructing a VirtualServer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualServerArgs-clientProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L274" >}}">property <b>clientProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L284" >}}">property <b>clientProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10106,8 +10183,19 @@ List of client context profiles associated on the virtual server. Not mutually e
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="VirtualServerArgs-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L288" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Description of Virtual server
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L278" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L292" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10118,7 +10206,7 @@ Destination IP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-fallbackPersistenceProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L282" >}}">property <b>fallbackPersistenceProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L296" >}}">property <b>fallbackPersistenceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fallbackPersistenceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10129,7 +10217,7 @@ Specifies a fallback persistence profile for the Virtual Server to use when the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-ipProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L286" >}}">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L300" >}}">property <b>ipProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10140,7 +10228,7 @@ all, tcp, udp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-irules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L287" >}}">property <b>irules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L301" >}}">property <b>irules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>irules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10148,7 +10236,7 @@ all, tcp, udp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-mask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L291" >}}">property <b>mask</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L305" >}}">property <b>mask</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10159,7 +10247,7 @@ Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L295" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L309" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10170,7 +10258,7 @@ Name of the virtual server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-persistenceProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L299" >}}">property <b>persistenceProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L313" >}}">property <b>persistenceProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistenceProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10181,7 +10269,7 @@ List of persistence profiles associated with the Virtual Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-policies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L300" >}}">property <b>policies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L314" >}}">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10189,7 +10277,7 @@ List of persistence profiles associated with the Virtual Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-pool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L304" >}}">property <b>pool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L318" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10200,7 +10288,7 @@ Default pool name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L308" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L322" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10211,7 +10299,7 @@ Listen port for the virtual server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-profiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L312" >}}">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L326" >}}">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10222,7 +10310,7 @@ List of profiles associated both client and server contexts on the virtual serve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-serverProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L316" >}}">property <b>serverProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L330" >}}">property <b>serverProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10233,7 +10321,7 @@ List of server context profiles associated on the virtual server. Not mutually e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-snatpool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L320" >}}">property <b>snatpool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L334" >}}">property <b>snatpool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snatpool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10244,7 +10332,7 @@ Specifies the name of an existing SNAT pool that you want the virtual server to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L324" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L338" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10255,7 +10343,7 @@ Specifies an IP address or network from which the virtual server will accept tra
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-sourceAddressTranslation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L328" >}}">property <b>sourceAddressTranslation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L342" >}}">property <b>sourceAddressTranslation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceAddressTranslation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10266,7 +10354,7 @@ Can be either omitted for none or the values automap or snat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-translateAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L332" >}}">property <b>translateAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L346" >}}">property <b>translateAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>translateAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10277,7 +10365,7 @@ Enables or disables address translation for the virtual server. Turn address tra
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-translatePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L336" >}}">property <b>translatePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L350" >}}">property <b>translatePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>translatePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10288,7 +10376,7 @@ Enables or disables port translation. Turn port translation off for a virtual se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-vlans">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L340" >}}">property <b>vlans</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L354" >}}">property <b>vlans</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vlans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10299,7 +10387,7 @@ The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerArgs-vlansEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L344" >}}">property <b>vlansEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L358" >}}">property <b>vlansEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vlansEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10311,7 +10399,7 @@ Enables the virtual server on the VLANs specified by the VLANs option.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualServerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L190" >}}">interface <b>VirtualServerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L196" >}}">interface <b>VirtualServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10320,7 +10408,7 @@ Input properties used for looking up and filtering VirtualServer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualServerState-clientProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L194" >}}">property <b>clientProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L200" >}}">property <b>clientProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10330,8 +10418,19 @@ List of client context profiles associated on the virtual server. Not mutually e
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="VirtualServerState-description">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L204" >}}">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Description of Virtual server
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="VirtualServerState-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L198" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L208" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10342,7 +10441,7 @@ Destination IP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-fallbackPersistenceProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L202" >}}">property <b>fallbackPersistenceProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L212" >}}">property <b>fallbackPersistenceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fallbackPersistenceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10353,7 +10452,7 @@ Specifies a fallback persistence profile for the Virtual Server to use when the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-ipProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L206" >}}">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L216" >}}">property <b>ipProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10364,7 +10463,7 @@ all, tcp, udp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-irules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L207" >}}">property <b>irules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L217" >}}">property <b>irules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>irules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10372,7 +10471,7 @@ all, tcp, udp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-mask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L211" >}}">property <b>mask</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L221" >}}">property <b>mask</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10383,7 +10482,7 @@ Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L215" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L225" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10394,7 +10493,7 @@ Name of the virtual server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-persistenceProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L219" >}}">property <b>persistenceProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L229" >}}">property <b>persistenceProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistenceProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10405,7 +10504,7 @@ List of persistence profiles associated with the Virtual Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-policies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L220" >}}">property <b>policies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L230" >}}">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10413,7 +10512,7 @@ List of persistence profiles associated with the Virtual Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-pool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L224" >}}">property <b>pool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L234" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10424,7 +10523,7 @@ Default pool name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L228" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L238" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -10435,7 +10534,7 @@ Listen port for the virtual server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-profiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L232" >}}">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L242" >}}">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10446,7 +10545,7 @@ List of profiles associated both client and server contexts on the virtual serve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-serverProfiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L236" >}}">property <b>serverProfiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L246" >}}">property <b>serverProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serverProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10457,7 +10556,7 @@ List of server context profiles associated on the virtual server. Not mutually e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-snatpool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L240" >}}">property <b>snatpool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L250" >}}">property <b>snatpool</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snatpool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10468,7 +10567,7 @@ Specifies the name of an existing SNAT pool that you want the virtual server to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L244" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L254" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10479,7 +10578,7 @@ Specifies an IP address or network from which the virtual server will accept tra
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-sourceAddressTranslation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L248" >}}">property <b>sourceAddressTranslation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L258" >}}">property <b>sourceAddressTranslation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceAddressTranslation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10490,7 +10589,7 @@ Can be either omitted for none or the values automap or snat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-translateAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L252" >}}">property <b>translateAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L262" >}}">property <b>translateAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>translateAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10501,7 +10600,7 @@ Enables or disables address translation for the virtual server. Turn address tra
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-translatePort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L256" >}}">property <b>translatePort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L266" >}}">property <b>translatePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>translatePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10512,7 +10611,7 @@ Enables or disables port translation. Turn port translation off for a virtual se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-vlans">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L260" >}}">property <b>vlans</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L270" >}}">property <b>vlans</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vlans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10523,7 +10622,7 @@ The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualServerState-vlansEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L264" >}}">property <b>vlansEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="ltm/virtualServer.ts#L274" >}}">property <b>vlansEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vlansEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>

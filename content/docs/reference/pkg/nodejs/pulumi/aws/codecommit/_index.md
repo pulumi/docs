@@ -236,7 +236,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Trigger">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L35" >}}">class <b>Trigger</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L37" >}}">class <b>Trigger</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -271,7 +271,7 @@ const testTrigger = new aws.codecommit.Trigger("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Trigger-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -288,7 +288,7 @@ Create a Trigger resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L46" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -312,7 +312,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L57" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -326,7 +326,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-configurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L62" >}}">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L64" >}}">property <b>configurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>configurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -346,7 +346,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-repositoryName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L66" >}}">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L68" >}}">property <b>repositoryName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>repositoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -357,16 +357,10 @@ The name for the repository. This needs to be less than 100 characters.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-triggers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L67" >}}">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L69" >}}">property <b>triggers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    branches: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    customData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    destinationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    events: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TriggerTrigger'>TriggerTrigger</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -384,7 +378,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getRepository">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L23" >}}">function <b>getRepository</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L25" >}}">function <b>getRepository</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -410,7 +404,7 @@ const test = aws.codecommit.getRepository({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetRepositoryArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L41" >}}">interface <b>GetRepositoryArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L43" >}}">interface <b>GetRepositoryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -419,7 +413,7 @@ A collection of arguments for invoking getRepository.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRepositoryArgs-repositoryName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L45" >}}">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L47" >}}">property <b>repositoryName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repositoryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -431,7 +425,7 @@ The name for the repository. This needs to be less than 100 characters.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRepositoryResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L51" >}}">interface <b>GetRepositoryResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L53" >}}">interface <b>GetRepositoryResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -440,7 +434,7 @@ A collection of values returned by getRepository.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRepositoryResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L55" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -451,7 +445,7 @@ The ARN of the repository
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRepositoryResult-cloneUrlHttp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L59" >}}">property <b>cloneUrlHttp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L61" >}}">property <b>cloneUrlHttp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloneUrlHttp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -462,7 +456,7 @@ The URL to use for cloning the repository over HTTPS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRepositoryResult-cloneUrlSsh">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L63" >}}">property <b>cloneUrlSsh</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L65" >}}">property <b>cloneUrlSsh</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloneUrlSsh: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -473,7 +467,7 @@ The URL to use for cloning the repository over SSH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRepositoryResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L72" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L74" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -484,7 +478,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRepositoryResult-repositoryId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L67" >}}">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L69" >}}">property <b>repositoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repositoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -495,7 +489,7 @@ The ID of the repository
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRepositoryResult-repositoryName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L68" >}}">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/getRepository.ts#L70" >}}">property <b>repositoryName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repositoryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -656,7 +650,7 @@ Key-value mapping of resource tags
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TriggerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L122" >}}">interface <b>TriggerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L124" >}}">interface <b>TriggerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -665,7 +659,7 @@ The set of arguments for constructing a Trigger resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerArgs-repositoryName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L126" >}}">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L128" >}}">property <b>repositoryName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repositoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -676,22 +670,16 @@ The name for the repository. This needs to be less than 100 characters.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-triggers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L127" >}}">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L129" >}}">property <b>triggers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    branches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    customData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TriggerTrigger'>TriggerTrigger</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TriggerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L110" >}}">interface <b>TriggerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L112" >}}">interface <b>TriggerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -700,7 +688,7 @@ Input properties used for looking up and filtering Trigger resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerState-configurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L111" >}}">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L113" >}}">property <b>configurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -708,7 +696,7 @@ Input properties used for looking up and filtering Trigger resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-repositoryName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L115" >}}">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L117" >}}">property <b>repositoryName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repositoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -719,16 +707,10 @@ The name for the repository. This needs to be less than 100 characters.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-triggers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L116" >}}">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="codecommit/trigger.ts#L118" >}}">property <b>triggers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    branches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    customData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TriggerTrigger'>TriggerTrigger</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

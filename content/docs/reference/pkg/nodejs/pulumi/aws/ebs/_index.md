@@ -1005,7 +1005,7 @@ const current = aws.ebs.getEncryptionByDefault({});
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSnapshot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L34" >}}">function <b>getSnapshot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L36" >}}">function <b>getSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1042,7 +1042,7 @@ const ebsVolume = aws.ebs.getSnapshot({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSnapshotIds">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L34" >}}">function <b>getSnapshotIds</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L36" >}}">function <b>getSnapshotIds</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1079,7 +1079,7 @@ const ebsVolumes = aws.ebs.getSnapshotIds({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVolume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L34" >}}">function <b>getVolume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L36" >}}">function <b>getVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1264,7 +1264,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L58" >}}">interface <b>GetSnapshotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L60" >}}">interface <b>GetSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1273,13 +1273,10 @@ A collection of arguments for invoking getSnapshot.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L64" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L66" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetSnapshotFilter'>GetSnapshotFilter</a>[];</pre>
 {{% md %}}
 
 One or more name/value pairs to filter off of. There are
@@ -1289,7 +1286,7 @@ several valid keys, for a full reference, check out
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L68" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L70" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1300,7 +1297,7 @@ If more than one result is returned, use the most recent snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-owners">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L72" >}}">property <b>owners</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L74" >}}">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1311,7 +1308,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-restorableByUserIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L76" >}}">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L78" >}}">property <b>restorableByUserIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1322,7 +1319,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-snapshotIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L80" >}}">property <b>snapshotIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L82" >}}">property <b>snapshotIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1333,7 +1330,7 @@ Returns information on a specific snapshot_id.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L81" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L83" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1342,7 +1339,7 @@ Returns information on a specific snapshot_id.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotIdsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L55" >}}">interface <b>GetSnapshotIdsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L57" >}}">interface <b>GetSnapshotIdsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1351,13 +1348,10 @@ A collection of arguments for invoking getSnapshotIds.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotIdsArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L61" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L63" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetSnapshotIdsFilter'>GetSnapshotIdsFilter</a>[];</pre>
 {{% md %}}
 
 One or more name/value pairs to filter off of. There are
@@ -1367,7 +1361,7 @@ several valid keys, for a full reference, check out
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotIdsArgs-owners">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L65" >}}">property <b>owners</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L67" >}}">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1378,7 +1372,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotIdsArgs-restorableByUserIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L69" >}}">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L71" >}}">property <b>restorableByUserIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1390,7 +1384,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotIdsResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L75" >}}">interface <b>GetSnapshotIdsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L77" >}}">interface <b>GetSnapshotIdsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1399,18 +1393,15 @@ A collection of values returned by getSnapshotIds.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotIdsResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L76" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L78" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetSnapshotIdsFilter'>GetSnapshotIdsFilter</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotIdsResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L83" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L85" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1421,7 +1412,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotIdsResult-ids">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L77" >}}">property <b>ids</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L79" >}}">property <b>ids</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1429,7 +1420,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotIdsResult-owners">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L78" >}}">property <b>owners</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L80" >}}">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1437,7 +1428,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotIdsResult-restorableByUserIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L79" >}}">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshotIds.ts#L81" >}}">property <b>restorableByUserIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1446,7 +1437,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L87" >}}">interface <b>GetSnapshotResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L89" >}}">interface <b>GetSnapshotResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1455,7 +1446,7 @@ A collection of values returned by getSnapshot.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotResult-dataEncryptionKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L91" >}}">property <b>dataEncryptionKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L93" >}}">property <b>dataEncryptionKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataEncryptionKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1466,7 +1457,7 @@ The data encryption key identifier for the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L95" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L97" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1477,7 +1468,7 @@ A description for the snapshot
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-encrypted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L99" >}}">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L101" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1488,18 +1479,15 @@ Whether the snapshot is encrypted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L100" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L102" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetSnapshotFilter'>GetSnapshotFilter</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L140" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L142" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1510,7 +1498,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L104" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L106" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1521,7 +1509,7 @@ The ARN for the KMS encryption key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L105" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L107" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1529,7 +1517,7 @@ The ARN for the KMS encryption key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-ownerAlias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L109" >}}">property <b>ownerAlias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L111" >}}">property <b>ownerAlias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownerAlias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1540,7 +1528,7 @@ Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-ownerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L113" >}}">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L115" >}}">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1551,7 +1539,7 @@ The AWS account ID of the EBS snapshot owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-owners">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L114" >}}">property <b>owners</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L116" >}}">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1559,7 +1547,7 @@ The AWS account ID of the EBS snapshot owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-restorableByUserIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L115" >}}">property <b>restorableByUserIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L117" >}}">property <b>restorableByUserIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>restorableByUserIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1567,7 +1555,7 @@ The AWS account ID of the EBS snapshot owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L119" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L121" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1578,7 +1566,7 @@ The snapshot ID (e.g. snap-59fcb34e).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-snapshotIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L120" >}}">property <b>snapshotIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L122" >}}">property <b>snapshotIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1586,7 +1574,7 @@ The snapshot ID (e.g. snap-59fcb34e).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L124" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L126" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1597,7 +1585,7 @@ The snapshot state.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L128" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L130" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1608,7 +1596,7 @@ A mapping of tags for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L132" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L134" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1619,7 +1607,7 @@ The volume ID (e.g. vol-59fcb34e).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-volumeSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L136" >}}">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getSnapshot.ts#L138" >}}">property <b>volumeSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1631,7 +1619,7 @@ The size of the drive in GiBs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVolumeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L55" >}}">interface <b>GetVolumeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L57" >}}">interface <b>GetVolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1640,13 +1628,10 @@ A collection of arguments for invoking getVolume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVolumeArgs-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L61" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L63" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetVolumeFilter'>GetVolumeFilter</a>[];</pre>
 {{% md %}}
 
 One or more name/value pairs to filter off of. There are
@@ -1656,7 +1641,7 @@ several valid keys, for a full reference, check out
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeArgs-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L66" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L68" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1668,7 +1653,7 @@ recent Volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L67" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L69" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1677,7 +1662,7 @@ recent Volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVolumeResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L73" >}}">interface <b>GetVolumeResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L75" >}}">interface <b>GetVolumeResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1686,7 +1671,7 @@ A collection of values returned by getVolume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVolumeResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L77" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L79" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1697,7 +1682,7 @@ The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L81" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L83" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1708,7 +1693,7 @@ The AZ where the EBS volume exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-encrypted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L85" >}}">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L87" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1719,18 +1704,15 @@ Whether the disk is encrypted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-filters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L86" >}}">property <b>filters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L88" >}}">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filters?: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>filters?: <a href='#GetVolumeFilter'>GetVolumeFilter</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L119" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L121" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1741,7 +1723,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-iops">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L90" >}}">property <b>iops</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L92" >}}">property <b>iops</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1752,7 +1734,7 @@ The amount of IOPS for the disk.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L94" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L96" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1763,7 +1745,7 @@ The ARN for the KMS encryption key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L95" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L97" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1771,7 +1753,7 @@ The ARN for the KMS encryption key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L99" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L101" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1782,7 +1764,7 @@ The size of the drive in GiBs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L103" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L105" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1793,7 +1775,7 @@ The snapshotId the EBS volume is based off.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L107" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L109" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1804,7 +1786,7 @@ A mapping of tags for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L111" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L113" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1815,7 +1797,7 @@ The volume ID (e.g. vol-59fcb34e).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L115" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ebs/getVolume.ts#L117" >}}">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

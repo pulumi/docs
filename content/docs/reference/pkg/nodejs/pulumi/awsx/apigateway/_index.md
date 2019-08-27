@@ -563,7 +563,7 @@ let endpoint = new awsx.apigateway.API("example", {
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> API(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#APIArgs'>APIArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> API(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#APIArgs'>APIArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -573,7 +573,7 @@ let endpoint = new awsx.apigateway.API("example", {
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getFunction(route?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, method?: Method): aws.lambda.Function</pre>
+<pre class="highlight"><span class='kd'>public </span>getFunction(route?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, method?: Method): Function</pre>
 
 
 Returns the [aws.lambda.Function] an [EventHandlerRoute] points to.  This will either be for
@@ -629,7 +629,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L333" >}}">property <b>deployment</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>deployment: aws.apigateway.Deployment;</pre>
+<pre class="highlight"><span class='kd'>public </span>deployment: Deployment;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -637,7 +637,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L332" >}}">property <b>restAPI</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>restAPI: aws.apigateway.RestApi;</pre>
+<pre class="highlight"><span class='kd'>public </span>restAPI: RestApi;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -645,7 +645,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L334" >}}">property <b>stage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>stage: aws.apigateway.Stage;</pre>
+<pre class="highlight"><span class='kd'>public </span>stage: Stage;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -750,7 +750,7 @@ The stage name for your API. This will get added as a base path to your API url.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L322" >}}">property <b>staticRoutesBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>staticRoutesBucket?: aws.s3.Bucket | aws.s3.BucketArgs;</pre>
+<pre class="highlight"><span class='kd'></span>staticRoutesBucket?: Bucket | BucketArgs;</pre>
 {{% md %}}
 
 Bucket to use for placing resources for static resources.  If not provided a default one will
@@ -818,7 +818,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L66" >}}">property <b>requiredParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</pre>
+<pre class="highlight"><span class='kd'></span>requiredParameters?: Parameter[];</pre>
 {{% md %}}
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
@@ -843,7 +843,7 @@ gateway will validate these before sending traffic to the event handler.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L281" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loadBalancer: aws.lb.LoadBalancer;</pre>
+<pre class="highlight"><span class='kd'></span>loadBalancer: LoadBalancer;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -929,7 +929,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L66" >}}">property <b>requiredParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</pre>
+<pre class="highlight"><span class='kd'></span>requiredParameters?: Parameter[];</pre>
 {{% md %}}
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
@@ -1001,7 +1001,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L66" >}}">property <b>requiredParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</pre>
+<pre class="highlight"><span class='kd'></span>requiredParameters?: Parameter[];</pre>
 {{% md %}}
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
@@ -1028,7 +1028,7 @@ gateway will validate these before sending traffic to the event handler.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IntegrationTarget'>IntegrationTarget</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IntegrationTarget'>IntegrationTarget</a>&gt;</pre>
 
 {{% /md %}}
 </div>
@@ -1267,7 +1267,7 @@ defined at the API level.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L66" >}}">property <b>requiredParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredParameters?: reqvalidation.Parameter[];</pre>
+<pre class="highlight"><span class='kd'></span>requiredParameters?: Parameter[];</pre>
 {{% md %}}
 
 Required Parameters to validate. If the request validator is set to ALL or PARAMS_ONLY, api
@@ -1677,19 +1677,19 @@ string here.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L46" >}}">type <b>Request</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> Request = awslambda.APIGatewayProxyEvent;</pre>
+<pre class="highlight"><span class='kd'>type</span> Request = APIGatewayProxyEvent;</pre>
 </div>
 <h2 class="pdoc-module-header" id="RequestContext">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L48" >}}">type <b>RequestContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> RequestContext = awslambda.APIGatewayEventRequestContext;</pre>
+<pre class="highlight"><span class='kd'>type</span> RequestContext = APIGatewayEventRequestContext;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Response">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L50" >}}">type <b>Response</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> Response = awslambda.APIGatewayProxyResult;</pre>
+<pre class="highlight"><span class='kd'>type</span> Response = APIGatewayProxyResult;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Route">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="apigateway/api.ts#L58" >}}">type <b>Route</b></a>

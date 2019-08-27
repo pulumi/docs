@@ -60,7 +60,7 @@ Indicates that an operation failed. This metric applies only to the IssueCertifi
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: <a href='#MetricChange'>MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
 Creates an AWS/ACMPrivateCA metric with the requested [metricName]. See

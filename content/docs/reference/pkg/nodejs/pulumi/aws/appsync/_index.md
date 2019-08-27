@@ -197,7 +197,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataSource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L73" >}}">class <b>DataSource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L75" >}}">class <b>DataSource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -270,7 +270,7 @@ const exampleRolePolicy = new aws.iam.RolePolicy("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DataSource-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L139" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L141" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -287,7 +287,7 @@ Create a DataSource resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L82" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L84" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -311,7 +311,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L93" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L95" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -325,7 +325,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L103" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L105" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -336,7 +336,7 @@ The API ID for the GraphQL API for the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L107" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L109" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -347,7 +347,7 @@ The ARN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L111" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L113" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -358,14 +358,10 @@ A description of the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-dynamodbConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L115" >}}">property <b>dynamodbConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L117" >}}">property <b>dynamodbConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>dynamodbConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tableName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    useCallerCredentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>dynamodbConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 DynamoDB settings. See below
@@ -373,13 +369,10 @@ DynamoDB settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-elasticsearchConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L119" >}}">property <b>elasticsearchConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L121" >}}">property <b>elasticsearchConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>elasticsearchConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>elasticsearchConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Amazon Elasticsearch settings. See below
@@ -387,12 +380,10 @@ Amazon Elasticsearch settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-httpConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L123" >}}">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L125" >}}">property <b>httpConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DataSourceHttpConfig'>DataSourceHttpConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 HTTP settings. See below
@@ -412,12 +403,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-lambdaConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L127" >}}">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L129" >}}">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    functionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DataSourceLambdaConfig'>DataSourceLambdaConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 AWS Lambda settings. See below
@@ -425,7 +414,7 @@ AWS Lambda settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L131" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L133" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -436,7 +425,7 @@ A user-supplied name for the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-serviceRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L135" >}}">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L137" >}}">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -447,7 +436,7 @@ The IAM service role ARN for the data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSource-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L139" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L141" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -471,7 +460,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Function">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L67" >}}">class <b>Function</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L69" >}}">class <b>Function</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -538,7 +527,7 @@ const testFunction = new aws.appsync.Function("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L129" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L131" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -555,7 +544,7 @@ Create a Function resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L76" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L78" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -579,7 +568,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L87" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L89" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -593,7 +582,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L97" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L99" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -604,7 +593,7 @@ The ID of the associated AppSync API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L101" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L103" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -615,7 +604,7 @@ The ARN of the Function object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L105" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L107" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dataSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -626,7 +615,7 @@ The Function DataSource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L109" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L111" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -637,7 +626,7 @@ The Function description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-functionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L113" >}}">property <b>functionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L115" >}}">property <b>functionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>functionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -648,7 +637,7 @@ A unique ID representing the Function object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-functionVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L117" >}}">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L119" >}}">property <b>functionVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>functionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -671,7 +660,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L121" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L123" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -682,7 +671,7 @@ The Function name. The function name does not have to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-requestMappingTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L125" >}}">property <b>requestMappingTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L127" >}}">property <b>requestMappingTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requestMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -693,7 +682,7 @@ The Function request mapping template. Functions support only the 2018-05-29 ver
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-responseMappingTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L129" >}}">property <b>responseMappingTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L131" >}}">property <b>responseMappingTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>responseMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -717,7 +706,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GraphQLApi">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L116" >}}">class <b>GraphQLApi</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L118" >}}">class <b>GraphQLApi</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -833,7 +822,7 @@ const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("example", 
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GraphQLApi-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L178" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L180" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -850,7 +839,7 @@ Create a GraphQLApi resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L125" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L127" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -874,7 +863,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L136" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L138" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -888,7 +877,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L146" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L148" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -899,7 +888,7 @@ The ARN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-authenticationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L150" >}}">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L152" >}}">property <b>authenticationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>authenticationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -922,13 +911,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-logConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L154" >}}">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L156" >}}">property <b>logConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    cloudwatchLogsRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    fieldLogLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GraphQLApiLogConfig'>GraphQLApiLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing logging configuration. Defined below.
@@ -936,7 +922,7 @@ Nested argument containing logging configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L158" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L160" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -947,15 +933,10 @@ A user-supplied name for the GraphqlApi.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-openidConnectConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L162" >}}">property <b>openidConnectConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L164" >}}">property <b>openidConnectConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>openidConnectConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    authTtl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    iatTtl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    issuer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>openidConnectConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing OpenID Connect configuration. Defined below.
@@ -963,7 +944,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-schema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L166" >}}">property <b>schema</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L168" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -974,7 +955,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L170" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L172" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -985,7 +966,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-uris">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L174" >}}">property <b>uris</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L176" >}}">property <b>uris</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
@@ -1008,15 +989,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApi-userPoolConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L178" >}}">property <b>userPoolConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L180" >}}">property <b>userPoolConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>userPoolConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    appIdClientRegex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    awsRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    defaultAction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    userPoolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>userPoolConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The Amazon Cognito User Pool configuration. Defined below.
@@ -1025,7 +1001,7 @@ The Amazon Cognito User Pool configuration. Defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Resolver">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L86" >}}">class <b>Resolver</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L88" >}}">class <b>Resolver</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1111,7 +1087,7 @@ const testResolver = new aws.appsync.Resolver("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Resolver-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L148" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L150" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1128,7 +1104,7 @@ Create a Resolver resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L95" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L97" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1152,7 +1128,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L106" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L108" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1166,7 +1142,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L116" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L118" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1177,7 +1153,7 @@ The API ID for the GraphQL API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L120" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L122" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1188,7 +1164,7 @@ The ARN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L124" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L126" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dataSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1199,7 +1175,7 @@ The DataSource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-field">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L128" >}}">property <b>field</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L130" >}}">property <b>field</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1222,7 +1198,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L132" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L134" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1233,12 +1209,10 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-pipelineConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L136" >}}">property <b>pipelineConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L138" >}}">property <b>pipelineConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>pipelineConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    functions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>pipelineConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ResolverPipelineConfig'>ResolverPipelineConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The PipelineConfig. A `pipelineConfig` block is documented below.
@@ -1246,7 +1220,7 @@ The PipelineConfig. A `pipelineConfig` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-requestTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L140" >}}">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L142" >}}">property <b>requestTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requestTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1257,7 +1231,7 @@ The request mapping template for UNIT resolver or 'before mapping template' for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-responseTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L144" >}}">property <b>responseTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L146" >}}">property <b>responseTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>responseTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1268,7 +1242,7 @@ The response mapping template for UNIT resolver or 'after mapping template' for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resolver-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L148" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L150" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1389,7 +1363,7 @@ The API key
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataSourceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L242" >}}">interface <b>DataSourceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L244" >}}">interface <b>DataSourceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1398,7 +1372,7 @@ The set of arguments for constructing a DataSource resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DataSourceArgs-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L246" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L248" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1409,7 +1383,7 @@ The API ID for the GraphQL API for the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L250" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L252" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1420,14 +1394,10 @@ A description of the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-dynamodbConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L254" >}}">property <b>dynamodbConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L256" >}}">property <b>dynamodbConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    useCallerCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a>&gt;;</pre>
 {{% md %}}
 
 DynamoDB settings. See below
@@ -1435,13 +1405,10 @@ DynamoDB settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-elasticsearchConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L258" >}}">property <b>elasticsearchConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L260" >}}">property <b>elasticsearchConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a>&gt;;</pre>
 {{% md %}}
 
 Amazon Elasticsearch settings. See below
@@ -1449,12 +1416,10 @@ Amazon Elasticsearch settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-httpConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L262" >}}">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L264" >}}">property <b>httpConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceHttpConfig'>DataSourceHttpConfig</a>&gt;;</pre>
 {{% md %}}
 
 HTTP settings. See below
@@ -1462,12 +1427,10 @@ HTTP settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-lambdaConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L266" >}}">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L268" >}}">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    functionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceLambdaConfig'>DataSourceLambdaConfig</a>&gt;;</pre>
 {{% md %}}
 
 AWS Lambda settings. See below
@@ -1475,7 +1438,7 @@ AWS Lambda settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L270" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L272" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1486,7 +1449,7 @@ A user-supplied name for the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-serviceRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L274" >}}">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L276" >}}">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1497,7 +1460,7 @@ The IAM service role ARN for the data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L278" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L280" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1472,7 @@ The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZ
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataSourceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L196" >}}">interface <b>DataSourceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L198" >}}">interface <b>DataSourceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1518,7 +1481,7 @@ Input properties used for looking up and filtering DataSource resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DataSourceState-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L200" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L202" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1529,7 +1492,7 @@ The API ID for the GraphQL API for the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L204" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L206" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1540,7 +1503,7 @@ The ARN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L208" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L210" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1551,14 +1514,10 @@ A description of the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-dynamodbConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L212" >}}">property <b>dynamodbConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L214" >}}">property <b>dynamodbConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    useCallerCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dynamodbConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceDynamodbConfig'>DataSourceDynamodbConfig</a>&gt;;</pre>
 {{% md %}}
 
 DynamoDB settings. See below
@@ -1566,13 +1525,10 @@ DynamoDB settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-elasticsearchConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L216" >}}">property <b>elasticsearchConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L218" >}}">property <b>elasticsearchConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>elasticsearchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceElasticsearchConfig'>DataSourceElasticsearchConfig</a>&gt;;</pre>
 {{% md %}}
 
 Amazon Elasticsearch settings. See below
@@ -1580,12 +1536,10 @@ Amazon Elasticsearch settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-httpConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L220" >}}">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L222" >}}">property <b>httpConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceHttpConfig'>DataSourceHttpConfig</a>&gt;;</pre>
 {{% md %}}
 
 HTTP settings. See below
@@ -1593,12 +1547,10 @@ HTTP settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-lambdaConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L224" >}}">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L226" >}}">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    functionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DataSourceLambdaConfig'>DataSourceLambdaConfig</a>&gt;;</pre>
 {{% md %}}
 
 AWS Lambda settings. See below
@@ -1606,7 +1558,7 @@ AWS Lambda settings. See below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L228" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L230" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1617,7 +1569,7 @@ A user-supplied name for the DataSource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-serviceRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L232" >}}">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L234" >}}">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1628,7 +1580,7 @@ The IAM service role ARN for the data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DataSourceState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L236" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/dataSource.ts#L238" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1640,7 +1592,7 @@ The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZ
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L232" >}}">interface <b>FunctionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L234" >}}">interface <b>FunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1649,7 +1601,7 @@ The set of arguments for constructing a Function resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionArgs-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L236" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L238" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1660,7 +1612,7 @@ The ID of the associated AppSync API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L240" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L242" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1671,7 +1623,7 @@ The Function DataSource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L244" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L246" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1682,7 +1634,7 @@ The Function description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-functionVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L248" >}}">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L250" >}}">property <b>functionVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1693,7 +1645,7 @@ The version of the request mapping template. Currently the supported value is `2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L252" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L254" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1704,7 +1656,7 @@ The Function name. The function name does not have to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-requestMappingTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L256" >}}">property <b>requestMappingTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L258" >}}">property <b>requestMappingTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1715,7 +1667,7 @@ The Function request mapping template. Functions support only the 2018-05-29 ver
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionArgs-responseMappingTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L260" >}}">property <b>responseMappingTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L262" >}}">property <b>responseMappingTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>responseMappingTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1727,7 +1679,7 @@ The Function response mapping template.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L190" >}}">interface <b>FunctionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L192" >}}">interface <b>FunctionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1736,7 +1688,7 @@ Input properties used for looking up and filtering Function resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionState-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L194" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L196" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1747,7 +1699,7 @@ The ID of the associated AppSync API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L198" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L200" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1758,7 +1710,7 @@ The ARN of the Function object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L202" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L204" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1769,7 +1721,7 @@ The Function DataSource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L206" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L208" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1780,7 +1732,7 @@ The Function description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-functionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L210" >}}">property <b>functionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L212" >}}">property <b>functionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1791,7 +1743,7 @@ A unique ID representing the Function object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-functionVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L214" >}}">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L216" >}}">property <b>functionVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1802,7 +1754,7 @@ The version of the request mapping template. Currently the supported value is `2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L218" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L220" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1813,7 +1765,7 @@ The Function name. The function name does not have to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-requestMappingTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L222" >}}">property <b>requestMappingTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L224" >}}">property <b>requestMappingTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestMappingTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1824,7 +1776,7 @@ The Function request mapping template. Functions support only the 2018-05-29 ver
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionState-responseMappingTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L226" >}}">property <b>responseMappingTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/function.ts#L228" >}}">property <b>responseMappingTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>responseMappingTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1836,7 +1788,7 @@ The Function response mapping template.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GraphQLApiArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L272" >}}">interface <b>GraphQLApiArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L274" >}}">interface <b>GraphQLApiArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1845,7 +1797,7 @@ The set of arguments for constructing a GraphQLApi resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-authenticationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L276" >}}">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L278" >}}">property <b>authenticationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authenticationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1856,13 +1808,10 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-logConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L280" >}}">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L282" >}}">property <b>logConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cloudwatchLogsRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fieldLogLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GraphQLApiLogConfig'>GraphQLApiLogConfig</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing logging configuration. Defined below.
@@ -1870,7 +1819,7 @@ Nested argument containing logging configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L284" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L286" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1881,15 +1830,10 @@ A user-supplied name for the GraphqlApi.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-openidConnectConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L288" >}}">property <b>openidConnectConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L290" >}}">property <b>openidConnectConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    authTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    iatTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing OpenID Connect configuration. Defined below.
@@ -1897,7 +1841,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-schema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L292" >}}">property <b>schema</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L294" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1908,7 +1852,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L296" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L298" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1919,15 +1863,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiArgs-userPoolConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L300" >}}">property <b>userPoolConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L302" >}}">property <b>userPoolConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    appIdClientRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    awsRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a>&gt;;</pre>
 {{% md %}}
 
 The Amazon Cognito User Pool configuration. Defined below.
@@ -1936,7 +1875,7 @@ The Amazon Cognito User Pool configuration. Defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GraphQLApiState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L230" >}}">interface <b>GraphQLApiState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L232" >}}">interface <b>GraphQLApiState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1945,7 +1884,7 @@ Input properties used for looking up and filtering GraphQLApi resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GraphQLApiState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L234" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L236" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1956,7 +1895,7 @@ The ARN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-authenticationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L238" >}}">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L240" >}}">property <b>authenticationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authenticationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1967,13 +1906,10 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-logConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L242" >}}">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L244" >}}">property <b>logConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cloudwatchLogsRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fieldLogLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GraphQLApiLogConfig'>GraphQLApiLogConfig</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing logging configuration. Defined below.
@@ -1981,7 +1917,7 @@ Nested argument containing logging configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L246" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L248" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1992,15 +1928,10 @@ A user-supplied name for the GraphqlApi.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-openidConnectConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L250" >}}">property <b>openidConnectConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L252" >}}">property <b>openidConnectConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    authTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    iatTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>openidConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GraphQLApiOpenidConnectConfig'>GraphQLApiOpenidConnectConfig</a>&gt;;</pre>
 {{% md %}}
 
 Nested argument containing OpenID Connect configuration. Defined below.
@@ -2008,7 +1939,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-schema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L254" >}}">property <b>schema</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L256" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2019,7 +1950,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L258" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L260" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2030,7 +1961,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-uris">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L262" >}}">property <b>uris</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L264" >}}">property <b>uris</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -2041,15 +1972,10 @@ Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphQLApiState-userPoolConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L266" >}}">property <b>userPoolConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/graphQLApi.ts#L268" >}}">property <b>userPoolConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    appIdClientRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    awsRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>userPoolConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GraphQLApiUserPoolConfig'>GraphQLApiUserPoolConfig</a>&gt;;</pre>
 {{% md %}}
 
 The Amazon Cognito User Pool configuration. Defined below.
@@ -2058,7 +1984,7 @@ The Amazon Cognito User Pool configuration. Defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L254" >}}">interface <b>ResolverArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L256" >}}">interface <b>ResolverArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2067,7 +1993,7 @@ The set of arguments for constructing a Resolver resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverArgs-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L258" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L260" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2078,7 +2004,7 @@ The API ID for the GraphQL API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L262" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L264" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2089,7 +2015,7 @@ The DataSource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-field">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L266" >}}">property <b>field</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L268" >}}">property <b>field</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2100,7 +2026,7 @@ The field name from the schema defined in the GraphQL API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L270" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L272" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2111,12 +2037,10 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-pipelineConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L274" >}}">property <b>pipelineConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L276" >}}">property <b>pipelineConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    functions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResolverPipelineConfig'>ResolverPipelineConfig</a>&gt;;</pre>
 {{% md %}}
 
 The PipelineConfig. A `pipelineConfig` block is documented below.
@@ -2124,7 +2048,7 @@ The PipelineConfig. A `pipelineConfig` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-requestTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L278" >}}">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L280" >}}">property <b>requestTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2135,7 +2059,7 @@ The request mapping template for UNIT resolver or 'before mapping template' for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-responseTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L282" >}}">property <b>responseTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L284" >}}">property <b>responseTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>responseTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2146,7 +2070,7 @@ The response mapping template for UNIT resolver or 'after mapping template' for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L286" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L288" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2158,7 +2082,7 @@ The type name from the schema defined in the GraphQL API.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L212" >}}">interface <b>ResolverState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L214" >}}">interface <b>ResolverState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2167,7 +2091,7 @@ Input properties used for looking up and filtering Resolver resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverState-apiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L216" >}}">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L218" >}}">property <b>apiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2178,7 +2102,7 @@ The API ID for the GraphQL API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L220" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L222" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2189,7 +2113,7 @@ The ARN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-dataSource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L224" >}}">property <b>dataSource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L226" >}}">property <b>dataSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2200,7 +2124,7 @@ The DataSource name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-field">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L228" >}}">property <b>field</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L230" >}}">property <b>field</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>field?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2211,7 +2135,7 @@ The field name from the schema defined in the GraphQL API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L232" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L234" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2222,12 +2146,10 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-pipelineConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L236" >}}">property <b>pipelineConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L238" >}}">property <b>pipelineConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    functions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>pipelineConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ResolverPipelineConfig'>ResolverPipelineConfig</a>&gt;;</pre>
 {{% md %}}
 
 The PipelineConfig. A `pipelineConfig` block is documented below.
@@ -2235,7 +2157,7 @@ The PipelineConfig. A `pipelineConfig` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-requestTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L240" >}}">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L242" >}}">property <b>requestTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2246,7 +2168,7 @@ The request mapping template for UNIT resolver or 'before mapping template' for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-responseTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L244" >}}">property <b>responseTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L246" >}}">property <b>responseTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>responseTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2257,7 +2179,7 @@ The response mapping template for UNIT resolver or 'after mapping template' for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L248" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="appsync/resolver.ts#L250" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

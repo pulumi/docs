@@ -620,7 +620,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStore">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L19" >}}">class <b>DicomStore</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L21" >}}">class <b>DicomStore</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -639,7 +639,7 @@ To get more information about DicomStore, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStore-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L50" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L52" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -656,7 +656,7 @@ Create a DicomStore resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L28" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L30" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -680,7 +680,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L39" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L41" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -694,7 +694,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L46" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L48" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -714,7 +714,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L47" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L49" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -722,7 +722,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L48" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L50" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -730,17 +730,15 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L49" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L51" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    pubsubTopic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DicomStoreNotificationConfig'>DicomStoreNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L50" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L52" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -761,7 +759,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L10" >}}">class <b>DicomStoreIamBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L12" >}}">class <b>DicomStoreIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -771,7 +769,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -788,7 +786,7 @@ Create a DicomStoreIamBinding resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -812,7 +810,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -826,7 +824,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L43" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L45" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -840,7 +838,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L47" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L49" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -863,7 +861,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L48" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L50" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -871,7 +869,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L56" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -897,7 +895,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L10" >}}">class <b>DicomStoreIamMember</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L12" >}}">class <b>DicomStoreIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -907,7 +905,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -924,7 +922,7 @@ Create a DicomStoreIamMember resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -948,7 +946,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -962,7 +960,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L43" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L45" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -976,7 +974,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L47" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L49" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -999,7 +997,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L48" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L50" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1007,7 +1005,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L56" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1033,7 +1031,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L10" >}}">class <b>DicomStoreIamPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L12" >}}">class <b>DicomStoreIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1043,7 +1041,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L52" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L54" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1060,7 +1058,7 @@ Create a DicomStoreIamPolicy resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1084,7 +1082,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1098,7 +1096,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L43" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L45" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1112,7 +1110,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L47" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L49" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1135,7 +1133,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L52" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L54" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1160,7 +1158,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStore">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L19" >}}">class <b>FhirStore</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L21" >}}">class <b>FhirStore</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1179,7 +1177,7 @@ To get more information about FhirStore, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStore-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1196,7 +1194,7 @@ Create a FhirStore resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L28" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L30" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1220,7 +1218,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L39" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L41" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1234,7 +1232,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L46" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L48" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1242,7 +1240,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-disableReferentialIntegrity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L47" >}}">property <b>disableReferentialIntegrity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L49" >}}">property <b>disableReferentialIntegrity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>disableReferentialIntegrity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1250,7 +1248,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-disableResourceVersioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L48" >}}">property <b>disableResourceVersioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L50" >}}">property <b>disableResourceVersioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>disableResourceVersioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1258,7 +1256,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-enableHistoryImport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L49" >}}">property <b>enableHistoryImport</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L51" >}}">property <b>enableHistoryImport</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableHistoryImport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1266,7 +1264,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-enableUpdateCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L50" >}}">property <b>enableUpdateCreate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L52" >}}">property <b>enableUpdateCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableUpdateCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1286,7 +1284,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L51" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L53" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1294,7 +1292,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1302,17 +1300,15 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L53" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L55" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    pubsubTopic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FhirStoreNotificationConfig'>FhirStoreNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L54" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L56" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1333,7 +1329,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L10" >}}">class <b>FhirStoreIamBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L12" >}}">class <b>FhirStoreIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1343,7 +1339,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1360,7 +1356,7 @@ Create a FhirStoreIamBinding resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1384,7 +1380,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1398,7 +1394,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L40" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L42" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1409,7 +1405,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L47" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L49" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1435,7 +1431,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L48" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L50" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1443,7 +1439,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L56" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1469,7 +1465,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L10" >}}">class <b>FhirStoreIamMember</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L12" >}}">class <b>FhirStoreIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1479,7 +1475,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1496,7 +1492,7 @@ Create a FhirStoreIamMember resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1520,7 +1516,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1534,7 +1530,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L40" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L42" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1545,7 +1541,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L47" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L49" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1571,7 +1567,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L48" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L50" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1579,7 +1575,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L56" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1605,7 +1601,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L10" >}}">class <b>FhirStoreIamPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L12" >}}">class <b>FhirStoreIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1615,7 +1611,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L52" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L54" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1632,7 +1628,7 @@ Create a FhirStoreIamPolicy resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1656,7 +1652,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1670,7 +1666,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L40" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L42" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1681,7 +1677,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L47" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L49" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1707,7 +1703,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L52" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L54" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1732,7 +1728,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7Store">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L19" >}}">class <b>Hl7Store</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L21" >}}">class <b>Hl7Store</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1751,7 +1747,7 @@ To get more information about Hl7V2Store, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7Store-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L51" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L53" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1768,7 +1764,7 @@ Create a Hl7Store resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L28" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L30" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1792,7 +1788,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L39" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L41" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1806,7 +1802,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L46" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L48" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1826,7 +1822,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L47" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L49" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1834,7 +1830,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L48" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L50" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1842,28 +1838,23 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L49" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L51" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    pubsubTopic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Hl7StoreNotificationConfig'>Hl7StoreNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-parserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L50" >}}">property <b>parserConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L52" >}}">property <b>parserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>parserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    allowNullHeader: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    segmentTerminator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>parserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Hl7StoreParserConfig'>Hl7StoreParserConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L51" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L53" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1884,7 +1875,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L10" >}}">class <b>Hl7StoreIamBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L12" >}}">class <b>Hl7StoreIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1894,7 +1885,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1911,7 +1902,7 @@ Create a Hl7StoreIamBinding resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1935,7 +1926,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1949,7 +1940,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L40" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L42" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1960,7 +1951,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L47" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L49" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1986,7 +1977,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L48" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L50" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1994,7 +1985,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L56" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2020,7 +2011,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L10" >}}">class <b>Hl7StoreIamMember</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L12" >}}">class <b>Hl7StoreIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2030,7 +2021,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2047,7 +2038,7 @@ Create a Hl7StoreIamMember resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2071,7 +2062,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2085,7 +2076,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L40" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L42" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2096,7 +2087,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L47" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L49" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2122,7 +2113,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L48" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L50" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2130,7 +2121,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L56" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2156,7 +2147,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L10" >}}">class <b>Hl7StoreIamPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L12" >}}">class <b>Hl7StoreIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2166,7 +2157,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L52" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L54" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2183,7 +2174,7 @@ Create a Hl7StoreIamPolicy resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2207,7 +2198,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2221,7 +2212,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L40" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L42" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2232,7 +2223,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L47" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L49" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2258,7 +2249,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L52" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L54" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2668,7 +2659,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L105" >}}">interface <b>DicomStoreArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L107" >}}">interface <b>DicomStoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2677,7 +2668,7 @@ The set of arguments for constructing a DicomStore resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreArgs-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L106" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L108" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2685,7 +2676,7 @@ The set of arguments for constructing a DicomStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L107" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L109" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -2693,7 +2684,7 @@ The set of arguments for constructing a DicomStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L108" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L110" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2701,18 +2692,16 @@ The set of arguments for constructing a DicomStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreArgs-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L109" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L111" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    pubsubTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DicomStoreNotificationConfig'>DicomStoreNotificationConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L126" >}}">interface <b>DicomStoreIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L128" >}}">interface <b>DicomStoreIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2721,7 +2710,7 @@ The set of arguments for constructing a DicomStoreIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingArgs-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L133" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L135" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2735,7 +2724,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L134" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L136" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2743,7 +2732,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L142" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2757,7 +2746,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L102" >}}">interface <b>DicomStoreIamBindingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L104" >}}">interface <b>DicomStoreIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2766,7 +2755,7 @@ Input properties used for looking up and filtering DicomStoreIamBinding resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L109" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L111" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dicomStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2780,7 +2769,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L113" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L115" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2791,7 +2780,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L114" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L116" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2799,7 +2788,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L122" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2813,7 +2802,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L126" >}}">interface <b>DicomStoreIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L128" >}}">interface <b>DicomStoreIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2822,7 +2811,7 @@ The set of arguments for constructing a DicomStoreIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberArgs-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L133" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L135" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2836,7 +2825,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L134" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L136" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2844,7 +2833,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L142" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2858,7 +2847,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L102" >}}">interface <b>DicomStoreIamMemberState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L104" >}}">interface <b>DicomStoreIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2867,7 +2856,7 @@ Input properties used for looking up and filtering DicomStoreIamMember resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L109" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L111" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dicomStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2881,7 +2870,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L113" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L115" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2892,7 +2881,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L114" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L116" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2900,7 +2889,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L122" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2914,7 +2903,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L117" >}}">interface <b>DicomStoreIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L119" >}}">interface <b>DicomStoreIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2923,7 +2912,7 @@ The set of arguments for constructing a DicomStoreIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyArgs-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L124" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L126" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2937,7 +2926,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L129" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L131" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2950,7 +2939,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L95" >}}">interface <b>DicomStoreIamPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L97" >}}">interface <b>DicomStoreIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2959,7 +2948,7 @@ Input properties used for looking up and filtering DicomStoreIamPolicy resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyState-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L102" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L104" >}}">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dicomStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2973,7 +2962,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L106" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L108" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2984,7 +2973,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L111" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L113" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2997,7 +2986,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L94" >}}">interface <b>DicomStoreState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L96" >}}">interface <b>DicomStoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3006,7 +2995,7 @@ Input properties used for looking up and filtering DicomStore resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreState-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L95" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L97" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3014,7 +3003,7 @@ Input properties used for looking up and filtering DicomStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L96" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L98" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3022,7 +3011,7 @@ Input properties used for looking up and filtering DicomStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L97" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L99" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3030,17 +3019,15 @@ Input properties used for looking up and filtering DicomStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L98" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L100" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    pubsubTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DicomStoreNotificationConfig'>DicomStoreNotificationConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L99" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L101" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3049,7 +3036,7 @@ Input properties used for looking up and filtering DicomStore resources.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L121" >}}">interface <b>FhirStoreArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L123" >}}">interface <b>FhirStoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3058,7 +3045,7 @@ The set of arguments for constructing a FhirStore resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreArgs-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L122" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L124" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3066,7 +3053,7 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-disableReferentialIntegrity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L123" >}}">property <b>disableReferentialIntegrity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L125" >}}">property <b>disableReferentialIntegrity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableReferentialIntegrity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3074,7 +3061,7 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-disableResourceVersioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L124" >}}">property <b>disableResourceVersioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L126" >}}">property <b>disableResourceVersioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableResourceVersioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3082,7 +3069,7 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-enableHistoryImport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L125" >}}">property <b>enableHistoryImport</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L127" >}}">property <b>enableHistoryImport</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableHistoryImport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3090,7 +3077,7 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-enableUpdateCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L126" >}}">property <b>enableUpdateCreate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L128" >}}">property <b>enableUpdateCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableUpdateCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3098,7 +3085,7 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L127" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L129" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3106,7 +3093,7 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L128" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L130" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3114,18 +3101,16 @@ The set of arguments for constructing a FhirStore resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L129" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L131" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    pubsubTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FhirStoreNotificationConfig'>FhirStoreNotificationConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L126" >}}">interface <b>FhirStoreIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L128" >}}">interface <b>FhirStoreIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3134,7 +3119,7 @@ The set of arguments for constructing a FhirStoreIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingArgs-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L133" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L135" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3148,7 +3133,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L134" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L136" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3156,7 +3141,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L142" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3170,7 +3155,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L102" >}}">interface <b>FhirStoreIamBindingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L104" >}}">interface <b>FhirStoreIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3179,7 +3164,7 @@ Input properties used for looking up and filtering FhirStoreIamBinding resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L106" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L108" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3190,7 +3175,7 @@ Input properties used for looking up and filtering FhirStoreIamBinding resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L113" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L115" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fhirStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3204,7 +3189,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L114" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L116" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3212,7 +3197,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L122" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3226,7 +3211,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L126" >}}">interface <b>FhirStoreIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L128" >}}">interface <b>FhirStoreIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3235,7 +3220,7 @@ The set of arguments for constructing a FhirStoreIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberArgs-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L133" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L135" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3249,7 +3234,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L134" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L136" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3257,7 +3242,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L142" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3271,7 +3256,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L102" >}}">interface <b>FhirStoreIamMemberState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L104" >}}">interface <b>FhirStoreIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3280,7 +3265,7 @@ Input properties used for looking up and filtering FhirStoreIamMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L106" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L108" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3291,7 +3276,7 @@ Input properties used for looking up and filtering FhirStoreIamMember resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L113" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L115" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fhirStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3305,7 +3290,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L114" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L116" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3313,7 +3298,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L122" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3327,7 +3312,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L117" >}}">interface <b>FhirStoreIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L119" >}}">interface <b>FhirStoreIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3336,7 +3321,7 @@ The set of arguments for constructing a FhirStoreIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyArgs-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L124" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L126" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3350,7 +3335,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L129" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L131" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3363,7 +3348,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L95" >}}">interface <b>FhirStoreIamPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L97" >}}">interface <b>FhirStoreIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3372,7 +3357,7 @@ Input properties used for looking up and filtering FhirStoreIamPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L99" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L101" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3383,7 +3368,7 @@ Input properties used for looking up and filtering FhirStoreIamPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyState-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L106" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L108" >}}">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fhirStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3397,7 +3382,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L111" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L113" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3410,7 +3395,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L106" >}}">interface <b>FhirStoreState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L108" >}}">interface <b>FhirStoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3419,7 +3404,7 @@ Input properties used for looking up and filtering FhirStore resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreState-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L107" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L109" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3427,7 +3412,7 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-disableReferentialIntegrity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L108" >}}">property <b>disableReferentialIntegrity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L110" >}}">property <b>disableReferentialIntegrity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableReferentialIntegrity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3435,7 +3420,7 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-disableResourceVersioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L109" >}}">property <b>disableResourceVersioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L111" >}}">property <b>disableResourceVersioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableResourceVersioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3443,7 +3428,7 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-enableHistoryImport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L110" >}}">property <b>enableHistoryImport</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L112" >}}">property <b>enableHistoryImport</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableHistoryImport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3451,7 +3436,7 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-enableUpdateCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L111" >}}">property <b>enableUpdateCreate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L113" >}}">property <b>enableUpdateCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableUpdateCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3459,7 +3444,7 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L112" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L114" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3467,7 +3452,7 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L115" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3475,17 +3460,15 @@ Input properties used for looking up and filtering FhirStore resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L114" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L116" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    pubsubTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FhirStoreNotificationConfig'>FhirStoreNotificationConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L115" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L117" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3494,7 +3477,7 @@ Input properties used for looking up and filtering FhirStore resources.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L109" >}}">interface <b>Hl7StoreArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L111" >}}">interface <b>Hl7StoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3503,7 +3486,7 @@ The set of arguments for constructing a Hl7Store resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L110" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L112" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3511,7 +3494,7 @@ The set of arguments for constructing a Hl7Store resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L111" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L113" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3519,7 +3502,7 @@ The set of arguments for constructing a Hl7Store resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L112" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3527,29 +3510,24 @@ The set of arguments for constructing a Hl7Store resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L113" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L115" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    pubsubTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Hl7StoreNotificationConfig'>Hl7StoreNotificationConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-parserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L114" >}}">property <b>parserConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L116" >}}">property <b>parserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>parserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    allowNullHeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    segmentTerminator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>parserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Hl7StoreParserConfig'>Hl7StoreParserConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L126" >}}">interface <b>Hl7StoreIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L128" >}}">interface <b>Hl7StoreIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3558,7 +3536,7 @@ The set of arguments for constructing a Hl7StoreIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingArgs-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L133" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L135" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3572,7 +3550,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L134" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L136" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3580,7 +3558,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L142" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3594,7 +3572,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L102" >}}">interface <b>Hl7StoreIamBindingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L104" >}}">interface <b>Hl7StoreIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3603,7 +3581,7 @@ Input properties used for looking up and filtering Hl7StoreIamBinding resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L106" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L108" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3614,7 +3592,7 @@ Input properties used for looking up and filtering Hl7StoreIamBinding resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L113" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L115" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3628,7 +3606,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L114" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L116" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3636,7 +3614,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L122" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3650,7 +3628,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L126" >}}">interface <b>Hl7StoreIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L128" >}}">interface <b>Hl7StoreIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3659,7 +3637,7 @@ The set of arguments for constructing a Hl7StoreIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberArgs-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L133" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L135" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3673,7 +3651,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L134" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L136" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3681,7 +3659,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L142" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3695,7 +3673,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L102" >}}">interface <b>Hl7StoreIamMemberState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L104" >}}">interface <b>Hl7StoreIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3704,7 +3682,7 @@ Input properties used for looking up and filtering Hl7StoreIamMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L106" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L108" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3715,7 +3693,7 @@ Input properties used for looking up and filtering Hl7StoreIamMember resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L113" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L115" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3729,7 +3707,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L114" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L116" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3737,7 +3715,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L122" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3751,7 +3729,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L117" >}}">interface <b>Hl7StoreIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L119" >}}">interface <b>Hl7StoreIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3760,7 +3738,7 @@ The set of arguments for constructing a Hl7StoreIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyArgs-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L124" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L126" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3774,7 +3752,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L129" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L131" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3787,7 +3765,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L95" >}}">interface <b>Hl7StoreIamPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L97" >}}">interface <b>Hl7StoreIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3796,7 +3774,7 @@ Input properties used for looking up and filtering Hl7StoreIamPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L99" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L101" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3807,7 +3785,7 @@ Input properties used for looking up and filtering Hl7StoreIamPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyState-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L106" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L108" >}}">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3821,7 +3799,7 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L111" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L113" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3834,7 +3812,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L97" >}}">interface <b>Hl7StoreState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L99" >}}">interface <b>Hl7StoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3843,7 +3821,7 @@ Input properties used for looking up and filtering Hl7Store resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreState-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L98" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L100" >}}">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dataset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3851,7 +3829,7 @@ Input properties used for looking up and filtering Hl7Store resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L99" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L101" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -3859,7 +3837,7 @@ Input properties used for looking up and filtering Hl7Store resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L100" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L102" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3867,28 +3845,23 @@ Input properties used for looking up and filtering Hl7Store resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L101" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L103" >}}">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    pubsubTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Hl7StoreNotificationConfig'>Hl7StoreNotificationConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-parserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L102" >}}">property <b>parserConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L104" >}}">property <b>parserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>parserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    allowNullHeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    segmentTerminator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>parserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Hl7StoreParserConfig'>Hl7StoreParserConfig</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L103" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L105" >}}">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

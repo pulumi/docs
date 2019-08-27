@@ -34,7 +34,7 @@ title: Module firestore
 
 
 <h2 class="pdoc-module-header" id="Index">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L48" >}}">class <b>Index</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L50" >}}">class <b>Index</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -81,7 +81,7 @@ const myIndex = new gcp.firestore.Index("my-index", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Index-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -98,7 +98,7 @@ Create a Index resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -122,7 +122,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -136,7 +136,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-collection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L75" >}}">property <b>collection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L77" >}}">property <b>collection</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>collection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -144,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L76" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L78" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -152,14 +152,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-fields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L77" >}}">property <b>fields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L79" >}}">property <b>fields</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    arrayConfig: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    fieldPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    order: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IndexField'>IndexField</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -176,7 +172,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L78" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L80" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -184,7 +180,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L79" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L81" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -192,7 +188,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Index-queryScope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L80" >}}">property <b>queryScope</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L82" >}}">property <b>queryScope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>queryScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -213,7 +209,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IndexArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L141" >}}">interface <b>IndexArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L143" >}}">interface <b>IndexArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -222,7 +218,7 @@ The set of arguments for constructing a Index resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IndexArgs-collection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L142" >}}">property <b>collection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L144" >}}">property <b>collection</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>collection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -230,7 +226,7 @@ The set of arguments for constructing a Index resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexArgs-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L143" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L145" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -238,19 +234,15 @@ The set of arguments for constructing a Index resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexArgs-fields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L144" >}}">property <b>fields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L146" >}}">property <b>fields</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    arrayConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fieldPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>fields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IndexField'>IndexField</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L145" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L147" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -258,7 +250,7 @@ The set of arguments for constructing a Index resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexArgs-queryScope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L146" >}}">property <b>queryScope</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L148" >}}">property <b>queryScope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>queryScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -267,7 +259,7 @@ The set of arguments for constructing a Index resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IndexState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L129" >}}">interface <b>IndexState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L131" >}}">interface <b>IndexState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -276,7 +268,7 @@ Input properties used for looking up and filtering Index resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IndexState-collection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L130" >}}">property <b>collection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L132" >}}">property <b>collection</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>collection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -284,7 +276,7 @@ Input properties used for looking up and filtering Index resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexState-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L131" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L133" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -292,19 +284,15 @@ Input properties used for looking up and filtering Index resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexState-fields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L132" >}}">property <b>fields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L134" >}}">property <b>fields</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>fields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    arrayConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fieldPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>fields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IndexField'>IndexField</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L133" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L135" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -312,7 +300,7 @@ Input properties used for looking up and filtering Index resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L134" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L136" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -320,7 +308,7 @@ Input properties used for looking up and filtering Index resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IndexState-queryScope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L135" >}}">property <b>queryScope</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="firestore/index_.ts#L137" >}}">property <b>queryScope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>queryScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

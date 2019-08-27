@@ -51,7 +51,7 @@ title: Module iot
 
 
 <h2 class="pdoc-module-header" id="Certificate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L43" >}}">class <b>Certificate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L14" >}}">class <b>Certificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -59,42 +59,11 @@ title: Module iot
 
 Manages an IoT Device Provisioning Service Certificate.
 
-## Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleDps = new azure.iot.Dps("example", {
-    location: azurerm_resource_group_test.location,
-    name: "example",
-    resourceGroupName: azurerm_resource_group_test.name,
-    sku: {
-        capacity: 1,
-        name: "S1",
-        tier: "Standard",
-    },
-});
-const exampleResourceGroup = new azure.core.ResourceGroup("example", {
-    location: "West US",
-    name: "resourceGroup1",
-});
-const exampleCertificate = new azure.iot.Certificate("example", {
-    certificateContent: (() => {
-        throw "tf2pulumi error: NYI: call to filebase64";
-        return (() => { throw "NYI: call to filebase64"; })();
-    })(),
-    iotDpsName: exampleDps.name,
-    name: "example",
-    resourceGroupName: exampleResourceGroup.name,
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iot_dps_certificate.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L85" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -111,7 +80,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L23" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -135,7 +104,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L34" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -149,7 +118,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-certificateContent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L73" >}}">property <b>certificateContent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L44" >}}">property <b>certificateContent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificateContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -172,7 +141,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-iotDpsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L77" >}}">property <b>iotDpsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L48" >}}">property <b>iotDpsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>iotDpsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -183,7 +152,7 @@ The name of the IoT Device Provisioning Service that this certificate will be at
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L52" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +163,7 @@ Specifies the name of the Iot Device Provisioning Service Certificate resource. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L85" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L56" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -218,7 +187,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConsumerGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L43" >}}">class <b>ConsumerGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L45" >}}">class <b>ConsumerGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -261,7 +230,7 @@ const testConsumerGroup = new azure.iot.ConsumerGroup("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConsumerGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L85" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L87" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -278,7 +247,7 @@ Create a ConsumerGroup resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L54" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -302,7 +271,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L65" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -316,7 +285,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-eventhubEndpointName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L73" >}}">property <b>eventhubEndpointName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L75" >}}">property <b>eventhubEndpointName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventhubEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -339,7 +308,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-iothubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L77" >}}">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L79" >}}">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>iothubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -350,7 +319,7 @@ The name of the IoT Hub. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L83" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -361,7 +330,7 @@ The name of this Consumer Group. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L85" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L87" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -385,7 +354,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Dps">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L34" >}}">class <b>Dps</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L36" >}}">class <b>Dps</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -419,7 +388,7 @@ const exampleDps = new azure.iot.Dps("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Dps-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -436,7 +405,7 @@ Create a Dps resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -460,7 +429,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -486,7 +455,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L64" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L66" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -497,7 +466,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -508,7 +477,7 @@ Specifies the name of the Iot Device Provisioning Service resource. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L72" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L74" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -519,14 +488,10 @@ The name of the resource group under which the Iot Device Provisioning Service r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L76" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L78" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DpsSku'>DpsSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -534,7 +499,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dps-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L80" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L82" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -558,7 +523,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IoTHub">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L70" >}}">class <b>IoTHub</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L72" >}}">class <b>IoTHub</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -628,7 +593,7 @@ const testContainer = new azure.storage.Container("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IoTHub-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L157" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L159" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -645,7 +610,7 @@ Create a IoTHub resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L79" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L81" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -683,7 +648,7 @@ The Function should be used as part of a [MultiCallbackFunctionApp].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L90" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L92" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -711,19 +676,10 @@ with options to control the behavior of the subscription.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L100" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L102" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    batchFrequencyInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    connectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    encoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    fileNameFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    maxChunkSizeInBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IoTHubEndpoint'>IoTHubEndpoint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 An `endpoint` block as defined below.
@@ -731,7 +687,7 @@ An `endpoint` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubEventsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L104" >}}">property <b>eventHubEventsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L106" >}}">property <b>eventHubEventsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventHubEventsEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -742,7 +698,7 @@ The EventHub compatible endpoint for events data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubEventsPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L108" >}}">property <b>eventHubEventsPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L110" >}}">property <b>eventHubEventsPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventHubEventsPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -753,7 +709,7 @@ The EventHub compatible path for events data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubOperationsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L112" >}}">property <b>eventHubOperationsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L114" >}}">property <b>eventHubOperationsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventHubOperationsEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -764,7 +720,7 @@ The EventHub compatible endpoint for operational data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubOperationsPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L116" >}}">property <b>eventHubOperationsPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L118" >}}">property <b>eventHubOperationsPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>eventHubOperationsPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -775,15 +731,10 @@ The EventHub compatible path for operational data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-fallbackRoute">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L120" >}}">property <b>fallbackRoute</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L122" >}}">property <b>fallbackRoute</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>fallbackRoute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    condition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    endpointNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>fallbackRoute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IoTHubFallbackRoute'>IoTHubFallbackRoute</a>&gt;;</pre>
 {{% md %}}
 
 A `fallbackRoute` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
@@ -791,7 +742,7 @@ A `fallbackRoute` block as defined below. If the fallback route is enabled, mess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L124" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L126" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -814,14 +765,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-ipFilterRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L128" >}}">property <b>ipFilterRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L130" >}}">property <b>ipFilterRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ipFilterRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ipMask: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ipFilterRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IoTHubIpFilterRule'>IoTHubIpFilterRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 One or more `ipFilterRule` blocks as defined below.
@@ -829,7 +776,7 @@ One or more `ipFilterRule` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L132" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L134" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -840,7 +787,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -851,7 +798,7 @@ Specifies the name of the IotHub resource. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L140" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L142" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -862,16 +809,10 @@ The name of the resource group under which the IotHub resource has to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-routes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L144" >}}">property <b>routes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L146" >}}">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    condition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    endpointNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>routes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IoTHubRoute'>IoTHubRoute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A `route` block as defined below.
@@ -879,15 +820,10 @@ A `route` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-sharedAccessPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L148" >}}">property <b>sharedAccessPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L150" >}}">property <b>sharedAccessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sharedAccessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    keyName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    permissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    primaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    secondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sharedAccessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IoTHubSharedAccessPolicy'>IoTHubSharedAccessPolicy</a>[]&gt;;</pre>
 {{% md %}}
 
 One or more `sharedAccessPolicy` blocks as defined below.
@@ -895,14 +831,10 @@ One or more `sharedAccessPolicy` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L152" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L154" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#IoTHubSku'>IoTHubSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -910,7 +842,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L156" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L158" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -921,7 +853,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L157" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L159" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -952,7 +884,7 @@ deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IoTHubEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, iotHub: IoTHub, args: <a href='#IoTHubSubscriptionArgs'>IoTHubSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IoTHubEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, iotHub: IoTHub, args: <a href='#IoTHubSubscriptionArgs'>IoTHubSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -1085,7 +1017,7 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedAccessPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L41" >}}">class <b>SharedAccessPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L43" >}}">class <b>SharedAccessPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1126,7 +1058,7 @@ const exampleSharedAccessPolicy = new azure.iot.SharedAccessPolicy("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1143,7 +1075,7 @@ Create a SharedAccessPolicy resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1167,7 +1099,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1181,7 +1113,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-deviceConnect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L71" >}}">property <b>deviceConnect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L73" >}}">property <b>deviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deviceConnect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1204,7 +1136,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-iothubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L75" >}}">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L77" >}}">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>iothubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1215,7 +1147,7 @@ The name of the IoTHub to which this Shared Access Policy belongs. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L79" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L81" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1226,7 +1158,7 @@ Specifies the name of the IotHub Shared Access Policy resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L83" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L85" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1237,7 +1169,7 @@ The primary connection string of the Shared Access Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L87" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L89" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1248,7 +1180,7 @@ The primary key used to create the authentication token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-registryRead">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L91" >}}">property <b>registryRead</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L93" >}}">property <b>registryRead</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>registryRead: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1259,7 +1191,7 @@ Adds `RegistryRead` permission to this Shared Access Account. It allows read acc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-registryWrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L95" >}}">property <b>registryWrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L97" >}}">property <b>registryWrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>registryWrite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1270,7 +1202,7 @@ Adds `RegistryWrite` permission to this Shared Access Account. It allows write a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L99" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L101" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1281,7 +1213,7 @@ The name of the resource group under which the IotHub Shared Access Policy resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L103" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L105" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1292,7 +1224,7 @@ The secondary connection string of the Shared Access Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L107" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L109" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1303,7 +1235,7 @@ The secondary key used to create the authentication token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-serviceConnect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L111" >}}">property <b>serviceConnect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L113" >}}">property <b>serviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceConnect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1327,7 +1259,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L155" >}}">interface <b>CertificateArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L126" >}}">interface <b>CertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1336,7 +1268,7 @@ The set of arguments for constructing a Certificate resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateArgs-certificateContent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L159" >}}">property <b>certificateContent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L130" >}}">property <b>certificateContent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1347,7 +1279,7 @@ The Base-64 representation of the X509 leaf certificate .cer file or just a .pem
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-iotDpsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L163" >}}">property <b>iotDpsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L134" >}}">property <b>iotDpsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iotDpsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1358,7 +1290,7 @@ The name of the IoT Device Provisioning Service that this certificate will be at
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L167" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1369,7 +1301,7 @@ Specifies the name of the Iot Device Provisioning Service Certificate resource. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L171" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L142" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1381,7 +1313,7 @@ The name of the resource group under which the Iot Device Provisioning Service C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L133" >}}">interface <b>CertificateState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L104" >}}">interface <b>CertificateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1390,7 +1322,7 @@ Input properties used for looking up and filtering Certificate resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateState-certificateContent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L137" >}}">property <b>certificateContent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L108" >}}">property <b>certificateContent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1401,7 +1333,7 @@ The Base-64 representation of the X509 leaf certificate .cer file or just a .pem
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-iotDpsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L141" >}}">property <b>iotDpsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L112" >}}">property <b>iotDpsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iotDpsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1412,7 +1344,7 @@ The name of the IoT Device Provisioning Service that this certificate will be at
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L145" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L116" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1423,7 +1355,7 @@ Specifies the name of the Iot Device Provisioning Service Certificate resource. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L149" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/certificate.ts#L120" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1435,7 +1367,7 @@ The name of the resource group under which the Iot Device Provisioning Service C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConsumerGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L155" >}}">interface <b>ConsumerGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L157" >}}">interface <b>ConsumerGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1444,7 +1376,7 @@ The set of arguments for constructing a ConsumerGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-eventhubEndpointName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L159" >}}">property <b>eventhubEndpointName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L161" >}}">property <b>eventhubEndpointName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventhubEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1455,7 +1387,7 @@ The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-iothubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L163" >}}">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L165" >}}">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iothubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1466,7 +1398,7 @@ The name of the IoT Hub. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L167" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L169" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1477,7 +1409,7 @@ The name of this Consumer Group. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L171" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L173" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1489,7 +1421,7 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConsumerGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L133" >}}">interface <b>ConsumerGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L135" >}}">interface <b>ConsumerGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1498,7 +1430,7 @@ Input properties used for looking up and filtering ConsumerGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConsumerGroupState-eventhubEndpointName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L137" >}}">property <b>eventhubEndpointName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L139" >}}">property <b>eventhubEndpointName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventhubEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1441,7 @@ The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupState-iothubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L141" >}}">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L143" >}}">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iothubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1520,7 +1452,7 @@ The name of the IoT Hub. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L145" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L147" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1531,7 +1463,7 @@ The name of this Consumer Group. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L149" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/consumerGroup.ts#L151" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1543,7 +1475,7 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DpsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L153" >}}">interface <b>DpsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L155" >}}">interface <b>DpsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1552,7 +1484,7 @@ The set of arguments for constructing a Dps resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DpsArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L157" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L159" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1563,7 +1495,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L161" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L163" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1574,7 +1506,7 @@ Specifies the name of the Iot Device Provisioning Service resource. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L165" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L167" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1585,14 +1517,10 @@ The name of the resource group under which the Iot Device Provisioning Service r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L169" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L171" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DpsSku'>DpsSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1600,7 +1528,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L173" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L175" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1612,7 +1540,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DpsState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L127" >}}">interface <b>DpsState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L129" >}}">interface <b>DpsState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1621,7 +1549,7 @@ Input properties used for looking up and filtering Dps resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DpsState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L131" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L133" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1632,7 +1560,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L135" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L137" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1643,7 +1571,7 @@ Specifies the name of the Iot Device Provisioning Service resource. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L139" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L141" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1654,14 +1582,10 @@ The name of the resource group under which the Iot Device Provisioning Service r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L143" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L145" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DpsSku'>DpsSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1669,7 +1593,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpsState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L147" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/dps.ts#L149" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1772,7 +1696,7 @@ Output bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IoTHubArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L293" >}}">interface <b>IoTHubArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L295" >}}">interface <b>IoTHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1781,19 +1705,10 @@ The set of arguments for constructing a IoTHub resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IoTHubArgs-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L297" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L299" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    batchFrequencyInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fileNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    maxChunkSizeInBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubEndpoint'>IoTHubEndpoint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An `endpoint` block as defined below.
@@ -1801,15 +1716,10 @@ An `endpoint` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-fallbackRoute">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L301" >}}">property <b>fallbackRoute</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L303" >}}">property <b>fallbackRoute</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>fallbackRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    endpointNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>fallbackRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubFallbackRoute'>IoTHubFallbackRoute</a>&gt;;</pre>
 {{% md %}}
 
 A `fallbackRoute` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
@@ -1817,14 +1727,10 @@ A `fallbackRoute` block as defined below. If the fallback route is enabled, mess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-ipFilterRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L305" >}}">property <b>ipFilterRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L307" >}}">property <b>ipFilterRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipFilterRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipFilterRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubIpFilterRule'>IoTHubIpFilterRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `ipFilterRule` blocks as defined below.
@@ -1832,7 +1738,7 @@ One or more `ipFilterRule` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L309" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L311" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1843,7 +1749,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L313" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L315" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1854,7 +1760,7 @@ Specifies the name of the IotHub resource. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L317" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L319" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1865,16 +1771,10 @@ The name of the resource group under which the IotHub resource has to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-routes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L321" >}}">property <b>routes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L323" >}}">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    endpointNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubRoute'>IoTHubRoute</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A `route` block as defined below.
@@ -1882,14 +1782,10 @@ A `route` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L325" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L327" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubSku'>IoTHubSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1897,7 +1793,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L329" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L331" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2000,7 +1896,7 @@ Output bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IoTHubState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L226" >}}">interface <b>IoTHubState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L228" >}}">interface <b>IoTHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2009,19 +1905,10 @@ Input properties used for looking up and filtering IoTHub resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IoTHubState-endpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L230" >}}">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L232" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    batchFrequencyInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fileNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    maxChunkSizeInBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubEndpoint'>IoTHubEndpoint</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An `endpoint` block as defined below.
@@ -2029,7 +1916,7 @@ An `endpoint` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubEventsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L234" >}}">property <b>eventHubEventsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L236" >}}">property <b>eventHubEventsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventHubEventsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2040,7 +1927,7 @@ The EventHub compatible endpoint for events data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubEventsPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L238" >}}">property <b>eventHubEventsPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L240" >}}">property <b>eventHubEventsPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventHubEventsPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2051,7 +1938,7 @@ The EventHub compatible path for events data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubOperationsEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L242" >}}">property <b>eventHubOperationsEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L244" >}}">property <b>eventHubOperationsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventHubOperationsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2062,7 +1949,7 @@ The EventHub compatible endpoint for operational data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubOperationsPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L246" >}}">property <b>eventHubOperationsPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L248" >}}">property <b>eventHubOperationsPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>eventHubOperationsPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2073,15 +1960,10 @@ The EventHub compatible path for operational data
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-fallbackRoute">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L250" >}}">property <b>fallbackRoute</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L252" >}}">property <b>fallbackRoute</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>fallbackRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    endpointNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>fallbackRoute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubFallbackRoute'>IoTHubFallbackRoute</a>&gt;;</pre>
 {{% md %}}
 
 A `fallbackRoute` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
@@ -2089,7 +1971,7 @@ A `fallbackRoute` block as defined below. If the fallback route is enabled, mess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L254" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L256" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2100,14 +1982,10 @@ The hostname of the IotHub Resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-ipFilterRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L258" >}}">property <b>ipFilterRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L260" >}}">property <b>ipFilterRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipFilterRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ipMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipFilterRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubIpFilterRule'>IoTHubIpFilterRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `ipFilterRule` blocks as defined below.
@@ -2115,7 +1993,7 @@ One or more `ipFilterRule` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L262" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L264" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2126,7 +2004,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L266" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L268" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2137,7 +2015,7 @@ Specifies the name of the IotHub resource. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L270" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L272" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2148,16 +2026,10 @@ The name of the resource group under which the IotHub resource has to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-routes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L274" >}}">property <b>routes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L276" >}}">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    endpointNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>routes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubRoute'>IoTHubRoute</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A `route` block as defined below.
@@ -2165,15 +2037,10 @@ A `route` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-sharedAccessPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L278" >}}">property <b>sharedAccessPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L280" >}}">property <b>sharedAccessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sharedAccessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sharedAccessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubSharedAccessPolicy'>IoTHubSharedAccessPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `sharedAccessPolicy` blocks as defined below.
@@ -2181,14 +2048,10 @@ One or more `sharedAccessPolicy` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L282" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L284" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#IoTHubSku'>IoTHubSku</a>&gt;;</pre>
 {{% md %}}
 
 A `sku` block as defined below.
@@ -2196,7 +2059,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L286" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L288" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2207,7 +2070,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L287" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/ioTHub.ts#L289" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2550,7 +2413,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedAccessPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L220" >}}">interface <b>SharedAccessPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L222" >}}">interface <b>SharedAccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2559,7 +2422,7 @@ The set of arguments for constructing a SharedAccessPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-deviceConnect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L224" >}}">property <b>deviceConnect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L226" >}}">property <b>deviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deviceConnect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2570,7 +2433,7 @@ Adds `DeviceConnect` permission to this Shared Access Account. It allows sending
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-iothubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L228" >}}">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L230" >}}">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iothubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2581,7 +2444,7 @@ The name of the IoTHub to which this Shared Access Policy belongs. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L232" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L234" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2592,7 +2455,7 @@ Specifies the name of the IotHub Shared Access Policy resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-registryRead">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L236" >}}">property <b>registryRead</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L238" >}}">property <b>registryRead</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>registryRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2603,7 +2466,7 @@ Adds `RegistryRead` permission to this Shared Access Account. It allows read acc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-registryWrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L240" >}}">property <b>registryWrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L242" >}}">property <b>registryWrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>registryWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2614,7 +2477,7 @@ Adds `RegistryWrite` permission to this Shared Access Account. It allows write a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L244" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L246" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2625,7 +2488,7 @@ The name of the resource group under which the IotHub Shared Access Policy resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-serviceConnect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L248" >}}">property <b>serviceConnect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L250" >}}">property <b>serviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceConnect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2637,7 +2500,7 @@ Adds `ServiceConnect` permission to this Shared Access Account. It allows sendin
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedAccessPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L170" >}}">interface <b>SharedAccessPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L172" >}}">interface <b>SharedAccessPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2646,7 +2509,7 @@ Input properties used for looking up and filtering SharedAccessPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-deviceConnect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L174" >}}">property <b>deviceConnect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L176" >}}">property <b>deviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deviceConnect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2657,7 +2520,7 @@ Adds `DeviceConnect` permission to this Shared Access Account. It allows sending
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-iothubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L178" >}}">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L180" >}}">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iothubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2668,7 +2531,7 @@ The name of the IoTHub to which this Shared Access Policy belongs. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L182" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L184" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2679,7 +2542,7 @@ Specifies the name of the IotHub Shared Access Policy resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L186" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L188" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2690,7 +2553,7 @@ The primary connection string of the Shared Access Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L190" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L192" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2701,7 +2564,7 @@ The primary key used to create the authentication token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-registryRead">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L194" >}}">property <b>registryRead</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L196" >}}">property <b>registryRead</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>registryRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2712,7 +2575,7 @@ Adds `RegistryRead` permission to this Shared Access Account. It allows read acc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-registryWrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L198" >}}">property <b>registryWrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L200" >}}">property <b>registryWrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>registryWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2723,7 +2586,7 @@ Adds `RegistryWrite` permission to this Shared Access Account. It allows write a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L202" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L204" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2734,7 +2597,7 @@ The name of the resource group under which the IotHub Shared Access Policy resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L206" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L208" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2745,7 +2608,7 @@ The secondary connection string of the Shared Access Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L210" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L212" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2756,7 +2619,7 @@ The secondary key used to create the authentication token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-serviceConnect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L214" >}}">property <b>serviceConnect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="iot/sharedAccessPolicy.ts#L216" >}}">property <b>serviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceConnect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>

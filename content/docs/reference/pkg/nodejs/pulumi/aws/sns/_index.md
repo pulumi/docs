@@ -862,7 +862,7 @@ deployments.
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public </span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: topic.Topic, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'>public </span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
 
 {{% /md %}}
 </div>
@@ -912,7 +912,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L226" >}}">property <b>permission</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>permission: permission.Permission;</pre>
+<pre class="highlight"><span class='kd'>public </span>permission: <a href='#Permission'>Permission</a>;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -920,7 +920,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sns/snsMixins.ts#L66" >}}">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>subscription: topicSubscription.TopicSubscription;</pre>
+<pre class="highlight"><span class='kd'>public </span>subscription: <a href='#TopicSubscription'>TopicSubscription</a>;</pre>
 {{% md %}}
 
 The underlying sns object created for the subscription.
@@ -931,7 +931,7 @@ The underlying sns object created for the subscription.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sns/snsMixins.ts#L61" >}}">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>topic: topic.Topic;</pre>
+<pre class="highlight"><span class='kd'>public </span>topic: Topic;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

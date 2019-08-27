@@ -1012,7 +1012,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ThingType">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L21" >}}">class <b>ThingType</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L23" >}}">class <b>ThingType</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1033,7 +1033,7 @@ const foo = new aws.iot.ThingType("foo", {});
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ThingType-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L60" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L62" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1050,7 +1050,7 @@ Create a ThingType resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingType-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L30" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L32" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1074,7 +1074,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingType-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L41" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L43" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1088,7 +1088,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingType-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L51" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L53" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1099,7 +1099,7 @@ The ARN of the created AWS IoT Thing Type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingType-deprecated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L55" >}}">property <b>deprecated</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L57" >}}">property <b>deprecated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deprecated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1122,7 +1122,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingType-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L59" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L61" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1133,13 +1133,10 @@ The name of the thing type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingType-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L60" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L62" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    searchableAttributes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ThingTypeProperties'>ThingTypeProperties</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1157,7 +1154,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L61" >}}">class <b>TopicRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L63" >}}">class <b>TopicRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1218,7 +1215,7 @@ const rule = new aws.iot.TopicRule("rule", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L122" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L124" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1235,7 +1232,7 @@ Create a TopicRule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L70" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L72" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1259,7 +1256,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L81" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L83" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1273,7 +1270,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L91" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L93" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1284,35 +1281,23 @@ The ARN of the topic rule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-cloudwatchAlarm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L92" >}}">property <b>cloudwatchAlarm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L94" >}}">property <b>cloudwatchAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>cloudwatchAlarm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    alarmName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    stateReason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    stateValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>cloudwatchAlarm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleCloudwatchAlarm'>TopicRuleCloudwatchAlarm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-cloudwatchMetric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L93" >}}">property <b>cloudwatchMetric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L95" >}}">property <b>cloudwatchMetric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>cloudwatchMetric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    metricName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>cloudwatchMetric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleCloudwatchMetric'>TopicRuleCloudwatchMetric</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L97" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L99" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1323,39 +1308,23 @@ The description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-dynamodb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L98" >}}">property <b>dynamodb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L100" >}}">property <b>dynamodb</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>dynamodb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    hashKeyField: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    hashKeyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    hashKeyValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    payloadField: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rangeKeyField: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rangeKeyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rangeKeyValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tableName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>dynamodb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleDynamodb'>TopicRuleDynamodb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-elasticsearch">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L99" >}}">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L101" >}}">property <b>elasticsearch</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>elasticsearch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>elasticsearch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleElasticsearch'>TopicRuleElasticsearch</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L103" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L105" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1366,14 +1335,10 @@ Specifies whether the rule is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-firehose">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L104" >}}">property <b>firehose</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L106" >}}">property <b>firehose</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>firehose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    deliveryStreamName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    separator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>firehose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleFirehose'>TopicRuleFirehose</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1390,29 +1355,23 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-kinesis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L105" >}}">property <b>kinesis</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L107" >}}">property <b>kinesis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>kinesis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    partitionKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    streamName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>kinesis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleKinesis'>TopicRuleKinesis</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-lambda">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L106" >}}">property <b>lambda</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L108" >}}">property <b>lambda</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lambda: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    functionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>lambda: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleLambda'>TopicRuleLambda</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L110" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1423,42 +1382,31 @@ The name of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-republish">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L111" >}}">property <b>republish</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L113" >}}">property <b>republish</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>republish: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    topic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>republish: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleRepublish'>TopicRuleRepublish</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-s3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L112" >}}">property <b>s3</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L114" >}}">property <b>s3</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>s3: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    bucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>s3: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleS3'>TopicRuleS3</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-sns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L113" >}}">property <b>sns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L115" >}}">property <b>sns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    messageFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleSns'>TopicRuleSns</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-sql">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L117" >}}">property <b>sql</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L119" >}}">property <b>sql</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1469,7 +1417,7 @@ The SQL statement used to query the topic. For more information, see AWS IoT SQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-sqlVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L121" >}}">property <b>sqlVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L123" >}}">property <b>sqlVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sqlVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1480,14 +1428,10 @@ The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRule-sqs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L122" >}}">property <b>sqs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L124" >}}">property <b>sqs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sqs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    queueUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    useBase64: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sqs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopicRuleSqs'>TopicRuleSqs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1505,7 +1449,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEndpoint">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L12" >}}">function <b>getEndpoint</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L14" >}}">function <b>getEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1636,7 +1580,7 @@ When no CSR is provided, the public key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetEndpointArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L31" >}}">interface <b>GetEndpointArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L33" >}}">interface <b>GetEndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1645,7 +1589,7 @@ A collection of arguments for invoking getEndpoint.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetEndpointArgs-endpointType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L35" >}}">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L37" >}}">property <b>endpointType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpointType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1657,7 +1601,7 @@ Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetEndpointResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L41" >}}">interface <b>GetEndpointResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L43" >}}">interface <b>GetEndpointResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1666,7 +1610,7 @@ A collection of values returned by getEndpoint.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetEndpointResult-endpointAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L50" >}}">property <b>endpointAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L52" >}}">property <b>endpointAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpointAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1682,7 +1626,7 @@ The endpoint based on `endpointType`:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEndpointResult-endpointType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L51" >}}">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L53" >}}">property <b>endpointType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpointType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1690,7 +1634,7 @@ The endpoint based on `endpointType`:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEndpointResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L55" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/getEndpoint.ts#L57" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2132,7 +2076,7 @@ The current version of the thing record in the registry.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ThingTypeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L118" >}}">interface <b>ThingTypeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L120" >}}">interface <b>ThingTypeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2141,7 +2085,7 @@ The set of arguments for constructing a ThingType resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ThingTypeArgs-deprecated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L122" >}}">property <b>deprecated</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L124" >}}">property <b>deprecated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deprecated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2152,7 +2096,7 @@ Whether the thing type is deprecated. If true, no new things could be associated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingTypeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L126" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L128" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2163,19 +2107,16 @@ The name of the thing type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingTypeArgs-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L127" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L129" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    searchableAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ThingTypeProperties'>ThingTypeProperties</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ThingTypeState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L99" >}}">interface <b>ThingTypeState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L101" >}}">interface <b>ThingTypeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2184,7 +2125,7 @@ Input properties used for looking up and filtering ThingType resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ThingTypeState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L103" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L105" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2195,7 +2136,7 @@ The ARN of the created AWS IoT Thing Type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingTypeState-deprecated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L107" >}}">property <b>deprecated</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L109" >}}">property <b>deprecated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deprecated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2206,7 +2147,7 @@ Whether the thing type is deprecated. If true, no new things could be associated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingTypeState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L111" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L113" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2217,19 +2158,16 @@ The name of the thing type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThingTypeState-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L112" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/thingType.ts#L114" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    searchableAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ThingTypeProperties'>ThingTypeProperties</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L237" >}}">interface <b>TopicRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L239" >}}">interface <b>TopicRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2238,35 +2176,23 @@ The set of arguments for constructing a TopicRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicRuleArgs-cloudwatchAlarm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L238" >}}">property <b>cloudwatchAlarm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L240" >}}">property <b>cloudwatchAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>cloudwatchAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alarmName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    stateReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    stateValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>cloudwatchAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleCloudwatchAlarm'>TopicRuleCloudwatchAlarm</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-cloudwatchMetric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L239" >}}">property <b>cloudwatchMetric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L241" >}}">property <b>cloudwatchMetric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>cloudwatchMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>cloudwatchMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleCloudwatchMetric'>TopicRuleCloudwatchMetric</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L243" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L245" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2277,39 +2203,23 @@ The description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-dynamodb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L244" >}}">property <b>dynamodb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L246" >}}">property <b>dynamodb</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dynamodb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    hashKeyField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    hashKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    hashKeyValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    payloadField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rangeKeyField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rangeKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rangeKeyValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dynamodb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleDynamodb'>TopicRuleDynamodb</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-elasticsearch">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L245" >}}">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L247" >}}">property <b>elasticsearch</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleElasticsearch'>TopicRuleElasticsearch</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L249" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L251" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2320,41 +2230,31 @@ Specifies whether the rule is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-firehose">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L250" >}}">property <b>firehose</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L252" >}}">property <b>firehose</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>firehose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    deliveryStreamName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    separator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>firehose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleFirehose'>TopicRuleFirehose</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-kinesis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L251" >}}">property <b>kinesis</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L253" >}}">property <b>kinesis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>kinesis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    partitionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    streamName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>kinesis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleKinesis'>TopicRuleKinesis</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-lambda">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L252" >}}">property <b>lambda</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L254" >}}">property <b>lambda</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    functionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>lambda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleLambda'>TopicRuleLambda</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L256" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L258" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2365,42 +2265,31 @@ The name of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-republish">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L257" >}}">property <b>republish</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L259" >}}">property <b>republish</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>republish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>republish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleRepublish'>TopicRuleRepublish</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-s3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L258" >}}">property <b>s3</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L260" >}}">property <b>s3</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>s3?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>s3?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleS3'>TopicRuleS3</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-sns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L259" >}}">property <b>sns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L261" >}}">property <b>sns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    messageFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleSns'>TopicRuleSns</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-sql">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L263" >}}">property <b>sql</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L265" >}}">property <b>sql</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2411,7 +2300,7 @@ The SQL statement used to query the topic. For more information, see AWS IoT SQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-sqlVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L267" >}}">property <b>sqlVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L269" >}}">property <b>sqlVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sqlVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2422,20 +2311,16 @@ The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleArgs-sqs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L268" >}}">property <b>sqs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L270" >}}">property <b>sqs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sqs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    queueUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    useBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sqs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleSqs'>TopicRuleSqs</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L196" >}}">interface <b>TopicRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L198" >}}">interface <b>TopicRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2444,7 +2329,7 @@ Input properties used for looking up and filtering TopicRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicRuleState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L200" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L202" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2455,35 +2340,23 @@ The ARN of the topic rule
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-cloudwatchAlarm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L201" >}}">property <b>cloudwatchAlarm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L203" >}}">property <b>cloudwatchAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>cloudwatchAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alarmName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    stateReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    stateValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>cloudwatchAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleCloudwatchAlarm'>TopicRuleCloudwatchAlarm</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-cloudwatchMetric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L202" >}}">property <b>cloudwatchMetric</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L204" >}}">property <b>cloudwatchMetric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>cloudwatchMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>cloudwatchMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleCloudwatchMetric'>TopicRuleCloudwatchMetric</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L206" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L208" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2494,39 +2367,23 @@ The description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-dynamodb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L207" >}}">property <b>dynamodb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L209" >}}">property <b>dynamodb</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dynamodb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    hashKeyField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    hashKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    hashKeyValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    payloadField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rangeKeyField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rangeKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rangeKeyValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dynamodb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleDynamodb'>TopicRuleDynamodb</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-elasticsearch">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L208" >}}">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L210" >}}">property <b>elasticsearch</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleElasticsearch'>TopicRuleElasticsearch</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L212" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L214" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2537,41 +2394,31 @@ Specifies whether the rule is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-firehose">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L213" >}}">property <b>firehose</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L215" >}}">property <b>firehose</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>firehose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    deliveryStreamName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    separator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>firehose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleFirehose'>TopicRuleFirehose</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-kinesis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L214" >}}">property <b>kinesis</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L216" >}}">property <b>kinesis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>kinesis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    partitionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    streamName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>kinesis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleKinesis'>TopicRuleKinesis</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-lambda">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L215" >}}">property <b>lambda</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L217" >}}">property <b>lambda</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    functionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>lambda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleLambda'>TopicRuleLambda</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L219" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L221" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2582,42 +2429,31 @@ The name of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-republish">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L220" >}}">property <b>republish</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L222" >}}">property <b>republish</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>republish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>republish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleRepublish'>TopicRuleRepublish</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-s3">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L221" >}}">property <b>s3</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L223" >}}">property <b>s3</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>s3?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>s3?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleS3'>TopicRuleS3</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-sns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L222" >}}">property <b>sns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L224" >}}">property <b>sns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    messageFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleSns'>TopicRuleSns</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-sql">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L226" >}}">property <b>sql</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L228" >}}">property <b>sql</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2628,7 +2464,7 @@ The SQL statement used to query the topic. For more information, see AWS IoT SQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-sqlVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L230" >}}">property <b>sqlVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L232" >}}">property <b>sqlVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sqlVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2639,14 +2475,10 @@ The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicRuleState-sqs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L231" >}}">property <b>sqs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="iot/topicRule.ts#L233" >}}">property <b>sqs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sqs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    queueUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    useBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sqs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TopicRuleSqs'>TopicRuleSqs</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

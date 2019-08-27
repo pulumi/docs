@@ -40,7 +40,7 @@ title: Module backup
 
 
 <h2 class="pdoc-module-header" id="Plan">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L27" >}}">class <b>Plan</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L29" >}}">class <b>Plan</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -67,7 +67,7 @@ const example = new aws.backup.Plan("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Plan-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L73" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -84,7 +84,7 @@ Create a Plan resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L36" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +108,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L47" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -122,7 +122,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L57" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L59" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L61" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -156,21 +156,10 @@ The display name of a backup plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L65" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L67" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    completionWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    lifecycle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        coldStorageAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        deleteAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    };
-    recoveryPointTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    ruleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    schedule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    startWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    targetVaultName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PlanRule'>PlanRule</a>[]&gt;;</pre>
 {{% md %}}
 
 A rule object that specifies a scheduled task that is used to back up a selection of resources.
@@ -178,7 +167,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L69" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L71" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -201,7 +190,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L73" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L75" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -213,7 +202,7 @@ Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the ver
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Selection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L82" >}}">class <b>Selection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L84" >}}">class <b>Selection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -295,7 +284,7 @@ const example = new aws.backup.Selection("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Selection-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L128" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L130" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -312,7 +301,7 @@ Create a Selection resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L91" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L93" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -336,7 +325,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L102" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L104" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -350,7 +339,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-iamRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L112" >}}">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L114" >}}">property <b>iamRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>iamRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -373,7 +362,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L116" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -384,7 +373,7 @@ The display name of a resource selection document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-planId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L120" >}}">property <b>planId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L122" >}}">property <b>planId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>planId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -395,7 +384,7 @@ The backup plan ID to be associated with the selection of resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L124" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L126" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -406,14 +395,10 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Selection-selectionTags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L128" >}}">property <b>selectionTags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L130" >}}">property <b>selectionTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>selectionTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>selectionTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SelectionSelectionTag'>SelectionSelectionTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Tag-based conditions used to specify a set of resources to assign to a backup plan.
@@ -434,7 +419,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Vault">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L23" >}}">class <b>Vault</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L25" >}}">class <b>Vault</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -457,7 +442,7 @@ const example = new aws.backup.Vault("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Vault-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -474,7 +459,7 @@ Create a Vault resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L32" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -498,7 +483,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L43" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -512,7 +497,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L53" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L55" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -535,7 +520,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-kmsKeyArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L57" >}}">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L59" >}}">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -546,7 +531,7 @@ The server-side encryption key that is used to protect your backups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L61" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -557,7 +542,7 @@ Name of the backup vault to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-recoveryPoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L65" >}}">property <b>recoveryPoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L67" >}}">property <b>recoveryPoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>recoveryPoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -568,7 +553,7 @@ The number of recovery points that are stored in a backup vault.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vault-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L69" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L71" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -592,7 +577,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L143" >}}">interface <b>PlanArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L145" >}}">interface <b>PlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -601,7 +586,7 @@ The set of arguments for constructing a Plan resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L147" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -612,21 +597,10 @@ The display name of a backup plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L151" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L153" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    completionWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    lifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        coldStorageAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        deleteAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    recoveryPointTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    ruleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    startWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    targetVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanRule'>PlanRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A rule object that specifies a scheduled task that is used to back up a selection of resources.
@@ -634,7 +608,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L155" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L157" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -646,7 +620,7 @@ Metadata that you can assign to help organize the plans you create.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L117" >}}">interface <b>PlanState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L119" >}}">interface <b>PlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -655,7 +629,7 @@ Input properties used for looking up and filtering Plan resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L121" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L123" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -666,7 +640,7 @@ The ARN of the backup plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L125" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L127" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -677,21 +651,10 @@ The display name of a backup plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-rules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L129" >}}">property <b>rules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L131" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    completionWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    lifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        coldStorageAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        deleteAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    recoveryPointTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    ruleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    startWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    targetVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanRule'>PlanRule</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A rule object that specifies a scheduled task that is used to back up a selection of resources.
@@ -699,7 +662,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L133" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L135" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -710,7 +673,7 @@ Metadata that you can assign to help organize the plans you create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L137" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/plan.ts#L139" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -722,7 +685,7 @@ Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the ver
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelectionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L201" >}}">interface <b>SelectionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L203" >}}">interface <b>SelectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -731,7 +694,7 @@ The set of arguments for constructing a Selection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelectionArgs-iamRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L205" >}}">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L207" >}}">property <b>iamRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iamRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -742,7 +705,7 @@ The ARN of the IAM role that AWS Backup uses to authenticate when restoring and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L209" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L211" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -753,7 +716,7 @@ The display name of a resource selection document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionArgs-planId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L213" >}}">property <b>planId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L215" >}}">property <b>planId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>planId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -764,7 +727,7 @@ The backup plan ID to be associated with the selection of resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionArgs-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L217" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L219" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -775,14 +738,10 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionArgs-selectionTags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L221" >}}">property <b>selectionTags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L223" >}}">property <b>selectionTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SelectionSelectionTag'>SelectionSelectionTag</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Tag-based conditions used to specify a set of resources to assign to a backup plan.
@@ -791,7 +750,7 @@ Tag-based conditions used to specify a set of resources to assign to a backup pl
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelectionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L175" >}}">interface <b>SelectionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L177" >}}">interface <b>SelectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -800,7 +759,7 @@ Input properties used for looking up and filtering Selection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelectionState-iamRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L179" >}}">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L181" >}}">property <b>iamRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iamRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -811,7 +770,7 @@ The ARN of the IAM role that AWS Backup uses to authenticate when restoring and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L183" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L185" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -822,7 +781,7 @@ The display name of a resource selection document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionState-planId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L187" >}}">property <b>planId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L189" >}}">property <b>planId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>planId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -833,7 +792,7 @@ The backup plan ID to be associated with the selection of resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionState-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L191" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L193" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -844,14 +803,10 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelectionState-selectionTags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L195" >}}">property <b>selectionTags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/selection.ts#L197" >}}">property <b>selectionTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>selectionTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SelectionSelectionTag'>SelectionSelectionTag</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Tag-based conditions used to specify a set of resources to assign to a backup plan.
@@ -860,7 +815,7 @@ Tag-based conditions used to specify a set of resources to assign to a backup pl
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VaultArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L136" >}}">interface <b>VaultArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L138" >}}">interface <b>VaultArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -869,7 +824,7 @@ The set of arguments for constructing a Vault resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VaultArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L140" >}}">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L142" >}}">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -880,7 +835,7 @@ The server-side encryption key that is used to protect your backups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VaultArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L144" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L146" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -891,7 +846,7 @@ Name of the backup vault to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VaultArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L148" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L150" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -903,7 +858,7 @@ Metadata that you can assign to help organize the resources that you create.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VaultState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L110" >}}">interface <b>VaultState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L112" >}}">interface <b>VaultState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -912,7 +867,7 @@ Input properties used for looking up and filtering Vault resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VaultState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L114" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L116" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -923,7 +878,7 @@ The ARN of the vault.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VaultState-kmsKeyArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L118" >}}">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L120" >}}">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -934,7 +889,7 @@ The server-side encryption key that is used to protect your backups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VaultState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L122" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L124" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -945,7 +900,7 @@ Name of the backup vault to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VaultState-recoveryPoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L126" >}}">property <b>recoveryPoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L128" >}}">property <b>recoveryPoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>recoveryPoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -956,7 +911,7 @@ The number of recovery points that are stored in a backup vault.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VaultState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L130" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="backup/vault.ts#L132" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>

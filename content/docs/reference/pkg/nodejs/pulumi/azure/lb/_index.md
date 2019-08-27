@@ -58,7 +58,7 @@ title: Module lb
 
 
 <h2 class="pdoc-module-header" id="BackendAddressPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L46" >}}">class <b>BackendAddressPool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L48" >}}">class <b>BackendAddressPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -104,7 +104,7 @@ const testBackendAddressPool = new azure.lb.BackendAddressPool("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BackendAddressPool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L93" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L95" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -121,7 +121,7 @@ Create a BackendAddressPool resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -145,7 +145,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -159,7 +159,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-backendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L76" >}}">property <b>backendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L78" >}}">property <b>backendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -182,7 +182,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-loadBalancingRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L80" >}}">property <b>loadBalancingRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L82" >}}">property <b>loadBalancingRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadBalancingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -193,7 +193,7 @@ The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L84" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L86" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -204,7 +204,7 @@ The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L85" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L87" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -212,7 +212,7 @@ The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -223,7 +223,7 @@ Specifies the name of the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPool-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L93" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L95" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -247,7 +247,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L39" >}}">class <b>LoadBalancer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L41" >}}">class <b>LoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -286,7 +286,7 @@ const testLoadBalancer = new azure.lb.LoadBalancer("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -303,7 +303,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L48" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -327,7 +327,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L59" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -341,21 +341,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L69" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L71" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    inboundNatRules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    loadBalancerRules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    outboundRules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    privateIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    privateIpAddressAllocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    publicIpAddressId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    publicIpPrefixId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    zones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 One or multiple `frontendIpConfiguration` blocks as documented below.
@@ -375,7 +364,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L73" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L75" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -386,7 +375,7 @@ Specifies the supported Azure Region where the Load Balancer should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L77" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -397,7 +386,7 @@ Specifies the name of the frontend ip configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-privateIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L81" >}}">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L83" >}}">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -408,7 +397,7 @@ Private IP Address to assign to the Load Balancer. The last one and first four I
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-privateIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L85" >}}">property <b>privateIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L87" >}}">property <b>privateIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privateIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -419,7 +408,7 @@ The list of private IP address assigned to the load balancer in `frontendIpConfi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L89" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L91" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -430,7 +419,7 @@ The name of the Resource Group in which to create the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L93" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L95" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -441,7 +430,7 @@ The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L97" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L99" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -465,7 +454,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NatPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L51" >}}">class <b>NatPool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L53" >}}">class <b>NatPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -516,7 +505,7 @@ const testNatPool = new azure.lb.NatPool("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NatPool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -533,7 +522,7 @@ Create a NatPool resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L60" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -557,7 +546,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L71" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -571,7 +560,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L81" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L83" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -582,7 +571,7 @@ The port used for the internal endpoint. Possible values range between 1 and 655
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-frontendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L82" >}}">property <b>frontendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L84" >}}">property <b>frontendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -590,7 +579,7 @@ The port used for the internal endpoint. Possible values range between 1 and 655
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L86" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L88" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -601,7 +590,7 @@ The name of the frontend IP configuration exposing this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-frontendPortEnd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L90" >}}">property <b>frontendPortEnd</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L92" >}}">property <b>frontendPortEnd</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendPortEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -612,7 +601,7 @@ The last port number in the range of external ports that will be used to provide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-frontendPortStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L94" >}}">property <b>frontendPortStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L96" >}}">property <b>frontendPortStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendPortStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -635,7 +624,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L98" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L100" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -646,7 +635,7 @@ The ID of the Load Balancer in which to create the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L99" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L101" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -654,7 +643,7 @@ The ID of the Load Balancer in which to create the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L103" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L105" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -665,7 +654,7 @@ Specifies the name of the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L107" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L109" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -676,7 +665,7 @@ The transport protocol for the external endpoint. Possible values are `Udp` or `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPool-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L111" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L113" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -700,7 +689,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NatRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L50" >}}">class <b>NatRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L52" >}}">class <b>NatRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -750,7 +739,7 @@ const testNatRule = new azure.lb.NatRule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NatRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -767,7 +756,7 @@ Create a NatRule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -791,7 +780,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -805,7 +794,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-backendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L77" >}}">property <b>backendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L79" >}}">property <b>backendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendIpConfigurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -813,7 +802,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L81" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L83" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -824,7 +813,7 @@ The port used for internal connections on the endpoint. Possible values range be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-enableFloatingIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L85" >}}">property <b>enableFloatingIp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L87" >}}">property <b>enableFloatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableFloatingIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -835,7 +824,7 @@ Enables the Floating IP Capacity, required to configure a SQL AlwaysOn Availabil
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-frontendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L86" >}}">property <b>frontendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L88" >}}">property <b>frontendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -843,7 +832,7 @@ Enables the Floating IP Capacity, required to configure a SQL AlwaysOn Availabil
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L90" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L92" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -854,7 +843,7 @@ The name of the frontend IP configuration exposing this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-frontendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L94" >}}">property <b>frontendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L96" >}}">property <b>frontendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -877,7 +866,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L98" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L100" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -888,7 +877,7 @@ The ID of the Load Balancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L99" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L101" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -896,7 +885,7 @@ The ID of the Load Balancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L103" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L105" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -907,7 +896,7 @@ Specifies the name of the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L107" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L109" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -918,7 +907,7 @@ The transport protocol for the external endpoint. Possible values are `Udp`, `Tc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L111" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L113" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -942,7 +931,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OutboundRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L56" >}}">class <b>OutboundRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L58" >}}">class <b>OutboundRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -998,7 +987,7 @@ const testOutboundRule = new azure.lb.OutboundRule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OutboundRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L118" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L120" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1015,7 +1004,7 @@ Create a OutboundRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L65" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L67" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1039,7 +1028,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L76" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1053,7 +1042,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-allocatedOutboundPorts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L86" >}}">property <b>allocatedOutboundPorts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L88" >}}">property <b>allocatedOutboundPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allocatedOutboundPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1064,7 +1053,7 @@ The number of outbound ports to be used for NAT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-backendAddressPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L90" >}}">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L92" >}}">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendAddressPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1075,7 +1064,7 @@ The ID of the Backend Address Pool. Outbound traffic is randomly load balanced a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-enableTcpReset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L94" >}}">property <b>enableTcpReset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L96" >}}">property <b>enableTcpReset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableTcpReset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1086,13 +1075,10 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L98" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L100" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 One or more `frontendIpConfiguration` blocks as defined below.
@@ -1112,7 +1098,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L102" >}}">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L104" >}}">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>idleTimeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1123,7 +1109,7 @@ The timeout for the TCP idle connection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L106" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L108" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1134,7 +1120,7 @@ The ID of the Load Balancer in which to create the Outbound Rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L110" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1145,7 +1131,7 @@ Specifies the name of the Outbound Rule. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L114" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L116" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1156,7 +1142,7 @@ The transport protocol for the external endpoint. Possible values are `Udp`, `Tc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L118" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L120" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1180,7 +1166,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Probe">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L47" >}}">class <b>Probe</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L49" >}}">class <b>Probe</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1227,7 +1213,7 @@ const testProbe = new azure.lb.Probe("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Probe-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L107" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L109" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1244,7 +1230,7 @@ Create a Probe resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1268,7 +1254,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1294,7 +1280,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-intervalInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L77" >}}">property <b>intervalInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L79" >}}">property <b>intervalInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>intervalInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1305,7 +1291,7 @@ The interval, in seconds between probes to the backend endpoint for health statu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-loadBalancerRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L78" >}}">property <b>loadBalancerRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L80" >}}">property <b>loadBalancerRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1313,7 +1299,7 @@ The interval, in seconds between probes to the backend endpoint for health statu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L82" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L84" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1324,7 +1310,7 @@ The ID of the LoadBalancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L83" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L85" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1332,7 +1318,7 @@ The ID of the LoadBalancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L87" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L89" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1343,7 +1329,7 @@ Specifies the name of the Probe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-numberOfProbes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L91" >}}">property <b>numberOfProbes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L93" >}}">property <b>numberOfProbes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>numberOfProbes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1354,7 +1340,7 @@ The number of failed probe attempts after which the backend endpoint is removed 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L95" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L97" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1365,7 +1351,7 @@ Port on which the Probe queries the backend endpoint. Possible values range from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L99" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L101" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1376,7 +1362,7 @@ Specifies the protocol of the end point. Possible values are `Http`, `Https` or 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-requestPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L103" >}}">property <b>requestPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L105" >}}">property <b>requestPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requestPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1387,7 +1373,7 @@ The URI used for requesting health status from the backend endpoint. Required if
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Probe-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L107" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L109" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1411,7 +1397,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L50" >}}">class <b>Rule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L52" >}}">class <b>Rule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1461,7 +1447,7 @@ const testRule = new azure.lb.Rule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Rule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L130" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L132" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1478,7 +1464,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1502,7 +1488,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1516,7 +1502,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-backendAddressPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L80" >}}">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L82" >}}">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendAddressPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1527,7 +1513,7 @@ A reference to a Backend Address Pool over which this Load Balancing Rule operat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L84" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L86" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>backendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1538,7 +1524,7 @@ The port used for internal connections on the endpoint. Possible values range be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-disableOutboundSnat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L88" >}}">property <b>disableOutboundSnat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L90" >}}">property <b>disableOutboundSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>disableOutboundSnat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1549,7 +1535,7 @@ Indicates whether outbound snat is disabled or enabled. Default false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-enableFloatingIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L92" >}}">property <b>enableFloatingIp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L94" >}}">property <b>enableFloatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableFloatingIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1560,7 +1546,7 @@ Floating IP is pertinent to failover scenarios: a "floating” IP is reassigned 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-frontendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L93" >}}">property <b>frontendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L95" >}}">property <b>frontendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1568,7 +1554,7 @@ Floating IP is pertinent to failover scenarios: a "floating” IP is reassigned 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L97" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L99" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1579,7 +1565,7 @@ The name of the frontend IP configuration to which the rule is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-frontendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L101" >}}">property <b>frontendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L103" >}}">property <b>frontendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>frontendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1602,7 +1588,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L105" >}}">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L107" >}}">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>idleTimeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1613,7 +1599,7 @@ Specifies the timeout for the Tcp idle connection. The value can be set between 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-loadDistribution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L109" >}}">property <b>loadDistribution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L111" >}}">property <b>loadDistribution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadDistribution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1624,7 +1610,7 @@ Specifies the load balancing distribution type to be used by the Load Balancer. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L113" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L115" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1635,7 +1621,7 @@ The ID of the Load Balancer in which to create the Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L114" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L116" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1643,7 +1629,7 @@ The ID of the Load Balancer in which to create the Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L118" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1654,7 +1640,7 @@ Specifies the name of the LB Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-probeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L122" >}}">property <b>probeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L124" >}}">property <b>probeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>probeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1665,7 +1651,7 @@ A reference to a Probe used by this Load Balancing Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L126" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L128" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1676,7 +1662,7 @@ The transport protocol for the external endpoint. Possible values are `Tcp`, `Ud
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L130" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L132" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1700,7 +1686,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getBackendAddressPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L30" >}}">function <b>getBackendAddressPool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L32" >}}">function <b>getBackendAddressPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1733,7 +1719,7 @@ export const backendAddressPoolId = testBackendAddressPool.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getLB">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L26" >}}">function <b>getLB</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L28" >}}">function <b>getLB</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1762,7 +1748,7 @@ export const loadbalancerId = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="BackendAddressPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L169" >}}">interface <b>BackendAddressPoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L171" >}}">interface <b>BackendAddressPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1771,7 +1757,7 @@ The set of arguments for constructing a BackendAddressPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BackendAddressPoolArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L173" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L175" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1782,7 +1768,7 @@ The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L174" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L176" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1790,7 +1776,7 @@ The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L178" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L180" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1801,7 +1787,7 @@ Specifies the name of the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L182" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L184" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1813,7 +1799,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BackendAddressPoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L142" >}}">interface <b>BackendAddressPoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L144" >}}">interface <b>BackendAddressPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1822,7 +1808,7 @@ Input properties used for looking up and filtering BackendAddressPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-backendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L146" >}}">property <b>backendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L148" >}}">property <b>backendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1833,7 +1819,7 @@ The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-loadBalancingRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L150" >}}">property <b>loadBalancingRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L152" >}}">property <b>loadBalancingRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1844,7 +1830,7 @@ The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L154" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L156" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1855,7 +1841,7 @@ The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L155" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L157" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1863,7 +1849,7 @@ The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L159" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L161" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1874,7 +1860,7 @@ Specifies the name of the Backend Address Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L163" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/backendAddressPool.ts#L165" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1886,7 +1872,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBackendAddressPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L49" >}}">interface <b>GetBackendAddressPoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L51" >}}">interface <b>GetBackendAddressPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1895,7 +1881,7 @@ A collection of arguments for invoking getBackendAddressPool.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L53" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L55" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1906,7 +1892,7 @@ The ID of the Load Balancer in which the Backend Address Pool exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L57" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L59" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1918,7 +1904,7 @@ Specifies the name of the Backend Address Pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBackendAddressPoolResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L63" >}}">interface <b>GetBackendAddressPoolResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L65" >}}">interface <b>GetBackendAddressPoolResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1927,7 +1913,7 @@ A collection of values returned by getBackendAddressPool.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L69" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L71" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1938,7 +1924,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolResult-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L64" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L66" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1946,7 +1932,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getBackendAddressPool.ts#L67" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1955,7 +1941,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLBArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L45" >}}">interface <b>GetLBArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L47" >}}">interface <b>GetLBArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1964,7 +1950,7 @@ A collection of arguments for invoking getLB.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLBArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1975,7 +1961,7 @@ Specifies the name of the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1987,7 +1973,7 @@ The name of the Resource Group in which the Load Balancer exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLBResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L59" >}}">interface <b>GetLBResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L61" >}}">interface <b>GetLBResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1996,17 +1982,10 @@ A collection of values returned by getLB.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLBResult-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L63" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L65" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    privateIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    privateIpAddressAllocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    publicIpAddressId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    zones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations: <a href='#GetLBFrontendIpConfiguration'>GetLBFrontendIpConfiguration</a>[];</pre>
 {{% md %}}
 
 (Optional) A `frontendIpConfiguration` block as documented below.
@@ -2014,7 +1993,7 @@ A collection of values returned by getLB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L92" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L94" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2025,7 +2004,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L67" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L69" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2036,7 +2015,7 @@ The Azure location where the Load Balancer exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2047,7 +2026,7 @@ The name of the Frontend IP Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-privateIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L75" >}}">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L77" >}}">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2058,7 +2037,7 @@ Private IP Address to assign to the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-privateIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L79" >}}">property <b>privateIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L81" >}}">property <b>privateIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2069,7 +2048,7 @@ The list of private IP address assigned to the load balancer in `frontendIpConfi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L80" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L82" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2077,7 +2056,7 @@ The list of private IP address assigned to the load balancer in `frontendIpConfi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L84" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L86" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2088,7 +2067,7 @@ The SKU of the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLBResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L88" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/getLB.ts#L90" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2100,7 +2079,7 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L185" >}}">interface <b>LoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L187" >}}">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2109,21 +2088,10 @@ The set of arguments for constructing a LoadBalancer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L189" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L191" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    loadBalancerRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    privateIpAddressAllocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    publicIpAddressId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    publicIpPrefixId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or multiple `frontendIpConfiguration` blocks as documented below.
@@ -2131,7 +2099,7 @@ One or multiple `frontendIpConfiguration` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L193" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L195" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2142,7 +2110,7 @@ Specifies the supported Azure Region where the Load Balancer should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L197" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L199" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2153,7 +2121,7 @@ Specifies the name of the frontend ip configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L201" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L203" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2164,7 +2132,7 @@ The name of the Resource Group in which to create the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L205" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L207" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2175,7 +2143,7 @@ The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L209" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L211" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2187,7 +2155,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L147" >}}">interface <b>LoadBalancerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L149" >}}">interface <b>LoadBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2196,21 +2164,10 @@ Input properties used for looking up and filtering LoadBalancer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerState-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L151" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L153" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    inboundNatRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    loadBalancerRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    privateIpAddressAllocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    publicIpAddressId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    publicIpPrefixId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or multiple `frontendIpConfiguration` blocks as documented below.
@@ -2218,7 +2175,7 @@ One or multiple `frontendIpConfiguration` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L155" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L157" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2229,7 +2186,7 @@ Specifies the supported Azure Region where the Load Balancer should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L159" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L161" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2240,7 +2197,7 @@ Specifies the name of the frontend ip configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-privateIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L163" >}}">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L165" >}}">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2251,7 +2208,7 @@ Private IP Address to assign to the Load Balancer. The last one and first four I
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-privateIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L167" >}}">property <b>privateIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L169" >}}">property <b>privateIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2262,7 +2219,7 @@ The list of private IP address assigned to the load balancer in `frontendIpConfi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L171" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L173" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2273,7 +2230,7 @@ The name of the Resource Group in which to create the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L175" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L177" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2284,7 +2241,7 @@ The SKU of the Azure Load Balancer. Accepted values are `Basic` and `Standard`. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L179" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/loadBalancer.ts#L181" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2296,7 +2253,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NatPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L223" >}}">interface <b>NatPoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L225" >}}">interface <b>NatPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2305,7 +2262,7 @@ The set of arguments for constructing a NatPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NatPoolArgs-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L227" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L229" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2316,7 +2273,7 @@ The port used for the internal endpoint. Possible values range between 1 and 655
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L231" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L233" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2327,7 +2284,7 @@ The name of the frontend IP configuration exposing this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-frontendPortEnd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L235" >}}">property <b>frontendPortEnd</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L237" >}}">property <b>frontendPortEnd</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPortEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2338,7 +2295,7 @@ The last port number in the range of external ports that will be used to provide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-frontendPortStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L239" >}}">property <b>frontendPortStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L241" >}}">property <b>frontendPortStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPortStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2349,7 +2306,7 @@ The first port number in the range of external ports that will be used to provid
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L243" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L245" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2360,7 +2317,7 @@ The ID of the Load Balancer in which to create the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L244" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L246" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2368,7 +2325,7 @@ The ID of the Load Balancer in which to create the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L248" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L250" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2379,7 +2336,7 @@ Specifies the name of the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L252" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L254" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2390,7 +2347,7 @@ The transport protocol for the external endpoint. Possible values are `Udp` or `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L256" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L258" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2402,7 +2359,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NatPoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L183" >}}">interface <b>NatPoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L185" >}}">interface <b>NatPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2411,7 +2368,7 @@ Input properties used for looking up and filtering NatPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NatPoolState-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L187" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L189" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2422,7 +2379,7 @@ The port used for the internal endpoint. Possible values range between 1 and 655
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-frontendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L188" >}}">property <b>frontendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L190" >}}">property <b>frontendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2430,7 +2387,7 @@ The port used for the internal endpoint. Possible values range between 1 and 655
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L192" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L194" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2441,7 +2398,7 @@ The name of the frontend IP configuration exposing this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-frontendPortEnd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L196" >}}">property <b>frontendPortEnd</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L198" >}}">property <b>frontendPortEnd</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPortEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2452,7 +2409,7 @@ The last port number in the range of external ports that will be used to provide
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-frontendPortStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L200" >}}">property <b>frontendPortStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L202" >}}">property <b>frontendPortStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPortStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2463,7 +2420,7 @@ The first port number in the range of external ports that will be used to provid
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L204" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L206" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2474,7 +2431,7 @@ The ID of the Load Balancer in which to create the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L205" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L207" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2482,7 +2439,7 @@ The ID of the Load Balancer in which to create the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L209" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L211" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2493,7 +2450,7 @@ Specifies the name of the NAT pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L213" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L215" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2504,7 +2461,7 @@ The transport protocol for the external endpoint. Possible values are `Udp` or `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatPoolState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L217" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natPool.ts#L219" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2516,7 +2473,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NatRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L223" >}}">interface <b>NatRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L225" >}}">interface <b>NatRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2525,7 +2482,7 @@ The set of arguments for constructing a NatRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NatRuleArgs-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L227" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L229" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2536,7 +2493,7 @@ The port used for internal connections on the endpoint. Possible values range be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-enableFloatingIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L231" >}}">property <b>enableFloatingIp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L233" >}}">property <b>enableFloatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFloatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2547,7 +2504,7 @@ Enables the Floating IP Capacity, required to configure a SQL AlwaysOn Availabil
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L235" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L237" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2558,7 +2515,7 @@ The name of the frontend IP configuration exposing this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-frontendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L239" >}}">property <b>frontendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L241" >}}">property <b>frontendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2569,7 +2526,7 @@ The port for the external endpoint. Port numbers for each Rule must be unique wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L243" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L245" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2580,7 +2537,7 @@ The ID of the Load Balancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L244" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L246" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2588,7 +2545,7 @@ The ID of the Load Balancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L248" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L250" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2599,7 +2556,7 @@ Specifies the name of the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L252" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L254" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2610,7 +2567,7 @@ The transport protocol for the external endpoint. Possible values are `Udp`, `Tc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L256" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L258" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2622,7 +2579,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NatRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L182" >}}">interface <b>NatRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L184" >}}">interface <b>NatRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2631,7 +2588,7 @@ Input properties used for looking up and filtering NatRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NatRuleState-backendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L183" >}}">property <b>backendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L185" >}}">property <b>backendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendIpConfigurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2639,7 +2596,7 @@ Input properties used for looking up and filtering NatRule resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L187" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L189" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2650,7 +2607,7 @@ The port used for internal connections on the endpoint. Possible values range be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-enableFloatingIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L191" >}}">property <b>enableFloatingIp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L193" >}}">property <b>enableFloatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFloatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2661,7 +2618,7 @@ Enables the Floating IP Capacity, required to configure a SQL AlwaysOn Availabil
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-frontendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L192" >}}">property <b>frontendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L194" >}}">property <b>frontendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2669,7 +2626,7 @@ Enables the Floating IP Capacity, required to configure a SQL AlwaysOn Availabil
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L196" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L198" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2680,7 +2637,7 @@ The name of the frontend IP configuration exposing this rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-frontendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L200" >}}">property <b>frontendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L202" >}}">property <b>frontendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2691,7 +2648,7 @@ The port for the external endpoint. Port numbers for each Rule must be unique wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L204" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L206" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2702,7 +2659,7 @@ The ID of the Load Balancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L205" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L207" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2710,7 +2667,7 @@ The ID of the Load Balancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L209" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L211" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2721,7 +2678,7 @@ Specifies the name of the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L213" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L215" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2732,7 +2689,7 @@ The transport protocol for the external endpoint. Possible values are `Udp`, `Tc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NatRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L217" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/natRule.ts#L219" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2744,7 +2701,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OutboundRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L221" >}}">interface <b>OutboundRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L223" >}}">interface <b>OutboundRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2753,7 +2710,7 @@ The set of arguments for constructing a OutboundRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-allocatedOutboundPorts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L225" >}}">property <b>allocatedOutboundPorts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L227" >}}">property <b>allocatedOutboundPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allocatedOutboundPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2764,7 +2721,7 @@ The number of outbound ports to be used for NAT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-backendAddressPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L229" >}}">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L231" >}}">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2775,7 +2732,7 @@ The ID of the Backend Address Pool. Outbound traffic is randomly load balanced a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-enableTcpReset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L233" >}}">property <b>enableTcpReset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L235" >}}">property <b>enableTcpReset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableTcpReset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2786,13 +2743,10 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L237" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L239" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `frontendIpConfiguration` blocks as defined below.
@@ -2800,7 +2754,7 @@ One or more `frontendIpConfiguration` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L241" >}}">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L243" >}}">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2811,7 +2765,7 @@ The timeout for the TCP idle connection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L245" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L247" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2822,7 +2776,7 @@ The ID of the Load Balancer in which to create the Outbound Rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L249" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L251" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2833,7 +2787,7 @@ Specifies the name of the Outbound Rule. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L253" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L255" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2844,7 +2798,7 @@ The transport protocol for the external endpoint. Possible values are `Udp`, `Tc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L257" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L259" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2856,7 +2810,7 @@ The name of the resource group in which to create the resource. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OutboundRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L179" >}}">interface <b>OutboundRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L181" >}}">interface <b>OutboundRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2865,7 +2819,7 @@ Input properties used for looking up and filtering OutboundRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OutboundRuleState-allocatedOutboundPorts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L183" >}}">property <b>allocatedOutboundPorts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L185" >}}">property <b>allocatedOutboundPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allocatedOutboundPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2876,7 +2830,7 @@ The number of outbound ports to be used for NAT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-backendAddressPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L187" >}}">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L189" >}}">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2887,7 +2841,7 @@ The ID of the Backend Address Pool. Outbound traffic is randomly load balanced a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-enableTcpReset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L191" >}}">property <b>enableTcpReset</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L193" >}}">property <b>enableTcpReset</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableTcpReset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2898,13 +2852,10 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-frontendIpConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L195" >}}">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L197" >}}">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more `frontendIpConfiguration` blocks as defined below.
@@ -2912,7 +2863,7 @@ One or more `frontendIpConfiguration` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L199" >}}">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L201" >}}">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2923,7 +2874,7 @@ The timeout for the TCP idle connection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L203" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L205" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2934,7 +2885,7 @@ The ID of the Load Balancer in which to create the Outbound Rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L207" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L209" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2945,7 +2896,7 @@ Specifies the name of the Outbound Rule. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L211" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L213" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2956,7 +2907,7 @@ The transport protocol for the external endpoint. Possible values are `Udp`, `Tc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutboundRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L215" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/outboundRule.ts#L217" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2968,7 +2919,7 @@ The name of the resource group in which to create the resource. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProbeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L207" >}}">interface <b>ProbeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L209" >}}">interface <b>ProbeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2977,7 +2928,7 @@ The set of arguments for constructing a Probe resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProbeArgs-intervalInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L211" >}}">property <b>intervalInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L213" >}}">property <b>intervalInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>intervalInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2988,7 +2939,7 @@ The interval, in seconds between probes to the backend endpoint for health statu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L215" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L217" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2999,7 +2950,7 @@ The ID of the LoadBalancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L216" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L218" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3007,7 +2958,7 @@ The ID of the LoadBalancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L220" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L222" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3018,7 +2969,7 @@ Specifies the name of the Probe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-numberOfProbes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L224" >}}">property <b>numberOfProbes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L226" >}}">property <b>numberOfProbes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberOfProbes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3029,7 +2980,7 @@ The number of failed probe attempts after which the backend endpoint is removed 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L228" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L230" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3040,7 +2991,7 @@ Port on which the Probe queries the backend endpoint. Possible values range from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L232" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L234" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3051,7 +3002,7 @@ Specifies the protocol of the end point. Possible values are `Http`, `Https` or 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-requestPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L236" >}}">property <b>requestPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L238" >}}">property <b>requestPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3062,7 +3013,7 @@ The URI used for requesting health status from the backend endpoint. Required if
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L240" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L242" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3074,7 +3025,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProbeState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L167" >}}">interface <b>ProbeState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L169" >}}">interface <b>ProbeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3083,7 +3034,7 @@ Input properties used for looking up and filtering Probe resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProbeState-intervalInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L171" >}}">property <b>intervalInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L173" >}}">property <b>intervalInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>intervalInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3094,7 +3045,7 @@ The interval, in seconds between probes to the backend endpoint for health statu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-loadBalancerRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L172" >}}">property <b>loadBalancerRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L174" >}}">property <b>loadBalancerRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancerRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3102,7 +3053,7 @@ The interval, in seconds between probes to the backend endpoint for health statu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L176" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L178" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3113,7 +3064,7 @@ The ID of the LoadBalancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L177" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L179" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3121,7 +3072,7 @@ The ID of the LoadBalancer in which to create the NAT Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L183" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3132,7 +3083,7 @@ Specifies the name of the Probe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-numberOfProbes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L185" >}}">property <b>numberOfProbes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L187" >}}">property <b>numberOfProbes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>numberOfProbes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3143,7 +3094,7 @@ The number of failed probe attempts after which the backend endpoint is removed 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L189" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L191" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3154,7 +3105,7 @@ Port on which the Probe queries the backend endpoint. Possible values range from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L193" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L195" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3165,7 +3116,7 @@ Specifies the protocol of the end point. Possible values are `Http`, `Https` or 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-requestPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L197" >}}">property <b>requestPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L199" >}}">property <b>requestPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3176,7 +3127,7 @@ The URI used for requesting health status from the backend endpoint. Required if
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProbeState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L201" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/probe.ts#L203" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3188,7 +3139,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L269" >}}">interface <b>RuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L271" >}}">interface <b>RuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3197,7 +3148,7 @@ The set of arguments for constructing a Rule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleArgs-backendAddressPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L273" >}}">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L275" >}}">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3208,7 +3159,7 @@ A reference to a Backend Address Pool over which this Load Balancing Rule operat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L277" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L279" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3219,7 +3170,7 @@ The port used for internal connections on the endpoint. Possible values range be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-disableOutboundSnat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L281" >}}">property <b>disableOutboundSnat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L283" >}}">property <b>disableOutboundSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableOutboundSnat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3230,7 +3181,7 @@ Indicates whether outbound snat is disabled or enabled. Default false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-enableFloatingIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L285" >}}">property <b>enableFloatingIp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L287" >}}">property <b>enableFloatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFloatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3241,7 +3192,7 @@ Floating IP is pertinent to failover scenarios: a "floating” IP is reassigned 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L289" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L291" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3252,7 +3203,7 @@ The name of the frontend IP configuration to which the rule is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-frontendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L293" >}}">property <b>frontendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L295" >}}">property <b>frontendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3263,7 +3214,7 @@ The port for the external endpoint. Port numbers for each Rule must be unique wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L297" >}}">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L299" >}}">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3274,7 +3225,7 @@ Specifies the timeout for the Tcp idle connection. The value can be set between 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-loadDistribution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L301" >}}">property <b>loadDistribution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L303" >}}">property <b>loadDistribution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadDistribution?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3285,7 +3236,7 @@ Specifies the load balancing distribution type to be used by the Load Balancer. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L305" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L307" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3296,7 +3247,7 @@ The ID of the Load Balancer in which to create the Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L306" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L308" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3304,7 +3255,7 @@ The ID of the Load Balancer in which to create the Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L310" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L312" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3315,7 +3266,7 @@ Specifies the name of the LB Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-probeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L314" >}}">property <b>probeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L316" >}}">property <b>probeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>probeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3326,7 +3277,7 @@ A reference to a Probe used by this Load Balancing Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L318" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L320" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3337,7 +3288,7 @@ The transport protocol for the external endpoint. Possible values are `Tcp`, `Ud
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L322" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L324" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3349,7 +3300,7 @@ The name of the resource group in which to create the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L209" >}}">interface <b>RuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L211" >}}">interface <b>RuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3358,7 +3309,7 @@ Input properties used for looking up and filtering Rule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleState-backendAddressPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L213" >}}">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L215" >}}">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3369,7 +3320,7 @@ A reference to a Backend Address Pool over which this Load Balancing Rule operat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-backendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L217" >}}">property <b>backendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L219" >}}">property <b>backendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>backendPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3380,7 +3331,7 @@ The port used for internal connections on the endpoint. Possible values range be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-disableOutboundSnat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L221" >}}">property <b>disableOutboundSnat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L223" >}}">property <b>disableOutboundSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableOutboundSnat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3391,7 +3342,7 @@ Indicates whether outbound snat is disabled or enabled. Default false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-enableFloatingIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L225" >}}">property <b>enableFloatingIp</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L227" >}}">property <b>enableFloatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableFloatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3402,7 +3353,7 @@ Floating IP is pertinent to failover scenarios: a "floating” IP is reassigned 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-frontendIpConfigurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L226" >}}">property <b>frontendIpConfigurationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L228" >}}">property <b>frontendIpConfigurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3410,7 +3361,7 @@ Floating IP is pertinent to failover scenarios: a "floating” IP is reassigned 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-frontendIpConfigurationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L230" >}}">property <b>frontendIpConfigurationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L232" >}}">property <b>frontendIpConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3421,7 +3372,7 @@ The name of the frontend IP configuration to which the rule is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-frontendPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L234" >}}">property <b>frontendPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L236" >}}">property <b>frontendPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>frontendPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3432,7 +3383,7 @@ The port for the external endpoint. Port numbers for each Rule must be unique wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L238" >}}">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L240" >}}">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3443,7 +3394,7 @@ Specifies the timeout for the Tcp idle connection. The value can be set between 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-loadDistribution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L242" >}}">property <b>loadDistribution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L244" >}}">property <b>loadDistribution</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadDistribution?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3454,7 +3405,7 @@ Specifies the load balancing distribution type to be used by the Load Balancer. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-loadbalancerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L246" >}}">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L248" >}}">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3465,7 +3416,7 @@ The ID of the Load Balancer in which to create the Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L247" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L249" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3473,7 +3424,7 @@ The ID of the Load Balancer in which to create the Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L251" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L253" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3484,7 +3435,7 @@ Specifies the name of the LB Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-probeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L255" >}}">property <b>probeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L257" >}}">property <b>probeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>probeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3495,7 +3446,7 @@ A reference to a Probe used by this Load Balancing Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L259" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L261" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3506,7 +3457,7 @@ The transport protocol for the external endpoint. Possible values are `Tcp`, `Ud
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L263" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="lb/rule.ts#L265" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

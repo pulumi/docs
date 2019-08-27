@@ -43,7 +43,7 @@ title: Module gamelift
 
 
 <h2 class="pdoc-module-header" id="Alias">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L27" >}}">class <b>Alias</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L29" >}}">class <b>Alias</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -70,7 +70,7 @@ const example = new aws.gamelift.Alias("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Alias-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -87,7 +87,7 @@ Create a Alias resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Alias-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L36" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -111,7 +111,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Alias-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L47" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -125,7 +125,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Alias-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L57" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L59" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -136,7 +136,7 @@ Alias ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Alias-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L61" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L63" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -159,7 +159,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Alias-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L67" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -170,14 +170,10 @@ Name of the alias.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Alias-routingStrategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L69" >}}">property <b>routingStrategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L71" >}}">property <b>routingStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fleetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AliasRoutingStrategy'>AliasRoutingStrategy</a>&gt;;</pre>
 {{% md %}}
 
 Specifies the fleet and/or routing type to use for the alias.
@@ -198,7 +194,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Build">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L12" >}}">class <b>Build</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L14" >}}">class <b>Build</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -210,7 +206,7 @@ Provides an Gamelift Build resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Build-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -227,7 +223,7 @@ Create a Build resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Build-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L23" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -251,7 +247,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Build-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L34" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -277,7 +273,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Build-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L42" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L44" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -288,7 +284,7 @@ Name of the build
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Build-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L46" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L48" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>operatingSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -299,14 +295,10 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Build-storageLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L50" >}}">property <b>storageLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L52" >}}">property <b>storageLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#BuildStorageLocation'>BuildStorageLocation</a>&gt;;</pre>
 {{% md %}}
 
 Information indicating where your game build files are stored. See below.
@@ -326,7 +318,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Build-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L54" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L56" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -338,7 +330,7 @@ Version that is associated with this build.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Fleet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L30" >}}">class <b>Fleet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L32" >}}">class <b>Fleet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -368,7 +360,7 @@ const example = new aws.gamelift.Fleet("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Fleet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L101" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L103" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -385,7 +377,7 @@ Create a Fleet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -409,7 +401,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -423,7 +415,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L60" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L62" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -434,7 +426,7 @@ Fleet ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-buildId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L64" >}}">property <b>buildId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L66" >}}">property <b>buildId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>buildId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -445,7 +437,7 @@ ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L68" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L70" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -456,15 +448,10 @@ Human-readable description of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-ec2InboundPermissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L72" >}}">property <b>ec2InboundPermissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L74" >}}">property <b>ec2InboundPermissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ec2InboundPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fromPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    ipRange: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    toPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ec2InboundPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FleetEc2InboundPermission'>FleetEc2InboundPermission</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
@@ -472,7 +459,7 @@ Range of IP addresses and port settings that permit inbound traffic to access se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-ec2InstanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L76" >}}">property <b>ec2InstanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L78" >}}">property <b>ec2InstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ec2InstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -495,7 +482,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-logPaths">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L77" >}}">property <b>logPaths</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L79" >}}">property <b>logPaths</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>logPaths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -503,7 +490,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-metricGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L81" >}}">property <b>metricGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L83" >}}">property <b>metricGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metricGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -514,7 +501,7 @@ List of names of metric groups to add this fleet to. A metric group tracks metri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L85" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L87" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -525,7 +512,7 @@ The name of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-newGameSessionProtectionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L89" >}}">property <b>newGameSessionProtectionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L91" >}}">property <b>newGameSessionProtectionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>newGameSessionProtectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -536,7 +523,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L93" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L95" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>operatingSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -547,13 +534,10 @@ Operating system of the fleet's computing resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-resourceCreationLimitPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L97" >}}">property <b>resourceCreationLimitPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L99" >}}">property <b>resourceCreationLimitPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>resourceCreationLimitPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    newGameSessionsPerCreator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    policyPeriodInMinutes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>resourceCreationLimitPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FleetResourceCreationLimitPolicy'>FleetResourceCreationLimitPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
@@ -561,18 +545,10 @@ Policy that limits the number of game sessions an individual player can create o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-runtimeConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L101" >}}">property <b>runtimeConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L103" >}}">property <b>runtimeConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>runtimeConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    gameSessionActivationTimeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    maxConcurrentGameSessionActivations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    serverProcesses: {
-        concurrentExecutions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        launchPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        parameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>runtimeConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FleetRuntimeConfiguration'>FleetRuntimeConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Instructions for launching server processes on each instance in the fleet. See below.
@@ -593,7 +569,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GameSessionQueue">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L36" >}}">class <b>GameSessionQueue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L38" >}}">class <b>GameSessionQueue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -629,7 +605,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GameSessionQueue-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L82" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L84" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -646,7 +622,7 @@ Create a GameSessionQueue resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -670,7 +646,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -684,7 +660,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L66" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L68" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -695,7 +671,7 @@ Game Session Queue ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-destinations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L70" >}}">property <b>destinations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L72" >}}">property <b>destinations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>destinations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -718,7 +694,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -729,13 +705,10 @@ Name of the session queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-playerLatencyPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L78" >}}">property <b>playerLatencyPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L80" >}}">property <b>playerLatencyPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>playerLatencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    maximumIndividualPlayerLatencyMilliseconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    policyDurationSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>playerLatencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GameSessionQueuePlayerLatencyPolicy'>GameSessionQueuePlayerLatencyPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 One or more policies used to choose fleet based on player latency. See below.
@@ -743,7 +716,7 @@ One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueue-timeoutInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L82" >}}">property <b>timeoutInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L84" >}}">property <b>timeoutInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeoutInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -767,7 +740,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AliasArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L133" >}}">interface <b>AliasArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L135" >}}">interface <b>AliasArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -776,7 +749,7 @@ The set of arguments for constructing a Alias resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AliasArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L137" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L139" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -787,7 +760,7 @@ Description of the alias.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AliasArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L141" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L143" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -798,14 +771,10 @@ Name of the alias.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AliasArgs-routingStrategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L145" >}}">property <b>routingStrategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L147" >}}">property <b>routingStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fleetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>routingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AliasRoutingStrategy'>AliasRoutingStrategy</a>&gt;;</pre>
 {{% md %}}
 
 Specifies the fleet and/or routing type to use for the alias.
@@ -814,7 +783,7 @@ Specifies the fleet and/or routing type to use for the alias.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AliasState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L111" >}}">interface <b>AliasState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L113" >}}">interface <b>AliasState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -823,7 +792,7 @@ Input properties used for looking up and filtering Alias resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AliasState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L115" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L117" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -834,7 +803,7 @@ Alias ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AliasState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L119" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L121" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -845,7 +814,7 @@ Description of the alias.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AliasState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -856,14 +825,10 @@ Name of the alias.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AliasState-routingStrategy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L127" >}}">property <b>routingStrategy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/alias.ts#L129" >}}">property <b>routingStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>routingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fleetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>routingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AliasRoutingStrategy'>AliasRoutingStrategy</a>&gt;;</pre>
 {{% md %}}
 
 Specifies the fleet and/or routing type to use for the alias.
@@ -872,7 +837,7 @@ Specifies the fleet and/or routing type to use for the alias.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BuildArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L121" >}}">interface <b>BuildArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L123" >}}">interface <b>BuildArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -881,7 +846,7 @@ The set of arguments for constructing a Build resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BuildArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L125" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L127" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -892,7 +857,7 @@ Name of the build
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BuildArgs-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L129" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L131" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operatingSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -903,14 +868,10 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BuildArgs-storageLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L133" >}}">property <b>storageLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L135" >}}">property <b>storageLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildStorageLocation'>BuildStorageLocation</a>&gt;;</pre>
 {{% md %}}
 
 Information indicating where your game build files are stored. See below.
@@ -918,7 +879,7 @@ Information indicating where your game build files are stored. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BuildArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L137" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L139" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -930,7 +891,7 @@ Version that is associated with this build.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BuildState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L99" >}}">interface <b>BuildState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L101" >}}">interface <b>BuildState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -939,7 +900,7 @@ Input properties used for looking up and filtering Build resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BuildState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L103" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L105" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -950,7 +911,7 @@ Name of the build
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BuildState-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L107" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L109" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operatingSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -961,14 +922,10 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BuildState-storageLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L111" >}}">property <b>storageLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L113" >}}">property <b>storageLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildStorageLocation'>BuildStorageLocation</a>&gt;;</pre>
 {{% md %}}
 
 Information indicating where your game build files are stored. See below.
@@ -976,7 +933,7 @@ Information indicating where your game build files are stored. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BuildState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L115" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/build.ts#L117" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -988,7 +945,7 @@ Version that is associated with this build.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FleetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L213" >}}">interface <b>FleetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L215" >}}">interface <b>FleetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -997,7 +954,7 @@ The set of arguments for constructing a Fleet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FleetArgs-buildId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L217" >}}">property <b>buildId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L219" >}}">property <b>buildId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>buildId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1008,7 +965,7 @@ ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L221" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L223" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1019,15 +976,10 @@ Human-readable description of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-ec2InboundPermissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L225" >}}">property <b>ec2InboundPermissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L227" >}}">property <b>ec2InboundPermissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    ipRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FleetEc2InboundPermission'>FleetEc2InboundPermission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
@@ -1035,7 +987,7 @@ Range of IP addresses and port settings that permit inbound traffic to access se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-ec2InstanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L229" >}}">property <b>ec2InstanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L231" >}}">property <b>ec2InstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ec2InstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1046,7 +998,7 @@ Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-metricGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L233" >}}">property <b>metricGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L235" >}}">property <b>metricGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1057,7 +1009,7 @@ List of names of metric groups to add this fleet to. A metric group tracks metri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L237" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L239" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1068,7 +1020,7 @@ The name of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-newGameSessionProtectionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L241" >}}">property <b>newGameSessionProtectionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L243" >}}">property <b>newGameSessionProtectionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>newGameSessionProtectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1079,13 +1031,10 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-resourceCreationLimitPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L245" >}}">property <b>resourceCreationLimitPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L247" >}}">property <b>resourceCreationLimitPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    newGameSessionsPerCreator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    policyPeriodInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FleetResourceCreationLimitPolicy'>FleetResourceCreationLimitPolicy</a>&gt;;</pre>
 {{% md %}}
 
 Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
@@ -1093,18 +1042,10 @@ Policy that limits the number of game sessions an individual player can create o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-runtimeConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L249" >}}">property <b>runtimeConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L251" >}}">property <b>runtimeConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    gameSessionActivationTimeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxConcurrentGameSessionActivations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    serverProcesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        concurrentExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        launchPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FleetRuntimeConfiguration'>FleetRuntimeConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Instructions for launching server processes on each instance in the fleet. See below.
@@ -1113,7 +1054,7 @@ Instructions for launching server processes on each instance in the fleet. See b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FleetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L162" >}}">interface <b>FleetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L164" >}}">interface <b>FleetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1122,7 +1063,7 @@ Input properties used for looking up and filtering Fleet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FleetState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L166" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L168" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1133,7 +1074,7 @@ Fleet ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-buildId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L170" >}}">property <b>buildId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L172" >}}">property <b>buildId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>buildId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1144,7 +1085,7 @@ ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L174" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L176" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1155,15 +1096,10 @@ Human-readable description of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-ec2InboundPermissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L178" >}}">property <b>ec2InboundPermissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L180" >}}">property <b>ec2InboundPermissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    ipRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ec2InboundPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FleetEc2InboundPermission'>FleetEc2InboundPermission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
@@ -1171,7 +1107,7 @@ Range of IP addresses and port settings that permit inbound traffic to access se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-ec2InstanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L182" >}}">property <b>ec2InstanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L184" >}}">property <b>ec2InstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ec2InstanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1182,7 +1118,7 @@ Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-logPaths">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L183" >}}">property <b>logPaths</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L185" >}}">property <b>logPaths</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logPaths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1190,7 +1126,7 @@ Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-metricGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L187" >}}">property <b>metricGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L189" >}}">property <b>metricGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metricGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1201,7 +1137,7 @@ List of names of metric groups to add this fleet to. A metric group tracks metri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L191" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1212,7 +1148,7 @@ The name of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-newGameSessionProtectionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L195" >}}">property <b>newGameSessionProtectionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L197" >}}">property <b>newGameSessionProtectionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>newGameSessionProtectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1223,7 +1159,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L199" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L201" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>operatingSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1234,13 +1170,10 @@ Operating system of the fleet's computing resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-resourceCreationLimitPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L203" >}}">property <b>resourceCreationLimitPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L205" >}}">property <b>resourceCreationLimitPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    newGameSessionsPerCreator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    policyPeriodInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resourceCreationLimitPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FleetResourceCreationLimitPolicy'>FleetResourceCreationLimitPolicy</a>&gt;;</pre>
 {{% md %}}
 
 Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
@@ -1248,18 +1181,10 @@ Policy that limits the number of game sessions an individual player can create o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-runtimeConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L207" >}}">property <b>runtimeConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/fleet.ts#L209" >}}">property <b>runtimeConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    gameSessionActivationTimeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxConcurrentGameSessionActivations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    serverProcesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        concurrentExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        launchPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>runtimeConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FleetRuntimeConfiguration'>FleetRuntimeConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Instructions for launching server processes on each instance in the fleet. See below.
@@ -1268,7 +1193,7 @@ Instructions for launching server processes on each instance in the fleet. See b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GameSessionQueueArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L149" >}}">interface <b>GameSessionQueueArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L151" >}}">interface <b>GameSessionQueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1277,7 +1202,7 @@ The set of arguments for constructing a GameSessionQueue resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GameSessionQueueArgs-destinations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L153" >}}">property <b>destinations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L155" >}}">property <b>destinations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1288,7 +1213,7 @@ List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L157" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L159" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1299,13 +1224,10 @@ Name of the session queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueArgs-playerLatencyPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L161" >}}">property <b>playerLatencyPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L163" >}}">property <b>playerLatencyPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    maximumIndividualPlayerLatencyMilliseconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    policyDurationSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GameSessionQueuePlayerLatencyPolicy'>GameSessionQueuePlayerLatencyPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more policies used to choose fleet based on player latency. See below.
@@ -1313,7 +1235,7 @@ One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueArgs-timeoutInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L165" >}}">property <b>timeoutInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L167" >}}">property <b>timeoutInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeoutInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1325,7 +1247,7 @@ Maximum time a game session request can remain in the queue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GameSessionQueueState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L123" >}}">interface <b>GameSessionQueueState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L125" >}}">interface <b>GameSessionQueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1334,7 +1256,7 @@ Input properties used for looking up and filtering GameSessionQueue resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GameSessionQueueState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L127" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L129" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1345,7 +1267,7 @@ Game Session Queue ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueState-destinations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L131" >}}">property <b>destinations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L133" >}}">property <b>destinations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1356,7 +1278,7 @@ List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L135" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L137" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1367,13 +1289,10 @@ Name of the session queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueState-playerLatencyPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L139" >}}">property <b>playerLatencyPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L141" >}}">property <b>playerLatencyPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    maximumIndividualPlayerLatencyMilliseconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    policyDurationSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>playerLatencyPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GameSessionQueuePlayerLatencyPolicy'>GameSessionQueuePlayerLatencyPolicy</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 One or more policies used to choose fleet based on player latency. See below.
@@ -1381,7 +1300,7 @@ One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GameSessionQueueState-timeoutInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L143" >}}">property <b>timeoutInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="gamelift/gameSessionQueue.ts#L145" >}}">property <b>timeoutInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeoutInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>

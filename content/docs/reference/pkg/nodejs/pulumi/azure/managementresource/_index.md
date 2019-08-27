@@ -49,7 +49,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getSubscription({});
-const subscriptionLevel = new azure.managementresource.ManangementLock("subscription-level", {
+const subscriptionLevel = new azure.management.Lock("subscription-level", {
     lockLevel: "CanNotDelete",
     name: "subscription-level",
     notes: "Items can't be deleted in this subscription!",
@@ -67,7 +67,7 @@ const test = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "locked-resource-group",
 });
-const resourceGroupLevel = new azure.managementresource.ManangementLock("resource-group-level", {
+const resourceGroupLevel = new azure.management.Lock("resource-group-level", {
     lockLevel: "ReadOnly",
     name: "resource-group-level",
     notes: "This Resource Group is Read-Only",
@@ -92,7 +92,7 @@ const testPublicIp = new azure.network.PublicIp("test", {
     name: "locked-publicip",
     resourceGroupName: testResourceGroup.name,
 });
-const publicIp = new azure.managementresource.ManangementLock("public-ip", {
+const publicIp = new azure.management.Lock("public-ip", {
     lockLevel: "CanNotDelete",
     name: "resource-ip",
     notes: "Locked because it's needed by a third-party",
@@ -100,7 +100,7 @@ const publicIp = new azure.managementresource.ManangementLock("public-ip", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_lock.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_lock_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManangementLock-constructor">

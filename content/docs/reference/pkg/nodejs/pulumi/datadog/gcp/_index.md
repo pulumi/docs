@@ -97,7 +97,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="gcp/integration.ts#L32" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -154,7 +154,7 @@ Limit the GCE instances that are pulled into Datadog by using tags. Only hosts t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="gcp/integration.ts#L32" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -199,7 +199,7 @@ Your Google Cloud project ID found in your JSON service account key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="gcp/integration.ts#L32" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="datadog" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

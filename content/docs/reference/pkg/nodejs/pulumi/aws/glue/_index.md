@@ -214,7 +214,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CatalogTable">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L78" >}}">class <b>CatalogTable</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L80" >}}">class <b>CatalogTable</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -292,7 +292,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CatalogTable-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L152" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L154" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -309,7 +309,7 @@ Create a CatalogTable resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L87" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L89" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -333,7 +333,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L98" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L100" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -347,7 +347,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-catalogId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L108" >}}">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L110" >}}">property <b>catalogId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>catalogId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -358,7 +358,7 @@ ID of the Glue Catalog and database to create the table in. If omitted, this def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L112" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L114" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +369,7 @@ Name of the metadata database where the table metadata resides. For Hive compati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L116" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L118" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -392,7 +392,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L122" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -403,7 +403,7 @@ Name of the SerDe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L124" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L126" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -414,7 +414,7 @@ Owner of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L128" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L130" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -425,14 +425,10 @@ A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-partitionKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L132" >}}">property <b>partitionKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L134" >}}">property <b>partitionKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>partitionKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    comment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>partitionKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CatalogTablePartitionKey'>CatalogTablePartitionKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
@@ -440,7 +436,7 @@ A list of columns by which the table is partitioned. Only primitive types are su
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-retention">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L136" >}}">property <b>retention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L138" >}}">property <b>retention</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>retention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -451,38 +447,10 @@ Retention time for this table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-storageDescriptor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L140" >}}">property <b>storageDescriptor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L142" >}}">property <b>storageDescriptor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    bucketColumns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    columns: {
-        comment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    compressed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    inputFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    numberOfBuckets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    outputFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    parameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    serDeInfo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        parameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-        serializationLibrary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    skewedInfo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        skewedColumnNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        skewedColumnValueLocationMaps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-        skewedColumnValues: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    };
-    sortColumns: {
-        column: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        sortOrder: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    }[];
-    storedAsSubDirectories: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageDescriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CatalogTableStorageDescriptor'>CatalogTableStorageDescriptor</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
@@ -490,7 +458,7 @@ A storage descriptor object containing information about the physical storage of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-tableType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L144" >}}">property <b>tableType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L146" >}}">property <b>tableType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tableType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -513,7 +481,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-viewExpandedText">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L148" >}}">property <b>viewExpandedText</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L150" >}}">property <b>viewExpandedText</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>viewExpandedText: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -524,7 +492,7 @@ If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTable-viewOriginalText">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L152" >}}">property <b>viewOriginalText</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L154" >}}">property <b>viewOriginalText</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>viewOriginalText: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -536,7 +504,7 @@ If the table is a view, the original text of the view; otherwise null.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Classifier">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L57" >}}">class <b>Classifier</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L59" >}}">class <b>Classifier</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -593,7 +561,7 @@ const example = new aws.glue.Classifier("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Classifier-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L99" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L101" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -610,7 +578,7 @@ Create a Classifier resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Classifier-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L66" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L68" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -634,7 +602,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Classifier-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L77" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L79" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -648,14 +616,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Classifier-grokClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L87" >}}">property <b>grokClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L89" >}}">property <b>grokClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>grokClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    classification: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    customPatterns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    grokPattern: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>grokClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClassifierGrokClassifier'>ClassifierGrokClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A classifier that uses grok patterns. Defined below.
@@ -675,12 +639,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Classifier-jsonClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L91" >}}">property <b>jsonClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L93" >}}">property <b>jsonClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>jsonClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    jsonPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>jsonClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClassifierJsonClassifier'>ClassifierJsonClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A classifier for JSON content. Defined below.
@@ -688,7 +650,7 @@ A classifier for JSON content. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Classifier-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L95" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L97" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -711,13 +673,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Classifier-xmlClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L99" >}}">property <b>xmlClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L101" >}}">property <b>xmlClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>xmlClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    classification: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rowTag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>xmlClassifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ClassifierXmlClassifier'>ClassifierXmlClassifier</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A classifier for XML content. Defined below.
@@ -726,7 +685,7 @@ A classifier for XML content. Defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Connection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L51" >}}">class <b>Connection</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L53" >}}">class <b>Connection</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -777,7 +736,7 @@ const example = new aws.glue.Connection("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Connection-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L105" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L107" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -794,7 +753,7 @@ Create a Connection resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L60" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -818,7 +777,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L71" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -832,7 +791,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-catalogId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L81" >}}">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L83" >}}">property <b>catalogId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>catalogId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -843,7 +802,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-connectionProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L85" >}}">property <b>connectionProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L87" >}}">property <b>connectionProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -854,7 +813,7 @@ A map of key-value pairs used as parameters for this connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-connectionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L89" >}}">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L91" >}}">property <b>connectionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -865,7 +824,7 @@ The type of the connection. Defaults to `JBDC`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L93" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L95" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -888,7 +847,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-matchCriterias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L97" >}}">property <b>matchCriterias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L99" >}}">property <b>matchCriterias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>matchCriterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -899,7 +858,7 @@ A list of criteria that can be used in selecting this connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L101" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -910,14 +869,10 @@ The name of the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-physicalConnectionRequirements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L105" >}}">property <b>physicalConnectionRequirements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L107" >}}">property <b>physicalConnectionRequirements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>physicalConnectionRequirements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    securityGroupIdLists: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>physicalConnectionRequirements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ConnectionPhysicalConnectionRequirements'>ConnectionPhysicalConnectionRequirements</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
@@ -938,7 +893,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Crawler">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L87" >}}">class <b>Crawler</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L89" >}}">class <b>Crawler</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1025,7 +980,7 @@ const example = new aws.glue.Crawler("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Crawler-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L170" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L172" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1042,7 +997,7 @@ Create a Crawler resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L96" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L98" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1066,7 +1021,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L107" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L109" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1080,7 +1035,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L117" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L119" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1091,18 +1046,15 @@ The ARN of the crawler
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-catalogTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L118" >}}">property <b>catalogTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L120" >}}">property <b>catalogTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>catalogTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tables: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>catalogTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CrawlerCatalogTarget'>CrawlerCatalogTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-classifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L122" >}}">property <b>classifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L124" >}}">property <b>classifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>classifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1113,7 +1065,7 @@ List of custom classifiers. By default, all AWS classifiers are included in a cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-configuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L126" >}}">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L128" >}}">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1124,7 +1076,7 @@ JSON string of configuration information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L130" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L132" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1135,7 +1087,7 @@ The name of the Glue database to be synchronized.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L134" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L136" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1146,12 +1098,10 @@ Description of the crawler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-dynamodbTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L138" >}}">property <b>dynamodbTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L140" >}}">property <b>dynamodbTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>dynamodbTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>dynamodbTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CrawlerDynamodbTarget'>CrawlerDynamodbTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 List of nested DynamoDB target arguments. See below.
@@ -1171,14 +1121,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-jdbcTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L142" >}}">property <b>jdbcTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L144" >}}">property <b>jdbcTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>jdbcTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    connectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    exclusions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>jdbcTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CrawlerJdbcTarget'>CrawlerJdbcTarget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 List of nested JBDC target arguments. See below.
@@ -1186,7 +1132,7 @@ List of nested JBDC target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L146" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L148" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1197,7 +1143,7 @@ Name of the crawler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L150" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L152" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1208,13 +1154,10 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-s3Targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L154" >}}">property <b>s3Targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L156" >}}">property <b>s3Targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>s3Targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    exclusions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>s3Targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CrawlerS3Target'>CrawlerS3Target</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 List nested Amazon S3 target arguments. See below.
@@ -1222,7 +1165,7 @@ List nested Amazon S3 target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L158" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L160" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1233,13 +1176,10 @@ A cron expression used to specify the schedule. For more information, see [Time-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-schemaChangePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L162" >}}">property <b>schemaChangePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L164" >}}">property <b>schemaChangePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>schemaChangePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    deleteBehavior: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    updateBehavior: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>schemaChangePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CrawlerSchemaChangePolicy'>CrawlerSchemaChangePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Policy for the crawler's update and deletion behavior.
@@ -1247,7 +1187,7 @@ Policy for the crawler's update and deletion behavior.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-securityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L166" >}}">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L168" >}}">property <b>securityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1258,7 +1198,7 @@ The name of Security Configuration to be used by the crawler
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Crawler-tablePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L170" >}}">property <b>tablePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L172" >}}">property <b>tablePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tablePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1282,7 +1222,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Job">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L45" >}}">class <b>Job</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L47" >}}">class <b>Job</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1327,7 +1267,7 @@ const example = new aws.glue.Job("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L119" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L121" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1344,7 +1284,7 @@ Create a Job resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1368,7 +1308,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1382,7 +1322,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-allocatedCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L75" >}}">property <b>allocatedCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L77" >}}">property <b>allocatedCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allocatedCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1393,13 +1333,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-command">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L79" >}}">property <b>command</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L81" >}}">property <b>command</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    scriptLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobCommand'>JobCommand</a>&gt;;</pre>
 {{% md %}}
 
 The command of the job. Defined below.
@@ -1407,7 +1344,7 @@ The command of the job. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-connections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L83" >}}">property <b>connections</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L85" >}}">property <b>connections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1418,7 +1355,7 @@ The list of connections used for this job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-defaultArguments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L87" >}}">property <b>defaultArguments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L89" >}}">property <b>defaultArguments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultArguments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1429,7 +1366,7 @@ The map of default arguments for this job. You can specify arguments here that y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L91" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L93" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1440,12 +1377,10 @@ Description of the job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-executionProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L95" >}}">property <b>executionProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L97" >}}">property <b>executionProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>executionProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    maxConcurrentRuns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>executionProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobExecutionProperty'>JobExecutionProperty</a>&gt;;</pre>
 {{% md %}}
 
 Execution property of the job. Defined below.
@@ -1465,7 +1400,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-maxCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L99" >}}">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L101" >}}">property <b>maxCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1476,7 +1411,7 @@ The maximum number of AWS Glue data processing units (DPUs) that can be allocate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-maxRetries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L103" >}}">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L105" >}}">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxRetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1487,7 +1422,7 @@ The maximum number of times to retry this job if it fails.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L107" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L109" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1498,7 +1433,7 @@ The name of the job command. Defaults to `glueetl`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L111" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L113" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1444,7 @@ The ARN of the IAM role associated with this job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-securityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L115" >}}">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L117" >}}">property <b>securityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1520,7 +1455,7 @@ The name of the Security Configuration to be associated with the job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Job-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L119" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L121" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1544,7 +1479,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityConfiguration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L34" >}}">class <b>SecurityConfiguration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L36" >}}">class <b>SecurityConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1578,7 +1513,7 @@ const example = new aws.glue.SecurityConfiguration("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecurityConfiguration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L68" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1595,7 +1530,7 @@ Create a SecurityConfiguration resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityConfiguration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1619,7 +1554,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityConfiguration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1633,23 +1568,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityConfiguration-encryptionConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L64" >}}">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L66" >}}">property <b>encryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    cloudwatchEncryption: {
-        cloudwatchEncryptionMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        kmsKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    jobBookmarksEncryption: {
-        jobBookmarksEncryptionMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        kmsKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    s3Encryption: {
-        kmsKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        s3EncryptionMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SecurityConfigurationEncryptionConfiguration'>SecurityConfigurationEncryptionConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block containing encryption configuration. Detailed below.
@@ -1669,7 +1591,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityConfiguration-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1693,7 +1615,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Trigger">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L63" >}}">class <b>Trigger</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L65" >}}">class <b>Trigger</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1756,7 +1678,7 @@ const example = new aws.glue.Trigger("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Trigger-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L117" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L119" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1773,7 +1695,7 @@ Create a Trigger resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L72" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L74" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1797,7 +1719,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L83" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L85" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1811,14 +1733,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L93" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L95" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    arguments: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-    jobName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TriggerAction'>TriggerAction</a>[]&gt;;</pre>
 {{% md %}}
 
 List of actions initiated by this trigger when it fires. Defined below.
@@ -1826,7 +1744,7 @@ List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L97" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L99" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1837,7 +1755,7 @@ A description of the new trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L101" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L103" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1860,7 +1778,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L105" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L107" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1871,17 +1789,10 @@ The name of the trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-predicate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L109" >}}">property <b>predicate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L111" >}}">property <b>predicate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>predicate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    conditions: {
-        jobName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        logicalOperator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    logical: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>predicate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TriggerPredicate'>TriggerPredicate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
@@ -1889,7 +1800,7 @@ A predicate to specify when the new trigger should fire. Required when trigger t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L113" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L115" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1900,7 +1811,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trigger-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L117" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L119" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1924,7 +1835,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getScript">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L204" >}}">function <b>getScript</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L206" >}}">function <b>getScript</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2261,7 +2172,7 @@ A list of key-value pairs that define parameters and properties of the database.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CatalogTableArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L264" >}}">interface <b>CatalogTableArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L266" >}}">interface <b>CatalogTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2270,7 +2181,7 @@ The set of arguments for constructing a CatalogTable resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CatalogTableArgs-catalogId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L268" >}}">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L270" >}}">property <b>catalogId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2281,7 +2192,7 @@ ID of the Glue Catalog and database to create the table in. If omitted, this def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L272" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L274" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2292,7 +2203,7 @@ Name of the metadata database where the table metadata resides. For Hive compati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L276" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L278" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2303,7 +2214,7 @@ Description of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L280" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L282" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2314,7 +2225,7 @@ Name of the SerDe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L284" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L286" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2325,7 +2236,7 @@ Owner of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L288" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L290" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -2336,14 +2247,10 @@ A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-partitionKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L292" >}}">property <b>partitionKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L294" >}}">property <b>partitionKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CatalogTablePartitionKey'>CatalogTablePartitionKey</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
@@ -2351,7 +2258,7 @@ A list of columns by which the table is partitioned. Only primitive types are su
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-retention">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L296" >}}">property <b>retention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L298" >}}">property <b>retention</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2362,38 +2269,10 @@ Retention time for this table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-storageDescriptor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L300" >}}">property <b>storageDescriptor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L302" >}}">property <b>storageDescriptor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucketColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    columns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    compressed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    inputFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    numberOfBuckets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    outputFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    serDeInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-        serializationLibrary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    skewedInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        skewedColumnNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        skewedColumnValueLocationMaps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-        skewedColumnValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    sortColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        column: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sortOrder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;[]&gt;;
-    storedAsSubDirectories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CatalogTableStorageDescriptor'>CatalogTableStorageDescriptor</a>&gt;;</pre>
 {{% md %}}
 
 A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
@@ -2401,7 +2280,7 @@ A storage descriptor object containing information about the physical storage of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-tableType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L304" >}}">property <b>tableType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L306" >}}">property <b>tableType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tableType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2412,7 +2291,7 @@ The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-viewExpandedText">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L308" >}}">property <b>viewExpandedText</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L310" >}}">property <b>viewExpandedText</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>viewExpandedText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2423,7 +2302,7 @@ If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableArgs-viewOriginalText">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L312" >}}">property <b>viewOriginalText</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L314" >}}">property <b>viewOriginalText</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>viewOriginalText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2435,7 +2314,7 @@ If the table is a view, the original text of the view; otherwise null.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CatalogTableState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L210" >}}">interface <b>CatalogTableState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L212" >}}">interface <b>CatalogTableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2444,7 +2323,7 @@ Input properties used for looking up and filtering CatalogTable resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CatalogTableState-catalogId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L214" >}}">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L216" >}}">property <b>catalogId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2455,7 +2334,7 @@ ID of the Glue Catalog and database to create the table in. If omitted, this def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L218" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L220" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2466,7 +2345,7 @@ Name of the metadata database where the table metadata resides. For Hive compati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L222" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L224" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2477,7 +2356,7 @@ Description of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L226" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L228" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2488,7 +2367,7 @@ Name of the SerDe.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L230" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L232" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2499,7 +2378,7 @@ Owner of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L234" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L236" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -2510,14 +2389,10 @@ A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-partitionKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L238" >}}">property <b>partitionKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L240" >}}">property <b>partitionKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>partitionKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CatalogTablePartitionKey'>CatalogTablePartitionKey</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
@@ -2525,7 +2400,7 @@ A list of columns by which the table is partitioned. Only primitive types are su
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-retention">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L242" >}}">property <b>retention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L244" >}}">property <b>retention</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2536,38 +2411,10 @@ Retention time for this table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-storageDescriptor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L246" >}}">property <b>storageDescriptor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L248" >}}">property <b>storageDescriptor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucketColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    columns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    compressed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    inputFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    numberOfBuckets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    outputFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    serDeInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-        serializationLibrary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    skewedInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        skewedColumnNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        skewedColumnValueLocationMaps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-        skewedColumnValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;;
-    sortColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        column: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sortOrder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;[]&gt;;
-    storedAsSubDirectories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageDescriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CatalogTableStorageDescriptor'>CatalogTableStorageDescriptor</a>&gt;;</pre>
 {{% md %}}
 
 A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
@@ -2575,7 +2422,7 @@ A storage descriptor object containing information about the physical storage of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-tableType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L250" >}}">property <b>tableType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L252" >}}">property <b>tableType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tableType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2586,7 +2433,7 @@ The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-viewExpandedText">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L254" >}}">property <b>viewExpandedText</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L256" >}}">property <b>viewExpandedText</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>viewExpandedText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2597,7 +2444,7 @@ If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CatalogTableState-viewOriginalText">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L258" >}}">property <b>viewOriginalText</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/catalogTable.ts#L260" >}}">property <b>viewOriginalText</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>viewOriginalText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2609,7 +2456,7 @@ If the table is a view, the original text of the view; otherwise null.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClassifierArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L160" >}}">interface <b>ClassifierArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L162" >}}">interface <b>ClassifierArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2618,14 +2465,10 @@ The set of arguments for constructing a Classifier resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClassifierArgs-grokClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L164" >}}">property <b>grokClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L166" >}}">property <b>grokClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    classification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    customPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    grokPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClassifierGrokClassifier'>ClassifierGrokClassifier</a>&gt;;</pre>
 {{% md %}}
 
 A classifier that uses grok patterns. Defined below.
@@ -2633,12 +2476,10 @@ A classifier that uses grok patterns. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClassifierArgs-jsonClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L168" >}}">property <b>jsonClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L170" >}}">property <b>jsonClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    jsonPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClassifierJsonClassifier'>ClassifierJsonClassifier</a>&gt;;</pre>
 {{% md %}}
 
 A classifier for JSON content. Defined below.
@@ -2646,7 +2487,7 @@ A classifier for JSON content. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClassifierArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L172" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L174" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2657,13 +2498,10 @@ The name of the classifier.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClassifierArgs-xmlClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L176" >}}">property <b>xmlClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L178" >}}">property <b>xmlClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    classification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rowTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClassifierXmlClassifier'>ClassifierXmlClassifier</a>&gt;;</pre>
 {{% md %}}
 
 A classifier for XML content. Defined below.
@@ -2672,7 +2510,7 @@ A classifier for XML content. Defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClassifierState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L138" >}}">interface <b>ClassifierState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L140" >}}">interface <b>ClassifierState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2681,14 +2519,10 @@ Input properties used for looking up and filtering Classifier resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClassifierState-grokClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L142" >}}">property <b>grokClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L144" >}}">property <b>grokClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    classification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    customPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    grokPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>grokClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClassifierGrokClassifier'>ClassifierGrokClassifier</a>&gt;;</pre>
 {{% md %}}
 
 A classifier that uses grok patterns. Defined below.
@@ -2696,12 +2530,10 @@ A classifier that uses grok patterns. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClassifierState-jsonClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L146" >}}">property <b>jsonClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L148" >}}">property <b>jsonClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    jsonPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>jsonClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClassifierJsonClassifier'>ClassifierJsonClassifier</a>&gt;;</pre>
 {{% md %}}
 
 A classifier for JSON content. Defined below.
@@ -2709,7 +2541,7 @@ A classifier for JSON content. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClassifierState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L150" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L152" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2720,13 +2552,10 @@ The name of the classifier.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClassifierState-xmlClassifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L154" >}}">property <b>xmlClassifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/classifier.ts#L156" >}}">property <b>xmlClassifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    classification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rowTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>xmlClassifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ClassifierXmlClassifier'>ClassifierXmlClassifier</a>&gt;;</pre>
 {{% md %}}
 
 A classifier for XML content. Defined below.
@@ -2735,7 +2564,7 @@ A classifier for XML content. Defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L187" >}}">interface <b>ConnectionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L189" >}}">interface <b>ConnectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2744,7 +2573,7 @@ The set of arguments for constructing a Connection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionArgs-catalogId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L191" >}}">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L193" >}}">property <b>catalogId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2755,7 +2584,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-connectionProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L195" >}}">property <b>connectionProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L197" >}}">property <b>connectionProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2766,7 +2595,7 @@ A map of key-value pairs used as parameters for this connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-connectionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L199" >}}">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L201" >}}">property <b>connectionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2777,7 +2606,7 @@ The type of the connection. Defaults to `JBDC`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L203" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L205" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2788,7 +2617,7 @@ Description of the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-matchCriterias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L207" >}}">property <b>matchCriterias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L209" >}}">property <b>matchCriterias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchCriterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2799,7 +2628,7 @@ A list of criteria that can be used in selecting this connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L211" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L213" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2810,14 +2639,10 @@ The name of the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-physicalConnectionRequirements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L215" >}}">property <b>physicalConnectionRequirements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L217" >}}">property <b>physicalConnectionRequirements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    securityGroupIdLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ConnectionPhysicalConnectionRequirements'>ConnectionPhysicalConnectionRequirements</a>&gt;;</pre>
 {{% md %}}
 
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
@@ -2826,7 +2651,7 @@ A map of physical connection requirements, such as VPC and SecurityGroup. Define
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L153" >}}">interface <b>ConnectionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L155" >}}">interface <b>ConnectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2835,7 +2660,7 @@ Input properties used for looking up and filtering Connection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionState-catalogId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L157" >}}">property <b>catalogId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L159" >}}">property <b>catalogId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>catalogId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2846,7 +2671,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-connectionProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L161" >}}">property <b>connectionProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L163" >}}">property <b>connectionProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2857,7 +2682,7 @@ A map of key-value pairs used as parameters for this connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-connectionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L165" >}}">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L167" >}}">property <b>connectionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2868,7 +2693,7 @@ The type of the connection. Defaults to `JBDC`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L169" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L171" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2879,7 +2704,7 @@ Description of the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-matchCriterias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L173" >}}">property <b>matchCriterias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L175" >}}">property <b>matchCriterias</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>matchCriterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2890,7 +2715,7 @@ A list of criteria that can be used in selecting this connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L177" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L179" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2901,14 +2726,10 @@ The name of the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-physicalConnectionRequirements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L181" >}}">property <b>physicalConnectionRequirements</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/connection.ts#L183" >}}">property <b>physicalConnectionRequirements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    securityGroupIdLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>physicalConnectionRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ConnectionPhysicalConnectionRequirements'>ConnectionPhysicalConnectionRequirements</a>&gt;;</pre>
 {{% md %}}
 
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
@@ -2917,7 +2738,7 @@ A map of physical connection requirements, such as VPC and SecurityGroup. Define
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CrawlerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L300" >}}">interface <b>CrawlerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L302" >}}">interface <b>CrawlerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2926,18 +2747,15 @@ The set of arguments for constructing a Crawler resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CrawlerArgs-catalogTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L301" >}}">property <b>catalogTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L303" >}}">property <b>catalogTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerCatalogTarget'>CrawlerCatalogTarget</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-classifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L305" >}}">property <b>classifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L307" >}}">property <b>classifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>classifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2948,7 +2766,7 @@ List of custom classifiers. By default, all AWS classifiers are included in a cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-configuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L309" >}}">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L311" >}}">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2959,7 +2777,7 @@ JSON string of configuration information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L313" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L315" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2970,7 +2788,7 @@ The name of the Glue database to be synchronized.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L317" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L319" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2981,12 +2799,10 @@ Description of the crawler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-dynamodbTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L321" >}}">property <b>dynamodbTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L323" >}}">property <b>dynamodbTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerDynamodbTarget'>CrawlerDynamodbTarget</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List of nested DynamoDB target arguments. See below.
@@ -2994,14 +2810,10 @@ List of nested DynamoDB target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-jdbcTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L325" >}}">property <b>jdbcTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L327" >}}">property <b>jdbcTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    connectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    exclusions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerJdbcTarget'>CrawlerJdbcTarget</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List of nested JBDC target arguments. See below.
@@ -3009,7 +2821,7 @@ List of nested JBDC target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L329" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L331" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3020,7 +2832,7 @@ Name of the crawler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L333" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L335" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3031,13 +2843,10 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-s3Targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L337" >}}">property <b>s3Targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L339" >}}">property <b>s3Targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    exclusions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerS3Target'>CrawlerS3Target</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List nested Amazon S3 target arguments. See below.
@@ -3045,7 +2854,7 @@ List nested Amazon S3 target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L341" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L343" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3056,13 +2865,10 @@ A cron expression used to specify the schedule. For more information, see [Time-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-schemaChangePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L345" >}}">property <b>schemaChangePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L347" >}}">property <b>schemaChangePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    deleteBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    updateBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerSchemaChangePolicy'>CrawlerSchemaChangePolicy</a>&gt;;</pre>
 {{% md %}}
 
 Policy for the crawler's update and deletion behavior.
@@ -3070,7 +2876,7 @@ Policy for the crawler's update and deletion behavior.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-securityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L349" >}}">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L351" >}}">property <b>securityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3081,7 +2887,7 @@ The name of Security Configuration to be used by the crawler
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerArgs-tablePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L353" >}}">property <b>tablePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L355" >}}">property <b>tablePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tablePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3093,7 +2899,7 @@ The table prefix used for catalog tables that are created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CrawlerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L237" >}}">interface <b>CrawlerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L239" >}}">interface <b>CrawlerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3102,7 +2908,7 @@ Input properties used for looking up and filtering Crawler resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CrawlerState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L241" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L243" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3113,18 +2919,15 @@ The ARN of the crawler
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-catalogTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L242" >}}">property <b>catalogTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L244" >}}">property <b>catalogTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>catalogTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerCatalogTarget'>CrawlerCatalogTarget</a>&gt;[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-classifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L246" >}}">property <b>classifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L248" >}}">property <b>classifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>classifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3135,7 +2938,7 @@ List of custom classifiers. By default, all AWS classifiers are included in a cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-configuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L250" >}}">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L252" >}}">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3146,7 +2949,7 @@ JSON string of configuration information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L254" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L256" >}}">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3157,7 +2960,7 @@ The name of the Glue database to be synchronized.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L258" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L260" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3168,12 +2971,10 @@ Description of the crawler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-dynamodbTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L262" >}}">property <b>dynamodbTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L264" >}}">property <b>dynamodbTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dynamodbTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerDynamodbTarget'>CrawlerDynamodbTarget</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List of nested DynamoDB target arguments. See below.
@@ -3181,14 +2982,10 @@ List of nested DynamoDB target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-jdbcTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L266" >}}">property <b>jdbcTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L268" >}}">property <b>jdbcTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    connectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    exclusions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>jdbcTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerJdbcTarget'>CrawlerJdbcTarget</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List of nested JBDC target arguments. See below.
@@ -3196,7 +2993,7 @@ List of nested JBDC target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L270" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L272" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3207,7 +3004,7 @@ Name of the crawler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L274" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L276" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3218,13 +3015,10 @@ The IAM role friendly name (including path without leading slash), or ARN of an 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-s3Targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L278" >}}">property <b>s3Targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L280" >}}">property <b>s3Targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    exclusions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>s3Targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerS3Target'>CrawlerS3Target</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List nested Amazon S3 target arguments. See below.
@@ -3232,7 +3026,7 @@ List nested Amazon S3 target arguments. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L282" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L284" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3243,13 +3037,10 @@ A cron expression used to specify the schedule. For more information, see [Time-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-schemaChangePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L286" >}}">property <b>schemaChangePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L288" >}}">property <b>schemaChangePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    deleteBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    updateBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>schemaChangePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CrawlerSchemaChangePolicy'>CrawlerSchemaChangePolicy</a>&gt;;</pre>
 {{% md %}}
 
 Policy for the crawler's update and deletion behavior.
@@ -3257,7 +3048,7 @@ Policy for the crawler's update and deletion behavior.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-securityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L290" >}}">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L292" >}}">property <b>securityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3268,7 +3059,7 @@ The name of Security Configuration to be used by the crawler
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CrawlerState-tablePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L294" >}}">property <b>tablePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/crawler.ts#L296" >}}">property <b>tablePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tablePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3280,7 +3071,7 @@ The table prefix used for catalog tables that are created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetScriptArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L224" >}}">interface <b>GetScriptArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L226" >}}">interface <b>GetScriptArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3289,14 +3080,10 @@ A collection of arguments for invoking getScript.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetScriptArgs-dagEdges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L228" >}}">property <b>dagEdges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L230" >}}">property <b>dagEdges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dagEdges: {
-    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    target: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetParameter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>dagEdges: <a href='#GetScriptDagEdge'>GetScriptDagEdge</a>[];</pre>
 {{% md %}}
 
 A list of the edges in the DAG. Defined below.
@@ -3304,19 +3091,10 @@ A list of the edges in the DAG. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptArgs-dagNodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L232" >}}">property <b>dagNodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L234" >}}">property <b>dagNodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dagNodes: {
-    args: {
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        param: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lineNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    nodeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>dagNodes: <a href='#GetScriptDagNode'>GetScriptDagNode</a>[];</pre>
 {{% md %}}
 
 A list of the nodes in the DAG. Defined below.
@@ -3324,7 +3102,7 @@ A list of the nodes in the DAG. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptArgs-language">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L236" >}}">property <b>language</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L238" >}}">property <b>language</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>language?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3336,7 +3114,7 @@ The programming language of the resulting code from the DAG. Defaults to `PYTHON
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetScriptResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L242" >}}">interface <b>GetScriptResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L244" >}}">interface <b>GetScriptResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3345,36 +3123,23 @@ A collection of values returned by getScript.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetScriptResult-dagEdges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L243" >}}">property <b>dagEdges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L245" >}}">property <b>dagEdges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dagEdges: {
-    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    target: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetParameter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>dagEdges: <a href='#GetScriptDagEdge'>GetScriptDagEdge</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptResult-dagNodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L244" >}}">property <b>dagNodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L246" >}}">property <b>dagNodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dagNodes: {
-    args: {
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        param: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lineNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    nodeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+<pre class="highlight"><span class='kd'></span>dagNodes: <a href='#GetScriptDagNode'>GetScriptDagNode</a>[];</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L257" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L259" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3385,7 +3150,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptResult-language">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L245" >}}">property <b>language</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L247" >}}">property <b>language</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>language?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3393,7 +3158,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptResult-pythonScript">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L249" >}}">property <b>pythonScript</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L251" >}}">property <b>pythonScript</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pythonScript: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3404,7 +3169,7 @@ The Python script generated from the DAG when the `language` argument is set to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetScriptResult-scalaCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L253" >}}">property <b>scalaCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/getScript.ts#L255" >}}">property <b>scalaCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scalaCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3416,7 +3181,7 @@ The Scala code generated from the DAG when the `language` argument is set to `SC
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L234" >}}">interface <b>JobArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L236" >}}">interface <b>JobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3425,7 +3190,7 @@ The set of arguments for constructing a Job resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobArgs-allocatedCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L238" >}}">property <b>allocatedCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L240" >}}">property <b>allocatedCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allocatedCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3436,13 +3201,10 @@ The set of arguments for constructing a Job resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-command">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L242" >}}">property <b>command</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L244" >}}">property <b>command</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scriptLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobCommand'>JobCommand</a>&gt;;</pre>
 {{% md %}}
 
 The command of the job. Defined below.
@@ -3450,7 +3212,7 @@ The command of the job. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-connections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L246" >}}">property <b>connections</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L248" >}}">property <b>connections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3461,7 +3223,7 @@ The list of connections used for this job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-defaultArguments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L250" >}}">property <b>defaultArguments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L252" >}}">property <b>defaultArguments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultArguments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3472,7 +3234,7 @@ The map of default arguments for this job. You can specify arguments here that y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L254" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L256" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3483,12 +3245,10 @@ Description of the job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-executionProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L258" >}}">property <b>executionProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L260" >}}">property <b>executionProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    maxConcurrentRuns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobExecutionProperty'>JobExecutionProperty</a>&gt;;</pre>
 {{% md %}}
 
 Execution property of the job. Defined below.
@@ -3496,7 +3256,7 @@ Execution property of the job. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-maxCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L262" >}}">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L264" >}}">property <b>maxCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3507,7 +3267,7 @@ The maximum number of AWS Glue data processing units (DPUs) that can be allocate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-maxRetries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L266" >}}">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L268" >}}">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3518,7 +3278,7 @@ The maximum number of times to retry this job if it fails.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L270" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L272" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3529,7 +3289,7 @@ The name of the job command. Defaults to `glueetl`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L274" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L276" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3540,7 +3300,7 @@ The ARN of the IAM role associated with this job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-securityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L278" >}}">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L280" >}}">property <b>securityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3551,7 +3311,7 @@ The name of the Security Configuration to be associated with the job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L282" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L284" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3563,7 +3323,7 @@ The job timeout in minutes. The default is 2880 minutes (48 hours).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L180" >}}">interface <b>JobState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L182" >}}">interface <b>JobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3572,7 +3332,7 @@ Input properties used for looking up and filtering Job resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobState-allocatedCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L184" >}}">property <b>allocatedCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L186" >}}">property <b>allocatedCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allocatedCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3583,13 +3343,10 @@ Input properties used for looking up and filtering Job resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-command">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L188" >}}">property <b>command</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L190" >}}">property <b>command</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scriptLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobCommand'>JobCommand</a>&gt;;</pre>
 {{% md %}}
 
 The command of the job. Defined below.
@@ -3597,7 +3354,7 @@ The command of the job. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-connections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L192" >}}">property <b>connections</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L194" >}}">property <b>connections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3608,7 +3365,7 @@ The list of connections used for this job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-defaultArguments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L196" >}}">property <b>defaultArguments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L198" >}}">property <b>defaultArguments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultArguments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3619,7 +3376,7 @@ The map of default arguments for this job. You can specify arguments here that y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L200" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L202" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3630,12 +3387,10 @@ Description of the job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-executionProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L204" >}}">property <b>executionProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L206" >}}">property <b>executionProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    maxConcurrentRuns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>executionProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobExecutionProperty'>JobExecutionProperty</a>&gt;;</pre>
 {{% md %}}
 
 Execution property of the job. Defined below.
@@ -3643,7 +3398,7 @@ Execution property of the job. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-maxCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L208" >}}">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L210" >}}">property <b>maxCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3654,7 +3409,7 @@ The maximum number of AWS Glue data processing units (DPUs) that can be allocate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-maxRetries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L212" >}}">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L214" >}}">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3665,7 +3420,7 @@ The maximum number of times to retry this job if it fails.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L216" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L218" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3676,7 +3431,7 @@ The name of the job command. Defaults to `glueetl`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L220" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L222" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3687,7 +3442,7 @@ The ARN of the IAM role associated with this job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-securityConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L224" >}}">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L226" >}}">property <b>securityConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3698,7 +3453,7 @@ The name of the Security Configuration to be associated with the job.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobState-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L228" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/job.ts#L230" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3710,7 +3465,7 @@ The job timeout in minutes. The default is 2880 minutes (48 hours).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityConfigurationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L120" >}}">interface <b>SecurityConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L122" >}}">interface <b>SecurityConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3719,23 +3474,10 @@ The set of arguments for constructing a SecurityConfiguration resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecurityConfigurationArgs-encryptionConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L124" >}}">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L126" >}}">property <b>encryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cloudwatchEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        cloudwatchEncryptionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    jobBookmarksEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        jobBookmarksEncryptionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    s3Encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        s3EncryptionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SecurityConfigurationEncryptionConfiguration'>SecurityConfigurationEncryptionConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block containing encryption configuration. Detailed below.
@@ -3743,7 +3485,7 @@ Configuration block containing encryption configuration. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityConfigurationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L128" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L130" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3755,7 +3497,7 @@ Name of the security configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityConfigurationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L106" >}}">interface <b>SecurityConfigurationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L108" >}}">interface <b>SecurityConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3764,23 +3506,10 @@ Input properties used for looking up and filtering SecurityConfiguration resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SecurityConfigurationState-encryptionConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L110" >}}">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L112" >}}">property <b>encryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cloudwatchEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        cloudwatchEncryptionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    jobBookmarksEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        jobBookmarksEncryptionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    s3Encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        s3EncryptionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SecurityConfigurationEncryptionConfiguration'>SecurityConfigurationEncryptionConfiguration</a>&gt;;</pre>
 {{% md %}}
 
 Configuration block containing encryption configuration. Detailed below.
@@ -3788,7 +3517,7 @@ Configuration block containing encryption configuration. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityConfigurationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L114" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/securityConfiguration.ts#L116" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3800,7 +3529,7 @@ Name of the security configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TriggerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L202" >}}">interface <b>TriggerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L204" >}}">interface <b>TriggerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3809,14 +3538,10 @@ The set of arguments for constructing a Trigger resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerArgs-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L206" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L208" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    arguments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    jobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TriggerAction'>TriggerAction</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List of actions initiated by this trigger when it fires. Defined below.
@@ -3824,7 +3549,7 @@ List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L210" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L212" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3835,7 +3560,7 @@ A description of the new trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L214" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L216" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3846,7 +3571,7 @@ Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L218" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L220" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3857,17 +3582,10 @@ The name of the trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-predicate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L222" >}}">property <b>predicate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L224" >}}">property <b>predicate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        jobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        logicalOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    logical: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TriggerPredicate'>TriggerPredicate</a>&gt;;</pre>
 {{% md %}}
 
 A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
@@ -3875,7 +3593,7 @@ A predicate to specify when the new trigger should fire. Required when trigger t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L226" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L228" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3886,7 +3604,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L230" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L232" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3898,7 +3616,7 @@ The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TriggerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L168" >}}">interface <b>TriggerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L170" >}}">interface <b>TriggerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3907,14 +3625,10 @@ Input properties used for looking up and filtering Trigger resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerState-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L172" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L174" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    arguments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    jobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TriggerAction'>TriggerAction</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 List of actions initiated by this trigger when it fires. Defined below.
@@ -3922,7 +3636,7 @@ List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L176" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L178" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3933,7 +3647,7 @@ A description of the new trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L180" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L182" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3944,7 +3658,7 @@ Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L184" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L186" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3955,17 +3669,10 @@ The name of the trigger.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-predicate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L188" >}}">property <b>predicate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L190" >}}">property <b>predicate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        jobName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        logicalOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    logical: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>predicate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TriggerPredicate'>TriggerPredicate</a>&gt;;</pre>
 {{% md %}}
 
 A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
@@ -3973,7 +3680,7 @@ A predicate to specify when the new trigger should fire. Required when trigger t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L192" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L194" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3984,7 +3691,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TriggerState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L196" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="glue/trigger.ts#L198" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

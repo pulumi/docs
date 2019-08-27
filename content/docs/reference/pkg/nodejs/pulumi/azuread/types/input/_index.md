@@ -204,7 +204,7 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L73" >}}">property <b>resourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccessResourceAccess'>inputs.ApplicationRequiredResourceAccessResourceAccess</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationRequiredResourceAccessResourceAccess'>ApplicationRequiredResourceAccessResourceAccess</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `resourceAccess` blocks as documented below.
