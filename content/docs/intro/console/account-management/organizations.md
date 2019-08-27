@@ -4,6 +4,7 @@ title: Organizations
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
+- /docs/intro/console/accounts/organizations/
 ---
 
 An organization is the primary grouping unit for stacks within the Pulumi Console.

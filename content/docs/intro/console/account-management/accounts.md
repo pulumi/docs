@@ -2,7 +2,7 @@
 title: Accounts
 aliases:
   - /docs/intro/console/accounts/
-  - /docs/intro/console/account/
+  - /docs/intro/console/accounts/account/
 ---
 
 If you haven't created your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign

@@ -7,7 +7,9 @@ menu:
         identifier: extensions
         weight: 6
 
-aliases: ["/docs/console/extensions/"]
+aliases: 
+  - /docs/console/extensions/
+  - /docs/intro/console/accounts/extensions
 ---
 
 Pulumi Cloud Console provides ways for you to access your data to power workflows
@@ -18,7 +20,7 @@ and integrations:
 * ['Deploy with Pulumi' Button]({{< relref "pulumi-button" >}})
 
 > Some features are only found in the Pulumi Team and Enterprise editions. See
-> [product editions]({{< relref "/docs/intro/console/accounts/editions" >}}) for more information.
+> [product editions]({{< relref "/docs/intro/console/account-management/editions" >}}) for more information.
 
 ## Webhooks
 
