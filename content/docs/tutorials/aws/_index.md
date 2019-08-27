@@ -13,10 +13,10 @@ The following tutorials highlight the AWS platform using complete end-to-end sce
 
 > If this is your first time getting started with Pulumi for AWS, try the
 > easy <a href="{{< relref "/docs/get-started/aws" >}}">Get Started guide</a> first.
-
-For a more in-depth information about Pulumi's support for specific AWS services, see the
-[Pulumi AWS User Guide]({{< relref "/docs/guides/crosswalk/aws" >}}). If you are looking to
-use Kubernetes on AWS, see [the EKS tutorial]({{< relref "../kubernetes/eks" >}}).
+> For a more in-depth information about Pulumi's support for specific AWS services, see the
+> [Pulumi AWS User Guide]({{< relref "/docs/guides/crosswalk/aws" >}}).
+>
+> If you are looking to use Kubernetes on AWS, see [the EKS tutorial]({{< relref "../kubernetes/eks" >}}).
 
 # Featured Tutorials
 
