@@ -79,7 +79,7 @@ function selectLanguage(lang) {
 }
 
 // The first time the DOM is finished loading, select the right language.  If no language is set as the preferred
-// language yet, then JavaScript is chosen as the preferred language as a default.
+// language yet, then TypeScript is chosen as the preferred language as a default.
 $(function() {
     var tabLangsOnPage = {};
     $("a.langtab").each(function (i, e) {
@@ -101,15 +101,15 @@ $(function() {
         return;
     }
 
-    // Now select the right language based on whether there's a cookie, defaulting to JavaScript,
+    // Now select the right language based on whether there's a cookie, defaulting to TypeScript,
     // if it's among the tabs, otherwise falling back to the first lang we find.
     var langCookie = decodeURIComponent(
         document.cookie.replace(/(?:(?:^|.*;\s*)pulumi_language\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
 
     if (langCookie && tabLangsOnPage.hasOwnProperty(langCookie)) {
         selectLanguage(langCookie);
-    } else if (tabLangsOnPage.hasOwnProperty("javascript")) {
-        selectLanguage("javascript");
+    } else if (tabLangsOnPage.hasOwnProperty("typescript")) {
+        selectLanguage("typescript");
     } else if (tabLangsOnPageKeys.length > 0) {
         selectLanguage(tabLangsOnPageKeys[0]);
     }

@@ -1,7 +1,7 @@
 <div class="mdl-tabs langtab-tabs">
     <div class="mdl-tabs__tab-dir langtab-tabstrip">
-        <a class="mdl-tabs__tab langtab is-active">JavaScript</a>
-        <a class="mdl-tabs__tab langtab">TypeScript</a>
+        <a class="mdl-tabs__tab langtab is-active">TypeScript</a>
+        <a class="mdl-tabs__tab langtab">JavaScript</a>
         {{ if not (eq (.Get 0) "nodeonly") }}
         <a class="mdl-tabs__tab langtab">Python</a>
         {{ if not (eq (.Get 0) "nogo") }}<a class="mdl-tabs__tab langtab">Go</a>{{ end }}
