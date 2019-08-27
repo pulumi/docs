@@ -1,5 +1,5 @@
 ---
-title: "#4: Graceful App Rollout"
+title: "Graceful App Rollout"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/"]
 ---

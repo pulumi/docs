@@ -1,5 +1,5 @@
 ---
-title: "#3: Guestbook App with Redis and Nginx"
+title: "Guestbook App with Redis and Nginx"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-guestbook/"]
 ---
