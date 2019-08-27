@@ -26,7 +26,7 @@ title: Module coordination/v1beta1
 
 
 <h2 class="pdoc-module-header" id="Lease">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L12" >}}">class <b>Lease</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L13" >}}">class <b>Lease</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,12 +36,12 @@ Lease defines a lease concept.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Lease-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Lease(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Lease'>inputApi.coordination.v1beta1.Lease</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Lease(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Lease'>inputs.coordination.v1beta1.Lease</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a coordination.v1beta1.Lease resource with the given unique name, arguments, and options.
@@ -53,7 +53,7 @@ Create a coordination.v1beta1.Lease resource with the given unique name, argumen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lease-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -62,8 +62,8 @@ Create a coordination.v1beta1.Lease resource with the given unique name, argumen
 
 
 Get the state of an existing `Lease` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -80,7 +80,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lease-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lease-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"coordination.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -120,7 +120,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lease-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L27" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L28" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Lease"</span>&gt;;</pre>
@@ -134,10 +134,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lease-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L32" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L33" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
@@ -145,10 +145,10 @@ More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lease-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L38" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/Lease.ts#L39" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LeaseSpec'>outputApi.coordination.v1beta1.LeaseSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LeaseSpec'>LeaseSpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the Lease. More info:
@@ -170,7 +170,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LeaseList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L12" >}}">class <b>LeaseList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L13" >}}">class <b>LeaseList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -180,12 +180,12 @@ LeaseList is a list of Lease objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LeaseList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LeaseList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LeaseList'>inputApi.coordination.v1beta1.LeaseList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LeaseList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LeaseList'>inputs.coordination.v1beta1.LeaseList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a coordination.v1beta1.LeaseList resource with the given unique name, arguments, and options.
@@ -197,7 +197,7 @@ Create a coordination.v1beta1.LeaseList resource with the given unique name, arg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LeaseList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -206,8 +206,8 @@ Create a coordination.v1beta1.LeaseList resource with the given unique name, arg
 
 
 Get the state of an existing `LeaseList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -224,7 +224,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LeaseList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -238,7 +238,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LeaseList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"coordination.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -264,10 +264,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LeaseList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Lease'>outputApi.coordination.v1beta1.Lease</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Lease'>Lease</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is a list of schema objects.
@@ -275,7 +275,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LeaseList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"LeaseList"</span>&gt;;</pre>
@@ -289,10 +289,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LeaseList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="coordination/v1beta1/LeaseList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

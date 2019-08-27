@@ -26,7 +26,7 @@ title: Module batch/v2alpha1
 
 
 <h2 class="pdoc-module-header" id="CronJob">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L12" >}}">class <b>CronJob</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L13" >}}">class <b>CronJob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,12 +36,12 @@ CronJob represents the configuration of a single cron job.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJob-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L76" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L77" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CronJob(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CronJob'>inputApi.batch.v2alpha1.CronJob</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CronJob(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CronJob'>inputs.batch.v2alpha1.CronJob</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a batch.v2alpha1.CronJob resource with the given unique name, arguments, and options.
@@ -53,7 +53,7 @@ Create a batch.v2alpha1.CronJob resource with the given unique name, arguments, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -62,8 +62,8 @@ Create a batch.v2alpha1.CronJob resource with the given unique name, arguments, 
 
 
 Get the state of an existing `CronJob` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -80,7 +80,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v2alpha1"</span>&gt;;</pre>
@@ -120,7 +120,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L27" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L28" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CronJob"</span>&gt;;</pre>
@@ -134,10 +134,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L33" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -146,10 +146,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L39" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L40" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CronJobSpec'>outputApi.batch.v2alpha1.CronJobSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CronJobSpec'>CronJobSpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the desired behavior of a cron job, including the schedule. More info:
@@ -158,10 +158,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJob-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L45" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJob.ts#L46" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CronJobStatus'>outputApi.batch.v2alpha1.CronJobStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CronJobStatus'>CronJobStatus</a>&gt;;</pre>
 {{% md %}}
 
 Current status of a cron job. More info:
@@ -183,7 +183,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L12" >}}">class <b>CronJobList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L13" >}}">class <b>CronJobList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -193,12 +193,12 @@ CronJobList is a collection of cron jobs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CronJobList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CronJobList'>inputApi.batch.v2alpha1.CronJobList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CronJobList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CronJobList'>inputs.batch.v2alpha1.CronJobList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a batch.v2alpha1.CronJobList resource with the given unique name, arguments, and options.
@@ -210,7 +210,7 @@ Create a batch.v2alpha1.CronJobList resource with the given unique name, argumen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -219,8 +219,8 @@ Create a batch.v2alpha1.CronJobList resource with the given unique name, argumen
 
 
 Get the state of an existing `CronJobList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -237,7 +237,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -251,7 +251,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v2alpha1"</span>&gt;;</pre>
@@ -277,10 +277,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CronJob'>outputApi.batch.v2alpha1.CronJob</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CronJob'>CronJob</a>[]&gt;;</pre>
 {{% md %}}
 
 items is the list of CronJobs.
@@ -288,7 +288,7 @@ items is the list of CronJobs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CronJobList"</span>&gt;;</pre>
@@ -302,10 +302,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="batch/v2alpha1/CronJobList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

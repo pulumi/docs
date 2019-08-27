@@ -26,7 +26,7 @@ title: Module networking/v1
 
 
 <h2 class="pdoc-module-header" id="NetworkPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L12" >}}">class <b>NetworkPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L13" >}}">class <b>NetworkPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,12 +36,12 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicy'>inputApi.networking.v1.NetworkPolicy</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicy'>inputs.networking.v1.NetworkPolicy</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a networking.v1.NetworkPolicy resource with the given unique name, arguments, and options.
@@ -53,7 +53,7 @@ Create a networking.v1.NetworkPolicy resource with the given unique name, argume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -62,8 +62,8 @@ Create a networking.v1.NetworkPolicy resource with the given unique name, argume
 
 
 Get the state of an existing `NetworkPolicy` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -80,7 +80,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</pre>
@@ -120,7 +120,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L27" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L28" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</pre>
@@ -134,10 +134,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L33" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -146,10 +146,10 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L38" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicy.ts#L39" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicySpec'>outputApi.networking.v1.NetworkPolicySpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the desired behavior for this NetworkPolicy.
@@ -170,7 +170,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L12" >}}">class <b>NetworkPolicyList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L13" >}}">class <b>NetworkPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -180,12 +180,12 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicyList'>inputApi.networking.v1.NetworkPolicyList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicyList'>inputs.networking.v1.NetworkPolicyList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a networking.v1.NetworkPolicyList resource with the given unique name, arguments, and options.
@@ -197,7 +197,7 @@ Create a networking.v1.NetworkPolicyList resource with the given unique name, ar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -206,8 +206,8 @@ Create a networking.v1.NetworkPolicyList resource with the given unique name, ar
 
 
 Get the state of an existing `NetworkPolicyList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -224,7 +224,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -238,7 +238,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</pre>
@@ -264,10 +264,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicy'>outputApi.networking.v1.NetworkPolicy</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NetworkPolicy'>NetworkPolicy</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is a list of schema objects.
@@ -275,7 +275,7 @@ Items is a list of schema objects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</pre>
@@ -289,10 +289,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="networking/v1/NetworkPolicyList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata. More info:

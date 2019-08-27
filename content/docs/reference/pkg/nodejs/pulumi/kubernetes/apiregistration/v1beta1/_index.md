@@ -26,7 +26,7 @@ title: Module apiregistration/v1beta1
 
 
 <h2 class="pdoc-module-header" id="APIService">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L12" >}}">class <b>APIService</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L13" >}}">class <b>APIService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -36,12 +36,12 @@ APIService represents a server for a particular GroupVersion. Name must be "vers
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIService-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> APIService(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#APIService'>inputApi.apiregistration.v1beta1.APIService</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> APIService(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#APIService'>inputs.apiregistration.v1beta1.APIService</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apiregistration.v1beta1.APIService resource with the given unique name, arguments, and options.
@@ -53,7 +53,7 @@ Create a apiregistration.v1beta1.APIService resource with the given unique name,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -62,8 +62,8 @@ Create a apiregistration.v1beta1.APIService resource with the given unique name,
 
 
 Get the state of an existing `APIService` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -80,7 +80,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apiregistration.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -120,7 +120,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L27" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L28" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"APIService"</span>&gt;;</pre>
@@ -134,18 +134,18 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L30" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L31" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L35" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L36" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceSpec'>outputApi.apiregistration.v1beta1.APIServiceSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceSpec'>APIServiceSpec</a>&gt;;</pre>
 {{% md %}}
 
 Spec contains information for locating and communicating with a server
@@ -153,10 +153,10 @@ Spec contains information for locating and communicating with a server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIService-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L40" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIService.ts#L41" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceStatus'>outputApi.apiregistration.v1beta1.APIServiceStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceStatus'>APIServiceStatus</a>&gt;;</pre>
 {{% md %}}
 
 Status contains derived information about an API server
@@ -177,7 +177,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="APIServiceList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L12" >}}">class <b>APIServiceList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L13" >}}">class <b>APIServiceList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -187,12 +187,12 @@ APIServiceList is a list of APIService objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="APIServiceList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L64" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L65" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> APIServiceList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#APIServiceList'>inputApi.apiregistration.v1beta1.APIServiceList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> APIServiceList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#APIServiceList'>inputs.apiregistration.v1beta1.APIServiceList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a apiregistration.v1beta1.APIServiceList resource with the given unique name, arguments, and options.
@@ -204,7 +204,7 @@ Create a apiregistration.v1beta1.APIServiceList resource with the given unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIServiceList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -213,8 +213,8 @@ Create a apiregistration.v1beta1.APIServiceList resource with the given unique n
 
 
 Get the state of an existing `APIServiceList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -231,7 +231,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIServiceList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -245,7 +245,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIServiceList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apiregistration.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -271,15 +271,15 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIServiceList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L22" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L23" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIService'>outputApi.apiregistration.v1beta1.APIService</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>[]&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIServiceList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L30" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L31" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"APIServiceList"</span>&gt;;</pre>
@@ -293,10 +293,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="APIServiceList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L33" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiregistration/v1beta1/APIServiceList.ts#L34" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>

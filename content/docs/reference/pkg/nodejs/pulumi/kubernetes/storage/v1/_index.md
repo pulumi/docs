@@ -28,7 +28,7 @@ title: Module storage/v1
 
 
 <h2 class="pdoc-module-header" id="StorageClass">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L16" >}}">class <b>StorageClass</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L17" >}}">class <b>StorageClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -42,12 +42,12 @@ ObjectMeta.Name.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClass-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StorageClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageClass'>inputApi.storage.v1.StorageClass</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StorageClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageClass'>inputs.storage.v1.StorageClass</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a storage.v1.StorageClass resource with the given unique name, arguments, and options.
@@ -59,7 +59,7 @@ Create a storage.v1.StorageClass resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L95" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L96" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -68,8 +68,8 @@ Create a storage.v1.StorageClass resource with the given unique name, arguments,
 
 
 Get the state of an existing `StorageClass` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -86,7 +86,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L106" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L107" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -100,7 +100,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-allowVolumeExpansion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L20" >}}">property <b>allowVolumeExpansion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L21" >}}">property <b>allowVolumeExpansion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowVolumeExpansion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -111,10 +111,10 @@ AllowVolumeExpansion shows whether the storage class allow volume expand
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-allowedTopologies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L28" >}}">property <b>allowedTopologies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L29" >}}">property <b>allowedTopologies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>allowedTopologies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TopologySelectorTerm'>outputApi.core.v1.TopologySelectorTerm</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>allowedTopologies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopologySelectorTerm'>TopologySelectorTerm</a>[]&gt;;</pre>
 {{% md %}}
 
 Restrict the node topologies where volumes can be dynamically provisioned. Each volume
@@ -125,7 +125,7 @@ enable the VolumeScheduling feature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L36" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L37" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1"</span>&gt;;</pre>
@@ -151,7 +151,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L44" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L45" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"StorageClass"</span>&gt;;</pre>
@@ -165,10 +165,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L50" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L51" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object's metadata. More info:
@@ -177,7 +177,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-mountOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L57" >}}">property <b>mountOptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L58" >}}">property <b>mountOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mountOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -190,7 +190,7 @@ is invalid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L63" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L64" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -202,7 +202,7 @@ storage class.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-provisioner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L68" >}}">property <b>provisioner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L69" >}}">property <b>provisioner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>provisioner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -213,7 +213,7 @@ Provisioner indicates the type of the provisioner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-reclaimPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L74" >}}">property <b>reclaimPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L75" >}}">property <b>reclaimPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reclaimPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -237,7 +237,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-volumeBindingMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L81" >}}">property <b>volumeBindingMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClass.ts#L82" >}}">property <b>volumeBindingMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>volumeBindingMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -251,7 +251,7 @@ enable the VolumeScheduling feature.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageClassList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L12" >}}">class <b>StorageClassList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L13" >}}">class <b>StorageClassList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -261,12 +261,12 @@ StorageClassList is a collection of storage classes.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClassList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StorageClassList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageClassList'>inputApi.storage.v1.StorageClassList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StorageClassList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageClassList'>inputs.storage.v1.StorageClassList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a storage.v1.StorageClassList resource with the given unique name, arguments, and options.
@@ -278,7 +278,7 @@ Create a storage.v1.StorageClassList resource with the given unique name, argume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -287,8 +287,8 @@ Create a storage.v1.StorageClassList resource with the given unique name, argume
 
 
 Get the state of an existing `StorageClassList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -305,7 +305,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -319,7 +319,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1"</span>&gt;;</pre>
@@ -345,10 +345,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StorageClass'>outputApi.storage.v1.StorageClass</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#StorageClass'>StorageClass</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of StorageClasses
@@ -356,7 +356,7 @@ Items is the list of StorageClasses
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"StorageClassList"</span>&gt;;</pre>
@@ -370,10 +370,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/StorageClassList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata More info:
@@ -395,7 +395,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L15" >}}">class <b>VolumeAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L16" >}}">class <b>VolumeAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -408,12 +408,12 @@ VolumeAttachment objects are non-namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L80" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeAttachment'>inputApi.storage.v1.VolumeAttachment</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeAttachment'>inputs.storage.v1.VolumeAttachment</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a storage.v1.VolumeAttachment resource with the given unique name, arguments, and options.
@@ -425,7 +425,7 @@ Create a storage.v1.VolumeAttachment resource with the given unique name, argume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L62" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L63" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -434,8 +434,8 @@ Create a storage.v1.VolumeAttachment resource with the given unique name, argume
 
 
 Get the state of an existing `VolumeAttachment` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -452,7 +452,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L73" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L74" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -466,7 +466,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L22" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L23" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1"</span>&gt;;</pre>
@@ -492,7 +492,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L30" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L31" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"VolumeAttachment"</span>&gt;;</pre>
@@ -506,10 +506,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L36" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L37" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object metadata. More info:
@@ -518,10 +518,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L42" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L43" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachmentSpec'>outputApi.storage.v1.VolumeAttachmentSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VolumeAttachmentSpec'>VolumeAttachmentSpec</a>&gt;;</pre>
 {{% md %}}
 
 Specification of the desired attach/detach volume behavior. Populated by the Kubernetes
@@ -530,10 +530,10 @@ system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L48" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachment.ts#L49" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachmentStatus'>outputApi.storage.v1.VolumeAttachmentStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VolumeAttachmentStatus'>VolumeAttachmentStatus</a>&gt;;</pre>
 {{% md %}}
 
 Status of the VolumeAttachment request. Populated by the entity completing the attach or
@@ -555,7 +555,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L12" >}}">class <b>VolumeAttachmentList</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L13" >}}">class <b>VolumeAttachmentList</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -565,12 +565,12 @@ VolumeAttachmentList is a collection of VolumeAttachment objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachmentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeAttachmentList'>inputApi.storage.v1.VolumeAttachmentList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachmentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeAttachmentList'>inputs.storage.v1.VolumeAttachmentList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a storage.v1.VolumeAttachmentList resource with the given unique name, arguments, and options.
@@ -582,7 +582,7 @@ Create a storage.v1.VolumeAttachmentList resource with the given unique name, ar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -591,8 +591,8 @@ Create a storage.v1.VolumeAttachmentList resource with the given unique name, ar
 
 
 Get the state of an existing `VolumeAttachmentList` resource, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -609,7 +609,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -623,7 +623,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L19" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L20" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1"</span>&gt;;</pre>
@@ -649,10 +649,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L24" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L25" >}}">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachment'>outputApi.storage.v1.VolumeAttachment</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VolumeAttachment'>VolumeAttachment</a>[]&gt;;</pre>
 {{% md %}}
 
 Items is the list of VolumeAttachments
@@ -660,7 +660,7 @@ Items is the list of VolumeAttachments
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L32" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L33" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"VolumeAttachmentList"</span>&gt;;</pre>
@@ -674,10 +674,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L38" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1/VolumeAttachmentList.ts#L39" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputApi.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard list metadata More info:

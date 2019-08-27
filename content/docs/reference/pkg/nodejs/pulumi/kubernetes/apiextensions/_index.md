@@ -79,8 +79,8 @@ Create a CustomResource resource with the given unique name, arguments, and opti
 
 
 Get the state of an existing `CustomResource`, as identified by `id`.
-Typically this ID  is of the form &lt;namespace&gt;/&lt;name&gt;; if &lt;namespace&gt; is omitted, then (per
-Kubernetes convention) the ID becomes default/&lt;name&gt;.
+Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
+Kubernetes convention) the ID becomes default/[name].
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -164,7 +164,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L106" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object metadata; More info:
@@ -233,7 +233,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L51" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>inputApi.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{% md %}}
 
 Standard object metadata; More info:
@@ -330,8 +330,8 @@ An optional additional explicit dependencies on other resources.
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;;</pre>
 {{% md %}}
 
-An ID for the Kubernetes resource to retrive. Takes the form &lt;namespace&gt;/&lt;name&gt; or
-&lt;name&gt;.
+An ID for the Kubernetes resource to retrieve. Takes the form [namespace]/[name] or
+[name].
 
 {{% /md %}}
 </div>
