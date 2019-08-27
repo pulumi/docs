@@ -29,6 +29,7 @@ generate:
 	./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./content/docs/reference/cli
+	./scripts/mktutorial.sh
 
 .PHONY: build
 build:
