@@ -64,7 +64,7 @@ groupings.
 | Organization | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/)| [Team](https://confluence.atlassian.com/bitbucket/teams-321853005.html) |
 
 In addition, a Pulumi organization may be backed by a [SAML 2.0 identity provider]({{<
-relref "saml" >}}).
+relref "/docs/guides/saml" >}}).
 
 ### GitHub-backed
 
@@ -136,6 +136,9 @@ party identity provider. To switch to a different organization:
 next to the Pulumi logo.
 1. Select your organization name. The organization page view is dependent on your role within the Pulumi organization.
 
+
+<img class="lg:max-w-xl" src="/images/docs/reference/service/organization-view.png" alt="Stack Outputs and Configuration">
+
   _Members_. Pulumi organization members only see the Stacks and People tabs.
 
   _Admins_. Pulumi organization administrators see the Stacks, People, Teams, Webhooks,
@@ -144,7 +147,7 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management"
+| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management"
 >}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro](https://www.pulumi.com/pricing/) feature that provides a way to assign stack permissions to groups of organization members. |
@@ -154,5 +157,4 @@ and Settings tabs.
 
 ## Next Steps
 
-* [Single Sign-on (SSO)]({{< relref "saml" >}})
 * [Organization Roles]({{< relref "../collaboration/organization-roles" >}})

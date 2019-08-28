@@ -15,7 +15,7 @@ With your Community Edition organization, you can create an unlimited number of 
 encrypt configuration and resource secrets, and browse stack history.
 
 But if you want to collaborate with other developers or use advanced features such as ones
-that require [SAML SSO]({{< relref "saml" >}}), you'll need to create a new Pulumi
+that require [SAML SSO]({{< relref "/docs/guides/saml" >}}), you'll need to create a new Pulumi
 organization.
 
 ## Other Editions

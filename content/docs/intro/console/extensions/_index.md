@@ -20,7 +20,7 @@ and integrations:
 * ['Deploy with Pulumi' Button]({{< relref "pulumi-button" >}})
 
 > Some features are only found in the Pulumi Team and Enterprise editions. See
-> [product editions]({{< relref "/docs/intro/console/account-management/editions" >}}) for more information.
+> [product editions]({{< relref "/docs/intro/console/accounts-and-organizations/editions" >}}) for more information.
 
 ## Webhooks
 
